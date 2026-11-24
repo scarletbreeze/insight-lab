@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import type { services } from '../../utils/services';
+import { sitePath } from '../../utils/paths';
+
+interface Props { service: (typeof services)[number]; }
+
+const { service } = Astro.props;
+---
+<BaseLayout title={service.title}>
+  <section class="inner-page" style={`--service-accent: ${service.accent}`}>
+    <p class="category">{service.category}</p>
+    <h1>{service.title}</h1>
+    <p>{service.description}</p>
+    <div class="empty-state">서비스 콘텐츠 준비 중</div>
+    <a href={sitePath()}>홈으로 돌아가기</a>
+  </section>
+</BaseLayout>

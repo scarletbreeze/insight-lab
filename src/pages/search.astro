@@ -1,0 +1,11 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SearchPanel from '../components/common/SearchPanel';
+import { sitePath } from '../utils/paths';
+---
+<BaseLayout title="검색">
+  <section class="inner-page">
+    <h1>검색</h1>
+    <SearchPanel client:load base={sitePath()} />
+  </section>
+</BaseLayout>

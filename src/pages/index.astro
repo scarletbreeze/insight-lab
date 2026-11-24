@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sitePath } from '../utils/paths';
+import { services } from '../utils/services';
+---
+<BaseLayout>
+  <section class="hero">
+    <h1>Insight <em>Lab</em></h1>
+    <p>금융업무에서 생긴 궁금증을 데이터와 AI로 직접 서비스로 만들어봅니다.</p>
+    <a class="button" href="#services">서비스 둘러보기 <span aria-hidden="true">↓</span></a>
+  </section>
+  <section id="services" class="section" aria-labelledby="services-title">
+    <h2 id="services-title">서비스</h2>
+    <div class="service-grid">
+      {services.map((service) => (
+        <a class="service-card" href={sitePath(service.slug)} style={`--service-accent: ${service.accent}`}>
+          <span class="category">{service.category}</span>
+          <h3>{service.title}</h3>
+          <p>{service.description}</p>
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <dl class="metrics" aria-label="프로젝트 현황">
+    <div><dt>서비스</dt><dd>{services.length}</dd></div>
+    <div><dt>출처</dt><dd>자료 확인 중</dd></div>
+    <div><dt>데이터 수록 기간</dt><dd>자료 확인 중</dd></div>
+    <div><dt>공개 콘텐츠</dt><dd>준비 중</dd></div>
+  </dl>
+  <section class="section editorial">
+    <h2>Latest from the Lab</h2>
+    <p>공개된 서비스 콘텐츠가 생기면 최근 업데이트가 표시됩니다.</p>
+  </section>
+  <section class="section editorial">
+    <h2>프로젝트 소개</h2>
+    <p>공개 금융 데이터를 바탕으로 업무에서 떠오른 질문을 탐색하는 개인 연구 프로젝트입니다.</p>
+    <a href={sitePath('about')}>Insight Lab 소개 <span aria-hidden="true">↗</span></a>
+  </section>
+</BaseLayout>
