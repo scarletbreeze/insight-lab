@@ -1,0 +1,9 @@
+---
+import VocLayout from '../../components/voc/VocLayout.astro';
+import NoticeList from '../../components/voc/NoticeList.astro';
+import { vocNotices } from '../../utils/voc';
+---
+<VocLayout title="키움 공지 타임라인">
+  <p slot="intro">키움증권 영웅문4 공개 공지에서 확인한 표본을 게시일 또는 적용 대상일 순으로 정리했습니다.</p>
+  <div class="lab-block"><NoticeList items={vocNotices} /></div>
+</VocLayout>

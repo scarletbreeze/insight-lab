@@ -1,5 +1,45 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import { purposes, screens, styles, workflows } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+
+const discover = sitePath('hero-lab/discover');
+const featured = workflows[0];
 ---
-<ServiceLanding service={services[0]} />
+<HeroLayout title="Hero Lab">
+  <p slot="intro">영웅문에서 무엇을 보고, 어떤 화면을 함께 쓰면 좋을까?</p>
+  <form class="hero-finder" action={discover}>
+    <label for="hero-home-search">영웅문에서 무엇을 하고 싶으세요?</label>
+    <div><input type="search" name="q" id="hero-home-search" placeholder="예: 0780, 시황, 차트" /><button type="submit">화면 검색</button></div>
+  </form>
+  <section class="hero-section">
+    <h2>추천 화면 조합</h2>
+    <a class="hero-card" href={sitePath('hero-lab/recipes') + '#' + featured.slug}>
+      <strong>{featured.title}</strong><span>{featured.summary}</span>
+    </a>
+  </section>
+  <section class="hero-section">
+    <h2>목적별 탐색</h2>
+    <ul class="hero-chips">
+      {purposes.map((purpose) => <li><a href={discover + '?' + new URLSearchParams({ purpose })}>{purpose}</a></li>)}
+    </ul>
+  </section>
+  <section class="hero-section">
+    <h2>투자 스타일별 탐색</h2>
+    <ul class="hero-chips">
+      {styles.map((style) => <li><a href={discover + '?' + new URLSearchParams({ style })}>{style}</a></li>)}
+    </ul>
+  </section>
+  <section class="hero-section">
+    <h2>화면을 더 살펴보기</h2>
+    <div class="hero-grid">
+      <a class="hero-card" href={sitePath('hero-lab/hall-of-fame')}><strong>Hall of Fame</strong><span>공개 도움말을 바탕으로 선정한 핵심 화면</span></a>
+      <a class="hero-card" href={sitePath('hero-lab/map')}><strong>Hero Map</strong><span>목적별로 관련 화면을 탐색하는 지도</span></a>
+      <a class="hero-card" href={sitePath('hero-lab/layouts')}><strong>Layout Lab</strong><span>모니터 수와 관심 분야에 맞는 화면 배치 예시</span></a>
+    </div>
+  </section>
+  <section class="hero-section">
+    <h2>최근 업데이트</h2>
+    <p><time datetime="2026-11-25">2026.11.25</time> · <a href={discover}>공식 도움말과 목차에 연결한 화면 {screens.length}개</a></p>
+  </section>
+</HeroLayout>

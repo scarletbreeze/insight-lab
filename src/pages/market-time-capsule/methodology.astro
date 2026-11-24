@@ -1,0 +1,19 @@
+---
+import MarketLayout from '../../components/market/MarketLayout.astro';
+---
+<MarketLayout title="시장 자료 방법론">
+  <section class="lab-block">
+    <h2>시장 사건</h2>
+    <p>원자료가 일자를 제공하면 연·월·일을 표기합니다. 월 단위로 분류한 경기 정점·저점은 해당 월만 표시하고 발표 시점과 구분합니다.</p>
+  </section>
+  <section class="lab-block">
+    <h2>월별 시장 스냅샷</h2>
+    <p>FRED에서 미국 국채 10년물 금리, WTI 현물가격, 원/달러 환율을 가져옵니다. 지표별로 공개 관측값이 있는 첫날과 마지막 날의 값 및 차이를 표시합니다. 관측일은 지표마다 다를 수 있습니다.</p>
+    <p>금리 차이는 %p, 환율과 유가는 해당 지표의 단위로 표시합니다.</p>
+  </section>
+  <section class="lab-block">
+    <h2>수익률 데이터 수록 기준</h2>
+    <p>월 수익률은 첫 거래일과 마지막 거래일의 분할 조정 종가를 비교합니다. 배당은 신뢰할 수 있는 총수익 자료가 확인된 경우에 별도로 표시합니다.</p>
+    <p>가능한 경우 과거 해당 시점의 지수 구성 종목을 사용합니다. 대체 모집단을 사용하면 범위와 생존편향 가능성을 표시합니다.</p>
+  </section>
+</MarketLayout>

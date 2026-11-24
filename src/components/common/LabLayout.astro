@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sitePath } from '../../utils/paths';
+import '../../styles/labs.css';
+
+interface Props {
+  slug: string;
+  title: string;
+  heading?: string;
+  accent?: string;
+  links: Array<[string, string]>;
+}
+const { slug, title, heading = title, accent, links } = Astro.props;
+---
+<BaseLayout title={title}>
+  <div class="lab-page" style={accent ? `--lab-accent: ${accent}` : undefined}>
+    <nav class="lab-nav" aria-label={title + ' 메뉴'}>
+      {links.map(([text, route]) => {
+        const href = sitePath(route ? slug + '/' + route : slug);
+        return <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{text}</a>;
+      })}
+    </nav>
+    <header class="lab-heading"><h1>{heading}</h1><slot name="intro" /></header>
+    <slot />
+  </div>
+</BaseLayout>

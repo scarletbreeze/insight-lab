@@ -1,5 +1,22 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import CeoLayout from '../../components/ceo/CeoLayout.astro';
+import SignalList from '../../components/ceo/SignalList.astro';
+import { ceoSections, signals } from '../../utils/ceo';
+import { sitePath } from '../../utils/paths';
 ---
-<ServiceLanding service={services[4]} />
+<CeoLayout title="CEO Lens">
+  <p slot="intro">내가 증권사 CEO라면, 지금 무엇을 봐야 할까?</p>
+  <section class="lab-block">
+    <h2>살펴볼 질문</h2>
+    <p>{signals[0].question}</p>
+    <a href={sitePath('ceo-lens/signals') + '#' + signals[0].id}>질문과 관련된 발표 보기</a>
+  </section>
+  <section class="lab-block">
+    <h2>수록 시그널</h2>
+    <SignalList items={signals.slice(0, 5)} />
+  </section>
+  <section class="lab-block">
+    <h2>주제별 탐색</h2>
+    <ul class="lab-chips">{ceoSections.slice(1).map(([title, slug]) => <li><a href={sitePath('ceo-lens/' + slug)}>{title}</a></li>)}</ul>
+  </section>
+</CeoLayout>

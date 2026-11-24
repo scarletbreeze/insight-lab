@@ -1,0 +1,12 @@
+---
+import type { screens } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+
+interface Props { screen: (typeof screens)[number]; }
+const { screen } = Astro.props;
+---
+<a class="hero-card" href={sitePath('hero-lab/screens/' + screen.number)}>
+  <span class="category">{screen.number} · {screen.purpose}</span>
+  <strong>{screen.title}</strong>
+  <span>{screen.summary}</span>
+</a>

@@ -1,0 +1,49 @@
+---
+import HeroLayout from '../../../components/hero/HeroLayout.astro';
+import ScreenCard from '../../../components/hero/ScreenCard.astro';
+import { heroGuides, screens, workflows } from '../../../utils/hero';
+import { sitePath } from '../../../utils/paths';
+
+export function getStaticPaths() {
+  return screens.map((screen) => ({ params: { screenNo: screen.number }, props: { screen } }));
+}
+
+const { screen } = Astro.props;
+const related = screens.filter((other) => other.number !== screen.number && other.purpose === screen.purpose).slice(0, 4);
+const recommended = workflows.filter((workflow) => workflow.steps.some(({ number }) => number === screen.number));
+---
+<HeroLayout title={screen.title} heading={screen.number + ' · ' + screen.title}>
+  <p slot="intro">{screen.purpose} · {screen.product}</p>
+  <section class="hero-section">
+    <h2>화면에서 볼 수 있는 것</h2>
+    <p>{screen.summary}</p>
+  </section>
+  <section class="hero-section">
+    <h2>Hero Lab 화면 분류</h2>
+    {screen.observation && <p>{screen.observation}</p>}
+    <dl class="hero-metadata">
+      <div><dt>투자 스타일</dt><dd>{screen.styles.join(' · ')}</dd></div>
+      <div><dt>유형</dt><dd>{screen.screenType}</dd></div>
+      <div><dt>난이도</dt><dd>{screen.level}</dd></div>
+      {screen.tags.length > 0 && <div><dt>분석 관심사</dt><dd>{screen.tags.join(' · ')}</dd></div>}
+    </dl>
+  </section>
+  {recommended.length > 0 && <section class="hero-section">
+    <h2>추천 화면 조합</h2>
+    <ul>{recommended.map(({ title, slug }) => <li><a href={sitePath('hero-lab/recipes') + '#' + slug}>{title}</a></li>)}</ul>
+  </section>}
+  {related.length > 0 && <section class="hero-section">
+    <h2>같은 목적의 화면</h2>
+    <div class="hero-grid">{related.map((item) => <ScreenCard screen={item} />)}</div>
+  </section>}
+  <section class="hero-section">
+    <h2>출처</h2>
+    <ul>
+      {screen.sources.map(({ sourceName, sourceUrl, retrievedAt }) => (
+        <li><a href={sourceUrl}>{sourceName} · {screen.number}</a> <span>확인일 <time datetime={retrievedAt}>{retrievedAt}</time></span></li>
+      ))}
+      {screen.officialHelpUrl && <li><a href={screen.officialHelpUrl}>화면별 공식 도움말</a></li>}
+      {heroGuides.map(({ title, url }) => <li><a href={url}>{title}</a></li>)}
+    </ul>
+  </section>
+</HeroLayout>

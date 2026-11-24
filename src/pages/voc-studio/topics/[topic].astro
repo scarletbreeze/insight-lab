@@ -1,0 +1,23 @@
+---
+import VocLayout from '../../../components/voc/VocLayout.astro';
+import NoticeList from '../../../components/voc/NoticeList.astro';
+import { vocNotices, vocPosts, vocTopics } from '../../../utils/voc';
+
+export function getStaticPaths() {
+  return vocTopics.map(({ id, label }) => ({ params: { topic: id }, props: { id, label } }));
+}
+const { id, label } = Astro.props;
+const items = vocPosts.filter(({ topic }) => topic === id);
+---
+<VocLayout title={label}>
+  <section class="lab-block">
+    <h2>문의 표본</h2>
+    {items.length ? <ul class="lab-list">
+      {items.map(({ date, summary, sourceUrl }) => <li><time datetime={date}>{date}</time> {summary} · <a href={sourceUrl}>공개 게시판</a></li>)}
+    </ul> : <p class="empty-state">문의 자료 확인 중</p>}
+  </section>
+  <section class="lab-block">
+    <h2>관련 공지</h2>
+    <NoticeList items={vocNotices.filter(({ topic }) => topic === id)} />
+  </section>
+</VocLayout>

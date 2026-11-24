@@ -1,0 +1,40 @@
+---
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import { purposes, screens } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+
+const branches = purposes.map((purpose) => ({
+  purpose,
+  screens: screens.filter((screen) => screen.purpose === purpose || (purpose === '파생' && screen.styles.includes('파생'))),
+}));
+---
+<HeroLayout title="Hero Map">
+  <p slot="intro">목적을 펼친 뒤 화면을 선택하면 기능과 관련 화면을 확인할 수 있습니다.</p>
+  <div class="hero-map">
+    {branches.map(({ purpose, screens: items }, index) => (
+      <details class="hero-branch" open={index === 0}>
+        <summary>{purpose} <span>{items.length ? items.length + '개' : '자료 확인 중'}</span></summary>
+        {items.length > 0 && <ul>
+          {items.map((screen) => (
+            <li>
+              <details class="hero-node">
+                <summary>{screen.number} {screen.title}</summary>
+                <div>
+                  <p class="category">{screen.purpose}</p>
+                  <p>{screen.summary}</p>
+                  <a href={sitePath('hero-lab/screens/' + screen.number)}>화면 상세</a>
+                  <a href={screen.officialHelpUrl || screen.sources[0].sourceUrl}>공식 도움말</a>
+                  {items.some((other) => other.number !== screen.number) && <p>관련 화면
+                    {items.filter((other) => other.number !== screen.number).slice(0, 4).map((other) => (
+                      <a href={sitePath('hero-lab/screens/' + other.number)}>{other.title}</a>
+                    ))}
+                  </p>}
+                </div>
+              </details>
+            </li>
+          ))}
+        </ul>}
+      </details>
+    ))}
+  </div>
+</HeroLayout>

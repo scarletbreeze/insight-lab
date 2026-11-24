@@ -1,0 +1,15 @@
+---
+import type { marketEvents } from '../../utils/market';
+interface Props { items: typeof marketEvents; }
+const { items } = Astro.props;
+---
+{items.length ? (
+  <ul class="lab-list">
+    {items.map(({ date, title, summary, category, sourceName, sourceUrl }) => (
+      <li class="lab-card">
+        <div><time datetime={date}>{date}</time><span>{category}</span></div>
+        <strong>{title}</strong><p>{summary}</p><a href={sourceUrl}>{sourceName}</a>
+      </li>
+    ))}
+  </ul>
+) : <p class="empty-state">자료 확인 중</p>}

@@ -1,0 +1,12 @@
+---
+import ArchiveLayout from '../../components/archive/ArchiveLayout.astro';
+import { services } from '../../utils/services';
+import { sitePath } from '../../utils/paths';
+---
+<ArchiveLayout title="프로젝트">
+  <div class="lab-grid">
+    {services.filter(({ slug }) => slug !== 'normalman-archive').map(({ title, description, slug }) => (
+      <a class="lab-card" href={sitePath(slug)}><strong>{title}</strong><span>{description}</span></a>
+    ))}
+  </div>
+</ArchiveLayout>

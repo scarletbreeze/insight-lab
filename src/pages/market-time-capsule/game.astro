@@ -1,0 +1,8 @@
+---
+import MarketLayout from '../../components/market/MarketLayout.astro';
+import ReturnerGame from '../../components/market/ReturnerGame';
+---
+<MarketLayout title="Returner Mode">
+  <p slot="intro">시장 역사를 묻는 10문제입니다. 답과 출처는 마지막 문제에서 공개합니다.</p>
+  <ReturnerGame client:load />
+</MarketLayout>

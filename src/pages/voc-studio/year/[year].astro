@@ -1,0 +1,23 @@
+---
+import VocLayout from '../../../components/voc/VocLayout.astro';
+import NoticeList from '../../../components/voc/NoticeList.astro';
+import { summarizeVocYear, vocYears } from '../../../utils/voc';
+import { sitePath } from '../../../utils/paths';
+
+export function getStaticPaths() {
+  return vocYears.map(({ year }) => ({ params: { year: String(year) }, props: { year } }));
+}
+const { year } = Astro.props;
+const { coverage, selectedPosts, selectedNotices, topicCounts } = summarizeVocYear(year);
+---
+<VocLayout title={year + '년 고객 문의와 공지'}>
+  <p slot="intro">{coverage?.period}</p>
+  <section class="lab-block"><h2>공개 문의 표본</h2>
+    {selectedPosts.length ? <>
+      <p>확인한 표본 {selectedPosts.length}건의 주제입니다. 전체 문의량과 연도별 순위는 자료 확인 중입니다.</p>
+      <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={sitePath('voc-studio/topics/' + id)}>{label} · {count}건</a></li>)}</ul>
+      <ul class="lab-list">{selectedPosts.map(({ date, summary, sourceUrl }) => <li><time datetime={date}>{date}</time> {summary} · <a href={sourceUrl}>공개 게시판</a></li>)}</ul>
+    </> : <p class="empty-state">문의 자료 확인 중</p>}
+  </section>
+  <section class="lab-block"><h2>키움 공지 타임라인</h2><NoticeList items={selectedNotices} /></section>
+</VocLayout>

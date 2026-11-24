@@ -1,5 +1,20 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import VocLayout from '../../components/voc/VocLayout.astro';
+import NoticeList from '../../components/voc/NoticeList.astro';
+import { vocNotices, vocYears } from '../../utils/voc';
+import { sitePath } from '../../utils/paths';
 ---
-<ServiceLanding service={services[1]} />
+<VocLayout title="VOC Studio">
+  <p slot="intro">그 해 키움에서는 무슨 일이 있었고, 고객들은 무엇을 궁금해했을까?</p>
+  <section class="lab-block">
+    <h2>연도별 탐색</h2>
+    <div class="lab-grid">
+      {vocYears.map(({ year, period }) => <a class="lab-card" href={sitePath('voc-studio/year/' + year)}><strong>{year}</strong><span>{period}</span></a>)}
+    </div>
+  </section>
+  <section class="lab-block">
+    <h2>최근 수록 공지</h2>
+    <NoticeList items={vocNotices.slice(0, 3)} />
+    <a href={sitePath('voc-studio/timeline')}>공지 타임라인 보기</a>
+  </section>
+</VocLayout>

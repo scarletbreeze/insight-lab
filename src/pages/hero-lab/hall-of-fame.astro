@@ -1,0 +1,18 @@
+---
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import ScreenCard from '../../components/hero/ScreenCard.astro';
+import { screenByNumber } from '../../utils/hero';
+
+const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenByNumber);
+---
+<HeroLayout title="Hall of Fame">
+  <section class="hero-section">
+    <h2>Hero Essential</h2>
+    <p>시장 파악, 종목 검색, 차트 분석을 시작할 때 참고할 화면입니다.</p>
+    <div class="hero-grid">{essentials.map((screen) => <ScreenCard screen={screen} />)}</div>
+  </section>
+  <section class="hero-section">
+    <h2>Legend’s Pick</h2>
+    <p class="empty-state">도서 및 장별 출처 확인 중</p>
+  </section>
+</HeroLayout>

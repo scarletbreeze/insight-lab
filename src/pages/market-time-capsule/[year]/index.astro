@@ -1,0 +1,22 @@
+---
+import MarketLayout from '../../../components/market/MarketLayout.astro';
+import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
+import EventList from '../../../components/market/EventList.astro';
+import { years, months, marketEvents } from '../../../utils/market';
+import { sitePath } from '../../../utils/paths';
+
+export function getStaticPaths() {
+  return years.map((year) => ({ params: { year: String(year) }, props: { year } }));
+}
+
+const { year } = Astro.props;
+const items = marketEvents.filter(({ date }) => date.startsWith(String(year)));
+---
+<MarketLayout title={year + '년 시장 기록'} {year}>
+  <section class="lab-block">
+    <h2>월별 기록</h2>
+    <ul class="lab-chips">{months.map((month) => <li><a href={sitePath(`market-time-capsule/${year}/${month}`)}>{Number(month)}월</a></li>)}</ul>
+  </section>
+  <section class="lab-block"><h2>주요 사건</h2><EventList {items} /></section>
+  <section class="lab-block"><h2>연간 시장 지표</h2><MarketSnapshot period={String(year)} /></section>
+</MarketLayout>

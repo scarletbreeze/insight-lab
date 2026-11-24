@@ -1,0 +1,14 @@
+---
+import ArchiveLayout from '../../components/archive/ArchiveLayout.astro';
+import NoteList from '../../components/archive/NoteList.astro';
+import { notes } from '../../utils/archive';
+const years = [...new Set(notes.map(({ date }) => date.slice(0, 4)))];
+---
+<ArchiveLayout title="아카이브 타임라인">
+  {years.map((year) => (
+    <section class="lab-block" id={'year-' + year}>
+      <h2>{year}년</h2>
+      <NoteList items={notes.filter(({ date }) => date.startsWith(year))} />
+    </section>
+  ))}
+</ArchiveLayout>

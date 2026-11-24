@@ -1,0 +1,13 @@
+---
+import ArchiveLayout from '../../../components/archive/ArchiveLayout.astro';
+import NoteList from '../../../components/archive/NoteList.astro';
+import { archiveTags, notes } from '../../../utils/archive';
+
+export function getStaticPaths() {
+  return archiveTags.map((tag) => ({ params: { tag }, props: { items: notes.filter(({ tags }) => tags.includes(tag)) } }));
+}
+const { items } = Astro.props;
+---
+<ArchiveLayout title={Astro.params.tag ?? '아카이브 태그'}>
+  <div class="lab-block"><NoteList items={items} /></div>
+</ArchiveLayout>

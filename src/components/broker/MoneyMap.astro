@@ -1,0 +1,8 @@
+---
+import type { brokers } from '../../utils/brokers';
+interface Props { broker: (typeof brokers)[number]; }
+const { broker } = Astro.props;
+---
+{broker.map.length ? <ul class="lab-list">
+  {broker.map.map(({ customer, business, revenue }) => <li class="lab-card">{customer} → {business} → {revenue}</li>)}
+</ul> : <p class="empty-state">사업 구조 자료 확인 중</p>}

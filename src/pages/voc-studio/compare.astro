@@ -1,0 +1,8 @@
+---
+import VocLayout from '../../components/voc/VocLayout.astro';
+import VocCompare from '../../components/voc/VocCompare';
+---
+<VocLayout title="두 연도의 문의와 공지 비교">
+  <p slot="intro">현재 수록한 표본만 비교합니다. 연도별 수집 범위가 달라 전체 문의량의 증감을 계산할 수 없습니다.</p>
+  <VocCompare client:load />
+</VocLayout>

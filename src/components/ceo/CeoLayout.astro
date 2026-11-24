@@ -1,0 +1,11 @@
+---
+import LabLayout from '../common/LabLayout.astro';
+import { ceoSections } from '../../utils/ceo';
+interface Props { title: string; }
+const { title } = Astro.props;
+const links: Array<[string, string]> = [['CEO Lens', ''], ...ceoSections.map(([title, slug]): [string, string] => [title, slug])];
+---
+<LabLayout slug="ceo-lens" title={title} links={links} accent="#e6c58f">
+  <slot name="intro" slot="intro" />
+  <slot />
+</LabLayout>

@@ -1,0 +1,4 @@
+[
+  {"id":"kiwoom","name":"키움증권","character":"온라인 주식 위탁매매를 기반으로 성장한 종합증권사","segments":["투자매매업","투자중개업","투자일임업","투자자문업"],"map":[{"customer":"투자자","business":"투자중개","revenue":"위탁매매 수수료"}],"sourceUrl":"https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"},
+  {"id":"mirae-asset","name":"미래에셋증권","character":"해외사업을 통한 사업 다각화를 추진하는 증권사","segments":[],"map":[],"sourceUrl":"https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm"}
+]

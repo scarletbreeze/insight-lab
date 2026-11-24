@@ -1,0 +1,44 @@
+---
+import BrokerLayout from '../../../components/broker/BrokerLayout.astro';
+import MoneyMap from '../../../components/broker/MoneyMap.astro';
+import { brokers, brokerEvents, brokerMetrics, fields, formatBrokerMetric } from '../../../utils/brokers';
+
+export function getStaticPaths() {
+  return brokers.map((broker) => ({ params: { broker: broker.id }, props: { broker } }));
+}
+const { broker } = Astro.props;
+const rows = brokerMetrics.filter(({ id }) => id === broker.id).sort((a, b) => b.year - a.year);
+const equityMax = Math.max(...rows.map(({ equity }) => equity), 1);
+---
+<BrokerLayout title={broker.name}>
+  <p slot="intro">{broker.character}</p>
+  <section class="lab-block">
+    <h2>연결 결산 추이</h2>
+    <figure class="equity-trend">
+      <figcaption>자본총계</figcaption>
+      <ul>
+        {[...rows].reverse().map(({ year, equity }) => <li>
+          <span>{year}</span>
+          <span class="equity-track" aria-hidden="true"><span style={`width: ${equity / equityMax * 100}%`}></span></span>
+          <span>{formatBrokerMetric(equity, false)}</span>
+        </li>)}
+      </ul>
+    </figure>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <thead><tr><th scope="col">연도</th>{fields.map(({ title }) => <th scope="col">{title}</th>)}</tr></thead>
+      <tbody>{rows.map((row) => <tr><th scope="row"><a href={row.sourceUrl}>{row.year}년 공시</a></th>{fields.map(({ key, percent }) => <td>{formatBrokerMetric(row[key], percent)}</td>)}</tr>)}</tbody>
+    </table></div>
+  </section>
+  <section class="lab-block">
+    <h2>Money Map</h2><MoneyMap {broker} />
+    <p>사업 구조를 개념적으로 표시했습니다.</p>
+    {broker.segments.length > 0 && <p>공시상 영위 업종 · {broker.segments.join(' · ')}</p>}
+    <a href={broker.sourceUrl}>사업 공시</a>
+  </section>
+  <section class="lab-block">
+    <h2>주요 전환점</h2>
+    <ul class="lab-list">{brokerEvents.filter(({ id }) => id === broker.id).map(({ date, title, sourceUrl }) => (
+      <li><time datetime={date}>{date}</time> <a href={sourceUrl}>{title}</a></li>
+    ))}</ul>
+  </section>
+</BrokerLayout>

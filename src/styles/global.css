@@ -75,3 +75,13 @@ a:hover { color: var(--color-accent-blue); }
   .service-grid { grid-template-columns: 1fr; }
   .service-card { min-height: 10rem; }
 }
+.search-group { margin-block-start: 1.5rem; }
+.search-group h2 { font-size: 1.1rem; margin: 0; }
+.updates-list { border-top: 1px solid var(--color-rule); }
+.updates-list li { display: grid; grid-template-columns: minmax(9rem, .7fr) minmax(0, 2fr) auto; align-items: baseline; gap: .5rem 1rem; padding-block: .9rem; border-bottom: 1px solid var(--color-rule); }
+.updates-list a { margin-top: 0; }
+.updates-list time, .updates-list span { color: var(--color-muted); font-size: .85rem; }
+@media (max-width: 600px) {
+  .updates-list li { grid-template-columns: minmax(0, 1fr) auto; }
+  .updates-list a { grid-column: 1 / -1; grid-row: 2; }
+}

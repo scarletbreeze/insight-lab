@@ -1,5 +1,13 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import BrokerLayout from '../../components/broker/BrokerLayout.astro';
+import { brokers } from '../../utils/brokers';
+import { sitePath } from '../../utils/paths';
 ---
-<ServiceLanding service={services[2]} />
+<BrokerLayout title="Broker Atlas">
+  <p slot="intro">공시로 증권사의 규모, 수익성, 사업 구조를 살펴봅니다. 현재 연결 재무 데이터를 확인한 2개사를 수록했습니다.</p>
+  <section class="lab-block">
+    <h2>수록 증권사</h2>
+    <div class="lab-grid">{brokers.map(({ id, name, character }) => <a class="lab-card" href={sitePath('broker-atlas/brokers/' + id)}><strong>{name}</strong><span>{character}</span></a>)}</div>
+  </section>
+  <section class="lab-block"><h2>증권사 비교</h2><a href={sitePath('broker-atlas/compare')}>두 회사의 결산 지표 비교</a></section>
+</BrokerLayout>

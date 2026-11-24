@@ -1,0 +1,49 @@
+---
+import data from '../../../data/market/months/snapshots.json';
+
+interface Props { period: string; }
+const { period } = Astro.props;
+type SeriesId = keyof typeof data.series;
+interface Observation {
+  firstDate: string;
+  lastDate: string;
+  first: number;
+  last: number;
+  change: number | null;
+}
+const monthly = data.months as Record<string, Partial<Record<SeriesId, Observation>>>;
+const annual = period.length === 4;
+const matchingMonths = Object.keys(monthly).filter((month) => annual ? month.startsWith(period + '-') : month === period).sort();
+const rows = (Object.keys(data.series) as SeriesId[]).flatMap((symbol) => {
+  const observations = matchingMonths.flatMap((month) => {
+    const value = monthly[month][symbol];
+    return value ? [value] : [];
+  });
+  const first = observations[0];
+  const last = observations.at(-1);
+  if (!first || !last) return [];
+  return [{
+    symbol, ...data.series[symbol],
+    first: first.first, firstDate: first.firstDate,
+    last: last.last, lastDate: last.lastDate,
+    change: first.firstDate === last.lastDate ? null : last.last - first.first,
+  }];
+});
+const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2 });
+---
+{rows.length ? <>
+  <p>{annual ? '연도별' : '월별'} 첫 관측값과 마지막 관측값을 비교합니다. 수집 기준일 {data.through}{data.through.startsWith(period) ? ' · 기간 중간 집계' : ''}</p>
+  <div class="lab-table-wrap">
+    <table class="lab-table">
+      <thead><tr><th scope="col">지표 · 출처</th><th scope="col">첫 관측</th><th scope="col">마지막 관측</th><th scope="col">변화</th></tr></thead>
+      <tbody>{rows.map(({ symbol, label, unit, changeUnit, first, firstDate, last, lastDate, change }) => (
+        <tr>
+          <th scope="row"><a href={`https://fred.stlouisfed.org/series/${symbol}`}>{label}</a> <small>({unit})</small></th>
+          <td>{format.format(first)} <small>{firstDate}</small></td>
+          <td>{format.format(last)} <small>{lastDate}</small></td>
+          <td>{change === null ? '자료 확인 중' : `${change > 0 ? '+' : ''}${format.format(change)} ${changeUnit}`}</td>
+        </tr>
+      ))}</tbody>
+    </table>
+  </div>
+</> : <p class="empty-state">자료 확인 중</p>}

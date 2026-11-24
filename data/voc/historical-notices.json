@@ -1,0 +1,62 @@
+[
+  {
+    "id": "00002111",
+    "date": "2022-12-30",
+    "dateType": "effective",
+    "title": "연말 외환시장 휴장과 환전 정산",
+    "category": "서비스",
+    "summary": "2022년 말 외환시장 휴장에 따른 정산일과 주간 환전시간의 일시 변경을 안내했습니다.",
+    "topic": "overseas",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=1&pagegb=2&seq=00002111&title=%EC%97%B0%EB%A7%90%282022%EB%85%84%29+%EB%B0%8F+%EC%97%B0%EC%B4%88%282023%EB%85%84%29+%EA%B0%80%ED%99%98%EC%9C%A8+%ED%99%98%EC%A0%84+%EC%A0%95%EC%82%B0%EA%B8%B0%EC%A4%80+%EB%B0%8F+%ED%99%98%EC%A0%84%EC%8B%9C%EA%B0%84+%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=H4"
+  },
+  {
+    "id": "00002094",
+    "date": "2022-11-17",
+    "dateType": "effective",
+    "title": "수능일 국내장 운영 일정",
+    "category": "서비스",
+    "summary": "수능일 주식 및 선물옵션 거래 운영시간의 임시 변경을 공지했습니다.",
+    "topic": "hours",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=1&pagegb=2&seq=00002094&title=2023%ED%95%99%EB%85%84%EB%8F%84+%EB%8C%80%ED%95%99%EC%88%98%ED%95%99%EB%8A%A5%EB%A0%A5+%EC%8B%A4%EC%8B%9C%EC%97%90+%EB%94%B0%EB%A5%B8+%EC%9E%A5+%EC%9A%B4%EC%98%81%EC%8B%9C%EA%B0%84+%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=H4"
+  },
+  {
+    "id": "00002198",
+    "date": "2023-12-29",
+    "dateType": "effective",
+    "title": "연말 환전 정산 일정과 연초 거래시간",
+    "category": "서비스",
+    "summary": "2023년 말 휴장과 2024년 첫 거래일에 맞춘 정산 및 환전시간 변경을 안내했습니다.",
+    "topic": "overseas",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=1&pagegb=2&seq=00002198&title=%EC%97%B0%EB%A7%90%282023%EB%85%84%29+%EB%B0%8F+%EC%97%B0%EC%B4%88%282024%EB%85%84%29+%EA%B0%80%ED%99%98%EC%9C%A8+%ED%99%98%EC%A0%84+%EC%A0%95%EC%82%B0%EA%B8%B0%EC%A4%80+%EB%B0%8F+%ED%99%98%EC%A0%84%EC%8B%9C%EA%B0%84+%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=HG"
+  },
+  {
+    "id": "00002234",
+    "date": "2024-05-28",
+    "dateType": "effective",
+    "title": "미국주식 결제주기 단축",
+    "category": "제도",
+    "summary": "본문 기준으로 미국주식 결제주기가 적용일 체결분부터 변경됐습니다.",
+    "topic": "overseas",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=1&pagegb=2&seq=00002234&title=%28%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%29+%EA%B2%B0%EC%A0%9C%EA%B8%B0%EA%B0%84+%EB%8B%A8%EC%B6%95%28T%2B3+%3E+T%2B2%29+%EC%A0%9C%EB%8F%84%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=HG"
+  },
+  {
+    "id": "00002289",
+    "date": "2024-11",
+    "dateType": "effective",
+    "title": "해외주식·파생 서머타임 종료 안내",
+    "category": "서비스",
+    "summary": "서머타임 해제에 따른 해외주식과 해외파생 거래시간 변경을 안내했습니다.",
+    "topic": "overseas",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&mtsgb=&pagegb=2&seq=00002289&title=%5B%ED%95%B4%EC%99%B8%EC%A3%BC%EC%8B%9D%2C+%ED%95%B4%EC%99%B8%ED%8C%8C%EC%83%9D%5D+2024+%EC%84%AC%EB%A8%B8%ED%83%80%EC%9E%84+%ED%95%B4%EC%A0%9C%EC%97%90+%EB%94%B0%EB%A5%B8+%EA%B1%B0%EB%9E%98%EC%8B%9C%EA%B0%84+%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=HG"
+  },
+  {
+    "id": "00002310",
+    "date": "2024-11",
+    "dateType": "effective",
+    "title": "미국 추수감사절 거래 운영 일정",
+    "category": "서비스",
+    "summary": "미국주식 시장의 추수감사절 연휴 운영시간을 공지했습니다.",
+    "topic": "overseas",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&mtsgb=&pagegb=2&seq=00002310&title=%5B%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%5D+2024%EB%85%84+%EC%B6%94%EC%88%98%EA%B0%90%EC%82%AC%EC%A0%88+%EC%97%B0%ED%9C%B4+%EC%9A%B4%EC%98%81%EC%8B%9C%EA%B0%84+%EC%95%88%EB%82%B4&tp=HG"
+  }
+]

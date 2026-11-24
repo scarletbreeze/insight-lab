@@ -1,0 +1,16 @@
+---
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import { heroGuides } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+---
+<HeroLayout title="화면 활용 인사이트">
+  <section class="hero-section">
+    <h2>가격 흐름과 매매 주체별 흐름</h2>
+    <p><a href={sitePath('hero-lab/screens/0641')}>0641</a>은 시장의 등락률을 비교하고 <a href={sitePath('hero-lab/screens/0780')}>0780</a>은 매매 주체별 현황을 보여줍니다. 두 화면을 함께 볼 때에는 시장 범위와 조회 시점을 맞춰 해석하는 편이 좋습니다.</p>
+    <p>0780은 자동 갱신이 되지 않아 조회 시점이 다를 수 있습니다.</p>
+  </section>
+  <section class="hero-section">
+    <h2>공식 안내</h2>
+    <ul>{heroGuides.map(({ title, url }) => <li><a href={url}>{title}</a></li>)}</ul>
+  </section>
+</HeroLayout>

@@ -1,5 +1,24 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import ArchiveLayout from '../../components/archive/ArchiveLayout.astro';
+import ArchiveSearch from '../../components/archive/ArchiveSearch.astro';
+import NoteList from '../../components/archive/NoteList.astro';
+import { archiveTags, notes } from '../../utils/archive';
+import { sitePath } from '../../utils/paths';
 ---
-<ServiceLanding service={services[5]} />
+<ArchiveLayout title="Normalman Archive">
+  <p slot="intro">2017년부터 2019년까지 공개 블로그에 남긴 개발과 공부 기록을 시간순으로 펼쳐봅니다.</p>
+  <section class="lab-block"><ArchiveSearch /></section>
+  <section class="lab-block">
+    <h2>타임라인</h2>
+    <ul class="lab-chips">{[2017, 2018, 2019].map((year) => <li><a href={sitePath('normalman-archive/timeline') + '#year-' + year}>{year}</a></li>)}</ul>
+  </section>
+  <section class="lab-block">
+    <h2>최근 기록</h2>
+    <NoteList items={notes.slice(0, 6)} />
+    <a href={sitePath('normalman-archive/timeline')}>선별한 기록 {notes.length}개 모두 보기</a>
+  </section>
+  <section class="lab-block">
+    <h2>태그</h2>
+    <ul class="lab-chips">{archiveTags.map((tag) => <li><a href={sitePath('normalman-archive/tags/' + encodeURIComponent(tag))}>{tag}</a></li>)}</ul>
+  </section>
+</ArchiveLayout>

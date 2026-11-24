@@ -1,0 +1,35 @@
+.lab-page { --lab-accent: var(--color-accent-blue); padding-block: 1.75rem 4rem; min-height: 65vh; }
+.lab-nav { display: flex; flex-wrap: wrap; gap: .65rem 1.15rem; border-bottom: 1px solid var(--color-rule); padding-bottom: 1rem; }
+.lab-heading { padding-block: clamp(2rem, 6vw, 4rem); }
+.lab-heading h1 { font: clamp(2.1rem, 7vw, 5.25rem)/1.08 var(--font-serif); overflow-wrap: anywhere; }
+.lab-heading p, .lab-block p { color: var(--color-muted); margin-block: .55rem; }
+.lab-block { max-width: 74rem; margin-block: 0 2.25rem; }
+.lab-block h2 { font-size: 1.25rem; font-weight: 700; margin-block: 0 .75rem; }
+.lab-block a:not(.lab-card), .lab-link { color: var(--lab-accent); text-decoration: underline; text-underline-offset: .24em; }
+.lab-list { display: grid; gap: .6rem; margin-block: .8rem; }
+.lab-list li { padding-block: .45rem; }
+.lab-list time { color: var(--color-muted); margin-inline-end: .75rem; font-family: var(--font-mono); }
+.lab-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .8rem; }
+.lab-card { display: grid; gap: .4rem; padding: 1rem; border: 1px solid var(--color-rule); border-radius: .35rem; background: var(--color-panel); }
+a.lab-card:hover { border-color: var(--lab-accent); color: var(--lab-accent); }
+.lab-card span { color: var(--color-muted); }
+.lab-chips { display: flex; flex-wrap: wrap; gap: .45rem; margin-block: .8rem; }
+.lab-chips a { display: block; padding: .3rem .5rem; border: 1px solid var(--color-rule); border-radius: .25rem; }
+.lab-controls { display: flex; flex-wrap: wrap; align-items: end; gap: .65rem; margin-block: 1rem; }
+.lab-controls label { display: grid; gap: .35rem; }
+.lab-controls :is(select, input, button), .lab-button { border: 1px solid var(--color-rule); border-radius: .25rem; background: var(--color-panel); padding: .5rem .75rem; }
+.lab-controls button, .lab-button { cursor: pointer; }
+.lab-controls button:hover, .lab-button:hover { border-color: var(--lab-accent); }
+.lab-table { width: 100%; border-collapse: collapse; }
+.lab-table th, .lab-table td { text-align: left; vertical-align: top; padding: .65rem; border-bottom: 1px solid var(--color-rule); }
+.lab-table-wrap { overflow-x: auto; }
+.lab-facts { display: flex; flex-wrap: wrap; gap: 1rem; margin-block: .8rem; }
+.lab-facts dt { color: var(--color-muted); }
+.lab-card[hidden] { display: none; }
+.lab-card dl { display: grid; gap: .25rem; }
+.lab-card dl dt { color: var(--color-muted); margin-top: .4rem; font-size: .9rem; }
+.equity-trend { max-width: 38rem; padding-block: .75rem; }
+.equity-trend figcaption { color: var(--color-muted); margin-bottom: .5rem; }
+.equity-trend li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr) minmax(7rem, auto); gap: .6rem; align-items: center; margin-block: .5rem; }
+.equity-track { display: block; height: .65rem; background: var(--color-panel); }
+.equity-track span { display: block; height: 100%; background: var(--lab-accent); }

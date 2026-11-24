@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { sitePath } from '../../utils/paths';
+import '../../styles/hero.css';
+
+interface Props { title: string; heading?: string; }
+const { title, heading = title } = Astro.props;
+const routes = [
+  ['Hero Lab', ''], ['화면 탐색', 'discover'], ['추천 조합', 'recipes'], ['Hero Map', 'map'],
+  ['Layout Lab', 'layouts'], ['Hall of Fame', 'hall-of-fame'], ['인사이트', 'insights'],
+].map(([label, route]) => ({ label, href: sitePath(route ? 'hero-lab/' + route : 'hero-lab') }));
+---
+<BaseLayout title={title}>
+  <div class="hero-lab">
+    <nav class="hero-nav" aria-label="Hero Lab 메뉴">
+      {routes.map(({ label, href }) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{label}</a>)}
+    </nav>
+    <header class="hero-heading"><h1>{heading}</h1><slot name="intro" /></header>
+    <slot />
+  </div>
+</BaseLayout>

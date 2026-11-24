@@ -1,0 +1,13 @@
+[
+  {"id":"orders","label":"주문"},
+  {"id":"account","label":"계좌"},
+  {"id":"hts","label":"HTS·MTS"},
+  {"id":"auth","label":"인증"},
+  {"id":"overseas","label":"해외주식"},
+  {"id":"hours","label":"거래시간·파생"},
+  {"id":"credit","label":"신용·미수"},
+  {"id":"fees","label":"수수료"},
+  {"id":"transfer","label":"입출금·이체"},
+  {"id":"products","label":"상품"},
+  {"id":"other","label":"기타"}
+]

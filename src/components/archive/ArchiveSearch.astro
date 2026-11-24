@@ -1,0 +1,33 @@
+---
+import NoteList from './NoteList.astro';
+import { notes } from '../../utils/archive';
+---
+<archive-search>
+  <div class="lab-controls">
+    <label>공개 기록 검색 <input type="search" placeholder="제목, 연도 또는 태그" /></label>
+  </div>
+  <p role="status" class="archive-search-status">{notes.length}개 기록</p>
+  <div class="archive-search-results" hidden><NoteList items={notes} /></div>
+</archive-search>
+<script>
+  class ArchiveSearch extends HTMLElement {
+    connectedCallback() {
+      const input = this.querySelector<HTMLInputElement>('input');
+      const status = this.querySelector('[role="status"]');
+      const results = this.querySelector<HTMLElement>('.archive-search-results');
+      if (!input || !status || !results) return;
+      const entries = Array.from(results.querySelectorAll<HTMLLIElement>('li'));
+      input.addEventListener('input', () => {
+        const query = input.value.trim().toLowerCase();
+        results.hidden = !query;
+        const matches = entries.filter((entry) => {
+          const match = entry.dataset.search?.includes(query) ?? false;
+          entry.hidden = !match;
+          return match;
+        }).length;
+        status.textContent = matches ? `${matches}개 기록` : '일치하는 기록이 없습니다.';
+      });
+    }
+  }
+  customElements.define('archive-search', ArchiveSearch);
+</script>

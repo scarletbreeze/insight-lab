@@ -1,0 +1,91 @@
+---
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import ScreenCard from '../../components/hero/ScreenCard.astro';
+import { interests, purposes, screens, styles } from '../../utils/hero';
+
+const options = [
+  { name: 'purpose', label: '목적', values: purposes },
+  { name: 'style', label: '투자 스타일', values: styles },
+  { name: 'interest', label: '분석 관심사', values: interests },
+  { name: 'product', label: '상품', values: [...new Set(screens.map((screen) => screen.product))] },
+  { name: 'screenType', label: '화면 유형', values: [...new Set(screens.map((screen) => screen.screenType))] },
+  { name: 'level', label: '난이도', values: [...new Set(screens.map((screen) => screen.level))] },
+];
+---
+<HeroLayout title="화면 탐색">
+  <p slot="intro">화면번호, 화면명, 관심사로 영웅문4 화면을 찾으세요. 투자 스타일과 난이도는 Hero Lab의 편집 분류입니다.</p>
+  <hero-discovery>
+    <form class="hero-finder">
+      <label for="hero-query">화면 검색</label>
+      <input id="hero-query" name="q" type="search" placeholder="예: 0130, 관심종목, 수급" />
+      <div class="hero-filters">
+        {options.map(({ name, label, values }) => (
+          <label>{label}
+            <select name={name}>
+              <option value="">전체</option>
+              {values.map((value) => <option value={value}>{value}</option>)}
+            </select>
+          </label>
+        ))}
+      </div>
+      <button type="reset">필터 초기화</button>
+    </form>
+    <p class="hero-status" role="status">{screens.length}개 화면</p>
+    <div class="hero-grid">
+      {screens.map((screen) => (
+        <div data-result data-search={[screen.number, screen.title, screen.summary, ...screen.tags].join(' ')}
+          data-purpose={screen.purpose} data-style={screen.styles.join('|')} data-interest={screen.tags.join('|')}
+          data-screen-type={screen.screenType} data-product={screen.product} data-level={screen.level}>
+          <ScreenCard screen={screen} />
+        </div>
+      ))}
+    </div>
+    <p class="empty-state" data-empty hidden>일치하는 화면이 없습니다. 검색어나 필터를 바꿔보세요.</p>
+  </hero-discovery>
+</HeroLayout>
+<script>
+  class HeroDiscovery extends HTMLElement {
+    connectedCallback() {
+      const form = this.querySelector('form');
+      const status = this.querySelector('[role="status"]');
+      const empty = this.querySelector<HTMLElement>('[data-empty]');
+      if (!form || !status || !empty) return;
+
+      const entries = Array.from(this.querySelectorAll<HTMLElement>('[data-result]'));
+      const parameters = new URLSearchParams(location.search);
+      for (const field of form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name]')) {
+        const value = parameters.get(field.name);
+        if (value !== null && (field instanceof HTMLInputElement || Array.from(field.options).some((option) => option.value === value))) {
+          field.value = value;
+        }
+      }
+
+      function render() {
+        if (!form || !status || !empty) return;
+        const criteria = new FormData(form);
+        const query = String(criteria.get('q')).toLowerCase().trim();
+        const words = query ? query.split(/\s+/) : [];
+        let count = 0;
+
+        for (const entry of entries) {
+          const matchesQuery = words.every((word) => entry.dataset.search?.toLowerCase().includes(word));
+          const matchesFilters = ['purpose', 'style', 'interest', 'product', 'screenType', 'level'].every((field) => {
+            const value = String(criteria.get(field));
+            return !value || entry.dataset[field]?.split('|').includes(value);
+          });
+          entry.hidden = !(matchesQuery && matchesFilters);
+          if (!entry.hidden) count++;
+        }
+
+        status.textContent = `${count}개 화면`;
+        empty.hidden = count > 0;
+      }
+
+      form.addEventListener('input', render);
+      form.addEventListener('submit', (event) => event.preventDefault());
+      form.addEventListener('reset', () => requestAnimationFrame(render));
+      render();
+    }
+  }
+  customElements.define('hero-discovery', HeroDiscovery);
+</script>

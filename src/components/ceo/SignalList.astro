@@ -1,0 +1,20 @@
+---
+import type { signals } from '../../utils/ceo';
+interface Props { items: typeof signals; }
+const { items } = Astro.props;
+---
+<ul class="lab-list">
+  {items.map(({ id, date, category, title, summary, why, companies, question, sourceName, sourceUrl }) => (
+    <li class="lab-card" id={id} data-year={date.slice(0, 4)} data-topic={category}>
+      <div><time datetime={date}>{date}</time><span>{category}</span></div>
+      <h2>{title}</h2>
+      <dl>
+        <dt>확인한 사실</dt><dd>{summary}</dd>
+        <dt>살펴볼 이유</dt><dd>{why}</dd>
+        <dt>관련 기관·회사</dt><dd>{companies.join(' · ')}</dd>
+        <dt>생각해 볼 질문</dt><dd>{question}</dd>
+      </dl>
+      <a href={sourceUrl}>{sourceName}</a>
+    </li>
+  ))}
+</ul>

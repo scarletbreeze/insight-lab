@@ -1,5 +1,21 @@
 ---
-import ServiceLanding from '../../components/common/ServiceLanding.astro';
-import { services } from '../../utils/services';
+import MarketLayout from '../../components/market/MarketLayout.astro';
+import { years, marketEvents } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+
+const documented = new Set(marketEvents.map(({ date }) => Number(date.slice(0, 4))));
 ---
-<ServiceLanding service={services[3]} />
+<MarketLayout title="Market Time Capsule">
+  <p slot="intro">과거로 돌아간다면, 그 시대의 무엇을 기억하고 싶을까?</p>
+  <section class="lab-block">
+    <h2>1990–2026 연도별 탐색</h2>
+    <ul class="lab-chips">{years.map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}</a></li>)}</ul>
+    <p>사건 기록이 수록된 연도</p>
+    <ul class="lab-chips">{[...documented].map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}</a></li>)}</ul>
+  </section>
+  <section class="lab-block">
+    <h2>Returner Mode</h2>
+    <p>출처가 있는 시장 사건을 바탕으로 한 10문제 역사 퀴즈</p>
+    <a href={sitePath('market-time-capsule/game')}>퀴즈 시작</a>
+  </section>
+</MarketLayout>

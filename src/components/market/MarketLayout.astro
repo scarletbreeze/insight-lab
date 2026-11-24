@@ -1,0 +1,12 @@
+---
+import LabLayout from '../common/LabLayout.astro';
+import { eraColor } from '../../utils/market';
+
+interface Props { title: string; year?: number; }
+const { title, year = 2026 } = Astro.props;
+const links: Array<[string, string]> = [['Market Time Capsule', ''], ['Returner Mode', 'game'], ['방법론', 'methodology']];
+---
+<LabLayout title={title} slug="market-time-capsule" links={links} accent={eraColor(year)}>
+  <slot name="intro" slot="intro" />
+  <slot />
+</LabLayout>

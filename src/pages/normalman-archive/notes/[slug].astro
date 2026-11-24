@@ -1,0 +1,18 @@
+---
+import ArchiveLayout from '../../../components/archive/ArchiveLayout.astro';
+import { notes } from '../../../utils/archive';
+import { sitePath } from '../../../utils/paths';
+
+export function getStaticPaths() {
+  return notes.map((note) => ({ params: { slug: note.slug }, props: { note } }));
+}
+const { note } = Astro.props;
+---
+<ArchiveLayout title={note.title}>
+  <p slot="intro"><time datetime={note.date}>{note.date}</time> · Original</p>
+  <section class="lab-block">
+    <h2>공개 원문</h2>
+    <a href={note.sourceUrl}>기존 GitHub 블로그의 글 읽기</a>
+    <ul class="lab-chips">{note.tags.map((tag) => <li><a href={sitePath('normalman-archive/tags/' + encodeURIComponent(tag))}>{tag}</a></li>)}</ul>
+  </section>
+</ArchiveLayout>

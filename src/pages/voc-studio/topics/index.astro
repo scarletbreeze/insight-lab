@@ -1,0 +1,13 @@
+---
+import VocLayout from '../../../components/voc/VocLayout.astro';
+import { vocNotices, vocPosts, vocTopics } from '../../../utils/voc';
+import { sitePath } from '../../../utils/paths';
+---
+<VocLayout title="문의와 공지 주제">
+  <div class="lab-grid">
+    {vocTopics.map(({ id, label }) => {
+      const records = [...vocPosts, ...vocNotices].filter(({ topic }) => topic === id).length;
+      return <a class="lab-card" href={sitePath('voc-studio/topics/' + id)}><strong>{label}</strong><span>{records ? '수록 기록 ' + records + '건' : '자료 확인 중'}</span></a>;
+    })}
+  </div>
+</VocLayout>

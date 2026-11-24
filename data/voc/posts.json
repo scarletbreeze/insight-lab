@@ -1,0 +1,10 @@
+[
+  {
+    "id": "condition-market-scope",
+    "date": "2026-11-18",
+    "topic": "hts",
+    "intent": "how_to",
+    "summary": "조건검색 지표의 계산 범위가 KRX 시세와 NXT를 포함한 통합 시세에서 어떻게 달라지는지 묻는 문의",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWATZView"
+  }
+]
