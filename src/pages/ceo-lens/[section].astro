@@ -1,7 +1,10 @@
 ---
 import CeoLayout from '../../components/ceo/CeoLayout.astro';
+import CapitalRoadmap from '../../components/ceo/CapitalRoadmap.astro';
+import DigitalAssetGuide from '../../components/ceo/DigitalAssetGuide.astro';
 import SignalList from '../../components/ceo/SignalList.astro';
-import { ceoSections, signals } from '../../utils/ceo';
+import { ceoSections, signals, weeklyEditions } from '../../utils/ceo';
+import { sitePath } from '../../utils/paths';
 
 export function getStaticPaths() {
   return ceoSections.map(([title, section]) => ({ params: { section }, props: { title, section } }));
@@ -9,19 +12,40 @@ export function getStaticPaths() {
 const { title, section } = Astro.props;
 const showAll = section === 'signals' || section === 'archive';
 const items = showAll ? signals : signals.filter(({ areas }) => areas.includes(section));
-const years = [...new Set(items.map(({ date }) => date.slice(0, 4)))];
+const years = [...new Set(items.map(({ date }) => date.slice(0, 4)))].sort().reverse();
+const businessAreas = [...new Set(items.flatMap((item) => item.businessAreas))].sort();
 const categories = [...new Set(items.map(({ category }) => category))];
+const applications = [...new Set(items.flatMap(({ applications }) => applications ?? []))].sort((a, b) => a.localeCompare(b, 'ko'));
 ---
 <CeoLayout {title}>
+  {section === 'archive' && <section class="lab-block" id="weekly">
+    <h2>주간 발행 기록</h2>
+    <ul class="lab-list">{weeklyEditions.map(({ start, through, title, items, question, related }) => <li class="lab-card">
+      <h3>{title}</h3>
+      <p><time datetime={start}>{start}</time>~<time datetime={through}>{through}</time> 공개 자료</p>
+      <p>{question.question}</p>
+      <details><summary>질문과 함께 볼 자료</summary>
+        <ul>{related.map(({ title, sourceUrl }) => <li><a href={sourceUrl}>{title}</a></li>)}</ul>
+      </details>
+      <ul class="lab-list">{items.map(({ id, title }) => <li><a href={sitePath('ceo-lens/signals') + '#' + id}>{title}</a></li>)}</ul>
+    </li>)}</ul>
+  </section>}
+  {section === 'capital-roadmap' && <CapitalRoadmap />}
+  {section === 'digital-assets' && <DigitalAssetGuide />}
   {section === 'methodology' ? <section class="lab-block">
     <h2>시그널 정리 기준</h2>
     <p>규제 당국 발표와 공시에서 확인할 수 있는 사실을 추립니다. 발표 시점과 제도 시행 예정일을 구분하고, 사업에 미칠 영향은 질문의 형태로 설명합니다.</p>
+    <p>주간 발행에는 자료를 확인한 시작일과 마지막 날을 표시합니다. 발행 범위에 들어오는 시그널과 대표 질문은 아카이브에 남깁니다.</p>
   </section> : <section class="lab-block">
-    {section === 'capital-roadmap' && <p>발표 당시 확인된 지정·인가를 기준으로 수록했습니다.</p>}
+    {section === 'digital-assets' && <h2>정책과 인프라 타임라인</h2>}
     <ceo-filters>
       <div class="lab-controls">
         <label>발표 연도 <select data-filter="year"><option value="">전체</option>{years.map((year) => <option>{year}</option>)}</select></label>
-        <label>주제 <select data-filter="topic"><option value="">전체</option>{categories.map((category) => <option>{category}</option>)}</select></label>
+        {categories.length > 1 && <label>주제 <select data-filter="topic"><option value="">전체</option>{categories.map((category) => <option>{category}</option>)}</select></label>}
+        {section === 'ai-digital' && <label>적용 분야 <select data-filter="application"><option value="">전체</option>{applications.map((application) => <option>{application}</option>)}</select></label>}
+        {section === 'competitors' && <label>지역 <select data-filter="region"><option value="">전체</option><option value="KR">국내</option><option value="GLOBAL">해외</option></select></label>}
+        {section === 'regulation' && <label>업무 영역 <select data-filter="area"><option value="">전체</option>{businessAreas.map((area) => <option>{area}</option>)}</select></label>}
+        <button type="button" data-reset hidden>필터 초기화</button>
       </div>
       <p role="status">{items.length}건</p>
       <SignalList {items} />
@@ -31,20 +55,55 @@ const categories = [...new Set(items.map(({ category }) => category))];
 <script>
   class CeoFilters extends HTMLElement {
     connectedCallback() {
-      const year = this.querySelector<HTMLSelectElement>('[data-filter="year"]');
-      const topic = this.querySelector<HTMLSelectElement>('[data-filter="topic"]');
+      const controller = new AbortController();
+      this.cleanup = () => controller.abort();
+      const filters = Array.from(this.querySelectorAll<HTMLSelectElement>('select[data-filter]'));
       const status = this.querySelector('[role="status"]');
       const items = Array.from(this.querySelectorAll<HTMLElement>('[data-year]'));
-      if (!year || !topic || !status) return;
-      this.addEventListener('change', () => {
+      const reset = this.querySelector<HTMLButtonElement>('[data-reset]');
+      if (!status) return;
+      if (reset) reset.hidden = false;
+      const render = () => {
         const visible = items.filter((item) => {
-          const match = (!year.value || item.dataset.year === year.value) && (!topic.value || item.dataset.topic === topic.value);
+          const match = filters.every(({ dataset, value }) =>
+            !value || item.dataset[dataset.filter ?? '']?.split('|').includes(value));
           item.hidden = !match;
           return match;
         });
         status.textContent = visible.length ? `${visible.length}건` : '선택한 조건에 맞는 시그널이 없습니다.';
-      });
+      };
+      const loadUrl = () => {
+        const params = new URLSearchParams(location.search);
+        for (const filter of filters) {
+          const value = params.get(filter.dataset.filter!) ?? '';
+          filter.value = Array.from(filter.options).some((option) => option.value === value) ? value : '';
+        }
+        render();
+      };
+      const saveUrl = () => {
+        const url = new URL(location.href);
+        for (const filter of filters) {
+          const key = filter.dataset.filter!;
+          if (filter.value) url.searchParams.set(key, filter.value);
+          else url.searchParams.delete(key);
+        }
+        if (url.href !== location.href) {
+          url.hash = '';
+          history.pushState(null, '', url);
+        }
+        render();
+      };
+      const options = { signal: controller.signal };
+      this.addEventListener('change', saveUrl, options);
+      reset?.addEventListener('click', () => {
+        for (const filter of filters) filter.value = '';
+        saveUrl();
+      }, options);
+      window.addEventListener('popstate', loadUrl, options);
+      loadUrl();
     }
+    private cleanup?: () => void;
+    disconnectedCallback() { this.cleanup?.(); }
   }
   customElements.define('ceo-filters', CeoFilters);
 </script>

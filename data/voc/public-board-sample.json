@@ -1,0 +1,124 @@
+{
+  "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+  "start": "2022-01-01",
+  "end": "2026-11-25",
+  "pages": 1057,
+  "pageSize": 100,
+  "oldestObserved": "2021-12-29",
+  "newestObserved": "2026-11-25",
+  "stop": "reached-older-posts",
+  "years": {
+    "2022": {
+      "total": 8049,
+      "categories": {
+        "문의": 7380,
+        "칭찬·불만": 235,
+        "제안": 434
+      }
+    },
+    "2023": {
+      "total": 9121,
+      "categories": {
+        "문의": 8514,
+        "칭찬·불만": 209,
+        "제안": 398
+      }
+    },
+    "2024": {
+      "total": 9729,
+      "categories": {
+        "제안": 392,
+        "문의": 9168,
+        "칭찬·불만": 169
+      }
+    },
+    "2025": {
+      "total": 12383,
+      "categories": {
+        "문의": 11355,
+        "칭찬·불만": 501,
+        "제안": 527
+      }
+    },
+    "2026": {
+      "total": 9002,
+      "categories": {
+        "문의": 8311,
+        "칭찬·불만": 316,
+        "제안": 375
+      }
+    }
+  },
+  "topicCounts": {
+    "2022": {
+      "hts": 2239,
+      "unclassified": 2686,
+      "auth": 315,
+      "orders": 604,
+      "ambiguous": 534,
+      "hours": 43,
+      "fees": 128,
+      "transfer": 227,
+      "products": 141,
+      "overseas": 206,
+      "credit": 57,
+      "account": 200
+    },
+    "2023": {
+      "hts": 2570,
+      "unclassified": 3623,
+      "orders": 657,
+      "transfer": 182,
+      "ambiguous": 571,
+      "overseas": 167,
+      "hours": 47,
+      "fees": 103,
+      "auth": 246,
+      "account": 148,
+      "products": 119,
+      "credit": 81
+    },
+    "2024": {
+      "hts": 2661,
+      "overseas": 182,
+      "ambiguous": 609,
+      "unclassified": 3988,
+      "auth": 253,
+      "transfer": 216,
+      "orders": 720,
+      "hours": 51,
+      "account": 146,
+      "products": 151,
+      "fees": 117,
+      "credit": 74
+    },
+    "2025": {
+      "hts": 2959,
+      "unclassified": 4786,
+      "transfer": 240,
+      "auth": 216,
+      "products": 153,
+      "fees": 155,
+      "orders": 1558,
+      "ambiguous": 789,
+      "account": 141,
+      "overseas": 220,
+      "credit": 83,
+      "hours": 55
+    },
+    "2026": {
+      "hts": 2121,
+      "unclassified": 3133,
+      "orders": 718,
+      "credit": 101,
+      "auth": 266,
+      "transfer": 357,
+      "ambiguous": 739,
+      "overseas": 181,
+      "products": 236,
+      "account": 275,
+      "hours": 78,
+      "fees": 106
+    }
+  }
+}

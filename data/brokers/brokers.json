@@ -1,4 +1,187 @@
 [
-  {"id":"kiwoom","name":"키움증권","character":"온라인 주식 위탁매매를 기반으로 성장한 종합증권사","segments":["투자매매업","투자중개업","투자일임업","투자자문업"],"map":[{"customer":"투자자","business":"투자중개","revenue":"위탁매매 수수료"}],"sourceUrl":"https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"},
-  {"id":"mirae-asset","name":"미래에셋증권","character":"해외사업을 통한 사업 다각화를 추진하는 증권사","segments":[],"map":[],"sourceUrl":"https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm"}
+  {
+    "id": "kiwoom",
+    "name": "키움증권",
+    "character": "온라인 주식 위탁매매를 기반으로 성장한 종합증권사",
+    "segments": [
+      "투자매매업",
+      "투자중개업",
+      "투자일임업",
+      "투자자문업"
+    ],
+    "map": [
+      {
+        "customer": "투자자",
+        "business": "투자중개",
+        "revenue": "위탁매매 수수료"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
+  },
+  {
+    "id": "mirae-asset",
+    "name": "미래에셋증권",
+    "character": "해외사업을 통한 사업 다각화를 추진하는 증권사",
+    "segments": [
+      "자산관리부문(WM)",
+      "투자은행부문(IB)",
+      "트레이딩 및 자기자본 투자부문"
+    ],
+    "map": [
+      {
+        "customer": "개인·법인 고객",
+        "business": "자산관리(WM)",
+        "revenue": "상품 판매·관리 수수료"
+      },
+      {
+        "customer": "자금 조달 기업",
+        "business": "투자은행(IB)",
+        "revenue": "인수·주선·자문 수수료"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/000781/20240318003508/11011.htm"
+  },
+  {
+    "id": "nh-investment",
+    "name": "NH투자증권",
+    "character": "위탁매매, 자산관리, 기업금융 등을 영위하는 종합증권사",
+    "segments": [
+      "Brokerage",
+      "금융상품판매"
+    ],
+    "map": [
+      {
+        "customer": "주식 투자자",
+        "business": "Brokerage",
+        "revenue": "위탁매매 수수료"
+      },
+      {
+        "customer": "금융상품 가입자",
+        "business": "금융상품판매",
+        "revenue": "펀드·랩·신탁 관련 수익"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/13/002073/20260313005093/10111.htm"
+  },
+  {
+    "id": "samsung",
+    "name": "삼성증권",
+    "character": "증권중개와 자산관리, 기업금융 서비스를 영위하는 종합증권사",
+    "segments": [
+      "주식위탁매매",
+      "금융상품판매",
+      "상품운용 및 금융수지",
+      "인수주선 및 자문"
+    ],
+    "map": [
+      {
+        "customer": "주식 투자자",
+        "business": "주식위탁매매",
+        "revenue": "위탁매매 수수료"
+      },
+      {
+        "customer": "기업 고객",
+        "business": "인수주선 및 자문",
+        "revenue": "인수·자문 수수료"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2023/09/11/000195/20230911000573/2022%20%EC%82%BC%EC%84%B1%EC%A6%9D%EA%B6%8C%20%ED%86%B5%ED%95%A9%EB%B3%B4%EA%B3%A0%EC%84%9C%28%EA%B5%AD%EB%AC%B8%29.pdf"
+  },
+  {
+    "id": "korea-investment",
+    "name": "한국투자증권",
+    "character": "자기자본 8조원 이상 종합금융투자사업자로 지정된 증권사",
+    "segments": [
+      "위탁매매(BK)",
+      "자산관리(AM)",
+      "투자은행(IB)",
+      "자산운용(Trading)",
+      "기타"
+    ],
+    "map": [
+      {
+        "customer": "투자자",
+        "business": "위탁매매(BK)",
+        "revenue": "주식·파생 중개 수수료"
+      },
+      {
+        "customer": "자금조달 기업",
+        "business": "투자은행(IB)",
+        "revenue": "증권 인수·주선 수수료"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/09/07/000080/20220907000110/10601.htm"
+  },
+  {
+    "id": "meritz",
+    "name": "메리츠증권",
+    "character": "기업금융, 자산운용, 위탁·자산관리 등을 운영하는 증권사",
+    "segments": [
+      "위탁/자산관리부문",
+      "기업금융부문",
+      "자산운용부문"
+    ],
+    "map": [
+      {
+        "customer": "개인·법인 고객",
+        "business": "위탁/자산관리부문",
+        "revenue": "위탁매매·금융상품 판매"
+      },
+      {
+        "customer": "자금조달 기업",
+        "business": "기업금융부문",
+        "revenue": "인수·구조화금융 수익"
+      }
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/05/28/000055/20250528000102/10601.htm"
+  },
+  {
+    "id": "kb",
+    "name": "KB증권",
+    "character": "KB금융지주가 보유한 금융투자회사",
+    "segments": [],
+    "map": [],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312526094923/d265234dex991.htm"
+  },
+  {
+    "id": "hana",
+    "name": "하나증권",
+    "character": "개인 자산관리와 기관 중개, 기업금융, 자기자본 운용을 함께 운영하는 증권사",
+    "segments": ["Wealth Management(WM)", "홀세일", "Investment Banking(IB)", "Sales & Trading(S&T)"],
+    "map": [
+      {"customer":"개인 투자자","business":"Wealth Management(WM)","revenue":"주식·선물·옵션 위탁매매와 자산관리 상품"},
+      {"customer":"기관·법인 투자자","business":"홀세일","revenue":"금융상품 판매와 주식·파생상품 중개"},
+      {"customer":"자금조달 기업","business":"Investment Banking(IB)","revenue":"기업금융과 M&A 자문"}
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm"
+  },
+  {
+    "id": "daishin",
+    "name": "대신증권",
+    "character": "증권업을 중심으로 저축은행과 자산신탁 사업을 함께 운영하는 증권사",
+    "segments": [
+      "금융투자업",
+      "저축은행업",
+      "자산신탁업"
+    ],
+    "map": [
+      {"customer":"증권 투자자","business":"금융투자업","revenue":"수탁수수료"}
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm"
+  },
+  {
+    "id": "shinhan",
+    "name": "신한투자증권",
+    "character": "신한금융그룹의 종합증권사",
+    "segments": [
+      "자산관리총괄",
+      "CIB총괄",
+      "S&T그룹"
+    ],
+    "map": [
+      {"customer":"개인·법인 고객","business":"자산관리총괄","revenue":"증권중개와 금융상품 판매"},
+      {"customer":"자금조달 기업","business":"CIB총괄","revenue":"증권 발행·인수 및 M&A 자문"}
+    ],
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/11/14/002362/20251114005361/11013.htm"
+  }
 ]

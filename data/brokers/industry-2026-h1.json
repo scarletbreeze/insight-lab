@@ -1,0 +1,89 @@
+{
+  "date": "2026-06-30",
+  "basis": "별도 재무제표",
+  "scope": "자본총계 상위 10개사",
+  "sourceName": "NH투자증권 투자설명서 · 주요 국내 금융투자회사 재무 현황",
+  "sourceUrl": "https://samara.kr/disclosure/20261028000011",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 144212271,
+      "liabilities": 133646944,
+      "equity": 10565327,
+      "capital": 4123213
+    },
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 138879665,
+      "liabilities": 125687470,
+      "equity": 13192195,
+      "capital": 176157
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 110552495,
+      "liabilities": 100734390,
+      "equity": 9818105,
+      "capital": 2008159
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 100019530,
+      "liabilities": 92041146,
+      "equity": 7978384,
+      "capital": 1659769
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 90570895,
+      "liabilities": 82414268,
+      "equity": 8156627,
+      "capital": 458478
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 94927779,
+      "liabilities": 88036850,
+      "equity": 6890929,
+      "capital": 145225
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 85182682,
+      "liabilities": 76833139,
+      "equity": 8349543,
+      "capital": 818929
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 72302429,
+      "liabilities": 65585223,
+      "equity": 6717206,
+      "capital": 402162
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 70733406,
+      "liabilities": 64848948,
+      "equity": 5884458,
+      "capital": 1786998
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 30951354,
+      "liabilities": 26357629,
+      "equity": 4593725,
+      "capital": 480382
+    }
+  ]
+}

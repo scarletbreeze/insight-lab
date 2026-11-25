@@ -1,7 +1,14 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
 import ScreenCard from '../../components/hero/ScreenCard.astro';
-import { screenByNumber } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+import { legends, screenByNumber } from '../../utils/hero';
+import mentions from '../../../data/voc/screen-mentions.json';
+const ranked = Object.entries(mentions.screens).sort(([a, x], [b, y]) => y - x || a.localeCompare(b));
+const inquiries = Object.values(mentions.years).reduce((sum, year) => sum + year.categories['문의'], 0);
+const cutoff = ranked[9]?.[1] ?? 0;
+const leaders = ranked.filter(([, count]) => count >= cutoff);
+const remaining = ranked.filter(([, count]) => count < cutoff);
 
 const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenByNumber);
 ---
@@ -12,7 +19,35 @@ const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenBy
     <div class="hero-grid">{essentials.map((screen) => <ScreenCard screen={screen} />)}</div>
   </section>
   <section class="hero-section">
+    <h2>Most Asked · 문의 제목에 나온 화면</h2>
+    <p>{mentions.start}~{mentions.end} 공개 문의 {inquiries.toLocaleString('ko-KR')}건 중 {mentions.matchedThreads.toLocaleString('ko-KR')}건의 제목에서 수록 화면번호를 확인했습니다. 대괄호 안의 번호 또는 ‘화면’과 함께 쓴 번호를 셌습니다. 같은 문의에 같은 번호가 반복되면 한 번만 셉니다.</p>
+    <ul class="hero-chips">{leaders.map(([number, count]) => <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title} · {count}건</a></li>)}</ul>
+    {remaining.length > 0 && <details><summary>다른 화면 {remaining.length}개</summary>
+      <ul class="hero-chips">{remaining.map(([number, count]) => <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title} · {count}건</a></li>)}</ul>
+    </details>}
+    <a href={mentions.sourceUrl}>키움증권 공개 고객게시판</a>
+  </section>
+  <section class="hero-section">
     <h2>Legend’s Pick</h2>
-    <p class="empty-state">도서 및 장별 출처 확인 중</p>
+    <p>『{legends.book.title}』 · {legends.book.author} · {legends.book.publisher}</p>
+    <p>종이책 {legends.book.printDate} · 전자책 {legends.book.ebookDate}</p>
+    <p>공개 목차와 소개를 바탕으로 장별 접근을 요약했습니다. 함께 볼 화면은 Hero Lab이 학습용으로 선정했습니다.</p>
+    <div class="hero-grid">
+      {legends.profiles.map((profile) => (
+        <article class="hero-card" id={'legend-' + profile.chapter}>
+          <span class="category">{profile.style}</span>
+          <strong>{profile.name}</strong>
+          <p>{profile.summary}</p>
+          <a href={legends.book.contentsUrl}>도서 목차 · {profile.chapter}장</a>
+          <p>함께 볼 화면</p>
+          <ul class="hero-chips">
+            {profile.screens.map((number) => (
+              <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title}</a></li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+    <p><a href={legends.book.ebookUrl}>전자책 정보</a></p>
   </section>
 </HeroLayout>

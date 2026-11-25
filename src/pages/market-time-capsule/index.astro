@@ -1,17 +1,42 @@
 ---
 import MarketLayout from '../../components/market/MarketLayout.astro';
+import equityRankings from '../../../data/market/months/equity-rankings.json';
+import spyRankings from '../../../data/market/months/spy-equity-rankings.json';
+import annualRankings from '../../../data/market/annual-equity-rankings.json';
 import { years, marketEvents } from '../../utils/market';
 import { sitePath } from '../../utils/paths';
 
 const documented = new Set(marketEvents.map(({ date }) => Number(date.slice(0, 4))));
+const rankedMonths = Object.keys(equityRankings).sort();
+const rankedYears = Object.keys(annualRankings).sort();
+const spyMonths = Object.keys(spyRankings).sort();
+const monthLabel = (period: string) => {
+  const [year, month] = period.split('-');
+  return year + '년 ' + Number(month) + '월';
+};
 ---
 <MarketLayout title="Market Time Capsule">
   <p slot="intro">과거로 돌아간다면, 그 시대의 무엇을 기억하고 싶을까?</p>
   <section class="lab-block">
     <h2>1990–2026 연도별 탐색</h2>
     <ul class="lab-chips">{years.map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}</a></li>)}</ul>
-    <p>사건 기록이 수록된 연도</p>
-    <ul class="lab-chips">{[...documented].map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}</a></li>)}</ul>
+    <p>{documented.size}개 연도에 시장 사건 {marketEvents.length}건을 수록했습니다.</p>
+    <p><a href={sitePath('market-time-capsule/2025')}>2025년 12개월 시장 기록 보기</a> · 한국·미국 지수 종가와 주요 사건</p>
+  </section>
+  <section class="lab-block">
+    <h2>시장 지표 추이</h2>
+    <p>한 지표를 골라 최대 10년의 흐름을 살펴봅니다.</p>
+    <a href={sitePath('market-time-capsule/trends')}>시장 지표 그래프 보기</a>
+    <p><a href={sitePath("market-time-capsule/compare")}>서로 다른 두 달 비교하기</a></p>
+  </section>
+  <section class="lab-block">
+    <h2>월별 종목 수익률</h2>
+    <p>QQQ 보유 주식을 기준으로 {monthLabel(rankedMonths[0])}~{monthLabel(rankedMonths.at(-1)!)}의 월간 수익률 {rankedMonths.length}개월을 수록했습니다.</p>
+    {spyMonths.length > 0 && <p>SPY 기준은 {monthLabel(spyMonths[0])}~{monthLabel(spyMonths.at(-1)!)} {spyMonths.length}개월을 수록했습니다.</p>}
+    <ul class="lab-chips">
+      {rankedYears.map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}년 연간 수익률과 월별 순위</a></li>)}
+      <li><a href={sitePath('market-time-capsule/equity-data')}>종목 순위 산정 방식과 수록 범위</a></li>
+    </ul>
   </section>
   <section class="lab-block">
     <h2>Returner Mode</h2>

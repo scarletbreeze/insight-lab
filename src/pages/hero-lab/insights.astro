@@ -1,14 +1,56 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
-import { heroGuides } from '../../utils/hero';
+import { heroGuides, screenByNumber } from '../../utils/hero';
 import { sitePath } from '../../utils/paths';
+
+const insights = [
+  {
+    title: '업종의 장중 움직임과 누적 수급',
+    summary: '업종현재가에서 오늘 움직임을 확인하고, 기간별 업종 시세와 수급에서 같은 업종의 5일·20일 흐름을 비교합니다. 업종종합차트를 열어 확인한 기간의 지수 흐름을 다시 봅니다.',
+    screens: ['0211', '0219', '0602'],
+  },
+  {
+    title: '시장 강도와 투자 주체',
+    summary: '등락률과 투자자별 매매는 조회 시장과 시각을 맞춰 비교합니다. [0780]은 조회 버튼으로 수치를 갱신하므로 차트의 시점과 따로 확인합니다.',
+    screens: ['0641', '0780', '0130'],
+  },
+  {
+    title: '재무 실적과 가격의 비교',
+    summary: '기업분석에서 사업과 재무제표를 읽은 뒤 재무차트에서 가격과 재무지표의 추이를 함께 봅니다. 분기와 연간 기준을 맞추고 예상치는 화면 표시로 구분합니다.',
+    screens: ['0919', '0604'],
+  },
+  {
+    title: '체결 내역과 호가 비교',
+    summary: '호가창의 대기 잔량과 체결분석의 실제 거래량은 각각 다른 정보를 보여줍니다. 체결금액 구간과 가격 구간을 바꿔 보면 어느 거래에서 비중이 변했는지 확인할 수 있습니다.',
+    screens: ['0101', '0197'],
+  },
+  {
+    title: 'KRX·NXT의 차트 기준',
+    summary: '통합키움차트에서 현재 선택된 거래소를 확인합니다. 차트와 통합 호가창을 같이 읽을 때에는 종목, 거래소, 조회 시각을 맞춥니다.',
+    screens: ['6600', '8284'],
+  },
+  {
+    title: '거래 기록과 장중 흐름 복기',
+    summary: '자동일지차트에서 거래 시각과 당시 메모를 확인하고, 복기차트에서 해당 시간대의 장중 가격 흐름을 재생합니다. 조회 가능 시간과 저장 여부는 공식 안내에서 확인합니다.',
+    screens: ['0606', '0605'],
+  },
+  {
+    title: '홍콩주식의 지연시세',
+    summary: '현재가 화면에서 실시간·지연시세 여부와 거래통화를 확인합니다. 15분 지연 종합차트를 같이 열었다면 차트의 표시 시각을 기준으로 시세 흐름을 비교합니다.',
+    screens: ['3010', '3098'],
+  },
+];
 ---
 <HeroLayout title="화면 활용 인사이트">
-  <section class="hero-section">
-    <h2>가격 흐름과 매매 주체별 흐름</h2>
-    <p><a href={sitePath('hero-lab/screens/0641')}>0641</a>은 시장의 등락률을 비교하고 <a href={sitePath('hero-lab/screens/0780')}>0780</a>은 매매 주체별 현황을 보여줍니다. 두 화면을 함께 볼 때에는 시장 범위와 조회 시점을 맞춰 해석하는 편이 좋습니다.</p>
-    <p>0780은 자동 갱신이 되지 않아 조회 시점이 다를 수 있습니다.</p>
-  </section>
+  <div class="hero-grid">
+    {insights.map(({ title, summary, screens }) => <section class="hero-card">
+      <h2>{title}</h2>
+      <p>{summary}</p>
+      <ul class="hero-chips">
+        {screens.map((number) => <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title}</a></li>)}
+      </ul>
+    </section>)}
+  </div>
   <section class="hero-section">
     <h2>공식 안내</h2>
     <ul>{heroGuides.map(({ title, url }) => <li><a href={url}>{title}</a></li>)}</ul>

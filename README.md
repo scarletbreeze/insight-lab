@@ -25,6 +25,7 @@ npm run build
 - Hero Lab 화면 목록과 사용 예시는 `data/hero/`에 있다. 공식 화면 목록으로 확인한 항목과 화면별 도움말을 읽고 정리한 항목을 각각의 출처로 구분한다.
 - VOC Studio 공지·문의 표본의 수집 범위와 부족한 자료는 [공개 자료 조사](docs/voc-source-research.md)에 기록한다.
 - 시장 지표는 `python3 scripts/market/collect_prices.py --through YYYY-MM-DD`로 FRED의 일별 관측값을 월별로 집계한다.
+- 월간 종목 순위는 검증한 시점별 모집단과 분할 조정 종가를 담은 CSV가 있어야 생성할 수 있다. 필수 열은 `scripts/market/calculate_returns.py`의 `REQUIRED`를 참고한다.
 - 공개 블로그 메타데이터는 `python3 scripts/archive/import_notes.py /path/to/scarletbreeze.github.io`로 재현한다. 원문과 비공개 자료는 원래 보관 위치에서 관리한다.
 
 ## GitHub Pages
@@ -40,3 +41,4 @@ npm run build
 - [프로젝트 헌장](docs/00-project-charter.md)
 - [디자인 시스템](docs/01-design-system.md)
 - [데이터 정책](docs/02-data-policy.md)
+- [v1 설계와 구현 대조](docs/v1-implementation-check.md)

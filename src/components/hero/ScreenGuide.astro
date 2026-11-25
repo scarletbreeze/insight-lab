@@ -1,0 +1,40 @@
+---
+import { screenGuides } from '../../utils/hero';
+
+interface Props { number: string; title: string; }
+const { number, title } = Astro.props;
+const guide = screenGuides[number];
+const sections = guide?.sections;
+const official = 'https://download.kiwoom.com/hero4_help_new/';
+---
+{guide && <section class="hero-section">
+  <h2>화면에서 확인할 순서</h2>
+  <ol class="hero-guide-flow">{guide.focus.map((step) => <li>{step}</li>)}</ol>
+  {sections && <figure class="hero-guide">
+    <figcaption>Hero Lab 화면 구성 개념도</figcaption>
+    <div class="hero-screen-outline">
+      <strong>{number} · {title}</strong>
+      <dl class="hero-grid hero-screen-summary">
+        {sections.map(([label, description]) => <div class="hero-card">
+          <dt>{label}</dt><dd>{description}</dd>
+        </div>)}
+      </dl>
+    </div>
+  </figure>}
+  {guide.image && <><h2>공식 화면 가이드</h2>
+  <figure class="hero-guide">
+    <a href={official + number + '.htm'}>
+      <img src={official + 'images/' + guide.image} loading="lazy" decoding="async" alt={title + ' · 키움증권 공식 도움말 화면 예시'} />
+    </a>
+    <figcaption><a href={official + number + '.htm'}>키움증권 영웅문4 화면 도움말</a></figcaption>
+  </figure></>}
+</section>}
+<style>
+  .hero-screen-outline {
+    padding: 1rem;
+    width: 100%;
+    border: 1px solid var(--color-rule);
+    border-radius: .5rem;
+  }
+  .hero-screen-outline dl { margin-block-end: 0; }
+</style>

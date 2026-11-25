@@ -1,0 +1,66 @@
+{
+  "start": "2025-01-01",
+  "end": "2025-09-30",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "operatingIncome": 1069425,
+      "netIncome": 1007855,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251114003006"
+    },
+    {
+      "id": "korea-investment",
+      "operatingIncome": 1983226,
+      "netIncome": 1676124,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001340"
+    },
+    {
+      "id": "nh-investment",
+      "operatingIncome": 1002315,
+      "netIncome": 748144,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20251114001592"
+    },
+    {
+      "id": "kiwoom",
+      "operatingIncome": 1142634,
+      "netIncome": 868115,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001559"
+    },
+    {
+      "id": "samsung",
+      "operatingIncome": 1045107,
+      "netIncome": 792232,
+      "sourceUrl": "https://kind.krx.co.kr/external/2025/11/14/002210/20251114004997/11013.htm"
+    },
+    {
+      "id": "kb",
+      "operatingIncome": 667919,
+      "netIncome": 502428,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001123"
+    },
+    {
+      "id": "meritz",
+      "operatingIncome": 701575,
+      "netIncome": 643499,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001503"
+    },
+    {
+      "id": "shinhan",
+      "operatingIncome": 462624,
+      "netIncome": 359357,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000557"
+    },
+    {
+      "id": "hana",
+      "operatingIncome": 184248,
+      "netIncome": 168242,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001337"
+    },
+    {
+      "id": "daishin",
+      "operatingIncome": 248167,
+      "netIncome": 192150,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112800767"
+    }
+  ]
+}

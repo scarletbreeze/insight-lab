@@ -4,7 +4,594 @@
     "date": "2026-11-18",
     "topic": "hts",
     "intent": "how_to",
+    "subtopic": "조건검색 시세",
+    "keywords": [
+      "조건검색",
+      "KRX",
+      "NXT",
+      "통합 시세"
+    ],
     "summary": "조건검색 지표의 계산 범위가 KRX 시세와 NXT를 포함한 통합 시세에서 어떻게 달라지는지 묻는 문의",
     "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWATZView"
+  },
+  {
+    "id": "customer-verification-renewal",
+    "date": "2026-11-25",
+    "topic": "auth",
+    "intent": "status",
+    "subtopic": "고객확인 재등록",
+    "keywords": [
+      "고객확인",
+      "재등록"
+    ],
+    "summary": "고객확인 절차를 다시 등록하는 과정에서 발생한 문제를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "api-futures-order-support",
+    "date": "2026-11-25",
+    "topic": "hours",
+    "intent": "how_to",
+    "subtopic": "주식선물 주문",
+    "keywords": [
+      "주식선물",
+      "OpenAPI+",
+      "신규·청산·취소"
+    ],
+    "summary": "OpenAPI+에서 국내 주식선물의 신규·청산·취소 주문을 지원하는지 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "chart-close-rate-mismatch",
+    "date": "2026-11-25",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "차트 등락률",
+    "keywords": [
+      "차트",
+      "등락률",
+      "종가"
+    ],
+    "summary": "차트에 표시된 등락률과 종가를 기준으로 계산한 가격 변화의 차이를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "premarket-chart-interval",
+    "date": "2026-11-25",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "프리마켓 차트",
+    "keywords": [
+      "프리마켓",
+      "일봉",
+      "5분봉"
+    ],
+    "summary": "프리마켓 시작 시 일봉과 5분봉의 표시 흐름이 다른 이유를 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "simple-authentication",
+    "date": "2026-11-25",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "간편인증",
+    "keywords": [
+      "간편인증"
+    ],
+    "summary": "간편인증 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "sale-proceeds-loan-enrollment",
+    "date": "2026-11-25",
+    "topic": "credit",
+    "intent": "status",
+    "subtopic": "매도대금 담보대출",
+    "keywords": [
+      "매도대금",
+      "담보대출",
+      "자동서비스"
+    ],
+    "summary": "매도대금 담보대출 자동서비스에 가입할 수 없는 이유를 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
+  },
+  {
+    "id": "example-2026-certificate",
+    "date": "2026-11-25",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "인증서",
+    "keywords": [
+      "인증서"
+    ],
+    "summary": "인증서 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-conditional-search",
+    "date": "2026-11-24",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "조건검색",
+    "keywords": [
+      "조건검색"
+    ],
+    "summary": "영웅문의 조건검색 사용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-account-opening",
+    "date": "2026-11-23",
+    "topic": "account",
+    "intent": "how_to",
+    "subtopic": "계좌 개설",
+    "keywords": [
+      "계좌개설"
+    ],
+    "summary": "계좌 개설 방법이나 절차를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-transfer",
+    "date": "2026-10-02",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "출금·이체",
+    "keywords": [
+      "이체"
+    ],
+    "summary": "증권계좌 이체에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-trading-hours",
+    "date": "2026-08-24",
+    "topic": "hours",
+    "intent": "policy",
+    "subtopic": "거래 시간",
+    "keywords": [
+      "거래시간"
+    ],
+    "summary": "이용할 수 있는 거래 시간대를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-order-rejection",
+    "date": "2026-08-12",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "주문 거부",
+    "keywords": [
+      "주문",
+      "거부"
+    ],
+    "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-overseas-exchange",
+    "date": "2026-06-22",
+    "topic": "overseas",
+    "intent": "how_to",
+    "subtopic": "환전",
+    "keywords": [
+      "환전"
+    ],
+    "summary": "증권계좌의 환전 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2026-trading-fees",
+    "date": "2026-05-29",
+    "topic": "fees",
+    "intent": "fee",
+    "subtopic": "거래 수수료",
+    "keywords": [
+      "수수료"
+    ],
+    "summary": "주식 거래에 적용되는 수수료를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-account-opening",
+    "date": "2025-12-29",
+    "topic": "account",
+    "intent": "how_to",
+    "subtopic": "계좌 개설",
+    "keywords": [
+      "계좌개설"
+    ],
+    "summary": "계좌 개설 방법이나 절차를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-certificate",
+    "date": "2025-12-24",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "인증서",
+    "keywords": [
+      "인증서"
+    ],
+    "summary": "인증서 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-conditional-search",
+    "date": "2025-12-18",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "조건검색",
+    "keywords": [
+      "조건검색"
+    ],
+    "summary": "영웅문의 조건검색 사용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-order-rejection",
+    "date": "2025-11-29",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "주문 거부",
+    "keywords": [
+      "주문",
+      "거부"
+    ],
+    "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-trading-hours",
+    "date": "2025-11-20",
+    "topic": "hours",
+    "intent": "policy",
+    "subtopic": "거래 시간",
+    "keywords": [
+      "거래시간"
+    ],
+    "summary": "이용할 수 있는 거래 시간대를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-transfer",
+    "date": "2025-11-11",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "출금·이체",
+    "keywords": [
+      "이체"
+    ],
+    "summary": "증권계좌 이체에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-overseas-exchange",
+    "date": "2025-10-29",
+    "topic": "overseas",
+    "intent": "how_to",
+    "subtopic": "환전",
+    "keywords": [
+      "환전"
+    ],
+    "summary": "증권계좌의 환전 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2025-trading-fees",
+    "date": "2025-10-11",
+    "topic": "fees",
+    "intent": "fee",
+    "subtopic": "거래 수수료",
+    "keywords": [
+      "수수료"
+    ],
+    "summary": "주식 거래에 적용되는 수수료를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-conditional-search",
+    "date": "2024-12-31",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "조건검색",
+    "keywords": [
+      "조건검색"
+    ],
+    "summary": "영웅문의 조건검색 사용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-certificate",
+    "date": "2024-12-27",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "인증서",
+    "keywords": [
+      "인증서"
+    ],
+    "summary": "인증서 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-overseas-exchange",
+    "date": "2024-11-25",
+    "topic": "overseas",
+    "intent": "how_to",
+    "subtopic": "환전",
+    "keywords": [
+      "환전"
+    ],
+    "summary": "증권계좌의 환전 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-order-rejection",
+    "date": "2024-11-06",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "주문 거부",
+    "keywords": [
+      "주문",
+      "거부"
+    ],
+    "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-account-opening",
+    "date": "2024-11-03",
+    "topic": "account",
+    "intent": "how_to",
+    "subtopic": "계좌 개설",
+    "keywords": [
+      "계좌개설"
+    ],
+    "summary": "계좌 개설 방법이나 절차를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-transfer",
+    "date": "2024-11-01",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "출금·이체",
+    "keywords": [
+      "이체"
+    ],
+    "summary": "증권계좌 이체에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-trading-fees",
+    "date": "2024-10-25",
+    "topic": "fees",
+    "intent": "fee",
+    "subtopic": "거래 수수료",
+    "keywords": [
+      "수수료"
+    ],
+    "summary": "주식 거래에 적용되는 수수료를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2024-margin-requirement",
+    "date": "2024-02-13",
+    "topic": "credit",
+    "intent": "policy",
+    "subtopic": "신용융자",
+    "keywords": [
+      "신용융자"
+    ],
+    "summary": "신용융자 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-conditional-search",
+    "date": "2023-12-26",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "조건검색",
+    "keywords": [
+      "조건검색"
+    ],
+    "summary": "영웅문의 조건검색 사용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-order-rejection",
+    "date": "2023-12-22",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "주문 거부",
+    "keywords": [
+      "주문",
+      "거부"
+    ],
+    "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-overseas-exchange",
+    "date": "2023-12-21",
+    "topic": "overseas",
+    "intent": "how_to",
+    "subtopic": "환전",
+    "keywords": [
+      "환전"
+    ],
+    "summary": "증권계좌의 환전 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-certificate",
+    "date": "2023-12-18",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "인증서",
+    "keywords": [
+      "인증서"
+    ],
+    "summary": "인증서 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-account-opening",
+    "date": "2023-12-15",
+    "topic": "account",
+    "intent": "how_to",
+    "subtopic": "계좌 개설",
+    "keywords": [
+      "계좌개설"
+    ],
+    "summary": "계좌 개설 방법이나 절차를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-transfer",
+    "date": "2023-12-06",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "출금·이체",
+    "keywords": [
+      "이체"
+    ],
+    "summary": "증권계좌 이체에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-trading-fees",
+    "date": "2023-04-11",
+    "topic": "fees",
+    "intent": "fee",
+    "subtopic": "거래 수수료",
+    "keywords": [
+      "수수료"
+    ],
+    "summary": "주식 거래에 적용되는 수수료를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2023-trading-hours",
+    "date": "2023-03-20",
+    "topic": "hours",
+    "intent": "policy",
+    "subtopic": "거래 시간",
+    "keywords": [
+      "거래시간"
+    ],
+    "summary": "이용할 수 있는 거래 시간대를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-certificate",
+    "date": "2022-12-31",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "인증서",
+    "keywords": [
+      "인증서"
+    ],
+    "summary": "인증서 이용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-conditional-search",
+    "date": "2022-12-28",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "조건검색",
+    "keywords": [
+      "조건검색"
+    ],
+    "summary": "영웅문의 조건검색 사용에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-account-opening",
+    "date": "2022-12-13",
+    "topic": "account",
+    "intent": "how_to",
+    "subtopic": "계좌 개설",
+    "keywords": [
+      "계좌개설"
+    ],
+    "summary": "계좌 개설 방법이나 절차를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-trading-fees",
+    "date": "2022-11-04",
+    "topic": "fees",
+    "intent": "fee",
+    "subtopic": "거래 수수료",
+    "keywords": [
+      "수수료"
+    ],
+    "summary": "주식 거래에 적용되는 수수료를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-transfer",
+    "date": "2022-11-02",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "출금·이체",
+    "keywords": [
+      "이체"
+    ],
+    "summary": "증권계좌 이체에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
+  },
+  {
+    "id": "example-2022-order-rejection",
+    "date": "2022-07-01",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "주문 거부",
+    "keywords": [
+      "주문",
+      "거부"
+    ],
+    "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "title-template"
   }
 ]

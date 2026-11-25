@@ -1,0 +1,113 @@
+{
+  "2016": {
+    "US": {
+      "corporateActionSources": [
+        "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm"
+      ],
+      "eligibleCount": 98,
+      "excludedSymbols": [
+        "CTRP",
+        "JD",
+        "LBTYK",
+        "LMCA",
+        "LMCK",
+        "NXPI",
+        "QVCA",
+        "SNDK"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 6,
+        "분할 비율만으로 조정할 수 없는 기업행동": 2
+      },
+      "loser": {
+        "firstDate": "2016-01-04",
+        "lastDate": "2016-12-30",
+        "name": "Endo International plc",
+        "returnPct": -72.46740220661987,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "ENDP"
+      },
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm",
+        "https://ir.nasdaq.com/static-files/86629559-f2ea-4837-9cb7-46853a5a8de1",
+        "https://ir.nasdaq.com/static-files/3417b182-f369-4d0e-960b-8fc7b9f06b16",
+        "https://www.sec.gov/Archives/edgar/data/1166691/000095010315009516/dp61838_8k.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-4"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tenbaggers": [],
+      "universe": "PowerShares QQQ Trust 보유 주식 (2015-09-30) · Nasdaq 편입 변경 반영",
+      "universeCount": 106,
+      "winner": {
+        "firstDate": "2016-01-04",
+        "lastDate": "2016-12-30",
+        "name": "NVIDIA Corp.",
+        "returnPct": 229.74976830398518,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "NVDA"
+      }
+    }
+  },
+  "2017": {
+    "US": {
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "AAPL",
+        "ADBE",
+        "AKAM",
+        "AMZN",
+        "ATVI",
+        "BIDU",
+        "CELG",
+        "CMCSA",
+        "COST",
+        "CTRP",
+        "FAST",
+        "INTC",
+        "JD",
+        "LBTYK",
+        "LILA",
+        "LILAK",
+        "NTES",
+        "NXPI",
+        "QCOM",
+        "QVCA",
+        "SHPG",
+        "YHOO"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 22
+      },
+      "loser": {
+        "firstDate": "2017-01-03",
+        "lastDate": "2017-12-29",
+        "name": "Mattel, Inc.",
+        "returnPct": -45.997191011235955,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "MAT"
+      },
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/shire-plc-join-nasdaq-100-index-beginning-october-19-2016",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-5",
+        "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tenbaggers": [],
+      "universe": "PowerShares QQQ Trust 보유 주식 (2016-09-30) · Nasdaq 편입 변경 반영",
+      "universeCount": 107,
+      "winner": {
+        "firstDate": "2017-01-03",
+        "lastDate": "2017-12-29",
+        "name": "Vertex Pharmaceuticals, Inc.",
+        "returnPct": 100.1068233409,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "VRTX"
+      }
+    }
+  }
+}

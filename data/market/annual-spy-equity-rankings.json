@@ -1,0 +1,96 @@
+{
+  "2017": {
+    "US": {
+      "corporateActionSources": [
+        "https://www.sec.gov/Archives/edgar/data/1645590/000162828017012383/hpe-10312017x10k.htm",
+        "https://www.sec.gov/Archives/edgar/data/1707092/000119312517364954/d494581d8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/203527/000119312517022651/d337397d8k.htm",
+        "https://www.sec.gov/Archives/edgar/data/39899/000003989918000011/tgna-20171231x10k.htm"
+      ],
+      "eligibleCount": 459,
+      "excludedSymbols": [
+        "AAPL",
+        "ABBV",
+        "ABT",
+        "ADBE",
+        "AKAM",
+        "AMZN",
+        "AN",
+        "ATVI",
+        "BBBY",
+        "BCR",
+        "BHI",
+        "CELG",
+        "CMCSA",
+        "COST",
+        "DD",
+        "DLPH",
+        "DNB",
+        "DOW",
+        "DVMT",
+        "FAST",
+        "FSLR",
+        "FTR",
+        "HAR",
+        "HPE",
+        "INTC",
+        "LLTC",
+        "LOW",
+        "LVLT",
+        "MJN",
+        "MMM",
+        "MUR",
+        "PBI",
+        "QCOM",
+        "R",
+        "RAI",
+        "RIG",
+        "SE",
+        "SPLS",
+        "STJ",
+        "SWN",
+        "TDC",
+        "TGNA",
+        "TSO",
+        "URBN",
+        "VAR",
+        "WFM",
+        "YHOO"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 43,
+        "분할 비율만으로 조정할 수 없는 기업행동": 4
+      },
+      "loser": {
+        "firstDate": "2017-01-03",
+        "lastDate": "2017-12-29",
+        "name": "Mallinckrodt PLC",
+        "returnPct": -56.388942586506865,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "MNK"
+      },
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+        "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tenbaggers": [],
+      "tickerChangeSources": [
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm"
+      ],
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506,
+      "winner": {
+        "firstDate": "2017-01-03",
+        "lastDate": "2017-12-29",
+        "name": "NRG Energy, Inc.",
+        "returnPct": 131.54471544715446,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "NRG"
+      }
+    }
+  }
+}

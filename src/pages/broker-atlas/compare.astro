@@ -4,6 +4,6 @@ import BrokerTable from '../../components/broker/BrokerTable';
 import { sitePath } from '../../utils/paths';
 ---
 <BrokerLayout title="증권사 비교">
-  <p slot="intro">확인한 회사의 연결 결산 지표를 같은 기준으로 비교합니다. 순위 범위는 사이트에 수록한 증권사입니다.</p>
+  <p slot="intro">두 증권사의 3분기 누적 손익, 연결 결산, 별도 재무현황과 사업 구조를 비교합니다.</p>
   <BrokerTable client:load mode="compare" brokerBase={sitePath('broker-atlas/brokers')} />
 </BrokerLayout>

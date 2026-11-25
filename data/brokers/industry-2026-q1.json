@@ -1,0 +1,18 @@
+{
+  "date": "2026-03-31",
+  "basis": "별도 재무제표",
+  "sourceName": "NH투자증권 KIND 공시 · 증권사별 재무현황",
+  "sourceUrl": "https://kind.krx.co.kr/external/2026/06/16/000072/20260616000083/10601.htm",
+  "companies": [
+    {"id":"korea-investment","name":"한국투자증권","assets":120625526,"liabilities":107917004,"equity":12708522,"capital":176157},
+    {"id":"mirae-asset","name":"미래에셋증권","assets":124164241,"liabilities":113895390,"equity":10268851,"capital":4123213},
+    {"id":"nh-investment","name":"NH투자증권","assets":94925171,"liabilities":85921493,"equity":9003678,"capital":1943851},
+    {"id":"meritz","name":"메리츠증권","assets":81943316,"liabilities":74150749,"equity":7792566,"capital":818929},
+    {"id":"samsung","name":"삼성증권","assets":83629367,"liabilities":75927665,"equity":7701702,"capital":458478},
+    {"id":"kb","name":"KB증권","assets":85902717,"liabilities":78264983,"equity":7637734,"capital":1659769},
+    {"id":"kiwoom","name":"키움증권","assets":81625179,"liabilities":75325819,"equity":6299360,"capital":145225},
+    {"id":"hana","name":"하나증권","assets":67555497,"liabilities":61448543,"equity":6106953,"capital":402162},
+    {"id":"shinhan","name":"신한투자증권","assets":63300562,"liabilities":57525430,"equity":5775132,"capital":1786998},
+    {"id":"daishin","name":"대신증권","assets":27856278,"liabilities":23761603,"equity":4094675,"capital":480382}
+  ]
+}

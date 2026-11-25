@@ -1,0 +1,91 @@
+{
+  "date": "2023-12-31",
+  "basis": "별도 재무제표",
+  "scope": "수록 10개사 자본총계 순위",
+  "sourceName": "대신증권 KIND 공시 · 주요 국내 금융투자회사 재무 현황",
+  "sourceUrl": "https://kind.krx.co.kr/external/2024/04/29/000024/20240429000034/10601.htm",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 85964525,
+      "liabilities": 76496203,
+      "equity": 9468323,
+      "capital": 4101961
+    },
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 75709620,
+      "liabilities": 67570894,
+      "equity": 8138726,
+      "capital": 175887
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 53453943,
+      "liabilities": 46347391,
+      "equity": 7106553,
+      "capital": 1782560
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 50946382,
+      "liabilities": 44608732,
+      "equity": 6337650,
+      "capital": 458478
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 57828488,
+      "liabilities": 51671276,
+      "equity": 6157212,
+      "capital": 1493102
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 45950532,
+      "liabilities": 40197985,
+      "equity": 5752546,
+      "capital": 402162
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 50923817,
+      "liabilities": 45304437,
+      "equity": 5619380,
+      "capital": 776179
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 50099501,
+      "liabilities": 44836165,
+      "equity": 5263336,
+      "capital": 1786998
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 43353320,
+      "liabilities": 39080764,
+      "equity": 4272557,
+      "capital": 145225,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm",
+      "sourceName": "키움증권 사업보고서 · 재무상태표"
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 15123788,
+      "liabilities": 12270593,
+      "equity": 2853195,
+      "capital": 434867
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+---
+import { months, years } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+
+interface Props { year: number; month?: string; }
+const { year, month } = Astro.props;
+const periods = month ? years.flatMap((item) => months.map((m) => `${item}/${m}`)) : years.map(String);
+const current = month ? year + '/' + month : String(year);
+const index = periods.indexOf(current);
+const route = (period: string) => sitePath('market-time-capsule/' + period);
+const comparison = month && index > 0 ? sitePath('market-time-capsule/compare') + '?' + new URLSearchParams({
+  first: periods[index - 1].replace('/', '-'),
+  second: current.replace('/', '-'),
+}) : undefined;
+---
+<nav class="lab-controls" aria-label={month ? '인접 월 기록' : '인접 연도 기록'}>
+  {index > 0 && <a class="lab-link" href={route(periods[index - 1])}>← 이전 {month ? '월' : '연도'}</a>}
+  {month && <a class="lab-link" href={route(String(year))}>{year}년 전체</a>}
+  {index < periods.length - 1 && <a class="lab-link" href={route(periods[index + 1])}>다음 {month ? '월' : '연도'} →</a>}
+  {comparison && <a class="lab-link" href={comparison}>이전 달과 비교</a>}
+</nav>

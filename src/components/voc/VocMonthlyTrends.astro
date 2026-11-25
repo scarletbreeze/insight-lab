@@ -1,0 +1,26 @@
+---
+import { publicBoardMonths } from '../../utils/voc-public-board';
+
+interface Props {
+  year: number;
+  topic?: string;
+}
+const { year, topic } = Astro.props;
+const months = publicBoardMonths(year, topic);
+const scale = Math.max(1, ...months.map(({ count }) => count));
+---
+{months.length > 0 && <div class="voc-months">
+  {months.map(({ period, count, partialThrough }) => <div class="voc-month">
+    <time datetime={period}>{Number(period.slice(5))}월</time>
+    <meter min="0" max={scale} value={count} aria-label={`${period} 문의 건수`}></meter>
+    <span>{count.toLocaleString('ko-KR')}건
+      {partialThrough && <small> · {Number(partialThrough.slice(8))}일까지</small>}
+    </span>
+  </div>)}
+</div>}
+<style>
+  .voc-months { display: grid; gap: .45rem; margin-block: .75rem; }
+  .voc-month { display: grid; grid-template-columns: 3.5rem minmax(2rem, 1fr) minmax(5rem, auto); gap: .65rem; align-items: center; }
+  .voc-month meter { width: 100%; }
+  .voc-month span { font-variant-numeric: tabular-nums; }
+</style>

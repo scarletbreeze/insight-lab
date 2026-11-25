@@ -1,0 +1,50 @@
+---
+import { koreaAnnualCloses, koreaAnnualSource, koreaMonthlyCloses, usMonthlyCloses } from '../../utils/market';
+
+interface Props { period: string; market?: 'KR' | 'US'; }
+const { period, market = 'KR' } = Astro.props;
+const domestic = market === 'KR';
+const labels = domestic ? ['KOSPI', 'KOSDAQ'] : ['S&P 500', 'Nasdaq Composite'];
+const monthCloses = domestic ? koreaMonthlyCloses : usMonthlyCloses;
+const annual = period.length === 4;
+const year = Number(period);
+const previous = String(year - 1);
+const monthly = monthCloses[period];
+const previousAnnual = koreaAnnualCloses[previous];
+const currentAnnual = koreaAnnualCloses[period];
+const snapshot = annual && domestic
+  ? previousAnnual && currentAnnual && {
+      first: previousAnnual, last: currentAnnual,
+      firstDate: previous + '년 말', lastDate: period + '년 말',
+      firstSource: koreaAnnualSource(year - 1), lastSource: koreaAnnualSource(year),
+    }
+  : monthly;
+const number = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 'exceptZero', maximumFractionDigits: 2 });
+---
+<section class="lab-block">
+  <h2>{domestic ? '국내 주가지수' : '미국 주가지수'}</h2>
+  {snapshot ? <>
+  <p>{annual ? '직전 연말 종가와 해당 연말 종가를 비교합니다.' : '현지 기준 월 첫 거래일과 마지막 거래일의 종가를 비교합니다.'} 단위는 포인트입니다.</p>
+  <div class="lab-table-wrap">
+    <table class="lab-table">
+      <thead><tr>
+        <th scope="col">지수</th>
+        <th scope="col"><a href={snapshot.firstSource}>{snapshot.firstDate} 종가 출처</a></th>
+        <th scope="col"><a href={snapshot.lastSource}>{snapshot.lastDate} 종가 출처</a></th>
+        <th scope="col">등락률</th>
+      </tr></thead>
+      <tbody>{labels.map((label, i) => {
+        const first = snapshot.first[i];
+        const last = snapshot.last[i];
+        return <tr>
+          <th scope="row">{label}</th>
+          <td>{first == null ? '자료 없음' : number.format(first)}</td>
+          <td>{last == null ? '자료 없음' : number.format(last)}</td>
+          <td>{first == null || last == null ? '비교값 없음' : percent.format(last / first - 1)}</td>
+        </tr>;
+      })}</tbody>
+    </table>
+  </div>
+  </> : <p class="empty-state">{annual ? '연말 종가' : '첫 거래일과 마지막 거래일의 종가'} 자료 확인 중</p>}
+</section>

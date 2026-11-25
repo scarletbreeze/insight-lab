@@ -1,0 +1,81 @@
+---
+import raw from '../../../data/market/months/equity-rankings.json';
+import spyRaw from '../../../data/market/months/spy-equity-rankings.json';
+import { sitePath } from '../../utils/paths';
+
+interface Props { period: string; }
+interface Equity {
+  symbol: string;
+  name: string;
+  returnPct: number;
+  firstDate: string;
+  lastDate: string;
+  sourceUrl: string;
+}
+type Market = 'KR' | 'US';
+interface Ranking {
+  universe: string;
+  membership: 'point-in-time' | 'approximate';
+  eligibleCount: number;
+  universeCount?: number;
+  membershipSourceUrl?: string;
+  membershipSourceUrls?: string[];
+  exclusions?: Record<string, number>;
+  excludedSymbols?: string[];
+  corporateActionSources?: string[];
+  tickerChangeSources?: string[];
+  priceMethod?: string;
+  items: Equity[];
+}
+
+const { period } = Astro.props;
+const rankings = (raw as Record<string, Partial<Record<Market, Ranking>>>)[period];
+const spy = (spyRaw as Record<string, { US: Ranking }>)[period]?.US;
+const comparisons: Array<[string, Ranking | undefined]> = [['한국', rankings?.KR], ['미국 · QQQ', rankings?.US]];
+if (spy) comparisons.push(['미국 · SPY', spy]);
+const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+---
+<div class="lab-grid">
+  {comparisons.map(([market, ranking]) => {
+    const first = ranking?.items[0];
+    const range = ranking ? Math.max(1, ...ranking.items.map(({ returnPct }) => Math.abs(returnPct))) : 1;
+    return <section class="lab-card">
+      <h3>{market} Top 10</h3>
+      {ranking?.items.length ? <>
+        <p>{ranking.universe} · {ranking.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'} · {ranking.eligibleCount}개 계산</p>
+        {ranking.priceMethod && <p>{ranking.priceMethod}</p>}
+        {first && <p>{first.firstDate}–{first.lastDate} · <a href={first.sourceUrl}>가격 출처</a></p>}
+        {ranking.tickerChangeSources?.map((url) => <p><a href={url}>종목코드 변경을 연결한 근거</a></p>)}
+        {ranking.membershipSourceUrl && <p>
+          {(ranking.membershipSourceUrls ?? [ranking.membershipSourceUrl]).map((url, index, sources) => (
+            <><a href={url}>구성종목 출처{sources.length > 1 ? ' ' + (index + 1) : ''}</a>{index < sources.length - 1 && ' · '}</>
+          ))} · 모집단 {ranking.universeCount}개
+        </p>}
+        {ranking.exclusions && Object.keys(ranking.exclusions).length > 0 && <details>
+          <summary>계산에서 제외한 종목</summary>
+          <ul>{Object.entries(ranking.exclusions).map(([reason, count]) => <li>{reason} · {count}개</li>)}</ul>
+          {ranking.excludedSymbols?.length && <p>{ranking.excludedSymbols.join(' · ')}</p>}
+          {ranking.corporateActionSources?.map((url) => <p><a href={url}>기업행동 공시</a></p>)}
+        </details>}
+        <ol class="lab-list equity-ranking">{ranking.items.map(({ name, symbol, returnPct, sourceUrl }) => (
+          <li>
+            <div class="equity-rank-label"><strong>{name} ({symbol})</strong><span>{format.format(returnPct)}%</span></div>
+            <div class="equity-rank-track" aria-hidden="true">
+              <span class:list={{ negative: returnPct < 0 }} style={{ width: `${Math.abs(returnPct) / range * 100}%` }}></span>
+            </div>
+            {sourceUrl !== first?.sourceUrl && <a href={sourceUrl}>가격 출처</a>}
+          </li>
+        ))}</ol>
+      </> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
+    </section>;
+  })}
+</div>
+<p><a href={sitePath('market-time-capsule/equity-data')}>종목 순위 산정 방식과 수록 범위</a></p>
+<style>
+  .equity-ranking { display: grid; gap: 0.75rem; padding-inline-start: 1.5rem; }
+  .equity-rank-label { display: flex; justify-content: space-between; gap: 0.75rem; align-items: baseline; }
+  .equity-rank-label span { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .equity-rank-track { margin-block-start: 0.25rem; height: 0.35rem; border-radius: 0.25rem; background: var(--border, #dde4ea); }
+  .equity-rank-track span { display: block; height: 100%; border-radius: inherit; background: #397663; }
+  .equity-rank-track .negative { background: #a55443; }
+</style>

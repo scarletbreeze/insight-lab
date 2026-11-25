@@ -1,0 +1,109 @@
+{
+  "date": "2024-12-31",
+  "basis": "별도 재무제표",
+  "scope": "수록 10개사 자본총계 순위",
+  "sourceName": "삼성증권 · 2024년 말 증권사 자기자본 비교",
+  "sourceUrl": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=2020%2F2025040914304884K_02_02.pdf&inlineYn=Y&saveKey=research.pdf",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 95166341,
+      "liabilities": 85253904,
+      "equity": 9912437,
+      "capital": 4101961,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm",
+      "sourceName": "미래에셋증권 별도 재무 공시"
+    },
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 85369808,
+      "liabilities": 76052915,
+      "equity": 9316893,
+      "capital": 175917,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/12/002179/20260312004946/91567.htm",
+      "sourceName": "한국투자증권 별도 재무 공시"
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 59281476,
+      "liabilities": 51889337,
+      "equity": 7392139,
+      "capital": 1782560,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002545/20260311005617/00591.htm",
+      "sourceName": "NH투자증권 별도 재무 공시"
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 56976386,
+      "liabilities": 50045801,
+      "equity": 6930585,
+      "capital": 458478,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/02/23/001222/20260223002971/00591.htm",
+      "sourceName": "삼성증권 별도 재무 공시"
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 60317067,
+      "liabilities": 53637368,
+      "equity": 6679699,
+      "capital": 1493102,
+      "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312526094923/d265234dex992.htm",
+      "sourceName": "KB증권 별도 재무 공시"
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 58952231,
+      "liabilities": 52654486,
+      "equity": 6297745,
+      "capital": 776179,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002380/20260310003985/91567.htm",
+      "sourceName": "메리츠증권 별도 재무 공시"
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 55076172,
+      "liabilities": 49115150,
+      "equity": 5961022,
+      "capital": 402162,
+      "sourceUrl": "https://cdn.financialreports.eu/financialreports/media/filings/15959/2026/RNS/15959_rns_2026-02-27_3324e470-f41f-4160-bfae-60ad92276480.html",
+      "sourceName": "하나증권 별도 재무 공시"
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 47273100,
+      "liabilities": 41883400,
+      "equity": 5389700,
+      "capital": 1786998,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20250916-8.pdf&gubun=2&menuCd=R8",
+      "sourceName": "한국신용평가 · 별도 재무현황 (자산·부채·자본총계 억 원 단위)"
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 45677863,
+      "liabilities": 40706209,
+      "equity": 4971654,
+      "capital": 145225,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm",
+      "sourceName": "키움증권 별도 재무 공시"
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 17315231,
+      "liabilities": 14202352,
+      "equity": 3112879,
+      "capital": 456730,
+      "sourceUrl": "https://kind.krx.co.kr/external/2026/03/16/001489/20260316004531/00660.htm",
+      "sourceName": "대신증권 별도 재무 공시"
+    }
+  ]
+}

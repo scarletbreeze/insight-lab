@@ -1,6 +1,14 @@
 ---
 import MarketLayout from '../../../components/market/MarketLayout.astro';
+import yearNotes from '../../../../data/market/year-notes.json';
+import equityRankings from '../../../../data/market/months/equity-rankings.json';
+import spyEquityRankings from '../../../../data/market/months/spy-equity-rankings.json';
+import PeriodNavigation from '../../../components/market/PeriodNavigation.astro';
 import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
+import IndexSnapshot from '../../../components/market/IndexSnapshot.astro';
+import GoldSnapshot from '../../../components/market/GoldSnapshot.astro';
+import UsIndexPerformance from '../../../components/market/UsIndexPerformance.astro';
+import AnnualEquityHighlights from '../../../components/market/AnnualEquityHighlights.astro';
 import EventList from '../../../components/market/EventList.astro';
 import { years, months, marketEvents } from '../../../utils/market';
 import { sitePath } from '../../../utils/paths';
@@ -10,13 +18,52 @@ export function getStaticPaths() {
 }
 
 const { year } = Astro.props;
+const note = yearNotes[String(year) as keyof typeof yearNotes];
+const highlights = note && 'highlights' in note ? note.highlights : [];
 const items = marketEvents.filter(({ date }) => date.startsWith(String(year)));
+const monthCounts = new Map<string, number>();
+for (const { date } of items) {
+  const month = date.slice(5, 7);
+  monthCounts.set(month, (monthCounts.get(month) ?? 0) + 1);
+}
+const sources = [...new Map(items.map(({ sourceUrl, sourceName }) => [sourceUrl, sourceName]))];
+const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spyEquityRankings)]);
 ---
 <MarketLayout title={year + '년 시장 기록'} {year}>
+  {note && <p slot="intro">{note.summary}</p>}
+  <PeriodNavigation {year} />
   <section class="lab-block">
     <h2>월별 기록</h2>
-    <ul class="lab-chips">{months.map((month) => <li><a href={sitePath(`market-time-capsule/${year}/${month}`)}>{Number(month)}월</a></li>)}</ul>
+    <ul class="lab-chips">{months.map((month) => <li><a href={sitePath(`market-time-capsule/${year}/${month}`)}>
+      {Number(month)}월 {monthCounts.has(month) && <small>· 사건 {monthCounts.get(month)}건</small>}
+      {rankedMonths.has(`${year}-${month}`) && <small>· 종목 순위</small>}
+    </a></li>)}</ul>
   </section>
+  <AnnualEquityHighlights {year} />
+  {highlights.length > 0 && <section class="lab-block">
+    <h2>이 해에 주목할 사건</h2>
+    <div class="lab-grid">{highlights.map(({ label, title, summary, sourceUrl, sourceName }) => <article class="lab-card">
+      <p>{label === 'Theme' ? '주요 주제' : '이례적 사건'}</p>
+      <h3>{title}</h3>
+      <p>{summary}</p>
+      <a href={sourceUrl}>{sourceName}</a>
+    </article>)}</div>
+  </section>}
   <section class="lab-block"><h2>주요 사건</h2><EventList {items} /></section>
-  <section class="lab-block"><h2>연간 시장 지표</h2><MarketSnapshot period={String(year)} /></section>
+  <section class="lab-block">
+    <h2>연간 시장 지표</h2>
+    <MarketSnapshot period={String(year)} />
+    <GoldSnapshot period={String(year)} />
+  </section>
+  <IndexSnapshot period={String(year)} />
+  <UsIndexPerformance {year} />
+  {note && <section class="lab-block">
+    <h2>Returner Memo</h2>
+    <p>{note.memo}</p>
+    <a href={note.sourceUrl}>{note.sourceName}</a>
+  </section>}
+  {sources.length > 0 && <section class="lab-block">
+    <h2>연간 사건 출처</h2>
+    <ul class="lab-list">{sources.map(([url, name]) => <li><a href={url}>{name}</a></li>)}</ul>
+  </section>}
 </MarketLayout>

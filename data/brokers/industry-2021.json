@@ -1,0 +1,93 @@
+{
+  "date": "2021-12-31",
+  "basis": "별도 재무제표",
+  "scope": "수록 10개사 자본총계 순위",
+  "sourceName": "미래에셋증권 KIND 공시 · 주요 국내 금융투자회사 재무 현황",
+  "sourceUrl": "https://kind.krx.co.kr/external/2022/06/08/000456/20220608001149/10603.htm",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 84024164,
+      "liabilities": 74442520,
+      "equity": 9581645,
+      "capital": 4101961
+    },
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 64105230,
+      "liabilities": 57782842,
+      "equity": 6322388,
+      "capital": 175817
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 55828247,
+      "liabilities": 49364881,
+      "equity": 6463367,
+      "capital": 1609400
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 52570038,
+      "liabilities": 47121884,
+      "equity": 5448154,
+      "capital": 1493102
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 59641733,
+      "liabilities": 53716199,
+      "equity": 5925534,
+      "capital": 458478
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 40955394,
+      "liabilities": 35985194,
+      "equity": 4970200,
+      "capital": 1786998
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 41952648,
+      "liabilities": 36883833,
+      "equity": 5068815,
+      "capital": 776179
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 34432645,
+      "liabilities": 29125567,
+      "equity": 5307078,
+      "capital": 372787
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 37944065,
+      "liabilities": 34150781,
+      "equity": 3793284,
+      "capital": 145225,
+      "sourceUrl": "https://kind.krx.co.kr/external/2022/03/11/001376/20220311003068/00591.htm",
+      "sourceName": "키움증권 감사보고서 · 별도 재무상태표"
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 15138810,
+      "liabilities": 13112534,
+      "equity": 2026276,
+      "capital": 434867,
+      "sourceUrl": "https://kind.krx.co.kr/external/2022/03/10/002076/20220310004161/11011.htm",
+      "sourceName": "대신증권 사업보고서 · 별도 요약재무정보"
+    }
+  ]
+}

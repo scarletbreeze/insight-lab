@@ -1,0 +1,340 @@
+{
+  "1990-08": {
+    "summary": "이라크의 쿠웨이트 침공으로 두 나라의 원유 공급이 차질을 빚었습니다.",
+    "memo": "침공일과 이달 WTI의 첫·마지막 관측일을 구분해 원유 공급 충격을 살펴보세요.",
+    "sourceName": "미 에너지정보청 원유 공급 중단 사례",
+    "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=730"
+  },
+  "1992-01": {
+    "summary": "외국인이 국내 상장 주식에 직접 투자할 수 있게 됐습니다.",
+    "memo": "직접투자 허용일과 외국인 투자한도 폐지일 사이의 시차를 기록해 보세요.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1994-06": {
+    "summary": "국내 대표 주가지수인 KOSPI 200을 발표했습니다.",
+    "memo": "이달 도입된 KOSPI 200과 연간 스냅샷의 종합지수 KOSPI를 구분해 보세요.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1996-05": {
+    "summary": "한국거래소 연혁은 주가지수선물시장 개설일을 1996년 5월 3일로 기록합니다.",
+    "memo": "주가지수선물 개설과 이듬해 주가지수옵션 개설을 연표에서 이어서 보세요.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1997-12": {
+    "summary": "IMF의 협의 종료 발표에 이어 이사회가 한국의 대기성 차관을 승인했습니다.",
+    "memo": "협의 종료일과 차관 승인일을 연표에서 구분하고, 승인된 차관 규모와 즉시 이용 가능한 금액을 원문에서 확인해 보세요.",
+    "sourceName": "IMF 한국 대기성 차관 승인 발표",
+    "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9755.htm"
+  },
+  "1998-02": {
+    "summary": "한국 정부는 금융 부문 개혁, 기업 구조조정, 외환·자본시장 정책을 정리한 후속 의향서를 전달했습니다.",
+    "memo": "2월과 5월 의향서에서 같은 정책이 어떻게 구체화됐는지 확인해 보세요.",
+    "sourceName": "IMF 공개 한국 정부 2월 의향서",
+    "sourceUrl": "https://www.imf.org/external/np/loi/020798.htm"
+  },
+  "1998-05": {
+    "summary": "일반 상장법인과 코스닥 등록법인의 외국인 전체 투자한도와 1인당 투자한도가 폐지됐습니다.",
+    "memo": "정부의 외국인 한도 폐지일과 IMF에 전달한 경제 프로그램 후속 계획을 같은 달 연표에서 비교해 보세요.",
+    "sourceName": "국가기록원 한국 주식시장 연혁",
+    "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/stockMarket.do"
+  },
+  "1998-06": {
+    "summary": "금융감독위원회는 심사 대상 은행들의 자본확충 계획 결과를 발표했습니다.",
+    "memo": "자본확충 계획의 심사 결과, 합병 결정, 실제 자산·부채 이전이 각각 언제 일어났는지 구분해 보세요.",
+    "sourceName": "IMF 아시아 금융 부문 구조조정 보고서",
+    "sourceUrl": "https://www.imf.org/external/pubs/ft/op/opfinsec/op188.pdf"
+  },
+  "1998-07": {
+    "summary": "의향서는 경기 회복 대응과 금융·기업 구조조정 방안을 갱신했습니다.",
+    "memo": "7월 의향서의 정책 계획을 11월 의향서의 진행 상황과 비교해 보세요.",
+    "sourceName": "IMF 공개 한국 정부 7월 의향서",
+    "sourceUrl": "https://www.imf.org/external/np/loi/072498.htm"
+  },
+  "1998-08": {
+    "summary": "홍콩 금융당국은 외환기금을 활용해 주식·선물시장에 개입했습니다.",
+    "memo": "같은 달 홍콩의 시장 개입과 러시아의 채무 조치에서 각각 어떤 시장에 개입했는지 살펴보세요.",
+    "sourceName": "홍콩금융관리국 1998년 연차보고서",
+    "sourceUrl": "https://www.hkma.gov.hk/media/eng/publication-and-research/annual-report/1998/ch12.pdf"
+  },
+  "1998-09": {
+    "summary": "FOMC는 연방기금금리 목표를 5.50%에서 5.25%로 낮췄습니다.",
+    "memo": "9월 LTCM 관련 소식과 FOMC 결정의 날짜를 확인한 뒤, 발표 내용과 월말 금융지표를 대조해 보세요.",
+    "sourceName": "미 연준 9월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/general/1998/19980929/"
+  },
+  "1998-10": {
+    "summary": "FOMC는 전화회의 이후 연방기금금리 목표를 5.25%에서 5.00%로 낮췄습니다.",
+    "memo": "목표금리 인하 폭과 시장에서 실제로 관측한 국채금리 변화를 비교해 보세요.",
+    "sourceName": "미 연준 공개시장조작 기록",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm"
+  },
+  "1998-11": {
+    "summary": "9월과 10월에 이어 FOMC는 11월에도 연방기금금리 목표를 0.25%p 낮췄습니다.",
+    "memo": "9월·10월·11월 정책금리 경로를 적고, 각 달의 10년물 금리와 비교해 보세요.",
+    "sourceName": "미 연준 11월 FOMC 의사록",
+    "sourceUrl": "https://www.federalreserve.gov/fomc/MINUTES/19981117.HTM"
+  },
+  "2007-01": {
+    "summary": "Apple은 Macworld에서 첫 iPhone을 공개했습니다.",
+    "memo": "제품을 공개한 1월과 미국 출시 예정 시점인 6월을 따로 기록해 보세요.",
+    "sourceName": "Apple 제품 공개 자료",
+    "sourceUrl": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/"
+  },
+  "2008-09": {
+    "summary": "리먼브러더스 파산과 AIG 지원이 잇따랐습니다.",
+    "memo": "9월 15일과 16일의 사건을 순서대로 읽고, 같은 달 원·달러 환율의 첫 관측과 마지막 관측을 비교해 보세요.",
+    "sourceName": "미 연준 2008년 연차보고서",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/rptcongress/annual08/sec1/c1.htm"
+  },
+  "2008-12": {
+    "summary": "미 연준이 연방기금금리 목표 범위를 0~0.25%로 설정했습니다.",
+    "memo": "12월 16일 발표의 정책금리와 이달 10년물 국채금리 관측값을 구분해서 기록해 보세요.",
+    "sourceName": "미 연준 12월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081216b.htm"
+  },
+  "2009-03": {
+    "summary": "미 연준은 앞으로 6개월 동안 장기 국채를 최대 3,000억 달러 매입하기로 결정했습니다.",
+    "memo": "시장 스냅샷의 10년물 금리와 정책 발표의 장기 국채 매입액을 함께 확인해 보세요.",
+    "sourceName": "미 연준 3월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20090318a.htm"
+  },
+  "2010-11": {
+    "summary": "미 연준은 2011년 2분기 말까지 장기 국채 6,000억 달러를 추가 매입하는 계획을 발표했습니다.",
+    "memo": "금리 목표 범위와 채권 매입 계획을 따로 기록해 보세요. 둘 다 같은 FOMC 성명에 실려 있습니다.",
+    "sourceName": "미 연준 2010년 11월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20101103a.htm"
+  },
+  "2016-04": {
+    "summary": "Liberty Media가 기존 주식을 세 가지 사업을 추적하는 주식으로 재편했습니다.",
+    "memo": "이달의 수익률 표에서 제외 종목을 펼쳐 보세요. 주식 하나가 여러 추적주로 바뀐 사례와 단순 주식분할의 차이를 확인할 수 있습니다.",
+    "sourceName": "Liberty Media SEC 8-K",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm"
+  },
+  "2016-12": {
+    "summary": "미 연준이 목표 금리를 올렸고 Nasdaq-100은 정기 편입 변경을 적용했습니다.",
+    "memo": "12월 종목 순위에는 월초에 편입돼 있던 주식을 사용합니다. 19일 정기 변경이 반영된 모집단은 이듬해 1월 순위에서 확인할 수 있습니다.",
+    "sourceName": "Nasdaq 2016년 정기 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-5"
+  },
+  "2017-10": {
+    "summary": "Nasdaq-100에서 Align Technology가 Mattel을 대체했습니다.",
+    "memo": "월간 종목 순위의 시작은 10월 2일입니다. 편입일인 23일과 날짜를 비교해 보세요.",
+    "sourceName": "Nasdaq 지수 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23"
+  },
+  "2017-11": {
+    "summary": "한국은행은 기준금리를 1.25%에서 1.50%로 높였습니다.",
+    "memo": "정책금리가 바뀐 30일과 이달 원·달러 환율의 마지막 관측 시점을 함께 보세요.",
+    "sourceName": "한국은행 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=233290"
+  },
+  "2017-12": {
+    "summary": "미 연준 금리 인상, 비트코인 선물 상장, 세제 개편이 같은 달에 이어졌습니다.",
+    "memo": "각 사건의 발표일과 시행일을 따로 기록하고 10년물 금리·환율의 해당 월 관측값을 확인해 보세요.",
+    "sourceName": "미국 연방 공법 115-97",
+    "sourceUrl": "https://www.congress.gov/115/plaws/publ97/PLAW-115publ97.pdf"
+  },
+  "2018-02": {
+    "summary": "미국 옵션시장의 변동성을 반영하는 VIX가 2월 5일 급등했습니다.",
+    "memo": "하루 변동성 충격과 주식의 월간 종가 수익률은 서로 다른 구간을 측정합니다. 날짜 범위를 함께 보세요.",
+    "sourceName": "Cboe 시장 분석",
+    "sourceUrl": "https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf"
+  },
+  "2020-03": {
+    "summary": "WHO의 팬데믹 판단 뒤 미국과 한국의 금리 결정 및 달러 유동성 대책이 발표됐습니다.",
+    "memo": "미국과 한국의 금리 결정, 중앙은행 간 달러 유동성 협정을 발표 순서로 읽어 보세요. 같은 달의 환율 추이와는 날짜를 맞춰 살펴봅니다.",
+    "sourceName": "미 연준 3월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm"
+  },
+  "2020-04": {
+    "summary": "만기를 앞둔 WTI 선물 가격이 한때 0달러 아래로 떨어졌습니다.",
+    "memo": "4월 20일 선물 가격과 아래 스냅샷의 월 첫날·마지막날 현물 가격을 구분해 보세요. 관측하는 시장과 날짜에 따라 다른 값이 나옵니다.",
+    "sourceName": "미 에너지정보청 WTI 선물 분석",
+    "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=43495"
+  },
+  "2020-12": {
+    "summary": "S&P Global 집계에서 S&P 500은 12월에 3.8% 상승했습니다.",
+    "memo": "12월 중 지수에 편입된 종목의 월간 수익률을 읽을 때 편입일과 가격 비교 기간을 확인해 보세요.",
+    "sourceName": "S&P Global 2020년 12월 시장 리뷰",
+    "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2021/1/newcomer-tesla-among-s-p-500-s-top-performers-in-december-61971872",
+    "publishedStudy": {
+      "title": "지수 편입 전후 Tesla의 12월 등락",
+      "method": "S&P Global이 공개한 월간 주가 등락률과 지수 편입일",
+      "findings": [
+        "Tesla는 12월 21일에 지수에 편입됐으며 월간 주가 상승률 24.3%로 집계에서 3위였습니다.",
+        "월간 상승률에는 지수 편입 전 가격 움직임이 포함됩니다."
+      ],
+      "sourceName": "S&P Global 2020년 12월 시장 리뷰",
+      "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2021/1/newcomer-tesla-among-s-p-500-s-top-performers-in-december-61971872"
+    }
+  },
+  "2022-06": {
+    "summary": "FOMC가 연방기금금리 목표 범위를 1.50~1.75%로 인상했습니다.",
+    "memo": "성명에 나온 정책금리와 월간 시장 스냅샷의 10년물 국채금리가 같은 폭으로 움직였는지 살펴보세요.",
+    "sourceName": "미 연준 2022년 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm"
+  },
+  "2024-01": {
+    "summary": "미국 증권거래위원회가 여러 현물 비트코인 상장지수상품의 상장과 거래를 승인했습니다.",
+    "memo": "승인 대상인 상장지수상품과 그 상품이 담는 기초자산을 구분해 보세요.",
+    "sourceName": "미 SEC 위원장 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"
+  },
+  "2024-08": {
+    "summary": "S&P Global은 8월 초 하락 이후 미국 대형주가 반등했다고 정리했습니다.",
+    "memo": "월간 지수 변화와 같은 달 구성종목의 최고·최저 사례를 비교해 보세요.",
+    "sourceName": "S&P Global 2024년 8월 시장 리뷰",
+    "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/9/large-cap-equities-recover-from-sell-off-with-s-p-500-up-in-4th-straight-month-83168790",
+    "publishedStudy": {
+      "title": "S&P 500 구성종목의 8월 등락 사례",
+      "method": "S&P Global의 월간 주가 등락 집계",
+      "findings": [
+        "Kellanova의 상승률은 38.6%로 집계에서 가장 높았습니다.",
+        "Super Micro Computer의 하락률은 37.6%로 집계에서 가장 컸습니다."
+      ],
+      "sourceName": "S&P Global 2024년 8월 시장 리뷰",
+      "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/9/large-cap-equities-recover-from-sell-off-with-s-p-500-up-in-4th-straight-month-83168790"
+    }
+  },
+  "2024-11": {
+    "summary": "S&P Global 집계에서 S&P 500은 11월에 5.7% 상승했습니다.",
+    "memo": "지수 상승률과 개별 종목 등락률의 차이를 함께 기록해 보세요.",
+    "sourceName": "S&P Global 11월 시장 리뷰",
+    "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/12/s-p-500-rises-5-7-in-november-to-log-best-month-of-2024-86615491",
+    "publishedStudy": {
+      "title": "S&P 500 구성종목의 월간 등락 비교",
+      "method": "S&P Global의 10월 말 대비 11월 말 집계",
+      "findings": [
+        "Palantir Technologies가 61.4% 상승해 집계 내 상승률이 가장 높았습니다.",
+        "Celanese가 41.9% 하락해 집계 내 등락률이 가장 낮았습니다."
+      ],
+      "sourceName": "S&P Global 11월 시장 리뷰",
+      "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/12/s-p-500-rises-5-7-in-november-to-log-best-month-of-2024-86615491"
+    }
+  },
+  "2024-12": {
+    "summary": "미국과 유럽은 정책금리를 내렸고 일본은행은 단기 정책금리를 유지했습니다.",
+    "memo": "발표 당일의 정책금리와 월간 10년물 금리 변화를 함께 보세요. 정책 결정과 시장금리는 서로 다른 지표입니다.",
+    "sourceName": "미 연준 12월 FOMC 자료",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomcpresconf20241218.htm",
+    "publishedStudy": {
+      "title": "나스닥의 대형주와 나머지 종목군 비교",
+      "method": "Nasdaq의 12월 지수 수익률 집계",
+      "findings": [
+        "Nasdaq-100 Mega는 7.2% 상승했습니다.",
+        "Nasdaq-100 ex Top 30은 6.7% 하락했습니다."
+      ],
+      "sourceName": "Nasdaq 2024년 12월 지수 리뷰",
+      "sourceUrl": "https://www.nasdaq.com/articles/global-indexes/monthly-scorecard-december-2024"
+    }
+  },
+  "2025-01": {
+    "summary": "DeepSeek은 추론 모델 R1과 일부 증류 모델을 공개했습니다.",
+    "memo": "AI 뉴스가 나온 뒤 국내 두 지수가 같은 방향으로 움직였는지는 월초·월말 종가에서 따로 확인해 보세요.",
+    "sourceName": "DeepSeek R1 발표",
+    "sourceUrl": "https://deepseek.com/en/news/deepseek-r1/"
+  },
+  "2025-02": {
+    "summary": "금융통화위원회는 기준금리를 3.00%에서 2.75%로 낮췄습니다.",
+    "memo": "한국은행 기준금리와 이 페이지에 표시된 미국 10년물 국채금리는 서로 다른 지표입니다. 각각의 관측일을 확인해 보세요.",
+    "sourceName": "한국은행 2월 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=10089951"
+  },
+  "2025-03": {
+    "summary": "넥스트레이드가 국내 첫 대체거래소로 출범했습니다.",
+    "memo": "넥스트레이드 출범일과 공매도 전면 재개일을 구분해 당시 바뀐 거래 제도를 살펴보세요.",
+    "sourceName": "금융위원회 넥스트레이드 출범 안내",
+    "sourceUrl": "https://www.fsc.go.kr/no040101?cnId=2628"
+  },
+  "2025-04": {
+    "summary": "미국 대통령은 기본 관세와 교역 상대국별 세율을 제시한 행정명령에 서명했습니다.",
+    "memo": "발표일, 시행 예정일, 이후 수정일을 구분해 이달 시장 흐름을 읽어 보세요.",
+    "sourceName": "미국 연방관보 행정명령 14257호",
+    "sourceUrl": "https://www.govinfo.gov/content/pkg/FR-2025-04-07/html/2025-06063.htm"
+  },
+  "2025-05": {
+    "summary": "금융통화위원회는 기준금리를 2.75%에서 2.50%로 낮췄습니다.",
+    "memo": "5월 금리 결정일은 월말에 가까웠습니다. 월 전체 변화와 발표 이후 한두 거래일의 움직임을 구분해 보세요.",
+    "sourceName": "한국은행 5월 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=10091639"
+  },
+  "2025-06": {
+    "summary": "6월 3일 대통령선거에 따라 이재명 대통령이 6월 4일 취임했습니다.",
+    "memo": "6월 첫 거래일은 2일입니다. 3일 선거일과 4일 취임일을 각 지수의 월초 관측일과 구분해 보세요.",
+    "sourceName": "대한민국 제21대 대통령 취임사",
+    "sourceUrl": "https://www.korea.kr/briefing/speechView.do?newsId=132037575"
+  },
+  "2025-07": {
+    "summary": "개정 상법 제382조의3은 이사의 충실의무 적용 대상을 회사와 주주로 명시했습니다.",
+    "memo": "법령 개정과 세제개편안 발표를 날짜와 법적 상태별로 기록해 보세요.",
+    "sourceName": "국가법령정보센터 개정 상법 제382조의3",
+    "sourceUrl": "https://www.law.go.kr/LSW/lsSideInfoP.do?docCls=jo&joBrNo=03&joNo=0382&lsiSeq=272919&urlMode=lsScJoRltInfoR"
+  },
+  "2025-08": {
+    "summary": "코스피는 3,119.41, 코스닥은 772.79에 마감했습니다.",
+    "memo": "첫 거래일 당일 등락률과 첫날 종가에서 월말 종가까지의 등락률을 비교해 보세요.",
+    "sourceName": "IBK투자증권 8월 4일 시황 자료",
+    "sourceUrl": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16553"
+  },
+  "2025-09": {
+    "summary": "FOMC는 연방기금금리 목표 범위를 0.25%p 내렸습니다.",
+    "memo": "정책금리 인하 폭과 이달 미국 10년물 국채금리의 변화를 각각 확인해 보세요.",
+    "sourceName": "미 연준 9월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20250917a.htm"
+  },
+  "2025-10": {
+    "summary": "코스피는 전 거래일보다 2.57% 오른 4,042.83으로 마감했습니다.",
+    "memo": "4,000선을 처음 넘은 날의 종가와 10월 마지막 거래일의 종가를 비교해 보세요.",
+    "sourceName": "대한민국 정책주간지 K-공감",
+    "sourceUrl": "https://gonggamadmin.korea.kr/newsContentView.es?code_cd=0105000000&content=NC002&mid=a12603000000&news_id=651802d7-bc3d-44f8-8538-5d9a4dd77dc7&section_id=NCCD_POLICY"
+  },
+  "2025-11": {
+    "summary": "경주에서 만난 APEC 정상들이 경제 협력에 관한 공동선언을 공개했습니다.",
+    "memo": "주말 발표일과 11월 첫 거래일을 구분하고, 선언문과 지수 종가는 각각의 출처에서 확인해 보세요.",
+    "sourceName": "APEC 경주선언",
+    "sourceUrl": "https://www.apec.org/meeting-papers/leaders-declarations/2025/2025-apec-leaders--gyeongju-declaration"
+  },
+  "2025-12": {
+    "summary": "미 연준이 정책금리를 낮췄고 국내 주식시장은 이달 마지막 거래일에 2025년을 마감했습니다.",
+    "memo": "12월 마지막 거래일과 다음 해 1월 첫 거래일을 구분해 지수 변화를 살펴보세요.",
+    "sourceName": "미 연준 12월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20251210a.htm"
+  },
+  "2026-01": {
+    "summary": "한국은행과 미국 연준은 1월 정책금리를 유지했습니다.",
+    "memo": "같은 달에 나온 양국 정책 결정과 원·달러 환율의 관측일을 나란히 살펴보세요.",
+    "sourceName": "한국은행 1월 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=10095711"
+  },
+  "2026-02": {
+    "summary": "S&P Global의 집계에서 S&P 500은 1월 말보다 0.9% 내렸습니다.",
+    "memo": "지수에 포함된 종목과 지수 전체의 등락을 함께 보세요.",
+    "sourceName": "S&P Global 2026년 2월 시장 리뷰",
+    "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/3/s-p-500-dips-0-9-in-february-99237728",
+    "publishedStudy": {
+      "title": "S&P 500 구성종목의 2월 등락 사례",
+      "method": "S&P Global의 1월 말 대비 2월 말 주가 등락 집계",
+      "findings": [
+        "Texas Pacific Land의 주가는 50% 넘게 올랐고 집계에서 가장 높은 상승률을 보였습니다.",
+        "EPAM Systems의 주가는 32% 넘게 내렸고 집계에서 가장 낮은 수익률을 기록했습니다."
+      ],
+      "sourceName": "S&P Global 2026년 2월 시장 리뷰",
+      "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/3/s-p-500-dips-0-9-in-february-99237728"
+    }
+  },
+  "2026-10": {
+    "summary": "10월에 한국은행과 미 연준은 각각 기준금리와 연방기금금리 목표 범위를 유지했습니다.",
+    "memo": "같은 달에 나온 정책 결정일과 미 국채 10년물 금리 관측일을 구분해 보세요.",
+    "sourceName": "미 연준 10월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+  },
+  "2026-11": {
+    "summary": "한국은행은 3분기 가계신용과 11월 소비자심리지수 조사 결과를 발표했습니다.",
+    "memo": "월 단위로 움직이는 소비자심리지수와 분기 말 기준 가계신용 잔액의 공표 시차를 비교해 보세요.",
+    "sourceName": "한국은행 11월 소비자동향조사",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066918"
+  }
+}

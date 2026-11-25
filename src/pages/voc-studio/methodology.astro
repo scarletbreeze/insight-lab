@@ -1,21 +1,86 @@
 ---
 import VocLayout from '../../components/voc/VocLayout.astro';
+import { publicBoardSnapshot as sample, publicBoardYear } from '../../utils/voc-public-board';
+import generalNotices from '../../../data/voc/general-notices.json';
+import review from '../../../data/voc/classification-review.json';
+import topics from '../../../data/voc/topics.json';
+const labels: Record<string, string> = Object.fromEntries(topics.map(({ id, label }) => [id, label]));
+labels.ambiguous = '여러 주제';
+labels.unclassified = '미분류';
+const disagreements = review.rows.filter(({ expected, actual }) => expected !== actual);
+const sampleYears = Object.entries(sample.years);
+const reachedStart = String(sample.stop) === 'reached-older-posts';
+const observed = [
+  [2022, '01.01', '11.20'],
+  [2023, '02.06', '12.21'],
+  [2024, '01.19', '12.13'],
+  [2025, '02.27', '12.23'],
+  [2026, '01.10', '11.25'],
+] as const;
 ---
 <VocLayout title="VOC 분석 방법론">
   <section class="lab-block">
     <h2>출처와 현재 범위</h2>
-    <p>2022~2026년을 탐색 대상으로 설정했습니다. 현재 수록 건수는 확인한 표본의 규모입니다. 2026년은 연중 자료이며, 전수 조회 또는 연간 집계는 확보 범위를 확인한 뒤 제공할 수 있습니다.</p>
+    <p>2022~2026년 공개 게시판의 고객 원글을 집계합니다. 2026년의 집계 기준일은 {sample.end}입니다. 공지와 답글은 고객 원글 건수에서 제외합니다.</p>
     <ul class="lab-list">
-      <li><a href="https://bbn.kiwoom.com/bbs/VBbsBoardBWATZView">키움증권 공개 고객게시판</a></li>
+      <li><a href="https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView">키움증권 공개 고객게시판</a></li>
       <li><a href="https://www.kiwoom.com/h/hts/popup/VHtsNoticeListPopView?gubun=1&amp;mtsgb=&amp;tp=H4">키움증권 영웅문4 공식 공지</a></li>
     </ul>
+  </section>
+  <section class="lab-block" id="public-board-sample">
+    <h2>공개 목록 수집 결과</h2>
+    <p>{sample.pages}페이지에서 확인한 글 날짜는 {sample.oldestObserved}~{sample.newestObserved}입니다. {reachedStart ? `요청 시작일(${sample.start})보다 이전 날짜의 게시물이 나오는 페이지까지 확인했습니다.` : '수집 범위의 시작 경계를 확인 중이므로 일부 기간의 합계만 표시합니다.'}</p>
+    {sampleYears.map(([year, { total, categories }]) => <>
+      <h3>{year}년 수록 고객 원글 {total}건</h3>
+      <ul class="lab-list">
+        {Object.entries(categories).sort(([, a], [, b]) => b - a).map(([category, count]) => <li>{category} · {count}건</li>)}
+      </ul>
+    </>)}
+    <a href={sample.sourceUrl}>키움증권 공개 고객게시판</a>
+  </section>
+  <section class="lab-block">
+    <h2>공개 고객게시판 조회 확인</h2>
+    <p>2026년 11월 25일, 시스템·분류 전체와 검색어 공란으로 확인했습니다. 날짜는 탐색한 페이지에서 확인된 고객 글의 범위입니다.</p>
+    <div class="lab-table-wrap">
+      <table class="lab-table">
+        <thead><tr><th scope="col">연도</th><th scope="col">확인된 글 날짜</th><th scope="col">공개 목록 연간 집계</th></tr></thead>
+        <tbody>{observed.map(([year, first, last]) => {
+          const count = publicBoardYear(year);
+          return <tr><th scope="row">{year}</th><td>{first}~{last}</td><td>{count ? `${count.total.toLocaleString('ko-KR')}건 · ${count.label}` : '집계 전'}</td></tr>;
+        })}</tbody>
+      </table>
+    </div>
+    <p>같은 날 확인한 첫 페이지에는 공지 7건, 고객 원글 7건, 운영자 답글 6건이 있었습니다. 삭제되거나 비공개로 전환된 글은 공개 목록에서 조회할 수 없습니다.</p>
   </section>
   <section class="lab-block">
     <h2>중복과 개인정보</h2>
     <p>고객문의는 동일 글과 운영자 답글을 구분하고, 중복 문의를 식별한 뒤 주제와 문의 목적을 분류합니다. 공개 데이터에는 질문 요약만 포함합니다.</p>
   </section>
+  <section class="lab-block" id="board-topics">
+    <h2>주제와 문의 집계</h2>
+    <p>공개 목록의 문의 분류에 한해 제목의 주제 용어를 우선 확인하고, 제목에서 주제를 찾지 못하면 본문 용어를 확인합니다. 한 주제에만 대응하는 글을 집계하며 여러 주제에 대응하거나 규칙과 일치하지 않는 글은 별도로 표시합니다. 이 방식은 게시물 문맥을 직접 읽는 분류와 차이가 날 수 있습니다. 자동 분류 결과에는 건수만 저장합니다.</p>
+    <p>문의 하나에는 주제 하나와 문의 목적을 부여하고, 필요한 경우 세부 주제를 기록합니다. 제목 기반으로 표시한 예시는 공개 제목에 나타난 문의 내용을 일반화했습니다. 공개 요약에서 확인한 키워드는 문의 한 건 안에서 한 번씩 셉니다.</p>
+    <p>1월 1일부터 12월 31일까지 같은 게시판과 수집 기준으로 확인한 연도에는 문의 건수와 상위 주제를 표시합니다. 증감과 비중은 양쪽 연도의 수집 기준이 같을 때 계산합니다.</p>
+  </section>
+  <section class="lab-block">
+    <h2>자동 분류 표본 점검</h2>
+    <p>{review.scope}의 문의 {review.inquiries}건을 확인했습니다. 제목으로 주제를 판단할 수 있었던 {review.rows.length}건 중 {review.rows.length - disagreements.length}건에서 검토 결과와 자동 분류가 일치했습니다. {review.insufficientTitle}건은 제목만으로 판단하기 어려웠습니다. 최근 두 페이지에 한정한 점검이므로 5개년 전체 정확도는 추정할 수 없습니다.</p>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <caption>분류가 달랐던 문의</caption>
+      <thead><tr><th scope="col">문의 내용</th><th scope="col">제목 검토</th><th scope="col">자동 분류</th></tr></thead>
+      <tbody>{disagreements.map(({subject, expected, actual}) => <tr><th scope="row">{subject}</th><td>{labels[expected]}</td><td>{labels[actual]}</td></tr>)}</tbody>
+    </table></div>
+    <a href={review.sourceUrl}>키움증권 공개 고객게시판</a>
+  </section>
   <section class="lab-block">
     <h2>공지와 문의 해석</h2>
-    <p>같은 수집 범위로 비교할 수 있는 경우에만 공지 전후의 문의 변화 시점을 관찰합니다. 시점이 겹치는 사실만으로 공지가 문의 변화의 원인이라고 해석할 수 없습니다.</p>
+    <p>키움증권 일반 공지 목록은 {generalNotices.pages}페이지를 순회해 {generalNotices.oldestObserved}에 도달했습니다. 키움 사이트의 일반 공지 채널에서 확인한 등록일 기준 건수입니다.</p>
+    <ul class="lab-list">{Object.entries(generalNotices.yearCounts).map(([year, count]) => <li>
+      {year}년 {count.toLocaleString('ko-KR')}건{year === generalNotices.end.slice(0, 4) && ` · ${generalNotices.end}까지`}
+    </li>)}</ul>
+    <p>타임라인은 일반 공지에서 선별한 글과 다른 채널의 검토 표본을 표시합니다.</p>
+    <p><a href={generalNotices.sourceUrl}>키움증권 일반 공지 목록</a></p>
+    <p>게시일이 확인된 공지에서 게시 당일을 제외하고 앞뒤 14일씩 같은 주제의 문의를 셉니다. 두 기간이 검증된 수집 범위 안에 있고, 합계가 5건 이상이며 건수 차이가 2건 이상인 관찰을 표시합니다.</p>
+    <p>시점이 겹치는 사실만으로 공지가 문의 변화의 원인이라고 해석할 수 없습니다.</p>
   </section>
 </VocLayout>

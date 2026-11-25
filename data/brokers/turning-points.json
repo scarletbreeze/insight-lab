@@ -1,4 +1,86 @@
 [
-  {"id":"kiwoom","date":"2025-11-19","title":"종합금융투자사업자 지정 및 단기금융업 인가","sourceUrl":"https://www.fsc.go.kr/no010101/85692"},
-  {"id":"mirae-asset","date":"2025-11-19","title":"자기자본 8조원 이상 종합금융투자사업자 지정","sourceUrl":"https://www.fsc.go.kr/no010101/85692"}
+  {
+    "id": "kb",
+    "date": "2026-08-04",
+    "title": "개인 고객용 Open API 공개 베타 발표",
+    "sourceUrl": "https://blog.kbsec.com/kb-news/%EA%B0%9C%EC%9D%B8-%EA%B3%A0%EA%B0%9D-%EB%8C%80%EC%83%81-open-api-%EC%98%A4%ED%94%88/"
+  },
+  {
+    "id": "kb",
+    "date": "2019-05",
+    "title": "단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "mirae-asset",
+    "date": "2025-04-16",
+    "title": "사내 AI 개발·운영 플랫폼 구축 발표",
+    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=669"
+  },
+  {
+    "id": "nh-investment",
+    "date": "2024-12-09",
+    "title": "고객용 생성형 AI 시황 요약 서비스 혁신금융서비스 지정 공개",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/83554"
+  },
+  {
+    "id": "meritz",
+    "date": "2026-09-23",
+    "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87782"
+  },
+  {
+    "id": "samsung",
+    "date": "2026-09-09",
+    "title": "단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87676"
+  },
+  {
+    "id": "kiwoom",
+    "date": "2025-11-19",
+    "title": "종합금융투자사업자 지정 및 단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
+  },
+  {
+    "id": "mirae-asset",
+    "date": "2025-11-19",
+    "title": "자기자본 8조원 이상 종합금융투자사업자 지정",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
+  },
+  {
+    "id": "nh-investment",
+    "date": "2026-03-18",
+    "title": "자기자본 8조원 이상 종합금융투자사업자 지정 의결",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86489"
+  },
+  {
+    "id": "korea-investment",
+    "date": "2025-11-19",
+    "title": "자기자본 8조원 이상 종합금융투자사업자 지정",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
+  },
+  {
+    "id": "meritz",
+    "date": "2023-04-05",
+    "title": "메리츠금융지주의 완전 자회사 편입",
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/18/002029/20260318009409/11011.htm"
+  },
+  {
+    "id": "hana",
+    "date": "2025-12-17",
+    "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "daishin",
+    "date": "2024-12-24",
+    "title": "자기자본 3조원 이상 종합금융투자사업자 지정",
+    "sourceUrl": "https://www.fsc.go.kr/po010102/83709"
+  },
+  {
+    "id": "shinhan",
+    "date": "2025-12-17",
+    "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  }
 ]

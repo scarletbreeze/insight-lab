@@ -1,0 +1,26 @@
+{
+  "sp500": {
+    "label": "S&P 500",
+    "sourceName": "S&P Dow Jones Indices 연말 보고서",
+    "sourceUrl": "https://www.spglobal.com/spdji/jp/documents/commentary/market-attributes-sp500-202601.pdf",
+    "years": {"2017":19.42,"2018":-6.24,"2019":28.88,"2020":16.26,"2021":26.89,"2022":-19.44,"2023":24.23,"2024":23.31,"2025":16.39}
+  },
+  "nasdaq": {
+    "label": "Nasdaq Composite",
+    "sourceName": "Nasdaq Composite 공식 팩트시트",
+    "sourceUrl": "https://indexes.nasdaq.com/docs/FS_COMP.pdf",
+    "years": {"2017":28.24,"2018":-3.88,"2019":35.23,"2020":43.64,"2021":21.39,"2022":-33.1,"2023":43.42,"2024":28.64,"2025":20.36}
+  },
+  "sp500Historical": {
+    "label": "S&P 500",
+    "sourceName": "Nasdaq-100 2016년 연간 평가 · S&P 500 비교",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf",
+    "years": {"2007":3.53,"2008":-38.49,"2009":23.45,"2010":12.78,"2011":0,"2012":13.41,"2013":29.6,"2014":11.39,"2015":-0.73,"2016":9.54}
+  },
+  "nasdaq100Historical": {
+    "label": "Nasdaq-100",
+    "sourceName": "Nasdaq-100 2016년 연간 평가",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf",
+    "years": {"2007":18.67,"2008":-41.89,"2009":53.54,"2010":19.22,"2011":2.7,"2012":16.82,"2013":34.99,"2014":17.94,"2015":8.43,"2016":5.89}
+  }
+}

@@ -1,9 +1,62 @@
 ---
 import VocLayout from '../../components/voc/VocLayout.astro';
 import NoticeList from '../../components/voc/NoticeList.astro';
-import { vocNotices } from '../../utils/voc';
+import { vocNotices, vocTopics, vocYears } from '../../utils/voc';
+
+const categories = [...new Set(vocNotices.map(({ category }) => category))].sort();
+const channels = [...new Set(vocNotices.map(({ channel }) => channel))].sort();
 ---
 <VocLayout title="키움 공지 타임라인">
-  <p slot="intro">키움증권 영웅문4 공개 공지에서 확인한 표본을 게시일 또는 적용 대상일 순으로 정리했습니다.</p>
-  <div class="lab-block"><NoticeList items={vocNotices} /></div>
+  <p slot="intro">키움증권의 공개 공지와 거래 안내를 게시일 또는 적용 대상일 순으로 정리했습니다.</p>
+  <voc-notice-filter class="lab-block">
+    <form class="lab-controls">
+      <label>연도 <select name="year"><option value="">전체</option>{vocYears.map(({ year }) => <option>{year}</option>)}</select></label>
+      <label>공지 유형 <select name="category"><option value="">전체</option>{categories.map((item) => <option>{item}</option>)}</select></label>
+      <label>주제 <select name="topic"><option value="">전체</option>{vocTopics.map(({ id, label }) => <option value={id}>{label}</option>)}</select></label>
+      <label>자료 채널 <select name="channel"><option value="">전체</option>{channels.map((item) => <option>{item}</option>)}</select></label>
+      <button type="reset">필터 초기화</button>
+    </form>
+    <p role="status">수록 공지 {vocNotices.length}건</p>
+    <NoticeList items={vocNotices} />
+  </voc-notice-filter>
 </VocLayout>
+<script>
+  class VocNoticeFilter extends HTMLElement {
+    connectedCallback() {
+      const form = this.querySelector('form');
+      const status = this.querySelector('[role="status"]');
+      if (!form || !status) return;
+      const entries = Array.from(this.querySelectorAll<HTMLElement>('[data-notice-year]'));
+      const fields = Array.from(form.querySelectorAll('select'));
+      const url = new URL(window.location.href);
+      for (const field of fields) {
+        const value = url.searchParams.get(field.name);
+        if (value !== null && Array.from(field.options).some((option) => option.value === value)) field.value = value;
+      }
+      function render(updateUrl: boolean) {
+        const [year, category, topic, channel] = fields.map((field) => field.value);
+        const visible = entries.filter(({ dataset }, index) => {
+          const matches = (!year || dataset.noticeYear === year)
+            && (!category || dataset.noticeCategory === category)
+            && (!topic || dataset.noticeTopic === topic)
+            && (!channel || dataset.noticeChannel === channel);
+          entries[index].hidden = !matches;
+          return matches;
+        });
+        if (status) status.textContent = visible.length ? `수록 공지 ${visible.length}건` : '조건에 맞는 수록 공지가 없습니다.';
+        if (updateUrl) {
+          for (const { name, value } of fields) {
+            if (value) url.searchParams.set(name, value);
+            else url.searchParams.delete(name);
+          }
+          history.replaceState(history.state, '', url);
+        }
+      }
+      form.addEventListener('change', () => render(true));
+      form.addEventListener('reset', () => queueMicrotask(() => render(true)));
+      form.addEventListener('submit', (event) => event.preventDefault());
+      render(false);
+    }
+  }
+  customElements.define('voc-notice-filter', VocNoticeFilter);
+</script>

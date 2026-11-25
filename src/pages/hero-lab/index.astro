@@ -1,10 +1,14 @@
 ---
+import ScreenCard from '../../components/hero/ScreenCard.astro';
 import HeroLayout from '../../components/hero/HeroLayout.astro';
-import { purposes, screens, styles, workflows } from '../../utils/hero';
+import { purposes, screenByNumber, screenGuides, screens, styles, workflows } from '../../utils/hero';
 import { sitePath } from '../../utils/paths';
 
 const discover = sitePath('hero-lab/discover');
 const featured = workflows[0];
+const guideCount = Object.values(screenGuides).filter(({ image }) => image).length;
+const guideSearch = discover + '?' + new URLSearchParams({ guide: '공식 가이드 있음' });
+const featuredGuides = ['0130', '0150', '0600', '0700', '8284', '0606'].map(screenByNumber);
 ---
 <HeroLayout title="Hero Lab">
   <p slot="intro">영웅문에서 무엇을 보고, 어떤 화면을 함께 쓰면 좋을까?</p>
@@ -29,6 +33,11 @@ const featured = workflows[0];
     <ul class="hero-chips">
       {styles.map((style) => <li><a href={discover + '?' + new URLSearchParams({ style })}>{style}</a></li>)}
     </ul>
+  </section>
+  <section class="hero-section">
+    <h2>공식 화면 이미지로 살펴보기</h2>
+    <div class="hero-grid">{featuredGuides.map((screen) => <ScreenCard {screen} />)}</div>
+    <p><a href={guideSearch}>공식 화면 이미지와 사용 순서 {guideCount}개 보기</a></p>
   </section>
   <section class="hero-section">
     <h2>화면을 더 살펴보기</h2>

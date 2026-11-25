@@ -1,0 +1,24 @@
+---
+import { vocYears } from '../../utils/voc';
+import { publicBoardYear } from '../../utils/voc-public-board';
+import { sitePath } from '../../utils/paths';
+interface Props { selected?: number; }
+const { selected } = Astro.props;
+---
+<nav aria-label="고객 문의 분석 연도">
+  <ul class="years">{[...vocYears].reverse().map(({ year }) => {
+    const board = publicBoardYear(year);
+    return <li><a href={sitePath('voc-studio/year/' + year)} aria-current={year === selected ? 'page' : undefined}>
+      <strong>{year}년</strong>
+      {board && <span>문의 {(board.categories['문의'] ?? 0).toLocaleString('ko-KR')}건</span>}
+      {board && !board.isFullYear && <small>{board.through.slice(5).replace('-', '.')}까지</small>}
+    </a></li>;
+  })}</ul>
+</nav>
+<style>
+  .years { list-style: none; display: flex; overflow-x: auto; padding: .25rem; gap: .5rem; }
+  .years li { flex: 1 0 7.5rem; }
+  .years a { display: grid; align-content: start; height: 100%; padding: .65rem; border: 1px solid var(--color-rule); }
+  .years a[aria-current] { border-color: currentColor; }
+  .years span, .years small { font-size: .85rem; }
+</style>

@@ -1,8 +1,25 @@
 ---
 import MarketLayout from '../../components/market/MarketLayout.astro';
+import { sitePath } from '../../utils/paths';
 import ReturnerGame from '../../components/market/ReturnerGame';
+import korea from '../../../data/market/korea-index-closes.json';
+import snapshots from '../../../data/market/months/snapshots.json';
+const period = '2020-03';
+const indices = korea.monthly[period];
+const dollar = snapshots.months[period].DEXKOUS;
+const firstDate = indices.firstDate;
+const lastDate = indices.lastDate;
+if (dollar.firstDate !== firstDate || dollar.lastDate !== lastDate) {
+  throw new Error('Returner asset scenario requires the same dates for all assets.');
+}
+const assets = {
+  period,
+  firstDate,
+  lastDate,
+  multiples: [1, dollar.last / dollar.first, indices.last[0] / indices.first[0], indices.last[1] / indices.first[1]],
+};
 ---
 <MarketLayout title="Returner Mode">
-  <p slot="intro">시장 역사를 묻는 10문제입니다. 답과 출처는 마지막 문제에서 공개합니다.</p>
-  <ReturnerGame client:load />
+  <p slot="intro">시장 사건, 자산 선택과 종목 수익률을 묻는 10문제입니다. 마지막 문제를 풀면 정답과 출처가 나옵니다.</p>
+  <ReturnerGame client:load monthBase={sitePath("market-time-capsule")} {assets} />
 </MarketLayout>

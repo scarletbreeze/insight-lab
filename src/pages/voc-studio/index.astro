@@ -1,16 +1,16 @@
 ---
 import VocLayout from '../../components/voc/VocLayout.astro';
 import NoticeList from '../../components/voc/NoticeList.astro';
-import { vocNotices, vocYears } from '../../utils/voc';
+import VocYearNavigation from '../../components/voc/VocYearNavigation.astro';
+import { vocNotices } from '../../utils/voc';
 import { sitePath } from '../../utils/paths';
 ---
 <VocLayout title="VOC Studio">
   <p slot="intro">그 해 키움에서는 무슨 일이 있었고, 고객들은 무엇을 궁금해했을까?</p>
+  <p><a href={sitePath('voc-studio/methodology') + '#public-board-sample'}>공개 고객게시판 수집 결과 보기</a></p>
   <section class="lab-block">
     <h2>연도별 탐색</h2>
-    <div class="lab-grid">
-      {vocYears.map(({ year, period }) => <a class="lab-card" href={sitePath('voc-studio/year/' + year)}><strong>{year}</strong><span>{period}</span></a>)}
-    </div>
+    <VocYearNavigation />
   </section>
   <section class="lab-block">
     <h2>최근 수록 공지</h2>

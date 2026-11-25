@@ -1,40 +1,88 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
-import { purposes, screens } from '../../utils/hero';
+import { purposes, relatedScreens, screens } from '../../utils/hero';
 import { sitePath } from '../../utils/paths';
 
 const branches = purposes.map((purpose) => ({
   purpose,
-  screens: screens.filter((screen) => screen.purpose === purpose || (purpose === '파생' && screen.styles.includes('파생'))),
+  items: screens.filter((screen) => screen.purpose === purpose || (purpose === '파생' && screen.styles.includes('파생'))),
 }));
+const initial = branches[0].items[0].number;
 ---
 <HeroLayout title="Hero Map">
-  <p slot="intro">목적을 펼친 뒤 화면을 선택하면 기능과 관련 화면을 확인할 수 있습니다.</p>
-  <div class="hero-map">
-    {branches.map(({ purpose, screens: items }, index) => (
-      <details class="hero-branch" open={index === 0}>
-        <summary>{purpose} <span>{items.length ? items.length + '개' : '자료 확인 중'}</span></summary>
-        {items.length > 0 && <ul>
-          {items.map((screen) => (
-            <li>
-              <details class="hero-node">
-                <summary>{screen.number} {screen.title}</summary>
-                <div>
-                  <p class="category">{screen.purpose}</p>
-                  <p>{screen.summary}</p>
-                  <a href={sitePath('hero-lab/screens/' + screen.number)}>화면 상세</a>
-                  <a href={screen.officialHelpUrl || screen.sources[0].sourceUrl}>공식 도움말</a>
-                  {items.some((other) => other.number !== screen.number) && <p>관련 화면
-                    {items.filter((other) => other.number !== screen.number).slice(0, 4).map((other) => (
-                      <a href={sitePath('hero-lab/screens/' + other.number)}>{other.title}</a>
-                    ))}
-                  </p>}
-                </div>
-              </details>
-            </li>
-          ))}
-        </ul>}
-      </details>
-    ))}
-  </div>
+  <p slot="intro">목적을 펼쳐 화면을 선택하면, 옆 패널에서 기능과 관련 화면을 확인할 수 있습니다.</p>
+  <hero-map class="hero-map-grid" data-initial={initial}>
+    <nav class="hero-map" aria-label="목적별 화면">
+      {branches.map(({ purpose, items }, index) => (
+        <details class="hero-branch" open={index === 0}>
+          <summary>{purpose} <span>{items.length}개</span></summary>
+          <ul>
+            {items.map((screen) => <li>
+              <a class="hero-map-choice" href={'#screen-' + screen.number} data-screen-link={screen.number}>
+                <span>{screen.number}</span> {screen.title}
+              </a>
+            </li>)}
+          </ul>
+        </details>
+      ))}
+    </nav>
+    <div class="hero-map-panels" aria-label="선택한 화면">
+      {screens.map((screen) => {
+        const related = relatedScreens(screen.number);
+        return <article class="hero-map-panel" id={'screen-' + screen.number} data-screen-panel={screen.number}>
+          <p class="category">{screen.purpose} · {screen.product}</p>
+          <h2 tabindex="-1">{screen.number} {screen.title}</h2>
+          <p>{screen.summary}</p>
+          <div class="hero-chips">
+            <a href={sitePath('hero-lab/screens/' + screen.number)}>화면 상세 보기</a>
+            <a href={screen.officialHelpUrl || screen.sources[0].sourceUrl}>공식 도움말</a>
+          </div>
+          {related.length > 0 && <div>
+            <h3>함께 볼 화면</h3>
+            <ul>{related.map((item) => (
+              <li><a href={'#screen-' + item.number} data-screen-link={item.number}>{item.number} {item.title}</a></li>
+            ))}</ul>
+          </div>}
+        </article>;
+      })}
+    </div>
+  </hero-map>
 </HeroLayout>
+<script>
+  class HeroMap extends HTMLElement {
+    connectedCallback() {
+      const panels = Array.from(this.querySelectorAll<HTMLElement>('[data-screen-panel]'));
+      const links = Array.from(this.querySelectorAll<HTMLAnchorElement>('nav [data-screen-link]'));
+
+      const select = (focus = false) => {
+        const requested = location.hash.replace(/^#screen-/, '');
+        const active = panels.find((panel) => panel.dataset.screenPanel === requested)
+          ?? panels.find((panel) => panel.dataset.screenPanel === this.dataset.initial);
+        if (!active) return;
+        for (const panel of panels) panel.hidden = panel !== active;
+        for (const link of links) {
+          if (link.dataset.screenLink === active.dataset.screenPanel) {
+            link.setAttribute('aria-current', 'location');
+            const branch = link.closest('details');
+            if (branch) branch.open = true;
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        }
+        if (focus) active.querySelector<HTMLElement>('h2')?.focus();
+      };
+
+      this.addEventListener('click', (event) => {
+        if (!(event instanceof MouseEvent) || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+        const link = event.target instanceof Element && event.target.closest<HTMLAnchorElement>('[data-screen-link]');
+        if (!link) return;
+        event.preventDefault();
+        if (location.hash !== link.hash) history.pushState(null, '', link.hash);
+        select(true);
+      });
+      window.addEventListener('hashchange', () => select());
+      select();
+    }
+  }
+  customElements.define('hero-map', HeroMap);
+</script>

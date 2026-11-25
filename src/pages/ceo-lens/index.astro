@@ -1,22 +1,48 @@
 ---
 import CeoLayout from '../../components/ceo/CeoLayout.astro';
 import SignalList from '../../components/ceo/SignalList.astro';
-import { ceoSections, signals } from '../../utils/ceo';
+import { ceoSections, signals, weeklyEditions } from '../../utils/ceo';
 import { sitePath } from '../../utils/paths';
+
+const edition = weeklyEditions[0];
+const featured = edition?.question ?? signals[0];
+const related = edition?.related ?? [];
+const allSignals = sitePath('ceo-lens/signals');
+const sourceCount = new Set(signals.map(({ sourceUrl }) => sourceUrl)).size;
+const topicCount = new Set(signals.map(({ category }) => category)).size;
+const guides = ceoSections.filter(([, slug]) => ['capital-roadmap', 'digital-assets', 'competitors', 'ai-digital', 'global', 'archive'].includes(slug));
 ---
 <CeoLayout title="CEO Lens">
   <p slot="intro">내가 증권사 CEO라면, 지금 무엇을 봐야 할까?</p>
+  <dl class="lab-facts" aria-label="CEO Lens 수록 현황">
+    <div><dt>시그널</dt><dd>{signals.length}건</dd></div>
+    <div><dt>주제</dt><dd>{topicCount}개</dd></div>
+    <div><dt>연결 출처</dt><dd>{sourceCount}개</dd></div>
+  </dl>
   <section class="lab-block">
-    <h2>살펴볼 질문</h2>
-    <p>{signals[0].question}</p>
-    <a href={sitePath('ceo-lens/signals') + '#' + signals[0].id}>질문과 관련된 발표 보기</a>
+    <h2>주간 CEO 질문</h2>
+    <p>{featured.question}</p>
+    <a href={allSignals + '#' + featured.id}>질문의 근거가 된 발표 보기</a>
+    {related.length > 0 && <ul class="lab-list">
+      {related.map(({ id, title }) => <li><a href={allSignals + '#' + id}>{title}</a></li>)}
+    </ul>}
   </section>
   <section class="lab-block">
-    <h2>수록 시그널</h2>
-    <SignalList items={signals.slice(0, 5)} />
+    <h2>{edition?.title ?? '최근 수록 시그널'}</h2>
+    {edition && <p><time datetime={edition.start}>{edition.start}</time>~<time datetime={edition.through}>{edition.through}</time> 공개 자료</p>}
+    <SignalList items={edition?.items ?? signals.slice(0, 5)} />
+    <p><a href={sitePath('ceo-lens/archive') + '#weekly'}>주간 발행 기록 보기</a></p>
   </section>
   <section class="lab-block">
     <h2>주제별 탐색</h2>
-    <ul class="lab-chips">{ceoSections.slice(1).map(([title, slug]) => <li><a href={sitePath('ceo-lens/' + slug)}>{title}</a></li>)}</ul>
+    <div class="lab-grid">{guides.map(([title, slug]) => <a class="lab-card" href={sitePath('ceo-lens/' + slug)}>
+      <strong>{title}</strong>
+      {slug !== 'capital-roadmap' && slug !== 'archive' && <span>{signals.filter(({ areas }) => areas.includes(slug)).length}건</span>}
+    </a>)}</div>
+  </section>
+  <section class="lab-block">
+    <h2>출처와 수록 기준</h2>
+    <p>수록 자료 중 최근 발표일 <time datetime={signals[0].date}>{signals[0].date}</time></p>
+    <a href={sitePath('ceo-lens/methodology')}>출처 및 시그널 수록 기준</a>
   </section>
 </CeoLayout>

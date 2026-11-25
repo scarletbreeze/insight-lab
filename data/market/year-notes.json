@@ -1,0 +1,63 @@
+{
+  "1997": {
+    "summary": "외환위기 중 한국 정부가 IMF와 경제 프로그램을 협의했고, IMF 이사회는 12월에 대기성 차관을 승인했습니다.",
+    "memo": "12월 3일의 협의 종료 발표와 12월 4일의 이사회 승인에서 당시 확인할 수 있었던 사실을 각각 기록해 보세요.",
+    "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9755.htm",
+    "sourceName": "IMF 한국 대기성 차관 승인 발표"
+  },
+  "1998": {
+    "summary":"외환위기 이후 한국이 금융·기업 부문의 후속 개혁을 이어간 해입니다.",
+    "memo":"IMF 의향서가 공개된 시점과 이후 경제지표의 발표일을 구분해 보세요.",
+    "sourceUrl":"https://www.elibrary.imf.org/downloadpdf/display/book/9781557757654/9781557757654.pdf",
+    "sourceName":"IMF 한국 프로그램 검토",
+    "highlights":[{"label":"Theme","title":"외환위기 이후 금융 구조조정","summary":"한국 정부와 IMF는 금융 부문 개혁과 대외 건전성 회복 과제를 협의했습니다.","sourceUrl":"https://www.elibrary.imf.org/view/journals/002/2000/011/article-A001-en.xml","sourceName":"IMF 한국 경제·정책 평가"}]
+  },
+  "2008": {
+    "summary":"금융기관 위기와 신용시장 불안에 대응해 미국의 금융 지원과 금리 정책이 빠르게 바뀐 해입니다.",
+    "memo":"리먼브러더스 파산, AIG 지원, 연말 금리 결정을 발표일 순서대로 놓으면 위기 대응이 어떻게 진행됐는지 살펴볼 수 있습니다.",
+    "sourceUrl":"https://www.federalreserve.gov/boarddocs/rptcongress/annual08/sec1/c1.htm",
+    "sourceName":"미 연준 2008년 연차보고서",
+    "highlights":[{"label":"Theme","title":"금융기관 유동성 지원","summary":"3월 연준은 증권화 시장의 자금조달을 돕기 위해 프라이머리 딜러 대출 창구 개설을 승인했습니다.","sourceUrl":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm","sourceName":"미 연준 3월 발표"}]
+  },
+  "2010": {
+    "summary": "미 연준은 경기 회복을 지원하기 위해 장기 국채 매입 규모를 확대하겠다고 발표했습니다.",
+    "memo": "발표한 매입 규모와 실제 마지막 매입 시점을 구분한 뒤, 그 기간의 국채금리 움직임을 살펴보세요.",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20101103a.htm",
+    "sourceName": "미 연준 2010년 11월 FOMC 성명"
+  },
+  "2016": {
+    "summary": "Nasdaq-100과 S&P 500 모두 올랐고, Nasdaq 연간 평가에 따르면 S&P 500의 가격 수익률이 더 높았습니다.",
+    "memo": "지수의 전년 말 대비 등락률과 개별 종목의 그해 첫날 대비 수익률을 따로 읽어 보세요.",
+    "sourceName": "Nasdaq-100 2016년 연간 평가",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf"
+  },
+  "2020": {
+    "summary":"팬데믹 초기 경제활동이 급격히 위축됐고, 미국에서 큰 폭의 통화정책 대응이 이뤄진 해입니다.",
+    "memo":"WHO와 FOMC 발표는 당시 알 수 있었던 기록입니다. NBER의 경기 정점·저점 판정은 나중에 나온 기록입니다.",
+    "sourceUrl":"https://www.nber.org/research/business-cycle-dating",
+    "sourceName":"NBER 경기순환 판정",
+    "highlights":[{"label":"Surprise","title":"0달러 아래로 내려간 WTI 선물","summary":"4월 20일 만기를 앞둔 WTI 선물 계약 가격이 마이너스를 기록했습니다.","sourceUrl":"https://www.eia.gov/TodayinEnergy/detail.php?id=43495","sourceName":"미 에너지정보청 분석"}]
+  },
+  "2022": {
+    "summary": "미 연준은 3월 금리 목표 범위를 인상했고, 6월에는 인상 폭을 0.75%p로 높였습니다.",
+    "memo": "3월과 6월 FOMC 발표의 목표 범위를 확인한 뒤, 각 월의 10년물 국채금리 관측값과 비교해 보세요.",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+    "sourceName": "미 연준 FOMC 회의 기록"
+  },
+  "2025": {
+    "summary":"대체거래소 출범, 공매도 재개와 상법 개정이 이어졌고, 코스피는 10월에 처음 4,000선을 넘겨 마감했습니다.",
+    "memo":"거래 제도 시행일과 지수 기록을 나란히 놓고, 연말 대비 연간 변화와 각 월의 첫날·마지막 날 사이 변화를 각각 확인해 보세요.",
+    "sourceUrl":"https://www.fsc.go.kr/no010101/84216",
+    "sourceName":"금융위원회 공매도 전면 재개 발표",
+    "highlights":[
+      {"label":"Theme","title":"복수 거래소 체제","summary":"넥스트레이드가 3월 4일 국내 최초의 대체거래소로 출범했습니다.","sourceUrl":"https://www.fsc.go.kr/no040101?cnId=2628","sourceName":"금융위원회 대체거래소 출범 안내"},
+      {"label":"Surprise","title":"코스피 첫 4,000선 마감","summary":"코스피는 10월 27일 4,042.83에 마감했습니다.","sourceUrl":"https://gonggamadmin.korea.kr/newsContentView.es?code_cd=0105000000&content=NC002&mid=a12603000000&news_id=651802d7-bc3d-44f8-8538-5d9a4dd77dc7&section_id=NCCD_POLICY","sourceName":"대한민국 정책주간지 K-공감"}
+    ]
+  },
+  "2026": {
+    "summary":"한국은행은 7월과 8월에 기준금리를 각각 0.25%p 인상했고 10월에 3.00%를 유지했습니다.",
+    "memo":"7월, 8월, 10월의 통화정책 결정일을 순서대로 놓고 원/달러 환율의 월말 관측값도 살펴보세요.",
+    "sourceUrl":"https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11065823",
+    "sourceName":"한국은행 10월 통화정책방향"
+  }
+}

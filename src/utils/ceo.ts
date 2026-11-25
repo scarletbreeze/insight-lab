@@ -1,6 +1,15 @@
 import source from '../../data/ceo/signals.json';
+import weekly from '../../data/ceo/weekly.json';
 
 export const signals = source;
+const signalsById = new Map(signals.map((signal) => [signal.id, signal]));
+export const weeklyEditions = [...weekly].sort((a, b) => b.start.localeCompare(a.start))
+  .map((edition) => ({
+    ...edition,
+    question: signalsById.get(edition.questionSignal)!,
+    related: edition.relatedSignals.map((id) => signalsById.get(id)!),
+    items: edition.signals.map((id) => signalsById.get(id)!),
+  }));
 export const ceoSections = [
   ['공개 시그널', 'signals'],
   ['경쟁사 동향', 'competitors'],

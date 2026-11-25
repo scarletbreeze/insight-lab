@@ -1,8 +1,1294 @@
 [
-  {"id":"token-working-group","date":"2026-03-04","category":"Digital Asset","areas":["digital-assets","regulation"],"title":"토큰증권 민·관 협의체 첫 회의","summary":"금융위원회가 기술·인프라, 발행, 유통, 결제의 네 분과를 구성했습니다.","why":"각 분과에서 정해지는 기준은 발행부터 결제까지 증권사의 시스템 설계에 영향을 줄 수 있습니다.","companies":["금융위원회","한국예탁결제원"],"question":"발행·유통·결제 사이에서 증권사가 준비할 데이터 기준은 무엇일까요?","sourceName":"금융위원회 토큰증권 협의체 발표","sourceUrl":"https://www.fsc.go.kr/po010101/86371"},
-  {"id":"capital-licenses","date":"2025-11-19","category":"Capital & License","areas":["capital-roadmap","competitors"],"title":"종합금융투자사업자 지정과 단기금융업 인가","summary":"금융위원회가 한국투자증권과 미래에셋증권을 자기자본 8조원 이상 종투사로 지정하고 키움증권에 4조원 이상 종투사 지정과 단기금융업 인가를 의결했습니다.","why":"인가와 지정이 새 사업의 실제 출시나 운용 성과로 이어지는 과정을 살펴볼 수 있습니다.","companies":["한국투자증권","미래에셋증권","키움증권"],"question":"조달 구조의 변화는 공시의 어느 지표에서 확인할 수 있을까요?","sourceName":"금융위원회 정례회의 발표","sourceUrl":"https://www.fsc.go.kr/no010101/85692"},
-  {"id":"next-trade-license","date":"2025-02-05","category":"Regulation","areas":["regulation","competitors"],"title":"넥스트레이드 투자중개업 본인가","summary":"금융위원회가 넥스트레이드의 다자간매매체결회사 투자중개업을 본인가했습니다.","why":"거래시간과 주문 방식의 변화는 거래소 선택 안내와 주문 체결 정책을 살펴볼 계기입니다.","companies":["넥스트레이드","한국거래소"],"question":"투자자가 시장별 거래 조건과 체결 결과를 쉽게 이해하려면 어떤 정보가 필요할까요?","sourceName":"금융위원회 넥스트레이드 인가 발표","sourceUrl":"https://www.fsc.go.kr/no010101/83953"},
-  {"id":"network-separation","date":"2024-08-13","category":"AI & Digital","areas":["ai-digital","regulation"],"title":"금융분야 망분리 개선 로드맵","summary":"금융위원회가 금융권의 생성형 AI 활용과 보안체계 개선을 포함한 로드맵을 발표했습니다.","why":"서비스 개발과 정보보호 관리 범위를 어떻게 설계하는지 비교할 수 있습니다.","companies":["금융위원회","금융감독원","금융보안원"],"question":"외부 AI 서비스를 검토할 때 입력 데이터와 결과 검증의 책임을 어떻게 나눌 수 있을까요?","sourceName":"금융위원회 망분리 개선 로드맵","sourceUrl":"https://www.fsc.go.kr/po010106/82885"},
-  {"id":"spot-bitcoin-etp","date":"2024-01-10","category":"Global","areas":["global","digital-assets"],"title":"미국 현물 비트코인 ETP 상장·거래 승인 사례","summary":"미국 SEC가 일부 현물 비트코인 ETP의 상장과 거래를 승인했습니다.","why":"새로운 기초자산을 상장상품으로 제공할 때 공시와 거래 인프라가 어떻게 마련되는지 보여줍니다.","companies":["미국 증권거래위원회"],"question":"국내 금융투자상품 검토에서는 상품 구조와 기초자산 위험을 어떻게 안내할 수 있을까요?","sourceName":"미국 SEC 승인 관련 성명","sourceUrl":"https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"},
-  {"id":"token-framework","date":"2023-02-06","category":"Digital Asset","areas":["digital-assets","regulation"],"title":"토큰증권 발행·유통 규율체계 정비방안","summary":"금융위원회가 토큰증권의 발행과 유통을 자본시장 규율 내에 수용하기 위한 정책 방향을 발표했습니다.","why":"계좌 관리, 발행, 유통의 역할을 어떤 기관이 맡는지 추적할 출발점입니다.","companies":["금융위원회"],"question":"발행인과 계좌관리기관 사이의 역할 분담이 시스템 설계에 어떤 영향을 줄까요?","sourceName":"금융위원회 토큰증권 정책 발표","sourceUrl":"https://www.fsc.go.kr/no010101/79386"}
+  {
+    "id": "fintech-week-2026",
+    "date": "2026-11-25",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital"
+    ],
+    "title": "코리아 핀테크 위크 2026 개막",
+    "summary": "금융위원회는 디지털 전환, 금융정책, 재테크, 핀테크 투자·지원 등을 주제로 25~27일 행사를 연다고 발표했습니다.",
+    "why": "업무별 기술 시연을 실제 서비스 도입 사례와 비교해 볼 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국핀테크지원센터"
+    ],
+    "question": "증권 업무에 적용할 AI 기능은 어떤 실사용 지표와 점검 결과로 검증할 수 있을까요?",
+    "sourceName": "금융위원회 코리아 핀테크 위크 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88216?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data"
+    ],
+    "applications": [
+      "Agent",
+      "업무자동화"
+    ],
+    "stage": "행사"
+  },
+  {
+    "id": "digital-asset-bill-nov-2026",
+    "date": "2026-11-24",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation"
+    ],
+    "title": "디지털자산업 제정안의 입법 추진 논의",
+    "summary": "금융위원회 가상자산위원회는 산업·시장·이용자를 함께 다루는 디지털자산업 법안의 입법 추진을 논의했습니다.",
+    "why": "법안 추진 단계에서 사업 인가와 시장 인프라, 이용자 보호 책임의 경계를 살펴볼 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "가상자산위원회"
+    ],
+    "question": "금융회사와 디지털자산사업자가 협력한다면 사고 대응과 고객자산 대사 책임을 어떻게 나눌까요?",
+    "sourceName": "금융위원회 디지털자산법안 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88199",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset",
+      "Consumer Protection"
+    ],
+    "stage": "입법 추진 논의"
+  },
+  {
+    "id": "consumer-survey-nov-2026",
+    "date": "2026-11-24",
+    "category": "Market",
+    "areas": [
+      "signals"
+    ],
+    "title": "한국은행 11월 소비자동향조사 발표",
+    "summary": "한국은행은 가계의 현재 생활형편, 소비지출 전망, 경기판단 등을 묻는 11월 소비자동향조사 결과를 공개했습니다.",
+    "why": "가계 심리와 증권사의 고객자산·거래 활동은 시차를 두고 움직일 수 있습니다.",
+    "companies": [
+      "한국은행"
+    ],
+    "question": "가계 심리 지표와 고객의 거래·현금 이동을 비교할 때 시차를 어느 기간까지 살펴볼까요?",
+    "sourceName": "한국은행 11월 소비자동향조사",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?depth=201264&menuNo=201264&nttId=11066918&programType=newsData&relate=Y",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "WM"
+    ]
+  },
+  {
+    "id": "temporary-buyback-limit",
+    "date": "2026-11-23",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "상장기업 자기주식 1일 주문 한도 한시 완화",
+    "summary": "금융위원회는 2026년 11월 24일부터 2027년 2월 23일까지 상장기업의 1일 자기주식 취득 주문 한도를 완화하기로 의결했습니다.",
+    "why": "직접 취득과 신탁 취득의 적용 범위가 다릅니다. 취득 계획 공시와 실제 주문 흐름을 함께 확인할 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국거래소"
+    ],
+    "question": "주문 화면과 기관 거래 시스템에 한시 적용 기간과 취득 방식별 조건을 어떻게 반영할까요?",
+    "sourceName": "금융위원회 자기주식 한도 완화 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88190",
+    "region": "KR",
+    "businessAreas": [
+      "Trading",
+      "Brokerage"
+    ],
+    "stage": "한시 시행"
+  },
+  {
+    "id": "market-stability-nov-2026",
+    "date": "2026-11-23",
+    "category": "Market",
+    "areas": [
+      "regulation"
+    ],
+    "title": "단계별 시장안정조치 공개",
+    "summary": "관계기관은 시장안정펀드 가동 준비, 불법공매도 집중 감시와 신용융자·반대매매 동향 점검을 발표했습니다.",
+    "why": "장중 변동성이 커질 때 신용·미수와 반대매매의 고객 안내를 함께 점검할 근거가 됩니다.",
+    "companies": [
+      "재정경제부",
+      "금융위원회",
+      "금융감독원",
+      "한국거래소"
+    ],
+    "question": "변동성이 확대될 때 증권사는 신용융자와 반대매매의 위험을 어떤 지표로 감지하고 고객에게 언제 알릴까요?",
+    "sourceName": "금융위원회 시장상황점검회의 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no070300/88181",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "Trading",
+      "Consumer Protection"
+    ],
+    "stage": "대응방안 발표"
+  },
+  {
+    "id": "market-indicators-nov20-2026",
+    "date": "2026-11-20",
+    "category": "Market",
+    "areas": [
+      "signals"
+    ],
+    "title": "11월 19일 금리·주가·환율 움직임",
+    "summary": "한국은행의 11월 20일 자료에 따르면 19일 코스피는 5,137.89로 상승 마감했고, 국고채 3년물 수익률은 3.716%, 원·달러 환율은 1,330원이었습니다.",
+    "why": "세 지표가 함께 바뀔 때 자산별 고객 거래와 환전 흐름을 함께 살펴볼 수 있습니다.",
+    "companies": [
+      "한국은행"
+    ],
+    "question": "거래일별 국내주식 주문과 환전 수요를 금리·환율 변화와 어떤 시간 단위로 비교할까요?",
+    "sourceName": "한국은행 금융시장 주요지표",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0002018/view.do?menuNo=200366&nttId=11066843",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "Trading"
+    ]
+  },
+  {
+    "id": "fintalk24-nov-2026",
+    "date": "2026-11-19",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital"
+    ],
+    "title": "핀테크 지원사업 검색·추천 서비스 핀톡24 출시",
+    "summary": "금융위원회와 한국핀테크지원센터는 여러 기관의 핀테크 지원사업을 한곳에서 검색하고 AI로 조건에 맞는 사업을 추천하는 핀톡24를 출시했습니다.",
+    "why": "증권사의 지원사업 안내도 정보 수집, 요건 매칭, 출처 확인으로 나눠 비교할 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국핀테크지원센터"
+    ],
+    "question": "지원사업 추천의 정확도를 신청 요건 충족률과 담당자 확인 건수로 측정할 수 있을까요?",
+    "sourceName": "금융위원회 핀톡24 출시 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88171",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data"
+    ],
+    "applications": [
+      "업무자동화"
+    ],
+    "stage": "출시"
+  },
+  {
+    "id": "international-investment-q3-2026",
+    "date": "2026-11-19",
+    "category": "Market",
+    "areas": [
+      "signals",
+      "global"
+    ],
+    "title": "3분기 국제투자대조표 잠정치 공개",
+    "summary": "한국은행은 2026년 3분기 말 대외금융자산·부채와 대외채무를 다루는 국제투자대조표 잠정치를 공개했습니다.",
+    "why": "국가 단위 대외투자 통계는 증권사 해외주식 잔고를 해석할 때 비교할 수 있는 배경 자료입니다.",
+    "companies": [
+      "한국은행"
+    ],
+    "question": "고객의 해외자산 잔고 변화를 평가손익과 거래 순유입으로 나누려면 어떤 관측값이 필요할까요?",
+    "sourceName": "한국은행 국제투자대조표",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066812",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "WM"
+    ],
+    "stage": "잠정 통계"
+  },
+  {
+    "id": "electronic-finance-security-draft-nov-2026",
+    "date": "2026-11-18",
+    "category": "Regulation",
+    "areas": [
+      "regulation",
+      "ai-digital"
+    ],
+    "title": "전자금융감독규정 보안체계 개정안 예고",
+    "summary": "금융위원회는 금융회사의 IT 자산 식별·관리 의무와 대형 금융회사의 취약점 평가 주기 확대 등을 담은 개정안을 11월 18일부터 30일까지 예고했습니다.",
+    "why": "현행 점검 대상과 개정안의 대상 범위를 비교해 영향받는 업무를 찾을 수 있습니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "전자금융에 직간접으로 연결된 시스템과 외부 연계 자산을 어떤 기준으로 식별할까요?",
+    "sourceName": "금융위원회 전자금융감독규정 변경예고",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88162",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Consumer Protection"
+    ],
+    "applications": [
+      "보안"
+    ],
+    "stage": "규정변경예고"
+  },
+  {
+    "id": "household-credit-q3-2026",
+    "date": "2026-11-18",
+    "category": "Market",
+    "areas": [
+      "signals"
+    ],
+    "title": "3분기 가계신용 잠정치 공개",
+    "summary": "한국은행은 2026년 3분기 말 가계신용 잔액을 2,030.5조원으로 집계했으며, 전 분기 말보다 9.8조원 증가했다고 발표했습니다.",
+    "why": "가계 유동성과 고객의 증권 계좌 자금 이동을 대조할 때 분기 단위 기준을 제공합니다.",
+    "companies": [
+      "한국은행"
+    ],
+    "question": "운용자산 유입과 신용 관련 위험을 함께 보려면 어떤 고객 지표를 분기별로 집계할까요?",
+    "sourceName": "한국은행 가계신용 잠정치",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066748",
+    "region": "KR",
+    "businessAreas": [
+      "WM",
+      "Consumer Protection"
+    ],
+    "stage": "잠정 통계"
+  },
+  {
+    "id": "token-rules-consultation",
+    "date": "2026-10-01",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation"
+    ],
+    "title": "토큰증권 하위법규 개정안 입법예고",
+    "summary": "금융위원회는 분산원장 요건, 발행인계좌관리기관 등록요건, 장외거래소 인가와 거래한도에 관한 개정안을 공개했습니다.",
+    "why": "예고안에서 시스템 요건과 인가 요건을 찾아 기존 전자증권 업무와 비교할 수 있습니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "발행인 계좌와 장외거래소를 연결할 때 어디에서 권리와 거래 기록을 대조할까요?",
+    "sourceName": "금융위원회 입법예고 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87838",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset"
+    ],
+    "stage": "입법예고안"
+  },
+  {
+    "id": "meritz-paper-approval",
+    "date": "2026-09-23",
+    "category": "Capital & License",
+    "areas": [
+      "capital-roadmap",
+      "competitors",
+      "regulation"
+    ],
+    "title": "메리츠증권 종투사 지정과 단기금융업 인가",
+    "summary": "금융위원회는 메리츠증권을 자기자본 4조원 이상 종합금융투자사업자로 지정하고 단기금융업 인가를 의결했습니다.",
+    "why": "같은 날 금융위원회 발표에 따르면 단기금융업을 영위할 수 있는 종투사는 9개사로 늘었습니다.",
+    "companies": [
+      "메리츠증권"
+    ],
+    "question": "인가 이후 실제 조달액과 운용 자산의 구성을 어떤 공시에서 확인할까요?",
+    "sourceName": "금융위원회 메리츠증권 지정·인가 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87782",
+    "region": "KR",
+    "businessAreas": [
+      "IB"
+    ],
+    "stage": "지정·인가"
+  },
+  {
+    "id": "kb-consumer-ai-review",
+    "date": "2026-09-16",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors"
+    ],
+    "title": "상품 가입 점검과 민원 관리에 AI 적용",
+    "summary": "KB증권은 공모펀드와 랩어카운트 가입 설명을 점검하고, 사후 단계에서는 민원 분석 결과를 담당자에게 제공한다고 설명했습니다.",
+    "why": "상품 설명 누락을 보완하고 반복 문의를 분류하는 과정에서 담당자가 개입하는 지점을 볼 수 있습니다.",
+    "companies": [
+      "KB증권"
+    ],
+    "question": "설명 누락 경보의 오탐과 재녹취 결과를 각각 어떻게 측정할까요?",
+    "sourceName": "KB증권 공개 자료",
+    "sourceUrl": "https://blog.kbsec.com/kb-news/kb-ai-%EC%86%8C%EB%B9%84%EC%9E%90%EB%B3%B4%ED%98%B8/",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Consumer Protection"
+    ],
+    "stage": "운영 사례 공개",
+    "applications": [
+      "업무자동화",
+      "리스크·준법"
+    ]
+  },
+  {
+    "id": "samsung-paper-approval",
+    "date": "2026-09-09",
+    "category": "Capital & License",
+    "areas": [
+      "capital-roadmap",
+      "competitors",
+      "regulation"
+    ],
+    "title": "삼성증권 단기금융업 인가",
+    "summary": "금융위원회는 삼성증권의 단기금융업 인가를 의결했습니다.",
+    "why": "2026년 9월 9일 의결 직후 단기금융업 인가를 받은 증권사는 8개사였습니다.",
+    "companies": [
+      "삼성증권"
+    ],
+    "question": "조달 수단이 늘어난 뒤 상품 만기와 운용 자산의 만기를 어떻게 비교할까요?",
+    "sourceName": "금융위원회 삼성증권 인가 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87676",
+    "region": "KR",
+    "businessAreas": [
+      "IB"
+    ],
+    "stage": "인가"
+  },
+  {
+    "id": "token-policy-roadmap",
+    "date": "2026-09-04",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation"
+    ],
+    "title": "토큰증권 발행·유통 정책방향 발표",
+    "summary": "금융위원회는 조각투자와 함께 주식·채권·펀드의 토큰화 인프라를 단계별로 추진하는 정책방향을 공개했습니다.",
+    "why": "어떤 증권 유형을 먼저 도입하려는지, 기존 예탁결제 인프라와 연결되는 지점을 확인할 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국예탁결제원"
+    ],
+    "question": "첫 단계에서 지원할 증권 유형에 따라 계좌와 결제 시스템의 준비 범위는 어떻게 달라질까요?",
+    "sourceName": "금융위원회 정책방향 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87650",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset"
+    ],
+    "stage": "정책방향"
+  },
+  {
+    "id": "kb-personal-open-api",
+    "date": "2026-08-04",
+    "category": "Brokerage",
+    "areas": [
+      "competitors"
+    ],
+    "title": "개인 고객용 Open API 공개 베타",
+    "summary": "KB증권은 기업 고객에 제공하던 API 운영 경험을 바탕으로 개인용 국내외 주식 시세·계좌·주문 연동 기능을 공개했습니다.",
+    "why": "제휴사 중심의 개방형 금융 기능을 개인용으로 확대하는 사례입니다.",
+    "companies": [
+      "KB증권"
+    ],
+    "question": "개인 고객 연동을 확대할 때 요청 한도와 장애 지원은 어떻게 운영할까요?",
+    "sourceName": "KB증권 공개 자료",
+    "sourceUrl": "https://blog.kbsec.com/kb-news/%EA%B0%9C%EC%9D%B8-%EA%B3%A0%EA%B0%9D-%EB%8C%80%EC%83%81-open-api-%EC%98%A4%ED%94%88/",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage"
+    ],
+    "stage": "공개 베타 발표"
+  },
+  {
+    "id": "ibkr-krx-nxt-access",
+    "date": "2026-06-30",
+    "category": "Brokerage",
+    "areas": [
+      "competitors",
+      "global"
+    ],
+    "title": "KRX에 이어 넥스트레이드 거래 지원",
+    "summary": "Interactive Brokers는 5월 한국거래소 거래 지원에 이어 6월 넥스트레이드 일부 종목 거래 지원을 발표했습니다.",
+    "why": "한국 주식에 접근하는 해외 고객의 거래 채널이 추가된 사례입니다.",
+    "companies": [
+      "Interactive Brokers"
+    ],
+    "question": "시장별 거래시간과 이용 가능 종목을 고객에게 어떻게 안내할까요?",
+    "sourceName": "Interactive Brokers 공개 자료",
+    "sourceUrl": "https://investors.interactivebrokers.com/en/general/about/mediaRelations/7-1-26.php",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Brokerage"
+    ],
+    "stage": "시장 지원 확대"
+  },
+  {
+    "id": "fsc-ai-model-change",
+    "date": "2026-04-15",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "regulation"
+    ],
+    "title": "생성형 AI 모델 변경 절차 간소화",
+    "summary": "금융위원회는 버전 업그레이드 등 단순 모델 변경에 적용할 혁신금융서비스 절차 간소화 방안을 발표했습니다.",
+    "why": "버전 업데이트에서도 서비스 범위와 보안 조건을 기준으로 변경 유형을 먼저 판단해야 합니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "단순 버전 변경과 서비스 범위 변경을 누가 어떤 기록으로 판단할까요?",
+    "sourceName": "금융위원회 공개 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86712",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Operations"
+    ],
+    "stage": "개선방안 발표",
+    "applications": [
+      "리스크·준법"
+    ]
+  },
+  {
+    "id": "nh-ima",
+    "date": "2026-03-19",
+    "category": "Capital & License",
+    "areas": [
+      "capital-roadmap",
+      "competitors"
+    ],
+    "title": "NH투자증권 종합투자계좌 업무 단계",
+    "summary": "금융위원회가 NH투자증권의 자기자본 8조원 이상 종합금융투자사업자 지정을 의결했습니다.",
+    "why": "이미 운영 중인 조달 업무와 새로 가능한 업무의 차이를 추적할 수 있습니다.",
+    "companies": [
+      "NH투자증권"
+    ],
+    "question": "상품 출시 뒤 운용과 조달의 규모를 어떤 공시에서 확인할까요?",
+    "sourceName": "금융위원회 지정 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86489",
+    "region": "KR",
+    "businessAreas": [
+      "IB"
+    ]
+  },
+  {
+    "id": "token-working-group",
+    "date": "2026-03-04",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation"
+    ],
+    "title": "토큰증권 민·관 협의체 첫 회의",
+    "summary": "금융위원회가 기술·인프라, 발행, 유통, 결제의 네 분과를 구성했습니다.",
+    "why": "각 분과에서 정해지는 기준은 발행부터 결제까지 증권사의 시스템 설계에 영향을 줄 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국예탁결제원"
+    ],
+    "question": "발행·유통·결제 사이에서 증권사가 준비할 데이터 기준은 무엇일까요?",
+    "sourceName": "금융위원회 토큰증권 협의체 발표",
+    "sourceUrl": "https://www.fsc.go.kr/po010101/86371",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset"
+    ]
+  },
+  {
+    "id": "sec-tokenized-securities-staff",
+    "date": "2026-01-28",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation",
+      "global"
+    ],
+    "title": "미 SEC 실무진의 토큰증권 구조 설명",
+    "summary": "SEC 실무진은 발행인이 토큰화하는 구조와 제3자가 토큰화하는 구조의 차이를 설명했습니다.",
+    "why": "토큰 보유자의 법적 권리와 제3자 위험을 구조별로 비교할 수 있습니다.",
+    "companies": [
+      "SEC"
+    ],
+    "question": "제3자가 발행에 참여할 경우 고객이 가진 권리와 중개기관의 역할을 어디에 표시할까요?",
+    "sourceName": "미 SEC 실무진 성명",
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset"
+    ],
+    "stage": "실무진 성명"
+  },
+  {
+    "id": "hana-shinhan-paper",
+    "date": "2025-12-17",
+    "category": "Capital & License",
+    "areas": [
+      "capital-roadmap",
+      "competitors"
+    ],
+    "title": "하나·신한투자증권 단기금융업 인가",
+    "summary": "금융위원회가 두 회사를 자기자본 4조원 이상 종합금융투자사업자로 지정하고 단기금융업을 인가했습니다.",
+    "why": "같은 인가를 받은 회사의 조달과 상품 구성이 어떻게 다른지 비교할 수 있습니다.",
+    "companies": [
+      "하나증권",
+      "신한투자증권"
+    ],
+    "question": "발행어음으로 조달한 자금의 만기와 운용구조를 어디에서 확인할까요?",
+    "sourceName": "금융위원회 지정·인가 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876",
+    "region": "KR",
+    "businessAreas": [
+      "IB",
+      "WM"
+    ]
+  },
+  {
+    "id": "capital-licenses",
+    "date": "2025-11-19",
+    "category": "Capital & License",
+    "areas": [
+      "capital-roadmap",
+      "competitors"
+    ],
+    "title": "종합금융투자사업자 지정과 단기금융업 인가",
+    "summary": "금융위원회가 한국투자증권과 미래에셋증권을 자기자본 8조원 이상 종투사로 지정하고 키움증권에 4조원 이상 종투사 지정과 단기금융업 인가를 의결했습니다.",
+    "why": "인가와 지정이 새 사업의 실제 출시나 운용 성과로 이어지는 과정을 살펴볼 수 있습니다.",
+    "companies": [
+      "한국투자증권",
+      "미래에셋증권",
+      "키움증권"
+    ],
+    "question": "조달 구조의 변화는 공시의 어느 지표에서 확인할 수 있을까요?",
+    "sourceName": "금융위원회 정례회의 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85692",
+    "region": "KR",
+    "businessAreas": [
+      "IB",
+      "WM"
+    ]
+  },
+  {
+    "id": "ibkr-portfolio-assistant",
+    "date": "2025-10-15",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors",
+      "global"
+    ],
+    "title": "자연어 포트폴리오 분석 Ask IBKR 출시",
+    "summary": "Interactive Brokers는 보유자산, 벤치마크 대비 성과, 업종별 비중 등을 자연어로 조회하는 서비스를 시작했습니다.",
+    "why": "고객 개인의 데이터로 답하는 조회형 서비스입니다. 입력한 비교 기간과 계좌 선택을 화면에서 조정할 수 있습니다.",
+    "companies": [
+      "Interactive Brokers"
+    ],
+    "question": "벤치마크와 조회 계좌를 바꿨을 때 답변의 계산 근거도 확인할 수 있을까요?",
+    "sourceName": "Interactive Brokers 공개 자료",
+    "sourceUrl": "https://www.interactivebrokers.com/en/general/about/mediaRelations/10-15-25.php",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "WM"
+    ],
+    "stage": "서비스 출시",
+    "applications": [
+      "개인화",
+      "투자정보"
+    ]
+  },
+  {
+    "id": "jpmorgan-llm-suite",
+    "date": "2025-06-03",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors",
+      "global"
+    ],
+    "title": "사내 LLM Suite 활용 사례 공개",
+    "summary": "JPMorganChase는 제한된 사내 환경에서 임직원이 문서 초안과 아이디어 작업에 사용하는 LLM Suite의 초기 활용 현황을 공개했습니다.",
+    "why": "고객과 회사 데이터에 대한 통제 환경을 유지하며 여러 조직에 공용 도구를 제공한 사례입니다.",
+    "companies": [
+      "JPMorganChase"
+    ],
+    "question": "업무 도구 도입 효과를 직원 수와 이용 빈도 외에 어떻게 측정할까요?",
+    "sourceName": "JPMorganChase 공개 자료",
+    "sourceUrl": "https://www.jpmorganchase.com/about/technology/blog/llmsuite-ab-award",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "Operations"
+    ],
+    "stage": "활용 현황 공개",
+    "applications": [
+      "업무자동화"
+    ]
+  },
+  {
+    "id": "bnp-advisory-ai",
+    "date": "2025-05-26",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "global",
+      "competitors"
+    ],
+    "title": "BNP Paribas의 투자 상담 AI 활용",
+    "summary": "BNP Paribas는 투자상품 탐색과 상담 준비 등에 AI를 적용한 사례를 소개했습니다.",
+    "why": "상담 과정의 어느 단계에서 사람이 판단하고 기록을 남기는지 살펴볼 수 있습니다.",
+    "companies": [
+      "BNP Paribas"
+    ],
+    "question": "고객 상담에서 AI가 제시한 정보의 근거를 상담사가 다시 확인할 수 있을까요?",
+    "sourceName": "BNP Paribas 사례 소개",
+    "sourceUrl": "https://group.bnpparibas/en/news/artificial-intelligence-at-the-heart-of-investment-advisory",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "WM",
+      "AI/Data"
+    ],
+    "applications": [
+      "AI 상담",
+      "투자정보"
+    ]
+  },
+  {
+    "id": "mirae-aiops",
+    "date": "2025-04-16",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors"
+    ],
+    "title": "사내 AIOps 플랫폼 구축",
+    "summary": "미래에셋증권은 내부 데이터 분석, 모델 배포, 반복 업무 자동화에 쓰는 공용 플랫폼을 발표했습니다.",
+    "why": "같은 회사의 고객용 요약 서비스와 함께 보면 사내 모델·데이터 관리의 범위를 비교할 수 있습니다.",
+    "companies": [
+      "미래에셋증권"
+    ],
+    "question": "업무별 데이터 권한과 모델 변경 이력을 어디에 기록할까요?",
+    "sourceName": "미래에셋증권 공개 자료",
+    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=669",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Operations"
+    ],
+    "stage": "구축 발표",
+    "applications": [
+      "업무자동화",
+      "개발·코딩"
+    ]
+  },
+  {
+    "id": "short-selling-resumption",
+    "date": "2025-03-31",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "국내 주식 공매도 전면 재개",
+    "summary": "금융위원회 발표에 따라 국내 주식시장 공매도가 3월 31일부터 전면 재개됐습니다.",
+    "why": "주문 접수와 무차입 공매도 방지 절차를 실제 서비스에서 살펴볼 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "한국거래소"
+    ],
+    "question": "공매도 주문이 거절될 때 사유를 고객에게 어떤 방식으로 안내할까요?",
+    "sourceName": "금융위원회 공매도 재개 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/84216",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "Trading"
+    ]
+  },
+  {
+    "id": "robinhood-cortex-announcement",
+    "date": "2025-03-27",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors",
+      "global"
+    ],
+    "title": "Robinhood Cortex 공개",
+    "summary": "Robinhood는 Gold 회원을 대상으로 종목과 시장 동향을 설명하는 AI 기능 Cortex를 발표했습니다.",
+    "why": "유료 회원제에 시장 설명 기능을 결합한 사례입니다.",
+    "companies": [
+      "Robinhood"
+    ],
+    "question": "시장 요약 기능 이용이 회원 유지율과 어떻게 연결되는지 어떤 지표로 확인할까요?",
+    "sourceName": "Robinhood 공개 자료",
+    "sourceUrl": "https://robinhood.com/newsroom/introducing-strategies-banking-and-cortex/",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "Brokerage"
+    ],
+    "stage": "제품 발표",
+    "applications": [
+      "투자정보"
+    ]
+  },
+  {
+    "id": "treasury-clearing-extension",
+    "date": "2025-02-25",
+    "category": "Regulation",
+    "areas": [
+      "regulation",
+      "global"
+    ],
+    "title": "미국 국채 중앙청산 이행 기한 연장",
+    "summary": "SEC가 중앙청산 규정의 이행 기한을 연장한다고 발표했습니다.",
+    "why": "규칙 채택과 실제 시스템 적용 일정을 구분할 수 있는 사례입니다.",
+    "companies": [
+      "미국 SEC"
+    ],
+    "question": "해외 청산 규칙이 바뀌면 내부 대응 일정을 어떻게 관리할까요?",
+    "sourceName": "미국 SEC 보도자료",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Trading"
+    ]
+  },
+  {
+    "id": "next-trade-license",
+    "date": "2025-02-05",
+    "category": "Regulation",
+    "areas": [
+      "regulation",
+      "competitors"
+    ],
+    "title": "넥스트레이드 투자중개업 본인가",
+    "summary": "금융위원회가 넥스트레이드의 다자간매매체결회사 투자중개업을 본인가했습니다.",
+    "why": "거래시간과 주문 방식의 변화는 거래소 선택 안내와 주문 체결 정책을 살펴볼 계기입니다.",
+    "companies": [
+      "넥스트레이드",
+      "한국거래소"
+    ],
+    "question": "투자자가 시장별 거래 조건과 체결 결과를 쉽게 이해하려면 어떤 정보가 필요할까요?",
+    "sourceName": "금융위원회 넥스트레이드 인가 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/83953",
+    "region": "KR",
+    "businessAreas": [
+      "Trading",
+      "Brokerage"
+    ]
+  },
+  {
+    "id": "kb-cabby-sandbox",
+    "date": "2024-12-09",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors"
+    ],
+    "title": "대화형 금융 서비스 캐비 혁신금융서비스 지정 공개",
+    "summary": "금융위원회는 대화형 환전과 자산관리 기능을 포함하는 KB증권 캐비의 혁신금융서비스 지정을 공개했습니다.",
+    "why": "하나의 대화 화면 안에서 금융 기능을 발견하고 이용하는 사례입니다.",
+    "companies": [
+      "KB증권"
+    ],
+    "question": "대화 화면에서 정보 확인과 실제 거래 요청을 어떻게 구분할까요?",
+    "sourceName": "금융위원회 혁신금융서비스 지정 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/83554",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "WM"
+    ],
+    "stage": "지정 공개",
+    "applications": [
+      "AI 상담"
+    ]
+  },
+  {
+    "id": "nh-market-briefing-sandbox",
+    "date": "2024-12-09",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors"
+    ],
+    "title": "고객용 생성형 AI 시황 서비스 지정 공개",
+    "summary": "금융위원회는 맞춤형 시황 정보를 실시간으로 요약하는 NH투자증권 서비스의 혁신금융서비스 지정을 공개했습니다.",
+    "why": "고객별 시황을 구성하는 AI 서비스의 규제 적용 사례입니다.",
+    "companies": [
+      "NH투자증권"
+    ],
+    "question": "시황 요약의 데이터 기준 시각을 고객 화면 어디에 표시할까요?",
+    "sourceName": "금융위원회 혁신금융서비스 지정 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/83554",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Brokerage"
+    ],
+    "stage": "지정 공개",
+    "applications": [
+      "투자정보",
+      "개인화"
+    ]
+  },
+  {
+    "id": "kinexys",
+    "date": "2024-11-06",
+    "category": "Digital Asset",
+    "areas": [
+      "global",
+      "digital-assets",
+      "competitors"
+    ],
+    "title": "J.P. Morgan의 Kinexys 발표",
+    "summary": "J.P. Morgan이 블록체인 관련 사업 브랜드를 Kinexys로 바꾸고 결제 사업의 확장 방향을 공개했습니다.",
+    "why": "기관 간 결제에서 처리 가능 시간과 정산 시점이 서비스 설계에 영향을 줍니다.",
+    "companies": [
+      "J.P. Morgan"
+    ],
+    "question": "24시간 결제와 기존 영업일 기준 회계처리를 어떻게 연결할 수 있을까요?",
+    "sourceName": "J.P. Morgan 공식 발표",
+    "sourceUrl": "https://www.jpmorgan.com/insights/payments/blockchain-digital-assets/introducing-kinexys",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset",
+      "Trading"
+    ]
+  },
+  {
+    "id": "guardian-scale",
+    "date": "2024-11-04",
+    "category": "Digital Asset",
+    "areas": [
+      "global",
+      "digital-assets"
+    ],
+    "title": "싱가포르 MAS의 토큰화 확장 구상",
+    "summary": "MAS가 기관 대상 토큰화 사례와 네트워크 간 연결을 확대하기 위한 접근을 공개했습니다.",
+    "why": "개별 실증의 산출물을 시장 단위로 연결하려면 공통 규격과 운영 절차가 필요합니다.",
+    "companies": [
+      "싱가포르 통화청"
+    ],
+    "question": "시장 간 상호운용성을 검증하려면 어떤 거래를 먼저 시험해 볼 수 있을까요?",
+    "sourceName": "BIS 게재 MAS 연설",
+    "sourceUrl": "https://www.bis.org/speeches/20241104-tokenisation-financial-services-pathways-scale",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset",
+      "IB"
+    ]
+  },
+  {
+    "id": "uk-dss",
+    "date": "2024-09-30",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation",
+      "global"
+    ],
+    "title": "영국 디지털 증권 샌드박스 운영안",
+    "summary": "영란은행과 금융행위감독청은 영국 디지털 증권 샌드박스의 공동 운영안을 공개했습니다.",
+    "why": "발행·거래·결제 인프라를 실제로 시험할 때 적용하는 단계별 조건을 비교할 수 있습니다.",
+    "companies": [
+      "Bank of England",
+      "FCA"
+    ],
+    "question": "시험 단계에서 참여 기관의 장애 대응과 거래 기록 보존 기준을 어디까지 요구할까요?",
+    "sourceName": "영란은행·FCA 공동 운영안",
+    "sourceUrl": "https://www.bankofengland.co.uk/Paper/2024/policy-statement/boe-fca-joint-approach-to-the-digital-securities-sandbox",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Trading",
+      "Digital Asset"
+    ]
+  },
+  {
+    "id": "mirae-overseas-disclosure-ai",
+    "date": "2024-08-26",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors"
+    ],
+    "title": "해외 공시 번역·요약 제공",
+    "summary": "미래에셋증권은 미국·일본·중국·홍콩 공시를 번역하고 요약해 M-STOCK과 카이로스에서 제공하기 시작했습니다.",
+    "why": "뉴스 기사 외에 각 시장의 공식 공시를 모아 번역 서비스의 입력으로 사용한 사례입니다.",
+    "companies": [
+      "미래에셋증권"
+    ],
+    "question": "번역·요약 결과에서 원문과 정정 공시로 바로 이동할 수 있어야 할까요?",
+    "sourceName": "미래에셋증권 공개 자료",
+    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=596",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data",
+      "Brokerage"
+    ],
+    "stage": "서비스 공개",
+    "applications": [
+      "투자정보",
+      "리서치"
+    ]
+  },
+  {
+    "id": "network-separation",
+    "date": "2024-08-13",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "regulation"
+    ],
+    "title": "금융분야 망분리 개선 로드맵",
+    "summary": "금융위원회가 금융권의 생성형 AI 활용과 보안체계 개선을 포함한 로드맵을 발표했습니다.",
+    "why": "서비스 개발과 정보보호 관리 범위를 어떻게 설계하는지 비교할 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "금융감독원",
+      "금융보안원"
+    ],
+    "question": "외부 AI 서비스를 검토할 때 입력 데이터와 결과 검증의 책임을 어떻게 나눌 수 있을까요?",
+    "sourceName": "금융위원회 망분리 개선 로드맵",
+    "sourceUrl": "https://www.fsc.go.kr/po010106/82885",
+    "region": "KR",
+    "businessAreas": [
+      "AI/Data"
+    ],
+    "applications": [
+      "리스크·준법"
+    ]
+  },
+  {
+    "id": "virtual-asset-protection",
+    "date": "2024-07-19",
+    "category": "Regulation",
+    "areas": [
+      "regulation",
+      "digital-assets"
+    ],
+    "title": "가상자산 이용자 보호법 시행",
+    "summary": "이용자 예치금과 가상자산 보호, 불공정거래 조사, 사업자 감독에 관한 제도가 시행됐습니다.",
+    "why": "자산 보관과 감시 책임을 서비스 유형에 따라 검토할 수 있습니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "이용자 자산의 분리 보관 상태를 서비스에서 어떻게 확인할 수 있을까요?",
+    "sourceName": "금융위원회 시행 안내",
+    "sourceUrl": "https://www.fsc.go.kr/po010106/82682",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset",
+      "Consumer Protection"
+    ]
+  },
+  {
+    "id": "finra-generative-ai",
+    "date": "2024-06-27",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "regulation",
+      "global"
+    ],
+    "title": "FINRA의 증권사 생성형 AI 안내",
+    "summary": "FINRA는 생성형 AI 이용에도 기존 감독·고객 커뮤니케이션 관련 규정이 적용될 수 있다고 회원사에 안내했습니다.",
+    "why": "사용하는 기술이 바뀌어도 어떤 감독 기록을 남겨야 하는지 검토할 수 있습니다.",
+    "companies": [
+      "FINRA"
+    ],
+    "question": "상담 직원이 생성형 AI를 사용할 때 어떤 입력과 결과를 검토 기록에 남길까요?",
+    "sourceName": "FINRA Regulatory Notice 24-09",
+    "sourceUrl": "https://www.finra.org/sites/default/files/2024-06/regulatory-notice-24-09.pdf",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "Consumer Protection"
+    ],
+    "applications": [
+      "리스크·준법"
+    ]
+  },
+  {
+    "id": "morgan-debrief",
+    "date": "2024-06-26",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors",
+      "global"
+    ],
+    "title": "Morgan Stanley의 상담 업무 보조 도구",
+    "summary": "Morgan Stanley가 금융자문 상담 내용을 정리하고 후속 이메일 초안 작성을 지원하는 Debrief를 공개했습니다.",
+    "why": "기록 정리와 고객에게 보내는 산출물의 검토 절차를 구체적으로 살펴볼 수 있습니다.",
+    "companies": [
+      "Morgan Stanley"
+    ],
+    "question": "AI가 만든 회의 요약에서 금융자문사가 직접 확인할 사항은 무엇일까요?",
+    "sourceName": "Morgan Stanley 공식 출시 발표",
+    "sourceUrl": "https://www.morganstanley.com/press-releases/ai-at-morgan-stanley-debrief-launch",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "WM"
+    ],
+    "applications": [
+      "AI 상담",
+      "업무자동화"
+    ]
+  },
+  {
+    "id": "settlement-t1",
+    "date": "2024-05-28",
+    "category": "Regulation",
+    "areas": [
+      "global",
+      "regulation"
+    ],
+    "title": "미국 증권 결제주기 T+1 전환",
+    "summary": "미국에서 대부분의 대상 증권 거래의 표준 결제주기가 2영업일에서 1영업일로 줄었습니다.",
+    "why": "해외 종목을 중개하는 증권사는 거래 확인과 결제 준비에 쓸 수 있는 시간이 줄어듭니다.",
+    "companies": [
+      "미국 SEC"
+    ],
+    "question": "외화 조달과 거래 확인의 마감 시간을 어떻게 맞출 수 있을까요?",
+    "sourceName": "미국 SEC 결제주기 안내",
+    "sourceUrl": "https://www.sec.gov/compliance/risk-alerts/shortening-securities-transaction-settlement-cycle",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Brokerage",
+      "Trading"
+    ]
+  },
+  {
+    "id": "dtcc-smart-nav",
+    "date": "2024-05-16",
+    "category": "Digital Asset",
+    "areas": [
+      "global",
+      "digital-assets"
+    ],
+    "title": "DTCC의 Smart NAV 시범사업 공개",
+    "summary": "DTCC가 펀드 순자산가치 데이터를 블록체인에서 전달하는 시범사업 결과를 공개했습니다.",
+    "why": "토큰화 상품을 운영할 때 기준가격 데이터의 출처와 배포 경로를 검증할 수 있습니다.",
+    "companies": [
+      "DTCC"
+    ],
+    "question": "기준가격 정정이 발생하면 연결된 여러 시스템에 어떻게 전파할까요?",
+    "sourceName": "DTCC 공개 보고",
+    "sourceUrl": "https://www.dtcc.com/insights/2024/smart-nav-pilot-report-bringing-trusted-data-to-the-blockchain-ecosystem",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset",
+      "WM"
+    ]
+  },
+  {
+    "id": "spot-bitcoin-etp",
+    "date": "2024-01-10",
+    "category": "Global",
+    "areas": [
+      "global",
+      "digital-assets"
+    ],
+    "title": "미국 현물 비트코인 ETP 상장·거래 승인 사례",
+    "summary": "미국 SEC가 일부 현물 비트코인 ETP의 상장과 거래를 승인했습니다.",
+    "why": "새로운 기초자산을 상장상품으로 제공할 때 공시와 거래 인프라가 어떻게 마련되는지 보여줍니다.",
+    "companies": [
+      "미국 증권거래위원회"
+    ],
+    "question": "국내 금융투자상품 검토에서는 상품 구조와 기초자산 위험을 어떻게 안내할 수 있을까요?",
+    "sourceName": "미국 SEC 승인 관련 성명",
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset"
+    ]
+  },
+  {
+    "id": "foreign-investor-registration",
+    "date": "2023-12-14",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "외국인 투자자 사전등록제 폐지 시행",
+    "summary": "외국인 투자자가 금융당국 사전등록 없이 금융회사를 통해 국내 투자계좌를 개설할 수 있게 됐습니다.",
+    "why": "계좌 진입 절차가 달라지는 만큼 투자자 식별과 고객 안내를 함께 살펴볼 수 있습니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "기존 투자자번호와 새로운 식별 수단을 어떻게 연결할까요?",
+    "sourceName": "금융위원회 자본시장 접근성 안내",
+    "sourceUrl": "https://www.fsc.go.kr/po010106/80128",
+    "region": "KR",
+    "businessAreas": [
+      "Brokerage",
+      "Consumer Protection"
+    ]
+  },
+  {
+    "id": "treasury-clearing",
+    "date": "2023-12-13",
+    "category": "Regulation",
+    "areas": [
+      "regulation",
+      "global"
+    ],
+    "title": "미국 국채 중앙청산 규정 채택",
+    "summary": "미국 SEC가 대상 국채 거래의 중앙청산을 확대하기 위한 규칙을 채택했습니다.",
+    "why": "청산 대상 거래와 담보 운영 범위가 바뀌면 중개사의 운영도 영향을 받을 수 있습니다.",
+    "companies": [
+      "미국 SEC"
+    ],
+    "question": "청산 대상 변경에 따른 담보 소요와 고객 안내를 어떻게 점검할까요?",
+    "sourceName": "미국 SEC 채택 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-247",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Trading"
+    ]
+  },
+  {
+    "id": "nasdaq-dynamic-melo",
+    "date": "2023-09-08",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "regulation",
+      "global"
+    ],
+    "title": "AI 기반 주문 유형 Dynamic M-ELO 승인 공개",
+    "summary": "Nasdaq은 시장 상황에 따라 주문 체결 전 최소 대기 시간을 조정하는 주문 유형에 대해 SEC 승인을 받았다고 발표했습니다.",
+    "why": "시장 인프라의 체결 규칙에 모델을 적용하고 시험 결과를 공개한 사례입니다.",
+    "companies": [
+      "Nasdaq"
+    ],
+    "question": "실제 운영에서는 체결률과 체결 후 가격 움직임을 어떻게 비교할까요?",
+    "sourceName": "Nasdaq 공개 자료",
+    "sourceUrl": "https://www.nasdaq.com/press-release/nasdaq-announces-first-exchange-ai-powered-order-type-approved-by-the-sec-2023-09-08",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "Trading"
+    ],
+    "stage": "승인 발표",
+    "applications": [
+      "거래 인프라"
+    ]
+  },
+  {
+    "id": "mas-stablecoin-framework",
+    "date": "2023-08-15",
+    "category": "Digital Asset",
+    "areas": [
+      "regulation",
+      "digital-assets",
+      "global"
+    ],
+    "title": "싱가포르 MAS의 스테이블코인 규율 발표",
+    "summary": "MAS가 싱가포르에서 발행하는 지정 통화 연동 단일통화 스테이블코인에 대한 규율을 발표했습니다.",
+    "why": "결제에 쓰는 토큰의 준비자산과 상환 조건을 상품 설계 단계에서 살펴볼 수 있습니다.",
+    "companies": [
+      "싱가포르 통화청"
+    ],
+    "question": "결제에 사용하는 토큰의 발행 및 상환 조건을 고객에게 어떻게 설명할까요?",
+    "sourceName": "MAS 공식 발표",
+    "sourceUrl": "https://www.mas.gov.sg/news/media-releases/2023/mas-finalises-stablecoin-regulatory-framework",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Digital Asset",
+      "Consumer Protection"
+    ]
+  },
+  {
+    "id": "esma-dlt-pilot",
+    "date": "2023-03-23",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation",
+      "global"
+    ],
+    "title": "EU 분산원장 기반 시장 인프라 실증제도",
+    "summary": "EU는 금융상품에 해당하는 디지털 자산의 거래·결제를 위한 분산원장 실증 제도를 적용하기 시작했습니다.",
+    "why": "거래와 결제 인프라를 운영하는 기관의 역할과 허가 범위를 비교할 수 있습니다.",
+    "companies": [
+      "ESMA",
+      "European Union"
+    ],
+    "question": "거래와 결제를 같은 인프라에서 처리할 때 업무 책임을 어떻게 구분할까요?",
+    "sourceName": "ESMA DLT Pilot Regime",
+    "sourceUrl": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/dlt-pilot-regime",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Trading",
+      "Digital Asset"
+    ]
+  },
+  {
+    "id": "morgan-research-assistant",
+    "date": "2023-03-14",
+    "category": "AI & Digital",
+    "areas": [
+      "ai-digital",
+      "competitors",
+      "global"
+    ],
+    "title": "Morgan Stanley의 사내 지식 검색 실험",
+    "summary": "Morgan Stanley가 자산관리 담당자가 사내 자료를 검색하도록 돕는 GPT-4 기반 도구를 공개했습니다.",
+    "why": "검색 결과의 원문 추적과 금융 콘텐츠 갱신 방법을 살펴볼 수 있습니다.",
+    "companies": [
+      "Morgan Stanley"
+    ],
+    "question": "답변이 참고한 내부 문서의 버전과 검토 상태를 어떻게 보여줄까요?",
+    "sourceName": "Morgan Stanley 공식 발표",
+    "sourceUrl": "https://www.morganstanley.com/press-releases/key-milestone-in-innovation-journey-with-openai",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "AI/Data",
+      "WM"
+    ],
+    "applications": [
+      "리서치"
+    ]
+  },
+  {
+    "id": "token-framework",
+    "date": "2023-02-06",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "regulation"
+    ],
+    "title": "토큰증권 발행·유통 규율체계 정비방안",
+    "summary": "금융위원회가 토큰증권의 발행과 유통을 자본시장 규율 내에 수용하기 위한 정책 방향을 발표했습니다.",
+    "why": "계좌 관리, 발행, 유통의 역할을 어떤 기관이 맡는지 추적할 출발점입니다.",
+    "companies": [
+      "금융위원회"
+    ],
+    "question": "발행인과 계좌관리기관 사이의 역할 분담이 시스템 설계에 어떤 영향을 줄까요?",
+    "sourceName": "금융위원회 토큰증권 정책 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/79386",
+    "region": "KR",
+    "businessAreas": [
+      "Digital Asset"
+    ]
+  },
+  {
+    "id": "dtcc-project-ion",
+    "date": "2022-08-22",
+    "category": "Digital Asset",
+    "areas": [
+      "digital-assets",
+      "global"
+    ],
+    "title": "DTCC Project Ion의 분산원장 병행 처리",
+    "summary": "DTCC는 Project Ion이 주식 거래를 병행 처리하기 시작했다고 발표했습니다. 당시 공식 거래 기록은 기존 DTC 시스템에서 유지됐습니다.",
+    "why": "새 결제 인프라를 도입할 때 기존 장부와 신규 장부를 대조하는 방법을 살펴볼 수 있습니다.",
+    "companies": [
+      "DTCC",
+      "DTC"
+    ],
+    "question": "기존 장부와 실증 장부의 수량이나 결제 상태가 불일치하면 어느 시점에 어떻게 확인할까요?",
+    "sourceName": "DTCC Project Ion 발표",
+    "sourceUrl": "https://www.dtcc.com/press-releases/2022/project-ion",
+    "region": "GLOBAL",
+    "businessAreas": [
+      "Trading",
+      "Digital Asset"
+    ]
+  }
 ]

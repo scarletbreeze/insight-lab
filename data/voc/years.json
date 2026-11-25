@@ -1,7 +1,7 @@
 [
   {"year":2026,"questionCoverage":"sample","noticeCoverage":"sample","period":"2026년 수록 표본"},
-  {"year":2025,"questionCoverage":"unverified","noticeCoverage":"sample","period":"2025년 수록 표본"},
-  {"year":2024,"questionCoverage":"unverified","noticeCoverage":"sample","period":"공지 표본 수록 · 문의 자료 확인 중"},
-  {"year":2023,"questionCoverage":"unverified","noticeCoverage":"sample","period":"공지 표본 수록 · 문의 자료 확인 중"},
-  {"year":2022,"questionCoverage":"unverified","noticeCoverage":"sample","period":"공지 표본 수록 · 문의 자료 확인 중"}
+  {"year":2025,"questionCoverage":"sample","noticeCoverage":"sample","period":"2025년 수록 표본"},
+  {"year":2024,"questionCoverage":"sample","noticeCoverage":"sample","period":"2024년 수록 표본"},
+  {"year":2023,"questionCoverage":"sample","noticeCoverage":"sample","period":"2023년 수록 표본"},
+  {"year":2022,"questionCoverage":"sample","noticeCoverage":"sample","period":"2022년 수록 표본"}
 ]

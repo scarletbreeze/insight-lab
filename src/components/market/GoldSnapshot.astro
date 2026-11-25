@@ -1,0 +1,30 @@
+---
+import { gold } from '../../utils/market';
+
+interface Props { period: string; }
+const { period } = Astro.props;
+const annual = period.length === 4;
+const month = period.slice(5);
+const year = Number(period.slice(0, 4));
+const preceding = month === '01' ? (year - 1) + '-12' : year + '-' + String(Number(month) - 1).padStart(2, '0');
+const months = annual ? Object.keys(gold.months).filter((key) => key.startsWith(period + '-')).sort() : [];
+const from = annual ? months[0] : preceding;
+const to = annual ? months.at(-1) : period;
+const first = from ? gold.months[from] : undefined;
+const last = to ? gold.months[to] : undefined;
+const change = first !== undefined && last !== undefined && from !== to ? last - first : undefined;
+const amount = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2 });
+const difference = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+---
+{last !== undefined && <article class="lab-card">
+  <h3>금 가격 · 월평균</h3>
+  {annual && first !== undefined && from !== to ? <p>
+    {from} {amount.format(first)} → {to} {amount.format(last)} USD/트로이온스
+    {change !== undefined && <> · {difference.format(change)} USD/트로이온스</>}
+  </p> : <p>
+    {amount.format(last)} USD/트로이온스
+    {change !== undefined && <> · 전월 대비 {difference.format(change)} USD/트로이온스</>}
+  </p>}
+  {annual && to !== period + '-12' && <p>{to}까지 수록</p>}
+  <p><a href={gold.sourceUrl}>{gold.sourceName}</a></p>
+</article>}

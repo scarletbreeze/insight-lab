@@ -1,7 +1,462 @@
 [
-  {"id":"kiwoom","year":2023,"assets":52046420,"equity":4904099,"netIncome":440737,"sourceUrl":"https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm"},
-  {"id":"kiwoom","year":2024,"assets":55688424,"equity":5631875,"netIncome":834883,"sourceUrl":"https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm"},
-  {"id":"kiwoom","year":2025,"assets":81173768,"equity":6722405,"netIncome":1114974,"sourceUrl":"https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm"},
-  {"id":"mirae-asset","year":2024,"assets":137176998,"equity":12263708,"netIncome":925470,"sourceUrl":"https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm"},
-  {"id":"mirae-asset","year":2025,"assets":150283930,"equity":13478203,"netIncome":1582916,"sourceUrl":"https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm"}
+  {
+    "id": "daishin",
+    "year": 2021,
+    "assets": 22763242,
+    "equity": 2653207,
+    "netIncome": 615823,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/13/001794/20240313004379/11011.htm",
+    "operatingIncome": 885549
+  },
+  {
+    "id": "daishin",
+    "year": 2022,
+    "assets": 21210735,
+    "equity": 2722959,
+    "netIncome": 131744,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm",
+    "operatingIncome": 253462
+  },
+  {
+    "id": "daishin",
+    "year": 2023,
+    "assets": 22643489,
+    "equity": 3021429,
+    "netIncome": 135832,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm",
+    "operatingIncome": 161317
+  },
+  {
+    "id": "daishin",
+    "year": 2024,
+    "assets": 26396109,
+    "equity": 3315389,
+    "netIncome": 144182,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm",
+    "operatingIncome": 83593,
+    "operatingIncomeSourceUrl": "https://kind.krx.co.kr/external/2026/03/16/001489/20260316004531/00660.htm"
+  },
+  {
+    "id": "daishin",
+    "year": 2025,
+    "assets": 39128864,
+    "equity": 4057223,
+    "netIncome": 186727,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/16/001489/20260316004531/00660.htm",
+    "operatingIncome": 301402
+  },
+  {
+    "id": "hana",
+    "year": 2021,
+    "assets": 37614683,
+    "equity": 5291032,
+    "netIncome": 505993,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm",
+    "operatingIncome": 491510
+  },
+  {
+    "id": "hana",
+    "year": 2022,
+    "assets": 43345325,
+    "equity": 5806061,
+    "netIncome": 130645,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm",
+    "operatingIncome": 96632
+  },
+  {
+    "id": "hana",
+    "year": 2023,
+    "assets": 48259436,
+    "equity": 5741112,
+    "netIncome": -288944,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm",
+    "operatingIncome": -366754
+  },
+  {
+    "id": "hana",
+    "year": 2024,
+    "assets": 57841878,
+    "equity": 5990403,
+    "netIncome": 223972,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm",
+    "operatingIncome": 141958,
+    "operatingIncomeSourceUrl": "https://cdn.financialreports.eu/financialreports/media/filings/15959/2026/RNS/15959_rns_2026-02-27_3324e470-f41f-4160-bfae-60ad92276480.html"
+  },
+  {
+    "id": "hana",
+    "year": 2025,
+    "assets": 67498670,
+    "equity": 6112122,
+    "netIncome": 205956,
+    "sourceUrl": "https://cdn.financialreports.eu/financialreports/media/filings/15959/2026/RNS/15959_rns_2026-02-27_3324e470-f41f-4160-bfae-60ad92276480.html",
+    "operatingIncome": 166480
+  },
+  {
+    "id": "kb",
+    "year": 2021,
+    "assets": 55430795,
+    "equity": 5435556,
+    "netIncome": 600291,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312523062015/d477895d6k.htm",
+    "operatingIncome": 821274
+  },
+  {
+    "id": "kb",
+    "year": 2022,
+    "assets": 53817409,
+    "equity": 5868791,
+    "netIncome": 194828,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312523062015/d477895d6k.htm",
+    "operatingIncome": 244995
+  },
+  {
+    "id": "kb",
+    "year": 2023,
+    "assets": 61266920,
+    "equity": 6296032,
+    "netIncome": 388028,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312525047001/d897832d6k.htm",
+    "operatingIncome": 680154
+  },
+  {
+    "id": "kb",
+    "year": 2024,
+    "assets": 63390535,
+    "equity": 6888330,
+    "netIncome": 590361,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312526094923/d265234dex991.htm",
+    "operatingIncome": 780786
+  },
+  {
+    "id": "kb",
+    "year": 2025,
+    "assets": 76474890,
+    "equity": 6896735,
+    "netIncome": 682385,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312526094923/d265234dex991.htm",
+    "operatingIncome": 911571
+  },
+  {
+    "id": "kiwoom",
+    "year": 2021,
+    "assets": 45301101,
+    "equity": 4301863,
+    "netIncome": 910173,
+    "sourceUrl": "https://kind.krx.co.kr/external/2023/03/13/001317/20230313003075/00660.htm",
+    "operatingIncome": 1208886
+  },
+  {
+    "id": "kiwoom",
+    "year": 2022,
+    "assets": 48037301,
+    "equity": 4593094,
+    "netIncome": 508170,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm",
+    "operatingIncome": 656425
+  },
+  {
+    "id": "kiwoom",
+    "year": 2023,
+    "assets": 52046420,
+    "equity": 4904099,
+    "netIncome": 440737,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm",
+    "operatingIncome": 564659,
+    "operatingIncomeSourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
+  },
+  {
+    "id": "kiwoom",
+    "year": 2024,
+    "assets": 55688424,
+    "equity": 5631875,
+    "netIncome": 834883,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm",
+    "operatingIncome": 1098240
+  },
+  {
+    "id": "kiwoom",
+    "year": 2025,
+    "assets": 81173768,
+    "equity": 6722405,
+    "netIncome": 1114974,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/17/001191/20260317004371/11011.htm",
+    "operatingIncome": 1488240
+  },
+  {
+    "id": "korea-investment",
+    "year": 2021,
+    "assets": 68401828,
+    "equity": 7147813,
+    "netIncome": 1450234,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/11/29/000231/20221129000624/11306.htm",
+    "operatingIncome": 1293966,
+    "operatingIncomeSourceUrl": "https://file.truefriend.com/Storage/company/investment/financial/FY2022report_8135.pdf"
+  },
+  {
+    "id": "korea-investment",
+    "year": 2022,
+    "assets": 69752460,
+    "equity": 7548760,
+    "netIncome": 535691,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/14/001908/20240313002677/91567.htm",
+    "operatingIncome": 400078
+  },
+  {
+    "id": "korea-investment",
+    "year": 2023,
+    "assets": 79906602,
+    "equity": 7867324,
+    "netIncome": 596566,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/14/001908/20240313002677/91567.htm",
+    "operatingIncome": 663971
+  },
+  {
+    "id": "korea-investment",
+    "year": 2024,
+    "assets": 90721389,
+    "equity": 9266055,
+    "netIncome": 1118919,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/12/002179/20260312004946/91567.htm",
+    "operatingIncome": 1283664
+  },
+  {
+    "id": "korea-investment",
+    "year": 2025,
+    "assets": 116564181,
+    "equity": 11200626,
+    "netIncome": 2013488,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/12/002179/20260312004946/91567.htm",
+    "operatingIncome": 2342692
+  },
+  {
+    "id": "meritz",
+    "year": 2021,
+    "assets": 54108239,
+    "equity": 5334414,
+    "netIncome": 782924,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/03/18/000706/20220318002612/11011.htm",
+    "operatingIncome": 948939
+  },
+  {
+    "id": "meritz",
+    "year": 2022,
+    "assets": 56452695,
+    "equity": 5691935,
+    "netIncome": 828095,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/11/001194/20240309000043/91567.htm",
+    "operatingIncome": 1092532
+  },
+  {
+    "id": "meritz",
+    "year": 2023,
+    "assets": 63629088,
+    "equity": 6098393,
+    "netIncome": 589966,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/11/001194/20240309000043/91567.htm",
+    "operatingIncome": 881302
+  },
+  {
+    "id": "meritz",
+    "year": 2024,
+    "assets": 73255880,
+    "equity": 6904176,
+    "netIncome": 695985,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002380/20260310003985/91567.htm",
+    "operatingIncome": 1054860
+  },
+  {
+    "id": "meritz",
+    "year": 2025,
+    "assets": 93707652,
+    "equity": 8165362,
+    "netIncome": 766287,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002380/20260310003985/91567.htm",
+    "operatingIncome": 788277
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2021,
+    "assets": 108641793,
+    "equity": 10609959,
+    "netIncome": 1183438,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/000781/20240318003508/11011.htm",
+    "operatingIncome": 1485476
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2022,
+    "assets": 106952190,
+    "equity": 11099315,
+    "netIncome": 706131,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/000781/20240318003508/11011.htm",
+    "operatingIncome": 835560
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2023,
+    "assets": 128177313,
+    "equity": 11238866,
+    "netIncome": 337858,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/000781/20240318003508/11011.htm",
+    "operatingIncome": 521037
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2024,
+    "assets": 137176998,
+    "equity": 12263708,
+    "netIncome": 925470,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm",
+    "operatingIncome": 1188076
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2025,
+    "assets": 150283930,
+    "equity": 13478203,
+    "netIncome": 1582916,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/04/001366/20260304003134/00591.htm",
+    "operatingIncome": 1915104
+  },
+  {
+    "id": "nh-investment",
+    "year": 2021,
+    "assets": 58541999,
+    "equity": 6823305,
+    "netIncome": 931464,
+    "sourceUrl": "https://kind.krx.co.kr/external/2023/03/07/000808/20230307001837/00591.htm",
+    "operatingIncome": 1293945
+  },
+  {
+    "id": "nh-investment",
+    "year": 2022,
+    "assets": 53428267,
+    "equity": 7228056,
+    "netIncome": 302928,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/001252/20240318005529/00660.htm",
+    "operatingIncome": 521357
+  },
+  {
+    "id": "nh-investment",
+    "year": 2023,
+    "assets": 56697893,
+    "equity": 7613428,
+    "netIncome": 553048,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/001252/20240318005529/00660.htm",
+    "operatingIncome": 725757
+  },
+  {
+    "id": "nh-investment",
+    "year": 2024,
+    "assets": 62427065,
+    "equity": 8119369,
+    "netIncome": 686638,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002545/20260311005617/00591.htm",
+    "operatingIncome": 901069
+  },
+  {
+    "id": "nh-investment",
+    "year": 2025,
+    "assets": 83385398,
+    "equity": 9438104,
+    "netIncome": 1031501,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/11/002545/20260311005617/00591.htm",
+    "operatingIncome": 1420580
+  },
+  {
+    "id": "samsung",
+    "year": 2021,
+    "assets": 65707487,
+    "equity": 6080929,
+    "netIncome": 965338,
+    "sourceUrl": "https://kind.krx.co.kr/external/2023/02/20/000807/20230220001883/00591.htm",
+    "operatingIncome": 1308683
+  },
+  {
+    "id": "samsung",
+    "year": 2022,
+    "assets": 53848261,
+    "equity": 6195908,
+    "netIncome": 422405,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/02/16/000767/20240216002133/00660.htm",
+    "operatingIncome": 578094
+  },
+  {
+    "id": "samsung",
+    "year": 2023,
+    "assets": 56507910,
+    "equity": 6622709,
+    "netIncome": 547406,
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/02/16/000767/20240216002133/00660.htm",
+    "operatingIncome": 741118
+  },
+  {
+    "id": "samsung",
+    "year": 2024,
+    "assets": 62273916,
+    "equity": 7324213,
+    "netIncome": 899038,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/02/23/001222/20260223002971/00591.htm",
+    "operatingIncome": 1205750
+  },
+  {
+    "id": "samsung",
+    "year": 2025,
+    "assets": 79683213,
+    "equity": 8068056,
+    "netIncome": 1007227,
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/02/23/001222/20260223002971/00591.htm",
+    "operatingIncome": 1375673
+  },
+  {
+    "id": "shinhan",
+    "year": 2021,
+    "assets": 44446803,
+    "equity": 5025489,
+    "netIncome": 320662,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1263043/000119312523107490/R11.htm",
+    "operatingIncome": 585634,
+    "operatingIncomeSourceUrl": "https://file.shinhansec.com/filedoc/mtscon/fy2023esg.pdf"
+  },
+  {
+    "id": "shinhan",
+    "year": 2022,
+    "assets": 43821578,
+    "equity": 5342551,
+    "netIncome": 412339,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1263043/000119312524100756/R66.htm",
+    "operatingIncome": 120975,
+    "operatingIncomeSourceUrl": "https://file.shinhansec.com/filedoc/mtscon/fy2023esg.pdf"
+  },
+  {
+    "id": "shinhan",
+    "year": 2023,
+    "assets": 52497500,
+    "equity": 5366289,
+    "netIncome": 100840,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1263043/000119312524100756/R66.htm",
+    "operatingIncome": 253063,
+    "operatingIncomeSourceUrl": "https://file.shinhansec.com/filedoc/mtscon/fy2023esg.pdf"
+  },
+  {
+    "id": "shinhan",
+    "year": 2024,
+    "assets": 49026790,
+    "equity": 5494464,
+    "netIncome": 179160,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1263043/000119312526168235/R69.htm",
+    "operatingIncome": 281905,
+    "operatingIncomeSourceUrl": "https://file.shinhansec.com/filedoc/mtscon/fy2024esg.pdf"
+  },
+  {
+    "id": "shinhan",
+    "year": 2025,
+    "assets": 54077820,
+    "equity": 5797405,
+    "netIncome": 381605,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1263043/000119312526168235/R69.htm",
+    "operatingIncome": 488500,
+    "operatingIncomeSourceUrl": "https://www.shinhangroup.com/kr/ir/finance/investorPresentations/detail/32335",
+    "operatingIncomeRounded": true
+  }
 ]

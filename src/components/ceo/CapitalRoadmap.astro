@@ -1,0 +1,39 @@
+---
+import roadmap from '../../../data/ceo/capital-roadmap.json';
+import { formatBrokerMetric, industryPeriods } from '../../utils/brokers';
+import { sitePath } from '../../utils/paths';
+
+const stages = [8, 4, 3];
+const capital = industryPeriods.find(({ date }) => date === '2026-09-30')!;
+const companies = new Map(capital.companies.map((company) => [company.id, company]));
+const imaCount = roadmap.filter(({ stage }) => stage === 8).length;
+const paperCount = roadmap.filter(({ paperLicense }) => paperLicense).length;
+---
+<section class="lab-block">
+  <h2>주요 증권사의 확인된 지정 단계</h2>
+  <p>금융위원회 2026년 9월 23일 의결 기준입니다. 자본총계는 {capital.date} 별도 재무제표 기준이며, 지정 요건에는 의결 당시 심사 기준이 적용됩니다.</p>
+  <dl class="lab-facts" aria-label="종투사 지정 및 업무 현황">
+    <div><dt>종투사 지정</dt><dd>{roadmap.length}개사</dd></div>
+    <div><dt>단기금융업 인가</dt><dd>{paperCount}개사</dd></div>
+    <div><dt>종합투자계좌(IMA) 업무 가능</dt><dd>{imaCount}개사</dd></div>
+  </dl>
+  <div class="lab-grid">
+    {stages.map((stage) => <section>
+      <h3>{stage}조원 이상 종투사</h3>
+      <ul class="lab-list">
+        {roadmap.filter((entry) => entry.stage === stage).map((entry) => {
+          const company = companies.get(entry.broker);
+          return <li class="lab-card">
+            <strong><a href={sitePath('broker-atlas/brokers/' + entry.broker)}>{company?.name}</a></strong>
+            <span>별도 자본총계 {formatBrokerMetric(company?.equity, false)}</span>
+            <span>{stage === 8 ? '종합투자계좌(IMA) 업무 가능 · 8조원 지정 ' : '지정 '}{entry.designation}</span>
+            <span>{entry.paperLicense ? '단기금융업 인가 ' + entry.paperLicense : '기준 발표에서 단기금융업 인가 미확인'}</span>
+            <a href={entry.sourceUrl}>금융위원회 지정·인가 자료</a>
+            {company?.sourceUrl && <a href={company.sourceUrl}>별도 자본총계 공시</a>}
+          </li>;
+        })}
+      </ul>
+    </section>)}
+  </div>
+  <a href="https://www.fsc.go.kr/no010101/87782">2026년 9월 단기금융업 인가 현황</a>
+</section>

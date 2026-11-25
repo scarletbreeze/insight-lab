@@ -4,10 +4,10 @@ interface Props { items: typeof vocNotices; }
 const { items } = Astro.props;
 ---
 {items.length ? <ul class="lab-list">
-  {items.map(({ id, date, dateType, title, category, summary, sourceUrl }) => (
-    <li class="lab-card" id={id}>
-      <div><time datetime={date}>{date}</time><span>{dateType === "effective" ? "적용·안내 대상일" : "게시일"} · {category}</span></div>
-      <strong>{title}</strong>{summary && <p>{summary}</p>}<a href={sourceUrl}>키움증권 공지 원문</a>
+  {items.map(({ id, date, dateType, title, category, summary, sourceUrl, topic, channel }) => (
+    <li class="lab-card" id={id} data-notice-year={date.slice(0, 4)} data-notice-category={category} data-notice-topic={topic} data-notice-channel={channel}>
+      <div><time datetime={date}>{date}</time><span>{dateType === "effective" ? "적용·안내 대상일" : "게시일"} · {category} · {channel}</span></div>
+      <strong>{title}</strong>{summary && <p>{summary}</p>}<a href={sourceUrl}>키움증권 원문</a>
     </li>
   ))}
 </ul> : <p class="empty-state">공지 자료 확인 중</p>}

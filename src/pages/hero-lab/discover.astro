@@ -1,7 +1,7 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
 import ScreenCard from '../../components/hero/ScreenCard.astro';
-import { interests, purposes, screens, styles } from '../../utils/hero';
+import { interests, purposes, screenGuides, screens, styles } from '../../utils/hero';
 
 const options = [
   { name: 'purpose', label: '목적', values: purposes },
@@ -10,6 +10,7 @@ const options = [
   { name: 'product', label: '상품', values: [...new Set(screens.map((screen) => screen.product))] },
   { name: 'screenType', label: '화면 유형', values: [...new Set(screens.map((screen) => screen.screenType))] },
   { name: 'level', label: '난이도', values: [...new Set(screens.map((screen) => screen.level))] },
+  { name: 'guide', label: '화면 이미지', values: ['공식 가이드 있음'] },
 ];
 ---
 <HeroLayout title="화면 탐색">
@@ -32,33 +33,35 @@ const options = [
     </form>
     <p class="hero-status" role="status">{screens.length}개 화면</p>
     <div class="hero-grid">
-      {screens.map((screen) => (
-        <div data-result data-search={[screen.number, screen.title, screen.summary, ...screen.tags].join(' ')}
+      {screens.map((screen) => {
+        const guide = screenGuides[screen.number];
+        const keywords = [screen.number, screen.title, screen.summary, ...screen.tags, ...(guide?.sections?.flat() ?? [])];
+        return <div data-result data-search={keywords.join(' ')}
           data-purpose={screen.purpose} data-style={screen.styles.join('|')} data-interest={screen.tags.join('|')}
-          data-screen-type={screen.screenType} data-product={screen.product} data-level={screen.level}>
+          data-screen-type={screen.screenType} data-product={screen.product} data-level={screen.level}
+          data-guide={guide?.image ? '공식 가이드 있음' : undefined}>
           <ScreenCard screen={screen} />
-        </div>
-      ))}
+        </div>;
+      })}
     </div>
     <p class="empty-state" data-empty hidden>일치하는 화면이 없습니다. 검색어나 필터를 바꿔보세요.</p>
   </hero-discovery>
 </HeroLayout>
 <script>
   class HeroDiscovery extends HTMLElement {
+    private controller?: AbortController;
+
     connectedCallback() {
       const form = this.querySelector('form');
       const status = this.querySelector('[role="status"]');
       const empty = this.querySelector<HTMLElement>('[data-empty]');
       if (!form || !status || !empty) return;
 
+      this.controller = new AbortController();
+      const { signal } = this.controller;
       const entries = Array.from(this.querySelectorAll<HTMLElement>('[data-result]'));
-      const parameters = new URLSearchParams(location.search);
-      for (const field of form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name]')) {
-        const value = parameters.get(field.name);
-        if (value !== null && (field instanceof HTMLInputElement || Array.from(field.options).some((option) => option.value === value))) {
-          field.value = value;
-        }
-      }
+      const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name]'));
+      const filterNames = Array.from(form.querySelectorAll('select[name]'), (field) => field.getAttribute('name')!);
 
       function render() {
         if (!form || !status || !empty) return;
@@ -69,7 +72,7 @@ const options = [
 
         for (const entry of entries) {
           const matchesQuery = words.every((word) => entry.dataset.search?.toLowerCase().includes(word));
-          const matchesFilters = ['purpose', 'style', 'interest', 'product', 'screenType', 'level'].every((field) => {
+          const matchesFilters = filterNames.every((field) => {
             const value = String(criteria.get(field));
             return !value || entry.dataset[field]?.split('|').includes(value);
           });
@@ -81,10 +84,36 @@ const options = [
         empty.hidden = count > 0;
       }
 
-      form.addEventListener('input', render);
-      form.addEventListener('submit', (event) => event.preventDefault());
-      form.addEventListener('reset', () => requestAnimationFrame(render));
-      render();
+      function readUrl() {
+        const parameters = new URLSearchParams(location.search);
+        for (const field of fields) {
+          const value = parameters.get(field.name) ?? '';
+          field.value = field instanceof HTMLInputElement || Array.from(field.options).some((option) => option.value === value) ? value : '';
+        }
+        render();
+      }
+
+      function update() {
+        if (signal.aborted) return;
+        const url = new URL(location.href);
+        for (const field of fields) {
+          const value = field.value.trim();
+          if (value) url.searchParams.set(field.name, value);
+          else url.searchParams.delete(field.name);
+        }
+        if (url.href !== location.href) history.replaceState(history.state, '', url);
+        render();
+      }
+
+      form.addEventListener('input', update, { signal });
+      form.addEventListener('submit', (event) => event.preventDefault(), { signal });
+      form.addEventListener('reset', () => requestAnimationFrame(update), { signal });
+      window.addEventListener('popstate', readUrl, { signal });
+      readUrl();
+    }
+
+    disconnectedCallback() {
+      this.controller?.abort();
     }
   }
   customElements.define('hero-discovery', HeroDiscovery);

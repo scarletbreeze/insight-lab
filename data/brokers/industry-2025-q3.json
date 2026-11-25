@@ -1,0 +1,89 @@
+{
+  "date": "2025-09-30",
+  "basis": "별도 재무제표",
+  "scope": "자본총계 상위 10개사",
+  "sourceName": "한국투자금융지주 증권신고서 · 주요 국내 금융투자회사 재무 현황",
+  "sourceUrl": "https://samara.kr/disclosure/20260211001070",
+  "companies": [
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 96927332,
+      "liabilities": 84905397,
+      "equity": 12021935,
+      "capital": 176007
+    },
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 104585769,
+      "liabilities": 94275197,
+      "equity": 10310572,
+      "capital": 4101961
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 78359617,
+      "liabilities": 69992869,
+      "equity": 8366747,
+      "capital": 1943851
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 69036177,
+      "liabilities": 61649216,
+      "equity": 7386961,
+      "capital": 458478
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 70748640,
+      "liabilities": 63556903,
+      "equity": 7191737,
+      "capital": 780179
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 73454580,
+      "liabilities": 66590007,
+      "equity": 6864572,
+      "capital": 1493102
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 62085889,
+      "liabilities": 55980112,
+      "equity": 6105777,
+      "capital": 402162
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 60673663,
+      "liabilities": 54887418,
+      "equity": 5786245,
+      "capital": 145225
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 50042365,
+      "liabilities": 44411237,
+      "equity": 5631128,
+      "capital": 1786998
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 23671149,
+      "liabilities": 19939946,
+      "equity": 3731203,
+      "capital": 456730
+    }
+  ]
+}

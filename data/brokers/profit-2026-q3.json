@@ -1,0 +1,77 @@
+{
+  "label": "2026년 3분기 누적",
+  "start": "2026-01-01",
+  "end": "2026-09-30",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "operatingIncome": 3362657,
+      "netIncome": 2501564,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002051",
+      "status": "report"
+    },
+    {
+      "id": "korea-investment",
+      "operatingIncome": 2518772,
+      "netIncome": 2012843,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001340",
+      "status": "report"
+    },
+    {
+      "id": "nh-investment",
+      "operatingIncome": 1839034,
+      "netIncome": 1348768,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000872",
+      "status": "report"
+    },
+    {
+      "id": "kiwoom",
+      "operatingIncome": 1816313,
+      "netIncome": 1335773,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001559",
+      "status": "report"
+    },
+    {
+      "id": "samsung",
+      "operatingIncome": 1734309,
+      "netIncome": 1291852,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001244",
+      "status": "report"
+    },
+    {
+      "id": "kb",
+      "operatingIncome": 1434718,
+      "netIncome": 741866,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001123",
+      "status": "report"
+    },
+    {
+      "id": "meritz",
+      "operatingIncome": 641345,
+      "netIncome": 720458,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001503",
+      "status": "report"
+    },
+    {
+      "id": "shinhan",
+      "operatingIncome": 831735,
+      "netIncome": 642940,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000557",
+      "status": "report"
+    },
+    {
+      "id": "hana",
+      "operatingIncome": 366411,
+      "netIncome": 281645,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001337",
+      "status": "report"
+    },
+    {
+      "id": "daishin",
+      "operatingIncome": 460163,
+      "netIncome": 269517,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001261",
+      "status": "report"
+    }
+  ]
+}

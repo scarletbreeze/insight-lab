@@ -1,0 +1,254 @@
+{
+  "annual": {
+    "earlierSources": [
+      {"through": 2004, "url": "https://www.index.go.kr/unity/potal/eNara/sub/showStblGams3.do?freq=Y&idx_cd=1080&period=1980%3A2022&stts_cd=108001"},
+      {"through": 2007, "url": "https://www.hanwhawm.com/main/common/common_file/fileView.cmd?GROUP_CD=TERMS_007&ITEM_CD=report036&category=2"},
+      {"through": 2008, "url": "https://www.kmcc.go.kr/download.do?fileSeq=28132"},
+      {"through": 2011, "url": "https://www.bnkfg.com/download?seq=4157"},
+      {"through": 2016, "url": "https://kind.krx.co.kr/external/2020/11/17/000463/20201117001046/10002.htm"}
+    ],
+    "historySource": "https://kind.krx.co.kr/external/2025/03/12/001439/20250312003549/10120.htm",
+    "latestSource": "https://kind.krx.co.kr/external/2026/01/19/000824/20260119001825/10002.htm",
+    "rows": {
+      "1989": [909.72, null],
+      "1990": [696.11, null],
+      "1991": [610.92, null],
+      "1992": [678.44, null],
+      "1993": [866.18, null],
+      "1994": [1027.37, null],
+      "1995": [882.94, null],
+      "1996": [651.22, null],
+      "1997": [376.31, 972.50],
+      "1998": [562.46, 751.80],
+      "1999": [1028.07, 2561.40],
+      "2000": [504.62, 525.80],
+      "2001": [693.70, 722.10],
+      "2002": [627.55, 443.60],
+      "2003": [810.71, 448.70],
+      "2004": [895.92, 380.33],
+      "2005": [1379.37, 701.79],
+      "2006": [1434.46, 606.15],
+      "2007": [1897.13, 704.23],
+      "2008": [1124.47, 332.05],
+      "2009": [1682.77, 513.57],
+      "2010": [2051.00, 510.69],
+      "2011": [1825.74, 500.18],
+      "2012": [1997.05, 496.32],
+      "2013": [2011.34, 499.99],
+      "2014": [1915.59, 542.97],
+      "2015": [1961.31, 682.35],
+      "2016": [2026.46, 631.44],
+      "2017": [2467.49, 798.42],
+      "2018": [2041.04, 675.65],
+      "2019": [2197.67, 669.83],
+      "2020": [2873.47, 968.42],
+      "2021": [2977.65, 1033.98],
+      "2022": [2236.40, 679.29],
+      "2023": [2655.28, 866.57],
+      "2024": [2399.49, 678.19],
+      "2025": [4214.17, 925.47]
+    }
+  },
+  "monthly": {
+    "2020-03": {
+      "firstDate": "2020-03-02",
+      "lastDate": "2020-03-31",
+      "first": [2002.51, 627.66],
+      "last": [1754.64, 569.07],
+      "firstSource": "https://bbn.kiwoom.com/bbs/jsp/upload/newres/CorpAnal/202003/1583219784254.pdf",
+      "lastSource": "https://kind.krx.co.kr/external/2021/07/27/000512/20210727001188/10002.htm"
+    },
+    "2024-11": {
+      "firstDate": "2024-11-01",
+      "lastDate": "2024-11-29",
+      "first": [2542.36, 729.05],
+      "last": [2455.91, 678.19],
+      "firstSource": "https://www.bok.or.kr/portal/bbs/P0002018/view.do?menuNo=200366&nttId=10087799",
+      "lastSource": "https://www.bok.or.kr/portal/bbs/P0002018/view.do?menuNo=200366&nttId=10088335"
+    },
+    "2024-12": {
+      "firstDate": "2024-12-02",
+      "lastDate": "2024-12-30",
+      "first": [2454.48, 675.84],
+      "last": [2399.49, 678.19],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1733178179248.pdf&makeDt=2024.12.03&rMenuGb=SD",
+      "lastSource": "https://www.bok.or.kr/portal/bbs/P0002018/view.do?menuNo=200366&nttId=10088999"
+    },
+    "2025-01": {
+      "firstDate": "2025-01-02",
+      "lastDate": "2025-01-31",
+      "first": [2398.94, 686.63],
+      "last": [2517.37, 728.29],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1735857746653.pdf&makeDt=2025.01.03&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1738533512339.pdf&makeDt=2025.02.03&rMenuGb=SW"
+    },
+    "2025-02": {
+      "firstDate": "2025-02-03",
+      "lastDate": "2025-02-28",
+      "first": [2453.95, 703.80],
+      "last": [2532.78, 743.96],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1738620464701.pdf&makeDt=2025.02.04&rMenuGb=SD",
+      "lastSource": "https://file.hanaw.com/download/research/FileServer/WEB/info/daily/2025/03/04/HGE0304.pdf"
+    },
+    "2025-03": {
+      "firstDate": "2025-03-04",
+      "lastDate": "2025-03-31",
+      "first": [2528.92, 737.90],
+      "last": [2481.12, 672.85],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1741126910002.pdf&makeDt=2025.03.05&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1743459762940.pdf&makeDt=2025.04.01&rMenuGb=SD"
+    },
+    "2025-04": {
+      "firstDate": "2025-04-01",
+      "lastDate": "2025-04-30",
+      "first": [2521.39, 691.45],
+      "last": [2556.61, 717.24],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1743545747223.pdf&makeDt=2025.04.02&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1746138929408.pdf&makeDt=2025.05.02&rMenuGb=SD"
+    },
+    "2025-05": {
+      "firstDate": "2025-05-02",
+      "lastDate": "2025-05-30",
+      "first": [2559.79, 721.86],
+      "last": [2697.67, 734.35],
+      "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16463",
+      "lastSource": "https://eiec.kdi.re.kr/userdata/eco_bul/202507/202507.pdf"
+    },
+    "2025-06": {
+      "firstDate": "2025-06-02",
+      "lastDate": "2025-06-30",
+      "first": [2698.97, 740.29],
+      "last": [3071.70, 781.50],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1748989591138.pdf&makeDt=2025.06.04&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1751323216104.pdf&makeDt=2025.07.01&rMenuGb=SD"
+    },
+    "2025-07": {
+      "firstDate": "2025-07-01",
+      "lastDate": "2025-07-31",
+      "first": [3089.65, 783.67],
+      "last": [3245.44, 805.24],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1751409762597.pdf&makeDt=2025.07.02&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1754000794373.pdf&makeDt=2025.08.01&rMenuGb=SD"
+    },
+    "2025-08": {
+      "firstDate": "2025-08-01",
+      "lastDate": "2025-08-29",
+      "first": [3119.41, 772.79],
+      "last": [3186.01, 796.91],
+      "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16553",
+      "lastSource": "https://eiec.kdi.re.kr/userdata/eco_bul/202510/202510.pdf"
+    },
+    "2025-09": {
+      "firstDate": "2025-09-01",
+      "lastDate": "2025-09-30",
+      "first": [3142.93, 785.00],
+      "last": [3424.60, 841.99],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1756765909920.pdf&makeDt=2025.09.02&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1759270928480.pdf&makeDt=2025.10.01&rMenuGb=SD"
+    },
+    "2025-10": {
+      "firstDate": "2025-10-01",
+      "lastDate": "2025-10-31",
+      "first": [3455.83, 845.34],
+      "last": [4107.50, 900.42],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1759358405859.pdf&makeDt=2025.10.02&rMenuGb=SD",
+      "lastSource": "https://eiec.kdi.re.kr/userdata/eco_bul/202601/202601.pdf"
+    },
+    "2025-11": {
+      "firstDate": "2025-11-03",
+      "lastDate": "2025-11-28",
+      "first": [4221.87, 914.55],
+      "last": [3926.59, 912.67],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1762208808706.pdf&makeDt=2025.11.04&rMenuGb=SD",
+      "lastSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16653"
+    },
+    "2025-12": {
+      "firstDate": "2025-12-01",
+      "lastDate": "2025-12-30",
+      "first": [3920.37, 922.38],
+      "last": [4214.17, 925.47],
+      "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16655",
+      "lastSource": "https://kind.krx.co.kr/external/2026/01/19/000824/20260119001825/10002.htm"
+    },
+    "2026-01": {
+      "firstDate": "2026-01-02",
+      "lastDate": "2026-01-30",
+      "first": [4309.63, 945.57],
+      "last": [5224.36, 1149.44],
+      "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16681",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1769984411056.pdf&makeDt=2026.02.02&rMenuGb=SW"
+    },
+    "2026-02": {
+      "firstDate": "2026-02-02",
+      "lastDate": "2026-02-27",
+      "first": [4949.67, 1098.36],
+      "last": [6244.13, 1192.78],
+      "firstSource": "https://file.hanaw.com/download/research/FileServer/WEB/info/daily/2026/02/03/HGE0203%280%29.pdf",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1772489677863.pdf&makeDt=2026.03.03&rMenuGb=SW"
+    },
+    "2026-03": {
+      "firstDate": "2026-03-03",
+      "lastDate": "2026-03-31",
+      "first": [5791.91, 1137.70],
+      "last": [5052.46, 1052.39],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1772577073665.pdf&makeDt=2026.03.04&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1774995973560.pdf&makeDt=2026.04.01&rMenuGb=SD"
+    },
+    "2026-04": {
+      "firstDate": "2026-04-01",
+      "lastDate": "2026-04-30",
+      "first": [5478.70, 1116.18],
+      "last": [6598.87, 1192.35],
+      "firstSource": "https://bbn.kiwoom.com/rfSD6994",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1777847321495.pdf&makeDt=2026.05.04&rMenuGb=SW"
+    },
+    "2026-05": {
+      "firstDate": "2026-05-04",
+      "lastDate": "2026-05-29",
+      "first": [6936.99, 1213.74],
+      "last": [8476.15, 1074.80],
+      "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16767",
+      "lastSource": "https://www.ktv.go.kr/news/major/view?content_id=755727"
+    },
+    "2026-06": {
+      "firstDate": "2026-06-01",
+      "lastDate": "2026-06-30",
+      "first": [8788.38, 1050.03],
+      "last": [8476.48, 916.18],
+      "firstSource": "https://www.seoul.co.kr/news/economy/securities/2026/06/01/20260601500233",
+      "lastSource": "https://kind.krx.co.kr/external/2026/07/15/000048/20260715000078/10601.htm"
+    },
+    "2026-07": {
+      "firstDate": "2026-07-01",
+      "lastDate": "2026-07-31",
+      "first": [8303.41, 929.35],
+      "last": [6595.45, 719.76],
+      "firstSource": "https://www.yna.co.kr/amp/view/AKR20260701146100008",
+      "lastSource": "https://v.daum.net/v/20260731153648650"
+    },
+    "2026-08": {
+      "firstDate": "2026-08-03",
+      "lastDate": "2026-08-31",
+      "first": [6257.45, 737.35],
+      "last": [6820.02, 834.29],
+      "firstSource": "https://www.yna.co.kr/view/AKR20260803115500008",
+      "lastSource": "https://invest.kiwoom.com/inv/resource/202609/UploadFile_20260901075423000996.pdf"
+    },
+    "2026-09": {
+      "firstDate": "2026-09-01",
+      "lastDate": "2026-09-30",
+      "first": [6835.80, 821.25],
+      "last": [6838.04, 855.91],
+      "firstSource": "https://www.yna.co.kr/view/AKR20260901148600008",
+      "lastSource": "https://www.eugenefn.com/common/files/amail/20261001_B_lee.jy_46.pdf"
+    },
+    "2026-10": {
+      "firstDate": "2026-10-01",
+      "lastDate": "2026-10-30",
+      "first": [6971.35, 894.29],
+      "last": [5730.74, 724.38],
+      "firstSource": "https://invest.kiwoom.com/inv/resource/202610/UploadFile_20261002080254000030.pdf",
+      "lastSource": "https://invest.kiwoom.com/inv/resource/202611/UploadFile_20261102075607000982.pdf"
+    }
+  }
+}

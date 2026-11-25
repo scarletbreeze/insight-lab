@@ -1,0 +1,1816 @@
+{
+  "2016-10": {
+    "US": {
+      "eligibleCount": 504,
+      "excludedSymbols": [
+        "DVMT",
+        "TRV"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 2
+      },
+      "items": [
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Akamai Technologies, Inc.",
+          "returnPct": 29.34276671010985,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AKAM"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Gap, Inc.",
+          "returnPct": 26.443629697525207,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GPS"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Level 3 Communications, Inc.",
+          "returnPct": 22.038687241903933,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LVLT"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Netflix, Inc.",
+          "returnPct": 21.670076975543214,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Reynolds American, Inc.",
+          "returnPct": 17.366290219475815,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "RAI"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "KeyCorp",
+          "returnPct": 16.213991769547324,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KEY"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Time Warner, Inc.",
+          "returnPct": 12.191124558749369,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TWX"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Valero Energy Corp.",
+          "returnPct": 11.984877126654064,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VLO"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "Harley-Davidson, Inc.",
+          "returnPct": 11.803921568627452,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HOG"
+        },
+        {
+          "firstDate": "2016-10-03",
+          "lastDate": "2016-10-31",
+          "name": "F5 Networks, Inc.",
+          "returnPct": 11.119150988904968,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FFIV"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30)",
+      "universeCount": 506
+    }
+  },
+  "2016-11": {
+    "US": {
+      "eligibleCount": 505,
+      "excludedSymbols": [
+        "DVMT"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 1
+      },
+      "items": [
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Harman International Industries, Inc.",
+          "returnPct": 38.636075548231716,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HAR"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "United Rentals, Inc.",
+          "returnPct": 38.449952074489936,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "URI"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Freeport-McMoRan, Inc.",
+          "returnPct": 37.66816143497758,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FCX"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Marathon Oil Corp.",
+          "returnPct": 36.096458176337606,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRO"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Transocean, Ltd.",
+          "returnPct": 34.51511991657977,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "RIG"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "NVIDIA Corp.",
+          "returnPct": 33.5264301230992,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Staples, Inc.",
+          "returnPct": 32.465753424657535,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SPLS"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Navient Corp.",
+          "returnPct": 32.233307751343055,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NAVI"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Lincoln National Corp.",
+          "returnPct": 31.271759164448085,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LNC"
+        },
+        {
+          "firstDate": "2016-11-01",
+          "lastDate": "2016-11-30",
+          "name": "Chesapeake Energy Corp.",
+          "returnPct": 30.597014925373134,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CHK"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506
+    }
+  },
+  "2016-12": {
+    "US": {
+      "eligibleCount": 505,
+      "excludedSymbols": [
+        "DVMT"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 1
+      },
+      "items": [
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "NVIDIA Corp.",
+          "returnPct": 21.79370150616157,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 18.614718614718615,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Edwards Lifesciences Corp.",
+          "returnPct": 15.01166073401252,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EW"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Xilinx, Inc.",
+          "returnPct": 13.073609290129237,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "XLNX"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Valero Energy Corp.",
+          "returnPct": 12.869651412522716,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VLO"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Whirlpool Corp.",
+          "returnPct": 11.782793186150913,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WHR"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Extra Space Storage, Inc. REIT",
+          "returnPct": 11.602369599768819,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EXR"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Eli Lilly & Co.",
+          "returnPct": 11.490071244505078,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LLY"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Hess Corp.",
+          "returnPct": 11.01407948672251,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HES"
+        },
+        {
+          "firstDate": "2016-12-01",
+          "lastDate": "2016-12-30",
+          "name": "Digital Realty Trust, Inc. REIT",
+          "returnPct": 10.852888086642599,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DLR"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506
+    }
+  },
+  "2017-01": {
+    "US": {
+      "corporateActionSources": [
+        "https://www.sec.gov/Archives/edgar/data/203527/000119312517022651/d337397d8k.htm"
+      ],
+      "eligibleCount": 503,
+      "excludedSymbols": [
+        "DVMT",
+        "STJ",
+        "VAR"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 2,
+        "분할 비율만으로 조정할 수 없는 기업행동": 1
+      },
+      "items": [
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "NRG Energy, Inc.",
+          "returnPct": 34.47154471544715,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NRG"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "CSX Corp.",
+          "returnPct": 29.256060183895237,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CSX"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Illumina, Inc.",
+          "returnPct": 22.092579882559292,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Skyworks Solutions, Inc.",
+          "returnPct": 22.075848303393215,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SWKS"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Qorvo, Inc.",
+          "returnPct": 21.379962192816635,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "QRVO"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Freeport-McMoRan, Inc.",
+          "returnPct": 20.827285921625545,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FCX"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Arconic Inc.",
+          "returnPct": 18.759770713913497,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ARNC"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Viacom, Inc. Class B",
+          "returnPct": 17.381615598885794,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VIAB"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "Wynn Resorts, Ltd.",
+          "returnPct": 15.973016235993597,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2017-01-03",
+          "lastDate": "2017-01-31",
+          "name": "PulteGroup, Inc.",
+          "returnPct": 15.95687331536388,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PHM"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+        "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506
+    }
+  },
+  "2017-02": {
+    "US": {
+      "eligibleCount": 504,
+      "excludedSymbols": [
+        "DVMT",
+        "SE"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 2
+      },
+      "items": [
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Mead Johnson Nutrition Co.",
+          "returnPct": 26.31654676258993,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MJN"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "IDEXX Laboratories, Inc.",
+          "returnPct": 18.02931596091205,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "IDXX"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Hasbro, Inc.",
+          "returnPct": 17.947156946304638,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HAS"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Tiffany & Co.",
+          "returnPct": 17.78205128205128,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TIF"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "CBRE Group, Inc. Class A",
+          "returnPct": 16.825188586421778,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CBG"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Ameriprise Financial, Inc.",
+          "returnPct": 16.289352670675626,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMP"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "HP, Inc.",
+          "returnPct": 15.877251501000668,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HPQ"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "TransDigm Group, Inc.",
+          "returnPct": 15.713765477057539,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TDG"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Bristol-Myers Squibb Co.",
+          "returnPct": 15.053763440860216,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BMY"
+        },
+        {
+          "firstDate": "2017-02-01",
+          "lastDate": "2017-02-28",
+          "name": "Philip Morris International, Inc.",
+          "returnPct": 13.965607087024491,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PM"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+        "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-01-03-IDEXX-Laboratories-Set-to-Join-the-S-P-500-Chemours-to-Join-S-P-MidCap-400-Shake-Shack-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506
+    }
+  },
+  "2017-03": {
+    "US": {
+      "eligibleCount": 503,
+      "excludedSymbols": [
+        "DVMT",
+        "HAR",
+        "LLTC"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 3
+      },
+      "items": [
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 21.08293655187687,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 17.718940936863543,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "FMC Corp.",
+          "returnPct": 17.51097602161432,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FMC"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Best Buy Co., Inc.",
+          "returnPct": 16.635026103464643,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BBY"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "H&R Block, Inc.",
+          "returnPct": 12.699951526902568,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HRB"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "PVH Corp.",
+          "returnPct": 12.174761491760625,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PVH"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Darden Restaurants, Inc.",
+          "returnPct": 11.723861663773535,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DRI"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Wynn Resorts, Ltd.",
+          "returnPct": 11.586018888131633,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "NRG Energy, Inc.",
+          "returnPct": 10.979228486646884,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NRG"
+        },
+        {
+          "firstDate": "2017-03-01",
+          "lastDate": "2017-03-31",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 9.902404189478695,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MNST"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm",
+        "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+        "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-01-03-IDEXX-Laboratories-Set-to-Join-the-S-P-500-Chemours-to-Join-S-P-MidCap-400-Shake-Shack-to-Join-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-02-23-Incyte-CBOE-Holdings-Regency-Centers-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2016-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 506
+    }
+  },
+  "2017-04": {
+    "US": {
+      "eligibleCount": 501,
+      "excludedSymbols": [
+        "DNB",
+        "FAST",
+        "LOW",
+        "SWN"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 4
+      },
+      "items": [
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "C.R. Bard, Inc.",
+          "returnPct": 22.71221614718442,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BCR"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Whole Foods Market, Inc.",
+          "returnPct": 22.211021505376344,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WFM"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Edwards Lifesciences Corp.",
+          "returnPct": 16.114346214928535,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EW"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "L Brands, Inc.",
+          "returnPct": 15.305676855895197,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LB"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Wyndham Worldwide Corp.",
+          "returnPct": 13.464285714285714,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYN"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Staples, Inc.",
+          "returnPct": 12.8175519630485,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SPLS"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Lam Research Corp.",
+          "returnPct": 12.793957327519077,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "TransDigm Group, Inc.",
+          "returnPct": 12.785701225086854,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TDG"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "PayPal Holdings, Inc.",
+          "returnPct": 11.939948393150363,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PYPL"
+        },
+        {
+          "firstDate": "2017-04-03",
+          "lastDate": "2017-04-28",
+          "name": "Caterpillar, Inc.",
+          "returnPct": 10.826920992738701,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CAT"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31)",
+      "universeCount": 505
+    }
+  },
+  "2017-05": {
+    "US": {
+      "eligibleCount": 505,
+      "excludedSymbols": [],
+      "exclusions": {},
+      "items": [
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 35.36196549137284,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Autodesk, Inc.",
+          "returnPct": 21.515546858012613,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Electronic Arts, Inc.",
+          "returnPct": 19.55902521363013,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EA"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Coach, Inc.",
+          "returnPct": 19.2823954568921,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "COH"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "McKesson Corp.",
+          "returnPct": 17.78002455405503,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MCK"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Regeneron Pharmaceuticals, Inc.",
+          "returnPct": 15.87449832142767,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "REGN"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Best Buy Co., Inc.",
+          "returnPct": 15.41002720559658,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BBY"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Newell Brands, Inc.",
+          "returnPct": 15.108695652173912,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NWL"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "American Airlines Group, Inc.",
+          "returnPct": 15.04277566539924,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AAL"
+        },
+        {
+          "firstDate": "2017-05-01",
+          "lastDate": "2017-05-31",
+          "name": "Qorvo, Inc.",
+          "returnPct": 13.613175921877277,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "QRVO"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+        "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+        "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-06": {
+    "US": {
+      "eligibleCount": 500,
+      "excludedSymbols": [
+        "MJN",
+        "R",
+        "TDC",
+        "TGNA",
+        "YHOO"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 5
+      },
+      "items": [
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Acuity Brands, Inc.",
+          "returnPct": 21.73184022995389,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AYI"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Alexion Pharmaceuticals, Inc.",
+          "returnPct": 20.96838337641678,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ALXN"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Signet Jewelers, Ltd.",
+          "returnPct": 20.663995420721236,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SIG"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Whole Foods Market, Inc.",
+          "returnPct": 19.59670548139733,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WFM"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 14.181152790484903,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Navient Corp.",
+          "returnPct": 13.807245386192754,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NAVI"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "H&R Block, Inc.",
+          "returnPct": 13.681500551673409,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HRB"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Cabot Oil & Gas Corp.",
+          "returnPct": 13.227990970654627,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "COG"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "NIKE, Inc. Class B",
+          "returnPct": 12.810707456978967,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NKE"
+        },
+        {
+          "firstDate": "2017-06-01",
+          "lastDate": "2017-06-30",
+          "name": "Tesoro Corp.",
+          "returnPct": 12.432432432432432,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TSO"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+        "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+        "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-07": {
+    "US": {
+      "eligibleCount": 500,
+      "excludedSymbols": [
+        "BBBY",
+        "BHI",
+        "MUR",
+        "RAI",
+        "RIG"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 5
+      },
+      "items": [
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "NRG Energy, Inc.",
+          "returnPct": 43.38963308095516,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NRG"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Scripps Networks Interactive, Inc. Class A",
+          "returnPct": 27.66174967138893,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SNI"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Netflix, Inc.",
+          "returnPct": 24.279948005746732,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Boeing Co.",
+          "returnPct": 22.090739714990683,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BA"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Freeport-McMoRan, Inc.",
+          "returnPct": 19.83606557377049,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FCX"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Charter Communications, Inc. Class A",
+          "returnPct": 19.241184166489184,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CHTR"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 18.396631053575607,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 16.63676164501543,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Newmont Mining Corp.",
+          "returnPct": 16.556914393226716,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NEM"
+        },
+        {
+          "firstDate": "2017-07-03",
+          "lastDate": "2017-07-31",
+          "name": "Automatic Data Processing, Inc.",
+          "returnPct": 16.100371021284904,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADP"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+        "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+        "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-05-24-IHS-Markit-Set-to-Join-S-P-500-TEGNA-and-Cars-com-to-Join-S-P-MidCap-400-J-C-Penney-Time-and-Independence-Realty-Trust-to-Join-S-P-SmallCap-600",
+        "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170609-538160/538160_yhoohlt5anssalgnrydertera.pdf",
+        "https://press.spglobal.com/2017-06-12-Everest-Re-Group-Set-to-Join-S-P-500-Pinnacle-Financial-Partners-to-Join-S-P-MidCap-400-and-Armada-Hoffler-Properties-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-08": {
+    "US": {
+      "eligibleCount": 492,
+      "excludedSymbols": [
+        "AAPL",
+        "ADBE",
+        "AKAM",
+        "AMZN",
+        "AN",
+        "ANDV",
+        "ATVI",
+        "CELG",
+        "CMCSA",
+        "COST",
+        "INTC",
+        "QCOM",
+        "WFM"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 13
+      },
+      "items": [
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Illumina, Inc.",
+          "returnPct": 18.665118978525825,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Rockwell Collins, Inc.",
+          "returnPct": 17.723679482572763,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "COL"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Ralph Lauren Corp.",
+          "returnPct": 16.057044764294204,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "RL"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Michael Kors Holdings, Ltd.",
+          "returnPct": 14.85310119695321,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KORS"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "TripAdvisor, Inc.",
+          "returnPct": 14.404283801874163,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TRIP"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 12.808750882145377,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Humana, Inc.",
+          "returnPct": 11.634961216795944,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HUM"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "FMC Corp.",
+          "returnPct": 11.467356173238526,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FMC"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "Gilead Sciences, Inc.",
+          "returnPct": 10.620871862615587,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GILD"
+        },
+        {
+          "firstDate": "2017-08-01",
+          "lastDate": "2017-08-31",
+          "name": "JB Hunt Transport Services, Inc.",
+          "returnPct": 10.479276058540945,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JBHT"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+        "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+        "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-05-24-IHS-Markit-Set-to-Join-S-P-500-TEGNA-and-Cars-com-to-Join-S-P-MidCap-400-J-C-Penney-Time-and-Independence-Realty-Trust-to-Join-S-P-SmallCap-600",
+        "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170609-538160/538160_yhoohlt5anssalgnrydertera.pdf",
+        "https://press.spglobal.com/2017-06-12-Everest-Re-Group-Set-to-Join-S-P-500-Pinnacle-Financial-Partners-to-Join-S-P-MidCap-400-and-Armada-Hoffler-Properties-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/808362/000119312517220950/d401311dex991.htm",
+        "https://press.spglobal.com/2017-07-19-MGM-Resorts-ResMed-Packaging-Corporation-of-America-A-O-Smith-and-Duke-Realty-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/50104/000005010417000180/andvnamechange8-k.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-09": {
+    "US": {
+      "eligibleCount": 504,
+      "excludedSymbols": [
+        "SPLS"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 1
+      },
+      "items": [
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Gap, Inc.",
+          "returnPct": 21.77319587628866,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GPS"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Helmerich & Payne, Inc.",
+          "returnPct": 21.12970711297071,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HP"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 20.644171779141104,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Marathon Oil Corp.",
+          "returnPct": 20.319432120674357,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRO"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Hess Corp.",
+          "returnPct": 18.859315589353614,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HES"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Halliburton Co.",
+          "returnPct": 18.32904884318766,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HAL"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Concho Resources, Inc.",
+          "returnPct": 17.828070489310313,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CXO"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "AbbVie, Inc.",
+          "returnPct": 17.820206841686556,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ABBV"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "Anadarko Petroleum Corp.",
+          "returnPct": 17.739214268498433,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "APC"
+        },
+        {
+          "firstDate": "2017-09-01",
+          "lastDate": "2017-09-29",
+          "name": "CF Industries Holdings, Inc.",
+          "returnPct": 17.278185456971315,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CF"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm",
+        "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+        "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-05-24-IHS-Markit-Set-to-Join-S-P-500-TEGNA-and-Cars-com-to-Join-S-P-MidCap-400-J-C-Penney-Time-and-Independence-Realty-Trust-to-Join-S-P-SmallCap-600",
+        "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170609-538160/538160_yhoohlt5anssalgnrydertera.pdf",
+        "https://press.spglobal.com/2017-06-12-Everest-Re-Group-Set-to-Join-S-P-500-Pinnacle-Financial-Partners-to-Join-S-P-MidCap-400-and-Armada-Hoffler-Properties-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/808362/000119312517220950/d401311dex991.htm",
+        "https://press.spglobal.com/2017-07-19-MGM-Resorts-ResMed-Packaging-Corporation-of-America-A-O-Smith-and-Duke-Realty-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/50104/000005010417000180/andvnamechange8-k.htm",
+        "https://press.spglobal.com/2017-07-31-Brighthouse-Financial-Set-to-Join-S-P-500-AutoNation-to-Join-S-P-MidCap-400-FTI-Consulting-to-Join-S-P-SmallCap-600",
+        "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170824-572951/572951_500dowdupont1chartsbacwfm.pdf"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-03-31) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-10": {
+    "US": {
+      "eligibleCount": 505,
+      "excludedSymbols": [],
+      "exclusions": {},
+      "items": [
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Align Technology, Inc.",
+          "returnPct": 27.646618950966776,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ALGN"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Adobe Systems, Inc.",
+          "returnPct": 18.399351088279033,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADBE"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Intel Corp.",
+          "returnPct": 16.521516393442624,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "INTC"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 15.53631284916201,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 15.230559117588799,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "FLIR Systems, Inc.",
+          "returnPct": 14.195121951219512,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FLIR"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Quintiles IMS Holdings, Inc.",
+          "returnPct": 13.789473684210526,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "Q"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "PayPal Holdings, Inc.",
+          "returnPct": 13.05702711124961,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PYPL"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Entergy Corp.",
+          "returnPct": 12.876210416121435,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ETR"
+        },
+        {
+          "firstDate": "2017-10-02",
+          "lastDate": "2017-10-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 12.164560365689702,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LRCX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tickerChangeSources": [
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm"
+      ],
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-09-30)",
+      "universeCount": 505
+    }
+  },
+  "2017-11": {
+    "US": {
+      "eligibleCount": 502,
+      "excludedSymbols": [
+        "ABBV",
+        "ABT",
+        "MMM"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 3
+      },
+      "items": [
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Foot Locker, Inc.",
+          "returnPct": 43.229689067201605,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FL"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Mattel, Inc.",
+          "returnPct": 34.686346863468636,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MAT"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "L Brands, Inc.",
+          "returnPct": 28.571428571428573,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LB"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "NetApp, Inc.",
+          "returnPct": 26.903211318212442,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NTAP"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Macy’s, Inc.",
+          "returnPct": 25.593667546174142,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "M"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Advance Auto Parts, Inc.",
+          "returnPct": 25.077399380804952,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AAP"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Gap, Inc.",
+          "returnPct": 24.364896073903,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GPS"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": 24.092779648335203,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Kroger Co.",
+          "returnPct": 23.732057416267942,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KR"
+        },
+        {
+          "firstDate": "2017-11-01",
+          "lastDate": "2017-11-30",
+          "name": "Twenty-First Century Fox, Inc. Class A",
+          "returnPct": 22.94072363356428,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FOXA"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+        "https://press.spglobal.com/2017-10-04-Norwegian-Cruise-Line-Set-to-Join-S-P-500-Pacific-Premier-Bancorp-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tickerChangeSources": [
+        "https://www.sec.gov/Archives/edgar/data/1478242/000119312517335879/d484556d8k.htm"
+      ],
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2017-12": {
+    "US": {
+      "corporateActionSources": [
+        "https://www.sec.gov/Archives/edgar/data/1707092/000119312517364954/d494581d8k.htm"
+      ],
+      "eligibleCount": 502,
+      "excludedSymbols": [
+        "BCR",
+        "DLPH",
+        "MMM"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 2,
+        "분할 비율만으로 조정할 수 없는 기업행동": 1
+      },
+      "items": [
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Freeport-McMoRan, Inc.",
+          "returnPct": 34.37278525868179,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FCX"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "DaVita, Inc.",
+          "returnPct": 18.229422353133693,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DVA"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Coty, Inc. Class A",
+          "returnPct": 16.656891495601172,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "COTY"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "CenturyLink, Inc.",
+          "returnPct": 16.643356643356643,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CTL"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Akamai Technologies, Inc.",
+          "returnPct": 16.58003226384657,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AKAM"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Express Scripts Holding Co.",
+          "returnPct": 15.882626921285514,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ESRX"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Discovery Communications, Inc. Class C",
+          "returnPct": 15.054347826086957,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISCK"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Discovery Communications, Inc. Class A",
+          "returnPct": 15.00513874614594,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISCA"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Under Armour, Inc. Class C",
+          "returnPct": 13.554987212276215,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "UA"
+        },
+        {
+          "firstDate": "2017-12-01",
+          "lastDate": "2017-12-29",
+          "name": "Halliburton Co.",
+          "returnPct": 13.492800743149095,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HAL"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+        "https://press.spglobal.com/2017-10-04-Norwegian-Cruise-Line-Set-to-Join-S-P-500-Pacific-Premier-Bancorp-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1478242/000119312517335879/d484556d8k.htm"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2018-01": {
+    "US": {
+      "eligibleCount": 503,
+      "excludedSymbols": [
+        "BCR",
+        "MMM"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 2
+      },
+      "items": [
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Netflix, Inc.",
+          "returnPct": 34.43079524543691,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Seagate Technology PLC",
+          "returnPct": 28.581411600279523,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Dr. Pepper Snapple Group, Inc.",
+          "returnPct": 25.275532696546655,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DPS"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 25.091074681238617,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 23.300727363932783,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 22.08896476900951,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Boeing Co.",
+          "returnPct": 19.38081121142703,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BA"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "IDEXX Laboratories, Inc.",
+          "returnPct": 18.52227362017616,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "IDXX"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "ResMed, Inc.",
+          "returnPct": 17.84169297322577,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "RMD"
+        },
+        {
+          "firstDate": "2018-01-02",
+          "lastDate": "2018-01-31",
+          "name": "Align Technology, Inc.",
+          "returnPct": 16.641438874543674,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ALGN"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+        "https://press.spglobal.com/2017-10-04-Norwegian-Cruise-Line-Set-to-Join-S-P-500-Pacific-Premier-Bancorp-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1478242/000119312517335879/d484556d8k.htm",
+        "https://press.spglobal.com/2017-11-28-Delphi-Technologies-Set-to-Join-S-P-MidCap-400-and-Frontier-Communications-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  },
+  "2018-02": {
+    "US": {
+      "eligibleCount": 499,
+      "excludedSymbols": [
+        "HCN",
+        "ICE",
+        "MA",
+        "MMM",
+        "NTAP",
+        "PCLN"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 6
+      },
+      "items": [
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "CSRA, Inc.",
+          "returnPct": 20.302760463045413,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CSRA"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Under Armour, Inc. Class A",
+          "returnPct": 18.85304659498208,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "UAA"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Under Armour, Inc. Class C",
+          "returnPct": 18.503937007874015,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "UA"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "TripAdvisor, Inc.",
+          "returnPct": 15.68768942127291,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "TRIP"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "XL Group, Ltd.",
+          "returnPct": 15.004077194889916,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "XL"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 14.874088020710756,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Macy’s, Inc.",
+          "returnPct": 14.79313036690086,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "M"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Red Hat, Inc.",
+          "returnPct": 12.846424743530854,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "RHT"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Hewlett Packard Enterprise Co.",
+          "returnPct": 10.72066706372841,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HPE"
+        },
+        {
+          "firstDate": "2018-02-01",
+          "lastDate": "2018-02-28",
+          "name": "Netflix, Inc.",
+          "returnPct": 9.925680009054211,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NFLX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm",
+        "https://press.spglobal.com/2017-10-04-Norwegian-Cruise-Line-Set-to-Join-S-P-500-Pacific-Premier-Bancorp-to-Join-S-P-SmallCap-600",
+        "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm",
+        "https://www.sec.gov/Archives/edgar/data/1478242/000119312517335879/d484556d8k.htm",
+        "https://press.spglobal.com/2017-11-28-Delphi-Technologies-Set-to-Join-S-P-MidCap-400-and-Frontier-Communications-to-Join-S-P-SmallCap-600",
+        "https://press.spglobal.com/2017-12-28-Huntington-Ingalls-Industries-Set-to-Join-S-P-500-Scientific-Games-to-Join-S-P-MidCap-400-and-Ultra-Clean-Holdings-to-Join-S-P-SmallCap-600"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "SPDR S&P 500 ETF Trust (SPY) 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 505
+    }
+  }
+}

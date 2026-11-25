@@ -1,0 +1,93 @@
+{
+  "date": "2020-06-30",
+  "basis": "별도 재무제표",
+  "scope": "자본총계 상위 10개사",
+  "sourceName": "NH투자증권 공시 · 주요 국내 증권사 재무 현황",
+  "sourceUrl": "https://kind.krx.co.kr/external/2020/11/17/000463/20201117001046/10002.htm",
+  "companies": [
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 78150000,
+      "liabilities": 69266300,
+      "equity": 8883700,
+      "capital": 4102000
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 57994800,
+      "liabilities": 52593300,
+      "equity": 5401400,
+      "capital": 1531300
+    },
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 59574800,
+      "liabilities": 54434100,
+      "equity": 5140700,
+      "capital": 175800
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 52064900,
+      "liabilities": 47211900,
+      "equity": 4853100,
+      "capital": 458500
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 41950200,
+      "liabilities": 37670900,
+      "equity": 4279300,
+      "capital": 1786998,
+      "sourceUrl": "https://kind.krx.co.kr/external/2022/08/16/001736/20220816005503/11012.htm",
+      "sourceName": "신한금융투자 공시 · 자본금 보완"
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 30917000,
+      "liabilities": 26756200,
+      "equity": 4160800,
+      "capital": 335500
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 33548800,
+      "liabilities": 29234600,
+      "equity": 4314200,
+      "capital": 776100
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 27055200,
+      "liabilities": 24906800,
+      "equity": 2148400,
+      "capital": 127000
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 14800000,
+      "liabilities": 13002000,
+      "equity": 1798000,
+      "capital": 434900
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 53337785,
+      "liabilities": 48521023,
+      "equity": 4816762,
+      "capital": 1493102,
+      "sourceUrl": "https://www.kbsec.com/ndataweb/util/introduction/ir/data/FY202002.pdf",
+      "sourceName": "KB증권 2020년 반기보고서"
+    }
+  ]
+}

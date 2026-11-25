@@ -1,0 +1,27 @@
+---
+import type { noticeInquiryObservations } from '../../utils/voc';
+import { sitePath } from '../../utils/paths';
+
+interface Props {
+  items: ReturnType<typeof noticeInquiryObservations>;
+  verified: boolean;
+  automated?: boolean;
+}
+const { items, verified, automated } = Astro.props;
+---
+<section class="lab-block">
+  <h2>공지 전후 문의 변화</h2>
+  {items.length ? <>
+    <p>공지 게시일을 제외한 앞뒤 14일 동안 같은 주제의 공개 문의를 {automated ? '자동 분류한 집계입니다. 분류가 불확실한 문의는 제외합니다.' : '집계했습니다.'} 공지와 문의 변화의 인과관계는 이 자료로 판단할 수 없습니다.</p>
+    <ul class="lab-list">{items.map(({ notice, before, after, beforeStart, beforeEnd, afterStart, afterEnd }) => (
+      <li class="lab-card">
+        <h3><a href={notice.sourceUrl}>{notice.title}</a></h3>
+        <p><time datetime={notice.date}>{notice.date}</time> 게시 · <a href={sitePath('voc-studio/topics/' + notice.topic)}>문의 주제 보기</a></p>
+        <dl class="lab-facts">
+          <div><dt>게시 전 {beforeStart}~{beforeEnd}</dt><dd>{before}건</dd></div>
+          <div><dt>게시 후 {afterStart}~{afterEnd}</dt><dd>{after}건</dd></div>
+        </dl>
+      </li>
+    ))}</ul>
+  </> : <p>{verified ? '확인한 자료에서 표시 기준을 충족한 관찰이 없습니다.' : '공지 앞뒤의 공개 문의 수집 범위를 확인 중입니다.'}</p>}
+</section>

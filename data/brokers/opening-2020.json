@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mirae-asset",
+    "equity": 9346280,
+    "netIncome": 834323,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/02/25/001598/20220225003208/00660.htm",
+    "assets": 130946930,
+    "operatingIncome": 1117119
+  },
+  {
+    "id": "daishin",
+    "equity": 2077369,
+    "netIncome": 147019,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/03/10/002076/20220310004161/11011.htm",
+    "assets": 21503847,
+    "operatingIncome": 239239
+  },
+  {
+    "id": "kiwoom",
+    "equity": 2884912,
+    "netIncome": 706157,
+    "sourceUrl": "https://kind.krx.co.kr/external/2021/11/12/001307/20211112002727/11013.htm",
+    "assets": 37590936,
+    "operatingIncome": 968966
+  },
+  {
+    "id": "samsung",
+    "equity": 5317074,
+    "netIncome": 507787,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/02/18/000898/20220218002137/00591.htm",
+    "assets": 63869722,
+    "operatingIncome": 677961
+  },
+  {
+    "id": "meritz",
+    "equity": 4788783,
+    "netIncome": 565134,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/02/25/001157/20220225002430/00591.htm",
+    "assets": 43846991,
+    "operatingIncome": 827999
+  },
+  {
+    "id": "shinhan",
+    "equity": 4374092,
+    "netIncome": 154531,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/08/16/001736/20220816005503/11012.htm",
+    "assets": 46632433,
+    "operatingIncome": 374639
+  },
+  {
+    "id": "hana",
+    "equity": 4428957,
+    "netIncome": 410036,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm",
+    "assets": 35796518,
+    "operatingIncome": 481317
+  },
+  {
+    "id": "nh-investment",
+    "equity": 5802874,
+    "netIncome": 576878,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/03/04/000936/20220304002011/00591.htm",
+    "assets": 62738433,
+    "operatingIncome": 787251
+  },
+  {
+    "id": "korea-investment",
+    "equity": 5813741,
+    "netIncome": 707780,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/03/20/000966/20250320004224/11011.htm",
+    "assets": 60963784,
+    "operatingIncome": 760880
+  },
+  {
+    "id": "kb",
+    "equity": 4998020,
+    "netIncome": 433951,
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312522030348/d264832d6k.htm",
+    "assets": 57499659,
+    "operatingIncome": 578796
+  }
+]

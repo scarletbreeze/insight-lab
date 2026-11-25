@@ -1,0 +1,30 @@
+[
+  {
+    "start": "2026-11-23",
+    "through": "2026-11-25",
+    "title": "변동성 대응과 디지털자산 제도",
+    "questionSignal": "market-stability-nov-2026",
+    "relatedSignals": ["temporary-buyback-limit", "market-indicators-nov20-2026"],
+    "signals": [
+      "market-stability-nov-2026",
+      "temporary-buyback-limit",
+      "digital-asset-bill-nov-2026",
+      "consumer-survey-nov-2026",
+      "fintech-week-2026"
+    ]
+  },
+  {
+    "start": "2026-11-16",
+    "through": "2026-11-22",
+    "title": "전자금융 보안과 고객 자금 흐름",
+    "questionSignal": "electronic-finance-security-draft-nov-2026",
+    "relatedSignals": ["network-separation", "fsc-ai-model-change"],
+    "signals": [
+      "electronic-finance-security-draft-nov-2026",
+      "fintalk24-nov-2026",
+      "market-indicators-nov20-2026",
+      "international-investment-q3-2026",
+      "household-credit-q3-2026"
+    ]
+  }
+]

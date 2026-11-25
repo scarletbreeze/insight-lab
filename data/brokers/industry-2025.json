@@ -1,0 +1,18 @@
+{
+  "date": "2025-12-31",
+  "basis": "별도 재무제표",
+  "sourceName": "한국투자증권 KIND 공시 · 증권사별 재무현황",
+  "sourceUrl": "https://kind.krx.co.kr/external/2026/06/22/000654/20260622001497/10002.htm",
+  "companies": [
+    {"id":"korea-investment","name":"한국투자증권","assets":108144089,"liabilities":96981833,"equity":11162256,"capital":176007},
+    {"id":"mirae-asset","name":"미래에셋증권","assets":108787546,"liabilities":98373636,"equity":10413910,"capital":4101961},
+    {"id":"nh-investment","name":"NH투자증권","assets":79819843,"liabilities":71206971,"equity":8612872,"capital":1943851},
+    {"id":"samsung","name":"삼성증권","assets":72756324,"liabilities":65111810,"equity":7644514,"capital":458478},
+    {"id":"meritz","name":"메리츠증권","assets":72448026,"liabilities":64912750,"equity":7535277,"capital":818929},
+    {"id":"kb","name":"KB증권","assets":73886543,"liabilities":67193789,"equity":6692754,"capital":1493102},
+    {"id":"hana","name":"하나증권","assets":64484460,"liabilities":58383017,"equity":6101443,"capital":402162},
+    {"id":"kiwoom","name":"키움증권","assets":68807248,"liabilities":62725056,"equity":6082192,"capital":145225},
+    {"id":"shinhan","name":"신한투자증권","assets":52374800,"liabilities":46692438,"equity":5682362,"capital":1786998},
+    {"id":"daishin","name":"대신증권","assets":28797224,"liabilities":24665628,"equity":4131596,"capital":480382}
+  ]
+}

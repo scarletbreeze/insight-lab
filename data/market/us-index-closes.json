@@ -1,0 +1,242 @@
+{
+  "2024-11": {
+    "firstDate": "2024-11-01",
+    "lastDate": "2024-11-29",
+    "first": [5728.80, 18239.92],
+    "last": [6032.38, 19218.17],
+    "firstSource": "https://www.beacontrust.com/insights/recurring-publications/2024/november/beacon-weekly-investment-insights-11424",
+    "lastSource": "https://www.raymondjames.com/-/media/rj/advisor-sites/sites/f/a/faganfinancialgroup/files/2024-commentaries/equity-markets-carried-in-november-by-post-election-rally.pdf"
+  },
+  "2024-12": {
+    "firstDate": "2024-12-02",
+    "lastDate": "2024-12-31",
+    "first": [6047.15, 19403.95],
+    "last": [5881.63, 19310.79],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1733178179248.pdf&makeDt=2024.12.03&rMenuGb=SD",
+    "lastSource": "https://bbn.kiwoom.com/rfSD6455"
+  },
+  "2025-01": {
+    "firstDate": "2025-01-02",
+    "lastDate": "2025-01-31",
+    "first": [5868.55, 19280.79],
+    "last": [6040.53, 19627.44],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1735857746653.pdf&makeDt=2025.01.03&rMenuGb=SD",
+    "lastSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=8126"
+  },
+  "2025-02": {
+    "firstDate": "2025-02-03",
+    "lastDate": "2025-02-28",
+    "first": [5994.57, 19391.96],
+    "last": [5954.50, 18847.28],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1738620464701.pdf&makeDt=2025.02.04&rMenuGb=SD",
+    "lastSource": "https://documents.pse.com.ph/wp-content/uploads/sites/15/2025/03/foreignquote_022825.pdf"
+  },
+  "2025-03": {
+    "firstDate": "2025-03-03",
+    "lastDate": "2025-03-31",
+    "first": [5849.72, 18350.19],
+    "last": [5611.85, 17299.29],
+    "firstSource": "https://www.yna.co.kr/view/AKR20250304010452087",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1743459762940.pdf&makeDt=2025.04.01&rMenuGb=SD"
+  },
+  "2025-04": {
+    "firstDate": "2025-04-01",
+    "lastDate": "2025-04-30",
+    "first": [5633.07, 17449.89],
+    "last": [5569.06, 17446.34],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1743545747223.pdf&makeDt=2025.04.02&rMenuGb=SD",
+    "lastSource": "https://www.stifel.com/newsletters/adgraphics/fixed-income/Economics/2025-05-06_Economics_01.pdf"
+  },
+  "2025-05": {
+    "firstDate": "2025-05-01",
+    "lastDate": "2025-05-30",
+    "first": [5604.14, 17710.74],
+    "last": [5911.69, 19113.77],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1746138929408.pdf&makeDt=2025.05.02&rMenuGb=SD",
+    "lastSource": "https://www.skandia.com.mx/educacion-financiera/informes-economicos/Informes_Economicos/Boletin_Desempe%C3%B1o_Fondos_MAYO-2025.pdf"
+  },
+  "2025-06": {
+    "firstDate": "2025-06-02",
+    "lastDate": "2025-06-30",
+    "first": [5935.94, 19242.61],
+    "last": [6204.95, 20369.73],
+    "firstSource": "https://www.mncsekuritas.id/assetweb/files/MNCS_Fixed_Income_Report_Jun_3_2025.pdf",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1751323216104.pdf&makeDt=2025.07.01&rMenuGb=SD"
+  },
+  "2025-07": {
+    "firstDate": "2025-07-01",
+    "lastDate": "2025-07-31",
+    "first": [6198.01, 20202.89],
+    "last": [6339.39, 21122.45],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1751409762597.pdf&makeDt=2025.07.02&rMenuGb=SD",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1754000794373.pdf&makeDt=2025.08.01&rMenuGb=SD"
+  },
+  "2025-08": {
+    "firstDate": "2025-08-01",
+    "lastDate": "2025-08-29",
+    "first": [6238.01, 20650.13],
+    "last": [6460.26, 21455.55],
+    "firstSource": "https://m.ibks.com/iko/IKO01/download.do?attatchCd=ATTATCH1&gubun=DAIL&menuCode=IKO010101&seq=16553",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1756765909920.pdf&makeDt=2025.09.02&rMenuGb=SD"
+  },
+  "2025-09": {
+    "firstDate": "2025-09-02",
+    "lastDate": "2025-09-30",
+    "first": [6415.54, 21279.63],
+    "last": [6688.46, 22660.01],
+    "firstSource": "https://securities.miraeasset.com/bbs/maildownload/20250903073232140_3533",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1759270928480.pdf&makeDt=2025.10.01&rMenuGb=SD"
+  },
+  "2025-10": {
+    "firstDate": "2025-10-01",
+    "lastDate": "2025-10-31",
+    "first": [6711.20, 22755.16],
+    "last": [6840.20, 23724.96],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1759358405859.pdf&makeDt=2025.10.02&rMenuGb=SD",
+    "lastSource": "https://www.anbbank.com/market-commentaries/november-2025"
+  },
+  "2025-11": {
+    "firstDate": "2025-11-03",
+    "lastDate": "2025-11-28",
+    "first": [6851.97, 23834.72],
+    "last": [6849.09, 23365.69],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1762208808706.pdf&makeDt=2025.11.04&rMenuGb=SD",
+    "lastSource": "https://www.anbbank.com/market-commentaries/november-2025"
+  },
+  "2025-12": {
+    "firstDate": "2025-12-01",
+    "lastDate": "2025-12-31",
+    "first": [6812.63, 23275.92],
+    "last": [6845.50, 23241.99],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1764627860284.pdf&makeDt=2025.12.02&rMenuGb=SD",
+    "lastSource": "https://www.saeroin.com/insights/stock_view.inc.php?code=usa&gubun=overseas&idx=8997&pg=5&search_word=&type=view"
+  },
+  "2026-01": {
+    "firstDate": "2026-01-02",
+    "lastDate": "2026-01-30",
+    "first": [
+      6858.47,
+      23235.63
+    ],
+    "last": [
+      6939.03,
+      23461.82
+    ],
+    "firstSource": "https://portfolio-terminal.com/markets/stock-market-close/january-2-2026",
+    "lastSource": "https://portfolio-terminal.com/markets/stock-market-close/january-30-2026"
+  },
+  "2026-02": {
+    "firstDate": "2026-02-02",
+    "lastDate": "2026-02-27",
+    "first": [
+      6976.44,
+      23592.11
+    ],
+    "last": [
+      6878.88,
+      22668.21
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1770071328757.pdf&makeDt=2026.02.03&rMenuGb=SD",
+    "lastSource": "https://roancp.com/wp-content/uploads/2026/03/Market-Update-03-02-26.pdf"
+  },
+  "2026-03": {
+    "firstDate": "2026-03-02",
+    "lastDate": "2026-03-31",
+    "first": [
+      6881.62,
+      22748.86
+    ],
+    "last": [
+      6528.52,
+      21590.63
+    ],
+    "firstSource": "https://portfolio-terminal.com/markets/stock-market-close/march-2-2026",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1774995973560.pdf&makeDt=2026.04.01&rMenuGb=SD"
+  },
+  "2026-04": {
+    "firstDate": "2026-04-01",
+    "lastDate": "2026-04-30",
+    "first": [
+      6575.32,
+      21840.95
+    ],
+    "last": [
+      7209.01,
+      24892.31
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1775082609291.pdf&makeDt=2026.04.02&rMenuGb=SD",
+    "lastSource": "https://portfolio-terminal.com/markets/stock-market-close/april-30-2026"
+  },
+  "2026-05": {
+    "firstDate": "2026-05-01",
+    "lastDate": "2026-05-29",
+    "first": [
+      7230.12,
+      25114.44
+    ],
+    "last": [
+      7580.06,
+      26972.62
+    ],
+    "firstSource": "https://portfolio-terminal.com/markets/stock-market-close/may-1-2026",
+    "lastSource": "https://portfolio-terminal.com/markets/stock-market-close/may-29-2026"
+  },
+  "2026-06": {
+    "firstDate": "2026-06-01",
+    "lastDate": "2026-06-30",
+    "first": [
+      7599.96,
+      27086.81
+    ],
+    "last": [
+      7499.36,
+      26213.72
+    ],
+    "firstSource": "https://portfolio-terminal.com/markets/stock-market-close/june-1-2026",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1782858507411.pdf&makeDt=2026.07.01&rMenuGb=SD"
+  },
+  "2026-07": {
+    "firstDate": "2026-07-01",
+    "lastDate": "2026-07-31",
+    "first": [
+      7483.23,
+      26040.03
+    ],
+    "last": [
+      7489.72,
+      25373.85
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1782944898476.pdf&makeDt=2026.07.02&rMenuGb=SD",
+    "lastSource": "https://portfolio-terminal.com/markets/stock-market-close/july-31-2026"
+  },
+  "2026-08": {
+    "firstDate": "2026-08-03",
+    "lastDate": "2026-08-31",
+    "first": [
+      7600.5,
+      25913.9
+    ],
+    "last": [
+      7686.14,
+      26370.89
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1785796422477.pdf&makeDt=2026.08.04&rMenuGb=SD",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1788215599788.pdf&makeDt=2026.09.01&rMenuGb=SD"
+  },
+  "2026-09": {
+    "firstDate": "2026-09-01",
+    "lastDate": "2026-09-30",
+    "first": [7631.47, 26099.77],
+    "last": [7651.54, 26861.06],
+    "firstSource": "https://www.seattlepi.com/business/how-major-us-stock-indexes-fared-tuesday-9-1-2026-a22413275",
+    "lastSource": "https://www.eugenefn.com/common/files/amail/20261001_B_lee.jy_46.pdf"
+  },
+  "2026-10": {
+    "firstDate": "2026-10-01",
+    "lastDate": "2026-10-30",
+    "first": [7666.45, 26871.60],
+    "last": [7580.07, 25437.00],
+    "firstSource": "https://invest.kiwoom.com/inv/resource/202610/UploadFile_20261002080254000030.pdf",
+    "lastSource": "https://bbn.kiwoom.com/rfCC1729"
+  }
+}

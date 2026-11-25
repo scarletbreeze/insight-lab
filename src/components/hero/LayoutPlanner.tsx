@@ -4,16 +4,16 @@ import { screenByNumber } from '../../utils/hero';
 
 type Style = keyof typeof layouts.style;
 type Focus = keyof typeof layouts.focus;
+const derivativeFocus: Partial<Record<Focus, string>> = layouts.derivativeFocus;
+const overseasFocus: Partial<Record<Focus, string>> = layouts.overseasFocus;
 
 export default function LayoutPlanner({ screenBase }: { screenBase: string }) {
   const [monitors, setMonitors] = useState(1);
   const [style, setStyle] = useState<Style>('단타');
   const [focus, setFocus] = useState<Focus>('시황');
-  const isDerivative = style === '파생';
-  const focusScreen = layouts.focus[focus];
-  const supportsFocus = style !== '해외' && (!isDerivative || layouts.style.파생.includes(focusScreen));
+  const focusScreen = (style === '파생' ? derivativeFocus : style === '해외' ? overseasFocus : layouts.focus)[focus];
   const candidates = [
-    ...new Set([...(supportsFocus ? [focusScreen] : []), ...layouts.style[style]]),
+    ...new Set([...(focusScreen ? [focusScreen] : []), ...layouts.style[style]]),
   ];
   const panels = Array.from({ length: monitors }, (_, monitor) => (
     candidates.filter((_, index) => index % monitors === monitor)
@@ -38,21 +38,25 @@ export default function LayoutPlanner({ screenBase }: { screenBase: string }) {
           </select>
         </label>
       </div>
-      {!candidates.length ? <p className="empty-state" role="status">해외 화면 구성 자료 확인 중</p> : <>
-        {!supportsFocus && <p className="hero-status" role="status">선택한 스타일과 관심 분야에 모두 맞는 화면은 자료 확인 중입니다.</p>}
-        <div className="hero-grid monitor-grid" aria-label="모니터별 배치 예시">
+        {!focusScreen && <p className="hero-status" role="status">선택한 관심 분야의 전용 화면은 자료 확인 중입니다. 아래는 {style} 기본 배치입니다.</p>}
+        <div className="hero-grid monitor-grid" role="group" aria-label={`${monitors}대 모니터 화면 배치`}>
           {panels.map((panel, index) => (
             <section key={index} className="monitor">
               <h2>모니터 {index + 1}</h2>
-              {panel.length ? <ul>
-                {panel.map((number) => <li key={number}>
-                  <a href={screenBase + number + '/'}>{number} {screenByNumber(number).title}</a>
-                </li>)}
+              {panel.length ? <ul className="monitor-windows">
+                {panel.map((number) => {
+                  const screen = screenByNumber(number);
+                  return <li key={number} data-primary={number === focusScreen}>
+                    <a href={screenBase + number + '/'}>
+                      <small>{number} · {screen.screenType}</small>
+                      <strong>{screen.title}</strong>
+                    </a>
+                  </li>;
+                })}
               </ul> : <p>배정한 화면이 없습니다.</p>}
             </section>
           ))}
         </div>
-      </>}
     </section>
   );
 }

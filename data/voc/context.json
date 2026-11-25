@@ -1,0 +1,66 @@
+{
+  "relatedSignals": {
+    "dtcc-project-ion": ["overseas"],
+    "token-framework": ["products"],
+    "foreign-investor-registration": ["account", "auth"],
+    "treasury-clearing": ["overseas", "products"],
+    "nasdaq-dynamic-melo": ["orders", "overseas"],
+    "settlement-t1": ["overseas", "transfer"],
+    "spot-bitcoin-etp": ["products", "overseas"],
+    "network-separation": ["hts", "auth"],
+    "virtual-asset-protection": ["products"],
+    "mirae-overseas-disclosure-ai": ["hts", "overseas"],
+    "next-trade-license": ["orders", "hours", "hts"],
+    "short-selling-resumption": ["orders", "credit"],
+    "capital-licenses": ["products", "account"],
+    "hana-shinhan-paper": ["products"],
+    "treasury-clearing-extension": ["overseas", "products"],
+    "token-working-group": ["products"],
+    "token-rules-consultation": ["products", "orders"],
+    "nh-ima": ["products", "account"],
+    "ibkr-krx-nxt-access": ["hours", "orders"],
+    "kb-personal-open-api": ["hts", "orders"]
+  },
+  "events": [
+    {
+      "date": "2022-02-16",
+      "title": "국내주식 소수단위 거래 혁신금융서비스 지정",
+      "summary": "금융위원회는 주문을 모아 온주 단위로 거래하고 수익증권을 분할 발행하는 방식의 소수단위 거래 서비스를 지정했습니다.",
+      "sourceName": "금융위원회 혁신금융서비스 지정",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/77381",
+      "topics": ["orders", "products"]
+    },
+    {
+      "date": "2022-07-28",
+      "title": "불법공매도 적발과 처벌 강화 방안 발표",
+      "summary": "금융위원회와 관계기관은 불법공매도 조사·처벌과 공매도 제도 보완 방안을 발표했습니다.",
+      "sourceName": "금융위원회 관계기관 합동 발표",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/78193",
+      "topics": ["credit", "orders"]
+    },
+    {
+      "date": "2022-09-05",
+      "title": "물적분할 자회사 상장 관련 주주 보호 방안 발표",
+      "summary": "금융위원회는 공시 강화, 반대주주 주식매수청구권과 상장심사 개선을 포함한 방안을 발표했습니다.",
+      "sourceName": "금융위원회 일반주주 권익 제고 방안",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/78449",
+      "topics": ["products"]
+    },
+    {
+      "date": "2022-12-20",
+      "title": "물적분할 주식매수청구권 도입 시행령 개정안 통과",
+      "summary": "상장기업의 물적분할에 반대하는 주주에게 주식매수청구권을 부여하는 시행령 개정안이 국무회의를 통과했습니다.",
+      "sourceName": "금융위원회 시행령 개정 발표",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/79125",
+      "topics": ["products"]
+    },
+    {
+      "date": "2023-04-10",
+      "title": "미성년 자녀의 비대면 계좌 개설 안내",
+      "summary": "금융위원회는 법정대리권을 가진 부모가 자녀 명의의 금융계좌를 비대면 개설할 수 있도록 실명확인 가이드라인 개편을 안내했습니다. 서비스 시작 일정은 금융회사마다 달랐습니다.",
+      "sourceName": "금융위원회 비대면 계좌 개설 안내",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/79779",
+      "topics": ["account", "auth"]
+    }
+  ]
+}

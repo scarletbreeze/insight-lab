@@ -1,0 +1,70 @@
+---
+import data from '../../../data/market/annual-equity-rankings.json';
+import spyData from '../../../data/market/annual-spy-equity-rankings.json';
+import { sitePath } from '../../utils/paths';
+
+interface Equity {
+  name: string;
+  symbol: string;
+  returnPct: number;
+  firstDate: string;
+  lastDate: string;
+  sourceUrl: string;
+}
+interface Summary {
+  universe: string;
+  membership: 'point-in-time' | 'approximate';
+  membershipSourceUrl: string;
+  membershipSourceUrls?: string[];
+  eligibleCount: number;
+  universeCount: number;
+  priceMethod?: string;
+  excludedSymbols?: string[];
+  exclusions?: Record<string, number>;
+  corporateActionSources?: string[];
+  winner: Equity;
+  loser: Equity;
+  tenbaggers: Equity[];
+}
+type Market = 'KR' | 'US';
+interface Props { year: number; }
+const { year } = Astro.props;
+const summaries = (data as Record<string, Partial<Record<Market, Summary>>>)[String(year)];
+const spy = (spyData as Record<string, { US: Summary }>)[String(year)]?.US;
+const comparisons: Array<[string, Summary | undefined]> = [['한국', summaries?.KR], ['미국 · QQQ', summaries?.US]];
+if (spy) comparisons.push(['미국 · SPY', spy]);
+const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+---
+<section class="lab-block" id="annual-equity">
+  <h2>연간 종목 수익률</h2>
+  {summaries || spy ? <div class="lab-grid">
+    {comparisons.map(([label, summary]) => {
+      return <article class="lab-card">
+        <h3>{label}</h3>
+        {summary ? <>
+          <p>{summary.winner.firstDate}~{summary.winner.lastDate} · {summary.eligibleCount}/{summary.universeCount}개 계산</p>
+          <p><a href={summary.membershipSourceUrl}>{summary.universe}</a> · {summary.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'}</p>
+          {(summary.membershipSourceUrls ?? []).slice(1).map((url, index) => <p><a href={url}>구성종목 출처 {index + 2}</a></p>)}
+          {summary.priceMethod && <p>{summary.priceMethod}</p>}
+          {summary.excludedSymbols?.length && <details>
+            <summary>계산에서 제외한 종목 {summary.excludedSymbols.length}개</summary>
+            <ul>{Object.entries(summary.exclusions ?? {}).map(([reason, count]) => <li>{reason} · {count}개</li>)}</ul>
+            <p>{summary.excludedSymbols.join(' · ')}</p>
+            {summary.corporateActionSources?.map((url) => <p><a href={url}>기업행동 공시</a></p>)}
+          </details>}
+          <dl class="lab-facts">
+            {([['Winner · 수익률 최고', [summary.winner]], ['Loser · 수익률 최저', [summary.loser]], ['Tenbagger · 10배 이상', summary.tenbaggers]] as Array<[string, Equity[]]>).map(([label, equities]) => (
+              <div>
+                <dt>{label}</dt>
+                {equities.length ? equities.map(({ name, symbol, returnPct, sourceUrl }) => (
+                  <dd>{name} ({symbol}) · {format.format(returnPct)}% · <a href={sourceUrl}>가격 출처</a></dd>
+                )) : <dd>계산 대상에서 없음</dd>}
+              </div>
+            ))}
+          </dl>
+        </> : <p>자료 확인 중</p>}
+      </article>;
+    })}
+  </div> : <p>Winner, Loser, Tenbagger를 계산할 연초 구성종목과 조정 종가를 확인 중입니다.</p>}
+  <p><a href={sitePath('market-time-capsule/equity-data')}>종목 수익률 산정 기준</a></p>
+</section>

@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-26",
+  "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+  "scope": "2026년 11월 25일 저장한 공개 목록 첫 두 페이지",
+  "inquiries": 14,
+  "insufficientTitle": 6,
+  "rows": [
+    {"subject":"고객확인 재등록","expected":"auth","actual":"hts"},
+    {"subject":"파생상품 API 주문","expected":"orders","actual":"orders"},
+    {"subject":"차트 표시 가격","expected":"hts","actual":"hts"},
+    {"subject":"인증서","expected":"auth","actual":"auth"},
+    {"subject":"간편인증","expected":"auth","actual":"auth"},
+    {"subject":"연금계좌 입금","expected":"transfer","actual":"transfer"},
+    {"subject":"장전 분봉 표시","expected":"hts","actual":"ambiguous"},
+    {"subject":"매도대금 담보대출","expected":"credit","actual":"unclassified"}
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "date": "2026-09-30",
+  "basis": "별도 재무제표",
+  "scope": "분기보고서 수록 10개사 자본총계 순위",
+  "companies": [
+    {
+      "id": "korea-investment",
+      "name": "한국투자증권",
+      "assets": 124488810,
+      "liabilities": 110936609,
+      "equity": 13552201,
+      "capital": 176157,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001340",
+      "sourceName": "한국투자증권 2026년 3분기보고서"
+    },
+    {
+      "id": "mirae-asset",
+      "name": "미래에셋증권",
+      "assets": 121243431,
+      "liabilities": 110657076,
+      "equity": 10586355,
+      "capital": 4123213,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002051",
+      "sourceName": "미래에셋증권 2026년 3분기보고서"
+    },
+    {
+      "id": "nh-investment",
+      "name": "NH투자증권",
+      "assets": 90618048,
+      "liabilities": 80519569,
+      "equity": 10098479,
+      "capital": 2008159,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000872",
+      "sourceName": "NH투자증권 2026년 3분기보고서"
+    },
+    {
+      "id": "kb",
+      "name": "KB증권",
+      "assets": 85011907,
+      "liabilities": 76147623,
+      "equity": 8864284,
+      "capital": 1943537,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001123",
+      "sourceName": "KB증권 2026년 3분기보고서"
+    },
+    {
+      "id": "samsung",
+      "name": "삼성증권",
+      "assets": 77255835,
+      "liabilities": 68788296,
+      "equity": 8467539,
+      "capital": 458478,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001244",
+      "sourceName": "삼성증권 2026년 3분기보고서"
+    },
+    {
+      "id": "meritz",
+      "name": "메리츠증권",
+      "assets": 80969187,
+      "liabilities": 72502748,
+      "equity": 8466439,
+      "capital": 818929,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001503",
+      "sourceName": "메리츠증권 2026년 3분기보고서"
+    },
+    {
+      "id": "kiwoom",
+      "name": "키움증권",
+      "assets": 84211490,
+      "liabilities": 76591377,
+      "equity": 7620113,
+      "capital": 145225,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001559",
+      "sourceName": "키움증권 2026년 3분기보고서"
+    },
+    {
+      "id": "hana",
+      "name": "하나증권",
+      "assets": 69418546,
+      "liabilities": 62306159,
+      "equity": 7112387,
+      "capital": 402162,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001337",
+      "sourceName": "하나증권 2026년 3분기보고서"
+    },
+    {
+      "id": "shinhan",
+      "name": "신한투자증권",
+      "assets": 56320586,
+      "liabilities": 50393269,
+      "equity": 5927317,
+      "capital": 1786998,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000557",
+      "sourceName": "신한투자증권 2026년 3분기보고서"
+    },
+    {
+      "id": "daishin",
+      "name": "대신증권",
+      "assets": 31766556,
+      "liabilities": 27358235,
+      "equity": 4408321,
+      "capital": 480382,
+      "sourceUrl": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001261",
+      "sourceName": "대신증권 2026년 3분기보고서"
+    }
+  ]
+}

@@ -1,23 +1,120 @@
 ---
+import VocYearNavigation from '../../../components/voc/VocYearNavigation.astro';
 import VocLayout from '../../../components/voc/VocLayout.astro';
 import NoticeList from '../../../components/voc/NoticeList.astro';
-import { summarizeVocYear, vocYears } from '../../../utils/voc';
+import VocKeywords from '../../../components/voc/VocKeywords';
+import NoticeInquiryObservations from '../../../components/voc/NoticeInquiryObservations.astro';
+import VocContextList from '../../../components/voc/VocContextList.astro';
+import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
+import { hasCompleteInquiryYear, noticeInquiryObservations, publicNoticeObservations, summarizeVocYear, vocContext, vocIntents, vocYears } from '../../../utils/voc';
 import { sitePath } from '../../../utils/paths';
+import { generalNoticeYear, publicBoardTopics, publicBoardYear } from '../../../utils/voc-public-board';
 
 export function getStaticPaths() {
   return vocYears.map(({ year }) => ({ params: { year: String(year) }, props: { year } }));
 }
 const { year } = Astro.props;
-const { coverage, selectedPosts, selectedNotices, topicCounts } = summarizeVocYear(year);
+const { coverage, selectedPosts, selectedNotices, topicCounts, keywords } = summarizeVocYear(year);
+const previous = summarizeVocYear(year - 1);
+const publicWindows = publicNoticeObservations(year);
+const observations = publicWindows.covered ? publicWindows.items : noticeInquiryObservations(coverage, selectedNotices, selectedPosts);
+const complete = hasCompleteInquiryYear(coverage);
+const comparable = complete && hasCompleteInquiryYear(previous.coverage)
+  && coverage?.collectionId === previous.coverage?.collectionId;
+const noticeCounts = [...new Set(selectedNotices.map(({ category }) => category))]
+  .map((category) => ({ category, count: selectedNotices.filter((notice) => notice.category === category).length }))
+  .sort((a, b) => b.count - a.count);
+const context = vocContext.filter(({ date }) => date.startsWith(String(year)));
+const boardCount = publicBoardYear(year);
+const boardTopics = publicBoardTopics(year);
+const generalNoticeCount = generalNoticeYear(year);
+const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.isFullYear
+  ? publicBoardTopics(year - 1) : undefined;
 ---
 <VocLayout title={year + '년 고객 문의와 공지'}>
-  <p slot="intro">{coverage?.period}</p>
-  <section class="lab-block"><h2>공개 문의 표본</h2>
+  <p slot="intro">{boardCount ? `공개 고객게시판 원글 ${boardCount.total.toLocaleString('ko-KR')}건과 키움증권 공지를 살펴봅니다. ${boardCount.label}.` : coverage?.period}</p>
+  <VocYearNavigation selected={year} />
+  {boardCount && <section class="lab-block">
+    <h2>공개 고객게시판 원글 {boardCount.total.toLocaleString('ko-KR')}건</h2>
+    <p>{boardCount.label} · 게시판의 분류 기준</p>
+    <ul class="lab-list">
+      {Object.entries(boardCount.categories).sort(([, a], [, b]) => b - a).map(([category, count]) => <li>
+        <strong>{category}</strong> · {count.toLocaleString('ko-KR')}건 ({(count / boardCount.total * 100).toFixed(1)}%)
+        <meter min="0" max={boardCount.total} value={count} aria-label={category + ' 원글 비중'}></meter>
+      </li>)}
+    </ul>
+    <a href={sitePath('voc-studio/methodology') + '#public-board-sample'}>수집 범위와 출처</a>
+  </section>}
+  {boardTopics && <section class="lab-block">
+    <h2>공개 문의 주제 Top 10</h2>
+    <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
+    <ol class="lab-list">
+      {boardTopics.ranked.slice(0, 10).map(({ id, label, count }) => {
+        const priorCount = priorBoardTopics?.ranked.find((topic) => topic.id === id)?.count ?? 0;
+        const examples = selectedPosts.filter(({ topic }) => topic === id).slice(0, 2);
+        return <li>
+          <strong><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></strong> · {count.toLocaleString('ko-KR')}건 ({(count / boardTopics.total * 100).toFixed(1)}%)
+          {priorCount > 0 && ` · 전년 대비 ${((count / priorCount - 1) * 100).toLocaleString('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 })}%`}
+          <meter min="0" max={boardTopics.total} value={count} aria-label={label + ' 문의 비중'}></meter>
+          {examples.length > 0 && <ul>{examples.map(({ summary, subtopic, date, reviewMethod }) => <li>
+            <time datetime={date}>{date}</time> · {subtopic && `${subtopic} · `}{summary}
+            {reviewMethod === 'title-template' && <small> · 제목 기반</small>}
+          </li>)}</ul>}
+        </li>;
+      })}
+    </ol>
+    <a href={sitePath('voc-studio/methodology') + '#board-topics'}>자동 분류 기준</a>
+  </section>}
+  {boardTopics && <section class="lab-block">
+    <h2>월별 문의 추이</h2>
+    <p>제목과 본문 용어가 한 주제로 분류된 원글의 월별 건수입니다.</p>
+    <VocMonthlyTrends {year} />
+  </section>}
+  <section class="lab-block">
+    <h2>{complete ? '문의 주제 Top 10' : '공개 문의 표본'}</h2>
+    {complete && <p>{coverage?.collectionStart}~{coverage?.collectionEnd} · 총 {selectedPosts.length}건</p>}
+    {complete && topicCounts.length > 0 && <ol class="lab-list">
+      {topicCounts.slice(0, 10).map(({ id, label, count }) => {
+        const priorCount = previous.topicCounts.find((topic) => topic.id === id)?.count ?? 0;
+        const examplePosts = selectedPosts.filter(({ topic }) => topic === id).slice(0, 3);
+        return <li class="lab-card">
+          <h3><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
+          <p>{count}건{comparable && (priorCount ? ' · 전년 대비 ' + ((count / priorCount - 1) * 100).toFixed(1) + '%' : ' · 전년 수록 0건')}</p>
+          <ul>{examplePosts.map(({ date, summary, subtopic, intent, sourceUrl }) => <li>
+            <time datetime={date}>{date}</time> · {subtopic ?? vocIntents[intent] ?? label} · {summary} · <a href={sourceUrl}>공개 게시판</a>
+          </li>)}</ul>
+        </li>;
+      })}
+    </ol>}
+    {complete && !selectedPosts.length && <p role="status">확인 범위에 집계 대상 문의가 없습니다.</p>}
+    {!complete && <>
     {selectedPosts.length ? <>
-      <p>확인한 표본 {selectedPosts.length}건의 주제입니다. 전체 문의량과 연도별 순위는 자료 확인 중입니다.</p>
+      <p>공개 목록에서 확인한 문의 예시 {selectedPosts.length}건입니다.</p>
       <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={sitePath('voc-studio/topics/' + id)}>{label} · {count}건</a></li>)}</ul>
-      <ul class="lab-list">{selectedPosts.map(({ date, summary, sourceUrl }) => <li><time datetime={date}>{date}</time> {summary} · <a href={sourceUrl}>공개 게시판</a></li>)}</ul>
+      <ul class="lab-list">{selectedPosts.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li>
+        <time datetime={date}>{date}</time> · {subtopic ?? vocIntents[intent]} · {summary} · {reviewMethod === 'title-template' && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a>
+      </li>)}</ul>
     </> : <p class="empty-state">문의 자료 확인 중</p>}
+    </>}
   </section>
-  <section class="lab-block"><h2>키움 공지 타임라인</h2><NoticeList items={selectedNotices} /></section>
+  <section class="lab-block">
+    <h2>{complete ? '문의 키워드' : '수록 문의 키워드'}</h2>
+    <VocKeywords {keywords} />
+  </section>
+  <section class="lab-block">
+    <h2>키움 공지 타임라인</h2>
+    {generalNoticeCount !== undefined && <p>일반 공지 등록 {generalNoticeCount.toLocaleString('ko-KR')}건 · {boardCount?.label}. 아래는 선별 공지입니다.</p>}
+    {noticeCounts.length > 0 && <>
+      <p>수록한 공지 {selectedNotices.length}건의 분류입니다.</p>
+      <ul class="lab-list">
+        {noticeCounts.map(({ category, count }) => <li>
+          <strong>{category}</strong> · {count}건
+          <meter min="0" max={selectedNotices.length} value={count} aria-label={category + ' 공지 수'}></meter>
+        </li>)}
+      </ul>
+    </>}
+    <NoticeList items={selectedNotices} />
+  </section>
+  <NoticeInquiryObservations items={observations} verified={publicWindows.covered || coverage?.questionCoverage === 'verified'} automated={publicWindows.covered} />
+  <VocContextList title="같은 해 시장·제도 변화" items={context} linkTopics />
 </VocLayout>

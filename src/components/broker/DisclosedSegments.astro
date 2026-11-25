@@ -1,0 +1,54 @@
+---
+import filings from '../../../data/brokers/disclosed-segments.json';
+
+interface Props { brokerId: string; }
+interface Filing {
+  basis: string;
+  unit: string;
+  metric: string;
+  years: number[];
+  sourceName: string;
+  sourceUrl: string;
+  segments: { name: string; amounts: number[] }[];
+  total: number[];
+}
+const { brokerId } = Astro.props;
+const filing = (filings as Record<string, Filing>)[brokerId];
+const latestIndex = filing ? filing.years.length - 1 : 0;
+const segments = [...(filing?.segments ?? [])].sort((a, b) => b.amounts[latestIndex] - a.amounts[latestIndex]);
+const scale = Math.max(1, ...segments.map(({ amounts }) => Math.abs(amounts[latestIndex])));
+const format = (amount: number) => (amount / (filing.unit === '백만원' ? 100 : 100_000))
+  .toLocaleString('ko-KR', { maximumFractionDigits: 1 });
+---
+{filing && <section class="lab-block">
+  <h2>공시 부문별 {filing.metric}</h2>
+  <p>{filing.basis} · 단위 억 원. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
+  <figure>
+    <figcaption>{filing.years[latestIndex]}년 부문별 {filing.metric} · 억 원</figcaption>
+    <ul class="segments">{segments.map(({ name, amounts }) => <li>
+      <span>{name}</span>
+      <span class="track" aria-hidden="true"><i class:list={[{ negative: amounts[latestIndex] < 0 }]} style={{ width: Math.abs(amounts[latestIndex]) / scale * 50 + '%' }}></i></span>
+      <span class="amount">{format(amounts[latestIndex])}</span>
+    </li>)}</ul>
+  </figure>
+  <div class="lab-table-wrap">
+    <table class="lab-table">
+      <thead><tr><th scope="col">공시 부문</th>{filing.years.map((year) => <th scope="col">{year}년</th>)}</tr></thead>
+      <tbody>{filing.segments.map(({ name, amounts }) => <tr>
+        <th scope="row">{name}</th>{amounts.map((value) => <td>{format(value)}</td>)}
+      </tr>)}</tbody>
+      <tfoot><tr><th scope="row">연결 합계</th>{filing.total.map((value) => <td>{format(value)}</td>)}</tr></tfoot>
+    </table>
+  </div>
+  <p><a href={filing.sourceUrl}>{filing.sourceName}</a></p>
+</section>}
+<style>
+  figure { margin: 1rem 0; }
+  .segments { list-style: none; padding: 0; }
+  .segments li { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(3rem, 2fr) auto; gap: .5rem; align-items: center; }
+  .track { position: relative; height: 1.25rem; }
+  .track::before { content: ''; position: absolute; left: 50%; height: 100%; border-left: 1px solid var(--color-muted); }
+  .track i { position: absolute; top: 25%; height: 50%; left: 50%; background: var(--color-accent-blue); }
+  .track i.negative { left: auto; right: 50%; background: var(--color-accent-red); }
+  .amount { font-variant-numeric: tabular-nums; text-align: right; }
+</style>

@@ -1,0 +1,170 @@
+{
+  "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZView",
+  "start": "2022-01-01",
+  "end": "2026-11-25",
+  "pages": 222,
+  "oldestObserved": "2021-12-22",
+  "yearCounts": {
+    "2022": 481,
+    "2023": 666,
+    "2024": 699,
+    "2025": 730,
+    "2026": 738
+  },
+  "notices": [
+    {
+      "id": "general-9529",
+      "date": "2026-10-02",
+      "dateType": "published",
+      "title": "전문투자자 신청 안내(정부24 공동인증서 인증 불가)",
+      "topic": "auth",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=9529"
+    },
+    {
+      "id": "general-9399",
+      "date": "2026-08-10",
+      "dateType": "published",
+      "title": "미국주식 실시간 소수점 주문 오픈 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=9399"
+    },
+    {
+      "id": "general-9274",
+      "date": "2026-06-23",
+      "dateType": "published",
+      "title": "2026/07/06 (월) 실시간 환전 시간 확대 및 가환율 고시기준 변경 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=9274"
+    },
+    {
+      "id": "general-9183",
+      "date": "2026-05-15",
+      "dateType": "published",
+      "title": "[영웅문SG/ 영웅문SF / 계좌개설] 안드로이드/아이폰 최소지원 변경 안내",
+      "topic": "hts",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=9183"
+    },
+    {
+      "id": "general-8245",
+      "date": "2025-02-27",
+      "dateType": "published",
+      "title": "대체거래소 넥스트레이드(NXT) 도입으로 인한 국내주식 수수료율 변경 안내",
+      "topic": "fees",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=8245"
+    },
+    {
+      "id": "general-8244",
+      "date": "2025-02-26",
+      "dateType": "published",
+      "title": "대체거래소 오픈에 따른 원화주문서비스 이용 고객 안내",
+      "topic": "orders",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=8244"
+    },
+    {
+      "id": "general-8231",
+      "date": "2025-02-20",
+      "dateType": "published",
+      "title": "대체거래소 오픈 안내 사항(3/4 오전 10시 오픈 예정)",
+      "topic": "hours",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=8231"
+    },
+    {
+      "id": "general-8004",
+      "date": "2024-11-13",
+      "dateType": "published",
+      "title": "2025학년도 대학수학능력시험(11/14) 실시에 따른 정산환율 고시시각 및 실시간 환전시간 변경 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=8004"
+    },
+    {
+      "id": "general-7691",
+      "date": "2024-06-27",
+      "dateType": "published",
+      "title": "07/04(목) 실시간 환전 시간 확대 및 가환율 고시기준 변경 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7691"
+    },
+    {
+      "id": "general-7239",
+      "date": "2023-11-06",
+      "dateType": "published",
+      "title": "2024학년도 대학수학능력시험(11/16) 실시에 따른 정산환율 고시시각 및 실시간 환전시간 변경 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7239"
+    },
+    {
+      "id": "general-6775",
+      "date": "2023-03-17",
+      "dateType": "published",
+      "title": "03/18 싸인코리아 공동인증서 서비스 제한 안내",
+      "topic": "auth",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6775"
+    },
+    {
+      "id": "general-6694",
+      "date": "2023-01-20",
+      "dateType": "published",
+      "title": "[환전] 가환전 정산환율 기준 변경의 건 (원화주문서비스 정산 / 야간 및 공휴일 가환전 정산)",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6694"
+    },
+    {
+      "id": "general-6664",
+      "date": "2022-12-23",
+      "dateType": "published",
+      "title": "연말(2022년) 및 연초(2023년) 가환율 환전 정산기준 및 환전시간 변경 안내",
+      "topic": "overseas",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6664"
+    },
+    {
+      "id": "general-6355",
+      "date": "2022-05-03",
+      "dateType": "published",
+      "title": "5/07 (토) 공동인증서 서비스 일시중단 안내",
+      "topic": "auth",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6355"
+    }
+  ]
+}

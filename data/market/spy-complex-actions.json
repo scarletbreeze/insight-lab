@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2017-01-30",
+    "symbols": [
+      "VAR"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/203527/000119312517022651/d337397d8k.htm"
+  },
+  {
+    "date": "2017-04-03",
+    "symbols": [
+      "HPE"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1645590/000162828017012383/hpe-10312017x10k.htm"
+  },
+  {
+    "date": "2017-06-01",
+    "symbols": [
+      "TGNA"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/39899/000003989918000011/tgna-20171231x10k.htm"
+  },
+  {
+    "date": "2017-09-01",
+    "symbols": [
+      "HPE"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1645590/000162828017012383/hpe-10312017x10k.htm"
+  },
+  {
+    "date": "2017-12-05",
+    "symbols": [
+      "DLPH"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1707092/000119312517364954/d494581d8k.htm"
+  }
+]

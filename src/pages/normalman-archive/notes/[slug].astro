@@ -1,18 +1,26 @@
 ---
 import ArchiveLayout from '../../../components/archive/ArchiveLayout.astro';
-import { notes } from '../../../utils/archive';
+import { archiveContentLabels, notes } from '../../../utils/archive';
+import NoteList from '../../../components/archive/NoteList.astro';
 import { sitePath } from '../../../utils/paths';
 
 export function getStaticPaths() {
   return notes.map((note) => ({ params: { slug: note.slug }, props: { note } }));
 }
 const { note } = Astro.props;
+const related = notes.filter((item) => item.slug !== note.slug && item.tags.some((tag) => note.tags.includes(tag))).slice(0, 4);
 ---
 <ArchiveLayout title={note.title}>
-  <p slot="intro"><time datetime={note.date}>{note.date}</time> · Original</p>
+  <p slot="intro"><time datetime={note.date}>{note.date}</time> · {archiveContentLabels[note.contentType]}</p>
   <section class="lab-block">
     <h2>공개 원문</h2>
-    <a href={note.sourceUrl}>기존 GitHub 블로그의 글 읽기</a>
+    <p>{note.summary}</p>
+    {note.originalDate !== note.date && <p>원문 작성일 <time datetime={note.originalDate}>{note.originalDate}</time></p>}
+    <p><a href={note.sourceUrl}>{note.sourceType}에서 원문 읽기</a> · 기록 갱신일 <time datetime={note.lastUpdated}>{note.lastUpdated}</time></p>
     <ul class="lab-chips">{note.tags.map((tag) => <li><a href={sitePath('normalman-archive/tags/' + encodeURIComponent(tag))}>{tag}</a></li>)}</ul>
   </section>
+  {related.length > 0 && <section class="lab-block">
+    <h2>같은 주제의 기록</h2>
+    <NoteList items={related} />
+  </section>}
 </ArchiveLayout>

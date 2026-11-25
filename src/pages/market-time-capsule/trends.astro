@@ -1,0 +1,60 @@
+---
+import MarketLayout from '../../components/market/MarketLayout.astro';
+import MarketTrends from '../../components/market/MarketTrends';
+import data from '../../../data/market/months/snapshots.json';
+import benchmarkData from '../../../data/market/us-annual-benchmarks.json';
+import { gold, koreaAnnualCloses, koreaAnnualSource, koreaMonthlyCloses, usMonthlyCloses, years } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+
+type SeriesId = keyof typeof data.series;
+const entries = Object.entries(data.months) as [string, Partial<Record<SeriesId, { last: number; lastDate: string }>>][];
+const fredSeries = (Object.keys(data.series) as SeriesId[]).map((id) => ({
+  id,
+  ...data.series[id],
+  observationLabel: '월별 마지막 관측값',
+  sourceUrl: 'https://fred.stlouisfed.org/series/' + id,
+  sourceName: 'FRED',
+  points: entries.flatMap(([period, readings]) => {
+    const reading = readings[id];
+    return reading ? [{ period, date: reading.lastDate, value: reading.last }] : [];
+  }),
+}));
+const domesticSeries = ['KOSPI', 'KOSDAQ'].map((label, index) => ({
+  id: label.toLowerCase(), label, unit: '포인트', observationLabel: '연말 종가',
+  points: years.flatMap((year) => {
+    const value = koreaAnnualCloses[String(year)]?.[index];
+    return value == null ? [] : [{
+      period: String(year), date: year + '년 말', value, sourceUrl: koreaAnnualSource(year),
+    }];
+  }),
+}));
+const usSeries = Object.entries(benchmarkData).map(([id, { label, years: values, sourceName, sourceUrl }]) => ({
+  id, label, unit: '%', observationLabel: '연간 가격 수익률', sourceName, sourceUrl,
+  points: Object.entries(values).map(([period, value]) => ({ period, date: period + '년 말', value })),
+}));
+const monthlyIndexSeries = [
+  { market: 'kr', labels: ['KOSPI', 'KOSDAQ'], snapshots: koreaMonthlyCloses },
+  { market: 'us', labels: ['S&P 500', 'Nasdaq Composite'], snapshots: usMonthlyCloses },
+].flatMap(({ market, labels, snapshots }) => labels.map((name, index) => ({
+  id: market + '-monthly-' + index,
+  label: name + ' · 월별',
+  unit: '포인트',
+  observationLabel: '월말 종가',
+  points: Object.entries(snapshots).sort(([a], [b]) => a.localeCompare(b)).flatMap(([period, snapshot]) => {
+    const value = snapshot?.last[index];
+    return value == null || !snapshot ? [] : [{ period, value, date: snapshot.lastDate, sourceUrl: snapshot.lastSource }];
+  }),
+})));
+const series = [...fredSeries, {
+  id: 'gold', label: '금 가격', unit: 'USD/트로이온스', observationLabel: '월평균',
+  sourceUrl: gold.sourceUrl, sourceName: gold.sourceName,
+  points: Object.entries(gold.months).flatMap(([period, value]) => value === undefined ? [] : [{ period, date: period, value }]),
+}, ...monthlyIndexSeries, ...domesticSeries, ...usSeries];
+---
+<MarketLayout title="시장 지표 추이">
+  <p slot="intro">국내·미국 지수의 월말 종가, 국내 연말 종가와 미국 연간 등락률을 살펴봅니다. 국채금리·유가·환율·금 가격도 비교할 수 있습니다.</p>
+  <section class="lab-block">
+    <p>수집 기준일 {data.through} · 마지막 월은 월 중간 집계일 수 있습니다.</p>
+    <MarketTrends client:load {series} {years} base={sitePath('market-time-capsule')} />
+  </section>
+</MarketLayout>

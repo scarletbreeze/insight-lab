@@ -28,8 +28,43 @@ a.lab-card:hover { border-color: var(--lab-accent); color: var(--lab-accent); }
 .lab-card[hidden] { display: none; }
 .lab-card dl { display: grid; gap: .25rem; }
 .lab-card dl dt { color: var(--color-muted); margin-top: .4rem; font-size: .9rem; }
-.equity-trend { max-width: 38rem; padding-block: .75rem; }
-.equity-trend figcaption { color: var(--color-muted); margin-bottom: .5rem; }
-.equity-trend li { display: grid; grid-template-columns: 3.5rem minmax(0, 1fr) minmax(7rem, auto); gap: .6rem; align-items: center; margin-block: .5rem; }
-.equity-track { display: block; height: .65rem; background: var(--color-panel); }
-.equity-track span { display: block; height: 100%; background: var(--lab-accent); }
+.trend-year { border-bottom: 1px solid var(--color-rule); }
+.trend-year > strong { color: var(--color-muted); }
+.trend-row { display: flex; gap: .55rem; align-items: center; padding-block: .25rem; }
+.trend-row > span:first-child:not(.trend-track) { min-width: 6.5rem; }
+.trend-row > span:last-child { min-width: 6rem; font-size: .85rem; }
+.trend-track { flex: 1; min-width: 2.5rem; height: .6rem; background: var(--color-panel); }
+.trend-track > span { display: block; height: 100%; background: var(--lab-accent); border-radius: .1rem; }
+.trend-track > span[data-negative="true"] { background: var(--color-accent-red); }
+.market-trend-row { display: grid; grid-template-columns: 4.5rem minmax(2.5rem, 1fr) minmax(5rem, 8rem); align-items: center; gap: .6rem; border-bottom: 1px solid var(--color-rule); }
+.market-trend-row small { display: block; color: var(--color-muted); }
+.market-trend-track { position: relative; }
+.market-trend-track > span, .market-trend-track > i { position: absolute; }
+.market-trend-track > i { top: -.2rem; bottom: -.2rem; border-inline-start: 1px solid var(--color-muted); }
+.money-flows { display: grid; gap: .65rem; margin-block: .8rem; }
+.money-flow { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto minmax(0, 1fr); gap: .4rem; align-items: stretch; }
+.money-flow div { display: grid; gap: .3rem; padding: .7rem; background: var(--color-panel); border: 1px solid var(--color-rule); border-radius: .25rem; overflow-wrap: anywhere; }
+.money-flow div span { color: var(--color-muted); font-size: .75rem; }
+.money-arrow { align-self: center; color: var(--lab-accent); }
+@media (max-width: 500px) {
+  .money-flow { gap: .18rem; }
+  .money-flow div { padding: .45rem; font-size: .82rem; }
+}
+.broker-overview-facts { margin: .15rem 0 0; }
+.broker-overview-facts dt { margin-top: 0; }
+.broker-overview-facts div { display: flex; flex-wrap: wrap; gap: .15rem .5rem; justify-content: space-between; align-items: baseline; }
+.broker-profit-row { display: grid; grid-template-columns: minmax(7rem, 1fr) minmax(2.5rem, 2fr) max-content max-content; }
+.broker-profit-leaders { margin-block: .9rem; }
+.voc-keywords { align-items: baseline; }
+.voc-keywords > li { display: inline-flex; align-items: baseline; gap: .38rem; padding-inline: .65rem; }
+.voc-keywords span { color: var(--color-muted); font-size: .78rem; }
+@media (max-width: 40rem) {
+  .broker-profit-row { grid-template-columns: minmax(0, 1fr) max-content max-content; }
+  .broker-profit-row .trend-track { grid-column: 1 / -1; grid-row: 2; }
+}
+.market-era:has(.market-era-label) { margin-top: .65rem; padding: .65rem .8rem; border-inline-start: 3px solid var(--lab-accent); background: var(--color-panel); }
+.market-era .market-era-label { line-height: 1.3; margin-block: 0; color: var(--lab-accent); }
+.market-era-terminal .market-era-label { font-family: var(--font-mono); }
+.market-era-portal:has(.market-era-label) { border-block-start: 3px solid var(--lab-accent); }
+.market-era-blog:has(.market-era-label) { border-inline-start-style: double; }
+.market-era-mobile:has(.market-era-label), .market-era-finance:has(.market-era-label) { border-radius: .3rem; }

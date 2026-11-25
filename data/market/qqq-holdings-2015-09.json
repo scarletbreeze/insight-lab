@@ -1,0 +1,443 @@
+{
+  "asOf": "2015-09-30",
+  "fund": "PowerShares QQQ Trust",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm",
+  "members": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple, Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corp."
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc."
+    },
+    {
+      "symbol": "GOOG",
+      "name": "Google, Inc., Class C"
+    },
+    {
+      "symbol": "FB",
+      "name": "Facebook, Inc., Class A"
+    },
+    {
+      "symbol": "GOOGL",
+      "name": "Google, Inc., Class A"
+    },
+    {
+      "symbol": "GILD",
+      "name": "Gilead Sciences, Inc."
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel Corp."
+    },
+    {
+      "symbol": "CSCO",
+      "name": "Cisco Systems, Inc."
+    },
+    {
+      "symbol": "CMCSA",
+      "name": "Comcast Corp., Class A"
+    },
+    {
+      "symbol": "AMGN",
+      "name": "Amgen, Inc."
+    },
+    {
+      "symbol": "WBA",
+      "name": "Walgreens Boots Alliance, Inc."
+    },
+    {
+      "symbol": "KHC",
+      "name": "Kraft Heinz Co. (The)"
+    },
+    {
+      "symbol": "CELG",
+      "name": "Celgene Corp."
+    },
+    {
+      "symbol": "QCOM",
+      "name": "QUALCOMM, Inc."
+    },
+    {
+      "symbol": "SBUX",
+      "name": "Starbucks Corp."
+    },
+    {
+      "symbol": "BIIB",
+      "name": "Biogen, Inc."
+    },
+    {
+      "symbol": "MDLZ",
+      "name": "Mondelez International, Inc., Class A"
+    },
+    {
+      "symbol": "COST",
+      "name": "Costco Wholesale Corp."
+    },
+    {
+      "symbol": "PCLN",
+      "name": "Priceline Group, Inc. (The)"
+    },
+    {
+      "symbol": "ESRX",
+      "name": "Express Scripts Holding Co."
+    },
+    {
+      "symbol": "TXN",
+      "name": "Texas Instruments, Inc."
+    },
+    {
+      "symbol": "REGN",
+      "name": "Regeneron Pharmaceuticals, Inc."
+    },
+    {
+      "symbol": "NFLX",
+      "name": "Netflix, Inc."
+    },
+    {
+      "symbol": "ADBE",
+      "name": "Adobe Systems, Inc."
+    },
+    {
+      "symbol": "CTSH",
+      "name": "Cognizant Technology Solutions Corp., Class A"
+    },
+    {
+      "symbol": "BIDU",
+      "name": "Baidu, Inc. ADR"
+    },
+    {
+      "symbol": "ADP",
+      "name": "Automatic Data Processing, Inc."
+    },
+    {
+      "symbol": "ALXN",
+      "name": "Alexion Pharmaceuticals, Inc."
+    },
+    {
+      "symbol": "FOXA",
+      "name": "Twenty-First Century Fox, Inc., Class A"
+    },
+    {
+      "symbol": "AVGO",
+      "name": "Avago Technologies Ltd."
+    },
+    {
+      "symbol": "TSLA",
+      "name": "Tesla Motors, Inc."
+    },
+    {
+      "symbol": "EBAY",
+      "name": "eBay, Inc."
+    },
+    {
+      "symbol": "BRCM",
+      "name": "Broadcom Corp., Class A"
+    },
+    {
+      "symbol": "MNST",
+      "name": "Monster Beverage Corp."
+    },
+    {
+      "symbol": "YHOO",
+      "name": "Yahoo!, Inc."
+    },
+    {
+      "symbol": "AAL",
+      "name": "American Airlines Group, Inc."
+    },
+    {
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals, Inc."
+    },
+    {
+      "symbol": "ILMN",
+      "name": "Illumina, Inc."
+    },
+    {
+      "symbol": "LBTYK",
+      "name": "Liberty Global PLC, Series C"
+    },
+    {
+      "symbol": "ORLY",
+      "name": "O’Reilly Automotive, Inc."
+    },
+    {
+      "symbol": "INTU",
+      "name": "Intuit, Inc."
+    },
+    {
+      "symbol": "ATVI",
+      "name": "Activision Blizzard, Inc."
+    },
+    {
+      "symbol": "NXPI",
+      "name": "NXP Semiconductors NV"
+    },
+    {
+      "symbol": "FOX",
+      "name": "Twenty-First Century Fox, Inc., Class B"
+    },
+    {
+      "symbol": "JD",
+      "name": "JD.com, Inc. ADR"
+    },
+    {
+      "symbol": "EA",
+      "name": "Electronic Arts, Inc."
+    },
+    {
+      "symbol": "CMCSK",
+      "name": "Comcast Corp., Class A Special"
+    },
+    {
+      "symbol": "CERN",
+      "name": "Cerner Corp."
+    },
+    {
+      "symbol": "FISV",
+      "name": "Fiserv, Inc."
+    },
+    {
+      "symbol": "ROST",
+      "name": "Ross Stores, Inc."
+    },
+    {
+      "symbol": "SIRI",
+      "name": "Sirius XM Holdings, Inc."
+    },
+    {
+      "symbol": "MYL",
+      "name": "Mylan NV"
+    },
+    {
+      "symbol": "CHTR",
+      "name": "Charter Communications, Inc., Class A"
+    },
+    {
+      "symbol": "PCAR",
+      "name": "PACCAR, Inc."
+    },
+    {
+      "symbol": "WDC",
+      "name": "Western Digital Corp."
+    },
+    {
+      "symbol": "MAR",
+      "name": "Marriott International, Inc., Class A"
+    },
+    {
+      "symbol": "ADI",
+      "name": "Analog Devices, Inc."
+    },
+    {
+      "symbol": "AMAT",
+      "name": "Applied Materials, Inc."
+    },
+    {
+      "symbol": "PAYX",
+      "name": "Paychex, Inc."
+    },
+    {
+      "symbol": "ISRG",
+      "name": "Intuitive Surgical, Inc."
+    },
+    {
+      "symbol": "BMRN",
+      "name": "BioMarin Pharmaceutical, Inc."
+    },
+    {
+      "symbol": "MU",
+      "name": "Micron Technology, Inc."
+    },
+    {
+      "symbol": "SWKS",
+      "name": "Skyworks Solutions, Inc."
+    },
+    {
+      "symbol": "DLTR",
+      "name": "Dollar Tree, Inc."
+    },
+    {
+      "symbol": "ALTR",
+      "name": "Altera Corp."
+    },
+    {
+      "symbol": "VIAB",
+      "name": "Viacom, Inc., Class B"
+    },
+    {
+      "symbol": "CHKP",
+      "name": "Check Point Software Technologies Ltd."
+    },
+    {
+      "symbol": "STX",
+      "name": "Seagate Technology PLC"
+    },
+    {
+      "symbol": "SBAC",
+      "name": "SBA Communications Corp., Class A"
+    },
+    {
+      "symbol": "SYMC",
+      "name": "Symantec Corp."
+    },
+    {
+      "symbol": "NVDA",
+      "name": "NVIDIA Corp."
+    },
+    {
+      "symbol": "DISH",
+      "name": "DISH Network Corp., Class A"
+    },
+    {
+      "symbol": "VOD",
+      "name": "Vodafone Group PLC ADR"
+    },
+    {
+      "symbol": "VRSK",
+      "name": "Verisk Analytics, Inc."
+    },
+    {
+      "symbol": "AKAM",
+      "name": "Akamai Technologies, Inc."
+    },
+    {
+      "symbol": "CA",
+      "name": "CA, Inc."
+    },
+    {
+      "symbol": "SRCL",
+      "name": "Stericycle, Inc."
+    },
+    {
+      "symbol": "TSCO",
+      "name": "Tractor Supply Co."
+    },
+    {
+      "symbol": "WFM",
+      "name": "Whole Foods Market, Inc."
+    },
+    {
+      "symbol": "QVCA",
+      "name": "Liberty Interactive Corp. QVC Group, Class A"
+    },
+    {
+      "symbol": "CTXS",
+      "name": "Citrix Systems, Inc."
+    },
+    {
+      "symbol": "SNDK",
+      "name": "SanDisk Corp."
+    },
+    {
+      "symbol": "HSIC",
+      "name": "Henry Schein, Inc."
+    },
+    {
+      "symbol": "XLNX",
+      "name": "Xilinx, Inc."
+    },
+    {
+      "symbol": "LBTYA",
+      "name": "Liberty Global PLC, Class A"
+    },
+    {
+      "symbol": "FAST",
+      "name": "Fastenal Co."
+    },
+    {
+      "symbol": "LRCX",
+      "name": "Lam Research Corp."
+    },
+    {
+      "symbol": "ADSK",
+      "name": "Autodesk, Inc."
+    },
+    {
+      "symbol": "LLTC",
+      "name": "Linear Technology Corp."
+    },
+    {
+      "symbol": "BBBY",
+      "name": "Bed Bath & Beyond, Inc."
+    },
+    {
+      "symbol": "CHRW",
+      "name": "C.H. Robinson Worldwide, Inc."
+    },
+    {
+      "symbol": "EXPD",
+      "name": "Expeditors International of Washington, Inc."
+    },
+    {
+      "symbol": "NTAP",
+      "name": "NetApp, Inc."
+    },
+    {
+      "symbol": "TRIP",
+      "name": "TripAdvisor, Inc."
+    },
+    {
+      "symbol": "GMCR",
+      "name": "Keurig Green Mountain, Inc."
+    },
+    {
+      "symbol": "KLAC",
+      "name": "KLA-Tencor Corp."
+    },
+    {
+      "symbol": "LMCK",
+      "name": "Liberty Media Corp., Class C"
+    },
+    {
+      "symbol": "SPLS",
+      "name": "Staples, Inc."
+    },
+    {
+      "symbol": "VIP",
+      "name": "VimpelCom Ltd. ADR"
+    },
+    {
+      "symbol": "MAT",
+      "name": "Mattel, Inc."
+    },
+    {
+      "symbol": "GRMN",
+      "name": "Garmin Ltd."
+    },
+    {
+      "symbol": "DISCK",
+      "name": "Discovery Communications, Inc., Class C"
+    },
+    {
+      "symbol": "LVNTA",
+      "name": "Liberty Ventures, Series A"
+    },
+    {
+      "symbol": "WYNN",
+      "name": "Wynn Resorts Ltd."
+    },
+    {
+      "symbol": "DISCA",
+      "name": "Discovery Communications, Inc., Class A"
+    },
+    {
+      "symbol": "LMCA",
+      "name": "Liberty Media Corp., Class A"
+    },
+    {
+      "symbol": "LILAK",
+      "name": "Liberty Global PLC LiLAC, Class C"
+    },
+    {
+      "symbol": "LILA",
+      "name": "Liberty Global PLC LiLAC, Class A"
+    }
+  ]
+}

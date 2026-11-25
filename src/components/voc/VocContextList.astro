@@ -1,0 +1,24 @@
+---
+import { sitePath } from '../../utils/paths';
+import { vocTopics, type vocContext } from '../../utils/voc';
+
+interface Props {
+  title: string;
+  items: typeof vocContext;
+  linkTopics?: boolean;
+}
+const { title, items, linkTopics = false } = Astro.props;
+const labels = new Map(vocTopics.map(({ id, label }) => [id, label]));
+---
+{items.length > 0 && <section class="lab-block">
+  <h2>{title}</h2>
+  <ul class="lab-list">{items.map(({ date, title, summary, sourceName, sourceUrl, topics }) => <li class="lab-card">
+    <time datetime={date}>{date}</time>
+    <h3>{title}</h3>
+    <p>{summary}</p>
+    <a href={sourceUrl}>{sourceName}</a>
+    {linkTopics && <ul class="lab-chips">{topics.map((topic) => (
+      <li><a href={sitePath('voc-studio/topics/' + topic)}>{labels.get(topic)}</a></li>
+    ))}</ul>}
+  </li>)}</ul>
+</section>}

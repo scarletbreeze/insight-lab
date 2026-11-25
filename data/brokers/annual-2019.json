@@ -1,0 +1,82 @@
+[
+  {
+    "id": "mirae-asset",
+    "equity": 9193636,
+    "assets": 133149797,
+    "operatingIncome": 727955,
+    "netIncome": 664250,
+    "sourceUrl": "https://kind.krx.co.kr/external/2021/02/25/001263/20210225002834/00591.htm"
+  },
+  {
+    "id": "daishin",
+    "equity": 2017049,
+    "assets": 19437280,
+    "operatingIncome": 99678,
+    "netIncome": 93955,
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/03/10/002076/20220310004161/11011.htm"
+  },
+  {
+    "id": "kiwoom",
+    "equity": 2258431,
+    "assets": 23943810,
+    "operatingIncome": 473691,
+    "netIncome": 362035,
+    "sourceUrl": "https://kind.krx.co.kr/external/2021/11/12/001307/20211112002727/11013.htm"
+  },
+  {
+    "id": "samsung",
+    "equity": 4949279,
+    "assets": 44729591,
+    "operatingIncome": 517559,
+    "netIncome": 391829,
+    "sourceUrl": "https://kind.krx.co.kr/external/2021/02/19/000909/20210219002324/00660.htm"
+  },
+  {
+    "id": "meritz",
+    "equity": 4019279,
+    "assets": 38109937,
+    "operatingIncome": 679942,
+    "netIncome": 554586,
+    "sourceUrl": "https://m.meritzgroup.com/commfiles/hld/attach/2023/20230417/202304171102573000019U.pdf"
+  },
+  {
+    "id": "shinhan",
+    "equity": 4236556,
+    "assets": 37375487,
+    "operatingIncome": 239458,
+    "netIncome": 220764,
+    "sourceUrl": "https://file.truefriend.com/Storage/terms/manual/%EC%8B%A0%ED%95%9C%ED%88%AC%EC%9E%90%EC%A6%9D%EA%B6%8C2102-1_%ED%88%AC%EC%9E%90%EC%84%A4%EB%AA%85%EC%84%9C.pdf"
+  },
+  {
+    "id": "hana",
+    "equity": 3475078,
+    "assets": 27283211,
+    "operatingIncome": 349524,
+    "netIncome": 279932,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm"
+  },
+  {
+    "id": "nh-investment",
+    "equity": 5392085,
+    "assets": 50075052,
+    "operatingIncome": 575387,
+    "netIncome": 476378,
+    "sourceUrl": "https://kind.krx.co.kr/external/2021/08/13/001198/20210813003367/11012.htm"
+  },
+  {
+    "id": "korea-investment",
+    "equity": 5433540,
+    "assets": 53447802,
+    "operatingIncome": 836262,
+    "netIncome": 684420,
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/03/20/000966/20250320004224/11011.htm"
+  },
+  {
+    "id": "kb",
+    "equity": 4620311,
+    "assets": 47763651,
+    "operatingIncome": 360468,
+    "netIncome": 290071,
+    "sourceUrl": "https://www.kbsec.com/ndataweb/util/introduction/ir/data/FY202004.pdf"
+  }
+]

@@ -1,23 +1,78 @@
 ---
 import VocLayout from '../../../components/voc/VocLayout.astro';
 import NoticeList from '../../../components/voc/NoticeList.astro';
-import { vocNotices, vocPosts, vocTopics } from '../../../utils/voc';
+import VocKeywords from '../../../components/voc/VocKeywords';
+import VocContextList from '../../../components/voc/VocContextList.astro';
+import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
+import { hasCompleteInquiryYear, summarizeKeywords, vocContext, vocIntents, vocNotices, vocPosts, vocTopics, vocYears } from '../../../utils/voc';
+import { sitePath } from '../../../utils/paths';
+import { publicBoardTopics, publicBoardYear } from '../../../utils/voc-public-board';
 
 export function getStaticPaths() {
   return vocTopics.map(({ id, label }) => ({ params: { topic: id }, props: { id, label } }));
 }
 const { id, label } = Astro.props;
 const items = vocPosts.filter(({ topic }) => topic === id);
+const notices = vocNotices.filter(({ topic }) => topic === id);
+const counts = vocYears.map((coverage) => ({
+  year: coverage.year,
+  boardTopics: publicBoardTopics(coverage.year),
+  boardYear: publicBoardYear(coverage.year),
+  complete: hasCompleteInquiryYear(coverage),
+  inquiries: items.filter(({ date }) => date.startsWith(String(coverage.year))).length,
+  notices: notices.filter(({ date }) => date.startsWith(String(coverage.year))).length,
+}));
+const subtopics = [...new Set(items.flatMap(({ subtopic }) => subtopic ? [subtopic] : []))];
+const keywords = summarizeKeywords(items);
+const context = vocContext.filter(({ topics }) => topics.includes(id));
+const yearlyCounts = counts.flatMap(({ year, boardTopics, boardYear }) => boardTopics && boardYear && id !== 'other' ? [{
+  year, isFullYear: boardYear.isFullYear,
+  count: boardTopics.ranked.find((topic) => topic.id === id)?.count ?? 0,
+}] : []);
+const latestFull = yearlyCounts.find(({ isFullYear }) => isFullYear);
+const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && year === (latestFull?.year ?? 0) - 1);
 ---
 <VocLayout title={label}>
   <section class="lab-block">
+    <h2>연도별 수록 범위</h2>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <thead><tr><th scope="col">연도</th><th scope="col">문의 수록 범위</th><th scope="col">공지 표본</th></tr></thead>
+      <tbody>{counts.map(({ year, boardTopics, boardYear, complete, inquiries, notices }) => <tr>
+        <th scope="row"><a href={sitePath('voc-studio/year/' + year)}>{year}</a></th>
+        <td>{boardTopics && id !== 'other'
+          ? `자동 분류 ${(boardTopics.ranked.find((topic) => topic.id === id)?.count ?? 0).toLocaleString('ko-KR')}건 · ${boardYear?.label}`
+          : complete ? '범위 확인 · ' + inquiries + '건' : inquiries ? '표본 ' + inquiries + '건' : '자료 확인 중'}</td>
+        <td>{notices ? notices + '건' : '수록 표본 없음'}</td>
+      </tr>)}</tbody>
+    </table></div>
+    {latestFull && previousFull && <p>
+      {previousFull.year}년 {previousFull.count.toLocaleString('ko-KR')}건에서 {latestFull.year}년 {latestFull.count.toLocaleString('ko-KR')}건으로
+      {' '}{(latestFull.count - previousFull.count).toLocaleString('ko-KR', { signDisplay: 'exceptZero' })}건 변했습니다.
+    </p>}
+  </section>
+  {yearlyCounts.length > 0 && <section class="lab-block">
+    <h2>{label} 문의 월별 추이</h2>
+    <p>이 주제로 자동 분류된 공개 문의의 월별 건수입니다.</p>
+    {yearlyCounts.map(({ year }, index) => <details open={index === 0}>
+      <summary>{year}년</summary>
+      <VocMonthlyTrends {year} topic={id} />
+    </details>)}
+  </section>}
+  <section class="lab-block">
     <h2>문의 표본</h2>
+    {subtopics.length > 0 && <p>세부 주제 · {subtopics.join(' · ')}</p>}
     {items.length ? <ul class="lab-list">
-      {items.map(({ date, summary, sourceUrl }) => <li><time datetime={date}>{date}</time> {summary} · <a href={sourceUrl}>공개 게시판</a></li>)}
+      {items.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li><time datetime={date}>{date}</time> · {subtopic && `${subtopic} · `}{vocIntents[intent]} · {summary} · {reviewMethod === 'title-template' && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a></li>)}
     </ul> : <p class="empty-state">문의 자료 확인 중</p>}
   </section>
+  {keywords.length > 0 && <section class="lab-block">
+    <h2>수록 문의 키워드</h2>
+    <VocKeywords {keywords} />
+  </section>}
   <section class="lab-block">
     <h2>관련 공지</h2>
-    <NoticeList items={vocNotices.filter(({ topic }) => topic === id)} />
+    <p><a href={sitePath('voc-studio/timeline') + '?' + new URLSearchParams({ topic: id })}>이 주제로 공지 타임라인 열기</a></p>
+    <NoticeList items={notices} />
   </section>
+  <VocContextList title="관련 시장·제도 변화" items={context} />
 </VocLayout>

@@ -4,7 +4,7 @@ import { notes } from '../../utils/archive';
 ---
 <archive-search>
   <div class="lab-controls">
-    <label>공개 기록 검색 <input type="search" placeholder="제목, 연도 또는 태그" /></label>
+    <label>공개 기록 검색 <input type="search" placeholder="제목, 내용, 연도 또는 태그" /></label>
   </div>
   <p role="status" class="archive-search-status">{notes.length}개 기록</p>
   <div class="archive-search-results" hidden><NoteList items={notes} /></div>

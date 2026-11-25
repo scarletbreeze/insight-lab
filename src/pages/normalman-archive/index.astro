@@ -2,15 +2,23 @@
 import ArchiveLayout from '../../components/archive/ArchiveLayout.astro';
 import ArchiveSearch from '../../components/archive/ArchiveSearch.astro';
 import NoteList from '../../components/archive/NoteList.astro';
-import { archiveTags, notes } from '../../utils/archive';
+import { archiveTags, archiveYears, notes } from '../../utils/archive';
 import { sitePath } from '../../utils/paths';
+
+const studyEntries = [
+  '2017-05-21-mvc-패턴이해',
+  '2018-01-23-c로-배우는-자료구조2',
+  '2018-03-23-컴퓨터구조론2',
+  '2019-04-29-blockchain-dapp1',
+];
+const featured = studyEntries.flatMap((slug) => notes.filter((note) => note.slug === slug));
 ---
 <ArchiveLayout title="Normalman Archive">
-  <p slot="intro">2017년부터 2019년까지 공개 블로그에 남긴 개발과 공부 기록을 시간순으로 펼쳐봅니다.</p>
+  <p slot="intro">{archiveYears[0]}년부터 {archiveYears.at(-1)}년까지 공개 블로그에 남긴 개발과 공부 기록을 시간순으로 펼쳐봅니다.</p>
   <section class="lab-block"><ArchiveSearch /></section>
   <section class="lab-block">
     <h2>타임라인</h2>
-    <ul class="lab-chips">{[2017, 2018, 2019].map((year) => <li><a href={sitePath('normalman-archive/timeline') + '#year-' + year}>{year}</a></li>)}</ul>
+    <ul class="lab-chips">{archiveYears.map((year) => <li><a href={sitePath('normalman-archive/timeline') + '#year-' + year}>{year}</a></li>)}</ul>
   </section>
   <section class="lab-block">
     <h2>최근 기록</h2>
@@ -20,5 +28,16 @@ import { sitePath } from '../../utils/paths';
   <section class="lab-block">
     <h2>태그</h2>
     <ul class="lab-chips">{archiveTags.map((tag) => <li><a href={sitePath('normalman-archive/tags/' + encodeURIComponent(tag))}>{tag}</a></li>)}</ul>
+  </section>
+  <section class="lab-block">
+    <h2>대표 학습 기록</h2>
+    <NoteList items={featured} />
+  </section>
+  <section class="lab-block">
+    <h2>프로젝트와 기존 블로그</h2>
+    <div class="lab-grid">
+      <a class="lab-card" href={sitePath('normalman-archive/projects')}><strong>프로젝트</strong></a>
+      <a class="lab-card" href="https://github.com/scarletbreeze/scarletbreeze.github.io"><strong>기존 블로그 저장소</strong></a>
+    </div>
   </section>
 </ArchiveLayout>

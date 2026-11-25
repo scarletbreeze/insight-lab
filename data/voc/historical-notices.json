@@ -1,5 +1,86 @@
 [
   {
+    "id": "00002072",
+    "date": "2022-09-26",
+    "dateType": "published",
+    "title": "국내주식 소수점 매매 도입",
+    "category": "서비스",
+    "summary": "영웅문4의 국내주식 소수점 매매 시작일을 9월 26일, 영웅문S#의 매매 가능일을 9월 28일로 안내했습니다.",
+    "topic": "orders",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6552",
+    "channel": "키움증권 일반 공지"
+  },
+  {
+    "id": "00002100",
+    "date": "2022-11-24",
+    "dateType": "effective",
+    "title": "키움종합차트와 자동감시주문 화면 개선",
+    "category": "개선",
+    "summary": "키움종합차트에서 피보나치 도구의 글자색을 바꿀 수 있고, 자동감시주문 화면에서는 매입단가 새로고침 팝업을 숨길 수 있게 됐습니다.",
+    "topic": "hts",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=2&pagegb=2&seq=00002100&title=%5B%EA%B0%9C%EC%84%A0%5D+2022%EB%85%84+11%EC%9B%94+24%EC%9D%BC+%28%EB%AA%A9%29+%ED%99%94%EB%A9%B4%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD&tp=H4"
+  },
+  {
+    "id": "00002181",
+    "date": "2023-06-29",
+    "dateType": "effective",
+    "title": "조건검색 매수비율과 채권 체결 알림 개선",
+    "category": "개선",
+    "summary": "조건검색의 매수비율 조건에 분 단위 주기를 추가하고 장내채권 전량 체결 알림을 설정할 수 있게 했습니다.",
+    "topic": "hts",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=2&pagegb=2&seq=00002181&title=%5B%EA%B0%9C%EC%84%A0%5D+2023%EB%85%84+6%EC%9B%94+29%EC%9D%BC+%28%EB%AA%A9%29+%ED%99%94%EB%A9%B4%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD&tp=H4"
+  },
+  {
+    "id": "00002319",
+    "date": "2024-05-30",
+    "dateType": "effective",
+    "title": "키움종합차트에 거래량 가중평균가격 지표 추가",
+    "category": "개선",
+    "summary": "키움종합차트 [0600]의 가격지표에서 VWAP을 조회할 수 있게 됐습니다.",
+    "topic": "hts",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=2&pagegb=2&seq=00002319&title=%5B%EA%B0%9C%EC%84%A0%5D+2024%EB%85%84+5%EC%9B%94+30%EC%9D%BC+%28%EB%AA%A9%29+%ED%99%94%EB%A9%B4%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD&tp=H4"
+  },
+  {
+    "id": "00002354",
+    "date": "2024-11-04",
+    "dateType": "effective",
+    "title": "코리아밸류업선물 상장과 국내 파생 변경",
+    "category": "제도",
+    "summary": "신규 선물 상장, 조기 개장 대상 확대와 일부 주식 파생상품의 이론가격 산식 변경을 안내했습니다.",
+    "topic": "hours",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&mtsgb=&pagegb=2&seq=00002354&title=%EC%BD%94%EB%A6%AC%EC%95%84%EB%B0%B8%EB%A5%98%EC%97%85%EC%84%A0%EB%AC%BC+%EC%83%81%EC%9E%A5+%EB%B0%8F+%EA%B5%AD%EB%82%B4+%ED%8C%8C%EC%83%9D%EC%A0%9C%EB%8F%84%EA%B0%9C%EC%84%A0+%EC%95%88%EB%82%B4%282024.11.04%29&tp=H4"
+  },
+  {
+    "id": "00002357",
+    "date": "2024-12-04",
+    "dateType": "effective",
+    "title": "12월 4일 국내 증시 정상 개장 안내",
+    "category": "서비스",
+    "summary": "키움증권은 2024년 12월 4일 국내 증시가 정상 운영된다고 공지했습니다.",
+    "topic": "hours",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&mtsgb=&pagegb=2&seq=00002357&title=12%2F4%28%EC%88%98%29+%EA%B5%AD%EB%82%B4+%EC%A6%9D%EC%8B%9C+%EC%A0%95%EC%83%81+%EA%B0%9C%EC%9E%A5+%EC%95%88%EB%82%B4&tp=H4"
+  },
+  {
+    "id": "00002390",
+    "date": "2025-04-10",
+    "dateType": "effective",
+    "title": "키움현재가에 중간가 보기 추가",
+    "category": "개선",
+    "summary": "키움현재가 화면에서 호가 사이에 중간가를 표시하는 옵션을 추가했습니다.",
+    "topic": "hts",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=2&pagegb=2&seq=00002390&title=%5B%EA%B0%9C%EC%84%A0%5D+2025%EB%85%84+04%EC%9B%94+10%EC%9D%BC+%28%EB%AA%A9%29+%ED%99%94%EB%A9%B4+%EA%B0%9C%EC%84%A0%EC%82%AC%ED%95%AD&tp=H4"
+  },
+  {
+    "id": "00002400",
+    "date": "2025-06-09",
+    "dateType": "effective",
+    "title": "HTS·오픈API 접속 중단 시간 변경",
+    "category": "서비스",
+    "summary": "KRX 야간선물옵션 거래시간 확대에 맞춰 월요일부터 토요일까지 HTS와 오픈API 접속 중단 시간을 06시 50분~55분으로 조정한다고 안내했습니다.",
+    "topic": "hours",
+    "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&pagegb=2&seq=00002400&title=HTS+%EB%B0%8F+%EC%98%A4%ED%94%88API+%EC%A0%91%EC%86%8D+%EB%8B%A8%EC%A0%88%EC%8B%9C%EA%B0%84+%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=H4"
+  },
+  {
     "id": "00002111",
     "date": "2022-12-30",
     "dateType": "effective",
@@ -35,7 +116,7 @@
     "dateType": "effective",
     "title": "미국주식 결제주기 단축",
     "category": "제도",
-    "summary": "본문 기준으로 미국주식 결제주기가 적용일 체결분부터 변경됐습니다.",
+    "summary": "키움증권은 한국시간 5월 28일 체결분부터 미국주식의 국내 결제일을 T+3에서 T+2로 변경한다고 안내했습니다.",
     "topic": "overseas",
     "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?gubun=1&pagegb=2&seq=00002234&title=%28%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%29+%EA%B2%B0%EC%A0%9C%EA%B8%B0%EA%B0%84+%EB%8B%A8%EC%B6%95%28T%2B3+%3E+T%2B2%29+%EC%A0%9C%EB%8F%84%EB%B3%80%EA%B2%BD+%EC%95%88%EB%82%B4&tp=HG"
   },
@@ -58,5 +139,60 @@
     "summary": "미국주식 시장의 추수감사절 연휴 운영시간을 공지했습니다.",
     "topic": "overseas",
     "sourceUrl": "https://www.kiwoom.com/h/hts/popup/VHtsNoticePopView?flag=content&gubun=1&mtsgb=&pagegb=2&seq=00002310&title=%5B%EB%AF%B8%EA%B5%AD%EC%A3%BC%EC%8B%9D%5D+2024%EB%85%84+%EC%B6%94%EC%88%98%EA%B0%90%EC%82%AC%EC%A0%88+%EC%97%B0%ED%9C%B4+%EC%9A%B4%EC%98%81%EC%8B%9C%EA%B0%84+%EC%95%88%EB%82%B4&tp=HG"
+  },
+  {
+    "id": "kiwoogo-11041",
+    "date": "2023-10-06",
+    "dateType": "published",
+    "title": "키우GO 한글날 휴장 안내",
+    "category": "서비스",
+    "summary": "10월 9일 한국 증시 휴장으로 키우GO의 국내·해외 ETF형과 혼합자산형 일임거래 일정이 조정된다고 안내했습니다.",
+    "topic": "hours",
+    "channel": "키우GO",
+    "sourceUrl": "https://www.kiwoom.com/wm/gbi/mm/kiwooGoTalkBrdView?bbGb=0015&code=1&sqno=11041"
+  },
+  {
+    "id": "kiwoogo-9936",
+    "date": "2023-04-28",
+    "dateType": "published",
+    "title": "키우GO 5월 한국 증시 휴장 안내",
+    "category": "서비스",
+    "summary": "2023년 5월 1일과 5일 휴장으로 해당일 키우GO 일임거래가 다음 영업일에 이뤄진다고 안내했습니다.",
+    "topic": "hours",
+    "channel": "키우GO",
+    "sourceUrl": "https://www.kiwoom.com/wm/gbi/mm/kiwooGoTalkBrdView?bbGb=0015&code=1&sqno=9936"
+  },
+  {
+    "id": "kiwoogo-7948",
+    "date": "2022-07-04",
+    "dateType": "published",
+    "title": "키우GO 미국 독립기념일 휴장 안내",
+    "category": "서비스",
+    "summary": "미국 증시 휴장일에 키우GO 해외 ETF형과 혼합자산형 주문이 중단되고 국내 ETF형은 정상 운영된다고 안내했습니다.",
+    "topic": "hours",
+    "channel": "키우GO",
+    "sourceUrl": "https://www.kiwoom.com/wm/gbi/mm/kiwooGoTalkBrdView?bbGb=0015&code=1&sqno=7948"
+  },
+  {
+    "id": "kiwoogo-7877",
+    "date": "2022-06-20",
+    "dateType": "published",
+    "title": "키우GO 미국 Juneteenth 휴장 안내",
+    "category": "서비스",
+    "summary": "미국 증시 휴장일에 키우GO 해외 ETF형과 혼합자산형 주문이 중단되고 국내 ETF형은 정상 운영된다고 안내했습니다.",
+    "topic": "hours",
+    "channel": "키우GO",
+    "sourceUrl": "https://www.kiwoom.com/wm/gbi/mm/kiwooGoTalkBrdView?bbGb=0015&code=1&sqno=7877"
+  },
+  {
+    "id": "kiwoom-nxt-introduction",
+    "date": "2025-03-04",
+    "dateType": "effective",
+    "title": "넥스트레이드 도입에 따른 주문 매체 변경",
+    "category": "제도",
+    "summary": "키움증권은 대체거래소 도입 안내서에 주문 매체의 통합 시세와 SOR 기본 제공, 거래소 선택 설정을 안내했습니다.",
+    "topic": "orders",
+    "channel": "거래 안내서",
+    "sourceUrl": "https://ocrw.kiwoom.com/pdf/guide/Kiwoom_Securities_Alternative_Exchange_Guide_Booklet_Single-Sided.pdf"
   }
 ]

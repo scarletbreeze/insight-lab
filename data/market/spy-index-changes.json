@@ -1,0 +1,290 @@
+[
+  {
+    "date": "2016-11-01",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/4281/000119312516760946/d487729dex991.htm",
+    "remove": [
+      "ARNC"
+    ],
+    "add": {
+      "ARNC": "Arconic Inc."
+    }
+  },
+  {
+    "date": "2016-12-02",
+    "sourceUrl": "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+    "remove": [
+      "OI"
+    ],
+    "add": {
+      "MAA": "Mid-America Apartment Communities, Inc. REIT"
+    }
+  },
+  {
+    "date": "2016-12-02",
+    "sourceUrl": "https://press.spglobal.com/2016-11-29-Mid-America-Apartment-Communities-AmSurg-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+    "remove": [
+      "LM"
+    ],
+    "add": {
+      "EVHC": "Envision Healthcare Corp."
+    }
+  },
+  {
+    "date": "2017-01-05",
+    "sourceUrl": "https://press.spglobal.com/2017-01-03-IDEXX-Laboratories-Set-to-Join-the-S-P-500-Chemours-to-Join-S-P-MidCap-400-Shake-Shack-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "STJ"
+    ],
+    "add": {
+      "IDXX": "IDEXX Laboratories, Inc."
+    }
+  },
+  {
+    "date": "2017-02-28",
+    "sourceUrl": "https://press.spglobal.com/2017-02-23-Incyte-CBOE-Holdings-Regency-Centers-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400",
+    "remove": [
+      "SE"
+    ],
+    "add": {
+      "INCY": "Incyte Corp."
+    }
+  },
+  {
+    "date": "2017-03-01",
+    "sourceUrl": "https://press.spglobal.com/2017-02-23-Incyte-CBOE-Holdings-Regency-Centers-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400",
+    "remove": [
+      "PBI"
+    ],
+    "add": {
+      "CBOE": "CBOE Holdings, Inc."
+    }
+  },
+  {
+    "date": "2017-03-02",
+    "sourceUrl": "https://press.spglobal.com/2017-02-23-Incyte-CBOE-Holdings-Regency-Centers-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400",
+    "remove": [
+      "ENDP"
+    ],
+    "add": {
+      "REG": "Regency Centers Corp. REIT"
+    }
+  },
+  {
+    "date": "2017-03-13",
+    "sourceUrl": "https://press.spglobal.com/2017-03-06-Dish-Network-Set-to-Join-S-P-500",
+    "remove": [
+      "LLTC"
+    ],
+    "add": {
+      "DISH": "DISH Network Corp. Class A"
+    }
+  },
+  {
+    "date": "2017-03-16",
+    "sourceUrl": "https://press.spglobal.com/2017-03-13-Synopsys-Set-to-Join-S-P-500-The-GEO-Group-to-Join-S-P-MidCap-400-Coca-Cola-Bottling-and-Orthofix-International-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "HAR"
+    ],
+    "add": {
+      "SNPS": "Synopsys, Inc."
+    }
+  },
+  {
+    "date": "2017-03-20",
+    "sourceUrl": "https://press.spglobal.com/2017-03-10-S-P-Dow-Jones-Indices-Announces-Changes-to-U-S-Indices-and-Updates-to-U-S-Indices-Methodology-and-Market-Cap-Guidelines",
+    "remove": [
+      "URBN",
+      "FTR",
+      "FSLR"
+    ],
+    "add": {
+      "AMD": "Advanced Micro Devices, Inc.",
+      "RJF": "Raymond James Financial, Inc.",
+      "ARE": "Alexandria Real Estate Equities, Inc. REIT"
+    }
+  },
+  {
+    "date": "2017-04-04",
+    "sourceUrl": "https://press.spglobal.com/2017-03-28-Computer-Sciences-Set-to-Join-S-P-500-Southwestern-Energy-to-Join-S-P-MidCap-400",
+    "remove": [
+      "SWN"
+    ],
+    "add": {
+      "DXC": "DXC Technology Co."
+    }
+  },
+  {
+    "date": "2017-04-05",
+    "sourceUrl": "https://press.spglobal.com/2017-03-29-Gartner-Set-to-Join-S-P-500-Dun-Bradstreet-Wintrust-Financial-and-INC-Research-to-Join-S-P-MidCap-400-Heska-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "DNB"
+    ],
+    "add": {
+      "IT": "Gartner, Inc."
+    }
+  },
+  {
+    "date": "2017-06-02",
+    "sourceUrl": "https://press.spglobal.com/2017-05-24-IHS-Markit-Set-to-Join-S-P-500-TEGNA-and-Cars-com-to-Join-S-P-MidCap-400-J-C-Penney-Time-and-Independence-Realty-Trust-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "TGNA"
+    ],
+    "add": {
+      "INFO": "IHS Markit, Ltd."
+    }
+  },
+  {
+    "date": "2017-06-19",
+    "sourceUrl": "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170609-538160/538160_yhoohlt5anssalgnrydertera.pdf",
+    "remove": [
+      "YHOO",
+      "TDC",
+      "R"
+    ],
+    "add": {
+      "HLT": "Hilton Worldwide Holdings, Inc.",
+      "ALGN": "Align Technology, Inc.",
+      "ANSS": "ANSYS, Inc."
+    }
+  },
+  {
+    "date": "2017-06-19",
+    "sourceUrl": "https://press.spglobal.com/2017-06-12-Everest-Re-Group-Set-to-Join-S-P-500-Pinnacle-Financial-Partners-to-Join-S-P-MidCap-400-and-Armada-Hoffler-Properties-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "MJN"
+    ],
+    "add": {
+      "RE": "Everest Re Group, Ltd."
+    }
+  },
+  {
+    "date": "2017-07-05",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/808362/000119312517220950/d401311dex991.htm",
+    "remove": [
+      "BHI"
+    ],
+    "add": {
+      "BHGE": "Baker Hughes a GE Co."
+    }
+  },
+  {
+    "date": "2017-07-26",
+    "sourceUrl": "https://press.spglobal.com/2017-07-19-MGM-Resorts-ResMed-Packaging-Corporation-of-America-A-O-Smith-and-Duke-Realty-Set-to-Join-S-P-500-Others-to-Join-S-P-MidCap-400-and-S-P-SmallCap-600",
+    "remove": [
+      "RIG",
+      "BBBY",
+      "MUR",
+      "MNK",
+      "RAI"
+    ],
+    "add": {
+      "DRE": "Duke Realty Corp. REIT",
+      "AOS": "AO Smith Corp.",
+      "PKG": "Packaging Corp. of America",
+      "RMD": "ResMed, Inc.",
+      "MGM": "MGM Resorts International"
+    }
+  },
+  {
+    "date": "2017-08-01",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/50104/000005010417000180/andvnamechange8-k.htm",
+    "remove": [
+      "TSO"
+    ],
+    "add": {
+      "ANDV": "Andeavor"
+    }
+  },
+  {
+    "date": "2017-08-08",
+    "sourceUrl": "https://press.spglobal.com/2017-07-31-Brighthouse-Financial-Set-to-Join-S-P-500-AutoNation-to-Join-S-P-MidCap-400-FTI-Consulting-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "AN"
+    ],
+    "add": {
+      "BHF": "Brighthouse Financial, Inc."
+    }
+  },
+  {
+    "date": "2017-08-29",
+    "sourceUrl": "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170824-572951/572951_500dowdupont1chartsbacwfm.pdf",
+    "remove": [
+      "WFM"
+    ],
+    "add": {
+      "Q": "Quintiles IMS Holdings, Inc."
+    }
+  },
+  {
+    "date": "2017-09-01",
+    "sourceUrl": "https://www.spglobal.com/spdji/en/documents/indexnews/announcements/20170824-572951/572951_500dowdupont1chartsbacwfm.pdf",
+    "remove": [
+      "DOW",
+      "DD"
+    ],
+    "add": {
+      "DWDP": "DowDuPont, Inc.",
+      "SBAC": "SBA Communications Corp. REIT"
+    }
+  },
+  {
+    "date": "2017-09-18",
+    "sourceUrl": "https://www.spice-indices.com/idpfiles/spice-assets/resources/public/documents/580952_spls5cadencewoofbrinkwebrebal64.pdf",
+    "remove": [
+      "SPLS"
+    ],
+    "add": {
+      "CDNS": "Cadence Design Systems, Inc."
+    }
+  },
+  {
+    "date": "2017-10-13",
+    "sourceUrl": "https://press.spglobal.com/2017-10-04-Norwegian-Cruise-Line-Set-to-Join-S-P-500-Pacific-Premier-Bancorp-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "LVLT"
+    ],
+    "add": {
+      "NCLH": "Norwegian Cruise Line Holdings Ltd."
+    }
+  },
+  {
+    "date": "2017-10-31",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1116132/000115752317002666/a51697272_ex991.htm",
+    "remove": [
+      "COH"
+    ],
+    "add": {
+      "TPR": "Tapestry, Inc."
+    }
+  },
+  {
+    "date": "2017-11-15",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1478242/000119312517335879/d484556d8k.htm",
+    "remove": [
+      "Q"
+    ],
+    "add": {
+      "IQV": "IQVIA Holdings Inc."
+    }
+  },
+  {
+    "date": "2017-12-05",
+    "sourceUrl": "https://press.spglobal.com/2017-11-28-Delphi-Technologies-Set-to-Join-S-P-MidCap-400-and-Frontier-Communications-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "DLPH"
+    ],
+    "add": {
+      "APTV": "Aptiv PLC"
+    }
+  },
+  {
+    "date": "2018-01-03",
+    "sourceUrl": "https://press.spglobal.com/2017-12-28-Huntington-Ingalls-Industries-Set-to-Join-S-P-500-Scientific-Games-to-Join-S-P-MidCap-400-and-Ultra-Clean-Holdings-to-Join-S-P-SmallCap-600",
+    "remove": [
+      "BCR"
+    ],
+    "add": {
+      "HII": "Huntington Ingalls Industries, Inc."
+    }
+  }
+]

@@ -1,0 +1,88 @@
+---
+import MarketLayout from '../../components/market/MarketLayout.astro';
+import raw from '../../../data/market/months/equity-rankings.json';
+import spy from '../../../data/market/months/spy-equity-rankings.json';
+import annual from '../../../data/market/annual-equity-rankings.json';
+import spyAnnual from '../../../data/market/annual-spy-equity-rankings.json';
+import { sitePath } from '../../utils/paths';
+
+type Market = 'KR' | 'US';
+type Rankings = Record<string, Partial<Record<Market, { eligibleCount: number; universeCount: number }>>>;
+function coverage(primary: Rankings, sp500: Rankings) {
+  return [...new Set([...Object.keys(primary), ...Object.keys(sp500)])].sort().reverse().map((period) => ({
+    period,
+    counts: [
+      { label: '한국', data: primary[period]?.KR },
+      { label: 'QQQ', data: primary[period]?.US },
+      { label: 'SPY', data: sp500[period]?.US },
+    ],
+  }));
+}
+const months = coverage(raw, spy);
+const years = coverage(annual, spyAnnual);
+---
+<MarketLayout title="종목 순위 산정 방식과 수록 범위">
+  <section class="lab-block">
+    <h2>수록 월</h2>
+    {months.length ? <ul class="lab-list">
+      {months.map(({ period, counts }) => <li>
+        <a href={sitePath('market-time-capsule/' + period.replace('-', '/')) + '#equity-rankings'}>{period}</a>
+        {counts.map(({ label, data }) => data && <span> · {label} {data.eligibleCount}/{data.universeCount}개</span>)}
+      </li>)}
+    </ul> : <p>공개된 월별 순위가 없습니다.</p>}
+  </section>
+  <section class="lab-block">
+    <h2>연간 Winner · Loser · Tenbagger</h2>
+    <p>해당 연도 첫 거래일의 모집단과 첫날·마지막 날의 분할 조정 종가를 사용합니다. 수익률 최고 종목은 Winner, 최저 종목은 Loser, 마지막 종가가 첫 종가의 10배 이상인 종목은 Tenbagger로 표시합니다.</p>
+    {years.length ? <ul class="lab-list">
+      {years.map(({ period, counts }) => <li>
+        <a href={sitePath('market-time-capsule/' + period) + '#annual-equity'}>{period}년</a>
+        {counts.map(({ label, data }) => data && <span> · {label} {data.eligibleCount}/{data.universeCount}개</span>)}
+      </li>)}
+    </ul> : <p>연간 순위를 공개할 수 있는 가격 자료를 확인 중입니다.</p>}
+  </section>
+
+  <section class="lab-block">
+    <h2>월별 수익률 산정</h2>
+    <ol class="lab-list">
+      <li>시장별 월 첫 거래일에 해당하는 구성종목을 확정합니다.</li>
+      <li>첫 거래일과 마지막 거래일의 분할 조정 종가를 같은 기준으로 확인합니다.</li>
+      <li>마지막 조정 종가를 첫 조정 종가로 나눈 뒤 1을 빼고 백분율로 표시합니다.</li>
+      <li>가격 수익률의 기본 기준은 배당 제외입니다. 총수익 자료를 사용할 경우 화면에 별도로 표시합니다.</li>
+      <li>순위에 모집단과 계산에 포함한 종목 수를 표시합니다. 지수 추종 펀드 보유 목록을 사용할 경우 근사 모집단임을 표시합니다. 현재 구성종목으로 과거를 계산하면 그 사이에 제외된 종목이 빠져 순위가 달라질 수 있습니다.</li>
+    </ol>
+  </section>
+  <section class="lab-block">
+    <h2>원자료</h2>
+    <div class="lab-grid">
+      <section class="lab-card">
+        <h3>한국</h3>
+        <p>KOSPI 200과 KOSDAQ 150의 당시 구성종목 및 해당일 가격을 확인합니다.</p>
+        <p>2024년 12월 2일과 30일의 국내 원종가 5,482행을 일괄 조회했습니다. 당시 ETF 보유 종목 353개를 대조한 결과, 324개는 기간 중 전일 종가와 당일 기준가격이 일치하고 상장주식수가 일정했습니다. 나머지 29개는 기업행동 추가 확인 대상으로 분류했습니다.</p>
+        <p>지수 순위 산정에는 당시의 공식 편입 목록과 기업행동을 반영한 가격이 필요합니다.</p>
+        <ul class="lab-list">
+          <li><a href="https://data.krx.co.kr/contents/MDC/STAT/standard/MDCSTAT006.jsp">KRX 지수 구성종목</a></li>
+          <li><a href="https://www.kif.re.kr/KIF/Publication/OthersDetail.aspx?ControlNo=342019&amp;NodeID=402">2024년 12월 지수 정기 변경 발표</a></li>
+          <li><a href="https://data.krx.co.kr/contents/MDC/MDI/outerLoader/index.cmd?screenId=MDCSTAT015">KRX 전종목 시세</a></li>
+          <li><a href="https://github.com/FinanceData/marcap/tree/master/data">연도별 종가 검증 자료</a></li>
+        </ul>
+      </section>
+      <section class="lab-card">
+        <h3>미국</h3>
+        <p>Nasdaq-100을 추종하는 QQQ와 S&P 500을 추종하는 SPY의 보유 명세 및 편입 공지로 모집단을 구성합니다. 각 모집단의 순위를 표시합니다. WIKI의 가격 범위가 부족하거나 분할 비율로 조정할 수 없는 기업행동이 발생한 경우, 제외 사유와 종목을 결과에 표시합니다.</p>
+        <ul class="lab-list">
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm">QQQ 2015년 9월 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm">QQQ 2016년 9월 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm">QQQ 2017년 9월 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/884394/000119312517355427/d418234dn30d.htm">SPY 2017년 9월 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/884394/000119312517183633/d280941dn30d.htm">SPY 2017년 3월 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/884394/000119312516777823/d235904dn30d.htm">SPY 2016년 9월 말 보유 명세</a></li>
+          <li><a href="https://data.nasdaq.com/databases/WIKIP">Nasdaq Data Link WIKI/PRICES</a></li>
+          <li><a href="https://www.sec.gov/data-research/sec-markets-data/form-n-port-data-sets">SEC Form N-PORT 데이터셋</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/884394/000175272425043826/NPORT_J905_96606633_1224.htm">SPY 2024년 말 보유 명세</a></li>
+          <li><a href="https://www.sec.gov/Archives/edgar/data/1067839/000175272425039757/edgar.htm">QQQ 2024년 말 보유 명세</a></li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</MarketLayout>

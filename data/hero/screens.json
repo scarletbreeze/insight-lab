@@ -130,6 +130,31 @@
     "screenType": "검색"
   },
   {
+    "number": "0156",
+    "title": "조건검색실시간",
+    "purpose": "종목 발굴",
+    "product": "국내주식",
+    "screenType": "검색",
+    "level": "중급",
+    "styles": [
+      "단타",
+      "스윙"
+    ],
+    "tags": [
+      "종목발굴"
+    ],
+    "summary": "저장한 조건에 해당하는 종목이 편입되거나 이탈하는지 실시간으로 확인합니다.",
+    "observation": "",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0156.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
     "number": "0160",
     "title": "특이종목(T)",
     "purpose": "종목 발굴",
@@ -271,9 +296,15 @@
     "tags": [
       "시황"
     ],
-    "summary": "업종 단위 현재 시세를 조회합니다.",
-    "observation": "",
+    "summary": "선택한 업종의 지수, 거래량, 상승·하락 종목과 시간별·일별 흐름을 살펴봅니다.",
+    "observation": "시장에 따라 표시하는 업종 목록이 달라집니다. 차트로 넘기기 전에 시장과 업종을 확인합니다.",
     "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0211.htm",
+        "retrievedAt": "2026-11-25"
+      },
       {
         "sourceName": "키움증권 영웅문4 공식 화면 목록",
         "sourceType": "official",
@@ -282,6 +313,33 @@
       }
     ],
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/0211.htm"
+  },
+  {
+    "number": "0219",
+    "title": "기간별 업종 시세와 수급",
+    "purpose": "시장 파악",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "중급",
+    "styles": [
+      "스윙",
+      "장기"
+    ],
+    "tags": [
+      "수급",
+      "시황"
+    ],
+    "summary": "코스피·코스닥 업종의 누적 등락률과 개인·외국인·기관 수급을 당일 및 여러 영업일 구간으로 조회합니다.",
+    "observation": "기간이 다르면 누적 수치의 기준이 달라집니다. 업종 간 비교 전에 같은 영업일 구간을 선택합니다.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0219.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ],
+    "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/0219.htm"
   },
   {
     "number": "0302",
@@ -598,6 +656,30 @@
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/0460.htm"
   },
   {
+    "number": "0501",
+    "title": "선물옵션주문종합",
+    "purpose": "파생",
+    "product": "선물옵션",
+    "screenType": "주문",
+    "level": "고급",
+    "styles": [
+      "파생"
+    ],
+    "tags": [
+      "시황"
+    ],
+    "summary": "선물과 옵션의 시세·호가, 주문 입력, 계좌 현황을 한 화면에 표시합니다.",
+    "observation": "선물·옵션에서 조회와 주문 입력 화면이 어떻게 연결되는지 확인할 때 살펴볼 수 있습니다.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0501.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
     "number": "0600",
     "title": "키움종합차트",
     "purpose": "종목 분석",
@@ -665,9 +747,15 @@
       "차트",
       "시황"
     ],
-    "summary": "업종의 시세 흐름을 차트로 살펴봅니다.",
-    "observation": "",
+    "summary": "업종 지수를 일·주·월 또는 분·틱 주기로 살펴보고, 필요에 따라 다른 업종과 지표를 차트에 추가합니다.",
+    "observation": "업종 추가와 전환 모드를 확인하면 기존 업종을 남겨 비교할지 바꿔 볼지 선택할 수 있습니다.",
     "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0602.htm",
+        "retrievedAt": "2026-11-25"
+      },
       {
         "sourceName": "키움증권 영웅문4 공식 화면 목록",
         "sourceType": "official",
@@ -917,6 +1005,108 @@
     "screenType": "차트"
   },
   {
+    "number": "0700",
+    "title": "종합시황뉴스(국내뉴스)",
+    "purpose": "시장 파악",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "중급",
+    "styles": [
+      "단타",
+      "스윙"
+    ],
+    "tags": [
+      "뉴스",
+      "시황"
+    ],
+    "summary": "국내 뉴스와 일부 공시를 조회하고 종목별로 검색합니다. 정기보고서 등 일부 공시는 다른 화면에서 확인해야 합니다.",
+    "observation": "",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0700.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
+    "number": "0709",
+    "title": "금감원 전자공시",
+    "purpose": "종목 분석",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "초급",
+    "styles": [
+      "초보",
+      "스윙",
+      "장기"
+    ],
+    "tags": [
+      "뉴스"
+    ],
+    "summary": "금융감독원 전자공시 시스템에서 종목별 접수 내역과 원문을 조회합니다. 조회 기간과 공시 유형을 지정할 수 있습니다.",
+    "observation": "뉴스 제목을 확인한 뒤 정기보고서나 회사가 제출한 원문을 찾을 때 사용할 수 있습니다.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0709.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
+    "number": "0767",
+    "title": "종목별프로그램매매현황",
+    "purpose": "종목 분석",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "중급",
+    "styles": [
+      "단타",
+      "스윙"
+    ],
+    "tags": [
+      "수급"
+    ],
+    "summary": "종목별 프로그램 매매의 매수·매도 현황을 확인합니다.",
+    "observation": "",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0767.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
+    "number": "0778",
+    "title": "종목일별 프로그램매매추이",
+    "purpose": "종목 분석",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "중급",
+    "styles": [
+      "단타",
+      "스윙"
+    ],
+    "tags": [
+      "수급"
+    ],
+    "summary": "선택한 종목의 프로그램매매 추이를 조회합니다.",
+    "observation": "",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/0778.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
     "number": "0780",
     "title": "투자자별매매종합",
     "purpose": "시장 파악",
@@ -1041,6 +1231,31 @@
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/1401.htm"
   },
   {
+    "number": "1700",
+    "title": "수급매매종합",
+    "purpose": "종목 분석",
+    "product": "국내주식",
+    "screenType": "조회",
+    "level": "중급",
+    "styles": [
+      "단타",
+      "스윙"
+    ],
+    "tags": [
+      "수급"
+    ],
+    "summary": "종목 및 시장의 수급 동향을 여러 탭에서 살펴봅니다.",
+    "observation": "",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 화면 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/1700.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ]
+  },
+  {
     "number": "2000",
     "title": "주식종합",
     "purpose": "주문",
@@ -1063,6 +1278,32 @@
       }
     ],
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/2000.htm"
+  },
+  {
+    "number": "3010",
+    "title": "홍콩주식 현재가",
+    "purpose": "해외",
+    "product": "해외주식",
+    "screenType": "시세",
+    "level": "초급",
+    "styles": [
+      "해외"
+    ],
+    "tags": [
+      "시황",
+      "차트"
+    ],
+    "summary": "홍콩 종목의 5단계 호가, 일별 체결, 시세와 연결 차트를 확인합니다.",
+    "observation": "시세 구분, 거래 통화, 최소 거래 단위를 먼저 살펴보세요.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/3010.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ],
+    "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/3010.htm"
   },
   {
     "number": "3020",
@@ -1088,6 +1329,31 @@
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/3020.htm"
   },
   {
+    "number": "3098",
+    "title": "홍콩주식 종합차트 15분 지연시세",
+    "purpose": "해외",
+    "product": "해외주식",
+    "screenType": "차트",
+    "level": "초급",
+    "styles": [
+      "해외"
+    ],
+    "tags": [
+      "차트"
+    ],
+    "summary": "홍콩 주식의 지연시세를 종목과 기간별로 비교합니다.",
+    "observation": "일봉과 분봉을 전환하기 전에 지연시세 여부와 조회 주기를 확인하세요.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/3098.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ],
+    "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/3098.htm"
+  },
+  {
     "number": "3130",
     "title": "외화환전신청",
     "purpose": "해외",
@@ -1109,6 +1375,31 @@
       }
     ],
     "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/3130.htm"
+  },
+  {
+    "number": "3133",
+    "title": "일별 환율조회",
+    "purpose": "해외",
+    "product": "해외주식",
+    "screenType": "시세",
+    "level": "초급",
+    "styles": [
+      "해외"
+    ],
+    "tags": [
+      "시황"
+    ],
+    "summary": "선택한 날짜의 주요 통화 환율을 조회하고 차트를 열 수 있습니다.",
+    "observation": "외화환전신청 화면에서 환율조회를 누르면 이 화면으로 연결됩니다.",
+    "sources": [
+      {
+        "sourceName": "키움증권 영웅문4 도움말",
+        "sourceType": "official",
+        "sourceUrl": "https://download.kiwoom.com/hero4_help_new/3133.htm",
+        "retrievedAt": "2026-11-25"
+      }
+    ],
+    "officialHelpUrl": "https://download.kiwoom.com/hero4_help_new/3133.htm"
   },
   {
     "number": "4989",

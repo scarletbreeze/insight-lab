@@ -1,7 +1,8 @@
 ---
 import HeroLayout from '../../../components/hero/HeroLayout.astro';
+import ScreenGuide from '../../../components/hero/ScreenGuide.astro';
 import ScreenCard from '../../../components/hero/ScreenCard.astro';
-import { heroGuides, screens, workflows } from '../../../utils/hero';
+import { heroGuides, legends, relatedScreens, screenLearning, screens, workflows } from '../../../utils/hero';
 import { sitePath } from '../../../utils/paths';
 
 export function getStaticPaths() {
@@ -9,18 +10,25 @@ export function getStaticPaths() {
 }
 
 const { screen } = Astro.props;
-const related = screens.filter((other) => other.number !== screen.number && other.purpose === screen.purpose).slice(0, 4);
+const related = relatedScreens(screen.number);
+const similar = screens.filter((item) => item.number !== screen.number
+  && item.purpose === screen.purpose
+  && item.screenType === screen.screenType
+  && item.product === screen.product).slice(0, 3);
+const companions = related.filter((item) => !similar.some(({ number }) => item.number === number));
+const reading = legends.profiles.filter((profile) => profile.screens.includes(screen.number));
 const recommended = workflows.filter((workflow) => workflow.steps.some(({ number }) => number === screen.number));
+const learning = screenLearning[screen.number];
 ---
 <HeroLayout title={screen.title} heading={screen.number + ' · ' + screen.title}>
   <p slot="intro">{screen.purpose} · {screen.product}</p>
   <section class="hero-section">
     <h2>화면에서 볼 수 있는 것</h2>
     <p>{screen.summary}</p>
+    {screen.observation && <><h3>이럴 때 살펴보세요</h3><p>{screen.observation}</p></>}
   </section>
   <section class="hero-section">
     <h2>Hero Lab 화면 분류</h2>
-    {screen.observation && <p>{screen.observation}</p>}
     <dl class="hero-metadata">
       <div><dt>투자 스타일</dt><dd>{screen.styles.join(' · ')}</dd></div>
       <div><dt>유형</dt><dd>{screen.screenType}</dd></div>
@@ -28,13 +36,29 @@ const recommended = workflows.filter((workflow) => workflow.steps.some(({ number
       {screen.tags.length > 0 && <div><dt>분석 관심사</dt><dd>{screen.tags.join(' · ')}</dd></div>}
     </dl>
   </section>
+  <ScreenGuide number={screen.number} title={screen.title} />
+  {learning && <section class="hero-section">
+    <h2>이 화면의 공식 활용 가이드</h2>
+    <ul>{learning.map(({ title, url }) => <li><a href={url}>{title}</a></li>)}</ul>
+  </section>}
   {recommended.length > 0 && <section class="hero-section">
     <h2>추천 화면 조합</h2>
     <ul>{recommended.map(({ title, slug }) => <li><a href={sitePath('hero-lab/recipes') + '#' + slug}>{title}</a></li>)}</ul>
   </section>}
-  {related.length > 0 && <section class="hero-section">
-    <h2>같은 목적의 화면</h2>
-    <div class="hero-grid">{related.map((item) => <ScreenCard screen={item} />)}</div>
+  {reading.length > 0 && <section class="hero-section">
+    <h2>함께 읽을 Legend’s Pick</h2>
+    <p>Hero Lab의 학습용 화면 연결을 바탕으로 관련 도서 항목을 안내합니다.</p>
+    <ul class="hero-chips">{reading.map(({ chapter, name }) => (
+      <li><a href={sitePath('hero-lab/hall-of-fame') + '#legend-' + chapter}>{name}</a></li>
+    ))}</ul>
+  </section>}
+  {similar.length > 0 && <section class="hero-section">
+    <h2>비슷한 화면</h2>
+    <div class="hero-grid">{similar.map((item) => <ScreenCard screen={item} />)}</div>
+  </section>}
+  {companions.length > 0 && <section class="hero-section">
+    <h2>함께 볼 화면</h2>
+    <div class="hero-grid">{companions.map((item) => <ScreenCard screen={item} />)}</div>
   </section>}
   <section class="hero-section">
     <h2>출처</h2>

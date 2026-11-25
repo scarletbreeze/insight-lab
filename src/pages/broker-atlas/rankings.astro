@@ -1,9 +1,20 @@
 ---
 import BrokerLayout from '../../components/broker/BrokerLayout.astro';
+import BrokerProfitRanking from '../../components/broker/BrokerProfitRanking';
+import IndustrySnapshot from '../../components/broker/IndustrySnapshot';
+import { brokers } from '../../utils/brokers';
 import BrokerTable from '../../components/broker/BrokerTable';
 import { sitePath } from '../../utils/paths';
 ---
 <BrokerLayout title="수록 증권사 순위">
-  <p slot="intro">확인한 회사의 연결 결산 지표를 같은 기준으로 비교합니다. 순위 범위는 사이트에 수록한 증권사입니다.</p>
-  <BrokerTable client:load mode="rank" brokerBase={sitePath('broker-atlas/brokers')} />
+  <BrokerProfitRanking client:load brokerBase={sitePath('broker-atlas/brokers')} />
+  <section class="lab-block">
+    <h2>기준일별 별도 자본총계</h2>
+    <IndustrySnapshot client:load view="table" brokerBase={sitePath('broker-atlas/brokers')} />
+  </section>
+  <section class="lab-block">
+    <h2>연결 기준 수록사 순위</h2>
+    <p>연결 결산을 확인한 {brokers.length}개사의 지표를 비교합니다.</p>
+    <BrokerTable client:load mode="rank" brokerBase={sitePath('broker-atlas/brokers')} />
+  </section>
 </BrokerLayout>

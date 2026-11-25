@@ -1,14 +1,20 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
-import { screenByNumber, workflows } from '../../utils/hero';
+import { legends, screenByNumber, workflows } from '../../utils/hero';
 import { sitePath } from '../../utils/paths';
+const classes = { curated: 'Hero Lab 추천 조합', official: '공식 가이드 기반', legend: '도서 주제 기반' } as const;
 ---
 <HeroLayout title="추천 화면 조합">
-  <p slot="intro">공식 도움말에서 확인한 화면 기능을 바탕으로 Hero Lab이 구성한 활용 예시입니다.</p>
+  <p slot="intro">시장 관찰, 종목 정리, 장 후 복기에 맞춰 화면을 함께 살펴봅니다.</p>
   {workflows.map((workflow) => (
     <section class="hero-section" id={workflow.slug}>
+      <p class="category">{classes[workflow.kind as keyof typeof classes]}</p>
       <h2>{workflow.title}</h2>
       <p>{workflow.summary}</p>
+      {workflow.sourceUrl && <p><a href={workflow.sourceUrl}>키움증권 공식 활용 가이드</a></p>}
+      {workflow.chapter && <p>
+        <a href={sitePath('hero-lab/hall-of-fame') + '#legend-' + workflow.chapter}>Legend’s Pick · {legends.book.title} {workflow.chapter}장</a>
+      </p>}
       <ol class="hero-steps">
         {workflow.steps.map(({ number, note }) => (
           <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title}</a><p>{note}</p></li>

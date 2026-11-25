@@ -1,0 +1,221 @@
+[
+  {
+    "date": "2015-10-07",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/86629559-f2ea-4837-9cb7-46853a5a8de1",
+    "remove": [
+      "ALTR"
+    ],
+    "add": {
+      "INCY": "Incyte Corp."
+    }
+  },
+  {
+    "date": "2015-11-11",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/3417b182-f369-4d0e-960b-8fc7b9f06b16",
+    "remove": [
+      "BRCM"
+    ],
+    "add": {
+      "PYPL": "PayPal Holdings, Inc."
+    }
+  },
+  {
+    "date": "2015-12-14",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1166691/000095010315009516/dp61838_8k.htm",
+    "remove": [
+      "CMCSK"
+    ],
+    "add": {}
+  },
+  {
+    "date": "2015-12-21",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-4",
+    "remove": [
+      "CHRW",
+      "EXPD",
+      "GMCR",
+      "GRMN",
+      "SPLS",
+      "VIP",
+      "WYNN",
+      "LILA",
+      "LILAK"
+    ],
+    "add": {
+      "CTRP": "Ctrip.com International Ltd. ADR",
+      "ENDP": "Endo International plc",
+      "EXPE": "Expedia, Inc.",
+      "MXIM": "Maxim Integrated Products, Inc.",
+      "NCLH": "Norwegian Cruise Line Holdings Ltd.",
+      "TMUS": "T-Mobile US, Inc.",
+      "ULTA": "Ulta Salon Cosmetics & Fragrance, Inc."
+    }
+  },
+  {
+    "date": "2016-02-22",
+    "sourceUrl": "https://ir.nasdaq.com/node/89131",
+    "remove": [
+      "KLAC"
+    ],
+    "add": {
+      "CSX": "CSX Corp."
+    }
+  },
+  {
+    "date": "2016-03-16",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/eafabe53-9918-4048-bc07-3662360a89ea",
+    "remove": [
+      "SNDK"
+    ],
+    "add": {
+      "NTES": "NetEase, Inc. ADR"
+    }
+  },
+  {
+    "date": "2016-04-18",
+    "sourceUrl": "https://www.nasdaqtrader.com/TraderNews.aspx?id=fpnews2016-25",
+    "remove": [],
+    "add": {
+      "BATRA": "Liberty Braves, Series A",
+      "BATRK": "Liberty Braves, Series C",
+      "LSXMA": "Liberty SiriusXM, Series A",
+      "LSXMK": "Liberty SiriusXM, Series C"
+    }
+  },
+  {
+    "date": "2016-04-19",
+    "sourceUrl": "https://www.nasdaqtrader.com/TraderNews.aspx?id=fpnews2016-25",
+    "remove": [
+      "LSXMA",
+      "LSXMK"
+    ],
+    "add": {}
+  },
+  {
+    "date": "2016-06-20",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/dentsply-sirona-inc-join-nasdaq-100-index-beginning-june-20-2016",
+    "remove": [
+      "LMCA",
+      "LMCK",
+      "BATRA",
+      "BATRK"
+    ],
+    "add": {
+      "XRAY": "DENTSPLY Sirona, Inc."
+    }
+  },
+  {
+    "date": "2016-07-18",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/2475f257-006d-44c4-8693-efa058adfef4",
+    "remove": [
+      "ENDP"
+    ],
+    "add": {
+      "MCHP": "Microchip Technology, Inc."
+    }
+  },
+  {
+    "date": "2016-10-19",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/shire-plc-join-nasdaq-100-index-beginning-october-19-2016",
+    "remove": [
+      "LLTC"
+    ],
+    "add": {
+      "SHPG": "Shire plc"
+    }
+  },
+  {
+    "date": "2016-12-19",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-5",
+    "remove": [
+      "BBBY",
+      "NTAP",
+      "SRCL",
+      "WFM"
+    ],
+    "add": {
+      "CTAS": "Cintas Corporation",
+      "HAS": "Hasbro, Inc.",
+      "HOLX": "Hologic, Inc.",
+      "KLAC": "KLA-Tencor Corporation"
+    }
+  },
+  {
+    "date": "2016-12-19",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf",
+    "remove": [],
+    "add": {
+      "LILA": "Liberty Global LiLAC, Class A",
+      "LILAK": "Liberty Global LiLAC, Class C"
+    }
+  },
+  {
+    "date": "2017-02-07",
+    "sourceUrl": "https://ir.nasdaq.com/node/92481",
+    "remove": [
+      "NXPI"
+    ],
+    "add": {
+      "JBHT": "J.B. Hunt Transport Services, Inc."
+    }
+  },
+  {
+    "date": "2017-03-20",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/idexx-laboratories-inc-join-nasdaq-100-index-beginning-march-20",
+    "remove": [
+      "SBAC"
+    ],
+    "add": {
+      "IDXX": "IDEXX Laboratories, Inc."
+    }
+  },
+  {
+    "date": "2017-04-24",
+    "sourceUrl": "https://ir.nasdaq.com/node/93181",
+    "remove": [
+      "TRIP"
+    ],
+    "add": {
+      "WYNN": "Wynn Resorts, Limited"
+    }
+  },
+  {
+    "date": "2017-06-19",
+    "sourceUrl": "https://ir.nasdaq.com/node/93711",
+    "remove": [
+      "YHOO"
+    ],
+    "add": {
+      "MELI": "MercadoLibre, Inc."
+    }
+  },
+  {
+    "date": "2017-10-23",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+    "remove": [
+      "MAT"
+    ],
+    "add": {
+      "ALGN": "Align Technology, Inc."
+    }
+  },
+  {
+    "date": "2017-12-18",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+    "remove": [
+      "AKAM",
+      "DISCA",
+      "DISCK",
+      "NCLH",
+      "TSCO",
+      "VIAB"
+    ],
+    "add": {
+      "ASML": "ASML Holding N.V.",
+      "CDNS": "Cadence Design Systems, Inc.",
+      "SNPS": "Synopsys, Inc.",
+      "TTWO": "Take-Two Interactive Software, Inc.",
+      "WDAY": "Workday, Inc."
+    }
+  }
+]

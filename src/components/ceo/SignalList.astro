@@ -1,20 +1,33 @@
 ---
-import type { signals } from '../../utils/ceo';
+import { ceoSections, type signals } from '../../utils/ceo';
+import { sitePath } from '../../utils/paths';
+import followUpData from '../../../data/ceo/follow-ups.json';
 interface Props { items: typeof signals; }
 const { items } = Astro.props;
+const followUps: Record<string, { date: string; label: string; sourceUrl: string }[]> = followUpData;
 ---
 <ul class="lab-list">
-  {items.map(({ id, date, category, title, summary, why, companies, question, sourceName, sourceUrl }) => (
-    <li class="lab-card" id={id} data-year={date.slice(0, 4)} data-topic={category}>
-      <div><time datetime={date}>{date}</time><span>{category}</span></div>
+  {items.map(({ id, date, category, title, summary, why, companies, question, region, businessAreas, sourceName, sourceUrl, stage, applications, areas }) => (
+    <li class="lab-card" id={id} data-year={date.slice(0, 4)} data-topic={category} data-region={region} data-area={businessAreas.join("|")} data-application={applications?.join('|')}>
+      <div><time datetime={date}>{date}</time><span>{category} · {region === "KR" ? "국내" : "해외"}{stage && ' · ' + stage}</span></div>
       <h2>{title}</h2>
       <dl>
         <dt>확인한 사실</dt><dd>{summary}</dd>
         <dt>살펴볼 이유</dt><dd>{why}</dd>
         <dt>관련 기관·회사</dt><dd>{companies.join(' · ')}</dd>
+        {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
         <dt>생각해 볼 질문</dt><dd>{question}</dd>
       </dl>
       <a href={sourceUrl}>{sourceName}</a>
+      {followUps[id]?.length && <div>
+        <h3>후속 확인 일정</h3>
+        <ul class="lab-list">{followUps[id].map(({ date, label, sourceUrl }) => <li>
+          <time datetime={date}>{date}</time> · <a href={sourceUrl}>{label}</a>
+        </li>)}</ul>
+      </div>}
+      <p>관련 주제 {ceoSections.filter(([, slug]) => areas.includes(slug)).map(([label, slug]) => (
+        <> · <a href={sitePath('ceo-lens/' + slug) + '#' + id}>{label}</a></>
+      ))}</p>
     </li>
   ))}
 </ul>

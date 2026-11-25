@@ -1,0 +1,20 @@
+---
+import { sitePath } from '../../utils/paths';
+
+const roles = [
+  { title: '발행과 등록', summary: '증권 발행과 권리 등록, 계좌관리기관의 역할을 살펴봅니다.', signal: 'token-framework' },
+  { title: '유통과 감독', summary: '거래 중개 방식과 투자자 보호에 적용되는 규칙을 확인합니다.', signal: 'token-working-group' },
+  { title: '결제와 기준정보', summary: '대금 결제와 기준정보 배포 사례를 각각 확인합니다.', signal: 'dtcc-smart-nav' },
+];
+---
+<section class="lab-block">
+  <h2>토큰증권의 발행·유통·결제</h2>
+  <p>금융위원회 정책 자료와 해외 인프라 실증 사업을 단계별로 연결했습니다.</p>
+  <div class="lab-grid">
+    {roles.map(({ title, summary, signal }) => (
+      <a class="lab-card" href={sitePath('ceo-lens/signals') + '#' + signal}>
+        <strong>{title}</strong><span>{summary}</span>
+      </a>
+    ))}
+  </div>
+</section>

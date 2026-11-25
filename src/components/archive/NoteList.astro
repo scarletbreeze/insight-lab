@@ -6,8 +6,8 @@ interface Props { items: typeof notes; }
 const { items } = Astro.props;
 ---
 <ul class="lab-list">
-  {items.map(({ date, title, slug, tags }) => (
-    <li data-search={[date, title, ...tags].join(" ").toLowerCase()}>
+  {items.map(({ date, title, slug, tags, summary }) => (
+    <li data-search={[date, title, summary, ...tags].join(" ").toLowerCase()}>
       <time datetime={date}>{date}</time>
       <a href={sitePath('normalman-archive/notes/' + encodeURIComponent(slug))}>{title}</a>
     </li>
