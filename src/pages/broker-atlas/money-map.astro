@@ -1,11 +1,14 @@
 ---
 import BrokerLayout from '../../components/broker/BrokerLayout.astro';
+import BrokerageFees from '../../components/broker/BrokerageFees';
+import { sitePath } from '../../utils/paths';
 import MoneyMap from '../../components/broker/MoneyMap.astro';
 import DisclosedSegments from '../../components/broker/DisclosedSegments.astro';
 import { brokers } from '../../utils/brokers';
 ---
 <BrokerLayout title="Money Map">
   <p slot="intro">고객에서 사업을 거쳐 수익원으로 이어지는 경로를 살펴봅니다.</p>
+  <BrokerageFees client:load brokerBase={sitePath('broker-atlas/brokers')} />
   {brokers.map((broker) => <section class="lab-block">
     <h2>{broker.name}</h2><MoneyMap {broker} /><a href={broker.sourceUrl}>사업 공시</a>
     <DisclosedSegments brokerId={broker.id} />

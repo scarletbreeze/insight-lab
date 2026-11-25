@@ -3,7 +3,7 @@ import BrokerLayout from '../../../components/broker/BrokerLayout.astro';
 import BrokerTrend from '../../../components/broker/BrokerTrend';
 import MoneyMap from '../../../components/broker/MoneyMap.astro';
 import DisclosedSegments from '../../../components/broker/DisclosedSegments.astro';
-import { brokers, brokerEvents, brokerMetrics, fields, formatBrokerMetric, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
+import { brokers, brokerEvents, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
 
 export function getStaticPaths() {
   return industryRanks.map((company) => ({
@@ -52,9 +52,9 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
   </section>}
   <section class="lab-block">
     <h2>업계 비교 기준일별 별도 재무현황</h2>
-    <div class="lab-grid">{snapshots.map(({ label, date, entry, scope }) => (
+    <div class="lab-grid">{snapshots.map(({ label, date, entry, scope, confirmedTopCount, rankSourceUrl, rankSourceName }) => (
       <article class="lab-card">
-        <h3>{label} · 자본총계 {entry.rank}위</h3>
+        <h3>{label} · 자본총계 {formatIndustryRank(entry.rank, confirmedTopCount)}</h3>
         <p><time datetime={date}>{date}</time> · 별도 재무제표 · {scope}</p>
         <dl class="lab-facts">
           <div><dt>자본총계</dt><dd>{formatBrokerMetric(entry.equity, false)}</dd></div>
@@ -63,6 +63,7 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
           <div><dt>자본금</dt><dd>{formatBrokerMetric(entry.capital, false)}</dd></div>
         </dl>
         <a href={entry.sourceUrl}>{entry.sourceName}</a>
+        {rankSourceUrl && <a href={rankSourceUrl}>{rankSourceName}</a>}
       </article>
     ))}</div>
   </section>

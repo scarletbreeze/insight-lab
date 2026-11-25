@@ -34,6 +34,9 @@ interface IndustryPeriod {
   label: string;
   basis: string;
   scope: string;
+  confirmedTopCount?: number;
+  rankSourceUrl?: string;
+  rankSourceName?: string;
   sourceUrl?: string;
   sourceName?: string;
   companies: IndustryCompany[];
@@ -41,16 +44,16 @@ interface IndustryPeriod {
 
 const publishedIndustryPeriods: IndustryPeriod[] = [
   { ...industryThirdQuarter, label: '2026년 3분기 말' },
-  { ...industryHalfYear, label: '2026년 반기 말' },
-  { ...firstQuarter, label: '2026년 1분기 말', scope: '자본총계 상위 10개사' },
-  { ...industry, label: '2025년 말', scope: '자본총계 상위 10개사' },
-  { ...industryPriorThirdQuarter, label: '2025년 3분기 말' },
+  { ...industryHalfYear, confirmedTopCount: 10, label: '2026년 반기 말' },
+  { ...firstQuarter, confirmedTopCount: 10, label: '2026년 1분기 말', scope: '자본총계 상위 10개사' },
+  { ...industry, confirmedTopCount: 10, label: '2025년 말', scope: '자본총계 상위 10개사' },
+  { ...industryPriorThirdQuarter, confirmedTopCount: 10, label: '2025년 3분기 말' },
   { ...industry2024, label: '2024년 말' },
   { ...historical, label: '2023년 말' },
   { ...industry2022, label: '2022년 말' },
   { ...industry2021, label: '2021년 말' },
   { ...industry2020, label: '2020년 말' },
-  { ...industry2020HalfYear, label: '2020년 반기 말' },
+  { ...industry2020HalfYear, confirmedTopCount: 10, label: '2020년 반기 말' },
 ];
 export const industryPeriods = publishedIndustryPeriods.map(({ companies, ...period }) => ({
   ...period,
@@ -61,6 +64,10 @@ export const industryPeriods = publishedIndustryPeriods.map(({ companies, ...per
       sourceName: company.sourceName ?? period.sourceName,
     })),
 }));
+
+export function formatIndustryRank(rank: number, confirmedTopCount: number = 0) {
+  return (rank <= confirmedTopCount ? '업계 ' : '수록 회사 중 ') + rank + '위';
+}
 
 export const industry2025 = industry;
 export const industryRanks = industryPeriods.find(({ date }) => date === industry2025.date)!.companies;

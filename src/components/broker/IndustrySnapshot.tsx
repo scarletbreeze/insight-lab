@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { defaultIndustryPeriod, formatBrokerMetric, industryPeriods } from '../../utils/brokers';
+import { defaultIndustryPeriod, formatBrokerMetric, formatIndustryRank, industryPeriods } from '../../utils/brokers';
 
 export default function IndustrySnapshot({ view, brokerBase }: { view: 'cards' | 'table'; brokerBase: string }) {
   const [periodIndex, setPeriod] = useState(defaultIndustryPeriod);
@@ -26,17 +26,18 @@ export default function IndustrySnapshot({ view, brokerBase }: { view: 'cards' |
       </label>
     </div>
     <p role="status">{period.date} · {period.basis} · {period.scope}</p>
+    {period.confirmedTopCount && period.confirmedTopCount < period.companies.length && <p>기준일 자료로 업계 상위 {period.confirmedTopCount}개사의 순위를 확인했습니다. 이후 순위는 수록한 회사끼리 비교한 결과입니다. {period.rankSourceUrl && <a href={period.rankSourceUrl}>{period.rankSourceName}</a>}</p>}
     {view === 'cards' ? <div className="lab-grid">
       {rows.map(({ id, name, rank, equity }) => (
         <a key={id} className="lab-card" href={href(id)}>
-          <strong>{name}</strong><span>{rank}위 · {formatBrokerMetric(equity, false)}</span>
+          <strong>{name}</strong><span>{formatIndustryRank(rank, period.confirmedTopCount)} · {formatBrokerMetric(equity, false)}</span>
           {changes.has(id) && <span>전년 동기 대비 {formatBrokerMetric(changes.get(id), true)}</span>}
         </a>
       ))}
     </div> : <div className="lab-table-wrap"><table className="lab-table">
       <thead><tr><th scope="col">순위</th><th scope="col">증권사</th><th scope="col">자본총계</th><th scope="col">자산총계</th>{changes.size > 0 && <th scope="col">자본총계 전년 동기 대비</th>}</tr></thead>
       <tbody>{rows.map(({ id, name, rank, equity, assets }) => (
-        <tr key={id}><td>{rank}</td><th scope="row"><a href={href(id)}>{name}</a></th>
+        <tr key={id}><td>{formatIndustryRank(rank, period.confirmedTopCount)}</td><th scope="row"><a href={href(id)}>{name}</a></th>
           <td>{formatBrokerMetric(equity, false)}</td><td>{formatBrokerMetric(assets, false)}</td>
           {changes.size > 0 && <td>{formatBrokerMetric(changes.get(id), true)}</td>}</tr>
       ))}</tbody>

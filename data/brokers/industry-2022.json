@@ -1,6 +1,9 @@
 {
   "date": "2022-12-31",
   "basis": "별도 재무제표",
+  "confirmedTopCount": 9,
+  "rankSourceUrl": "https://www.e-kjfs.org/upload/pdf/KJFS-2023-10-52-5-787.pdf",
+  "rankSourceName": "한국증권학회지 표 1 · 2022년 말 자기자본 4조 원 이상 9개사",
   "scope": "수록 10개사 자본총계 순위",
   "companies": [
     {

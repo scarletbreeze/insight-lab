@@ -1,6 +1,7 @@
 {
   "date": "2020-12-31",
   "basis": "별도 재무제표",
+  "confirmedTopCount": 8,
   "scope": "수록 10개사 자본총계 순위",
   "sourceName": "KIND 공시 · 주요 국내 금융투자회사 재무 현황",
   "sourceUrl": "https://kind.krx.co.kr/external/2021/09/09/000467/20210909001095/10603.htm",

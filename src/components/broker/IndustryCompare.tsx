@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { defaultIndustryPeriod, formatBrokerMetric, industryPeriods } from '../../utils/brokers';
+import { defaultIndustryPeriod, formatBrokerMetric, formatIndustryRank, industryPeriods } from '../../utils/brokers';
 
 const metrics = [
   ['rank', '자본총계 순위'],
@@ -34,13 +34,14 @@ export default function IndustryCompare({ leftCompany, rightCompany }: { leftCom
             <tr key={key}>
               <th scope="row">{title}</th>
               {[left, right].map((company, index) => <td key={index}>{
-                key === 'rank' && company ? company.rank + '위' : formatBrokerMetric(company?.[key], false)
+                key === 'rank' && company ? formatIndustryRank(company.rank, period.confirmedTopCount) : formatBrokerMetric(company?.[key], false)
               }</td>)}
             </tr>
           ))}</tbody>
         </table>
     </div>
     {period.sourceUrl && <p><a href={period.sourceUrl}>{period.sourceName}</a></p>}
+    {period.rankSourceUrl && <p><a href={period.rankSourceUrl}>{period.rankSourceName}</a></p>}
     {[...new Map([left, right].flatMap((entry) => entry?.sourceUrl && entry.sourceUrl !== period.sourceUrl
       ? [[entry.sourceUrl, entry.sourceName] as const] : []))].map(([url, name]) => (
       <p key={url}><a href={url}>{name}</a></p>

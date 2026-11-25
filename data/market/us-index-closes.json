@@ -1,4 +1,12 @@
 {
+  "2024-10": {
+    "firstDate": "2024-10-01",
+    "lastDate": "2024-10-31",
+    "first": [5708.75, 17910.36],
+    "last": [5705.45, 18095.15],
+    "firstSource": "https://advisor.morganstanley.com/shawn.m.reed/documents/field/s/sh/shawn-m-reed/Oct24_New_Newsletter_-_Heartland_Grp_vers_2.pdf",
+    "lastSource": "https://advisor.morganstanley.com/shawn.m.reed/documents/field/s/sh/shawn-m-reed/Oct24_New_Newsletter_-_Heartland_Grp_vers_2.pdf"
+  },
   "2024-11": {
     "firstDate": "2024-11-01",
     "lastDate": "2024-11-29",
