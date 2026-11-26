@@ -1,0 +1,38 @@
+---
+import { sitePath } from '../../utils/paths';
+import { services } from '../../utils/services';
+
+interface Props {
+  slug: string;
+  links: Array<[string, string]>;
+  section?: string;
+}
+
+const { slug, links, section } = Astro.props;
+const name = services.find(service => service.slug === slug)!.title;
+const home = sitePath(slug);
+const path = Astro.url.pathname;
+const isHome = path === home;
+const items = links.filter(([, route]) => !isHome || route).map(([label, route]) => {
+  const href = route ? sitePath(slug + '/' + route) : home;
+  const current = path === href ? 'page' : route && (path.startsWith(href) || route === section) ? 'location' : undefined;
+  return { label: route ? label : name + ' 홈', href, current } as const;
+});
+const Wrapper = isHome ? 'div' : 'details';
+const visibleCount = isHome && items.length > 4 ? 3 : items.length;
+const extra = items.slice(visibleCount);
+---
+<Wrapper class={isHome ? 'service-menu-home' : 'service-menu-fold'}>
+  {!isHome && <summary>{name} 메뉴</summary>}
+  <nav class="service-menu" aria-label={name + ' 소메뉴'}>
+    {items.slice(0, visibleCount).map(({ label, href, current }) => (
+      <a class="service-menu-link" href={href} aria-current={current}><span>{label}</span></a>
+    ))}
+    {extra.length > 0 && <details class="service-menu-more">
+      <summary>다른 메뉴 {extra.length}개</summary>
+      <div class="service-menu-extra">{extra.map(({ label, href }) => (
+        <a class="service-menu-link" href={href}><span>{label}</span></a>
+      ))}</div>
+    </details>}
+  </nav>
+</Wrapper>

@@ -1,11 +1,8 @@
-.hero-lab { --hero-accent: #94afff; padding-block: 1.75rem 4rem; min-height: 65vh; }
+.hero-lab { --hero-accent: #94afff; padding-block: clamp(.8rem,2vw,1.4rem) 4rem; min-height: 65vh; }
 .hero-lab a:hover { color: var(--hero-accent); }
-.hero-nav { display: flex; gap: .65rem 1.2rem; flex-wrap: wrap; padding-block-end: 1rem; border-bottom: 1px solid var(--color-rule); }
-.hero-heading { padding-block: clamp(2rem, 6vw, 4rem); }
-.hero-heading h1 { font: clamp(2.25rem, 7vw, 5.25rem)/1.08 var(--font-serif); overflow-wrap: anywhere; }
-.hero-heading p, .hero-section p, .hero-status { color: var(--color-muted); margin-top: .65rem; }
-.hero-section { margin-top: clamp(1.75rem, 4vw, 3.25rem); max-width: 72rem; }
-.hero-section h2 { font-size: 1.35rem; font-weight: 700; margin-bottom: .75rem; }
+.hero-section p, .hero-status { color: var(--color-muted); margin-top: .65rem; line-height: 1.72; max-width: 75ch; }
+.hero-section { margin-top: clamp(1.6rem, 3.8vw, 3rem); max-width: 72rem; }
+.hero-section h2 { font-size: clamp(1.3rem,2.1vw,1.75rem); font-weight: 720; margin-bottom: .8rem; letter-spacing: -.035em; }
 .hero-section a:not(.hero-card), .hero-node a, .monitor a { color: var(--hero-accent); text-decoration: underline; text-underline-offset: .2em; }
 .hero-section ul:not(.hero-chips) > li { margin-block: .45rem; }
 .hero-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: .8rem; margin-top: .8rem; }
@@ -92,4 +89,3 @@ hero-directory li small { display: block; color: var(--color-muted); }
   hero-discovery .hero-filters { display: grid; width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   hero-discovery .hero-filters select { min-width: 0; width: 100%; }
 }
-.hero-nav [aria-current="location"] { color: var(--hero-accent); text-decoration: underline; text-underline-offset: .3em; }

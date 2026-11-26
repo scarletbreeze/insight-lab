@@ -10,8 +10,9 @@ export function getStaticPaths() {
 const { note } = Astro.props;
 const related = notes.filter((item) => item.slug !== note.slug && item.tags.some((tag) => note.tags.includes(tag))).slice(0, 4);
 ---
-<ArchiveLayout title={note.title}>
-  <p slot="intro"><time datetime={note.date}>{note.date}</time> · {archiveContentLabels[note.contentType]}</p>
+<ArchiveLayout title={note.title} section="timeline">
+  <p slot="intro"><time datetime={note.date}>{note.date}</time> · {archiveContentLabels[note.contentType]}
+    · <a href={sitePath('normalman-archive/timeline') + '#year-' + note.date.slice(0, 4)}>{note.date.slice(0, 4)}년 기록 보기</a></p>
   <section class="lab-block">
     <h2>공개 원문</h2>
     <p>{note.summary}</p>

@@ -1,5 +1,11 @@
 [
   {
+    "updatedAt": "2026-11-26T22:19:53+09:00",
+    "service": "hero-lab",
+    "title": "화면 탐색·추천 조합·공식 색인을 한 메뉴에서 탐색",
+    "route": "hero-lab"
+  },
+  {
     "updatedAt": "2026-11-26T20:07:55+09:00",
     "service": "market-time-capsule",
     "title": "2020년 한국·미국 4개 지수의 12개월 등락과 종가 원문",

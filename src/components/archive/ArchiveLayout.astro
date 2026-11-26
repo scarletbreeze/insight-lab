@@ -1,10 +1,10 @@
 ---
 import LabLayout from '../common/LabLayout.astro';
-interface Props { title: string; }
-const { title } = Astro.props;
-const links: Array<[string, string]> = [['Normalman Archive', ''], ['타임라인', 'timeline'], ['프로젝트', 'projects'], ['소개', 'about']];
+interface Props { title: string; section?: string; }
+const { title, section } = Astro.props;
+const links: Array<[string, string]> = [['Normalman Archive', ''], ['연도별 기록', 'timeline'], ['프로젝트', 'projects'], ['아카이브 소개', 'about']];
 ---
-<LabLayout slug="normalman-archive" title={title} accent="#d0c3b6" links={links}>
+<LabLayout slug="normalman-archive" title={title} accent="#d0c3b6" links={links} {section}>
   <slot name="intro" slot="intro" />
   <slot />
 </LabLayout>

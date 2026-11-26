@@ -108,23 +108,27 @@ Choose tools according to the evidence needed. Use the PDF skill when a report's
 
 ### Parallel service work
 
-For a development batch spanning Market Time Capsule, VOC Studio and Broker Atlas, the current session leads integration and delegates one independent assignment to each relevant service agent. A single-service change can stay with one owner. The user can request the whole batch in this session.
+Insight Lab uses one integration lead and five specialist subagents. Their project profiles live in `.codex/agents/`. The lead activates the roles each task needs. When the runtime has fewer slots than roles, run the assignments in waves and reuse the same owners for follow-up fixes.
 
 ```text
-Current session · integration and release
-├── Market agent · Market Time Capsule
-├── VOC agent    · VOC Studio
-├── Broker agent · Broker Atlas
-└── UI/UX reviewer · independent walkthrough of the integrated site
+Current session · integration, shared implementation and release
+├── market     · Market Time Capsule
+├── voc        · VOC Studio
+├── broker     · Broker Atlas
+├── designer   · visual direction across all six services
+└── ux_review  · independent browser walkthrough and retest
 ```
 
-| Owner | Scope for this batch |
+| Owner | Responsibility |
 | --- | --- |
-| Market Time Capsule | Requirements §9. Historical events, point-in-time holdings, prices, return calculations and market screens. |
-| VOC Studio | Requirements §7. Public-source collection, anonymized aggregates, classification checks and VOC screens. |
-| Broker Atlas | Requirements §8. Disclosures, comparable financial metrics, ranking evidence and broker screens. |
-| UI/UX reviewer | Read and operate the integrated site as a visitor. Report the most consequential navigation, readability, accessibility or visual issues to the lead. |
-| Integration lead | Shared components and navigation, cross-service tests, design audit, dependencies, Git and release verification. |
+| market | Requirements §9. Historical events, period-specific holdings, prices, return calculations and market screens. |
+| voc | Requirements §7. Public-source collection, anonymized aggregates, classification checks and VOC screens. |
+| broker | Requirements §8. Disclosures, comparable financial metrics, ranking evidence and broker screens. |
+| designer | Requirements §3–4 and the UI criteria in §20. Inspect representative screens, own the visual system and agreed styling files, and document service palettes, typography, emphasis, submenu banners and mobile behavior in `docs/01-design-system.md`. |
+| ux_review | Independently operate the integrated site as a visitor and check the fixes on the same devices and routes. |
+| Integration lead | Set scope and file ownership, implement shared navigation and remaining service work, run cross-service checks, maintain the audit and handle authorized releases. |
+
+For changes to hierarchy, branding or cross-service navigation, start the designer with the lead. The designer hands component conventions to implementation owners. Once visitors can operate the integrated result, the independent reviewer checks reading order, contrast, keyboard operation and how quickly the first useful result is visible.
 
 1. The lead checks the working tree and any running collectors, then assigns each agent a requirement, an explicit set of files and a user flow to verify. Start independent work together and reuse completed collections.
 2. Give each changed file one writer. An agent needing a shared change sends the lead the affected path and expected behavior. Separate worktrees can isolate changes when scopes overlap. Use one full build per integrated revision in a shared checkout.
@@ -135,7 +139,7 @@ On resuming a batch, read these ownership rules and the latest entry in `docs/v1
 
 ### Independent UI/UX review
 
-For a batch that changes a visitor flow, delegate to the project agent `ux_review` defined in `.codex/agents/ux_review.toml`. Give the reviewer a runnable integrated build and a concrete question for each affected flow. With four concurrent slots including the lead, start the reviewer when the first implementation slot becomes available. Keep the implementation owners available for fixes.
+For a batch that changes a visitor flow, delegate to the project agent `ux_review` defined in `.codex/agents/ux_review.toml`. Give the reviewer a runnable integrated build and a concrete question for each affected flow. Reserve a free slot for the reviewer once the changed flow can be exercised. Keep the implementation owners available for fixes.
 
 1. Begin at the usual entry point. For example, start at Broker Atlas and find the current cumulative net-income leader, its year-over-year change and the source. Use the interface before consulting the implementation.
 2. Walk through the task on a narrow mobile viewport and on desktop. Check keyboard operation, reading order, visual hierarchy, legibility, overflow and repeated or unnecessary content. Keep units, reporting periods, coverage limitations and source links visible where the answer depends on them.

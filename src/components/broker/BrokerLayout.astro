@@ -2,7 +2,7 @@
 import LabLayout from '../common/LabLayout.astro';
 interface Props { title: string; }
 const { title } = Astro.props;
-const links: Array<[string, string]> = [['Broker Atlas', ''], ['비교', 'compare'], ['수록사 순위', 'rankings'], ['Money Map', 'money-map'], ['방법론', 'methodology']];
+const links: Array<[string, string]> = [['Broker Atlas', ''], ['두 증권사 비교', 'compare'], ['증권사 지표 순위', 'rankings'], ['수익 경로 지도', 'money-map'], ['방법론', 'methodology']];
 ---
 <LabLayout slug="broker-atlas" title={title} links={links} accent="#8dbff3">
   <slot name="intro" slot="intro" />

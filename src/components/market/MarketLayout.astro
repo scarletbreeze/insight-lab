@@ -5,7 +5,7 @@ import { marketEra } from '../../utils/market';
 interface Props { title: string; year?: number; }
 const { title, year } = Astro.props;
 const era = marketEra(year ?? 2026);
-const links: Array<[string, string]> = [['Market Time Capsule', ''], ['지표 추이', 'trends'], ['월 비교', 'compare'], ['Returner Mode', 'game'], ['방법론', 'methodology']];
+const links: Array<[string, string]> = [['Market Time Capsule', ''], ['지표 추이', 'trends'], ['두 달 비교', 'compare'], ['종목 순위 수록 범위', 'equity-data'], ['시장 퀴즈', 'game'], ['방법론', 'methodology']];
 ---
 <LabLayout title={title} slug="market-time-capsule" links={links} accent={era.accent}>
   <div slot="intro" data-milestone={year && [1998, 2008, 2020, 2026].includes(year) ? year : undefined} class:list={['market-era', 'market-era-' + era.id]}>

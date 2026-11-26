@@ -1,4 +1,5 @@
 ---
+import ServiceMenu from './ServiceMenu.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { sitePath } from '../../utils/paths';
 import '../../styles/labs.css';
@@ -7,20 +8,16 @@ interface Props {
   slug: string;
   title: string;
   heading?: string;
+  section?: string;
   accent?: string;
   links: Array<[string, string]>;
 }
-const { slug, title, heading = title, accent, links } = Astro.props;
+const { slug, title, heading = title, accent, links, section } = Astro.props;
 ---
 <BaseLayout title={title}>
-  <div class="lab-page" style={accent ? `--lab-accent: ${accent}` : undefined}>
-    <nav class="lab-nav" aria-label={title + ' 메뉴'}>
-      {links.map(([text, route]) => {
-        const href = sitePath(route ? slug + '/' + route : slug);
-        return <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{text}</a>;
-      })}
-    </nav>
+  <div class="lab-page" data-service={slug} data-service-home={Astro.url.pathname === sitePath(slug) || undefined} style={accent ? `--lab-accent: ${accent}` : undefined}>
     <header class="lab-heading"><h1>{heading}</h1><slot name="intro" /></header>
+    <ServiceMenu {slug} {links} {section} />
     <slot />
   </div>
 </BaseLayout>
