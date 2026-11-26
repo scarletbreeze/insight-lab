@@ -30,15 +30,15 @@ const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 
     <table class="lab-table">
       <thead><tr>
         <th scope="col">지수</th>
-        <th scope="col"><a href={snapshot.firstSource}>{snapshot.firstDate} 종가 출처</a></th>
-        <th scope="col"><a href={snapshot.lastSource}>{snapshot.lastDate} 종가 출처</a></th>
+        <th scope="col">{monthly?.secondIndexSource ? snapshot.firstDate + ' 종가' : <a href={snapshot.firstSource}>{snapshot.firstDate} 종가 출처</a>}</th>
+        <th scope="col">{monthly?.secondIndexSource ? snapshot.lastDate + ' 종가' : <a href={snapshot.lastSource}>{snapshot.lastDate} 종가 출처</a>}</th>
         <th scope="col">등락률</th>
       </tr></thead>
       <tbody>{labels.map((label, i) => {
         const first = snapshot.first[i];
         const last = snapshot.last[i];
         return <tr>
-          <th scope="row">{label}</th>
+          <th scope="row">{monthly?.secondIndexSource ? <a href={i === 1 ? monthly.secondIndexSource : monthly.firstSource}>{label} 일별 시세</a> : label}</th>
           <td>{first == null ? '자료 없음' : number.format(first)}</td>
           <td>{last == null ? '자료 없음' : number.format(last)}</td>
           <td>{first == null || last == null ? '비교값 없음' : percent.format(last / first - 1)}</td>

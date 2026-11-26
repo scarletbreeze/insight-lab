@@ -46,7 +46,7 @@ const periods = years.flatMap((year) => months.map((month) => {
       goldValue == null ? null : { value: goldValue, date: id + ' 평균' },
       ...[0, 1].map((index) => {
         const value = closes?.[index];
-        return value == null ? null : { value, date: indexDate, source: indexSource };
+        return value == null ? null : { value, date: indexDate, source: index === 1 ? monthly?.secondIndexSource ?? indexSource : indexSource };
       }),
       ...[0, 1].map((index) => us ? { value: us.last[index], date: us.lastDate, source: us.lastSource } : null),
       ...[monthly, us].flatMap((snapshot) => [0, 1].map((index) => indexReturn(snapshot, index))),

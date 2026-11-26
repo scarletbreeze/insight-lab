@@ -42,7 +42,7 @@ const monthlyIndexSeries = [
   observationLabel: '월말 종가',
   points: Object.entries(snapshots).sort(([a], [b]) => a.localeCompare(b)).flatMap(([period, snapshot]) => {
     const value = snapshot?.last[index];
-    return value == null || !snapshot ? [] : [{ period, value, date: snapshot.lastDate, sourceUrl: snapshot.lastSource }];
+    return value == null || !snapshot ? [] : [{ period, value, date: snapshot.lastDate, sourceUrl: index === 1 ? snapshot.secondIndexSource ?? snapshot.lastSource : snapshot.lastSource }];
   }),
 })));
 const series = [...fredSeries, {

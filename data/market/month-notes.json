@@ -119,11 +119,23 @@
     "sourceName": "IMF 한국 대기성 차관 승인 발표",
     "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9755.htm"
   },
+  "1998-01": {
+    "summary": "한국 정부와 해외 채권은행이 단기외채 만기를 연장하는 데 잠정 합의했다.",
+    "memo": "1월 16일의 신용한도 유지와 28일의 만기연장 합의는 은행에 각각 어떤 시간을 벌어 주었나요?",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf"
+  },
   "1998-02": {
     "summary": "한국 정부는 금융 부문 개혁, 기업 구조조정, 외환·자본시장 정책을 정리한 후속 의향서를 전달했습니다.",
     "memo": "2월과 5월 의향서에서 같은 정책이 어떻게 구체화됐는지 확인해 보세요.",
     "sourceName": "IMF 공개 한국 정부 2월 의향서",
     "sourceUrl": "https://www.imf.org/external/np/loi/020798.htm"
+  },
+  "1998-04": {
+    "summary": "1998년에 만기가 돌아올 은행채무 가운데 약 220억 달러가 정부 보증을 갖춘 만기 1~3년 대출로 전환됐다.",
+    "memo": "정부가 새로 발행한 채권 40억 달러와 은행이 기존 빚의 만기를 바꾼 약 220억 달러를 나눠 보세요. 어느 쪽이 신규 조달인가요?",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf"
   },
   "1998-05": {
     "summary": "일반 상장법인과 코스닥 등록법인의 외국인 전체 투자한도와 1인당 투자한도가 폐지됐습니다.",

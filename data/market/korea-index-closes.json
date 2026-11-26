@@ -50,6 +50,366 @@
     }
   },
   "monthly": {
+    "1997-01": {
+      "firstDate": "1997-01-03",
+      "lastDate": "1997-01-31",
+      "first": [
+        653.79,
+        1195.1
+      ],
+      "last": [
+        685.84,
+        1207.9
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970101&endTime=19970131&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970101&endTime=19970131&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970101&endTime=19970131&timeframe=day"
+    },
+    "1997-02": {
+      "firstDate": "1997-02-01",
+      "lastDate": "1997-02-28",
+      "first": [
+        683.13,
+        1206.8
+      ],
+      "last": [
+        676.53,
+        1183.5
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970201&endTime=19970228&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970201&endTime=19970228&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970201&endTime=19970228&timeframe=day"
+    },
+    "1997-03": {
+      "firstDate": "1997-03-03",
+      "lastDate": "1997-03-31",
+      "first": [
+        679.64,
+        1180.1
+      ],
+      "last": [
+        677.34,
+        1204.7
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970301&endTime=19970331&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970301&endTime=19970331&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970301&endTime=19970331&timeframe=day"
+    },
+    "1997-04": {
+      "firstDate": "1997-04-01",
+      "lastDate": "1997-04-30",
+      "first": [
+        672.99,
+        1215.2
+      ],
+      "last": [
+        703.23,
+        1252.9
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970401&endTime=19970430&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970401&endTime=19970430&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970401&endTime=19970430&timeframe=day"
+    },
+    "1997-05": {
+      "firstDate": "1997-05-02",
+      "lastDate": "1997-05-31",
+      "first": [
+        706.1,
+        1247.9
+      ],
+      "last": [
+        756.77,
+        1308.1
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970501&endTime=19970531&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970501&endTime=19970531&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970501&endTime=19970531&timeframe=day"
+    },
+    "1997-06": {
+      "firstDate": "1997-06-02",
+      "lastDate": "1997-06-30",
+      "first": [
+        758.39,
+        1301.3
+      ],
+      "last": [
+        745.4,
+        1331.1
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970601&endTime=19970630&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970601&endTime=19970630&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970601&endTime=19970630&timeframe=day"
+    },
+    "1997-07": {
+      "firstDate": "1997-07-01",
+      "lastDate": "1997-07-31",
+      "first": [
+        758.03,
+        1338.4
+      ],
+      "last": [
+        726.12,
+        1331.3
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970701&endTime=19970731&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970701&endTime=19970731&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970701&endTime=19970731&timeframe=day"
+    },
+    "1997-08": {
+      "firstDate": "1997-08-01",
+      "lastDate": "1997-08-30",
+      "first": [
+        731.45,
+        1336.9
+      ],
+      "last": [
+        695.37,
+        1340.1
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970801&endTime=19970831&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970801&endTime=19970831&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970801&endTime=19970831&timeframe=day"
+    },
+    "1997-09": {
+      "firstDate": "1997-09-01",
+      "lastDate": "1997-09-30",
+      "first": [
+        682.2,
+        1319.3
+      ],
+      "last": [
+        647.11,
+        1327.4
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970901&endTime=19970930&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19970901&endTime=19970930&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19970901&endTime=19970930&timeframe=day"
+    },
+    "1997-10": {
+      "firstDate": "1997-10-01",
+      "lastDate": "1997-10-31",
+      "first": [
+        644.92,
+        1327.7
+      ],
+      "last": [
+        470.79,
+        1204.3
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971001&endTime=19971031&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971001&endTime=19971031&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19971001&endTime=19971031&timeframe=day"
+    },
+    "1997-11": {
+      "firstDate": "1997-11-01",
+      "lastDate": "1997-11-29",
+      "first": [
+        497.22,
+        1209.5
+      ],
+      "last": [
+        407.86,
+        1098.1
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971101&endTime=19971130&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971101&endTime=19971130&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19971101&endTime=19971130&timeframe=day"
+    },
+    "1997-12": {
+      "firstDate": "1997-12-01",
+      "lastDate": "1997-12-27",
+      "first": [
+        393.16,
+        1070.9
+      ],
+      "last": [
+        376.31,
+        972.5
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971201&endTime=19971231&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971201&endTime=19971231&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19971201&endTime=19971231&timeframe=day"
+    },
+    "1998-01": {
+      "firstDate": "1998-01-03",
+      "lastDate": "1998-01-31",
+      "first": [
+        385.49,
+        983.9
+      ],
+      "last": [
+        567.38,
+        1031.2
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980101&endTime=19980131&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980101&endTime=19980131&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980101&endTime=19980131&timeframe=day"
+    },
+    "1998-02": {
+      "firstDate": "1998-02-02",
+      "lastDate": "1998-02-28",
+      "first": [
+        543.68,
+        1007.9
+      ],
+      "last": [
+        558.98,
+        1032.7
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980201&endTime=19980228&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980201&endTime=19980228&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980201&endTime=19980228&timeframe=day"
+    },
+    "1998-03": {
+      "firstDate": "1998-03-02",
+      "lastDate": "1998-03-31",
+      "first": [
+        574.35,
+        1052.2
+      ],
+      "last": [
+        481.04,
+        1030.6
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980301&endTime=19980331&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980301&endTime=19980331&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980301&endTime=19980331&timeframe=day"
+    },
+    "1998-04": {
+      "firstDate": "1998-04-01",
+      "lastDate": "1998-04-30",
+      "first": [
+        468.22,
+        1018.4
+      ],
+      "last": [
+        421.22,
+        906.0
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980401&endTime=19980430&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980401&endTime=19980430&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980401&endTime=19980430&timeframe=day"
+    },
+    "1998-05": {
+      "firstDate": "1998-05-02",
+      "lastDate": "1998-05-30",
+      "first": [
+        406.53,
+        909.2
+      ],
+      "last": [
+        332.03,
+        782.9
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980501&endTime=19980531&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980501&endTime=19980531&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980501&endTime=19980531&timeframe=day"
+    },
+    "1998-06": {
+      "firstDate": "1998-06-01",
+      "lastDate": "1998-06-30",
+      "first": [
+        336.7,
+        796.9
+      ],
+      "last": [
+        297.88,
+        746.7
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980601&endTime=19980630&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980601&endTime=19980630&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980601&endTime=19980630&timeframe=day"
+    },
+    "1998-07": {
+      "firstDate": "1998-07-01",
+      "lastDate": "1998-07-31",
+      "first": [
+        315.56,
+        758.3
+      ],
+      "last": [
+        343.33,
+        698.1
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980701&endTime=19980731&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980701&endTime=19980731&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980701&endTime=19980731&timeframe=day"
+    },
+    "1998-08": {
+      "firstDate": "1998-08-01",
+      "lastDate": "1998-08-31",
+      "first": [
+        337.49,
+        701.5
+      ],
+      "last": [
+        310.16,
+        637.6
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980801&endTime=19980831&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980801&endTime=19980831&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980801&endTime=19980831&timeframe=day"
+    },
+    "1998-09": {
+      "firstDate": "1998-09-01",
+      "lastDate": "1998-09-30",
+      "first": [
+        309.71,
+        628.3
+      ],
+      "last": [
+        310.32,
+        610.3
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980901&endTime=19980930&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19980901&endTime=19980930&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19980901&endTime=19980930&timeframe=day"
+    },
+    "1998-10": {
+      "firstDate": "1998-10-01",
+      "lastDate": "1998-10-31",
+      "first": [
+        305.64,
+        610.7
+      ],
+      "last": [
+        403.44,
+        639.4
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981001&endTime=19981031&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981001&endTime=19981031&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19981001&endTime=19981031&timeframe=day"
+    },
+    "1998-11": {
+      "firstDate": "1998-11-02",
+      "lastDate": "1998-11-30",
+      "first": [
+        404.61,
+        631.1
+      ],
+      "last": [
+        451.88,
+        641.3
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981101&endTime=19981130&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981101&endTime=19981130&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19981101&endTime=19981130&timeframe=day"
+    },
+    "1998-12": {
+      "firstDate": "1998-12-01",
+      "lastDate": "1998-12-28",
+      "first": [
+        445.96,
+        640.4
+      ],
+      "last": [
+        562.46,
+        751.8
+      ],
+      "firstSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981201&endTime=19981231&timeframe=day",
+      "lastSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19981201&endTime=19981231&timeframe=day",
+      "secondIndexSource": "https://api.finance.naver.com/siseJson.naver?symbol=KOSDAQ&requestType=1&startTime=19981201&endTime=19981231&timeframe=day"
+    },
     "2020-03": {
       "firstDate": "2020-03-02",
       "lastDate": "2020-03-31",

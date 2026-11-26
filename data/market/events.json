@@ -977,12 +977,54 @@
     "now": "이 자료는 승인 시점의 발표를 기록합니다. 이후 정책 결과는 별도 자료로 확인해야 합니다."
   },
   {
+    "date": "1997-12-23",
+    "title": "원·달러 환율, 장중 달러당 2천 원에 근접",
+    "category": "시장",
+    "summary": "IMF의 사후 분석에 따르면 이날 원화 가치는 달러당 2천 원에 가까운 수준까지 하락했다. 월말 관측값만 보면 이 변동이 드러나지 않는다.",
+    "sourceName": "IMF · 한국의 위기와 회복",
+    "sourceUrl": "https://www.elibrary.imf.org/view/journals/001/2001/154/article-A001-en.xml"
+  },
+  {
+    "date": "1997-12-24",
+    "title": "코스피 351.45로 마감",
+    "category": "시장",
+    "summary": "12월 23일 366.36이던 코스피가 이튿날 351.45로 마감했다. 그해 마지막 거래일인 27일의 종가는 376.31이었다.",
+    "sourceName": "네이버 증권 · 코스피 일별 시세",
+    "sourceUrl": "https://api.finance.naver.com/siseJson.naver?symbol=KOSPI&requestType=1&startTime=19971201&endTime=19971231&timeframe=day"
+  },
+  {
+    "date": "1997-12-26",
+    "title": "한국 익일물 콜금리 32% 도달",
+    "category": "금융안정",
+    "summary": "금융기관끼리 하루 동안 자금을 빌릴 때 적용하는 콜금리가 32%에 이르렀다. 이달 5일의 금리는 21%였다.",
+    "sourceName": "IMF · 한국 기업자료로 본 금융위기",
+    "sourceUrl": "https://www.imf.org/external/pubs/ft/wp/2000/wp0025.pdf"
+  },
+  {
     "date": "1998-01-15",
     "title": "외환위기 중 노사정위원회 출범",
     "category": "제도",
     "summary": "노동계·사용자·정부가 참여하는 노사정위원회가 공식 출범했다.",
     "sourceName": "국가기록원 · 연표와 기록",
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_1_15"
+  },
+  {
+    "date": "1998-01-16",
+    "title": "해외 채권은행, 3월 말까지 기존 신용공여 유지",
+    "category": "금융안정",
+    "summary": "채권은행들이 한국 금융기관에 제공하던 신용한도를 3월 말까지 유지하기로 했다. 장기 만기연장 조건은 당시 협상 중이었다.",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf"
+  },
+  {
+    "date": "1998-01-28",
+    "title": "한국과 해외 채권은행, 단기외채 만기연장 잠정 합의",
+    "category": "금융안정",
+    "summary": "한국 정부와 해외 채권은행이 단기외채 만기를 연장하는 데 잠정 합의했다.",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf",
+    "then": "채권단과 만기연장의 큰 틀에 합의한 단계였다.",
+    "now": "4월에는 약 220억 달러 규모의 은행채무가 정부 보증이 붙은 만기 1~3년 대출로 전환됐다."
   },
   {
     "date": "1998-02-07",
@@ -994,12 +1036,36 @@
     "then": "2월 의향서에서 외환시장 안정과 금융기관 정리에 관한 정부 계획을 읽을 수 있었습니다."
   },
   {
+    "date": "1998-02-18",
+    "title": "S&P, 한국 장기 외화 신용등급 상향",
+    "category": "시장",
+    "summary": "S&P가 한국의 장기 외화 국가신용등급을 B+에서 BB+로 올렸다.",
+    "sourceName": "IMF 독립평가국 · 한국 위기 연표",
+    "sourceUrl": "https://www.elibrary.imf.org/display/book/9781589061880/back-1.xml"
+  },
+  {
     "date": "1998-03-27",
     "title": "대통령 직속 기획예산위원회 출범",
     "category": "제도",
     "summary": "정부 예산 정책을 다룰 기획예산위원회가 대통령 직속 기구로 발족했다.",
     "sourceName": "국가기록원 · 연표와 기록",
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_3_27"
+  },
+  {
+    "date": "1998-04",
+    "title": "한국 정부, 국제시장에서 40억 달러 채권 발행",
+    "category": "시장",
+    "summary": "4월 초 한국 정부가 5년물과 10년물 글로벌 채권을 발행했다. 두 만기의 발행액을 합하면 40억 달러다.",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf"
+  },
+  {
+    "date": "1998-04",
+    "title": "은행 단기외채 약 220억 달러를 중기 대출로 전환",
+    "category": "금융안정",
+    "summary": "1998년에 만기가 돌아올 은행채무 가운데 약 220억 달러가 정부 보증을 갖춘 만기 1~3년 대출로 전환됐다.",
+    "sourceName": "IMF 독립평가국 · 한국 사례",
+    "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf"
   },
   {
     "date": "1998-04-22",
@@ -1051,6 +1117,14 @@
     "sourceName": "IMF 공개 한국 정부 7월 의향서",
     "sourceUrl": "https://www.imf.org/external/np/loi/072498.htm",
     "then": "한국 정부와 세계은행이 기업 구조조정 프로그램을 협의했다는 내용이 의향서에 포함됐습니다."
+  },
+  {
+    "date": "1998-08",
+    "title": "8월 초 한국 콜금리 10% 아래로 하락",
+    "category": "시장",
+    "summary": "IMF 연구진이 집계한 한국 콜금리는 5월 초 약 18%에서 8월 초 한 자릿수로 내려왔다.",
+    "sourceName": "IMF · 한국 금융부문 개혁 연구",
+    "sourceUrl": "https://www.imf.org/external/pubs/ft/wp/1999/wp9928.pdf"
   },
   {
     "date": "1998-08-14",
