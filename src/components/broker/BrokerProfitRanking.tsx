@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { sitePath } from '../../utils/paths';
 import { brokerMetrics, brokerYears, brokers, formatBrokerMetric, interimProfit as interim, priorInterimProfit, profitSourceLabel } from '../../utils/brokers';
 
 const formatGrowth = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 1, signDisplay: 'exceptZero' });
@@ -71,6 +72,9 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
         {comparable && <> · {priorLabel}과 같은 {profits.length}개사 기준</>}
         {growth != null && <> · 수록 {profits.length}개사 합계 전년 동기 대비 {formatGrowth.format(growth)}%</>}
       </p>
+      {profits.length >= 2 && <p><a href={sitePath('broker-atlas/compare') + '?' + new URLSearchParams({
+        left: profits[0].id, right: profits[1].id, period,
+      })}>{profits[0].name}·{profits[1].name} 연결 실적 비교</a></p>}
       {profits.length ? <ol className="lab-list">
         {profits.map(({ id, name, value, source, status, operatingIncomeRounded, previous }) => <li className="lab-card" key={id}>
           <div className="trend-row broker-profit-row">

@@ -2,6 +2,7 @@
 import MarketLayout from '../../components/market/MarketLayout.astro';
 import { sitePath } from '../../utils/paths';
 import ReturnerGame from '../../components/market/ReturnerGame';
+import monthlyRankings from '../../../data/market/months/equity-rankings.json';
 import korea from '../../../data/market/korea-index-closes.json';
 import snapshots from '../../../data/market/months/snapshots.json';
 const assets = Object.entries(korea.monthly).flatMap(([period, indices]) => {
@@ -12,8 +13,18 @@ const assets = Object.entries(korea.monthly).flatMap(([period, indices]) => {
   if (!multiples.every((value) => Number.isFinite(value) && value > 0)) return [];
   return [{ period, firstDate: indices.firstDate, lastDate: indices.lastDate, multiples }];
 }).sort((left, right) => left.period.localeCompare(right.period));
+const stockRounds = Object.entries(monthlyRankings).flatMap(([period, markets]) => {
+  if (!('US' in markets)) return [];
+  const ranking = markets.US;
+  const candidates = [0, 3, 6, 9].map((index) => ranking.items[index]);
+  if (candidates.some((item) => !item) || candidates[0].returnPct === candidates[1].returnPct) return [];
+  const choices = candidates.map(({ name, symbol, returnPct }) => ({ name, symbol, returnPct }))
+    .sort((a, b) => a.symbol.localeCompare(b.symbol, 'en'));
+  return [{ period, choices, eligibleCount: ranking.eligibleCount,
+    firstDate: candidates[0].firstDate, lastDate: candidates[0].lastDate }];
+}).sort((a, b) => a.period.localeCompare(b.period));
 ---
 <MarketLayout title="Returner Mode">
   <p slot="intro">시장 사건, 자산 선택과 종목 수익률을 묻는 10문제입니다. 마지막 문제를 풀면 정답과 출처가 나옵니다.</p>
-  <ReturnerGame client:load monthBase={sitePath("market-time-capsule")} {assets} />
+  <ReturnerGame client:load monthBase={sitePath("market-time-capsule")} {assets} {stockRounds} />
 </MarketLayout>

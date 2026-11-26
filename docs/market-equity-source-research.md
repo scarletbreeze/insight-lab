@@ -16,9 +16,11 @@ python3 scripts/market/join_krx_prices.py members.csv adjusted-closes.csv \
 
 ## 미국
 
-### 2016~2018 WIKI/PRICES
+### 2008년 및 2014~2018년 WIKI/PRICES
 
-- 2015년 10월~2018년 2월 29개월과 2016~2017년 연간 순위를 수록했다. 모집단은 QQQ의 [2015년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm), [2016년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm), [2017년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm) 보유 명세를 기준으로 한다. 중간 시점은 `data/market/qqq-index-changes.json`의 기준일별 변경을 반영한다. 2015년 9월 명세에서 출발해 변경을 반영한 2016년 9월의 105종목은 해당 시점 QQQ 보유 명세와 일치한다. 2016년 12월에는 [Nasdaq 연간 평가](https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf)에 기록된 LiLAC 두 종류를 포함한다. 결과에는 사용한 보유 명세와 근사 모집단이라는 기준을 표시한다.
+- [2008년 9월 말 QQQ 명세](https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm)의 주식 100개 평가액 합계는 $18,091,801,491이다. 2008년 HANS(Hansen Natural)와 MNST(Monster Worldwide)는 가격 파일에서 각각 MNST와 MWW로 기록된다. 당시 명칭, 코드 변경 근거, 기준일 주당 평가액을 대조했다. 4분기 각 월의 100개 중 84개 종목에서 수익률을 계산했다.
+- [2014년 9월 말 QQQ 명세](https://www.sec.gov/Archives/edgar/data/1067839/000110465915002429/a14-24967_1n30b2.htm)의 주식 103개 평가액 합계는 $42,033,212,910이다. 이후 편입·제외·코드 변경을 적용한 2015년 9월 말 109개 코드는 다음 공시와 일치했다. 2015년 연초 107개 중 기간 전체를 계산한 93개를 연간 순위에 사용했다.
+- 2008년 10~12월과 2014년 10월~2018년 2월의 44개월 및 2015~2017년 연간 순위를 수록했다. 모집단은 QQQ의 [2015년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm), [2016년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm), [2017년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm) 보유 명세를 기준으로 한다. 중간 시점은 `data/market/qqq-index-changes.json`의 기준일별 변경을 반영한다. 2015년 9월 명세에서 출발해 변경을 반영한 2016년 9월의 105종목은 해당 시점 QQQ 보유 명세와 일치한다. 2016년 12월에는 [Nasdaq 연간 평가](https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf)에 기록된 LiLAC 두 종류를 포함한다. 결과에는 사용한 보유 명세와 근사 모집단이라는 기준을 표시한다.
 - 2016년 4월 Liberty Media의 추적주 재편은 단순 분할로 처리할 수 없어 해당 월과 연간 순위에서 이전 주식 두 종류를 제외했다. 출처와 종목은 `data/market/qqq-complex-actions.json`에 기록한다.
 - [Nasdaq Data Link WIKI](https://data.nasdaq.com/databases/WIKIP)는 2018년 3월 27일에 자료가 종료된 공개 도메인 아카이브다. 가격 파일은 [공개 미러](https://www.kaggle.com/datasets/marketneutral/quandl-wiki-prices-us-equites)에서 확보했다. 첫 종가를 이후 기간의 분할 비율로 조정한다. 배당은 제외한다.
 - 거래일은 AAPL·MSFT·GOOG 시세의 관측일을 합쳐 대조한다. 관측일과 분할 자료를 모두 갖춘 종목만 계산한다. 2018년 2월 PCLN은 [BKNG로 변경](https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx)됐으며 해당 아카이브에서 변경 후 종가를 찾지 못해 제외했다.

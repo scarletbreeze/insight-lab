@@ -26,6 +26,7 @@ interface Ranking {
   excludedSymbols?: string[];
   corporateActionSources?: string[];
   tickerChangeSources?: string[];
+  archiveTickers?: { symbol: string; archiveSymbol: string; sourceUrl: string }[];
   priceMethod?: string;
   items: Equity[];
 }
@@ -43,6 +44,7 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
   {comparisons.map(([market, ranking]) => {
     const first = ranking?.items[0];
     const range = ranking ? Math.max(1, ...ranking.items.map(({ returnPct }) => Math.abs(returnPct))) : 1;
+    const signed = ranking?.items.some(({ returnPct }) => returnPct < 0);
     return <section class="lab-card">
       <h3>{market} Top 10</h3>
       {ranking?.items.length ? <>
@@ -50,6 +52,10 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
         {ranking.priceMethod && <p>{ranking.priceMethod}</p>}
         {first && <p>{first.firstDate}–{first.lastDate} · <a href={first.sourceUrl}>가격 출처</a></p>}
         {ranking.tickerChangeSources?.map((url) => <p><a href={url}>종목코드 변경을 연결한 근거</a></p>)}
+        {ranking.archiveTickers?.length && <details>
+          <summary>당시 종목코드와 가격 파일의 코드 대조</summary>
+          <ul>{ranking.archiveTickers.map(({ symbol, archiveSymbol, sourceUrl }) => <li><a href={sourceUrl}>{symbol} → {archiveSymbol}</a></li>)}</ul>
+        </details>}
         {ranking.membershipSourceUrl && <p>
           {(ranking.membershipSourceUrls ?? [ranking.membershipSourceUrl]).map((url, index, sources) => (
             <><a href={url}>구성종목 출처{sources.length > 1 ? ' ' + (index + 1) : ''}</a>{index < sources.length - 1 && ' · '}</>
@@ -61,25 +67,30 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
           {ranking.excludedSymbols?.length && <p>{ranking.excludedSymbols.join(' · ')}</p>}
           {ranking.corporateActionSources?.map((url) => <p><a href={url}>기업행동 공시</a></p>)}
         </details>}
-        <ol class="lab-list equity-ranking">{ranking.items.map(({ name, symbol, returnPct, sourceUrl }) => (
+        <ol class="lab-list equity-ranking">{ranking.items.map(({ name, symbol, returnPct, sourceUrl }, index) => (
           <li>
-            <div class="equity-rank-label"><strong>{name} ({symbol})</strong><span>{format.format(returnPct)}%</span></div>
-            <div class="equity-rank-track" aria-hidden="true">
-              <span class:list={{ negative: returnPct < 0 }} style={{ width: `${Math.abs(returnPct) / range * 100}%` }}></span>
+            <div class="equity-rank-label"><strong>{index + 1}위 · {name} ({symbol})</strong><span>{format.format(returnPct)}%</span></div>
+            <div class:list={['equity-rank-track', { signed }]} aria-hidden="true">
+              <span class:list={{ negative: returnPct < 0 }} style={{ width: `${Math.abs(returnPct) / range * (signed ? 50 : 100)}%` }}></span>
             </div>
             {sourceUrl !== first?.sourceUrl && <a href={sourceUrl}>가격 출처</a>}
           </li>
         ))}</ol>
+        {market === '미국 · QQQ' && <p><a href={sitePath('market-time-capsule/game') + '?equityPeriod=' + period}>이달의 종목 수익률 퀴즈 풀기</a></p>}
       </> : market === '한국' && checked ? <p>당시 두 ETF 보유 주식 {checked.universe}개 중 {checked.eligible}개가 일별 종가 연속성과 상장주식수 검사를 통과했습니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-coverage'}>월별 제외 사유와 출처</a></p> : market === '한국' && priceCheck ? <p>월초 상장 종목 {priceCheck.opening.toLocaleString('ko-KR')}개 중 {priceCheck.passed.toLocaleString('ko-KR')}개가 일별 시세 검사를 통과했습니다. 첫 거래일 ETF 보유 명세를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>시세 점검 결과</a></p> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
     </section>;
   })}
 </div>
 <p><a href={sitePath('market-time-capsule/equity-data')}>종목 순위 산정 방식과 수록 범위</a></p>
 <style>
-  .equity-ranking { display: grid; gap: 0.75rem; padding-inline-start: 1.5rem; }
+  .equity-ranking { display: grid; gap: 0.75rem; padding-inline-start: 0; list-style: none; }
   .equity-rank-label { display: flex; justify-content: space-between; gap: 0.75rem; align-items: baseline; }
   .equity-rank-label span { white-space: nowrap; font-variant-numeric: tabular-nums; }
   .equity-rank-track { margin-block-start: 0.25rem; height: 0.35rem; border-radius: 0.25rem; background: var(--border, #dde4ea); }
   .equity-rank-track span { display: block; height: 100%; border-radius: inherit; background: #397663; }
+  .equity-rank-track.signed { position: relative; }
+  .signed::after { content: ''; position: absolute; left: 50%; top: -2px; bottom: -2px; border-left: 1px solid currentColor; }
+  .signed span { position: absolute; left: 50%; }
+  .signed .negative { left: auto; right: 50%; }
   .equity-rank-track .negative { background: #a55443; }
 </style>

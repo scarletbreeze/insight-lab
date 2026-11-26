@@ -1,82 +1,88 @@
 {
+  "samplePerYear": 14,
   "start": "2022-01-01",
   "end": "2026-11-25",
   "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
   "development": {
-    "reviewed": 40,
-    "before": 22,
-    "after": 36
+    "reviewed": 50,
+    "before": 32,
+    "after": 45
   },
   "years": [
     {
       "year": 2022,
-      "sample": 12,
-      "reviewed": 11,
-      "agreement": 7
+      "sample": 14,
+      "reviewed": 13,
+      "agreement": 11
     },
     {
       "year": 2023,
-      "sample": 12,
+      "sample": 14,
+      "reviewed": 10,
+      "agreement": 6
+    },
+    {
+      "year": 2024,
+      "sample": 14,
       "reviewed": 9,
       "agreement": 7
     },
     {
-      "year": 2024,
-      "sample": 12,
-      "reviewed": 9,
-      "agreement": 5
-    },
-    {
       "year": 2025,
-      "sample": 12,
-      "reviewed": 10,
+      "sample": 14,
+      "reviewed": 11,
       "agreement": 8
     },
     {
       "year": 2026,
-      "sample": 12,
-      "reviewed": 11,
-      "agreement": 5
+      "sample": 14,
+      "reviewed": 10,
+      "agreement": 6
     }
   ],
   "topics": [
     {
       "topic": "hts",
       "reviewed": 32,
-      "agreement": 22
+      "agreement": 27
     },
     {
       "topic": "orders",
-      "reviewed": 5,
-      "agreement": 5
-    },
-    {
-      "topic": "credit",
-      "reviewed": 4,
-      "agreement": 1
-    },
-    {
-      "topic": "transfer",
-      "reviewed": 3,
-      "agreement": 1
+      "reviewed": 6,
+      "agreement": 4
     },
     {
       "topic": "auth",
-      "reviewed": 2,
+      "reviewed": 4,
+      "agreement": 4
+    },
+    {
+      "topic": "products",
+      "reviewed": 4,
       "agreement": 2
     },
     {
-      "topic": "hours",
+      "topic": "fees",
       "reviewed": 2,
       "agreement": 0
     },
     {
-      "topic": "fees",
+      "topic": "account",
+      "reviewed": 2,
+      "agreement": 0
+    },
+    {
+      "topic": "overseas",
       "reviewed": 1,
       "agreement": 1
     },
     {
-      "topic": "products",
+      "topic": "hours",
+      "reviewed": 1,
+      "agreement": 0
+    },
+    {
+      "topic": "transfer",
       "reviewed": 1,
       "agreement": 0
     }

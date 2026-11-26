@@ -1,0 +1,419 @@
+{
+  "asOf": "2008-09-30",
+  "fund": "PowerShares QQQ Trust",
+  "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+  "members": [
+    {
+      "symbol": "AAPL",
+      "name": "Apple, Inc."
+    },
+    {
+      "symbol": "QCOM",
+      "name": "QUALCOMM, Inc."
+    },
+    {
+      "symbol": "MSFT",
+      "name": "Microsoft Corp."
+    },
+    {
+      "symbol": "GOOG",
+      "name": "Google, Inc.",
+      "archiveSymbol": "GOOGL",
+      "archiveSymbolSource": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf"
+    },
+    {
+      "symbol": "CSCO",
+      "name": "Cisco Systems, Inc."
+    },
+    {
+      "symbol": "ORCL",
+      "name": "Oracle Corp."
+    },
+    {
+      "symbol": "GILD",
+      "name": "Gilead Sciences, Inc."
+    },
+    {
+      "symbol": "RIMM",
+      "name": "Research In Motion Ltd."
+    },
+    {
+      "symbol": "INTC",
+      "name": "Intel Corp."
+    },
+    {
+      "symbol": "AMGN",
+      "name": "Amgen, Inc."
+    },
+    {
+      "symbol": "TEVA",
+      "name": "Teva Pharmaceutical Industries Ltd."
+    },
+    {
+      "symbol": "CELG",
+      "name": "Celgene Corp."
+    },
+    {
+      "symbol": "CMCSA",
+      "name": "Comcast Corp."
+    },
+    {
+      "symbol": "GENZ",
+      "name": "Genzyme Corp."
+    },
+    {
+      "symbol": "EBAY",
+      "name": "eBay, Inc."
+    },
+    {
+      "symbol": "DTV",
+      "name": "DIRECTV Group, Inc./The"
+    },
+    {
+      "symbol": "AMZN",
+      "name": "Amazon.com, Inc."
+    },
+    {
+      "symbol": "ADBE",
+      "name": "Adobe Systems, Inc."
+    },
+    {
+      "symbol": "ATVI",
+      "name": "Activision Blizzard, Inc."
+    },
+    {
+      "symbol": "SYMC",
+      "name": "Symantec Corp."
+    },
+    {
+      "symbol": "ESRX",
+      "name": "Express Scripts, Inc."
+    },
+    {
+      "symbol": "BIIB",
+      "name": "Biogen Idec, Inc."
+    },
+    {
+      "symbol": "PCAR",
+      "name": "PACCAR, Inc."
+    },
+    {
+      "symbol": "SBUX",
+      "name": "Starbucks Corp."
+    },
+    {
+      "symbol": "COST",
+      "name": "Costco Wholesale Corp."
+    },
+    {
+      "symbol": "INTU",
+      "name": "Intuit, Inc."
+    },
+    {
+      "symbol": "SHLD",
+      "name": "Sears Holdings Corp."
+    },
+    {
+      "symbol": "ERTS",
+      "name": "Electronic Arts, Inc.",
+      "archiveSymbol": "EA",
+      "archiveSymbolSource": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx"
+    },
+    {
+      "symbol": "DELL",
+      "name": "Dell, Inc."
+    },
+    {
+      "symbol": "YHOO",
+      "name": "Yahoo!, Inc."
+    },
+    {
+      "symbol": "PAYX",
+      "name": "Paychex, Inc."
+    },
+    {
+      "symbol": "BBBY",
+      "name": "Bed Bath & Beyond, Inc."
+    },
+    {
+      "symbol": "SPLS",
+      "name": "Staples, Inc."
+    },
+    {
+      "symbol": "AMAT",
+      "name": "Applied Materials, Inc."
+    },
+    {
+      "symbol": "CA",
+      "name": "CA, Inc."
+    },
+    {
+      "symbol": "FISV",
+      "name": "Fiserv, Inc."
+    },
+    {
+      "symbol": "APOL",
+      "name": "Apollo Group, Inc."
+    },
+    {
+      "symbol": "ISRG",
+      "name": "Intuitive Surgical, Inc."
+    },
+    {
+      "symbol": "WYNN",
+      "name": "Wynn Resorts Ltd."
+    },
+    {
+      "symbol": "LLTC",
+      "name": "Linear Technology Corp."
+    },
+    {
+      "symbol": "ALTR",
+      "name": "Altera Corp."
+    },
+    {
+      "symbol": "XLNX",
+      "name": "Xilinx, Inc."
+    },
+    {
+      "symbol": "CHRW",
+      "name": "CH Robinson Worldwide, Inc."
+    },
+    {
+      "symbol": "ADSK",
+      "name": "Autodesk, Inc."
+    },
+    {
+      "symbol": "JNPR",
+      "name": "Juniper Networks, Inc."
+    },
+    {
+      "symbol": "BRCM",
+      "name": "Broadcom Corp."
+    },
+    {
+      "symbol": "EXPD",
+      "name": "Expeditors International of Washington, Inc."
+    },
+    {
+      "symbol": "MICC",
+      "name": "Millicom International Cellular SA"
+    },
+    {
+      "symbol": "LINTA",
+      "name": "Liberty Media Corp. - Interactive"
+    },
+    {
+      "symbol": "FAST",
+      "name": "Fastenal Co."
+    },
+    {
+      "symbol": "KLAC",
+      "name": "Kla-Tencor Corp."
+    },
+    {
+      "symbol": "BIDU",
+      "name": "Baidu.com"
+    },
+    {
+      "symbol": "GRMN",
+      "name": "Garmin Ltd."
+    },
+    {
+      "symbol": "CTSH",
+      "name": "Cognizant Technology Solutions Corp."
+    },
+    {
+      "symbol": "FLEX",
+      "name": "Flextronics International Ltd."
+    },
+    {
+      "symbol": "SIAL",
+      "name": "Sigma-Aldrich Corp."
+    },
+    {
+      "symbol": "NTAP",
+      "name": "NetApp, Inc."
+    },
+    {
+      "symbol": "NIHD",
+      "name": "NII Holdings, Inc."
+    },
+    {
+      "symbol": "NVDA",
+      "name": "Nvidia Corp."
+    },
+    {
+      "symbol": "FLIR",
+      "name": "Flir Systems, Inc."
+    },
+    {
+      "symbol": "CTXS",
+      "name": "Citrix Systems, Inc."
+    },
+    {
+      "symbol": "FWLT",
+      "name": "Foster Wheeler Ltd."
+    },
+    {
+      "symbol": "MRVL",
+      "name": "Marvell Technology Group Ltd."
+    },
+    {
+      "symbol": "XRAY",
+      "name": "Dentsply International, Inc."
+    },
+    {
+      "symbol": "CTAS",
+      "name": "Cintas Corp."
+    },
+    {
+      "symbol": "SRCL",
+      "name": "Stericycle, Inc."
+    },
+    {
+      "symbol": "VRTX",
+      "name": "Vertex Pharmaceuticals, Inc."
+    },
+    {
+      "symbol": "HOLX",
+      "name": "Hologic, Inc."
+    },
+    {
+      "symbol": "CEPH",
+      "name": "Cephalon, Inc."
+    },
+    {
+      "symbol": "CHKP",
+      "name": "Check Point Software Technologies"
+    },
+    {
+      "symbol": "HSIC",
+      "name": "Henry Schein, Inc."
+    },
+    {
+      "symbol": "JOYG",
+      "name": "Joy Global, Inc.",
+      "archiveSymbol": "JOY",
+      "archiveSymbolSource": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm"
+    },
+    {
+      "symbol": "LBTYA",
+      "name": "Liberty Global, Inc."
+    },
+    {
+      "symbol": "VRSN",
+      "name": "VeriSign, Inc."
+    },
+    {
+      "symbol": "DISH",
+      "name": "DISH Network Corp."
+    },
+    {
+      "symbol": "MCHP",
+      "name": "Microchip Technology, Inc."
+    },
+    {
+      "symbol": "EXPE",
+      "name": "Expedia, Inc."
+    },
+    {
+      "symbol": "LVLT",
+      "name": "Level 3 Communications, Inc."
+    },
+    {
+      "symbol": "LRCX",
+      "name": "Lam Research Corp."
+    },
+    {
+      "symbol": "LOGI",
+      "name": "Logitech International SA"
+    },
+    {
+      "symbol": "SNDK",
+      "name": "SanDisk Corp."
+    },
+    {
+      "symbol": "INFY",
+      "name": "Infosys Technologies Ltd."
+    },
+    {
+      "symbol": "PDCO",
+      "name": "Patterson Cos, Inc."
+    },
+    {
+      "symbol": "STLD",
+      "name": "Steel Dynamics, Inc."
+    },
+    {
+      "symbol": "FMCN",
+      "name": "Focus Media Holding Ltd."
+    },
+    {
+      "symbol": "PETM",
+      "name": "PetSmart, Inc."
+    },
+    {
+      "symbol": "VMED",
+      "name": "Virgin Media, Inc."
+    },
+    {
+      "symbol": "AKAM",
+      "name": "Akamai Technologies, Inc."
+    },
+    {
+      "symbol": "HANS",
+      "name": "Hansen Natural, Corp.",
+      "archiveSymbol": "MNST",
+      "archiveSymbolSource": "https://investors.monsterbevcorp.com/node/8011"
+    },
+    {
+      "symbol": "WFMI",
+      "name": "Whole Foods Market, Inc.",
+      "archiveSymbol": "WFM",
+      "archiveSymbolSource": "https://www.sec.gov/Archives/edgar/data/865436/000086543612000033/wfm10k2012.htm"
+    },
+    {
+      "symbol": "AMLN",
+      "name": "Amylin Pharmaceuticals, Inc."
+    },
+    {
+      "symbol": "LEAP",
+      "name": "Leap Wireless International, Inc."
+    },
+    {
+      "symbol": "RYAAY",
+      "name": "Ryanair Holdings PLC"
+    },
+    {
+      "symbol": "IACI",
+      "name": "IAC/InterActive Corp."
+    },
+    {
+      "symbol": "JAVA",
+      "name": "Sun Microsystems, Inc."
+    },
+    {
+      "symbol": "LAMR",
+      "name": "Lamar Advertising Co."
+    },
+    {
+      "symbol": "SIRI",
+      "name": "Sirius XM Radio, Inc."
+    },
+    {
+      "symbol": "MNST",
+      "name": "Monster Worldwide, Inc.",
+      "archiveSymbol": "MWW",
+      "archiveSymbolSource": "https://www.cmegroup.com/tools-information/lookups/advisories/clearing/files/Chadv08-328.pdf"
+    },
+    {
+      "symbol": "CDNS",
+      "name": "Cadence Design Systems, Inc."
+    },
+    {
+      "symbol": "DISCA",
+      "name": "Discovery Communications, Inc."
+    }
+  ]
+}

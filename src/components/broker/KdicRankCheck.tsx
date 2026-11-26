@@ -1,5 +1,6 @@
 import observations from '../../../data/brokers/kdic-year-end-equity.json';
 
+import check from '../../../data/brokers/2021-equity-review.json';
 import annual from '../../../data/brokers/industry-2021.json';
 
 const filings = new Map(annual.companies.filter(company => company.sourceUrl).map(company =>
@@ -24,7 +25,25 @@ export default function KdicRankCheck({ date }: {date: string}) {
         {year === '2021' && <td><a href={filings.get(name + '증권')?.url}>{filings.get(name + '증권')?.equity.toLocaleString('ko-KR')}</a></td>}
       </tr>)}</tbody>
     </table></div>
-    {year === '2021' && <p>세 회사의 별도 자본총계는 키움·대신·유안타 순입니다. 예금보험공사 표에서는 유안타가 대신보다 앞섭니다. 업계 9·10위 확정에는 다른 증권사까지 같은 기준으로 대조한 자료가 필요합니다.</p>}
+    {year === '2021' && <section aria-label="별도 자본 대조">
+      <h3>58개사 안에서 별도 자본으로 다시 비교하면</h3>
+      <p>키움의 별도 자본은 약 37,933억 원입니다. 예보 명단 58개사에서 키움은 9위로 확인됩니다. 대신의 별도 자본 20,262.76억 원을 기준으로 한 확인 내역은 다음과 같습니다.</p>
+      <ul className="lab-list">
+        <li>수록 10개사와 유안타는 회사 공시로 대조했습니다.</li>
+        <li>{check.belowThreshold.count}개사는 총자산이 최대 {check.belowThreshold.maxAssets.toLocaleString('ko-KR')}억 원이어서 자본이 대신보다 작습니다.</li>
+        <li>추가 {check.companies.length}개사는 한국신용평가의 해당일 별도 재무지표와 예보의 총자산이 억 원 단위로 일치합니다. 모두 대신보다 자본이 작습니다.</li>
+        {check.pending.map(({ name, assets }) => <li key={name}>{name}은 총자산 {assets.toLocaleString('ko-KR')}억 원으로 키움보다 작습니다. 대신과의 순서는 해당일 지점 자본을 확인한 뒤 반영합니다.</li>)}
+      </ul>
+      <details><summary>추가 {check.companies.length}개사 별도 재무지표와 출처</summary>
+        <div className="lab-table-wrap"><table className="lab-table">
+          <caption>{check.asOf} · {check.unit} · 자료의 당시 회사명</caption>
+          <thead><tr><th scope="col">증권사</th><th scope="col">총자산</th><th scope="col">자기자본</th></tr></thead>
+          <tbody>{check.companies.map(({ name, assets, equity, sourceUrl }) => <tr key={name}>
+            <th scope="row"><a href={sourceUrl}>{name}</a></th><td>{assets.toLocaleString('ko-KR')}</td><td>{equity.toLocaleString('ko-KR')}</td>
+          </tr>)}</tbody>
+        </table></div>
+      </details>
+    </section>}
     <a href="https://www.data.go.kr/data/15061054/fileData.do">예금보험공사 증권사 경영현황 · 주기성 과거 데이터</a>
   </details>;
 }

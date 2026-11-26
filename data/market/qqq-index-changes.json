@@ -1,5 +1,109 @@
 [
   {
+    "date": "2008-11-10",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+    "remove": [
+      "MNST"
+    ],
+    "add": {
+      "STX": "Seagate Technology"
+    }
+  },
+  {
+    "date": "2014-10-07",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1355096/000155837015000204/lint-20141231x10k.htm",
+    "remove": [
+      "LINTA"
+    ],
+    "add": {
+      "QVCA": "Liberty Interactive Corp. QVC Group, Class A"
+    }
+  },
+  {
+    "date": "2014-10-20",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1355096/000155837015000204/lint-20141231x10k.htm",
+    "remove": [],
+    "add": {
+      "LVNTA": "Liberty Ventures, Series A"
+    }
+  },
+  {
+    "date": "2014-12-22",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/ffe04852-74e3-4eee-ac7c-c0790d40cec0",
+    "remove": [
+      "EXPE",
+      "FFIV",
+      "MXIM"
+    ],
+    "add": {
+      "AAL": "American Airlines Group, Inc.",
+      "EA": "Electronic Arts, Inc.",
+      "LRCX": "Lam Research Corp.",
+      "CMCSK": "Comcast Corp., Class A Special",
+      "FOX": "Twenty-First Century Fox, Inc., Class B",
+      "LBTYK": "Liberty Global PLC, Series C"
+    }
+  },
+  {
+    "date": "2015-03-23",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/walgreens-boots-alliance-inc-join-nasdaq-100-index-beginning",
+    "remove": [
+      "EQIX"
+    ],
+    "add": {
+      "WBA": "Walgreens Boots Alliance, Inc."
+    }
+  },
+  {
+    "date": "2015-07-02",
+    "sourceUrl": "https://www.libertyglobal.com/pdf/press-release/Liberty-Global-LiLAC-Launch-FINAL.pdf",
+    "remove": [],
+    "add": {
+      "LILA": "Liberty Global PLC LiLAC, Class A",
+      "LILAK": "Liberty Global PLC LiLAC, Class C"
+    }
+  },
+  {
+    "date": "2015-07-06",
+    "sourceUrl": "https://news.kraftheinzcompany.com/press-releases-details/2015/The-Kraft-Heinz-Company-Announces-Successful-Completion-of-the-Merger-between-Kraft-Foods-Group-and-HJ-Heinz-Holding-Corporation/default.aspx",
+    "remove": [
+      "KRFT"
+    ],
+    "add": {
+      "KHC": "Kraft Heinz Co. (The)"
+    }
+  },
+  {
+    "date": "2015-07-27",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/biomarin-pharmaceutical-inc-join-nasdaq-100-index-beginning-july",
+    "remove": [
+      "DTV"
+    ],
+    "add": {
+      "BMRN": "BioMarin Pharmaceutical, Inc."
+    }
+  },
+  {
+    "date": "2015-07-29",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/jdcom-inc-join-nasdaq-100-index-beginning-july-29-2015",
+    "remove": [
+      "CTRX"
+    ],
+    "add": {
+      "JD": "JD.com, Inc. ADR"
+    }
+  },
+  {
+    "date": "2015-08-03",
+    "sourceUrl": "https://ir.nasdaq.com/static-files/b03fcf90-7be4-4f49-8741-b2ff0e5bb9b0",
+    "remove": [
+      "SIAL"
+    ],
+    "add": {
+      "SWKS": "Skyworks Solutions, Inc."
+    }
+  },
+  {
     "date": "2015-10-07",
     "sourceUrl": "https://ir.nasdaq.com/static-files/86629559-f2ea-4837-9cb7-46853a5a8de1",
     "remove": [

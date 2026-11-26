@@ -24,10 +24,14 @@ const official = 'https://download.kiwoom.com/hero4_help_new/';
   {guide.image && <><h2>공식 화면 가이드</h2>
   <figure class="hero-guide">
     <a href={official + number + '.htm'}>
-      <img src={official + 'images/' + guide.image} loading="lazy" decoding="async" alt={title + ' · 키움증권 공식 도움말 화면 예시'} />
+      <img src={official + 'images/' + guide.image} loading="lazy" decoding="async" alt={guide.imageCaption ?? title + ' · 키움증권 공식 도움말 화면 예시'} />
     </a>
-    <figcaption><a href={official + number + '.htm'}>키움증권 영웅문4 화면 도움말</a></figcaption>
+    <figcaption><a href={official + number + '.htm'}>{guide.imageCaption ?? '키움증권 영웅문4 화면 도움말'}</a></figcaption>
   </figure></>}
+  {guide.relatedHelp && <details>
+    <summary>공식 도움말에서 연결한 세부 화면 {guide.relatedHelp.length}개</summary>
+    <ul>{guide.relatedHelp.map((item) => <li><a href={official + item.number + '.htm'}>[{item.number}] {item.title}</a></li>)}</ul>
+  </details>}
 </section>}
 <style>
   .hero-screen-outline {

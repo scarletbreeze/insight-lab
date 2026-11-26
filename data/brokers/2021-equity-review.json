@@ -1,0 +1,96 @@
+{
+  "asOf": "2021-12-31",
+  "unit": "억 원",
+  "universeSource": "https://www.data.go.kr/data/15061054/fileData.do",
+  "records": 58,
+  "belowThreshold": {
+    "count": 33,
+    "maxAssets": 19980.0
+  },
+  "companies": [
+    {
+      "name": "한화투자증권",
+      "assets": 109894,
+      "equity": 18607,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20260112-34.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "교보증권",
+      "assets": 109890,
+      "equity": 13967,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20250813-14.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "신영증권",
+      "assets": 107283,
+      "equity": 13038,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20220513-21.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "현대차증권",
+      "assets": 79655,
+      "equity": 11592,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20260512-32.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "하이투자증권",
+      "assets": 92210,
+      "equity": 11571,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20240329-46.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "IBK투자증권",
+      "assets": 54987,
+      "equity": 10343,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20220624-75.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "BNK투자증권",
+      "assets": 36784,
+      "equity": 10151,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20251205-12.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "유진투자증권",
+      "assets": 87063,
+      "equity": 9478,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20250627-97.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "이베스트투자증권",
+      "assets": 69212,
+      "equity": 9286,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20221229-24.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "DB금융투자",
+      "assets": 72601,
+      "equity": 8467,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20240605-29.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "KTB투자증권",
+      "assets": 46834,
+      "equity": 6630,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20250624-32.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "SK증권",
+      "assets": 55359,
+      "equity": 5908,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20260311-15.pdf&gubun=2&menuCd=R8"
+    },
+    {
+      "name": "노무라금융투자",
+      "assets": 36324,
+      "equity": 5526,
+      "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20220331-36.pdf&gubun=2&menuCd=R8"
+    }
+  ],
+  "pending": [
+    {
+      "name": "JP모간증권 서울지점",
+      "assets": 31430.0
+    }
+  ]
+}

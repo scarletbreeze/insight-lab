@@ -1,7 +1,48 @@
 [
   {
+    "date": "2014-10-15",
+    "symbols": [
+      "LINTA",
+      "QVCA"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1355096/000155837015000204/lint-20141231x10k.htm"
+  },
+  {
+    "date": "2014-11-05",
+    "symbols": [
+      "LMCA",
+      "LMCK"
+    ],
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038514000071/lmca-20141104x8k.htm"
+  },
+  {
+    "date": "2015-07-02",
+    "symbols": [
+      "LBTYA",
+      "LBTYK"
+    ],
+    "sourceUrl": "https://www.libertyglobal.com/pdf/press-release/Liberty-Global-LiLAC-Launch-FINAL.pdf"
+  },
+  {
+    "date": "2015-07-06",
+    "symbols": [
+      "KRFT"
+    ],
+    "sourceUrl": "https://news.kraftheinzcompany.com/press-releases-details/2015/The-Kraft-Heinz-Company-Announces-Successful-Completion-of-the-Merger-between-Kraft-Foods-Group-and-HJ-Heinz-Holding-Corporation/default.aspx"
+  },
+  {
+    "date": "2015-07-20",
+    "symbols": [
+      "EBAY"
+    ],
+    "sourceUrl": "https://www.ebayinc.com/stories/news/ebay-inc-board-approves-completion-of-ebay-and-paypal-separation/"
+  },
+  {
     "date": "2016-04-18",
-    "symbols": ["LMCA", "LMCK"],
+    "symbols": [
+      "LMCA",
+      "LMCK"
+    ],
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm"
   }
 ]

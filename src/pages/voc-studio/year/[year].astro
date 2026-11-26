@@ -51,18 +51,28 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     <h2>공개 문의 주제 Top 10</h2>
     <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
     {review && <p>올해의 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
-    <ol class="lab-list">
+    <ol class="voc-rankings">
       {boardTopics.ranked.slice(0, 10).map(({ id, label, count }) => {
-        const priorCount = priorBoardTopics?.ranked.find((topic) => topic.id === id)?.count ?? 0;
-        const examples = selectedPosts.filter(({ topic }) => topic === id).slice(0, 2);
-        return <li>
-          <strong><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></strong> · {count.toLocaleString('ko-KR')}건 ({(count / boardTopics.total * 100).toFixed(1)}%)
-          {priorCount > 0 && ` · 전년 대비 ${((count / priorCount - 1) * 100).toLocaleString('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 })}%`}
-          <meter min="0" max={boardTopics.total} value={count} aria-label={label + ' 문의 비중'}></meter>
-          {examples.length > 0 && <ul>{examples.map(({ summary, subtopic, date, reviewMethod }) => <li>
-            <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic && `${subtopic} · `}{summary}
-            {reviewMethod && <small> · 제목 기반</small>}
-          </li>)}</ul>}
+        const rank = 1 + boardTopics.ranked.filter((row) => row.count > count).length;
+        const priorCount = priorBoardTopics?.ranked.find((topic) => topic.id === id)?.count;
+        const examples = selectedPosts.filter(({ topic }) => topic === id).slice(0, 3);
+        const percent = (count / boardTopics.total * 100).toFixed(1);
+        return <li class="lab-card">
+          <div class="voc-rank-heading">
+            <h3><span>{rank}위</span> <a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
+            <strong>{count.toLocaleString('ko-KR')}건</strong>
+          </div>
+          <div class="voc-rank-share">
+            <meter min="0" max={boardTopics.total} value={count} aria-label={label + ' 문의 비중'}></meter>
+            <span>전체 문의의 {percent}%</span>
+          </div>
+          {priorCount != null && priorCount > 0 && <p>전년 {priorCount.toLocaleString('ko-KR')}건 대비 {((count / priorCount - 1) * 100).toLocaleString('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 })}%</p>}
+          {examples.length > 0 && <details>
+            <summary>대표 문의 {examples.length}건</summary>
+            <ul>{examples.map(({ summary, subtopic, intent, sourceUrl }) => <li>
+              <strong>{subtopic ?? label} · {vocIntents[intent]}</strong><p>{summary} <a href={sourceUrl}>출처</a></p>
+            </li>)}</ul>
+          </details>}
         </li>;
       })}
     </ol>
@@ -122,3 +132,15 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
   <NoticeInquiryObservations items={observations} verified={publicWindows.covered || coverage?.questionCoverage === 'verified'} automated={publicWindows.covered} />
   <VocContextList title="같은 해 시장·제도 변화" items={context} linkTopics />
 </VocLayout>
+
+<style>
+  .voc-rankings { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,19rem),1fr)); gap: .75rem; margin-block: 1rem; }
+  .voc-rankings .lab-card { align-content: start; }
+  .voc-rank-heading, .voc-rank-share { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+  .voc-rank-heading span { font-family: var(--font-mono); }
+  .voc-rank-share { align-items: center; }
+  .voc-rank-share meter { flex: 1; min-width: 2rem; }
+  .voc-rank-share span { font-size: .85rem; font-variant-numeric: tabular-nums; }
+  .voc-rankings summary { cursor: pointer; padding-block: .4rem; }
+  .voc-rankings details li { border-top: 1px solid var(--color-rule); padding-block: .5rem; }
+</style>

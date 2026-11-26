@@ -10,6 +10,21 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "voc"))
 import collect_public_board as board
 
 
+class TopicClassificationTest(unittest.TestCase):
+    def test_title_and_channel_context(self):
+        cases = [
+            ("HTS에서 이체", "수식", "transfer"),
+            ("영웅문4 화면번호와 이체", "", "ambiguous"),
+            ("미수 이자", "인증서", "credit"),
+            ("수식 문의", "입출금", "hts"),
+            ("문의", "프리마켓", "hours"),
+            ("문의", "", "unclassified"),
+        ]
+        for title, body, expected in cases:
+            with self.subTest(title=title, body=body):
+                self.assertEqual(board.classify_topic(dict(ttl=title, dtlCntn=body)), expected)
+
+
 class LocalCheckpointTest(unittest.TestCase):
     def test_resume_matches_uninterrupted_aggregation(self):
         def page(number, cursor, size):

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import BrokerSegmentPeriod from './BrokerSegmentPeriod';
 import BrokerTrend from './BrokerTrend';
 import IndustryCompare from './IndustryCompare';
@@ -9,6 +9,35 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
   const [left, setLeft] = useState(brokers[0].id);
   const [right, setRight] = useState(brokers[1].id);
   const [fieldKey, setFieldKey] = useState<(typeof fields)[number]['key']>('netIncome');
+  useEffect(() => {
+    if (mode !== 'compare') return;
+    function restore() {
+      const params = new URLSearchParams(window.location.search);
+      const selected = (key: string, fallback: string) =>
+        brokers.find(({ id }) => id === params.get(key))?.id ?? fallback;
+      const first = selected('left', brokers[0].id);
+      const fallback = brokers.find(({ id }) => id !== first)!.id;
+      const second = selected('right', fallback);
+      const requested = params.get('period') ?? '';
+      setLeft(first);
+      setRight(second === first ? fallback : second);
+      setPeriod(brokerYears.some((y) => String(y) === requested) ? requested : interimProfit.end);
+    }
+    restore();
+    window.addEventListener('popstate', restore);
+    return () => window.removeEventListener('popstate', restore);
+  }, [mode]);
+
+  function selectComparison(nextLeft: string, nextRight: string, nextPeriod: string) {
+    setLeft(nextLeft);
+    setRight(nextRight);
+    setPeriod(nextPeriod);
+    const url = new URL(window.location.href);
+    url.searchParams.set('left', nextLeft);
+    url.searchParams.set('right', nextRight);
+    url.searchParams.set('period', nextPeriod);
+    window.history.replaceState(window.history.state, '', url);
+  }
   const field = fields.find(({ key }) => key === fieldKey) ?? fields[0];
   const isInterim = period === interimProfit.end;
   const year = Number(period);
@@ -27,18 +56,18 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
   return <section className="lab-block">
     {mode === 'compare' && <h2>비교할 두 증권사</h2>}
     <div className="lab-controls">
-      <label>{mode === 'compare' ? '연결 실적 기간' : '결산 연도'} <select value={period} onChange={(event) => setPeriod(event.target.value)}>
+      <label>{mode === 'compare' ? '연결 실적 기간' : '결산 연도'} <select value={period} onChange={(event) => mode === 'compare' ? selectComparison(left, right, event.target.value) : setPeriod(event.target.value)}>
         {mode === 'compare' && <option value={interimProfit.end}>{interimProfit.label}</option>}
         {brokerYears.map((year) => <option key={year} value={year}>{mode === 'compare' ? year + '년 결산' : year}</option>)}
       </select></label>
       {mode === 'rank' ? <label>순위 지표 <select value={fieldKey} onChange={(event) => setFieldKey(event.target.value as typeof fieldKey)}>
         {fields.map(({ key, title }) => <option key={key} value={key}>{title}</option>)}
       </select></label> : <>
-        <label>첫 번째 증권사 <select value={left} onChange={(event) => setLeft(event.target.value)}>
-          {brokers.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
+        <label>첫 번째 증권사 <select value={left} onChange={(event) => selectComparison(event.target.value, right, period)}>
+          {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === right}>{name}</option>)}
         </select></label>
-        <label>두 번째 증권사 <select value={right} onChange={(event) => setRight(event.target.value)}>
-          {brokers.map(({ id, name }) => <option key={id} value={id}>{name}</option>)}
+        <label>두 번째 증권사 <select value={right} onChange={(event) => selectComparison(left, event.target.value, period)}>
+          {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === left}>{name}</option>)}
         </select></label>
       </>}
     </div>
@@ -67,6 +96,12 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
     {mode === 'compare' && left !== right && <>
       {isInterim && <ul className="lab-chips" aria-label="연결 누적 실적 원문">
         {[leftInterim, rightInterim].map((row) => row && <li key={row.id}><a href={row.sourceUrl}>{label(row.id)} 분기보고서</a></li>)}
+      </ul>}
+      {!isInterim && <ul className="lab-chips" aria-label="연결 결산 원문">
+        {[leftRow, rightRow].map((row) => row && <li key={row.id}>
+          <a href={row.sourceUrl}>{label(row.id)} {year}년 재무 공시</a>
+          {row.operatingIncomeSourceUrl && row.operatingIncomeSourceUrl !== row.sourceUrl && <a href={row.operatingIncomeSourceUrl}>{label(row.id)} 영업이익 공시</a>}
+        </li>)}
       </ul>}
       <IndustryCompare leftCompany={{ id: left, name: label(left) }} rightCompany={{ id: right, name: label(right) }} />
       <BrokerTrend companies={[{ id: left, name: label(left) }, { id: right, name: label(right) }]} />

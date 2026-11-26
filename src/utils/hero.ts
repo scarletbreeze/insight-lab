@@ -5,6 +5,8 @@ import guideData from '../../data/hero/screen-guides.json';
 
 interface ScreenGuide {
   image?: string;
+  imageCaption?: string;
+  relatedHelp?: { number: string; title: string }[];
   focus: string[];
   sections?: string[][];
 }

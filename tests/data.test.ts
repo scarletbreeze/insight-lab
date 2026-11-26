@@ -55,12 +55,13 @@ test('VOC public-board totals contain only sourced aggregate counts', () => {
 test('Independent VOC review reconciles year and topic agreement counts', () => {
   type Counts = { reviewed: number; agreement: number };
   const review = readJson<{
+    samplePerYear: number;
     development: { reviewed: number; before: number; after: number };
     years: (Counts & { year: number; sample: number })[];
     topics: (Counts & { topic: string })[];
   }>('voc/annual-classification-review.json');
   assert.deepEqual(review.years.map(({ year }) => year), [2022, 2023, 2024, 2025, 2026]);
-  assert.ok(review.years.every(({ sample, reviewed, agreement }) => sample === 12 && sample >= reviewed && reviewed >= agreement && agreement >= 0));
+  assert.ok(review.years.every(({ sample, reviewed, agreement }) => sample === review.samplePerYear && sample >= reviewed && reviewed >= agreement && agreement >= 0));
   const valid = new Set(readJson<{ id: string }[]>('voc/topics.json').map(({ id }) => id));
   assert.ok(review.topics.every(({ topic, reviewed, agreement }) => valid.has(topic) && reviewed >= agreement && agreement >= 0));
   for (const key of ['reviewed', 'agreement'] as const) {
@@ -398,13 +399,16 @@ test('Published QQQ price rankings show covered and excluded constituents', () =
     assert.deepEqual(US.items.map(({ returnPct }) => returnPct), US.items.map(({ returnPct }) => returnPct).sort((a, b) => b - a));
   }
   assert.equal(monthly['2017-10'].US?.eligibleCount, 98);
-  for (const year of [2016, 2017]) {
+  for (const year of [2015, 2016, 2017]) {
     assert.ok(Array.from({ length: 12 }, (_, i) => `${year}-${String(i + 1).padStart(2, '0')}`).every((period) => monthly[period]?.US));
   }
   assert.equal(monthly['2015-10'].US?.universeCount, 109);
   assert.ok(monthly['2016-04'].US?.excludedSymbols.includes('LMCA'));
   const annual = readJson<Record<string, { US: Coverage & { winner: Equity; loser: Equity; tenbaggers: Equity[] } }>>('market/annual-equity-rankings.json');
   const { eligibleCount, universeCount, excludedSymbols, winner, loser, tenbaggers } = annual['2017'].US;
+  assert.equal(annual['2015'].US.eligibleCount, 93);
+  assert.equal(annual['2015'].US.winner.symbol, 'NFLX');
+  assert.equal(annual['2015'].US.loser.symbol, 'MU');
   assert.equal(annual['2016'].US.winner.symbol, 'NVDA');
   assert.equal(annual['2016'].US.loser.symbol, 'ENDP');
   assert.equal(universeCount, 107);
@@ -467,4 +471,33 @@ test('Korean monthly research reconciles eligibility and points to dated fund ho
     assert.equal(new Set(data.holdingsSources).size, 2);
     assert.ok(data.holdingsSources.every((url) => new URL(url).searchParams.get('gijunYMD') === data.first.replaceAll('-', '.')));
   }
+});
+
+test('The 2008 price archive keeps issuers distinct when a ticker was reused', () => {
+  type Member = { symbol: string; archiveSymbol?: string };
+  const { members } = readJson<{ members: Member[] }>('market/qqq-holdings-2008-09.json');
+  const archived = new Map(members.map((member) => [member.symbol, member.archiveSymbol ?? member.symbol]));
+  assert.equal(archived.size, 100);
+  assert.equal(new Set(archived.values()).size, 100);
+  assert.equal(archived.get('HANS'), 'MNST');
+  assert.equal(archived.get('MNST'), 'MWW');
+  const monthly = readJson<Record<string, { US: { eligibleCount: number; archiveTickers: Member[] } }>>('market/months/equity-rankings.json');
+  for (const period of ['2008-10', '2008-11', '2008-12']) {
+    const ranking = monthly[period].US;
+    assert.equal(ranking.eligibleCount, 84);
+    assert.ok(ranking.archiveTickers.every(({ symbol, archiveSymbol }) => archived.get(symbol) === archiveSymbol));
+  }
+});
+
+test('The 2021 equity review reconciles the 58 insured securities firms', () => {
+  const review = readJson<{ records: number; belowThreshold: {count: number; maxAssets: number};
+    companies: {name: string; assets: number; equity: number; sourceUrl: string}[];
+    pending: {assets: number}[] }>('brokers/2021-equity-review.json');
+  const { companies } = readJson<{ companies: {id: string; equity: number}[] }>('brokers/industry-2021.json');
+  const threshold = (id: string) => companies.find((row) => row.id === id)!.equity / 100;
+  assert.equal(review.records, companies.length + 1 + review.belowThreshold.count + review.companies.length + review.pending.length);
+  assert.ok(review.belowThreshold.maxAssets < threshold('daishin'));
+  assert.ok(review.companies.every(({ assets, equity, sourceUrl }) =>
+    assets > threshold('daishin') && equity < threshold('daishin') && new URL(sourceUrl).hostname === 'kisrating.com'));
+  assert.ok(review.pending.every(({ assets }) => assets < threshold('kiwoom') && assets >= threshold('daishin')));
 });

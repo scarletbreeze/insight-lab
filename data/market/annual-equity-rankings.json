@@ -1,4 +1,61 @@
 {
+  "2015": {
+    "US": {
+      "corporateActionSources": [
+        "https://news.kraftheinzcompany.com/press-releases-details/2015/The-Kraft-Heinz-Company-Announces-Successful-Completion-of-the-Merger-between-Kraft-Foods-Group-and-HJ-Heinz-Holding-Corporation/default.aspx",
+        "https://www.ebayinc.com/stories/news/ebay-inc-board-approves-completion-of-ebay-and-paypal-separation/",
+        "https://www.libertyglobal.com/pdf/press-release/Liberty-Global-LiLAC-Launch-FINAL.pdf"
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALTR",
+        "CMCSK",
+        "CTRX",
+        "DTV",
+        "EBAY",
+        "KRFT",
+        "LBTYA",
+        "LBTYK",
+        "LMCA",
+        "LMCK",
+        "NXPI",
+        "QVCA",
+        "SIAL",
+        "VIP"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 10,
+        "분할 비율만으로 조정할 수 없는 기업행동": 4
+      },
+      "loser": {
+        "firstDate": "2015-01-02",
+        "lastDate": "2015-12-31",
+        "name": "Micron Technology, Inc.",
+        "returnPct": -59.25179856115108,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "MU"
+      },
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465915002429/a14-24967_1n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465915002429/a14-24967_1n30b2.htm",
+        "https://www.sec.gov/Archives/edgar/data/1355096/000155837015000204/lint-20141231x10k.htm",
+        "https://ir.nasdaq.com/static-files/ffe04852-74e3-4eee-ac7c-c0790d40cec0"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "tenbaggers": [],
+      "universe": "PowerShares QQQ Trust 보유 주식 (2014-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 107,
+      "winner": {
+        "firstDate": "2015-01-02",
+        "lastDate": "2015-12-31",
+        "name": "NetFlix, Inc.",
+        "returnPct": 129.45492061672493,
+        "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+        "symbol": "NFLX"
+      }
+    }
+  },
   "2016": {
     "US": {
       "corporateActionSources": [

@@ -3,17 +3,43 @@ import questions from '../../../data/market/game.json';
 
 interface Props {
   monthBase: string;
+  stockRounds: { period: string; eligibleCount: number; firstDate: string; lastDate: string;
+    choices: { name: string; symbol: string; returnPct: number }[] }[];
   assets: { period: string; firstDate: string; lastDate: string; multiples: number[] }[];
 }
 
-export default function ReturnerGame({ monthBase, assets }: Props) {
+export default function ReturnerGame({ monthBase, assets, stockRounds }: Props) {
   const [answers, setAnswers] = useState<number[]>([]);
   const [shareStatus, setShareStatus] = useState('');
   const heading = useRef<HTMLHeadingElement>(null);
   const started = useRef(false);
   const [period, setPeriod] = useState('2020-03');
+  const [stockPeriod, setStockPeriod] = useState('');
+  const stockRound = stockRounds.find((item) => item.period === stockPeriod);
+  useEffect(() => {
+    const requested = new URLSearchParams(window.location.search).get('equityPeriod');
+    if (stockRounds.some(({ period }) => period === requested)) setStockPeriod(requested ?? '');
+  }, [stockRounds]);
+  function chooseStockPeriod(value: string) {
+    setStockPeriod(value);
+    const url = new URL(window.location.href);
+    if (value) url.searchParams.set('equityPeriod', value);
+    else url.searchParams.delete('equityPeriod');
+    window.history.replaceState(window.history.state, '', url);
+  }
   const scenario = assets.find((item) => item.period === period) ?? assets[0];
   const gameQuestions = questions.map((item) => {
+    if (item.date === '2024-11' && stockRound) {
+      const best = Math.max(...stockRound.choices.map(({ returnPct }) => returnPct));
+      return { ...item, date: stockPeriod,
+        prompt: stockPeriod + ' QQQ 보유 종목 중 다음 네 종목을 비교하면 가격 수익률이 가장 높았던 곳은 어디일까요?',
+        choices: stockRound.choices.map(({ name, symbol }) => name + ' (' + symbol + ')'),
+        answer: stockRound.choices.findIndex(({ returnPct }) => returnPct === best),
+        explanation: stockRound.firstDate + '~' + stockRound.lastDate + ' · 계산한 ' + stockRound.eligibleCount
+          + '개 종목 중 네 종목의 가격 수익률입니다. ' + stockRound.choices.map(({ symbol, returnPct }) => symbol + ' '
+          + returnPct.toFixed(2) + '%').join(' · '),
+        sourceUrl: monthBase + stockPeriod.replace('-', '/') + '/#equity-rankings', sourceName: '해당 월 종목 순위와 가격 출처' };
+    }
     if (!scenario || item.date !== '2020-03' || item.series?.[0] !== 'DEXKOUS') return item;
     const best = Math.max(...scenario.multiples);
     return { ...item, date: scenario.period, prompt: scenario.period + ' 첫 거래일에서 마지막 거래일까지 원화 기준 평가액이 가장 높았던 선택은 무엇일까요?',
@@ -29,6 +55,10 @@ export default function ReturnerGame({ monthBase, assets }: Props) {
       <p role="status">문제 {answers.length + 1} / {questions.length}</p>
       {answers.length === 0 && scenario && <label>자산 선택 문항의 투자 시기 <select value={scenario.period} onChange={(event) => setPeriod(event.target.value)}>
         {assets.map(({ period }) => <option key={period} value={period}>{period}</option>)}
+      </select></label>}
+      {answers.length === 0 && <label>종목 수익률 문항의 투자 시기 <select value={stockPeriod} onChange={(event) => chooseStockPeriod(event.target.value)}>
+        <option value="">2024-11 · S&amp;P 500</option>
+        {stockRounds.map(({ period }) => <option key={period} value={period}>{period} · QQQ</option>)}
       </select></label>}
       <h2 ref={heading} tabIndex={-1}>{question.prompt}</h2>
       <ul className="lab-list">{question.choices.map((choice, index) => (

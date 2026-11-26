@@ -20,14 +20,14 @@ CATEGORIES = {"a": "문의", "b": "제안", "c": "칭찬·불만"}
 TOPIC_TERMS = {
     "orders": r"주문|체결|시장가|지정가|호가|스[탑톱]로스",
     "account": r"계좌\s*(개설|폐쇄|해지|등록)|비대면|휴면계좌|계좌번호",
-    "hts": r"HTS|MTS|영웅문|조건\s*(?:검색|식)|신호\s*검색|검색식|수식\s*관리자|일목균형표|(?:분|일|주|월)봉|차트|화면번호|관심종목",
+    "hts": r"HTS|MTS|영웅문|조건\s*(?:검색|식)|신호\s*검색|검색식|수식|시세\s*알림|\[\d{4}\]|(?<!\d)\d{4}\s*화면|일목균형표|(?:분|일|주|월)봉|차트|화면번호|관심종목",
     "auth": r"인증서|본인인증|간편인증|고객\s*확인\s*(?:재\s*)?등록|로그인|OTP|생체인증",
     "overseas": r"해외\s*주식|미국\s*주식|환전|해외\s*소수점",
-    "hours": r"거래시간|개장시간|폐장시간|선물옵션|선물\s*거래|파생상품",
-    "credit": r"신용\s*(거래|융자|한도|잔고)|미수금|미수\s*(거래|동결)|반대매매|(?:매도\s*대금|주식)\s*담보\s*대출",
+    "hours": r"(?:거래|개장|폐장)\s*시간|정규장|애프터\s*마켓|프리\s*마켓|선물옵션|선물\s*거래|파생상품",
+    "credit": r"신용\s*(거래|융자|한도|잔고)|펀드\s*(?:담보\s*)?대출|대주\s*매도|미수금|미수\s*이자|미수\s*(거래|동결)|반대매매|(?:매도\s*대금|주식)\s*담보\s*대출",
     "fees": r"수수료|제비용|거래세|양도소득세",
     "transfer": r"입출금|입금|출금|이체|대체출고|대체입고",
-    "products": r"ETF|ETN|ELS|채권|펀드|공모주|비과세\s*종합\s*저축",
+    "products": r"연금\s*저축|ETF|ETN|ELS|채권|펀드|공모주|비과세\s*종합\s*저축",
 }
 TOPIC_PATTERNS = {key: re.compile(value, re.IGNORECASE) for key, value in TOPIC_TERMS.items()}
 
@@ -36,6 +36,11 @@ def classify_topic(row):
     title = unescape(re.sub(r"<[^>]*>", " ", row.get("ttl") or ""))
     body = unescape(re.sub(r"<[^>]*>", " ", row.get("dtlCntn") or ""))
     title_topics = [key for key, pattern in TOPIC_PATTERNS.items() if pattern.search(title)]
+    # A platform name alone describes the channel of a transfer request.
+    if set(title_topics) == {"hts", "transfer"} and not TOPIC_PATTERNS["hts"].search(
+        re.sub(r"영웅문(?:4|S\+?)?|HTS|MTS", "", title, flags=re.IGNORECASE)
+    ):
+        return "transfer"
     if title_topics:
         return title_topics[0] if len(title_topics) == 1 else "ambiguous"
     body_topics = [key for key, pattern in TOPIC_PATTERNS.items() if pattern.search(body)]
@@ -92,7 +97,7 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
     pages = 0
     stop = "page-limit"
     previous_oldest = None
-    settings = [str(first), str(last), page_size, classify, include_daily, digest(json.dumps([CATEGORIES, TOPIC_TERMS], sort_keys=True))]
+    settings = [str(first), str(last), page_size, classify, include_daily, digest(json.dumps([CATEGORIES, TOPIC_TERMS, "platform-transfer-v1"], sort_keys=True))]
     if checkpoint and on_inquiry:
         raise ValueError("A callback must manage its own progress.")
     if checkpoint and checkpoint.exists():

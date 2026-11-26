@@ -71,7 +71,22 @@ def main():
         (change["from"], change["to"], change["date"])
         for change in renames if first < change["date"] <= last and change["from"] in members.keys() - affected.keys()
     ]
-    prices, incomplete = extract_prices(args.wiki_archive, members.keys() - affected.keys(), first, last, price_aliases)
+    # WIKI sometimes assigns an issuer's later ticker to its entire history.
+    # Reverse this mapping for display; the same letters can identify another company in the portfolio.
+    original_by_archive = {}
+    archive_sources = {}
+    for symbol, holding in members.items():
+        if symbol in affected:
+            continue
+        archive_symbol = holding.get("archiveSymbol", symbol)
+        if archive_symbol in original_by_archive:
+            parser.error(f"Multiple holdings point to WIKI series {archive_symbol}.")
+        original_by_archive[archive_symbol] = symbol
+        if archive_symbol != symbol:
+            archive_sources[symbol] = https_url(holding["archiveSymbolSource"], "ticker history source")
+    archive_prices, archive_missing = extract_prices(args.wiki_archive, set(original_by_archive), first, last, price_aliases)
+    prices = {original_by_archive[key]: value for key, value in archive_prices.items()}
+    incomplete = [original_by_archive[key] for key in archive_missing]
     if set(incomplete) != set(args.accept_missing):
         parser.error("Review incomplete WIKI observations for: " + (", ".join(incomplete) or "none"))
 
@@ -103,6 +118,11 @@ def main():
             markets["US"]["tickerChangeSources"] = [
                 https_url(change["sourceUrl"], "ticker change source") for change in renames
                 if (change["from"], change["to"], change["date"]) in price_aliases
+            ]
+        if archive_sources:
+            markets["US"]["archiveTickers"] = [
+                {"symbol": symbol, "archiveSymbol": members[symbol]["archiveSymbol"], "sourceUrl": url}
+                for symbol, url in sorted(archive_sources.items())
             ]
         markets["US"]["priceMethod"] = "WIKI 종가와 분할 비율로 계산 · 배당 제외"
     default = "data/market/annual-equity-rankings.json" if args.annual else "data/market/months/equity-rankings.json"

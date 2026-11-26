@@ -747,5 +747,229 @@
     "summary": "호가주문 화면의 스탑로스 기능에 관해 문의했습니다.",
     "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
     "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-short-sale",
+    "date": "2022",
+    "topic": "credit",
+    "intent": "info",
+    "subtopic": "대주매도",
+    "keywords": [
+      "대주",
+      "매도"
+    ],
+    "summary": "대주매도 거래에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-renew-cert",
+    "date": "2022",
+    "topic": "auth",
+    "intent": "error",
+    "subtopic": "인증서 갱신",
+    "keywords": [
+      "인증서",
+      "갱신"
+    ],
+    "summary": "결제 후 인증서 갱신이 완료되지 않는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-transfer-history",
+    "date": "2022",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "타사 이전 내역",
+    "keywords": [
+      "타사이전",
+      "거래내역"
+    ],
+    "summary": "다른 증권사에서 옮겨 온 주식의 수량과 이전 내역을 어디서 확인하는지 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-multi-chart",
+    "date": "2022",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "멀티차트 십자선",
+    "keywords": [
+      "멀티차트",
+      "십자선"
+    ],
+    "summary": "여러 차트를 함께 보는 화면의 십자선 기능을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-tax-estimate",
+    "date": "2023",
+    "topic": "fees",
+    "intent": "error",
+    "subtopic": "양도소득세 가계산",
+    "keywords": [
+      "양도소득세",
+      "가계산"
+    ],
+    "summary": "예상 양도소득세를 조회할 수 없는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-automatic-watch",
+    "date": "2023",
+    "topic": "orders",
+    "intent": "how_to",
+    "subtopic": "자동감시주문 설정",
+    "keywords": [
+      "자동감시주문",
+      "주문설정"
+    ],
+    "summary": "자동감시주문의 설정 방법을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-margin-interest",
+    "date": "2023",
+    "topic": "credit",
+    "intent": "fee",
+    "subtopic": "미수 이자",
+    "keywords": [
+      "미수",
+      "이자"
+    ],
+    "summary": "미수 거래에 적용되는 이자에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2024-internal-transfer",
+    "date": "2024",
+    "topic": "transfer",
+    "intent": "how_to",
+    "subtopic": "당사 계좌 간 이체",
+    "keywords": [
+      "계좌이체",
+      "영웅문"
+    ],
+    "summary": "영웅문에서 같은 증권사 계좌 사이의 입출금 기능을 사용하는 방법을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2024-simulated-order",
+    "date": "2024",
+    "topic": "orders",
+    "intent": "error",
+    "subtopic": "모의투자 주문 구분",
+    "keywords": [
+      "모의투자",
+      "주문구분"
+    ],
+    "summary": "모의투자 중 주문 구분을 확인하라는 안내의 의미를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2024-quote-stop",
+    "date": "2024",
+    "topic": "orders",
+    "intent": "how_to",
+    "subtopic": "호가창 스탑주문",
+    "keywords": [
+      "호가주문",
+      "스탑주문"
+    ],
+    "summary": "주식호가주문 화면에서 스탑주문을 사용하는 방법을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2025-pension-products",
+    "date": "2025",
+    "topic": "products",
+    "intent": "policy",
+    "subtopic": "연금저축 단기 상품",
+    "keywords": [
+      "연금저축",
+      "투자가능상품"
+    ],
+    "summary": "연금저축 계좌에서 투자할 수 있는 단기 상품을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2025-margin-delinquency",
+    "date": "2025",
+    "topic": "credit",
+    "intent": "policy",
+    "subtopic": "미수 연체 영향",
+    "keywords": [
+      "미수",
+      "연체"
+    ],
+    "summary": "미수 연체가 금융기관의 신용도 평가에 미치는 영향을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2025-price-alert",
+    "date": "2025",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "시세알림 오류",
+    "keywords": [
+      "시세알림",
+      "알림"
+    ],
+    "summary": "시세 알림 기능이 제대로 동작하지 않는 상황을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2026-fund-loan",
+    "date": "2026",
+    "topic": "credit",
+    "intent": "policy",
+    "subtopic": "펀드 대출 가능 여부",
+    "keywords": [
+      "펀드",
+      "대출"
+    ],
+    "summary": "보유 펀드와 관련해 대출을 이용할 수 있는지 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2026-external-otp",
+    "date": "2026",
+    "topic": "auth",
+    "intent": "how_to",
+    "subtopic": "타사 모바일 OTP",
+    "keywords": [
+      "모바일OTP",
+      "등록"
+    ],
+    "summary": "다른 금융회사에서 발급한 모바일 OTP를 등록하는 방법을 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2026-opening-auction",
+    "date": "2026",
+    "topic": "hours",
+    "intent": "info",
+    "subtopic": "시가 동시호가 접수",
+    "keywords": [
+      "동시호가",
+      "접수시간"
+    ],
+    "summary": "장 시작 전 동시호가 주문을 몇 시부터 접수하는지 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
   }
 ]
