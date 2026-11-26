@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import BrokerSegmentPeriod from './BrokerSegmentPeriod';
 import BrokerTrend from './BrokerTrend';
 import IndustryCompare from './IndustryCompare';
 import { brokerEvents, brokerMetrics, brokerYears, brokers, fields, formatBrokerMetric, interimProfit } from '../../utils/brokers';
@@ -78,6 +79,8 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
             <p>{company?.character}</p>
             <strong>공시 사업 분류</strong>
             <p>{company?.segments.join(' · ') || '자료 확인 중'}</p>
+            <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
+              interim={isInterim} detailUrl={brokerBase + id + '/'} />
             <strong>주요 전환점</strong>
             {events.length ? <ul>{events.map(({ date, title, sourceUrl }) => (
               <li key={date}><time dateTime={date}>{date}</time><a href={sourceUrl}>{title}</a></li>
