@@ -117,7 +117,7 @@ test('VOC notice windows use published dates and cover both 14-day periods', () 
 });
 
 test('Hero screen numbers and workflow references resolve to sourced records', () => {
-  const screens = readJson<{ number: string, officialHelpUrl?: string, sources: { sourceUrl: string }[] }[]>('hero/screens.json');
+  const screens = readJson<{ number: string, purpose: string, officialHelpUrl?: string, sources: { sourceUrl: string }[] }[]>('hero/screens.json');
   const workflows = readJson<{ steps: { number: string }[] }[]>('hero/recipes.json');
   const numbers = new Set(screens.map(({ number }) => number));
   const mentions = readJson<{ matchedThreads: number; screens: Record<string, number>; years: Record<string, { categories: { 문의: number } }> }>('voc/screen-mentions.json');
@@ -129,8 +129,10 @@ test('Hero screen numbers and workflow references resolve to sourced records', (
   }
   assert.equal(numbers.size, screens.length);
   assert.ok(screens.length >= 50);
-  for (const { number, sources, officialHelpUrl } of screens) {
+  const purposes = ['시장 파악', '종목 발굴', '종목 분석', '주문', '계좌', '파생', '해외'];
+  for (const { number, purpose, sources, officialHelpUrl } of screens) {
     assert.match(number, /^\d{4}$/);
+    assert.ok(purposes.includes(purpose), number);
     assert.equal(officialHelpUrl ?? sources[0].sourceUrl, 'https://download.kiwoom.com/hero4_help_new/' + number + '.htm');
     assert.equal(new URL(sources[0].sourceUrl).hostname, 'download.kiwoom.com');
   }
@@ -256,6 +258,17 @@ test('Index snapshots and the market timeline cover the documented periods', () 
   assert.equal(us['2025-03'].firstDate, '2025-03-03');
   assert.equal(us['2025-09'].firstDate, '2025-09-02');
   assert.deepEqual(us['2025-12'].last, [6845.50, 23241.99]);
+  for (let year = 2017; year <= 2023; year++) {
+    assert.ok(Array.from({ length: 12 }, (_, i) => `${year}-${String(i + 1).padStart(2, '0')}`).every((period) => us[period]), `${year} US months`);
+  }
+  const fredSourced = (row: Snapshot) => [row.firstSource, row.lastSource].map((url) => new URL(url).hostname === 'fred.stlouisfed.org');
+  assert.ok(Object.values(us).every((row) => fredSourced(row)[0] === fredSourced(row)[1]), 'FRED months cite FRED on both boundaries');
+  assert.equal(Object.values(us).filter((row) => fredSourced(row)[0]).length, 38);
+  assert.ok(['2016-12', '2017-01', '2019-12', '2022-05'].every((period) => fredSourced(us[period])[0]));
+  assert.ok(['2021-01', '2022-04', '2023-09'].every((period) => !fredSourced(us[period])[0]));
+  assert.deepEqual(us['2021-02'].last, [3811.15, 13192.34]);
+  assert.equal(us['2023-04'].firstDate, '2023-04-03');
+  assert.deepEqual(us['2022-12'].last, [3839.50, 10466.48]);
 });
 
 test('2025 broker cohort keeps one consistent basis and Kiwoom is eighth by equity', () => {

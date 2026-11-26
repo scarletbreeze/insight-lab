@@ -1,5 +1,17 @@
 [
   {
+    "updatedAt": "2026-11-26T23:19:41+09:00",
+    "service": "hero-lab",
+    "title": "영웅문 화면 상세 가이드 70개 추가 · 해외·파생·투자정보 화면 중심 286개",
+    "route": "hero-lab"
+  },
+  {
+    "updatedAt": "2026-11-26T23:19:41+09:00",
+    "service": "market-time-capsule",
+    "title": "미국 S&P 500·Nasdaq 월초·월말 종가를 2016년 12월~2026년 10월 전체로 확장(119개월)",
+    "route": "market-time-capsule/methodology"
+  },
+  {
     "updatedAt": "2026-11-26T23:06:13+09:00",
     "service": "broker-atlas",
     "title": "2021년 말 대신증권 별도 자본 10위 확정 · JP모간증권 서울지점 재무상태표 대조",

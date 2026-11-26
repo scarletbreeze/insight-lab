@@ -1,5 +1,6 @@
 ---
-import { koreaAnnualCloses, koreaAnnualSource, koreaMonthlyCloses, usMonthlyCloses } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+import { isFredSourced, koreaAnnualCloses, koreaAnnualSource, koreaMonthlyCloses, usMonthlyCloses } from '../../utils/market';
 
 interface Props { period: string; market?: 'KR' | 'US'; }
 const { period, market = 'KR' } = Astro.props;
@@ -10,6 +11,7 @@ const annual = period.length === 4;
 const year = Number(period);
 const previous = String(year - 1);
 const monthly = monthCloses[period];
+const fredSourced = !domestic && !annual && isFredSourced(monthly);
 const previousAnnual = koreaAnnualCloses[previous];
 const currentAnnual = koreaAnnualCloses[period];
 const snapshot = annual && domestic
@@ -48,5 +50,6 @@ const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 
   </div>
   {monthly?.calendarSource && <p>월초 거래일은 당시 시황 보도와 대조했습니다. <a href={monthly.calendarSource}>첫 거래일 확인 근거</a></p>}
   {monthly?.sourceNote && <p>{monthly.sourceNote.text} <a href={monthly.sourceNote.url}>Nasdaq 제공 시계열</a></p>}
+  {fredSourced && <p>이 달의 두 지수 종가는 당시 보도를 확보하지 못해 FRED 일별 관측값을 출처로 합니다. FRED는 S&amp;P 500과 Nasdaq Composite 계열을 재배포 사전 승인이 필요한 자료로 표시하며, 운영자가 2026년 11월 26일 발표용으로 포함을 결정했습니다. <a href={sitePath('market-time-capsule/methodology')}>자료 방법론</a></p>}
   </> : <p class="empty-state">{annual ? '연말 종가' : '첫 거래일과 마지막 거래일의 종가'} 자료 확인 중</p>}
 </section>

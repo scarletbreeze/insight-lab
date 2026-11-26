@@ -89,6 +89,21 @@ python3 scripts/market/rank_wiki_portfolio.py WIKI_PRICES.zip data/market/spy-ho
 
 2024년 국내·미국 지수는 각 시장의 거래일을 별도로 구해 12개월 모두 첫날·마지막 날 종가를 수록했다. 국내 1~10월은 네이버 일별 지수 값과 키움증권 보고서, SPARX 월말 공시 또는 KIND 투자설명서의 두 지수 값을 대조했다. 미국 1~9월은 S&P 500·Nasdaq Composite의 FRED 관측일·관측값을 증권사 보고서나 해당 거래일 AP 마감 기록과 대조했다. 3월 미국의 마지막 거래일은 28일, 한국은 29일이다. 각 시장·각 날짜의 원문 주소는 월간 지수 JSON에 있다.
 
+### 2016년 12월~2023년 미국 지수 월간 종가 보완 (2026년 11월 26일)
+
+- 미국 두 지수의 월초·월말 종가 수록 범위를 57개월에서 119개월로 늘려 2016년 12월부터 2026년 10월까지 모든 달을 채웠다. 2021~2023년의 미수록 24개월은 당시 보도 48건을 출처로 한다. AP 「How major US stock indexes fared」 표와 AP 마감 기사의 공개 전재본(cheddar.com, KTVZ, KVIA, KESQ, KUTV, WJLA, AJC, PBS NewsHour, American Press, Yahoo 뉴스 등), Newser의 통신 기반 기사, Zacks 시황(2023년 9월 1일)을 사용했다. 각 페이지를 다시 내려받아 두 지수 값이 본문에 있는지 확인한 뒤 등록했다.
+- 보도값 96개를 FRED [SP500](https://fred.stlouisfed.org/series/SP500)·[NASDAQCOM](https://fred.stlouisfed.org/series/NASDAQCOM) 관측과 대조한 결과 95개가 일치했다. 2021년 2월 26일 Nasdaq Composite는 AP 보도값 13,192.34로, FRED 관측값보다 0.01포인트 낮다. 해당 월에는 2020년 9·10월과 같은 방식의 안내와 두 출처가 있다. 경계 거래일은 모두 FRED의 월 첫·마지막 관측일과 같았다.
+- 2016년 12월, 2017~2019년 36개월, 2022년 5월의 38개월은 당시 보도를 확보하지 못해 FRED 관측값을 출처로 수록했다. 두 계열은 FRED에서 `copyrighted: pre-approval required`로 표시되며 S&P DJI 고지에는 사전 서면 허락 없는 재생산 금지가 적용된다. 2026년 11월 26일 FRED를 주 출처로 쓰는 방안을 검토해 운영자가 발표용으로 포함하기로 결정했고, 방법론 화면과 해당 월 화면에 이 사실을 표시한다. 이 달들은 `firstSource`·`lastSource`의 호스트가 `fred.stlouisfed.org`라는 점으로 구분할 수 있어 이후 보도 출처로 교체하거나 제외할 수 있다. 2022년 5월 2일은 CBS·Kiplinger 기사에 반올림 값만 있어 보도 출처로 채우지 못했다.
+- FRED 출처 월의 독립 대조: 2016~2019년 연말 종가로 계산한 달력 연도 가격 수익률(S&P 500 19.42%·-6.24%·28.88%, Nasdaq Composite 28.24%·-3.88%·35.23%)은 `data/market/us-annual-benchmarks.json`에 수록한 S&P DJI 연말 보고서와 Nasdaq 팩트시트의 2017~2019년 값과 소수 둘째 자리까지 일치한다. 2018년 12월 31일 종가(2,506.85·6,635.28)는 [AP 연말 마감 기사](https://www.pbs.org/newshour/economy/stock-market-suffers-worst-year-since-2008-financial-crisis)와도 일치한다.
+- FRED SP500은 최근 10년만 제공하므로(현재 2016년 11월 28일 이후) 2016년 11월 이전은 S&P 500의 보도·공식 출처가 필요하다. 같은 이유로 FRED를 출처로 한 2016년 12월~2017년의 S&P 500 값은 시간이 지나면 FRED 화면에서 사라지므로, 그때는 보관한 CSV 사본으로만 재확인할 수 있거나 보도 출처로 교체해야 한다. NASDAQCOM만 있는 달은 두 지수 쌍 계약을 지키기 위해 수록하지 않는다. 2009년~2016년 11월의 95개월과 1990~2007년은 미수록 상태로 남아 있다.
+
+```sh
+python3 scripts/market/verify_us_index_closes.py --through 2026-11-25            # 보도 출처 값과 FRED 관측 대조, 미수록 월 목록
+python3 scripts/market/collect_us_index_closes.py --through 2026-10-31           # 미수록 월만 FRED 출처로 추가 (기존 월은 유지)
+```
+
+`collect_us_index_closes.py`는 보도 출처가 있는 달을 덮어쓰지 않으며, `--overwrite fred`는 FRED 출처 월만, `--overwrite all`은 모든 달을 다시 쓴다. `--csv`로 미리 내려받은 FRED CSV를 사용할 수 있다.
+
 2024년 1~10월과 12월에 각 월 첫 거래일의 삼성자산운용의 두 ETF 보유 명세(KODEX 200·코스닥150)를 월별 시세와 대조했다. 11월 1일 명세 요청은 HTTP 429를 반환했다. 날짜를 다른 달 명세로 대체하지 않았다. 공개 데이터는 검증 범위와 사유별 건수이며 종목별 Top 10은 로컬 계산 결과에 있다. 금융위원회 주식시세 API도 제3자 권리와 재배포 제한을 명시한다. [공공데이터포털 이용 조건](https://www.data.go.kr/data/15094808/openapi.do)
 
 2024년 11월 1일의 두 운용사 엑셀 명세도 HTTP 429를 반환했다. 이와 별도로 2024년 12개월을 월초 KOSPI·KOSDAQ 시세 파일에 등장하는 전체 종목코드 기준으로 추적했다. 11월은 2,724개 중 2,560개가 통과했다. 추가 확인 대상은 일별 관측·가격 6개, 전일 종가와 기준가격 차이 21개, 상장주식수 변화 137개다. 하나의 종목에 여러 사유가 있으면 이 순서로 한 번만 집계한다. DuckDB가 설치된 환경에서 저장소 루트의 `python3 scripts/market/summarize_price_coverage.py /path/to/marcap-2024.parquet 2024`로 공개 JSON을 재현할 수 있다.

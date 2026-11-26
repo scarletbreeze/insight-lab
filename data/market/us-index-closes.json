@@ -1,4 +1,522 @@
 {
+  "2016-12": {
+    "firstDate": "2016-12-01",
+    "lastDate": "2016-12-30",
+    "first": [
+      2191.08,
+      5251.11
+    ],
+    "last": [
+      2238.83,
+      5383.12
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2016-12-01&coed=2016-12-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2016-12-30&coed=2016-12-30"
+  },
+  "2017-01": {
+    "firstDate": "2017-01-03",
+    "lastDate": "2017-01-31",
+    "first": [
+      2257.83,
+      5429.08
+    ],
+    "last": [
+      2278.87,
+      5614.79
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-01-03&coed=2017-01-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-01-31&coed=2017-01-31"
+  },
+  "2017-02": {
+    "firstDate": "2017-02-01",
+    "lastDate": "2017-02-28",
+    "first": [
+      2279.55,
+      5642.65
+    ],
+    "last": [
+      2363.64,
+      5825.44
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-02-01&coed=2017-02-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-02-28&coed=2017-02-28"
+  },
+  "2017-03": {
+    "firstDate": "2017-03-01",
+    "lastDate": "2017-03-31",
+    "first": [
+      2395.96,
+      5904.03
+    ],
+    "last": [
+      2362.72,
+      5911.74
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-03-01&coed=2017-03-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-03-31&coed=2017-03-31"
+  },
+  "2017-04": {
+    "firstDate": "2017-04-03",
+    "lastDate": "2017-04-28",
+    "first": [
+      2358.84,
+      5894.68
+    ],
+    "last": [
+      2384.2,
+      6047.61
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-04-03&coed=2017-04-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-04-28&coed=2017-04-28"
+  },
+  "2017-05": {
+    "firstDate": "2017-05-01",
+    "lastDate": "2017-05-31",
+    "first": [
+      2388.33,
+      6091.6
+    ],
+    "last": [
+      2411.8,
+      6198.52
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-05-01&coed=2017-05-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-05-31&coed=2017-05-31"
+  },
+  "2017-06": {
+    "firstDate": "2017-06-01",
+    "lastDate": "2017-06-30",
+    "first": [
+      2430.06,
+      6246.83
+    ],
+    "last": [
+      2423.41,
+      6140.42
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-06-01&coed=2017-06-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-06-30&coed=2017-06-30"
+  },
+  "2017-07": {
+    "firstDate": "2017-07-03",
+    "lastDate": "2017-07-31",
+    "first": [
+      2429.01,
+      6110.06
+    ],
+    "last": [
+      2470.3,
+      6348.12
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-07-03&coed=2017-07-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-07-31&coed=2017-07-31"
+  },
+  "2017-08": {
+    "firstDate": "2017-08-01",
+    "lastDate": "2017-08-31",
+    "first": [
+      2476.35,
+      6362.94
+    ],
+    "last": [
+      2471.65,
+      6428.66
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-08-01&coed=2017-08-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-08-31&coed=2017-08-31"
+  },
+  "2017-09": {
+    "firstDate": "2017-09-01",
+    "lastDate": "2017-09-29",
+    "first": [
+      2476.55,
+      6435.33
+    ],
+    "last": [
+      2519.36,
+      6495.96
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-09-01&coed=2017-09-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-09-29&coed=2017-09-29"
+  },
+  "2017-10": {
+    "firstDate": "2017-10-02",
+    "lastDate": "2017-10-31",
+    "first": [
+      2529.12,
+      6516.72
+    ],
+    "last": [
+      2575.26,
+      6727.67
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-10-02&coed=2017-10-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-10-31&coed=2017-10-31"
+  },
+  "2017-11": {
+    "firstDate": "2017-11-01",
+    "lastDate": "2017-11-30",
+    "first": [
+      2579.36,
+      6716.53
+    ],
+    "last": [
+      2647.58,
+      6873.97
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-11-01&coed=2017-11-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-11-30&coed=2017-11-30"
+  },
+  "2017-12": {
+    "firstDate": "2017-12-01",
+    "lastDate": "2017-12-29",
+    "first": [
+      2642.22,
+      6847.59
+    ],
+    "last": [
+      2673.61,
+      6903.39
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-12-01&coed=2017-12-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2017-12-29&coed=2017-12-29"
+  },
+  "2018-01": {
+    "firstDate": "2018-01-02",
+    "lastDate": "2018-01-31",
+    "first": [
+      2695.81,
+      7006.9
+    ],
+    "last": [
+      2823.81,
+      7411.48
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-01-02&coed=2018-01-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-01-31&coed=2018-01-31"
+  },
+  "2018-02": {
+    "firstDate": "2018-02-01",
+    "lastDate": "2018-02-28",
+    "first": [
+      2821.98,
+      7385.86
+    ],
+    "last": [
+      2713.83,
+      7273.01
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-02-01&coed=2018-02-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-02-28&coed=2018-02-28"
+  },
+  "2018-03": {
+    "firstDate": "2018-03-01",
+    "lastDate": "2018-03-29",
+    "first": [
+      2677.67,
+      7180.56
+    ],
+    "last": [
+      2640.87,
+      7063.44
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-03-01&coed=2018-03-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-03-29&coed=2018-03-29"
+  },
+  "2018-04": {
+    "firstDate": "2018-04-02",
+    "lastDate": "2018-04-30",
+    "first": [
+      2581.88,
+      6870.12
+    ],
+    "last": [
+      2648.05,
+      7066.27
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-04-02&coed=2018-04-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-04-30&coed=2018-04-30"
+  },
+  "2018-05": {
+    "firstDate": "2018-05-01",
+    "lastDate": "2018-05-31",
+    "first": [
+      2654.8,
+      7130.7
+    ],
+    "last": [
+      2705.27,
+      7442.12
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-05-01&coed=2018-05-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-05-31&coed=2018-05-31"
+  },
+  "2018-06": {
+    "firstDate": "2018-06-01",
+    "lastDate": "2018-06-29",
+    "first": [
+      2734.62,
+      7554.33
+    ],
+    "last": [
+      2718.37,
+      7510.3
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-06-01&coed=2018-06-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-06-29&coed=2018-06-29"
+  },
+  "2018-07": {
+    "firstDate": "2018-07-02",
+    "lastDate": "2018-07-31",
+    "first": [
+      2726.71,
+      7567.69
+    ],
+    "last": [
+      2816.29,
+      7671.79
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-07-02&coed=2018-07-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-07-31&coed=2018-07-31"
+  },
+  "2018-08": {
+    "firstDate": "2018-08-01",
+    "lastDate": "2018-08-31",
+    "first": [
+      2813.36,
+      7707.29
+    ],
+    "last": [
+      2901.52,
+      8109.54
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-08-01&coed=2018-08-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-08-31&coed=2018-08-31"
+  },
+  "2018-09": {
+    "firstDate": "2018-09-04",
+    "lastDate": "2018-09-28",
+    "first": [
+      2896.72,
+      8091.25
+    ],
+    "last": [
+      2913.98,
+      8046.35
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-09-04&coed=2018-09-04",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-09-28&coed=2018-09-28"
+  },
+  "2018-10": {
+    "firstDate": "2018-10-01",
+    "lastDate": "2018-10-31",
+    "first": [
+      2924.59,
+      8037.3
+    ],
+    "last": [
+      2711.74,
+      7305.9
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-10-01&coed=2018-10-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-10-31&coed=2018-10-31"
+  },
+  "2018-11": {
+    "firstDate": "2018-11-01",
+    "lastDate": "2018-11-30",
+    "first": [
+      2740.37,
+      7434.06
+    ],
+    "last": [
+      2760.17,
+      7330.54
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-11-01&coed=2018-11-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-11-30&coed=2018-11-30"
+  },
+  "2018-12": {
+    "firstDate": "2018-12-03",
+    "lastDate": "2018-12-31",
+    "first": [
+      2790.37,
+      7441.51
+    ],
+    "last": [
+      2506.85,
+      6635.28
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-12-03&coed=2018-12-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2018-12-31&coed=2018-12-31"
+  },
+  "2019-01": {
+    "firstDate": "2019-01-02",
+    "lastDate": "2019-01-31",
+    "first": [
+      2510.03,
+      6665.94
+    ],
+    "last": [
+      2704.1,
+      7281.74
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-01-02&coed=2019-01-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-01-31&coed=2019-01-31"
+  },
+  "2019-02": {
+    "firstDate": "2019-02-01",
+    "lastDate": "2019-02-28",
+    "first": [
+      2706.53,
+      7263.87
+    ],
+    "last": [
+      2784.49,
+      7532.53
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-02-01&coed=2019-02-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-02-28&coed=2019-02-28"
+  },
+  "2019-03": {
+    "firstDate": "2019-03-01",
+    "lastDate": "2019-03-29",
+    "first": [
+      2803.69,
+      7595.35
+    ],
+    "last": [
+      2834.4,
+      7729.32
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-03-01&coed=2019-03-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-03-29&coed=2019-03-29"
+  },
+  "2019-04": {
+    "firstDate": "2019-04-01",
+    "lastDate": "2019-04-30",
+    "first": [
+      2867.19,
+      7828.91
+    ],
+    "last": [
+      2945.83,
+      8095.39
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-04-01&coed=2019-04-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-04-30&coed=2019-04-30"
+  },
+  "2019-05": {
+    "firstDate": "2019-05-01",
+    "lastDate": "2019-05-31",
+    "first": [
+      2923.73,
+      8049.64
+    ],
+    "last": [
+      2752.06,
+      7453.15
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-05-01&coed=2019-05-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-05-31&coed=2019-05-31"
+  },
+  "2019-06": {
+    "firstDate": "2019-06-03",
+    "lastDate": "2019-06-28",
+    "first": [
+      2744.45,
+      7333.02
+    ],
+    "last": [
+      2941.76,
+      8006.24
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-06-03&coed=2019-06-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-06-28&coed=2019-06-28"
+  },
+  "2019-07": {
+    "firstDate": "2019-07-01",
+    "lastDate": "2019-07-31",
+    "first": [
+      2964.33,
+      8091.16
+    ],
+    "last": [
+      2980.38,
+      8175.42
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-07-01&coed=2019-07-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-07-31&coed=2019-07-31"
+  },
+  "2019-08": {
+    "firstDate": "2019-08-01",
+    "lastDate": "2019-08-30",
+    "first": [
+      2953.56,
+      8111.12
+    ],
+    "last": [
+      2926.46,
+      7962.88
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-08-01&coed=2019-08-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-08-30&coed=2019-08-30"
+  },
+  "2019-09": {
+    "firstDate": "2019-09-03",
+    "lastDate": "2019-09-30",
+    "first": [
+      2906.27,
+      7874.16
+    ],
+    "last": [
+      2976.74,
+      7999.33
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-09-03&coed=2019-09-03",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-09-30&coed=2019-09-30"
+  },
+  "2019-10": {
+    "firstDate": "2019-10-01",
+    "lastDate": "2019-10-31",
+    "first": [
+      2940.25,
+      7908.67
+    ],
+    "last": [
+      3037.56,
+      8292.36
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-10-01&coed=2019-10-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-10-31&coed=2019-10-31"
+  },
+  "2019-11": {
+    "firstDate": "2019-11-01",
+    "lastDate": "2019-11-29",
+    "first": [
+      3066.91,
+      8386.4
+    ],
+    "last": [
+      3140.98,
+      8665.47
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-11-01&coed=2019-11-01",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-11-29&coed=2019-11-29"
+  },
+  "2019-12": {
+    "firstDate": "2019-12-02",
+    "lastDate": "2019-12-31",
+    "first": [
+      3113.87,
+      8567.99
+    ],
+    "last": [
+      3230.78,
+      8972.6
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-12-02&coed=2019-12-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2019-12-31&coed=2019-12-31"
+  },
   "2020-01": {
     "firstDate": "2020-01-02",
     "lastDate": "2020-01-31",
@@ -175,6 +693,150 @@
     "firstSource": "https://vancouver.citynews.ca/2020/12/01/how-major-us-stock-indexes-fared-tuesday-98/",
     "lastSource": "https://vancouver.citynews.ca/2020/12/31/how-major-us-stock-indexes-fared-thursday-97/"
   },
+  "2021-01": {
+    "firstDate": "2021-01-04",
+    "lastDate": "2021-01-29",
+    "first": [
+      3700.65,
+      12698.45
+    ],
+    "last": [
+      3714.24,
+      13070.69
+    ],
+    "firstSource": "https://wjla.com/news/nation-world/stocks-fall-as-trading-starts-for-year-of-great-expectations",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-1-29-2021"
+  },
+  "2021-02": {
+    "firstDate": "2021-02-01",
+    "lastDate": "2021-02-26",
+    "first": [
+      3773.86,
+      13403.39
+    ],
+    "last": [
+      3811.15,
+      13192.34
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-2-1-2021",
+    "lastSource": "https://americanpress.com/?p=4700",
+    "sourceNote": {
+      "text": "2월 26일 Nasdaq Composite는 AP가 장 마감 직후 보도한 종가를 사용했습니다. Nasdaq이 FRED에 제공한 값은 이보다 0.01포인트 높습니다.",
+      "url": "https://fred.stlouisfed.org/graph/?id=NASDAQCOM&cosd=2021-02-26&coed=2021-02-26"
+    }
+  },
+  "2021-03": {
+    "firstDate": "2021-03-01",
+    "lastDate": "2021-03-31",
+    "first": [
+      3901.82,
+      13588.83
+    ],
+    "last": [
+      3972.89,
+      13246.87
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-3-1-2021",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-3-31-2021"
+  },
+  "2021-04": {
+    "firstDate": "2021-04-01",
+    "lastDate": "2021-04-30",
+    "first": [
+      4019.87,
+      13480.11
+    ],
+    "last": [
+      4181.17,
+      13962.68
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-4-1-2021",
+    "lastSource": "https://www.ajc.com/news/nation-world/slow-start-for-wall-street-as-stocks-seek-3rd-straight-monthly-gain/VMCIHKKYPFEFLPRD5SSN3PRKAA"
+  },
+  "2021-05": {
+    "firstDate": "2021-05-03",
+    "lastDate": "2021-05-28",
+    "first": [
+      4192.66,
+      13895.12
+    ],
+    "last": [
+      4204.11,
+      13748.74
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-5-3-2021",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-5-28-2021"
+  },
+  "2021-06": {
+    "firstDate": "2021-06-01",
+    "lastDate": "2021-06-30",
+    "first": [
+      4202.04,
+      13736.48
+    ],
+    "last": [
+      4297.5,
+      14503.95
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-6-1-2021",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-june-30-2021"
+  },
+  "2021-07": {
+    "firstDate": "2021-07-01",
+    "lastDate": "2021-07-30",
+    "first": [
+      4319.94,
+      14522.38
+    ],
+    "last": [
+      4395.26,
+      14672.68
+    ],
+    "firstSource": "https://americanpress.com/?p=217310",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-7-30-2021"
+  },
+  "2021-08": {
+    "firstDate": "2021-08-02",
+    "lastDate": "2021-08-31",
+    "first": [
+      4387.16,
+      14681.07
+    ],
+    "last": [
+      4522.68,
+      15259.24
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-8-2-2021",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-8-31-2021"
+  },
+  "2021-09": {
+    "firstDate": "2021-09-01",
+    "lastDate": "2021-09-30",
+    "first": [
+      4524.09,
+      15309.38
+    ],
+    "last": [
+      4307.54,
+      14448.58
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-9-1-2021",
+    "lastSource": "https://cheddar.com/media/stocks-stock-markets-9-30-2021"
+  },
+  "2021-10": {
+    "firstDate": "2021-10-01",
+    "lastDate": "2021-10-29",
+    "first": [
+      4357.04,
+      14566.7
+    ],
+    "last": [
+      4605.38,
+      15498.39
+    ],
+    "firstSource": "https://www.clickorlando.com/business/2021/10/01/world-shares-skid-after-sp-500-logs-1st-monthly-drop-of-21/",
+    "lastSource": "https://www.cheddar.com/media/stocks-stock-markets-10-29-2021"
+  },
   "2021-11": {
     "firstDate": "2021-11-01",
     "lastDate": "2021-11-30",
@@ -188,6 +850,48 @@
     ],
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1635804797659.pdf&makeDt=2021.11.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1638311220538.pdf&makeDt=2021.12.01&rMenuGb=SD"
+  },
+  "2021-12": {
+    "firstDate": "2021-12-01",
+    "lastDate": "2021-12-31",
+    "first": [
+      4513.04,
+      15254.05
+    ],
+    "last": [
+      4766.18,
+      15644.97
+    ],
+    "firstSource": "https://cheddar.com/media/stocks-stock-markets-12-01-2021",
+    "lastSource": "https://www.pbs.org/newshour/economy/stocks-notch-big-yearly-gain-despite-ending-2021-on-a-weak-note"
+  },
+  "2022-01": {
+    "firstDate": "2022-01-03",
+    "lastDate": "2022-01-31",
+    "first": [
+      4796.56,
+      15832.8
+    ],
+    "last": [
+      4515.55,
+      14239.88
+    ],
+    "firstSource": "https://www.newser.com/story/315220/wall-street-starts-2022-with-record-highs.html",
+    "lastSource": "https://www.cheddar.com/media/stocks-stock-markets-01-31-2022"
+  },
+  "2022-02": {
+    "firstDate": "2022-02-01",
+    "lastDate": "2022-02-28",
+    "first": [
+      4546.54,
+      14346.0
+    ],
+    "last": [
+      4373.94,
+      13751.4
+    ],
+    "firstSource": "https://www.cheddar.com/media/stocks-stock-markets-02-01-2022",
+    "lastSource": "https://www.cheddar.com/media/stocks-stock-markets-02-28-2022"
   },
   "2022-03": {
     "firstDate": "2022-03-01",
@@ -203,6 +907,34 @@
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1646173990384.pdf&makeDt=2022.03.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1648765357519.pdf&makeDt=2022.04.01&rMenuGb=SD"
   },
+  "2022-04": {
+    "firstDate": "2022-04-01",
+    "lastDate": "2022-04-29",
+    "first": [
+      4545.86,
+      14261.5
+    ],
+    "last": [
+      4131.93,
+      12334.64
+    ],
+    "firstSource": "https://www.cheddar.com/media/stocks-stock-markets-04-01-2022",
+    "lastSource": "https://ktvz.com/news/2022/04/29/how-major-us-stock-indexes-fared-friday-36/"
+  },
+  "2022-05": {
+    "firstDate": "2022-05-02",
+    "lastDate": "2022-05-31",
+    "first": [
+      4155.38,
+      12536.02
+    ],
+    "last": [
+      4132.15,
+      12081.39
+    ],
+    "firstSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2022-05-02&coed=2022-05-02",
+    "lastSource": "https://fred.stlouisfed.org/graph/?id=SP500%2CNASDAQCOM&cosd=2022-05-31&coed=2022-05-31"
+  },
   "2022-06": {
     "firstDate": "2022-06-01",
     "lastDate": "2022-06-30",
@@ -217,6 +949,20 @@
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1654122459112.pdf&makeDt=2022.06.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1656628199763.pdf&makeDt=2022.07.01&rMenuGb=SD"
   },
+  "2022-07": {
+    "firstDate": "2022-07-01",
+    "lastDate": "2022-07-29",
+    "first": [
+      3825.33,
+      11127.85
+    ],
+    "last": [
+      4130.29,
+      12390.69
+    ],
+    "firstSource": "https://kutv.com/news/nation-world/wall-street-closes-higher-but-still-ends-week-in-the-red",
+    "lastSource": "https://kvia.com/?p=1013820"
+  },
   "2022-08": {
     "firstDate": "2022-08-01",
     "lastDate": "2022-08-31",
@@ -230,6 +976,20 @@
     ],
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1659392772546.pdf&makeDt=2022.08.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1661985047517.pdf&makeDt=2022.09.01&rMenuGb=SD"
+  },
+  "2022-09": {
+    "firstDate": "2022-09-01",
+    "lastDate": "2022-09-30",
+    "first": [
+      3966.85,
+      11785.13
+    ],
+    "last": [
+      3585.62,
+      10575.62
+    ],
+    "firstSource": "https://ktvz.com/news/2022/09/01/how-major-us-stock-indexes-fared-thursday-9-1-2022/",
+    "lastSource": "https://ktvz.com/news/ap-national-business/2022/09/30/how-major-us-stock-indexes-fared-friday-9-30-2022/"
   },
   "2022-10": {
     "firstDate": "2022-10-03",
@@ -259,6 +1019,20 @@
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1667341343085.pdf&makeDt=2022.11.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1669847208696.pdf&makeDt=2022.12.01&rMenuGb=SD"
   },
+  "2022-12": {
+    "firstDate": "2022-12-01",
+    "lastDate": "2022-12-30",
+    "first": [
+      4076.57,
+      11482.45
+    ],
+    "last": [
+      3839.5,
+      10466.48
+    ],
+    "firstSource": "https://ktvz.com/news/ap-national-business/2022/12/01/how-major-us-stock-indexes-fared-thursday-12-1-2022/",
+    "lastSource": "https://wjla.com/news/nation-world/us-stock-market-sp-500-worst-year-dow-jones-industrial-companies-wall-street-new-york-exchange-average-nasdaq-firms-investments-southwest-airlines-unemployment"
+  },
   "2023-01": {
     "firstDate": "2023-01-03",
     "lastDate": "2023-01-31",
@@ -273,6 +1047,48 @@
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1672785008095.pdf&makeDt=2023.01.04&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1675204814233.pdf&makeDt=2023.02.01&rMenuGb=SD"
   },
+  "2023-02": {
+    "firstDate": "2023-02-01",
+    "lastDate": "2023-02-28",
+    "first": [
+      4119.21,
+      11816.32
+    ],
+    "last": [
+      3970.15,
+      11455.54
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-213006376.html",
+    "lastSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-211759219.html"
+  },
+  "2023-03": {
+    "firstDate": "2023-03-01",
+    "lastDate": "2023-03-31",
+    "first": [
+      3951.39,
+      11379.48
+    ],
+    "last": [
+      4109.31,
+      12221.91
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-212212490.html",
+    "lastSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-204903093.html"
+  },
+  "2023-04": {
+    "firstDate": "2023-04-03",
+    "lastDate": "2023-04-28",
+    "first": [
+      4124.51,
+      12189.45
+    ],
+    "last": [
+      4169.48,
+      12226.58
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-201831965.html",
+    "lastSource": "https://kesq.com/?p=1161011"
+  },
   "2023-05": {
     "firstDate": "2023-05-01",
     "lastDate": "2023-05-31",
@@ -286,6 +1102,20 @@
     ],
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1682980551030.pdf&makeDt=2023.05.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1685572039917.pdf&makeDt=2023.06.01&rMenuGb=SD"
+  },
+  "2023-06": {
+    "firstDate": "2023-06-01",
+    "lastDate": "2023-06-30",
+    "first": [
+      4221.02,
+      13100.98
+    ],
+    "last": [
+      4450.38,
+      13787.92
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-201554586.html",
+    "lastSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-202240835.html"
   },
   "2023-07": {
     "firstDate": "2023-07-03",
@@ -315,6 +1145,34 @@
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1690929018237.pdf&makeDt=2023.08.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1693521344137.pdf&makeDt=2023.09.01&rMenuGb=SD"
   },
+  "2023-09": {
+    "firstDate": "2023-09-01",
+    "lastDate": "2023-09-29",
+    "first": [
+      4515.77,
+      14031.81
+    ],
+    "last": [
+      4288.05,
+      13219.32
+    ],
+    "firstSource": "https://www.zacks.com/stock/news/2144722/stock-market-news-for-sep-5-2023",
+    "lastSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-201828880.html"
+  },
+  "2023-10": {
+    "firstDate": "2023-10-02",
+    "lastDate": "2023-10-31",
+    "first": [
+      4288.39,
+      13307.77
+    ],
+    "last": [
+      4193.8,
+      12851.24
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-211412902.html",
+    "lastSource": "https://ca.news.yahoo.com/major-us-stock-indexes-fared-205528945.html"
+  },
   "2023-11": {
     "firstDate": "2023-11-01",
     "lastDate": "2023-11-30",
@@ -328,6 +1186,20 @@
     ],
     "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1698878164470.pdf&makeDt=2023.11.02&rMenuGb=SD",
     "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1701384432020.pdf&makeDt=2023.12.01&rMenuGb=SD"
+  },
+  "2023-12": {
+    "firstDate": "2023-12-01",
+    "lastDate": "2023-12-29",
+    "first": [
+      4594.63,
+      14305.03
+    ],
+    "last": [
+      4769.83,
+      15011.35
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-214527565.html",
+    "lastSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-211746026.html"
   },
   "2024-01": {
     "firstDate": "2024-01-02",

@@ -1,4 +1,6 @@
-"""Check internal navigation and search results against the generated Pages site."""
+"""Check internal navigation and search results against the generated Pages site.
+
+Usage: python3 scripts/check_site_links.py [BUILD_DIR]  (default: dist)"""
 import json
 import os
 import sys
@@ -22,7 +24,9 @@ class Page(HTMLParser):
 
 
 def main():
-    root = Path("dist")
+    root = Path(sys.argv[1] if len(sys.argv) > 1 else "dist")
+    if not root.is_dir():
+        sys.exit(f"build directory not found: {root}")
     configured = os.environ.get("INSIGHT_LAB_BASE_PATH") or "/insight-lab/"
     base = "/" + configured.strip("/") + "/" if configured.strip("/") else "/"
     pages = {}

@@ -23,6 +23,12 @@ export const koreaAnnualCloses: Record<string, (number | null)[] | undefined> = 
 export const koreaMonthlyCloses: Record<string, IndexMonthCloses | undefined> = koreaIndexData.monthly;
 export const usMonthlyCloses: Record<string, IndexMonthCloses | undefined> = usIndexData;
 
+/** FRED-sourced US months carry the FRED observation URL on both boundaries; news-sourced months do not. */
+export function isFredSourced(closes: IndexMonthCloses | undefined) {
+  return [closes?.firstSource, closes?.lastSource].every((url) => url && new URL(url).hostname === 'fred.stlouisfed.org');
+}
+export const usFredMonthCount = Object.values(usMonthlyCloses).filter(isFredSourced).length;
+
 export function koreaAnnualSource(year: number) {
   const { earlierSources, historySource, latestSource } = koreaIndexData.annual;
   return earlierSources.find(({ through }) => year <= through)?.url ?? (year === 2025 ? latestSource : historySource);
