@@ -1,0 +1,17 @@
+{
+  "2024": {
+    "eligibleCount": 216,
+    "universeCount": 350,
+    "membershipSourceUrls": [
+      "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.01.02",
+      "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.01.02"
+    ],
+    "exclusions": {
+      "관측 누락·중복 또는 가격 확인 필요": 3,
+      "상장주식수 변경 확인": 108,
+      "전일 종가와 기준가격 차이 확인": 23
+    },
+    "firstDate": "2024-01-02",
+    "lastDate": "2024-12-30"
+  }
+}

@@ -1,5 +1,6 @@
 ---
 import data from '../../../data/market/annual-equity-rankings.json';
+import krCoverage from '../../../data/market/kr-annual-price-coverage.json';
 import spyData from '../../../data/market/annual-spy-equity-rankings.json';
 import { sitePath } from '../../utils/paths';
 
@@ -29,6 +30,7 @@ interface Summary {
 type Market = 'KR' | 'US';
 interface Props { year: number; }
 const { year } = Astro.props;
+const checked = krCoverage[String(year) as keyof typeof krCoverage];
 const summaries = (data as Record<string, Partial<Record<Market, Summary>>>)[String(year)];
 const spy = (spyData as Record<string, { US: Summary }>)[String(year)]?.US;
 const comparisons: Array<[string, Summary | undefined]> = [['한국', summaries?.KR], ['미국 · QQQ', summaries?.US]];
@@ -37,7 +39,7 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
 ---
 <section class="lab-block" id="annual-equity">
   <h2>연간 종목 수익률</h2>
-  {summaries || spy ? <div class="lab-grid">
+  {summaries || spy || checked ? <div class="lab-grid">
     {comparisons.map(([label, summary]) => {
       return <article class="lab-card">
         <h3>{label}</h3>
@@ -62,6 +64,14 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
               </div>
             ))}
           </dl>
+        </> : label === '한국' && checked ? <>
+          <p>{checked.firstDate}~{checked.lastDate} · 연초 ETF 보유 주식 {checked.universeCount}개 중 {checked.eligibleCount}개가 연간 일별 시세 검사를 통과했습니다.</p>
+          <p>기간 중 전일 종가와 기준가격이 이어지고 상장주식수가 일정한 종목을 집계했습니다. 추가 확인 대상에는 연중 상장폐지나 기업행동이 발생한 종목이 포함될 수 있어, 결과를 전체 시장으로 확대해 해석하기 어렵습니다.</p>
+          <details><summary>추가 확인 대상 {checked.universeCount - checked.eligibleCount}개</summary>
+            <ul>{Object.entries(checked.exclusions).map(([reason,count]) => <li>{reason} · {count}개</li>)}</ul>
+          </details>
+          <p>연초 보유 명세 · <a href={checked.membershipSourceUrls[0]}>KODEX 200</a> · <a href={checked.membershipSourceUrls[1]}>KODEX 코스닥150</a></p>
+          <p>개별 종목 순위는 공개 이용 조건을 확인 중입니다. <a href="https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA003.jsp">KRX 정보이용 안내</a></p>
         </> : <p>자료 확인 중</p>}
       </article>;
     })}

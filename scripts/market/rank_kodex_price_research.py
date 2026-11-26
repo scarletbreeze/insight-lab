@@ -78,6 +78,7 @@ def main():
     parser.add_argument("kodex150", type=Path)
     parser.add_argument("--first", required=True, type=date.fromisoformat)
     parser.add_argument("--last", required=True, type=date.fromisoformat)
+    parser.add_argument("--annual", action="store_true", help="Compute calendar-year highlights from opening holdings.")
     parser.add_argument("--out", required=True, type=Path)
     args = parser.parse_args()
     try:
@@ -85,6 +86,13 @@ def main():
     except ImportError:
         parser.error("Install duckdb to read the local Parquet file.")
 
+    if args.annual:
+        calendar_path = Path(__file__).resolve().parents[2] / "data/market/korea-index-closes.json"
+        months = json.loads(calendar_path.read_text(encoding="utf-8"))["monthly"]
+        opening = months.get(f"{args.first.year}-01", {}).get("firstDate")
+        closing = months.get(f"{args.first.year}-12", {}).get("lastDate")
+        if (str(args.first), str(args.last)) != (opening, closing):
+            parser.error("Annual results require the verified first and last trading days of the year.")
     holdings = read_holdings((args.kodex200, args.kodex150), args.first)
     with duckdb.connect() as db:
         prices = check_prices(db, args.parquet, holdings, args.first, args.last)
@@ -106,7 +114,7 @@ def main():
                 "membership_source_urls": json.dumps(membership_urls), "exclusion_reason": reason,
             })
         temporary.flush()
-        rankings = rank_periods(Path(temporary.name))
+        rankings = rank_periods(Path(temporary.name), annual=args.annual)
     for markets in rankings.values():
         markets["KR"]["priceMethod"] = (
             "전일 종가와 당일 기준가격이 매 거래일 일치하고 상장주식수가 일정한 종목의 첫·마지막 종가를 비교했습니다."
