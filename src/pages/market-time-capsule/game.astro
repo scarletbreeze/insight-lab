@@ -4,20 +4,14 @@ import { sitePath } from '../../utils/paths';
 import ReturnerGame from '../../components/market/ReturnerGame';
 import korea from '../../../data/market/korea-index-closes.json';
 import snapshots from '../../../data/market/months/snapshots.json';
-const period = '2020-03';
-const indices = korea.monthly[period];
-const dollar = snapshots.months[period].DEXKOUS;
-const firstDate = indices.firstDate;
-const lastDate = indices.lastDate;
-if (dollar.firstDate !== firstDate || dollar.lastDate !== lastDate) {
-  throw new Error('Returner asset scenario requires the same dates for all assets.');
-}
-const assets = {
-  period,
-  firstDate,
-  lastDate,
-  multiples: [1, dollar.last / dollar.first, indices.last[0] / indices.first[0], indices.last[1] / indices.first[1]],
-};
+const assets = Object.entries(korea.monthly).flatMap(([period, indices]) => {
+  const observations = snapshots.months[period as keyof typeof snapshots.months];
+  const dollar = observations && 'DEXKOUS' in observations ? observations.DEXKOUS : undefined;
+  if (!dollar || dollar.firstDate !== indices.firstDate || dollar.lastDate !== indices.lastDate) return [];
+  const multiples = [1, dollar.last / dollar.first, ...indices.last.map((last, i) => last / indices.first[i])];
+  if (!multiples.every((value) => Number.isFinite(value) && value > 0)) return [];
+  return [{ period, firstDate: indices.firstDate, lastDate: indices.lastDate, multiples }];
+}).sort((left, right) => left.period.localeCompare(right.period));
 ---
 <MarketLayout title="Returner Mode">
   <p slot="intro">시장 사건, 자산 선택과 종목 수익률을 묻는 10문제입니다. 마지막 문제를 풀면 정답과 출처가 나옵니다.</p>

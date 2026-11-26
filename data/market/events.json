@@ -298,6 +298,14 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "2000-02-10",
+    "title": "한국은행, 콜금리 목표 5.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.75%에서 5.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2000-03",
     "title": "주식 장외거래 제3시장 개장",
     "category": "시장",
@@ -322,6 +330,14 @@
     "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/General/2000/20000516/default.htm"
   },
   {
+    "date": "2000-10-05",
+    "title": "한국은행, 콜금리 목표 5.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.00%에서 5.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2001-01",
     "title": "코스닥50 선물 상장",
     "category": "시장",
@@ -330,12 +346,36 @@
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
   },
   {
+    "date": "2001-02-08",
+    "title": "한국은행, 콜금리 목표 5.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.25%에서 5.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2001-03",
     "title": "미국 경기 정점",
     "category": "거시경제",
     "summary": "NBER는 2001년 3월을 경기 정점으로 분류합니다.",
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  {
+    "date": "2001-07-05",
+    "title": "한국은행, 콜금리 목표 4.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.00%에서 4.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2001-08-09",
+    "title": "한국은행, 콜금리 목표 4.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.75%에서 4.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2001-08-23",
@@ -352,6 +392,14 @@
     "summary": "미 연준 역사자료에 따르면 9·11 이후 결제 차질이 이어지면서 9월 12일 할인창구 대출이 약 460억 달러에 이르렀습니다.",
     "sourceName": "미 연준 9·11 금융시장 대응 기록",
     "sourceUrl": "https://www.federalreservehistory.org/essays/september-11"
+  },
+  {
+    "date": "2001-09-19",
+    "title": "한국은행, 콜금리 목표 4.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.50%에서 4.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2001-11",
@@ -388,6 +436,14 @@
     "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/stockMarket.do"
   },
   {
+    "date": "2002-05-07",
+    "title": "한국은행, 콜금리 목표 4.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 4.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2002-07-30",
     "title": "미국 사베인스·옥슬리법 제정",
     "category": "제도",
@@ -412,6 +468,14 @@
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
   },
   {
+    "date": "2003-05-13",
+    "title": "한국은행, 콜금리 목표 4.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.25%에서 4.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2003-06-25",
     "title": "미 연준, 금리 목표 1.00%로 인하",
     "category": "통화정책",
@@ -420,12 +484,36 @@
     "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030625/default.htm"
   },
   {
+    "date": "2003-07-10",
+    "title": "한국은행, 콜금리 목표 3.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 3.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2004-06-30",
     "title": "미 연준, 금리 목표 1.25%로 인상",
     "category": "통화정책",
     "summary": "FOMC는 연방기금금리 목표를 0.25%p 올렸습니다.",
     "sourceName": "미 연준 2004년 6월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2004/20040630/default.htm"
+  },
+  {
+    "date": "2004-08-10",
+    "title": "미국 연방기금금리 목표 1.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
+  },
+  {
+    "date": "2004-08-12",
+    "title": "한국은행, 콜금리 목표 3.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.75%에서 3.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2004-08-18",
@@ -437,12 +525,44 @@
     "then": "당시 공모 가격과 공모 주식 수를 투자설명서에서 확인할 수 있었습니다."
   },
   {
+    "date": "2004-09-21",
+    "title": "미국 연방기금금리 목표 1.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
+  },
+  {
+    "date": "2004-11-10",
+    "title": "미국 연방기금금리 목표 2.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
+  },
+  {
+    "date": "2004-11-11",
+    "title": "한국은행, 콜금리 목표 3.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.50%에서 3.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2004-12",
     "title": "재정경제부, 증권산업 규제완화 방안 발표",
     "category": "제도",
     "summary": "재정경제부가 증권산업의 규제를 완화하는 방안을 내놓았습니다.",
     "sourceName": "KIND 공시의 국내 증권시장 연혁",
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  {
+    "date": "2004-12-14",
+    "title": "미국 연방기금금리 목표 2.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
   },
   {
     "date": "2005-01-27",
@@ -453,6 +573,70 @@
     "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/eng_brochure1.pdf"
   },
   {
+    "date": "2005-02-02",
+    "title": "미국 연방기금금리 목표 2.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-03-22",
+    "title": "미국 연방기금금리 목표 2.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-05-03",
+    "title": "미국 연방기금금리 목표 3.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-06-30",
+    "title": "미국 연방기금금리 목표 3.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-08-09",
+    "title": "미국 연방기금금리 목표 3.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-09-20",
+    "title": "미국 연방기금금리 목표 3.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2005-10-11",
+    "title": "한국은행, 콜금리 목표 3.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.25%에서 3.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2005-11-01",
+    "title": "미국 연방기금금리 목표 4.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
     "date": "2005-12",
     "title": "주식워런트증권 시장 개설",
     "category": "시장",
@@ -461,12 +645,76 @@
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
   },
   {
+    "date": "2005-12-08",
+    "title": "한국은행, 콜금리 목표 3.75%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.50%에서 3.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2005-12-13",
+    "title": "미국 연방기금금리 목표 4.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  {
+    "date": "2006-01-31",
+    "title": "미국 연방기금금리 목표 4.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  {
+    "date": "2006-02-09",
+    "title": "한국은행, 콜금리 목표 4.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.75%에서 4.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2006-03-28",
+    "title": "미국 연방기금금리 목표 4.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  {
+    "date": "2006-05-10",
+    "title": "미국 연방기금금리 목표 5.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 5.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  {
+    "date": "2006-06-08",
+    "title": "한국은행, 콜금리 목표 4.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 4.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2006-06-29",
     "title": "미 연준, 금리 목표 5.25%로 인상",
     "category": "통화정책",
     "summary": "FOMC는 연방기금금리 목표를 0.25%p 올렸습니다.",
     "sourceName": "미 연준 2006년 6월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20060629a.htm"
+  },
+  {
+    "date": "2006-08-10",
+    "title": "한국은행, 콜금리 목표 4.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.25%에서 4.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2007-01-09",
@@ -478,6 +726,22 @@
     "then": "미국 출시 예정 시점은 같은 해 6월로 발표됐습니다."
   },
   {
+    "date": "2007-07-12",
+    "title": "한국은행, 콜금리 목표 4.75%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.50%에서 4.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2007-08-09",
+    "title": "한국은행, 콜금리 목표 5.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.75%에서 5.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2007-08-17",
     "title": "미 연준, 은행 단기 대출금리 인하 승인",
     "category": "통화정책",
@@ -486,12 +750,36 @@
     "sourceUrl": "https://www.federalreserve.gov/boarddocs/rptcongress/annual07/sec3/c1.htm"
   },
   {
+    "date": "2007-09-18",
+    "title": "미국 연방기금금리 목표 4.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75%입니다. 변경 폭은 50bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2007"
+  },
+  {
+    "date": "2007-10-31",
+    "title": "미국 연방기금금리 목표 4.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2007"
+  },
+  {
     "date": "2007-12",
     "title": "미국 경기 정점",
     "category": "거시경제",
     "summary": "NBER 연표에서 2007년 12월은 2009년 6월 저점에 앞선 경기 정점입니다.",
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  {
+    "date": "2007-12-11",
+    "title": "미국 연방기금금리 목표 4.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.25%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2007"
   },
   {
     "date": "2007-12-12",
@@ -510,6 +798,14 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080122a.htm"
   },
   {
+    "date": "2008-01-30",
+    "title": "미국 연방기금금리 목표 3.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.00%입니다. 변경 폭은 50bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
+  },
+  {
     "date": "2008-03-16",
     "title": "미 연준, 프라이머리 딜러에 대출 창구 개설 발표",
     "category": "거시경제",
@@ -518,12 +814,36 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
   },
   {
+    "date": "2008-03-18",
+    "title": "미국 연방기금금리 목표 2.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25%입니다. 변경 폭은 75bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
+  },
+  {
+    "date": "2008-04-30",
+    "title": "미국 연방기금금리 목표 2.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
+  },
+  {
     "date": "2008-05",
     "title": "국내 개별주식 선물시장 개설",
     "category": "시장",
     "summary": "개별 주식을 기초자산으로 한 선물을 거래하는 시장이 열렸습니다.",
     "sourceName": "KIND 공시의 국내 증권시장 연혁",
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  {
+    "date": "2008-08-07",
+    "title": "한국은행, 기준금리 5.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 5.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2008-09-15",
@@ -560,12 +880,36 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081008a.htm"
   },
   {
+    "date": "2008-10-09",
+    "title": "한국은행, 기준금리 5.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.25%에서 5.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2008-10-27",
+    "title": "한국은행, 기준금리 4.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 4.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2008-10-29",
     "title": "미 연준, 연방기금금리 목표 1.00%로 인하",
     "category": "거시경제",
     "summary": "FOMC는 연방기금금리 목표를 0.50%p 더 내렸습니다.",
     "sourceName": "미 연준 10월 FOMC 의사록",
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20081029.htm"
+  },
+  {
+    "date": "2008-11-07",
+    "title": "한국은행, 기준금리 4.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 4.25%에서 4.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2008-11-10",
@@ -584,12 +928,36 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081125b.htm"
   },
   {
+    "date": "2008-12-11",
+    "title": "한국은행, 기준금리 3.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 4.00%에서 3.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2008-12-16",
     "title": "미 연준, 연방기금금리 목표를 범위로 전환",
     "category": "통화정책",
     "summary": "FOMC가 연방기금금리 목표 범위를 0~0.25%로 설정했습니다.",
     "sourceName": "미 연준 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081216b.htm"
+  },
+  {
+    "date": "2009-01-09",
+    "title": "한국은행, 기준금리 2.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 2.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2009-02-12",
+    "title": "한국은행, 기준금리 2.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 2.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2009-03-18",
@@ -625,6 +993,14 @@
     "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01041401/%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%EC%8B%9C%EC%9E%A5%20%EC%95%BC%EA%B0%84%EA%B1%B0%EB%9E%98%20%EC%95%88%EB%82%B4.pdf"
   },
   {
+    "date": "2010-07-09",
+    "title": "한국은행, 기준금리 2.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.00%에서 2.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2010-08",
     "title": "유렉스 연계 코스피200 옵션시장 개설",
     "category": "시장",
@@ -644,12 +1020,44 @@
     "nowSourceUrl": "https://www.federalreserve.gov/monetarypolicy/clbs-system-open-market-account-201111.htm"
   },
   {
+    "date": "2010-11-16",
+    "title": "한국은행, 기준금리 2.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.25%에서 2.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2011-01",
     "title": "라오스 증권시장 개설",
     "category": "시장",
     "summary": "한국거래소가 지분을 출자한 라오스 증권시장이 열렸습니다.",
     "sourceName": "KIND 공시의 국내 증권시장 연혁",
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  {
+    "date": "2011-01-13",
+    "title": "한국은행, 기준금리 2.75%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 2.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2011-03-10",
+    "title": "한국은행, 기준금리 3.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.75%에서 3.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2011-06-10",
+    "title": "한국은행, 기준금리 3.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 3.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2011-09-21",
@@ -668,6 +1076,14 @@
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
   },
   {
+    "date": "2012-07-12",
+    "title": "한국은행, 기준금리 3.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.25%에서 3.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2012-09-06",
     "title": "유럽중앙은행, 국채 매입 프로그램 OMT 설계 공개",
     "category": "통화정책",
@@ -677,6 +1093,14 @@
     "then": "발표에서 매입 대상은 주로 만기 1~3년 국채로 제시됐습니다."
   },
   {
+    "date": "2012-10-11",
+    "title": "한국은행, 기준금리 2.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 2.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2013-04-04",
     "title": "일본은행, 양적·질적 금융완화 도입",
     "category": "통화정책",
@@ -684,6 +1108,14 @@
     "sourceName": "일본은행 2013년 4월 금융정책결정회의",
     "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/g130404.pdf",
     "then": "일본은행은 2% 물가안정 목표와 국채 매입 확대 계획을 발표했습니다."
+  },
+  {
+    "date": "2013-05-09",
+    "title": "한국은행, 기준금리 2.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.75%에서 2.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2013-07",
@@ -718,6 +1150,22 @@
     "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2014/html/pr140605.en.html"
   },
   {
+    "date": "2014-08-14",
+    "title": "한국은행, 기준금리 2.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 2.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2014-10-15",
+    "title": "한국은행, 기준금리 2.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.25%에서 2.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2014-11",
     "title": "상장지수증권 시장 개설",
     "category": "시장",
@@ -741,6 +1189,22 @@
     "sourceName": "유럽중앙은행 자산매입 발표",
     "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2015/html/pr150122_1.en.html",
     "then": "공개 계획은 매입을 2016년 9월 말까지 이어가되 물가 경로에 따라 기간을 늘릴 수 있도록 했습니다."
+  },
+  {
+    "date": "2015-03-12",
+    "title": "한국은행, 기준금리 1.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.00%에서 1.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2015-06-11",
+    "title": "한국은행, 기준금리 1.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.75%에서 1.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2015-06-15",
@@ -794,6 +1258,14 @@
     "sourceName": "Liberty Media SEC 8-K",
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm",
     "then": "Nasdaq은 같은 날 지수의 Liberty Media 기업행동 반영 방식을 발표했습니다."
+  },
+  {
+    "date": "2016-06-09",
+    "title": "한국은행, 기준금리 1.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.50%에서 1.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2016-06-23",
@@ -886,6 +1358,14 @@
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
   },
   {
+    "date": "2017-06-15",
+    "title": "미국 연방기금금리 목표 1.00~1.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.00~1.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2017"
+  },
+  {
     "date": "2017-06-19",
     "title": "MercadoLibre, Nasdaq-100에 편입",
     "category": "시장",
@@ -972,12 +1452,68 @@
     "now": "Cboe의 이후 분석은 VIX가 거래 후반에 급등했고 당시 기준 최대 일일 상승폭을 기록했다고 정리했습니다."
   },
   {
+    "date": "2018-03-22",
+    "title": "미국 연방기금금리 목표 1.50~1.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.50~1.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  {
     "date": "2018-03-26",
     "title": "한국거래소, 코스닥150 옵션 상장",
     "category": "시장",
     "summary": "한국거래소는 코스닥150지수를 기초로 하는 옵션을 상장했습니다.",
     "sourceName": "한국거래소 코스닥150 옵션 안내",
     "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01040210/KOSDAQ150Option.pdf"
+  },
+  {
+    "date": "2018-04-20",
+    "title": "한국은행, 기준금리 2.0%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.50%에서 2.0%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2018-06-14",
+    "title": "미국 연방기금금리 목표 1.75~2.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.75~2.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  {
+    "date": "2018-09-27",
+    "title": "미국 연방기금금리 목표 2.00~2.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00~2.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  {
+    "date": "2018-11-30",
+    "title": "한국은행, 기준금리 1.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.0%에서 1.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2018-12-20",
+    "title": "미국 연방기금금리 목표 2.25~2.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25~2.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  {
+    "date": "2019-07-18",
+    "title": "한국은행, 기준금리 1.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.75%에서 1.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2019-07-31",
@@ -988,6 +1524,30 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm"
   },
   {
+    "date": "2019-09-19",
+    "title": "미국 연방기금금리 목표 1.75~2.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.75~2.00%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2019"
+  },
+  {
+    "date": "2019-10-16",
+    "title": "한국은행, 기준금리 1.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.50%에서 1.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2019-10-31",
+    "title": "미국 연방기금금리 목표 1.50~1.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.50~1.75%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2019"
+  },
+  {
     "date": "2020-02",
     "title": "미국 경기 정점",
     "category": "거시경제",
@@ -995,6 +1555,14 @@
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions",
     "now": "NBER 위원회는 2020년 6월에 정점 월을 발표했습니다."
+  },
+  {
+    "date": "2020-03-04",
+    "title": "미국 연방기금금리 목표 1.00~1.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.00~1.25%입니다. 변경 폭은 50bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2020"
   },
   {
     "date": "2020-03-11",
@@ -1022,6 +1590,14 @@
     "sourceName": "한국은행 기준금리 발표",
     "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=10057023",
     "then": "발표 당일 인하 폭과 적용일을 확인할 수 있었습니다."
+  },
+  {
+    "date": "2020-03-17",
+    "title": "한국은행, 기준금리 0.75%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.25%에서 0.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2020-03-19",
@@ -1067,12 +1643,28 @@
     "now": "미 에너지정보청은 낮은 유동성과 저장 공간 제약이 당시 가격 움직임에 기여했다고 분석했습니다."
   },
   {
+    "date": "2020-05-28",
+    "title": "한국은행, 기준금리 0.50%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 0.75%에서 0.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2020-08-27",
     "title": "미 연준, 장기 통화정책 전략 개정 발표",
     "category": "거시경제",
     "summary": "FOMC는 물가상승률이 긴 기간에 걸쳐 평균 2%가 되도록 운용하겠다는 전략을 발표했습니다.",
     "sourceName": "미 연준 장기 통화정책 전략",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200827a.htm"
+  },
+  {
+    "date": "2021-08-26",
+    "title": "한국은행, 기준금리 0.75%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 0.50%에서 0.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2021-10-18",
@@ -1083,12 +1675,52 @@
     "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212"
   },
   {
+    "date": "2021-11-25",
+    "title": "한국은행, 기준금리 1.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 0.75%에서 1.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2022-01-14",
+    "title": "한국은행, 기준금리 1.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.00%에서 1.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2022-03-16",
     "title": "미 연준, 연방기금금리 목표 범위 인상",
     "category": "통화정책",
     "summary": "FOMC가 연방기금금리 목표 범위를 0.25~0.50%로 올렸습니다.",
     "sourceName": "미 연준 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm"
+  },
+  {
+    "date": "2022-04-14",
+    "title": "한국은행, 기준금리 1.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.25%에서 1.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2022-05-05",
+    "title": "미국 연방기금금리 목표 0.75~1.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 0.75~1.00%입니다. 변경 폭은 50bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  {
+    "date": "2022-05-26",
+    "title": "한국은행, 기준금리 1.75%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.50%에서 1.75%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2022-06-15",
@@ -1100,12 +1732,92 @@
     "then": "FOMC는 물가가 높은 수준을 유지하고 있다고 평가했습니다."
   },
   {
+    "date": "2022-07-13",
+    "title": "한국은행, 기준금리 2.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.75%에서 2.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2022-07-28",
+    "title": "미국 연방기금금리 목표 2.25~2.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25~2.50%입니다. 변경 폭은 75bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  {
+    "date": "2022-08-25",
+    "title": "한국은행, 기준금리 2.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.25%에서 2.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2022-09-22",
+    "title": "미국 연방기금금리 목표 3.00~3.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.00~3.25%입니다. 변경 폭은 75bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  {
+    "date": "2022-10-12",
+    "title": "한국은행, 기준금리 3.00%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 3.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2022-11-03",
+    "title": "미국 연방기금금리 목표 3.75~4.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.75~4.00%입니다. 변경 폭은 75bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  {
+    "date": "2022-11-24",
+    "title": "한국은행, 기준금리 3.25%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 3.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
     "date": "2022-11-30",
     "title": "OpenAI, ChatGPT 연구용 미리보기 공개",
     "category": "기술",
     "summary": "OpenAI는 대화형 생성 AI 서비스의 초기 버전을 공개하고 이용자 피드백을 받기 시작했습니다.",
     "sourceName": "OpenAI ChatGPT 공개 안내",
     "sourceUrl": "https://openai.com/index/chatgpt/"
+  },
+  {
+    "date": "2022-12-15",
+    "title": "미국 연방기금금리 목표 4.25~4.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.25~4.50%입니다. 변경 폭은 50bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  {
+    "date": "2023-01-13",
+    "title": "한국은행, 기준금리 3.50%로 인상",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.25%에서 3.50%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2023-02-02",
+    "title": "미국 연방기금금리 목표 4.50~4.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50~4.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023"
   },
   {
     "date": "2023-03-10",
@@ -1118,6 +1830,30 @@
     "nowSourceUrl": "https://www.fdic.gov/news/press-releases/2023/pr23017.html"
   },
   {
+    "date": "2023-03-23",
+    "title": "미국 연방기금금리 목표 4.75~5.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75~5.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023"
+  },
+  {
+    "date": "2023-05-04",
+    "title": "미국 연방기금금리 목표 5.00~5.25% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 5.00~5.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023"
+  },
+  {
+    "date": "2023-07-27",
+    "title": "미국 연방기금금리 목표 5.25~5.50% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 5.25~5.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023"
+  },
+  {
     "date": "2024-01-10",
     "title": "미 SEC, 현물 비트코인 ETP 상장·거래 승인",
     "category": "제도",
@@ -1125,6 +1861,38 @@
     "sourceName": "미 SEC 위원장 발표",
     "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
     "then": "SEC는 이날 조치가 현물 비트코인을 보유한 상장지수상품에 적용된다고 발표했습니다."
+  },
+  {
+    "date": "2024-09-19",
+    "title": "미국 연방기금금리 목표 4.75~5.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75~5.00%입니다. 변경 폭은 50bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2024"
+  },
+  {
+    "date": "2024-10-11",
+    "title": "한국은행, 기준금리 3.25%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.50%에서 3.25%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2024-11-08",
+    "title": "미국 연방기금금리 목표 4.50~4.75% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50~4.75%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2024"
+  },
+  {
+    "date": "2024-11-28",
+    "title": "한국은행, 기준금리 3.00%로 인하",
+    "category": "거시경제",
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.25%에서 3.00%로 바뀌었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
     "date": "2024-12-04",
@@ -1312,6 +2080,14 @@
     "nowSourceUrl": "https://www.samsungpop.com/common.do?cmd=down&contentType=application%2Fpdf&fileName=4020%2F2025123016063887K_02_02.pdf&inlineYn=Y&saveKey=research.pdf"
   },
   {
+    "date": "2025-10-30",
+    "title": "미국 연방기금금리 목표 3.75~4.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.75~4.00%입니다. 변경 폭은 25bp 인하입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2025"
+  },
+  {
     "date": "2025-11-01",
     "title": "APEC 정상회의 경주선언 채택",
     "category": "국제",
@@ -1368,6 +2144,49 @@
     "nowSourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260128.htm"
   },
   {
+    "date": "2026-01-28",
+    "title": "미 SEC 실무진의 토큰증권 구조 설명",
+    "summary": "SEC 실무진은 발행인이 토큰화하는 구조와 제3자가 토큰화하는 구조의 차이를 설명했습니다.",
+    "sourceName": "미 SEC 실무진 성명",
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/corp-fin-statement-tokenized-securities-012826-statement-tokenized-securities",
+    "category": "제도"
+  },
+  {
+    "date": "2026-03-04",
+    "title": "토큰증권 민·관 협의체 첫 회의",
+    "summary": "금융위원회가 기술·인프라, 발행, 유통, 결제의 네 분과를 구성했습니다.",
+    "sourceName": "금융위원회 토큰증권 협의체 발표",
+    "sourceUrl": "https://www.fsc.go.kr/po010101/86371",
+    "category": "제도",
+    "then": "금융위원회가 기술·인프라, 발행, 유통, 결제의 네 분과를 구성했습니다.",
+    "now": "2026-09-04 금융위원회는 조각투자와 함께 주식·채권·펀드의 토큰화 인프라를 단계별로 추진하는 정책방향을 공개했습니다.",
+    "nowSourceUrl": "https://www.fsc.go.kr/no010101/87650"
+  },
+  {
+    "date": "2026-03-19",
+    "title": "NH투자증권 종합투자계좌 업무 단계",
+    "summary": "금융위원회가 NH투자증권의 자기자본 8조원 이상 종합금융투자사업자 지정을 의결했습니다.",
+    "sourceName": "금융위원회 지정 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86489",
+    "category": "제도"
+  },
+  {
+    "date": "2026-04-15",
+    "title": "생성형 AI 모델 변경 절차 간소화",
+    "summary": "금융위원회는 버전 업그레이드 등 단순 모델 변경에 적용할 혁신금융서비스 절차 간소화 방안을 발표했습니다.",
+    "sourceName": "금융위원회 공개 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86712",
+    "category": "제도"
+  },
+  {
+    "date": "2026-06-30",
+    "title": "KRX에 이어 넥스트레이드 거래 지원",
+    "summary": "Interactive Brokers는 5월 한국거래소 거래 지원에 이어 6월 넥스트레이드 일부 종목 거래 지원을 발표했습니다.",
+    "sourceName": "Interactive Brokers 공개 자료",
+    "sourceUrl": "https://investors.interactivebrokers.com/en/general/about/mediaRelations/7-1-26.php",
+    "category": "시장"
+  },
+  {
     "date": "2026-07-16",
     "title": "한국은행, 기준금리 2.75%로 인상",
     "category": "통화정책",
@@ -1384,6 +2203,17 @@
     "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11064191"
   },
   {
+    "date": "2026-09-04",
+    "title": "토큰증권 발행·유통 정책방향 발표",
+    "summary": "금융위원회는 조각투자와 함께 주식·채권·펀드의 토큰화 인프라를 단계별로 추진하는 정책방향을 공개했습니다.",
+    "sourceName": "금융위원회 정책방향 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87650",
+    "category": "제도",
+    "then": "금융위원회는 조각투자와 함께 주식·채권·펀드의 토큰화 인프라를 단계별로 추진하는 정책방향을 공개했습니다.",
+    "now": "2026-10-01 금융위원회는 분산원장 요건, 발행인계좌관리기관 등록요건, 장외거래소 인가와 거래한도에 관한 개정안을 공개했습니다.",
+    "nowSourceUrl": "https://www.fsc.go.kr/no010101/87838"
+  },
+  {
     "date": "2026-09-09",
     "title": "금융위원회, 삼성증권 단기금융업 인가",
     "category": "제도",
@@ -1392,12 +2222,28 @@
     "sourceUrl": "https://www.fsc.go.kr/no010101/87676"
   },
   {
+    "date": "2026-09-17",
+    "title": "미국 연방기금금리 목표 3.75~4.00% 적용",
+    "category": "거시경제",
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.75~4.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2026"
+  },
+  {
     "date": "2026-09-23",
     "title": "금융위원회, 메리츠증권 종투사 지정과 단기금융업 인가",
     "category": "제도",
     "summary": "금융위원회는 메리츠증권을 자기자본 4조원 이상 종합금융투자사업자로 지정하고 단기금융업을 인가했습니다.",
     "sourceName": "금융위원회 메리츠증권 지정·인가 발표",
     "sourceUrl": "https://www.fsc.go.kr/no010101/87782"
+  },
+  {
+    "date": "2026-10-01",
+    "title": "토큰증권 하위법규 개정안 입법예고",
+    "summary": "금융위원회는 분산원장 요건, 발행인계좌관리기관 등록요건, 장외거래소 인가와 거래한도에 관한 개정안을 공개했습니다.",
+    "sourceName": "금융위원회 입법예고 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87838",
+    "category": "제도"
   },
   {
     "date": "2026-10-22",
@@ -1436,11 +2282,51 @@
     "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066748"
   },
   {
+    "date": "2026-11-19",
+    "title": "3분기 국제투자대조표 잠정치 공개",
+    "summary": "한국은행은 2026년 3분기 말 대외금융자산·부채와 대외채무를 다루는 국제투자대조표 잠정치를 공개했습니다.",
+    "sourceName": "한국은행 국제투자대조표",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066812",
+    "category": "거시경제"
+  },
+  {
+    "date": "2026-11-23",
+    "title": "상장기업 자기주식 1일 주문 한도 한시 완화",
+    "summary": "금융위원회는 2026년 11월 24일부터 2027년 2월 23일까지 상장기업의 1일 자기주식 취득 주문 한도를 완화하기로 의결했습니다.",
+    "sourceName": "금융위원회 자기주식 한도 완화 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88190",
+    "category": "제도"
+  },
+  {
+    "date": "2026-11-23",
+    "title": "단계별 시장안정조치 공개",
+    "summary": "관계기관은 시장안정펀드 가동 준비, 불법공매도 집중 감시와 신용융자·반대매매 동향 점검을 발표했습니다.",
+    "sourceName": "금융위원회 시장상황점검회의 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no070300/88181",
+    "category": "시장"
+  },
+  {
     "date": "2026-11-24",
     "title": "한국은행, 11월 소비자동향조사 발표",
     "category": "거시경제",
     "summary": "11월 소비자심리지수(CCSI)는 103.1로 전월보다 2.3p 하락했습니다.",
     "sourceName": "한국은행 11월 소비자동향조사",
     "sourceUrl": "https://www.bok.or.kr/portal/bbs/B0000501/view.do?menuNo=201264&nttId=11066918"
+  },
+  {
+    "date": "2026-11-24",
+    "title": "디지털자산업 제정안의 입법 추진 논의",
+    "summary": "금융위원회 가상자산위원회는 산업·시장·이용자를 함께 다루는 디지털자산업 법안의 입법 추진을 논의했습니다.",
+    "sourceName": "금융위원회 디지털자산법안 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88199",
+    "category": "제도"
+  },
+  {
+    "date": "2026-11-25",
+    "title": "코리아 핀테크 위크 2026 개막",
+    "summary": "금융위원회는 디지털 전환, 금융정책, 재테크, 핀테크 투자·지원 등을 주제로 25~27일 행사를 연다고 발표했습니다.",
+    "sourceName": "금융위원회 코리아 핀테크 위크 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88216?curPage=&srchBeginDt=&srchCtgry=&srchEndDt=&srchKey=&srchText=",
+    "category": "산업"
   }
 ]

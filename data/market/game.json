@@ -8,7 +8,9 @@
       "12월"
     ],
     "answer": 1,
-    "date": "1990-07"
+    "date": "1990-07",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
   },
   {
     "prompt": "IMF는 1997년 몇 월에 한국의 대기성 차관 요청을 승인했을까요?",
@@ -19,7 +21,9 @@
       "12월"
     ],
     "answer": 3,
-    "date": "1997-12-04"
+    "date": "1997-12-04",
+    "sourceName": "IMF 발표",
+    "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr9755"
   },
   {
     "prompt": "NBER 연표에서 2001년 미국 경기 수축이 끝난 달은 언제일까요?",
@@ -30,7 +34,9 @@
       "11월"
     ],
     "answer": 3,
-    "date": "2001-11"
+    "date": "2001-11",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
   },
   {
     "prompt": "2009년 6월 저점에 앞선 미국 경기의 정점은 언제일까요?",
@@ -41,7 +47,9 @@
       "2008년 12월"
     ],
     "answer": 1,
-    "date": "2007-12"
+    "date": "2007-12",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
   },
   {
     "prompt": "2020년 3월 첫 관측일과 마지막 관측일의 지표로만 비교하면, 원화 기준으로 가장 높은 변동률을 보인 선택은 무엇일까요?",
@@ -54,7 +62,9 @@
     "answer": 1,
     "date": "2020-03",
     "explanation": "원/달러 환율은 약 2.35% 올랐고 KOSPI·KOSDAQ은 모두 하락했습니다. 원화 현금의 가격 변동률은 0%로 두었으며 이자와 거래비용은 제외했습니다.",
-    "series": ["DEXKOUS"]
+    "series": [
+      "DEXKOUS"
+    ]
   },
   {
     "prompt": "2008년 9월 첫 관측일에서 마지막 관측일까지 WTI 현물과 원/달러 환율은 각각 어떻게 움직였을까요?",
@@ -66,7 +76,10 @@
     ],
     "answer": 2,
     "date": "2008-09",
-    "series": ["DCOILWTICO", "DEXKOUS"]
+    "series": [
+      "DCOILWTICO",
+      "DEXKOUS"
+    ]
   },
   {
     "prompt": "2020년 3월 첫 관측일에서 마지막 관측일까지 미국 10년물 국채금리는 어떻게 변했을까요?",
@@ -91,7 +104,9 @@
       "1.5~1.75%"
     ],
     "answer": 0,
-    "date": "2020-03-15"
+    "date": "2020-03-15",
+    "sourceName": "Federal Reserve FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200315a.htm"
   },
   {
     "prompt": "NBER 연표에서 2020년 미국 경기 수축이 끝난 달은 언제일까요?",
@@ -102,7 +117,9 @@
       "6월"
     ],
     "answer": 1,
-    "date": "2020-04"
+    "date": "2020-04",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
   },
   {
     "prompt": "S&P Global의 2024년 11월 리뷰에서 S&P 500 구성종목 중 10월 말 대비 가장 많이 오른 종목은 무엇일까요?",

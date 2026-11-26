@@ -56,7 +56,7 @@ test('Broker segment amounts reconcile with disclosed consolidated totals', () =
   type Disclosure = { years: number[]; total: number[]; sourceUrl: string; segments: { name: string; amounts: number[] }[] };
   const filings = readJson<Record<string, Disclosure>>('brokers/disclosed-segments.json');
   for (const filing of Object.values(filings)) {
-    assert.equal(new URL(filing.sourceUrl).hostname, 'kind.krx.co.kr');
+    assert.ok(['kind.krx.co.kr', 'dart.fss.or.kr'].includes(new URL(filing.sourceUrl).hostname));
     assert.equal(new Set(filing.segments.map(({ name }) => name)).size, filing.segments.length);
     assert.ok(filing.segments.every(({ amounts }) => amounts.length === filing.years.length));
     assert.deepEqual(filing.years.map((_, index) =>
@@ -322,7 +322,7 @@ test('Historical companies retain their comparison scope and supplemental disclo
     const data = readJson<{ date: string; basis: string; scope: string; sourceUrl?: string; companies: HistoricalCompany[] }>(`brokers/industry-${year}.json`);
     assert.equal(data.date, `${year}-12-31`);
     assert.equal(data.basis, '별도 재무제표');
-    assert.equal(data.scope, '수록 10개사 자본총계 순위');
+    assert.equal(data.scope, year === 2022 || year === 2023 ? '자본총계 상위 10개사' : '수록 10개사 자본총계 순위');
     assert.equal(new Set(data.companies.map(({ id }) => id)).size, 10);
     assert.ok(data.companies.every(({ assets, liabilities, equity }) => Math.abs(assets - liabilities - equity) <= (year === 2020 ? 5 : 1)));
     for (const company of data.companies) {

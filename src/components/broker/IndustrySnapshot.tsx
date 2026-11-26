@@ -26,7 +26,8 @@ export default function IndustrySnapshot({ view, brokerBase }: { view: 'cards' |
       </label>
     </div>
     <p role="status">{period.date} · {period.basis} · {period.scope}</p>
-    {period.confirmedTopCount && period.confirmedTopCount < period.companies.length && <p>기준일 자료로 업계 상위 {period.confirmedTopCount}개사의 순위를 확인했습니다. 이후 순위는 수록한 회사끼리 비교한 결과입니다. {period.rankSourceUrl && <a href={period.rankSourceUrl}>{period.rankSourceName}</a>}</p>}
+    {period.confirmedTopCount && period.confirmedTopCount < period.companies.length && <p>기준일 자료로 업계 상위 {period.confirmedTopCount}개사의 순위를 확인했습니다. 이후 순위는 수록한 회사끼리 비교한 결과입니다.</p>}
+    {period.rankSourceUrl && <p><a href={period.rankSourceUrl}>{period.rankSourceName}</a></p>}
     {view === 'cards' ? <div className="lab-grid">
       {rows.map(({ id, name, rank, equity }) => (
         <a key={id} className="lab-card" href={href(id)}>

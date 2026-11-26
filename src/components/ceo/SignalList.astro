@@ -1,9 +1,13 @@
 ---
 import { ceoSections, type signals } from '../../utils/ceo';
 import { sitePath } from '../../utils/paths';
+import { brokers } from '../../utils/brokers';
+import { marketEvents } from '../../utils/market';
 import followUpData from '../../../data/ceo/follow-ups.json';
 interface Props { items: typeof signals; }
 const { items } = Astro.props;
+const brokerIds = new Map(brokers.map(({ name, id }) => [name, id]));
+const marketMonths = new Map(marketEvents.filter(({ date }) => date.length >= 7).map(({ sourceUrl, date }) => [sourceUrl, date.slice(0, 7)]));
 const followUps: Record<string, { date: string; label: string; sourceUrl: string }[]> = followUpData;
 ---
 <ul class="lab-list">
@@ -14,11 +18,12 @@ const followUps: Record<string, { date: string; label: string; sourceUrl: string
       <dl>
         <dt>확인한 사실</dt><dd>{summary}</dd>
         <dt>살펴볼 이유</dt><dd>{why}</dd>
-        <dt>관련 기관·회사</dt><dd>{companies.join(' · ')}</dd>
+        <dt>관련 기관·회사</dt><dd>{companies.map((name, index) => <>{index > 0 && ' · '}{brokerIds.has(name) ? <a href={sitePath('broker-atlas/brokers/' + brokerIds.get(name))}>{name}</a> : name}</>)}</dd>
         {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
         <dt>생각해 볼 질문</dt><dd>{question}</dd>
       </dl>
       <a href={sourceUrl}>{sourceName}</a>
+      {marketMonths.get(sourceUrl) === date.slice(0, 7) && <p><a href={sitePath('market-time-capsule/' + date.slice(0, 7).replace('-', '/'))}>같은 달의 시장 지표와 사건</a></p>}
       {followUps[id]?.length && <div>
         <h3>후속 확인 일정</h3>
         <ul class="lab-list">{followUps[id].map(({ date, label, sourceUrl }) => <li>

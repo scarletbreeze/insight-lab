@@ -247,5 +247,387 @@
       1209626217,
       1357428154
     ]
+  },
+  "daishin": {
+    "basis": "연결",
+    "unit": "천원",
+    "years": [
+      2025,
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261113001261&dcmNo=11655511&eleId=22&offset=969685&length=5770484&dtd=dart4.xsd",
+    "metric": "영업이익(손실)",
+    "segments": [
+      {
+        "name": "Retail",
+        "amounts": [
+          169164862,
+          383748900
+        ]
+      },
+      {
+        "name": "기업금융",
+        "amounts": [
+          85599125,
+          121743132
+        ]
+      },
+      {
+        "name": "CM부문",
+        "amounts": [
+          100349594,
+          16781233
+        ]
+      },
+      {
+        "name": "법인영업부문",
+        "amounts": [
+          25953933,
+          53931483
+        ]
+      },
+      {
+        "name": "저축은행부문",
+        "amounts": [
+          -14952063,
+          28647580
+        ]
+      },
+      {
+        "name": "자산운용부문",
+        "amounts": [
+          2815059,
+          12280676
+        ]
+      },
+      {
+        "name": "경제연구소부문",
+        "amounts": [
+          -1051763,
+          -544752
+        ]
+      },
+      {
+        "name": "에프앤아이부문",
+        "amounts": [
+          89395993,
+          66614886
+        ]
+      },
+      {
+        "name": "해외영업부문",
+        "amounts": [
+          -12177493,
+          -1310107
+        ]
+      },
+      {
+        "name": "자산신탁부문",
+        "amounts": [
+          8508267,
+          8515949
+        ]
+      },
+      {
+        "name": "기타",
+        "amounts": [
+          -14099530,
+          -141904270
+        ]
+      },
+      {
+        "name": "중요한 조정사항",
+        "amounts": [
+          -191338676,
+          -88341991
+        ]
+      }
+    ],
+    "total": [
+      248167308,
+      460162719
+    ]
+  },
+  "kb": {
+    "basis": "연결",
+    "unit": "천원",
+    "years": [
+      2025,
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261116001123&dcmNo=11659624&eleId=22&offset=744534&length=966553&dtd=dart4.xsd",
+    "metric": "영업이익",
+    "segments": [
+      {
+        "name": "위탁영업/ 자산관리",
+        "amounts": [
+          361912847,
+          1115546680
+        ]
+      },
+      {
+        "name": "기업금융",
+        "amounts": [
+          103188815,
+          76517141
+        ]
+      },
+      {
+        "name": "자산운용",
+        "amounts": [
+          44021083,
+          65476407
+        ]
+      },
+      {
+        "name": "기타사업",
+        "amounts": [
+          158795921,
+          177178083
+        ]
+      }
+    ],
+    "total": [
+      667918666,
+      1434718311
+    ]
+  },
+  "korea-investment": {
+    "basis": "연결",
+    "unit": "천원",
+    "years": [
+      2025,
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261113001340&dcmNo=11655733&eleId=22&offset=686997&length=1806364&dtd=dart4.xsd",
+    "metric": "부문세전당기손익",
+    "segments": [
+      {
+        "name": "자산관리/ 위탁영업",
+        "amounts": [
+          391101036,
+          997759833
+        ]
+      },
+      {
+        "name": "기업금융",
+        "amounts": [
+          356000091,
+          346364211
+        ]
+      },
+      {
+        "name": "자산운용",
+        "amounts": [
+          517176907,
+          451618617
+        ]
+      },
+      {
+        "name": "본사관리/기타",
+        "amounts": [
+          598673479,
+          228634418
+        ]
+      },
+      {
+        "name": "집합투자업",
+        "amounts": [
+          269908035,
+          401058369
+        ]
+      },
+      {
+        "name": "국외",
+        "amounts": [
+          74051930,
+          99205125
+        ]
+      },
+      {
+        "name": "연결대상 수익증권/SPC",
+        "amounts": [
+          262675051,
+          344914196
+        ]
+      },
+      {
+        "name": "연결조정",
+        "amounts": [
+          -236931041,
+          -203985696
+        ]
+      }
+    ],
+    "total": [
+      2232655488,
+      2665569073
+    ]
+  },
+  "shinhan": {
+    "basis": "연결",
+    "unit": "백만원",
+    "years": [
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261116000557&dcmNo=11658130&eleId=22&offset=3140309&length=762267&dtd=dart4.xsd",
+    "metric": "분기순이익(손실)",
+    "segments": [
+      {
+        "name": "신한Premier총괄",
+        "amounts": [
+          350989
+        ]
+      },
+      {
+        "name": "CIB총괄",
+        "amounts": [
+          81869
+        ]
+      },
+      {
+        "name": "S&T그룹",
+        "amounts": [
+          153097
+        ]
+      },
+      {
+        "name": "기타",
+        "amounts": [
+          56985
+        ]
+      }
+    ],
+    "total": [
+      642940
+    ]
+  },
+  "hana": {
+    "basis": "연결",
+    "unit": "천원",
+    "years": [
+      2025,
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261113001337&dcmNo=11655727&eleId=22&offset=657890&length=1225831&dtd=dart4.xsd",
+    "metric": "분기순이익(손실)",
+    "segments": [
+      {
+        "name": "WM",
+        "amounts": [
+          17070253,
+          222680334
+        ]
+      },
+      {
+        "name": "IB",
+        "amounts": [
+          10593964,
+          -65518449
+        ]
+      },
+      {
+        "name": "Sales &Trading",
+        "amounts": [
+          245928308,
+          181115153
+        ]
+      },
+      {
+        "name": "전사공통",
+        "amounts": [
+          -73044162,
+          -21934696
+        ]
+      },
+      {
+        "name": "종속기업",
+        "amounts": [
+          39058236,
+          -141503701
+        ]
+      },
+      {
+        "name": "조 정",
+        "amounts": [
+          -71365079,
+          106806386
+        ]
+      }
+    ],
+    "total": [
+      168241520,
+      281645027
+    ]
+  },
+  "meritz": {
+    "basis": "연결",
+    "unit": "천원",
+    "years": [
+      2025,
+      2026
+    ],
+    "period": "1~9월 누적",
+    "sourceName": "2026년 3분기보고서 · 연결재무제표 주석",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261116001503&dcmNo=11660704&eleId=22&offset=902489&length=1316958&dtd=dart4.xsd",
+    "metric": "분기순이익(손실)",
+    "segments": [
+      {
+        "name": "Sales&Trading",
+        "amounts": [
+          188774384,
+          266402684
+        ]
+      },
+      {
+        "name": "기업금융및IB사업",
+        "amounts": [
+          298488693,
+          134710280
+        ]
+      },
+      {
+        "name": "리테일사업",
+        "amounts": [
+          2334273,
+          68489015
+        ]
+      },
+      {
+        "name": "여신전문금융업",
+        "amounts": [
+          90285134,
+          119911809
+        ]
+      },
+      {
+        "name": "기타",
+        "amounts": [
+          82319741,
+          142629118
+        ]
+      },
+      {
+        "name": "연결조정",
+        "amounts": [
+          -18703708,
+          -11685106
+        ]
+      }
+    ],
+    "total": [
+      643498517,
+      720457800
+    ]
   }
 }

@@ -325,6 +325,48 @@
       "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2026/3/s-p-500-dips-0-9-in-february-99237728"
     }
   },
+  "2026-03": {
+    "summary": "금융위원회가 기술·인프라, 발행, 유통, 결제의 네 분과를 구성했습니다.",
+    "memo": "3월 협의체의 네 분과와 9월 공개된 정책방향을 비교해 보세요. 회의 개최일과 제도 시행일은 다를 수 있습니다.",
+    "sourceName": "금융위원회 토큰증권 협의체 발표",
+    "sourceUrl": "https://www.fsc.go.kr/po010101/86371"
+  },
+  "2026-04": {
+    "summary": "금융위원회는 버전 업그레이드 등 단순 모델 변경에 적용할 혁신금융서비스 절차 간소화 방안을 발표했습니다.",
+    "memo": "절차 간소화가 적용되는 모델 변경의 범위를 확인해 보세요. 모든 금융서비스에 일괄 적용되는지 원문에서 구분할 수 있습니다.",
+    "sourceName": "금융위원회 공개 자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/86712"
+  },
+  "2026-05": {
+    "summary": "5월 4일부터 29일까지 KOSPI 종가는 6,936.99에서 8,476.15로 올랐고, KOSDAQ 종가는 1,213.74에서 1,074.80으로 내렸습니다.",
+    "memo": "두 지수의 첫날 종가를 각각 100으로 놓고 마지막 날 값을 비교해 보세요. 포인트 차이만 볼 때와 어떤 차이가 있나요?",
+    "sourceUrl": "https://www.ktv.go.kr/news/major/view?content_id=755727",
+    "sourceName": "KTV 5월 29일 마감 지표"
+  },
+  "2026-06": {
+    "summary": "Interactive Brokers는 5월 한국거래소 거래 지원에 이어 6월 넥스트레이드 일부 종목 거래 지원을 발표했습니다.",
+    "memo": "한국거래소와 넥스트레이드에서 각각 어떤 종목의 거래 지원을 발표했는지 살펴보세요.",
+    "sourceName": "Interactive Brokers 공개 자료",
+    "sourceUrl": "https://investors.interactivebrokers.com/en/general/about/mediaRelations/7-1-26.php"
+  },
+  "2026-07": {
+    "summary": "금융통화위원회는 기준금리를 2.50%에서 2.75%로 올렸습니다.",
+    "memo": "금리 결정일을 월별 표의 첫날·마지막 날과 비교해 보세요. 그 달 전체 주가 변화를 결정 당일의 반응으로 볼 수 있을까요?",
+    "sourceName": "한국은행 7월 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11062942"
+  },
+  "2026-08": {
+    "summary": "금융통화위원회는 기준금리를 2.75%에서 3.00%로 올렸습니다.",
+    "memo": "7월과 8월에 각각 변경된 기준금리의 수준을 적고, 두 달간의 누적 인상 폭을 계산해 보세요.",
+    "sourceName": "한국은행 8월 통화정책방향",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11064191"
+  },
+  "2026-09": {
+    "summary": "금융위원회는 조각투자와 함께 주식·채권·펀드의 토큰화 인프라를 단계별로 추진하는 정책방향을 공개했습니다.",
+    "memo": "토큰화 대상 자산과 단계별 추진 계획을 구분하고 10월 입법예고에서 어떤 항목이 구체화됐는지 비교해 보세요.",
+    "sourceName": "금융위원회 정책방향 발표",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87650"
+  },
   "2026-10": {
     "summary": "10월에 한국은행과 미 연준은 각각 기준금리와 연방기금금리 목표 범위를 유지했습니다.",
     "memo": "같은 달에 나온 정책 결정일과 미 국채 10년물 금리 관측일을 구분해 보세요.",

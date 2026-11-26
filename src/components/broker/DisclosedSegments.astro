@@ -6,6 +6,7 @@ interface Filing {
   basis: string;
   unit: string;
   metric: string;
+  period?: string;
   years: number[];
   sourceName: string;
   sourceUrl: string;
@@ -22,9 +23,9 @@ const format = (amount: number) => (amount / (filing.unit === '백만원' ? 100 
 ---
 {filing && <section class="lab-block">
   <h2>공시 부문별 {filing.metric}</h2>
-  <p>{filing.basis} · 단위 억 원. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
+  <p>{filing.basis} · {filing.period ?? '연간 결산'} · 단위 억 원. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
   <figure>
-    <figcaption>{filing.years[latestIndex]}년 부문별 {filing.metric} · 억 원</figcaption>
+    <figcaption>{filing.years[latestIndex]}년 {filing.period} 부문별 {filing.metric} · 억 원</figcaption>
     <ul class="segments">{segments.map(({ name, amounts }) => <li>
       <span>{name}</span>
       <span class="track" aria-hidden="true"><i class:list={[{ negative: amounts[latestIndex] < 0 }]} style={{ width: Math.abs(amounts[latestIndex]) / scale * 50 + '%' }}></i></span>
@@ -33,7 +34,7 @@ const format = (amount: number) => (amount / (filing.unit === '백만원' ? 100 
   </figure>
   <div class="lab-table-wrap">
     <table class="lab-table">
-      <thead><tr><th scope="col">공시 부문</th>{filing.years.map((year) => <th scope="col">{year}년</th>)}</tr></thead>
+      <thead><tr><th scope="col">공시 부문</th>{filing.years.map((year) => <th scope="col">{year}년 {filing.period}</th>)}</tr></thead>
       <tbody>{filing.segments.map(({ name, amounts }) => <tr>
         <th scope="row">{name}</th>{amounts.map((value) => <td>{format(value)}</td>)}
       </tr>)}</tbody>

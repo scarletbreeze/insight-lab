@@ -1,4 +1,46 @@
 {
+  "1990": {
+    "summary": "이라크의 쿠웨이트 침공으로 두 나라의 원유 공급이 차질을 빚었습니다.",
+    "memo": "8월의 공급 차질을 WTI 관측값과 함께 읽어 보세요. 침공 소식이 전해진 날짜와 월말 유가 사이에는 여러 거래일이 있습니다.",
+    "sourceName": "미 에너지정보청 원유 공급 중단 사례",
+    "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=730"
+  },
+  "1991": {
+    "summary": "국가기록원은 1991년 법 개정으로 외국 금융기관의 국내 진출과 외국인 직접투자 범위가 확대됐다고 정리합니다.",
+    "memo": "법 개정으로 새로 허용된 투자의 대상과 투자 주체를 찾아보세요. 다음 해 외국인의 국내 상장주식 직접투자 허용과 이어지는 기록입니다.",
+    "sourceName": "국가기록원 외환 및 자본시장 개방 연혁",
+    "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=318"
+  },
+  "1992": {
+    "summary": "외국인이 국내 상장 주식에 직접 투자할 수 있게 됐습니다.",
+    "memo": "해외 투자자가 직접 매수할 수 있게 된 때를 거래소 연혁에서 찾아보세요. 1991년 법 개정과 1992년 시장 개방은 따로 기록돼 있습니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1993": {
+    "summary": "정부는 실명에 의한 금융거래와 비밀보장에 관한 대통령 긴급재정경제명령을 발령했습니다.",
+    "memo": "긴급명령이 발령된 날 금융기관 창구에서 확인해야 할 정보가 무엇이었는지 원문에서 찾아보세요.",
+    "sourceName": "국가기록원 긴급재정경제명령 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0050754025&flag=1&isPop=Y"
+  },
+  "1994": {
+    "summary": "국내 대표 주가지수인 KOSPI 200을 발표했습니다.",
+    "memo": "코스피200 발표와 1996년 지수선물시장 개설을 시간순으로 놓아 보세요. 기초지수와 이를 대상으로 한 계약의 등장 시점이 다릅니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1995": {
+    "summary": "IMF는 최대 약 178억 달러 규모의 18개월 대기성 차관을 승인했습니다.",
+    "memo": "IMF 이사회가 승인한 차관의 한도와 약정 기간을 따로 읽어 보세요. 승인액만으로 당일 집행액을 알 수는 없습니다.",
+    "sourceName": "IMF의 멕시코 지원 발표",
+    "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr9510"
+  },
+  "1996": {
+    "summary": "중소·벤처기업의 자금조달을 지원하는 코스닥시장이 열렸습니다.",
+    "memo": "이 해에 문을 연 코스닥과 주가지수선물시장에서 각각 무엇을 거래하는지 비교해 보세요.",
+    "sourceName": "한국거래소 코스닥시장 안내",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/02/0201/0201010304/kosdaq_brochure.pdf"
+  },
   "1997": {
     "summary": "외환위기 중 한국 정부가 IMF와 경제 프로그램을 협의했고, IMF 이사회는 12월에 대기성 차관을 승인했습니다.",
     "memo": "12월 3일의 협의 종료 발표와 12월 4일의 이사회 승인에서 당시 확인할 수 있었던 사실을 각각 기록해 보세요.",
@@ -6,18 +48,94 @@
     "sourceName": "IMF 한국 대기성 차관 승인 발표"
   },
   "1998": {
-    "summary":"외환위기 이후 한국이 금융·기업 부문의 후속 개혁을 이어간 해입니다.",
-    "memo":"IMF 의향서가 공개된 시점과 이후 경제지표의 발표일을 구분해 보세요.",
-    "sourceUrl":"https://www.elibrary.imf.org/downloadpdf/display/book/9781557757654/9781557757654.pdf",
-    "sourceName":"IMF 한국 프로그램 검토",
-    "highlights":[{"label":"Theme","title":"외환위기 이후 금융 구조조정","summary":"한국 정부와 IMF는 금융 부문 개혁과 대외 건전성 회복 과제를 협의했습니다.","sourceUrl":"https://www.elibrary.imf.org/view/journals/002/2000/011/article-A001-en.xml","sourceName":"IMF 한국 경제·정책 평가"}]
+    "summary": "외환위기 이후 한국이 금융·기업 부문의 후속 개혁을 이어간 해입니다.",
+    "memo": "IMF 의향서가 공개된 시점과 이후 경제지표의 발표일을 구분해 보세요.",
+    "sourceUrl": "https://www.elibrary.imf.org/downloadpdf/display/book/9781557757654/9781557757654.pdf",
+    "sourceName": "IMF 한국 프로그램 검토",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "외환위기 이후 금융 구조조정",
+        "summary": "한국 정부와 IMF는 금융 부문 개혁과 대외 건전성 회복 과제를 협의했습니다.",
+        "sourceUrl": "https://www.elibrary.imf.org/view/journals/002/2000/011/article-A001-en.xml",
+        "sourceName": "IMF 한국 경제·정책 평가"
+      }
+    ]
+  },
+  "1999": {
+    "summary": "유럽연합 11개국이 고정환율을 적용해 유로화를 도입했고 유로시스템이 공동 통화정책을 맡았습니다.",
+    "memo": "1999년 단일 통화정책 출범과 2002년 유로 지폐·동전 유통 사이의 간격을 확인해 보세요.",
+    "sourceName": "유럽중앙은행의 유로 도입 기록",
+    "sourceUrl": "https://www.ecb.europa.eu/press/key/date/1999/html/sp990929.en.html"
+  },
+  "2000": {
+    "summary": "상장사 공시의 접수와 배포에 전자공시 체계를 도입했습니다.",
+    "memo": "상장사가 정보를 제출한 시점과 투자자가 공시를 열람할 수 있었던 시점을 구분해 보세요.",
+    "sourceName": "한국거래소 전자공시 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/common/JLDDST35000.html"
+  },
+  "2001": {
+    "summary": "중국은 세계무역기구의 143번째 회원국이 됐습니다.",
+    "memo": "연표에서 중국의 WTO 가입과 한국의 IMF 차관 조기 상환 일정을 각각 찾아보세요. 두 사건의 당사자와 제도는 서로 다릅니다.",
+    "sourceName": "WTO 중국 가입 기록",
+    "sourceUrl": "https://www.wto.org/English/thewto_e/acc_e/a1_chine_e.htm"
+  },
+  "2002": {
+    "summary": "국내 거래소에서 상장지수펀드를 거래하는 시장이 열렸습니다.",
+    "memo": "같은 해에 개설된 개별주식옵션시장과 ETF 시장을 비교해 보세요. 각각 무엇을 기초로 어떤 권리를 거래하나요?",
+    "sourceName": "한국거래소 ETF 시장 소개",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/eng_brochure1.pdf"
+  },
+  "2003": {
+    "summary": "증권거래소 연혁에 주가연계증권의 첫 상장이 기록돼 있습니다.",
+    "memo": "거래소 연혁에서 ELS가 처음 상장된 시점을 확인해 보세요. 기초 주식의 수익률로 ELS의 만기 상환액을 바로 계산할 수 있을까요?",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2004": {
+    "summary": "구글은 기업공개 투자설명서에 클래스 A 보통주의 공모가를 주당 85달러로 제시했습니다.",
+    "memo": "주당 85달러는 투자설명서에 적힌 공모가입니다. 첫날 종가나 분할 조정 후 가격을 읽을 때에는 가격 기준도 함께 적어 보세요.",
+    "sourceName": "구글 SEC 투자설명서",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1288776/000119312504143377/d424b4.htm"
+  },
+  "2005": {
+    "summary": "증권거래소·코스닥증권시장·선물거래소를 통합한 거래소가 출범했습니다.",
+    "memo": "거래소 통합 전의 세 기관을 찾아보세요. 운영기관을 통합한 뒤에도 주식과 선물의 거래 대상은 다릅니다.",
+    "sourceName": "한국거래소 연혁 자료",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/eng_brochure1.pdf"
+  },
+  "2006": {
+    "summary": "FOMC는 연방기금금리 목표를 0.25%p 올렸습니다.",
+    "memo": "6월 인상 뒤 목표 수준 5.25%와 그달 미국 10년물 국채금리를 비교해 보세요. 정책 목표와 시장에서 관측한 금리는 어디에서 확인할 수 있나요?",
+    "sourceName": "미 연준 2006년 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20060629a.htm"
+  },
+  "2007": {
+    "summary": "연준은 담보를 받는 기간물 대출을 입찰 방식으로 공급하는 임시 제도를 발표했습니다.",
+    "memo": "12월 입찰 제도의 담보, 만기, 대상 기관을 원문에서 찾아보세요. 정책금리 변경과 유동성 공급을 구분하는 단서입니다.",
+    "sourceName": "미 연준 단기 자금시장 대응 발표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/20071212a.htm"
   },
   "2008": {
-    "summary":"금융기관 위기와 신용시장 불안에 대응해 미국의 금융 지원과 금리 정책이 빠르게 바뀐 해입니다.",
-    "memo":"리먼브러더스 파산, AIG 지원, 연말 금리 결정을 발표일 순서대로 놓으면 위기 대응이 어떻게 진행됐는지 살펴볼 수 있습니다.",
-    "sourceUrl":"https://www.federalreserve.gov/boarddocs/rptcongress/annual08/sec1/c1.htm",
-    "sourceName":"미 연준 2008년 연차보고서",
-    "highlights":[{"label":"Theme","title":"금융기관 유동성 지원","summary":"3월 연준은 증권화 시장의 자금조달을 돕기 위해 프라이머리 딜러 대출 창구 개설을 승인했습니다.","sourceUrl":"https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm","sourceName":"미 연준 3월 발표"}]
+    "summary": "금융기관 위기와 신용시장 불안에 대응해 미국의 금융 지원과 금리 정책이 빠르게 바뀐 해입니다.",
+    "memo": "리먼브러더스 파산, AIG 지원, 연말 금리 결정을 발표일 순서대로 놓으면 위기 대응이 어떻게 진행됐는지 살펴볼 수 있습니다.",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/rptcongress/annual08/sec1/c1.htm",
+    "sourceName": "미 연준 2008년 연차보고서",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "금융기관 유동성 지원",
+        "summary": "3월 연준은 증권화 시장의 자금조달을 돕기 위해 프라이머리 딜러 대출 창구 개설을 승인했습니다.",
+        "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
+        "sourceName": "미 연준 3월 발표"
+      }
+    ]
+  },
+  "2009": {
+    "summary": "한국거래소는 CME와 연계해 코스피200 선물의 야간 거래를 제공했습니다.",
+    "memo": "야간 선물 거래 도입 당시 투자자가 국내 현물시장 마감 뒤에도 거래할 수 있었던 계약을 확인해 보세요.",
+    "sourceName": "한국거래소 야간거래 연혁",
+    "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01041401/%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%EC%8B%9C%EC%9E%A5%20%EC%95%BC%EA%B0%84%EA%B1%B0%EB%9E%98%20%EC%95%88%EB%82%B4.pdf"
   },
   "2010": {
     "summary": "미 연준은 경기 회복을 지원하기 위해 장기 국채 매입 규모를 확대하겠다고 발표했습니다.",
@@ -25,18 +143,80 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20101103a.htm",
     "sourceName": "미 연준 2010년 11월 FOMC 성명"
   },
+  "2011": {
+    "summary": "FOMC는 잔존 만기 3년 이하 국채 4,000억 달러어치를 매도하고 만기 6~30년 국채를 같은 규모로 매입하겠다고 발표했습니다.",
+    "memo": "연준이 같은 규모로 사고팔기로 한 국채를 만기별로 나눠 보세요. 보유액과 평균 만기는 서로 다른 지표입니다.",
+    "sourceName": "미 연준 대차대조표 정책 연표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/timeline-balance-sheet-policies.htm"
+  },
+  "2012": {
+    "summary": "유럽중앙은행은 유통시장에서 유로 지역 국채를 매입할 수 있는 제도의 조건과 범위를 발표했습니다.",
+    "memo": "OMT 발표에서 국채를 살 수 있는 조건을 확인해 보세요. 제도 발표와 실제 매입은 구분해 기록할 수 있습니다.",
+    "sourceName": "ECB OMT 설계 발표",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2012/html/pr120906_1.en.html"
+  },
+  "2013": {
+    "summary": "별도의 주식시장인 코넥스가 열리고 관련 전자공시를 제공하기 시작했습니다.",
+    "memo": "코넥스 출범 연혁에서 시장 개설과 전자공시 제공을 함께 찾아보세요. 새 시장의 투자자는 기업 정보를 어디서 확인했을까요?",
+    "sourceName": "한국거래소 전자공시 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/common/JLDDST35000.html"
+  },
+  "2014": {
+    "summary": "금의 장내 현물 거래가 시작됐습니다.",
+    "memo": "거래소 금 현물과 이 전시의 국제 금 월평균 가격을 비교할 때에는 거래 장소, 통화, 중량 단위를 먼저 맞춰 보세요.",
+    "sourceName": "한국거래소 금시장 공식 안내",
+    "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01050204/KRX_GOLD_Download.pdf"
+  },
+  "2015": {
+    "summary": "유가증권시장과 코스닥의 하루 가격제한폭이 30%로 확대됐습니다.",
+    "memo": "가격제한폭 확대 전후의 같은 등락률이 상한가에 해당하는지 살펴보세요. 하루의 허용 변동폭과 실현 수익률은 다릅니다.",
+    "sourceName": "KIND 공시의 가격제한폭 제도 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2016/08/22/000492/20160822001575/10001.htm"
+  },
   "2016": {
     "summary": "Nasdaq-100과 S&P 500 모두 올랐고, Nasdaq 연간 평가에 따르면 S&P 500의 가격 수익률이 더 높았습니다.",
     "memo": "지수의 전년 말 대비 등락률과 개별 종목의 그해 첫날 대비 수익률을 따로 읽어 보세요.",
     "sourceName": "Nasdaq-100 2016년 연간 평가",
     "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf"
   },
+  "2017": {
+    "summary": "CME는 12월 18일을 첫 거래일로 정해 비트코인 선물 계약을 상장했습니다.",
+    "memo": "CME가 지정한 첫 거래일을 찾아보세요. 비트코인 현물 가격과 만기가 있는 선물 가격을 비교할 때 필요한 날짜는 무엇인가요?",
+    "sourceName": "CME 상품 상장 공지",
+    "sourceUrl": "https://www.cmegroup.com/notices/clearing/2017/12/Chadv17-468.html"
+  },
+  "2018": {
+    "summary": "Cboe에 따르면 VIX는 전 거래일 종가 17.31에서 37.32로 올랐습니다.",
+    "memo": "VIX 종가 17.31과 37.32의 차이를 포인트와 백분율로 각각 계산해 보세요. 변동성 지수의 상승률은 주가지수의 하락률과 다른 값입니다.",
+    "sourceName": "Cboe 시장 분석",
+    "sourceUrl": "https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf"
+  },
+  "2019": {
+    "summary": "FOMC는 연방기금금리 목표 범위를 0.25%p 낮췄습니다.",
+    "memo": "7월 FOMC 발표에서 인하 폭과 변경 후 목표 범위를 나눠 읽고, 그달의 10년물 국채금리와 비교해 보세요.",
+    "sourceName": "미 연준 2019년 7월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190731a.htm"
+  },
   "2020": {
-    "summary":"팬데믹 초기 경제활동이 급격히 위축됐고, 미국에서 큰 폭의 통화정책 대응이 이뤄진 해입니다.",
-    "memo":"WHO와 FOMC 발표는 당시 알 수 있었던 기록입니다. NBER의 경기 정점·저점 판정은 나중에 나온 기록입니다.",
-    "sourceUrl":"https://www.nber.org/research/business-cycle-dating",
-    "sourceName":"NBER 경기순환 판정",
-    "highlights":[{"label":"Surprise","title":"0달러 아래로 내려간 WTI 선물","summary":"4월 20일 만기를 앞둔 WTI 선물 계약 가격이 마이너스를 기록했습니다.","sourceUrl":"https://www.eia.gov/TodayinEnergy/detail.php?id=43495","sourceName":"미 에너지정보청 분석"}]
+    "summary": "팬데믹 초기 경제활동이 급격히 위축됐고, 미국에서 큰 폭의 통화정책 대응이 이뤄진 해입니다.",
+    "memo": "WHO와 FOMC 발표는 당시 알 수 있었던 기록입니다. NBER의 경기 정점·저점 판정은 나중에 나온 기록입니다.",
+    "sourceUrl": "https://www.nber.org/research/business-cycle-dating",
+    "sourceName": "NBER 경기순환 판정",
+    "highlights": [
+      {
+        "label": "Surprise",
+        "title": "0달러 아래로 내려간 WTI 선물",
+        "summary": "4월 20일 만기를 앞둔 WTI 선물 계약 가격이 마이너스를 기록했습니다.",
+        "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=43495",
+        "sourceName": "미 에너지정보청 분석"
+      }
+    ]
+  },
+  "2021": {
+    "summary": "SEC 실무진은 2021년 1월 게임스톱 거래를 중심으로 주식·옵션 시장의 변동성과 개인 주문 처리 구조를 검토했습니다.",
+    "memo": "SEC 보고서에서 1월의 거래 기록과 10월의 사후 분석을 구분해 보세요. 사건이 진행될 때 투자자가 볼 수 있던 자료는 무엇인가요?",
+    "sourceName": "미 SEC 2021년 시장 구조 보고서 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212"
   },
   "2022": {
     "summary": "미 연준은 3월 금리 목표 범위를 인상했고, 6월에는 인상 폭을 0.75%p로 높였습니다.",
@@ -44,20 +224,44 @@
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
     "sourceName": "미 연준 FOMC 회의 기록"
   },
+  "2023": {
+    "summary": "캘리포니아 금융당국이 은행을 폐쇄하고 미국 연방예금보험공사(FDIC)를 파산관재인으로 지정했습니다.",
+    "memo": "실리콘밸리은행 폐쇄를 결정한 기관과 파산관재인으로 지정된 기관을 찾아보세요. 두 기관의 역할이 다릅니다.",
+    "sourceName": "FDIC 의회 증언",
+    "sourceUrl": "https://www.fdic.gov/news/speeches/2023/spmar2923.html"
+  },
+  "2024": {
+    "summary": "미국 증권거래위원회가 여러 현물 비트코인 상장지수상품의 상장과 거래를 승인했습니다.",
+    "memo": "SEC가 승인한 대상은 거래소에 상장되는 상품입니다. 2017년 비트코인 선물 상장과 비교해 투자자가 거래하는 계약을 구분해 보세요.",
+    "sourceName": "미 SEC 위원장 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"
+  },
   "2025": {
-    "summary":"대체거래소 출범, 공매도 재개와 상법 개정이 이어졌고, 코스피는 10월에 처음 4,000선을 넘겨 마감했습니다.",
-    "memo":"거래 제도 시행일과 지수 기록을 나란히 놓고, 연말 대비 연간 변화와 각 월의 첫날·마지막 날 사이 변화를 각각 확인해 보세요.",
-    "sourceUrl":"https://www.fsc.go.kr/no010101/84216",
-    "sourceName":"금융위원회 공매도 전면 재개 발표",
-    "highlights":[
-      {"label":"Theme","title":"복수 거래소 체제","summary":"넥스트레이드가 3월 4일 국내 최초의 대체거래소로 출범했습니다.","sourceUrl":"https://www.fsc.go.kr/no040101?cnId=2628","sourceName":"금융위원회 대체거래소 출범 안내"},
-      {"label":"Surprise","title":"코스피 첫 4,000선 마감","summary":"코스피는 10월 27일 4,042.83에 마감했습니다.","sourceUrl":"https://gonggamadmin.korea.kr/newsContentView.es?code_cd=0105000000&content=NC002&mid=a12603000000&news_id=651802d7-bc3d-44f8-8538-5d9a4dd77dc7&section_id=NCCD_POLICY","sourceName":"대한민국 정책주간지 K-공감"}
+    "summary": "대체거래소 출범, 공매도 재개와 상법 개정이 이어졌고, 코스피는 10월에 처음 4,000선을 넘겨 마감했습니다.",
+    "memo": "거래 제도 시행일과 지수 기록을 나란히 놓고, 연말 대비 연간 변화와 각 월의 첫날·마지막 날 사이 변화를 각각 확인해 보세요.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/84216",
+    "sourceName": "금융위원회 공매도 전면 재개 발표",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "복수 거래소 체제",
+        "summary": "넥스트레이드가 3월 4일 국내 최초의 대체거래소로 출범했습니다.",
+        "sourceUrl": "https://www.fsc.go.kr/no040101?cnId=2628",
+        "sourceName": "금융위원회 대체거래소 출범 안내"
+      },
+      {
+        "label": "Surprise",
+        "title": "코스피 첫 4,000선 마감",
+        "summary": "코스피는 10월 27일 4,042.83에 마감했습니다.",
+        "sourceUrl": "https://gonggamadmin.korea.kr/newsContentView.es?code_cd=0105000000&content=NC002&mid=a12603000000&news_id=651802d7-bc3d-44f8-8538-5d9a4dd77dc7&section_id=NCCD_POLICY",
+        "sourceName": "대한민국 정책주간지 K-공감"
+      }
     ]
   },
   "2026": {
-    "summary":"한국은행은 7월과 8월에 기준금리를 각각 0.25%p 인상했고 10월에 3.00%를 유지했습니다.",
-    "memo":"7월, 8월, 10월의 통화정책 결정일을 순서대로 놓고 원/달러 환율의 월말 관측값도 살펴보세요.",
-    "sourceUrl":"https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11065823",
-    "sourceName":"한국은행 10월 통화정책방향"
+    "summary": "한국은행은 7월과 8월에 기준금리를 각각 0.25%p 인상했고 10월에 3.00%를 유지했습니다.",
+    "memo": "7월, 8월, 10월의 통화정책 결정일을 순서대로 놓고 원/달러 환율의 월말 관측값도 살펴보세요.",
+    "sourceUrl": "https://www.bok.or.kr/portal/bbs/P0000559/view.do?menuNo=200690&nttId=11065823",
+    "sourceName": "한국은행 10월 통화정책방향"
   }
 }

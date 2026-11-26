@@ -1,8 +1,8 @@
 {
   "date": "2023-12-31",
   "basis": "별도 재무제표",
-  "scope": "수록 10개사 자본총계 순위",
-  "confirmedTopCount": 8,
+  "scope": "자본총계 상위 10개사",
+  "confirmedTopCount": 10,
   "sourceName": "대신증권 KIND 공시 · 주요 국내 금융투자회사 재무 현황",
   "sourceUrl": "https://kind.krx.co.kr/external/2024/04/29/000024/20240429000034/10601.htm",
   "companies": [
@@ -88,5 +88,7 @@
       "equity": 2853195,
       "capital": 434867
     }
-  ]
+  ],
+  "rankSourceUrl": "https://www.wikileaks-kr.org/news/articleView.html?idxno=150265",
+  "rankSourceName": "금융투자협회 자료를 대조한 2022·2023년 말 자기자본 순위표"
 }
