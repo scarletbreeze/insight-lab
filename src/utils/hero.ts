@@ -2,6 +2,7 @@ import legendData from '../../data/hero/legends.json';
 import screenData from '../../data/hero/screens.json';
 import workflowData from '../../data/hero/recipes.json';
 import guideData from '../../data/hero/screen-guides.json';
+import essentialData from '../../data/hero/essentials.json';
 
 interface ScreenGuide {
   image?: string;
@@ -14,6 +15,8 @@ interface ScreenGuide {
 }
 
 export const legends = legendData;
+export const essentials = essentialData;
+export type EssentialCriterion = keyof typeof essentialData.criteria;
 
 export const screens = screenData;
 export const workflows = workflowData;

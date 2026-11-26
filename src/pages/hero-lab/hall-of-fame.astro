@@ -1,8 +1,8 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
-import ScreenCard from '../../components/hero/ScreenCard.astro';
 import { sitePath } from '../../utils/paths';
-import { legends, screenByNumber, workflows } from '../../utils/hero';
+import { essentials, legends, screenByNumber, workflows } from '../../utils/hero';
+import type { EssentialCriterion } from '../../utils/hero';
 import mentions from '../../../data/voc/screen-mentions.json';
 const ranked = Object.entries(mentions.screens).sort(([a, x], [b, y]) => y - x || a.localeCompare(b));
 const inquiries = Object.values(mentions.years).reduce((sum, year) => sum + year.categories['문의'], 0);
@@ -10,13 +10,33 @@ const cutoff = ranked[9]?.[1] ?? 0;
 const leaders = ranked.filter(([, count]) => count >= cutoff);
 const remaining = ranked.filter(([, count]) => count < cutoff);
 
-const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenByNumber);
+const essentialScreens = essentials.screens.map((entry) => ({ ...entry, screen: screenByNumber(entry.screenNo) }));
+const evidenceHref = (url: string) => {
+  if (/^https?:/.test(url)) return url;
+  const [path, hash] = url.split('#');
+  return sitePath(path) + (hash ? '#' + hash : '');
+};
 ---
 <HeroLayout title="Hall of Fame">
   <section class="hero-section">
     <h2>Hero Essential</h2>
-    <p>시장 파악, 종목 검색, 차트 분석을 시작할 때 참고할 화면입니다.</p>
-    <div class="hero-grid">{essentials.map((screen) => <ScreenCard screen={screen} />)}</div>
+    <p>{essentials.rule} 기준별 근거는 공식 가이드·도움말, 『{legends.book.title}』 프로필, 추천 조합과 공식 도움말의 화면 연결, 공개 문의 제목의 화면번호 언급 건수입니다.</p>
+    <div class="hero-grid">
+      {essentialScreens.map(({ screen, reason, criteria, evidence }) => (
+        <article class="hero-card hero-essential">
+          <span class="category">{screen.number} · {screen.purpose}</span>
+          <a href={sitePath('hero-lab/screens/' + screen.number)}><strong>{screen.title}</strong></a>
+          <p>{reason}</p>
+          <ul class="hero-chips hero-criteria" aria-label="선정 기준">
+            {criteria.map((key) => <li>{essentials.criteria[key as EssentialCriterion]}</li>)}
+          </ul>
+          <details>
+            <summary>근거 {evidence.length}개</summary>
+            <ul>{evidence.map(({ label, url }) => <li><a href={evidenceHref(url)}>{label}</a></li>)}</ul>
+          </details>
+        </article>
+      ))}
+    </div>
   </section>
   <section class="hero-section" id="screen-mentions">
     <h2>Most Asked · 문의 제목에 나온 화면</h2>

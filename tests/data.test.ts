@@ -171,6 +171,48 @@ test('Hero screen numbers and workflow references resolve to sourced records', (
   }
 });
 
+test('Hero Essential entries cite evidence per criterion, every screen has an observation and map branches stay balanced', () => {
+  const screens = readJson<{ number: string; purpose: string; styles: string[]; observation: string }[]>('hero/screens.json');
+  const catalog = new Map(screens.map((screen) => [screen.number, screen]));
+  for (const { number, observation } of screens) assert.ok(observation.trim().length > 0, number);
+  const essentials = readJson<{ rule: string; criteria: Record<string, string>; screens: { screenNo: string; reason: string; criteria: string[]; evidence: { label: string; url: string }[] }[] }>('hero/essentials.json');
+  const mentions = readJson<{ screens: Record<string, number> }>('voc/screen-mentions.json').screens;
+  const legends = readJson<{ profiles: { screens: string[] }[] }>('hero/legends.json').profiles;
+  const workflows = readJson<{ slug: string; steps: { number: string }[] }[]>('hero/recipes.json');
+  const guides = readJson<Record<string, { relatedHelp?: { number: string }[] }>>('hero/screen-guides.json');
+  assert.deepEqual(Object.keys(essentials.criteria).sort(), ['connectivity', 'expert-usage', 'official-guide', 'usefulness']);
+  assert.ok(essentials.rule.includes('둘 이상') && !essentials.rule.includes('인기 화면'));
+  assert.equal(new Set(essentials.screens.map(({ screenNo }) => screenNo)).size, essentials.screens.length);
+  for (const { screenNo, reason, criteria, evidence } of essentials.screens) {
+    assert.ok(catalog.has(screenNo), screenNo);
+    assert.ok(reason.trim().length > 0 && reason.length <= 60, screenNo);
+    assert.ok(criteria.length >= 2 && criteria.every((key) => key in essentials.criteria), screenNo);
+    assert.ok(evidence.length >= 1, screenNo);
+    for (const { label, url } of evidence) {
+      assert.ok(label.trim(), screenNo);
+      assert.ok(/^https:\/\/download\.kiwoom\.com\//.test(url) || /^hero-lab\/[a-z-]+(\/\d{4})?(#[a-z0-9-]+)?$/.test(url), url);
+      assert.ok(!/인기|popular/i.test(label), label);
+      const count = label.match(/공개 문의 제목 언급 (\d+)건/);
+      if (count) assert.equal(Number(count[1]), mentions[screenNo], screenNo);
+    }
+    if (criteria.includes('official-guide')) assert.ok(evidence.some(({ url }) => url.startsWith('https://download.kiwoom.com/')), screenNo);
+    if (criteria.includes('expert-usage')) assert.ok(legends.some((profile) => profile.screens.includes(screenNo)), screenNo);
+    if (criteria.includes('connectivity')) {
+      assert.ok(workflows.some(({ steps }) => steps.some(({ number }) => number === screenNo))
+        || Object.values(guides).some(({ relatedHelp }) => relatedHelp?.some(({ number }) => number === screenNo)), screenNo);
+    }
+    if (criteria.includes('usefulness')) assert.ok((mentions[screenNo] ?? 0) >= 20, screenNo);
+    for (const slug of evidence.map(({ url }) => url.match(/^hero-lab\/recipes#([a-z-]+)$/)?.[1]).filter(Boolean)) {
+      assert.ok(workflows.some((workflow) => workflow.slug === slug), slug);
+    }
+  }
+  const purposes = ['시장 파악', '종목 발굴', '종목 분석', '주문', '계좌', '파생', '해외'];
+  for (const purpose of purposes) {
+    const nodes = screens.filter((screen) => screen.purpose === purpose || (purpose === '파생' && screen.styles.includes('파생')));
+    assert.ok(nodes.length >= 20, purpose + ' ' + nodes.length);
+  }
+});
+
 test('Official directory keeps distinct numbers, searchable names and image dimensions for every guide', () => {
   const index = readJson<{ screens: { number: string; title: string; group: string; menuTitles?: string[] }[] }>('hero/official-directory.json');
   const entries = new Map(index.screens.map(row => [row.number, row]));

@@ -1,0 +1,154 @@
+{
+  "rule": "공식 가이드·전문가 활용·화면 연결·활용도 네 기준 가운데 둘 이상에 공개 근거가 있는 화면을 골랐으며, 인기 순위가 아닙니다. 활용도의 언급 건수는 공개 문의 제목에 적힌 화면번호를 센 것이며 순위가 아닙니다.",
+  "criteria": {
+    "official-guide": "공식 가이드",
+    "expert-usage": "전문가 활용",
+    "connectivity": "화면 연결",
+    "usefulness": "활용도"
+  },
+  "screens": [
+    {
+      "screenNo": "0101",
+      "reason": "종목 시세·호가·뉴스를 한 화면에서 보는 기본 현재가 화면",
+      "criteria": [
+        "official-guide",
+        "expert-usage",
+        "connectivity"
+      ],
+      "evidence": [
+        {
+          "label": "영웅문 100% 활용하기 · 현재가 설정",
+          "url": "https://download.kiwoom.com/hero4_help_new/hero100/qa31.htm"
+        },
+        {
+          "label": "트레이딩의 전설 5장 만쥬·7장 캐리 프로필",
+          "url": "hero-lab/hall-of-fame#legend-5"
+        },
+        {
+          "label": "추천 조합 2개(관심종목 화면 설정과 연동·호가와 체결 기록 복기)",
+          "url": "hero-lab/recipes#official-watchlist-review"
+        }
+      ]
+    },
+    {
+      "screenNo": "0130",
+      "reason": "다른 화면의 종목 출발점이 되는 관심종목 관리 화면",
+      "criteria": [
+        "official-guide",
+        "expert-usage",
+        "connectivity",
+        "usefulness"
+      ],
+      "evidence": [
+        {
+          "label": "영웅문 100% 활용하기 · 관심종목 화면 따라잡기",
+          "url": "https://download.kiwoom.com/hero4_help_new/hero100/qa09.htm"
+        },
+        {
+          "label": "트레이딩의 전설 프로필 9개 중 7개가 함께 볼 화면으로 연결",
+          "url": "hero-lab/hall-of-fame#legend-1"
+        },
+        {
+          "label": "추천 조합 3개(시장에서 관심종목까지·관심종목 화면 설정과 연동·종가 관찰에서 장 후 복기까지)",
+          "url": "hero-lab/recipes#market-to-watchlist"
+        },
+        {
+          "label": "공개 문의 제목 언급 23건",
+          "url": "hero-lab/hall-of-fame#screen-mentions"
+        }
+      ]
+    },
+    {
+      "screenNo": "0150",
+      "reason": "조건식으로 종목을 걸러 내는 종목 발굴의 중심 화면",
+      "criteria": [
+        "official-guide",
+        "expert-usage",
+        "connectivity",
+        "usefulness"
+      ],
+      "evidence": [
+        {
+          "label": "키움증권 조건검색 기능별 공식 FAQ(PDF)",
+          "url": "https://download.kiwoom.com/hero4_help_doc/KiwoomHero4_AdvancedSearch.pdf"
+        },
+        {
+          "label": "트레이딩의 전설 6장 바른다른 프로필",
+          "url": "hero-lab/hall-of-fame#legend-6"
+        },
+        {
+          "label": "공식 도움말 9개 화면(0151·0152·0155 등)에서 연결, 추천 조합 1개",
+          "url": "hero-lab/recipes#screen-and-research"
+        },
+        {
+          "label": "공개 문의 제목 언급 25건",
+          "url": "hero-lab/hall-of-fame#screen-mentions"
+        }
+      ]
+    },
+    {
+      "screenNo": "0600",
+      "reason": "가격 흐름과 기술적 지표를 보는 기본 종합차트",
+      "criteria": [
+        "official-guide",
+        "expert-usage",
+        "connectivity",
+        "usefulness"
+      ],
+      "evidence": [
+        {
+          "label": "영웅문4 화면 도움말 [0600] 화면설명과 차트 공통기능",
+          "url": "https://download.kiwoom.com/hero4_help_new/0600.htm"
+        },
+        {
+          "label": "트레이딩의 전설 1장 불개미 프로필",
+          "url": "hero-lab/hall-of-fame#legend-1"
+        },
+        {
+          "label": "공식 도움말 12개 화면(0111·0612·0620 등)에서 연결, 추천 조합 2개",
+          "url": "hero-lab/recipes#screen-and-research"
+        },
+        {
+          "label": "공개 문의 제목 언급 32건",
+          "url": "hero-lab/hall-of-fame#screen-mentions"
+        }
+      ]
+    },
+    {
+      "screenNo": "0641",
+      "reason": "업종·선물·옵션의 당일 등락률을 한 차트에서 실시간 비교",
+      "criteria": [
+        "official-guide",
+        "connectivity"
+      ],
+      "evidence": [
+        {
+          "label": "영웅문4 화면 도움말 [0641] 화면설명",
+          "url": "https://download.kiwoom.com/hero4_help_new/0641.htm"
+        },
+        {
+          "label": "추천 조합 ‘시장에서 관심종목까지’의 시작 화면",
+          "url": "hero-lab/recipes#market-to-watchlist"
+        }
+      ]
+    },
+    {
+      "screenNo": "0780",
+      "reason": "코스피·코스닥·선물·옵션의 투자자별 매매를 한곳에서 조회",
+      "criteria": [
+        "official-guide",
+        "connectivity"
+      ],
+      "evidence": [
+        {
+          "label": "영웅문4 화면 도움말 [0780] 화면설명",
+          "url": "https://download.kiwoom.com/hero4_help_new/0780.htm"
+        },
+        {
+          "label": "공식 도움말 4개 화면(0111·0334·0402·1057)에서 연결, 추천 조합 1개",
+          "url": "hero-lab/recipes#market-to-watchlist"
+        }
+      ]
+    }
+  ]
+}

@@ -67,6 +67,7 @@ const mentionCount = (mentions.screens as Record<string, number>)[screen.number]
   </section>}
   {similar.length > 0 && <section class="hero-section">
     <h2>비슷한 화면</h2>
+    <p>같은 목적·유형·상품 기준 자동 추천이며, 편집자가 고른 목록이 아닙니다.</p>
     <div class="hero-grid">{similar.map((item) => <ScreenCard screen={item} />)}</div>
   </section>}
   {companions.length > 0 && <section class="hero-section">
