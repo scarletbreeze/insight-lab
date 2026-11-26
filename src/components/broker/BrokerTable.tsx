@@ -10,6 +10,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
   const [period, setPeriod] = useState(mode === 'compare' ? interimProfit.end : String(brokerYears[0]));
   const [left, setLeft] = useState(brokers[0].id);
   const [right, setRight] = useState(brokers[1].id);
+  const [comparisonReady, setComparisonReady] = useState(false);
   const [fieldKey, setFieldKey] = useState<(typeof fields)[number]['key']>('netIncome');
   useEffect(() => {
     if (mode !== 'compare') return;
@@ -24,6 +25,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
       setLeft(first);
       setRight(second === first ? fallback : second);
       setPeriod(brokerYears.some((y) => String(y) === requested) ? requested : interimProfit.end);
+      setComparisonReady(true);
     }
     restore();
     window.addEventListener('popstate', restore);
@@ -54,21 +56,21 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
   const rightInterim = interimProfit.companies.find(({ id }) => id === right);
   const comparisonFields = isInterim ? fields.filter(({ key }) => key === 'netIncome' || key === 'operatingIncome') : fields;
   const label = (id: string) => brokers.find((broker) => broker.id === id)?.name ?? id;
-  const rightBrokerSelect = <select value={right} onChange={(event) => selectComparison(left, event.target.value, period)}>
+  const rightBrokerSelect = <select disabled={!comparisonReady} value={right} onChange={(event) => selectComparison(left, event.target.value, period)}>
     {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === left}>{name}</option>)}
   </select>;
 
   return <section className="lab-block">
     {mode === 'compare' && <h2>비교할 두 증권사</h2>}
     <div className="lab-controls">
-      <label>{mode === 'compare' ? '연결 실적 기간' : '결산 연도'} <select value={period} onChange={(event) => mode === 'compare' ? selectComparison(left, right, event.target.value) : setPeriod(event.target.value)}>
+      <label>{mode === 'compare' ? '연결 실적 기간' : '결산 연도'} <select disabled={mode === 'compare' && !comparisonReady} value={period} onChange={(event) => mode === 'compare' ? selectComparison(left, right, event.target.value) : setPeriod(event.target.value)}>
         {mode === 'compare' && <option value={interimProfit.end}>{interimProfit.label}</option>}
         {brokerYears.map((year) => <option key={year} value={year}>{mode === 'compare' ? year + '년 결산' : year}</option>)}
       </select></label>
       {mode === 'rank' ? <label>순위 지표 <select value={fieldKey} onChange={(event) => setFieldKey(event.target.value as typeof fieldKey)}>
         {fields.map(({ key, title }) => <option key={key} value={key}>{title}</option>)}
       </select></label> : <>
-        <label>첫 번째 증권사 <select value={left} onChange={(event) => selectComparison(event.target.value, right, period)}>
+        <label>첫 번째 증권사 <select disabled={!comparisonReady} value={left} onChange={(event) => selectComparison(event.target.value, right, period)}>
           {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === right}>{name}</option>)}
         </select></label>
         <label>두 번째 증권사 {rightBrokerSelect}</label>
