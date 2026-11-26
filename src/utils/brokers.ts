@@ -1,4 +1,5 @@
 import review2021 from '../../data/brokers/2021-equity-review.json';
+import { formatKrwMillion } from './krw';
 import brokerData from '../../data/brokers/brokers.json';
 import metricData from '../../data/brokers/metrics.json';
 import events from '../../data/brokers/turning-points.json';
@@ -133,5 +134,5 @@ export const fields = [
 
 export function formatBrokerMetric(value: number | null | undefined, percent: boolean) {
   if (value === null || value === undefined) return '자료 확인 중';
-  return percent ? value.toFixed(2) + '%' : (value / 100).toLocaleString('ko-KR', { maximumFractionDigits: 2 }) + '억 원';
+  return percent ? value.toFixed(2) + '%' : formatKrwMillion(value);
 }

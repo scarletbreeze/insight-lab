@@ -114,5 +114,26 @@
       "ambiguous": 2,
       "differentTopic": 3
     }
+  },
+  "contextReview": {
+    "date": "2026-11-27",
+    "reviewer": "lead-ai",
+    "ownerConfirmed": false,
+    "holdout": {
+      "rows": 27,
+      "differences": 14,
+      "differencesAgreeWithBlindLabel": 14,
+      "differencesResolvedByCurrentRules": 3,
+      "held": 13,
+      "heldConfirmedAuto": 2,
+      "heldUndeterminable": 11
+    },
+    "focus2025": {
+      "rows": 36,
+      "agree": 24,
+      "differences": 7,
+      "undeterminable": 5
+    },
+    "ruleCandidates": 7
   }
 }

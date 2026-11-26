@@ -1,4 +1,5 @@
 import filings from '../../data/brokers/disclosed-segments.json';
+import { formatEok } from './krw';
 
 interface Filing {
   basis: string;
@@ -38,4 +39,4 @@ const businessTags: Record<string, string> = {
 
 export const segmentTag = (name: string) => businessTags[name] ?? '기타·미분류';
 export const formatSegmentAmount = (amount: number, unit: string) =>
-  (amount / (unit === '백만원' ? 100 : 100_000)).toLocaleString('ko-KR', { maximumFractionDigits: 1 });
+  formatEok(amount / (unit === '백만원' ? 100 : 100_000));

@@ -10,7 +10,7 @@ export default function BrokerSegmentPeriod({ id, year, interim, detailUrl }: {
     return <p>{period} 부문별 공시 수치 미수록 · <a href={detailUrl + '#disclosed-segments-' + id}>수록 기간 확인</a></p>;
   }
   return <div className="lab-table-wrap"><table className="lab-table">
-    <caption>{period} · {filing.basis} {filing.metric} · 억 원</caption>
+    <caption>{period} · {filing.basis} {filing.metric} · 조·억 원</caption>
     <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th><th scope="col">{filing.metric}</th></tr></thead>
     <tbody>{filing.segments.map(({ name, amounts }) => <tr key={name}>
       <th scope="row">{name}</th><td>{segmentTag(name)}</td><td>{formatSegmentAmount(amounts[index], filing.unit)}</td>

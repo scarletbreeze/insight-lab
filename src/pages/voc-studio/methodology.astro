@@ -88,6 +88,7 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
     </table></div>
     <details><summary>표본 선정 방법과 해석</summary><p>공개 원글의 식별자를 고정된 방식으로 해시한 뒤 연도별로 값이 작은 순서대로 골랐습니다. 제목 검토는 AI로 수행했고, 자동 분류는 기존의 제목·본문 키워드 규칙을 사용했습니다. 연도별 표본이 작아 전체 문의의 분류 정확도를 추정하기 어렵습니다.</p></details>
     <p>판별 가능한 제목과 규칙 결과가 달랐던 경우 중 {annualReview.differences.unclassified}건은 분류 용어가 없었고, {annualReview.differences.ambiguous}건은 여러 주제에 해당했습니다. {annualReview.differences.differentTopic}건은 규칙이 다른 단일 주제를 선택했습니다.</p>
+    <p>{annualReview.contextReview.date}에 보류·불일치 제목을 문맥으로 다시 검토했습니다. 불일치 {annualReview.contextReview.holdout.differences}건은 모두 블라인드 검토 결과가 맞았고 그중 {annualReview.contextReview.holdout.differencesResolvedByCurrentRules}건은 현재 규칙에서 이미 같은 주제로 분류됩니다. 보류 {annualReview.contextReview.holdout.held}건 중 {annualReview.contextReview.holdout.heldUndeterminable}건은 제목이 '문의'처럼 내용이 없어 본문 기반 자동 결과를 유지했습니다. 2025년 집중 표본 {annualReview.contextReview.focus2025.rows}건은 {annualReview.contextReview.focus2025.agree}건 일치, {annualReview.contextReview.focus2025.differences}건 불일치, {annualReview.contextReview.focus2025.undeterminable}건 판정 불가였습니다. 규칙 후보 {annualReview.contextReview.ruleCandidates}개는 새 표본으로 검증하기 전까지 적용하지 않습니다. 이 검토는 AI가 수행했고 운영자 확인은 {annualReview.contextReview.ownerConfirmed ? '완료' : '대기 중'}입니다.</p>
     <details><summary>제목에서 판별한 주제별 결과</summary>
       <ul class="lab-list">{annualReview.topics.map(({ topic, reviewed, agreement }) => <li>{labels[topic]} · {reviewed}건 중 {agreement}건 일치</li>)}</ul>
     </details>

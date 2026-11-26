@@ -31,7 +31,7 @@ export default function KdicRankCheck({ date }: {date: string}) {
     </table></div>
     {year === '2021' && <section aria-label="별도 자본 대조">
       <h3>58개사 안에서 별도 자본으로 다시 비교하면</h3>
-      <p>키움의 별도 자본은 약 37,933억 원입니다. 예보 명단 58개사에서 키움은 9위로 확인됩니다. 대신의 별도 자본 20,262.76억 원을 기준으로 한 확인 내역은 다음과 같습니다.</p>
+      <p>키움의 별도 자본은 약 3조 7,933억 원(37,933억 원)입니다. 예보 명단 58개사에서 키움은 9위로 확인됩니다. 대신의 별도 자본 20,262.76억 원을 기준으로 한 확인 내역은 다음과 같습니다.</p>
       <ul className="lab-list">
         <li>수록 10개사와 유안타는 회사 공시로 대조했습니다.</li>
         <li>{check.belowThreshold.count}개사는 총자산이 최대 {check.belowThreshold.maxAssets.toLocaleString('ko-KR')}억 원이어서 자본이 대신보다 작습니다.</li>
