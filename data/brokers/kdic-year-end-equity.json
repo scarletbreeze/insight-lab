@@ -1,0 +1,62 @@
+{
+  "2020": {
+    "records": 57,
+    "boundary": [
+      {
+        "rank": 9,
+        "name": "키움",
+        "equity": 25143.0
+      },
+      {
+        "rank": 10,
+        "name": "대신",
+        "equity": 19168.0
+      },
+      {
+        "rank": 11,
+        "name": "유안타",
+        "equity": 13565.0
+      }
+    ]
+  },
+  "2021": {
+    "records": 58,
+    "boundary": [
+      {
+        "rank": 9,
+        "name": "키움",
+        "equity": 38461.0
+      },
+      {
+        "rank": 10,
+        "name": "유안타",
+        "equity": 25854.0
+      },
+      {
+        "rank": 11,
+        "name": "대신",
+        "equity": 21162.0
+      }
+    ]
+  },
+  "2024": {
+    "records": 59,
+    "boundary": [
+      {
+        "rank": 9,
+        "name": "키움",
+        "equity": 49717.0
+      },
+      {
+        "rank": 10,
+        "name": "대신",
+        "equity": 31129.0
+      },
+      {
+        "rank": 11,
+        "name": "교보",
+        "equity": 19912.0
+      }
+    ]
+  }
+}

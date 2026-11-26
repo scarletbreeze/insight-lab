@@ -1,5 +1,6 @@
 ---
 import MarketLayout from '../../components/market/MarketLayout.astro';
+import koreanCoverage from '../../../data/market/months/kr-equity-coverage.json';
 import raw from '../../../data/market/months/equity-rankings.json';
 import spy from '../../../data/market/months/spy-equity-rankings.json';
 import annual from '../../../data/market/annual-equity-rankings.json';
@@ -42,6 +43,19 @@ const years = coverage(annual, spyAnnual);
     </ul> : <p>연간 순위를 공개할 수 있는 가격 자료를 확인 중입니다.</p>}
   </section>
 
+  <section class="lab-block" id="kr-coverage">
+    <h2>한국 ETF 보유 종목의 월별 검증 범위</h2>
+    <p>각 월 첫 거래일의 KODEX 200과 KODEX 코스닥150 보유 주식을 일별 시세와 대조했습니다. 모든 관측일에 종가가 이어지고 상장주식수가 일정했던 종목 수를 표시합니다. 순위는 가격 자료의 공개 이용 범위를 확인 중입니다.</p>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <caption>월별 ETF 보유 주식과 가격 대조 결과 · 종목 수</caption>
+      <thead><tr><th scope="col">기간</th><th scope="col">보유 주식</th><th scope="col">검사 통과</th><th scope="col">추가 확인</th><th scope="col">보유 명세 원문</th></tr></thead>
+      <tbody>{Object.entries(koreanCoverage).map(([period, row]) => <tr>
+        <th scope="row"><a href={sitePath('market-time-capsule/' + period.replace('-', '/')) + '#equity-rankings'}>{row.first}~{row.last}</a></th>
+        <td>{row.universe}</td><td>{row.eligible}</td><td>{Object.entries(row.excluded).map(([reason, count]) => <div>{reason} · {count}개</div>)}</td>
+        <td><a href={row.holdingsSources[0]}>KODEX 200</a> · <a href={row.holdingsSources[1]}>코스닥150</a></td>
+      </tr>)}</tbody>
+    </table></div>
+  </section>
   <section class="lab-block">
     <h2>월별 수익률 산정</h2>
     <ol class="lab-list">

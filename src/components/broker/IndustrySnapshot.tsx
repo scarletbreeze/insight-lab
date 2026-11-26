@@ -1,3 +1,4 @@
+import KdicRankCheck from './KdicRankCheck';
 import { useState } from 'react';
 import { defaultIndustryPeriod, formatBrokerMetric, formatIndustryRank, industryPeriods } from '../../utils/brokers';
 
@@ -43,6 +44,7 @@ export default function IndustrySnapshot({ view, brokerBase }: { view: 'cards' |
           {changes.size > 0 && <td>{formatBrokerMetric(changes.get(id), true)}</td>}</tr>
       ))}</tbody>
     </table></div>}
+    <KdicRankCheck date={period.date} />
     {period.sourceUrl && <p><a href={period.sourceUrl}>{period.sourceName}</a></p>}
     {changes.size > 0 && previous?.sourceUrl && <p><a href={previous.sourceUrl}>{previous.label} 자료</a></p>}
     {additionalSources.length > 0 && <details>

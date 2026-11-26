@@ -455,3 +455,16 @@ test('VOC context references valid topics and has sources for all five years', (
     assert.ok(items.filter(({ date }) => date.startsWith(String(year))).length >= 5);
   }
 });
+
+test('Korean monthly research reconciles eligibility and points to dated fund holdings', () => {
+  type Coverage = { first: string; last: string; universe: number; eligible: number; excluded: Record<string, number>; holdingsSources: string[] };
+  const periods = readJson<Record<string, Coverage>>('market/months/kr-equity-coverage.json');
+  const korea = readJson<{monthly: Record<string, {firstDate: string; lastDate: string}>}>('market/korea-index-closes.json');
+  for (const [period, data] of Object.entries(periods)) {
+    assert.equal(data.first, korea.monthly[period].firstDate);
+    assert.equal(data.last, korea.monthly[period].lastDate);
+    assert.equal(data.eligible + Object.values(data.excluded).reduce((a,b) => a + b, 0), data.universe);
+    assert.equal(new Set(data.holdingsSources).size, 2);
+    assert.ok(data.holdingsSources.every((url) => new URL(url).searchParams.get('gijunYMD') === data.first.replaceAll('-', '.')));
+  }
+});
