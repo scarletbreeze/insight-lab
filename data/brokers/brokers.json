@@ -44,7 +44,7 @@
   {
     "id": "nh-investment",
     "name": "NH투자증권",
-    "character": "위탁매매, 자산관리, 기업금융 등을 영위하는 종합증권사",
+    "character": "영업 실적을 세일즈·IB·트레이딩·본사 및 기타 부문으로 나눠 공시하는 증권사",
     "segments": [
       "Brokerage",
       "금융상품판매"
@@ -61,7 +61,8 @@
         "revenue": "펀드·랩·신탁 관련 수익"
       }
     ],
-    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/13/002073/20260313005093/10111.htm"
+    "sourceUrl": "https://kind.krx.co.kr/external/2026/03/13/002073/20260313005093/10111.htm",
+    "characterSourceUrl": "https://kind.krx.co.kr/external/2026/06/16/000072/20260616000083/10601.htm"
   },
   {
     "id": "samsung",
@@ -90,7 +91,7 @@
   {
     "id": "korea-investment",
     "name": "한국투자증권",
-    "character": "자기자본 8조원 이상 종합금융투자사업자로 지정된 증권사",
+    "character": "2025년 11월 자기자본 8조 원 이상 종합금융투자사업자로 지정된 증권사",
     "segments": [
       "위탁매매(BK)",
       "자산관리(AM)",
@@ -110,7 +111,8 @@
         "revenue": "증권 인수·주선 수수료"
       }
     ],
-    "sourceUrl": "https://kind.krx.co.kr/external/2022/09/07/000080/20220907000110/10601.htm"
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/09/07/000080/20220907000110/10601.htm",
+    "characterSourceUrl": "https://www.fsc.go.kr/no010101/85692"
   },
   {
     "id": "meritz",
@@ -138,10 +140,14 @@
   {
     "id": "kb",
     "name": "KB증권",
-    "character": "KB금융지주가 보유한 금융투자회사",
-    "segments": [],
-    "map": [],
-    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1445930/000119312526094923/d265234dex991.htm"
+    "character": "KB금융지주의 증권 자회사",
+    "segments": ["위탁영업/자산관리", "기업금융", "자산운용", "기타사업"],
+    "map": [
+      {"customer":"개인·법인·기관 투자자","business":"위탁영업/자산관리","revenue":"수탁수수료·자산관리수수료"},
+      {"customer":"자금을 조달하는 기업","business":"기업금융","revenue":"주식·회사채 인수 및 주선 수수료"}
+    ],
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20261116001123&dcmNo=11659624&eleId=22&offset=744534&length=966553&dtd=dart4.xsd",
+    "characterSourceUrl": "https://www.kbfg.com/kor/about/group/info.htm"
   },
   {
     "id": "hana",

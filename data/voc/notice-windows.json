@@ -14,7 +14,7 @@
       "date": "2026-09-03",
       "topic": "hours",
       "before": 1,
-      "after": 28
+      "after": 27
     },
     {
       "noticeId": "00002469",
@@ -27,8 +27,8 @@
       "noticeId": "general-9183",
       "date": "2026-05-15",
       "topic": "hts",
-      "before": 158,
-      "after": 145
+      "before": 159,
+      "after": 147
     },
     {
       "noticeId": "00002466",
@@ -52,13 +52,6 @@
       "after": 3
     },
     {
-      "noticeId": "00002493",
-      "date": "2026-10-01",
-      "topic": "hours",
-      "before": 18,
-      "after": 8
-    },
-    {
       "noticeId": "00002503",
       "date": "2026-11-10",
       "topic": "credit",
@@ -70,7 +63,7 @@
       "date": "2023-03-17",
       "topic": "auth",
       "before": 17,
-      "after": 8
+      "after": 9
     },
     {
       "noticeId": "00002481",
@@ -80,25 +73,25 @@
       "after": 4
     },
     {
-      "noticeId": "00002470",
-      "date": "2026-05-27",
-      "topic": "products",
-      "before": 24,
-      "after": 17
+      "noticeId": "00002493",
+      "date": "2026-10-01",
+      "topic": "hours",
+      "before": 16,
+      "after": 8
     },
     {
       "noticeId": "00002072",
       "date": "2022-09-26",
       "topic": "orders",
-      "before": 12,
+      "before": 11,
       "after": 18
     },
     {
-      "noticeId": "00002471",
-      "date": "2026-05-29",
-      "topic": "hours",
-      "before": 9,
-      "after": 3
+      "noticeId": "00002470",
+      "date": "2026-05-27",
+      "topic": "products",
+      "before": 24,
+      "after": 17
     },
     {
       "noticeId": "00002476",
@@ -155,6 +148,13 @@
       "topic": "account",
       "before": 15,
       "after": 10
+    },
+    {
+      "noticeId": "00002471",
+      "date": "2026-05-29",
+      "topic": "hours",
+      "before": 8,
+      "after": 3
     },
     {
       "noticeId": "00002467",

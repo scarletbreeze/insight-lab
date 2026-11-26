@@ -106,6 +106,31 @@ Ask when conflicting requirements materially change the outcome, a destructive o
 
 Choose tools according to the evidence needed. Use the PDF skill when a report's table layout or footnotes affect interpretation, spreadsheet tools for workbook values and units, and a browser for navigation, responsive layout, or interaction checks. For a design comparison or release review, use the repository skill at `.agents/skills/insight-lab-review/SKILL.md`.
 
+### Parallel service work
+
+For a development batch spanning Market Time Capsule, VOC Studio and Broker Atlas, the current session leads integration and delegates one independent assignment to each relevant service agent. A single-service change can stay with one owner. The user can request the whole batch in this session.
+
+```text
+Current session · integration, cross-service QA and release
+├── Market agent · Market Time Capsule
+├── VOC agent    · VOC Studio
+└── Broker agent · Broker Atlas
+```
+
+| Owner | Scope for this batch |
+| --- | --- |
+| Market Time Capsule | Requirements §9. Historical events, point-in-time holdings, prices, return calculations and market screens. |
+| VOC Studio | Requirements §7. Public-source collection, anonymized aggregates, classification checks and VOC screens. |
+| Broker Atlas | Requirements §8. Disclosures, comparable financial metrics, ranking evidence and broker screens. |
+| Integration lead | Shared components and navigation, cross-service tests, design audit, dependencies, Git and release verification. |
+
+1. The lead checks the working tree and any running collectors, then assigns each agent a requirement, an explicit set of files and a user flow to verify. Start independent work together and reuse completed collections.
+2. Give each changed file one writer. An agent needing a shared change sends the lead the affected path and expected behavior. Separate worktrees can isolate changes when scopes overlap. Use one full build per integrated revision in a shared checkout.
+3. Service agents implement and run focused checks. They hand back changed paths, the verified result and its source or test, and any remaining dependency. The lead resolves cross-service issues and updates `docs/v1-implementation-check.md` with the actual coverage.
+4. The lead runs integration checks and verifies affected flows on mobile and desktop. When deployment is in scope, the lead commits the reviewed files, pushes and checks the changed content at both the root site and the project site.
+
+On resuming a batch, read these ownership rules and the latest entry in `docs/v1-implementation-check.md`, inspect the worktree and active jobs, and reassign unfinished work from its last verified result.
+
 ## Review severity
 - Critical: fix before merge
 - High: fix before merge

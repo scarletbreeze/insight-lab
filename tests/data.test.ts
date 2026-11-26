@@ -228,13 +228,18 @@ test('Index snapshots and the market timeline cover the documented periods', () 
   const us = readJson<Record<string, Snapshot>>('market/us-index-closes.json');
   for (const [period, row] of [...Object.entries(monthly), ...Object.entries(us)]) {
     assert.ok(row.firstDate.startsWith(period) && row.lastDate.startsWith(period) && row.firstDate < row.lastDate);
-    assert.ok(row.first.length === 2 && row.last.length === 2 && [...row.first, ...row.last].every((value) => value > 0));
+    const kospiOnly = row === monthly[period] && period < '1997-01' && !['1996-08', '1996-09', '1996-10', '1996-11'].includes(period);
+    assert.equal(row.first.length, kospiOnly ? 1 : 2);
+    assert.equal(row.last.length, row.first.length);
+    assert.ok([...row.first, ...row.last].every((value) => Number.isFinite(value) && value > 0));
     assert.ok([row.firstSource, row.lastSource].every((url) => new URL(url).protocol === 'https:'));
   }
   for (const [year, count] of [[2024, 12], [2025, 12], [2026, 10]]) {
     assert.ok(Array.from({ length: count }, (_, i) => `${year}-${String(i + 1).padStart(2, '0')}`).every((period) => monthly[period]));
   }
   assert.ok(Array.from({ length: 12 }, (_, i) => `2024-${String(i + 1).padStart(2, '0')}`).every((month) => us[month]));
+  assert.equal(monthly['2000-05'].firstDate, '2000-05-02');
+  assert.deepEqual(monthly['2000-05'].first, [752.59, 1667]);
   assert.equal(us['2024-03'].lastDate, '2024-03-28');
   assert.equal(monthly['2024-03'].lastDate, '2024-03-29');
   assert.equal(monthly['2025-03'].firstDate, '2025-03-04');

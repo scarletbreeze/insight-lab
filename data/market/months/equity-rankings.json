@@ -439,6 +439,1699 @@
       "universeCount": 100
     }
   },
+  "2009-01": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FMCN",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Check Point Software Technologies",
+          "returnPct": 14.842958459979737,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CHKP"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "DISH Network Corp.",
+          "returnPct": 9.369676320272573,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISH"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 8.204562178072111,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Maxim Integrated Products, Inc.",
+          "returnPct": 7.736156351791531,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MXIM"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 7.689801238188335,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Google, Inc.",
+          "returnPct": 5.35603137059629,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GOOG"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Apollo Group, Inc.",
+          "returnPct": 3.9428352685976775,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "APOL"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Symantec Corp.",
+          "returnPct": 3.581081081081081,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Linear Technology Corp.",
+          "returnPct": 2.6742656729504604,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LLTC"
+        },
+        {
+          "firstDate": "2009-01-02",
+          "lastDate": "2009-01-30",
+          "name": "Marvell Technology Group Ltd.",
+          "returnPct": 2.5316455696202533,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRVL"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-02": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Akamai Technologies, Inc.",
+          "returnPct": 26.062717770034844,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AKAM"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Baidu.com",
+          "returnPct": 18.164435946462714,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "O’Reilly Automotive, Inc.",
+          "returnPct": 14.639175257731958,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ORLY"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Illumina, Inc.",
+          "returnPct": 14.301349872309377,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Activision Blizzard, Inc.",
+          "returnPct": 11.941964285714286,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ATVI"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Electronic Arts, Inc.",
+          "returnPct": 9.757738896366083,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ERTS"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Yahoo!, Inc.",
+          "returnPct": 8.88888888888889,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "YHOO"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Seagate Technology",
+          "returnPct": 8.312342569269521,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Urban Outfitters, Inc.",
+          "returnPct": 6.122448979591836,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "URBN"
+        },
+        {
+          "firstDate": "2009-02-02",
+          "lastDate": "2009-02-27",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 5.952575633687653,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-03": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Seagate Technology",
+          "returnPct": 63.31521739130435,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Autodesk, Inc.",
+          "returnPct": 41.73693086003372,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Joy Global, Inc.",
+          "returnPct": 35.23809523809524,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JOYG"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Adobe Systems, Inc.",
+          "returnPct": 33.35411471321696,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADBE"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Garmin Ltd.",
+          "returnPct": 31.006794317479926,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GRMN"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Nvidia Corp.",
+          "returnPct": 30.07915567282322,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Hologic, Inc.",
+          "returnPct": 29.73240832507433,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HOLX"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Sears Holdings Corp.",
+          "returnPct": 29.673758865248228,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SHLD"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Baidu.com",
+          "returnPct": 28.69844046057426,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2009-03-02",
+          "lastDate": "2009-03-31",
+          "name": "Marvell Technology Group Ltd.",
+          "returnPct": 28.47124824684432,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRVL"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-04": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 82.04176334106728,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Liberty Media Corp. - Interactive",
+          "returnPct": 69.32907348242811,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LINTA"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 52.36934167285063,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Expedia, Inc.",
+          "returnPct": 45.4059829059829,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EXPE"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Steel Dynamics, Inc.",
+          "returnPct": 38.641425389755014,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STLD"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "First Solar, Inc.",
+          "returnPct": 38.22140221402214,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FSLR"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Juniper Networks, Inc.",
+          "returnPct": 37.19898605830165,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JNPR"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Seagate Technology",
+          "returnPct": 36.45484949832776,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "Kla-Tencor Corp.",
+          "returnPct": 36.38151425762045,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2009-04-01",
+          "lastDate": "2009-04-30",
+          "name": "PACCAR, Inc.",
+          "returnPct": 35.57765876052027,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PCAR"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-05": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Joy Global, Inc.",
+          "returnPct": 26.681367144432194,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JOYG"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Intuit, Inc.",
+          "returnPct": 18.39930404523706,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "INTU"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Expedia, Inc.",
+          "returnPct": 17.038539553752535,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EXPE"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Electronic Arts, Inc.",
+          "returnPct": 14.95,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ERTS"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Steel Dynamics, Inc.",
+          "returnPct": 14.307574598316755,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STLD"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Citrix Systems, Inc.",
+          "returnPct": 14.176663031624864,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CTXS"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "DISH Network Corp.",
+          "returnPct": 14.047287899860917,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISH"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Yahoo!, Inc.",
+          "returnPct": 12.022630834512023,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "YHOO"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "J.B. Hunt Transport Services, Inc.",
+          "returnPct": 11.981063364894393,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JBHT"
+        },
+        {
+          "firstDate": "2009-05-01",
+          "lastDate": "2009-05-29",
+          "name": "Baidu.com",
+          "returnPct": 11.964687407155893,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BIDU"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-06": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 19.74034620505992,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Apollo Group, Inc.",
+          "returnPct": 16.858363457114688,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "APOL"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Dell, Inc.",
+          "returnPct": 12.725779967159278,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DELL"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Celgene Corp.",
+          "returnPct": 12.300469483568076,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CELG"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Microsoft Corp.",
+          "returnPct": 11.074766355140186,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MSFT"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Liberty Global, Inc.",
+          "returnPct": 10.731707317073171,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LBTYA"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Seagate Technology",
+          "returnPct": 10.570824524312897,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Garmin Ltd.",
+          "returnPct": 9.76958525345622,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GRMN"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 9.632904608788854,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2009-06-01",
+          "lastDate": "2009-06-30",
+          "name": "Gilead Sciences, Inc.",
+          "returnPct": 9.516015898994622,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GILD"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-07": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 84,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "JAVA",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 44.588866911556934,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 39.3746167995095,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Expedia, Inc.",
+          "returnPct": 33.18327974276527,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EXPE"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Liberty Global, Inc.",
+          "returnPct": 31.019387116948092,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LBTYA"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Liberty Media Corp. - Interactive",
+          "returnPct": 28.32369942196532,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LINTA"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "eBay, Inc.",
+          "returnPct": 26.638855780691298,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EBAY"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Starbucks Corp.",
+          "returnPct": 26.428571428571427,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SBUX"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Applied Materials, Inc.",
+          "returnPct": 23.98921832884097,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMAT"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "Kla-Tencor Corp.",
+          "returnPct": 23.518016272762495,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2009-07-01",
+          "lastDate": "2009-07-31",
+          "name": "CA, Inc.",
+          "returnPct": 20.86906803887936,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CA"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-08": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 15
+      },
+      "items": [
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Liberty Media Corp. - Interactive",
+          "returnPct": 34.36185133239832,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LINTA"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Garmin Ltd.",
+          "returnPct": 17.476769120800572,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GRMN"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Dell, Inc.",
+          "returnPct": 16.397058823529413,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DELL"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Urban Outfitters, Inc.",
+          "returnPct": 14.590890769850867,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "URBN"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Cognizant Technology Solutions Corp.",
+          "returnPct": 14.47800393959291,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CTSH"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Seagate Technology",
+          "returnPct": 12.327656123276562,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Hologic, Inc.",
+          "returnPct": 10.991233985165206,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "HOLX"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Marvell Technology Group Ltd.",
+          "returnPct": 10.507246376811594,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRVL"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Nvidia Corp.",
+          "returnPct": 9.337349397590362,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2009-08-03",
+          "lastDate": "2009-08-31",
+          "name": "Expedia, Inc.",
+          "returnPct": 8.368594264221908,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "EXPE"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-09": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 15
+      },
+      "items": [
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 35.15729265967588,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "First Solar, Inc.",
+          "returnPct": 32.94485997564794,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FSLR"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Joy Global, Inc.",
+          "returnPct": 31.17126775663361,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JOYG"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Yahoo!, Inc.",
+          "returnPct": 25.599435825105783,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "YHOO"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Flir Systems, Inc.",
+          "returnPct": 23.87068201948627,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FLIR"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Baidu.com",
+          "returnPct": 22.678504203789686,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 21.755884674311712,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "Cerner Corporation",
+          "returnPct": 21.15322319403952,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CERN"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "DISH Network Corp.",
+          "returnPct": 20.60112711333751,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISH"
+        },
+        {
+          "firstDate": "2009-09-01",
+          "lastDate": "2009-09-30",
+          "name": "NetApp, Inc.",
+          "returnPct": 20.451467268623023,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NTAP"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-10": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 15
+      },
+      "items": [
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 30.503075571177504,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Akamai Technologies, Inc.",
+          "returnPct": 17.962466487935657,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AKAM"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Microsoft Corp.",
+          "returnPct": 11.454983922829582,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MSFT"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Check Point Software Technologies",
+          "returnPct": 11.051502145922747,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CHKP"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Symantec Corp.",
+          "returnPct": 10.705289672544081,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Stericycle, Inc.",
+          "returnPct": 10.067255149222362,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SRCL"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Google, Inc.",
+          "returnPct": 10.041050903119869,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "GOOG"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Autodesk, Inc.",
+          "returnPct": 9.102844638949671,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Joy Global, Inc.",
+          "returnPct": 8.994594594594595,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "JOYG"
+        },
+        {
+          "firstDate": "2009-10-01",
+          "lastDate": "2009-10-30",
+          "name": "Sears Holdings Corp.",
+          "returnPct": 7.748491584630041,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SHLD"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-11": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 15
+      },
+      "items": [
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Priceline.com Incorporated",
+          "returnPct": 31.701316275064585,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "PCLN"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Steel Dynamics, Inc.",
+          "returnPct": 25.519287833827892,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STLD"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 20.119114088963336,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "DIRECTV Group, Inc./The",
+          "returnPct": 19.13370998116761,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DTV"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "DISH Network Corp.",
+          "returnPct": 18.005698005698004,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "DISH"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Baidu.com",
+          "returnPct": 15.52506185893765,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Amazon.com, Inc.",
+          "returnPct": 14.363850555368563,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 13.864761750142057,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Cognizant Technology Solutions Corp.",
+          "returnPct": 13.221649484536082,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CTSH"
+        },
+        {
+          "firstDate": "2009-11-02",
+          "lastDate": "2009-11-30",
+          "name": "Starbucks Corp.",
+          "returnPct": 13.003095975232197,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SBUX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/pricelinecom-incorporated-join-nasdaq-100-index-beginning"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
+  "2009-12": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "EA",
+          "sourceUrl": "https://news.ea.com/press-releases/press-releases-details/2011/Electronic-Arts-to-Change-Nasdaq-Ticker-Symbol-to-EA-Effective-December-20-2011/default.aspx",
+          "symbol": "ERTS"
+        },
+        {
+          "archiveSymbol": "GOOGL",
+          "sourceUrl": "https://abc.xyz/assets/investor/static/pdf/2014_google_annual_report.pdf",
+          "symbol": "GOOG"
+        },
+        {
+          "archiveSymbol": "MNST",
+          "sourceUrl": "https://investors.monsterbevcorp.com/node/8011",
+          "symbol": "HANS"
+        },
+        {
+          "archiveSymbol": "JOY",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/801898/000114036111051997/ex99_1.htm",
+          "symbol": "JOYG"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "CEPH",
+        "FLEX",
+        "FWLT",
+        "GENZ",
+        "INFY",
+        "LIFE",
+        "LOGI",
+        "MICC",
+        "NIHD",
+        "NWSA",
+        "PPDI",
+        "RIMM",
+        "RYAAY",
+        "TEVA",
+        "WCRX"
+      ],
+      "exclusions": {
+        "WIKI 가격·분할 자료의 거래일 범위 미충족": 15
+      },
+      "items": [
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Nvidia Corp.",
+          "returnPct": 40.24024024024024,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Marvell Technology Group Ltd.",
+          "returnPct": 29.444791016843418,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MRVL"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Seagate Technology",
+          "returnPct": 15.56543837357052,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Sears Holdings Corp.",
+          "returnPct": 14.393420150788211,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "SHLD"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Kla-Tencor Corp.",
+          "returnPct": 14.03342794071271,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Liberty Global, Inc.",
+          "returnPct": 13.360952874158468,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LBTYA"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Comcast Corp.",
+          "returnPct": 12.70053475935829,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "CMCSA"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Flir Systems, Inc.",
+          "returnPct": 12.51289102784462,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "FLIR"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Maxim Integrated Products, Inc.",
+          "returnPct": 12.203202650469354,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "MXIM"
+        },
+        {
+          "firstDate": "2009-12-01",
+          "lastDate": "2009-12-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 12.188841201716738,
+          "sourceUrl": "https://data.nasdaq.com/databases/WIKIP",
+          "symbol": "LRCX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm",
+        "https://ir.nasdaq.com/static-files/368db5ec-c029-4078-994a-4895db68889f",
+        "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+        "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009",
+        "https://ir.nasdaq.com/news-releases/news-release-details/pricelinecom-incorporated-join-nasdaq-100-index-beginning"
+      ],
+      "priceMethod": "WIKI 종가와 분할 비율로 계산 · 배당 제외",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2008-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 100
+    }
+  },
   "2014-10": {
     "US": {
       "corporateActionSources": [

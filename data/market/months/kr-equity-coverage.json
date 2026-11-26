@@ -13,7 +13,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.01.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.01.02"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 317,
+      "matchedRanks": 10
+    }
   },
   "2024-02": {
     "first": "2024-02-01",
@@ -29,7 +33,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.02.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.02.01"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 321,
+      "matchedRanks": 10
+    }
   },
   "2024-03": {
     "first": "2024-03-04",
@@ -45,7 +53,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.03.04",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.03.04"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 321,
+      "matchedRanks": 10
+    }
   },
   "2024-04": {
     "first": "2024-04-01",
@@ -61,7 +73,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.04.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.04.01"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 310,
+      "matchedRanks": 10
+    }
   },
   "2024-05": {
     "first": "2024-05-02",
@@ -77,7 +93,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.05.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.05.02"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 312,
+      "matchedRanks": 10
+    }
   },
   "2024-06": {
     "first": "2024-06-03",
@@ -93,7 +113,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.06.03",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.06.03"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 320,
+      "matchedRanks": 10
+    }
   },
   "2024-07": {
     "first": "2024-07-01",
@@ -109,7 +133,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.07.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.07.01"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 324,
+      "matchedRanks": 10
+    }
   },
   "2024-08": {
     "first": "2024-08-01",
@@ -125,7 +153,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.08.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.08.01"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 321,
+      "matchedRanks": 10
+    }
   },
   "2024-09": {
     "first": "2024-09-02",
@@ -140,7 +172,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.09.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.09.02"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 326,
+      "matchedRanks": 10
+    }
   },
   "2024-10": {
     "first": "2024-10-02",
@@ -156,7 +192,11 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.10.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.10.02"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 330,
+      "matchedRanks": 10
+    }
   },
   "2024-11": {
     "first": "2024-11-01",
@@ -171,7 +211,11 @@
       "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7102110004&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500",
       "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7232080002&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500"
     ],
-    "provider": "TIGER"
+    "provider": "TIGER",
+    "priceCrossCheck": {
+      "covered": 323,
+      "matchedRanks": 10
+    }
   },
   "2024-12": {
     "first": "2024-12-02",
@@ -187,6 +231,10 @@
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.12.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.12.02"
     ],
-    "provider": "KODEX"
+    "provider": "KODEX",
+    "priceCrossCheck": {
+      "covered": 321,
+      "matchedRanks": 10
+    }
   }
 }

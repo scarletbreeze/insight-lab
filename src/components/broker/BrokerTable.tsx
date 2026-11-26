@@ -111,7 +111,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
           const events = brokerEvents.filter((event) => event.id === id);
           return <article className="lab-card" key={id}>
             <h3><a href={brokerBase + id + '/'}>{label(id)}</a></h3>
-            <p>{company?.character}</p>
+            {company && <p>회사 소개 초안 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
             <strong>공시 사업 분류</strong>
             <p>{company?.segments.join(' · ') || '자료 확인 중'}</p>
             <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}

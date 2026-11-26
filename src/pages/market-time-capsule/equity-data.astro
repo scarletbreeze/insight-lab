@@ -47,6 +47,11 @@ const years = coverage(annual, spyAnnual);
   <section class="lab-block" id="kr-coverage">
     <h2>한국 ETF 보유 종목의 월별 검증 범위</h2>
     <p>2024년 12개월의 첫 거래일에 KOSPI 200·코스닥150을 추종한 두 ETF의 보유 주식을 일별 시세와 대조했습니다. 11월은 미래에셋 TIGER, 다른 달은 삼성 KODEX 명세를 사용했습니다. 첫날과 마지막 날에 거래가 있었고 모든 관측일에 종가가 이어지며 상장주식수가 일정했던 종목 수를 표시합니다. 순위는 가격 자료의 공개 이용 범위를 확인 중입니다.</p>
+    <p>네이버 일별 시세로 검사 통과 종목의 월간 수익률을 다시 계산했습니다. 2024년 12개월 모두 상위 10개의 종목과 순서가 일치했습니다. 월별 검사 통과 종목 수의 합은 3,846건으로, 같은 종목이 여러 달에 포함될 수 있습니다.</p>
+    <details id="december-price-check"><summary>2024년 12월 상위 10개 순서 교차 검증</summary>
+      <p>두 ETF의 월초 보유 주식 353개 중 검사 통과 종목 321개 전부를 네이버 일별 시세로 다시 계산했습니다. 12월 2일 종가에서 30일 종가까지의 수익률로 정렬하자 상위 10개 종목의 순서가 모두 일치했습니다. 상위 10개의 수익률은 두 출처의 계산값 사이에 최대 0.005%p 미만의 차이가 있었습니다.</p>
+      <p>이 비교는 321개 안에서의 순서를 검증합니다. 제외한 32개의 기업행동과 종목별 결과의 공개 이용 범위는 추가 확인 대상입니다. <a href="https://github.com/FinanceData/marcap/tree/master/data">연도별 시세</a> · <a href="https://api.finance.naver.com/siseJson.naver?symbol=005930&amp;requestType=1&amp;startTime=20241202&amp;endTime=20241230&amp;timeframe=day">네이버 일별 시세 예시</a></p>
+    </details>
     <ul class="coverage-months" aria-label="월별 국내 ETF 보유 종목 검증 통과율">
       {Object.entries(koreanCoverage).map(([period, row]) => (
         <li><a href={'#coverage-' + period}>
@@ -58,10 +63,10 @@ const years = coverage(annual, spyAnnual);
     </ul>
     <div class="lab-table-wrap"><table class="lab-table">
       <caption>월별 ETF 보유 주식과 가격 대조 결과 · 종목 수</caption>
-      <thead><tr><th scope="col">기간</th><th scope="col">보유 주식</th><th scope="col">검사 통과</th><th scope="col">추가 확인</th><th scope="col">보유 명세 원문</th></tr></thead>
+      <thead><tr><th scope="col">기간</th><th scope="col">보유 주식</th><th scope="col">검사 통과</th><th scope="col">시세 재대조 · 상위 순위 일치</th><th scope="col">추가 확인</th><th scope="col">보유 명세 원문</th></tr></thead>
       <tbody>{Object.entries(koreanCoverage).map(([period, row]) => <tr id={'coverage-' + period}>
         <th scope="row"><a href={sitePath('market-time-capsule/' + period.replace('-', '/')) + '#equity-rankings'}>{row.first}~{row.last}</a></th>
-        <td>{row.universe}</td><td>{row.eligible}</td><td>{Object.entries(row.excluded).map(([reason, count]) => <div>{reason} · {count}개</div>)}</td>
+        <td>{row.universe}</td><td>{row.eligible}</td><td>{row.priceCrossCheck.covered}개 · {row.priceCrossCheck.matchedRanks}/10위</td><td>{Object.entries(row.excluded).map(([reason, count]) => <div>{reason} · {count}개</div>)}</td>
         <td><a href={row.holdingsSources[0]}>{row.provider} 200</a> · <a href={row.holdingsSources[1]}>{row.provider} 코스닥150</a></td>
       </tr>)}</tbody>
     </table></div>

@@ -3,7 +3,7 @@
   "end": "2026-11-25",
   "months": {
     "2022-01": {
-      "hts": 266,
+      "hts": 269,
       "auth": 46,
       "orders": 55,
       "products": 23,
@@ -16,7 +16,7 @@
     },
     "2022-02": {
       "account": 33,
-      "hts": 296,
+      "hts": 297,
       "transfer": 19,
       "fees": 13,
       "auth": 40,
@@ -27,7 +27,7 @@
       "hours": 5
     },
     "2022-03": {
-      "hts": 362,
+      "hts": 363,
       "transfer": 20,
       "overseas": 16,
       "auth": 27,
@@ -40,7 +40,7 @@
     },
     "2022-04": {
       "auth": 36,
-      "hts": 318,
+      "hts": 322,
       "credit": 6,
       "products": 9,
       "orders": 55,
@@ -52,7 +52,7 @@
     },
     "2022-05": {
       "account": 20,
-      "hts": 305,
+      "hts": 309,
       "auth": 29,
       "transfer": 19,
       "overseas": 20,
@@ -63,7 +63,7 @@
       "hours": 2
     },
     "2022-06": {
-      "hts": 316,
+      "hts": 319,
       "credit": 6,
       "auth": 16,
       "orders": 38,
@@ -75,7 +75,7 @@
       "overseas": 11
     },
     "2022-07": {
-      "hts": 316,
+      "hts": 320,
       "account": 13,
       "transfer": 13,
       "orders": 36,
@@ -87,7 +87,7 @@
       "products": 7
     },
     "2022-08": {
-      "hts": 288,
+      "hts": 289,
       "credit": 7,
       "auth": 25,
       "fees": 9,
@@ -98,10 +98,10 @@
       "transfer": 16
     },
     "2022-09": {
-      "hts": 331,
-      "orders": 26,
+      "hts": 332,
+      "orders": 25,
       "products": 16,
-      "auth": 26,
+      "auth": 27,
       "fees": 10,
       "transfer": 14,
       "account": 14,
@@ -113,8 +113,8 @@
       "fees": 7,
       "overseas": 13,
       "hours": 2,
-      "hts": 313,
-      "account": 17,
+      "hts": 315,
+      "account": 16,
       "orders": 43,
       "auth": 20,
       "credit": 5,
@@ -122,7 +122,7 @@
       "transfer": 8
     },
     "2022-11": {
-      "hts": 281,
+      "hts": 282,
       "auth": 15,
       "account": 8,
       "orders": 45,
@@ -135,7 +135,7 @@
     },
     "2022-12": {
       "fees": 7,
-      "hts": 310,
+      "hts": 312,
       "transfer": 10,
       "products": 22,
       "auth": 11,
@@ -170,8 +170,8 @@
       "credit": 12
     },
     "2023-03": {
-      "hts": 411,
-      "auth": 28,
+      "hts": 410,
+      "auth": 29,
       "products": 11,
       "fees": 9,
       "account": 20,
@@ -183,7 +183,7 @@
     },
     "2023-04": {
       "auth": 16,
-      "hts": 374,
+      "hts": 375,
       "credit": 11,
       "products": 17,
       "hours": 5,
@@ -194,7 +194,7 @@
       "overseas": 9
     },
     "2023-05": {
-      "hts": 345,
+      "hts": 346,
       "credit": 7,
       "transfer": 12,
       "fees": 15,
@@ -206,7 +206,7 @@
       "hours": 1
     },
     "2023-06": {
-      "hts": 425,
+      "hts": 427,
       "orders": 49,
       "credit": 12,
       "account": 22,
@@ -218,7 +218,7 @@
       "transfer": 11
     },
     "2023-07": {
-      "hts": 456,
+      "hts": 458,
       "transfer": 17,
       "auth": 17,
       "orders": 54,
@@ -230,11 +230,11 @@
       "products": 11
     },
     "2023-08": {
-      "hts": 407,
+      "hts": 410,
       "orders": 50,
       "account": 8,
       "overseas": 11,
-      "auth": 35,
+      "auth": 36,
       "credit": 11,
       "hours": 4,
       "products": 13,
@@ -242,8 +242,8 @@
       "transfer": 11
     },
     "2023-09": {
-      "auth": 13,
-      "hts": 403,
+      "auth": 14,
+      "hts": 404,
       "orders": 43,
       "overseas": 12,
       "fees": 5,
@@ -254,7 +254,7 @@
       "credit": 9
     },
     "2023-10": {
-      "hts": 384,
+      "hts": 386,
       "account": 13,
       "auth": 12,
       "orders": 36,
@@ -270,7 +270,7 @@
       "auth": 17,
       "orders": 35,
       "account": 10,
-      "hts": 418,
+      "hts": 419,
       "hours": 7,
       "fees": 9,
       "overseas": 7,
@@ -278,7 +278,7 @@
       "credit": 5
     },
     "2023-12": {
-      "hts": 435,
+      "hts": 442,
       "auth": 27,
       "transfer": 19,
       "orders": 46,
@@ -290,7 +290,7 @@
       "credit": 4
     },
     "2024-01": {
-      "hts": 470,
+      "hts": 472,
       "credit": 10,
       "products": 17,
       "orders": 49,
@@ -303,7 +303,7 @@
     },
     "2024-02": {
       "orders": 47,
-      "hts": 438,
+      "hts": 439,
       "auth": 21,
       "products": 21,
       "account": 18,
@@ -315,7 +315,7 @@
     },
     "2024-03": {
       "products": 15,
-      "hts": 426,
+      "hts": 429,
       "overseas": 10,
       "orders": 48,
       "fees": 17,
@@ -327,7 +327,7 @@
     },
     "2024-04": {
       "fees": 15,
-      "hts": 478,
+      "hts": 487,
       "products": 17,
       "account": 19,
       "hours": 6,
@@ -338,7 +338,7 @@
       "credit": 7
     },
     "2024-05": {
-      "hts": 389,
+      "hts": 390,
       "account": 19,
       "overseas": 14,
       "orders": 50,
@@ -351,7 +351,7 @@
     },
     "2024-06": {
       "hours": 3,
-      "hts": 383,
+      "hts": 387,
       "products": 14,
       "account": 12,
       "overseas": 13,
@@ -363,7 +363,7 @@
     },
     "2024-07": {
       "orders": 61,
-      "hts": 463,
+      "hts": 464,
       "fees": 14,
       "transfer": 16,
       "account": 14,
@@ -375,10 +375,10 @@
     },
     "2024-08": {
       "transfer": 18,
-      "hts": 370,
+      "hts": 371,
       "fees": 15,
       "products": 16,
-      "auth": 13,
+      "auth": 12,
       "orders": 52,
       "hours": 6,
       "overseas": 15,
@@ -387,7 +387,7 @@
     },
     "2024-09": {
       "overseas": 11,
-      "hts": 478,
+      "hts": 479,
       "orders": 53,
       "fees": 5,
       "transfer": 8,
@@ -398,19 +398,19 @@
       "hours": 7
     },
     "2024-10": {
-      "hts": 432,
+      "hts": 435,
       "fees": 5,
       "products": 19,
       "orders": 40,
       "auth": 15,
       "credit": 6,
-      "hours": 6,
+      "hours": 5,
       "overseas": 12,
       "account": 11,
       "transfer": 15
     },
     "2024-11": {
-      "hts": 460,
+      "hts": 462,
       "products": 24,
       "credit": 6,
       "orders": 58,
@@ -423,7 +423,7 @@
     },
     "2024-12": {
       "auth": 33,
-      "hts": 369,
+      "hts": 371,
       "account": 15,
       "credit": 5,
       "orders": 35,
@@ -434,7 +434,7 @@
       "transfer": 18
     },
     "2025-01": {
-      "hts": 350,
+      "hts": 351,
       "transfer": 22,
       "orders": 34,
       "overseas": 16,
@@ -458,7 +458,7 @@
       "hours": 5
     },
     "2025-03": {
-      "hts": 547,
+      "hts": 551,
       "products": 7,
       "transfer": 13,
       "hours": 10,
@@ -470,9 +470,9 @@
       "credit": 10
     },
     "2025-04": {
-      "hts": 668,
+      "hts": 675,
       "overseas": 18,
-      "orders": 605,
+      "orders": 604,
       "fees": 48,
       "hours": 12,
       "account": 14,
@@ -482,8 +482,8 @@
       "credit": 9
     },
     "2025-05": {
-      "hts": 422,
-      "auth": 25,
+      "hts": 426,
+      "auth": 26,
       "account": 9,
       "fees": 26,
       "orders": 87,
@@ -494,7 +494,7 @@
       "credit": 12
     },
     "2025-06": {
-      "hts": 387,
+      "hts": 389,
       "orders": 84,
       "overseas": 12,
       "auth": 15,
@@ -506,7 +506,7 @@
       "credit": 7
     },
     "2025-07": {
-      "hts": 447,
+      "hts": 449,
       "account": 12,
       "credit": 7,
       "orders": 75,
@@ -518,7 +518,7 @@
       "fees": 4
     },
     "2025-08": {
-      "hts": 423,
+      "hts": 425,
       "orders": 60,
       "auth": 16,
       "account": 9,
@@ -530,7 +530,7 @@
       "fees": 7
     },
     "2025-09": {
-      "hts": 417,
+      "hts": 420,
       "auth": 17,
       "account": 8,
       "overseas": 14,
@@ -542,7 +542,7 @@
       "credit": 8
     },
     "2025-10": {
-      "hts": 376,
+      "hts": 380,
       "auth": 29,
       "orders": 58,
       "fees": 16,
@@ -550,15 +550,15 @@
       "transfer": 25,
       "account": 24,
       "products": 22,
-      "hours": 10,
+      "hours": 9,
       "overseas": 24
     },
     "2025-11": {
-      "hts": 374,
+      "hts": 376,
       "fees": 8,
       "overseas": 9,
-      "auth": 32,
-      "orders": 54,
+      "auth": 33,
+      "orders": 53,
       "account": 12,
       "credit": 12,
       "hours": 8,
@@ -569,7 +569,7 @@
       "overseas": 12,
       "transfer": 16,
       "hours": 6,
-      "hts": 386,
+      "hts": 389,
       "fees": 13,
       "auth": 20,
       "orders": 55,
@@ -578,9 +578,9 @@
       "credit": 16
     },
     "2026-01": {
-      "hts": 484,
+      "hts": 486,
       "overseas": 23,
-      "orders": 111,
+      "orders": 110,
       "account": 48,
       "transfer": 47,
       "products": 68,
@@ -591,7 +591,7 @@
     },
     "2026-02": {
       "auth": 50,
-      "hts": 351,
+      "hts": 354,
       "orders": 45,
       "transfer": 26,
       "account": 43,
@@ -602,11 +602,11 @@
       "hours": 13
     },
     "2026-03": {
-      "hts": 337,
+      "hts": 339,
       "orders": 81,
       "transfer": 37,
       "account": 31,
-      "auth": 31,
+      "auth": 33,
       "products": 32,
       "fees": 21,
       "credit": 12,
@@ -615,9 +615,9 @@
     },
     "2026-04": {
       "orders": 67,
-      "hts": 340,
+      "hts": 341,
       "credit": 8,
-      "auth": 31,
+      "auth": 32,
       "transfer": 26,
       "overseas": 14,
       "fees": 11,
@@ -626,19 +626,19 @@
       "products": 25
     },
     "2026-05": {
-      "hts": 331,
+      "hts": 334,
       "account": 50,
       "auth": 40,
       "credit": 12,
       "fees": 25,
       "transfer": 59,
-      "hours": 15,
+      "hours": 14,
       "products": 51,
-      "orders": 64,
+      "orders": 63,
       "overseas": 27
     },
     "2026-06": {
-      "hts": 276,
+      "hts": 277,
       "overseas": 12,
       "orders": 67,
       "auth": 21,
@@ -650,7 +650,7 @@
       "hours": 13
     },
     "2026-07": {
-      "hts": 291,
+      "hts": 293,
       "auth": 17,
       "fees": 3,
       "account": 18,
@@ -663,7 +663,7 @@
     },
     "2026-08": {
       "account": 14,
-      "hts": 273,
+      "hts": 274,
       "overseas": 10,
       "hours": 8,
       "credit": 10,
@@ -674,19 +674,19 @@
       "fees": 5
     },
     "2026-09": {
-      "hts": 300,
+      "hts": 301,
       "orders": 43,
       "overseas": 5,
       "account": 13,
       "transfer": 9,
       "products": 16,
-      "hours": 41,
+      "hours": 39,
       "credit": 6,
       "auth": 13,
       "fees": 4
     },
     "2026-10": {
-      "hts": 240,
+      "hts": 241,
       "products": 16,
       "transfer": 11,
       "orders": 39,
@@ -698,9 +698,9 @@
       "credit": 4
     },
     "2026-11": {
-      "hts": 160,
-      "orders": 37,
-      "hours": 7,
+      "hts": 161,
+      "orders": 36,
+      "hours": 6,
       "auth": 15,
       "transfer": 5,
       "fees": 6,

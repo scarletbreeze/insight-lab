@@ -10,6 +10,66 @@
     }
   },
   {
+    "date": "2008-12-22",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/nasdaq-announces-annual-re-ranking-nasdaq-100-index-2",
+    "remove": [
+      "AMLN",
+      "CDNS",
+      "DISCA",
+      "LAMR",
+      "LEAP",
+      "LVLT",
+      "PETM",
+      "SIRI",
+      "SNDK",
+      "VMED",
+      "WFMI"
+    ],
+    "add": {
+      "ADP": "Automatic Data Processing, Inc.",
+      "FSLR": "First Solar, Inc.",
+      "LIFE": "Life Technologies Corporation",
+      "ROST": "Ross Stores, Inc.",
+      "MXIM": "Maxim Integrated Products, Inc.",
+      "ILMN": "Illumina, Inc.",
+      "PPDI": "Pharmaceutical Product Development, Inc.",
+      "ORLY": "O’Reilly Automotive, Inc.",
+      "URBN": "Urban Outfitters, Inc.",
+      "JBHT": "J.B. Hunt Transport Services, Inc.",
+      "WCRX": "Warner Chilcott Limited"
+    }
+  },
+  {
+    "date": "2009-01-20",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/news-corporation-join-nasdaq-100-index-beginning-january-20-2009",
+    "remove": [
+      "FMCN"
+    ],
+    "add": {
+      "NWSA": "News Corporation Class A"
+    }
+  },
+  {
+    "date": "2009-07-17",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/cerner-corporation-join-nasdaq-100-index-beginning-july-17-2009",
+    "remove": [
+      "JAVA"
+    ],
+    "add": {
+      "CERN": "Cerner Corporation"
+    }
+  },
+  {
+    "date": "2009-10-29",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/pricelinecom-incorporated-join-nasdaq-100-index-beginning",
+    "remove": [
+      "JNPR"
+    ],
+    "add": {
+      "PCLN": "Priceline.com Incorporated"
+    }
+  },
+  {
     "date": "2014-10-07",
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1355096/000155837015000204/lint-20141231x10k.htm",
     "remove": [

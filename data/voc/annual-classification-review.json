@@ -101,5 +101,18 @@
     "unclassified": 7,
     "ambiguous": 5,
     "differentTopic": 2
+  },
+  "focus2025": {
+    "year": 2025,
+    "sample": 36,
+    "reviewed": 30,
+    "agreement": 22,
+    "previousAgreement": 22,
+    "perMonth": 3,
+    "differences": {
+      "unclassified": 3,
+      "ambiguous": 2,
+      "differentTopic": 3
+    }
   }
 }

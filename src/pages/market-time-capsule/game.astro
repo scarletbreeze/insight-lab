@@ -8,6 +8,7 @@ import snapshots from '../../../data/market/months/snapshots.json';
 const assets = Object.entries(korea.monthly).flatMap(([period, indices]) => {
   const observations = snapshots.months[period as keyof typeof snapshots.months];
   const dollar = observations && 'DEXKOUS' in observations ? observations.DEXKOUS : undefined;
+  if (indices.first.length !== 2 || indices.last.length !== 2) return [];
   if (!dollar || dollar.firstDate !== indices.firstDate || dollar.lastDate !== indices.lastDate) return [];
   const multiples = [1, dollar.last / dollar.first, ...indices.last.map((last, i) => last / indices.first[i])];
   if (!multiples.every((value) => Number.isFinite(value) && value > 0)) return [];

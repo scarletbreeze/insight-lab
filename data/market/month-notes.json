@@ -191,11 +191,71 @@
     "sourceName": "Apple 제품 공개 자료",
     "sourceUrl": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/"
   },
+  "2008-01": {
+    "summary": "FOMC는 연방기금금리 목표를 0.75%p 내려 3.50%로 정했습니다.",
+    "memo": "22일의 임시 결정만 알던 시점과 30일까지 확인한 시점에서 한 달의 금리 인하 폭은 어떻게 다르게 보이나요?",
+    "sourceName": "미 연준 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080122a.htm"
+  },
+  "2008-02": {
+    "summary": "개인 세금 환급과 기업 투자 인센티브가 법에 담겼다. 주택대출 관련 한도도 높였다.",
+    "memo": "2월 법의 자금 수혜자와 10월 법의 지원 대상을 나눠 보세요. 가계와 금융기관에 돈이 전달되는 경로는 어떻게 달랐나요?",
+    "sourceName": "미국 정부출판국 · 공법 110-185",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-110publ185"
+  },
+  "2008-03": {
+    "summary": "미 연준은 뉴욕 연은이 프라이머리 딜러에 담보 대출을 제공할 수 있도록 승인했습니다. 새 창구 운영은 3월 17일 시작 예정이었습니다.",
+    "memo": "3월의 담보대출과 11월의 증권 매입을 비교해 보세요. 각각 누가 자금을 받고 누가 증권을 보유하나요?",
+    "sourceName": "미 연준 발표",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm"
+  },
+  "2008-04": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00%입니다. 변경 폭은 25bp 인하입니다.",
+    "memo": "4월 말까지의 연속 인하만 보고 6월 결정을 예상했다면 어떤 가정을 한 셈일까요?",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
+  },
+  "2008-05": {
+    "summary": "개별 주식을 기초자산으로 한 선물을 거래하는 시장이 열렸습니다.",
+    "memo": "개별주식 선물과 코스피200 선물로 각각 어떤 가격 변동을 헤지할 수 있는지 구분해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2008-06": {
+    "summary": "4월 말 인하 후 열린 6월 회의에서 금리를 동결했다. 성명은 신용 여건 악화와 에너지 가격 상승을 함께 짚었다.",
+    "memo": "6월 성명에서 물가와 성장 위험에 해당하는 표현을 찾아보세요. 10월 공동 인하 때와 무엇이 달랐나요?",
+    "sourceName": "미 연준 · 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080625a.htm"
+  },
+  "2008-07": {
+    "summary": "미국 저축기관감독청이 인디맥 은행을 폐쇄하고 연방예금보험공사(FDIC)가 관리에 들어갔다.",
+    "memo": "인디맥 은행이 문을 닫은 날, 예금보험공사가 예금자에게 알려 준 내용은 무엇이었나요? 이후 예금의 최종 인수자와 구분해 보세요.",
+    "sourceName": "미 연방예금보험공사 · 인디맥 처리 기록",
+    "sourceUrl": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/indymac.html"
+  },
+  "2008-08": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 5.25%로 바뀌었습니다.",
+    "memo": "8월 인상과 10월 인하를 시간순으로 놓아 보세요. 연말 금리만 보면 어떤 방향 전환을 놓치나요?",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
   "2008-09": {
     "summary": "리먼브러더스 파산과 AIG 지원이 잇따랐습니다.",
     "memo": "9월 15일과 16일의 사건을 순서대로 읽고, 같은 달 원·달러 환율의 첫 관측과 마지막 관측을 비교해 보세요.",
     "sourceName": "미 연준 2008년 연차보고서",
     "sourceUrl": "https://www.federalreserve.gov/boarddocs/rptcongress/annual08/sec1/c1.htm"
+  },
+  "2008-10": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 4.25%로 바뀌었습니다.",
+    "memo": "10월 9일과 27일 두 번의 결정을 나눠 적어 보세요. 이달 총 인하 폭 중 어느 결정이 더 컸나요?",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  "2008-11": {
+    "summary": "미 연준은 주택금융 관련 기관의 채권 최대 1,000억 달러와 기관 보증 MBS 최대 5,000억 달러를 매입하는 계획을 발표했습니다.",
+    "memo": "11월 발표에서 두 증권의 발행·보증 주체와 매입 한도를 확인해 보세요. 발표한 한도와 실제 집행액을 구분할 수 있나요?",
+    "sourceName": "미 연준 발표",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081125b.htm"
   },
   "2008-12": {
     "summary": "미 연준이 연방기금금리 목표 범위를 0~0.25%로 설정했습니다.",

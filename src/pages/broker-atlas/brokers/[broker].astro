@@ -28,7 +28,7 @@ const profitFields = [
 const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 'exceptZero', maximumFractionDigits: 1 });
 ---
 <BrokerLayout title={company.name}>
-  <p slot="intro">{broker?.character ?? '별도 재무현황과 연결 결산 자료'}</p>
+  <p slot="intro">{broker ? <>회사 소개 초안 · {broker.character} <a href={broker.characterSourceUrl ?? broker.sourceUrl}>회사 소개 근거</a></> : '별도 재무현황과 연결 결산 자료'}</p>
   {currentProfit && <section class="lab-block">
     <h2>{interimProfit.label} 연결 실적</h2>
     <dl class="lab-grid">

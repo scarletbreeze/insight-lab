@@ -90,7 +90,10 @@
   "pending": [
     {
       "name": "JP모간증권 서울지점",
-      "assets": 31430.0
+      "assets": 31430.0,
+      "reportedEquity": 0,
+      "netOperatingCapital": 6234,
+      "sourceUrl": "https://www.data.go.kr/data/15061054/fileData.do"
     }
   ]
 }

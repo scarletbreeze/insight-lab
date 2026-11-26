@@ -30,7 +30,11 @@ export default function KdicRankCheck({ date }: {date: string}) {
         <li>수록 10개사와 유안타는 회사 공시로 대조했습니다.</li>
         <li>{check.belowThreshold.count}개사는 총자산이 최대 {check.belowThreshold.maxAssets.toLocaleString('ko-KR')}억 원이어서 자본이 대신보다 작습니다.</li>
         <li>추가 {check.companies.length}개사는 한국신용평가의 해당일 별도 재무지표와 예보의 총자산이 억 원 단위로 일치합니다. 모두 대신보다 자본이 작습니다.</li>
-        {check.pending.map(({ name, assets }) => <li key={name}>{name}은 총자산 {assets.toLocaleString('ko-KR')}억 원으로 키움보다 작습니다. 해당일 부채나 자본의 원문 확인 전까지 대신의 범위는 10–11위입니다.</li>)}
+        {check.pending.map(({ name, assets, reportedEquity, netOperatingCapital, sourceUrl }) => <li key={name}>
+          {name}의 총자산은 {assets.toLocaleString('ko-KR')}억 원입니다. <a href={sourceUrl}>예보 연말 파일</a>에는 자기자본이 {reportedEquity}으로 기재돼 있습니다.
+          영업용순자본 {netOperatingCapital.toLocaleString('ko-KR')}억 원은 규제 지표이고 ROE의 분모는 기간 평균입니다.
+          대신과 순서를 확정하려면 2021년 12월 31일 서울지점 재무상태표의 자본총계 또는 부채총계가 필요합니다. 현재 범위는 10–11위입니다.
+        </li>)}
       </ul>
       <details><summary>추가 {check.companies.length}개사 별도 재무지표와 출처</summary>
         <div className="lab-table-wrap"><table className="lab-table">

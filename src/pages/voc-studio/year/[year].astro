@@ -50,7 +50,8 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
   {boardTopics && <section class="lab-block">
     <h2>공개 문의 주제 Top 10</h2>
     <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
-    {review && <p>올해의 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
+    {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 현재 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
+    {review && <p>직전 규칙으로 점검한 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
     <ol class="voc-rankings">
       {boardTopics.ranked.slice(0, 10).map(({ id, label, count }) => {
         const rank = 1 + boardTopics.ranked.filter((row) => row.count > count).length;
