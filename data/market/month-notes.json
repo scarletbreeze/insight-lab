@@ -251,6 +251,18 @@
     "sourceName": "Cboe 시장 분석",
     "sourceUrl": "https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf"
   },
+  "2020-01": {
+    "summary": "WHO 사무총장은 국제보건규칙에 따른 긴급위원회의 권고를 받아들였다.",
+    "memo": "1월의 국제공중보건 비상사태 선포와 3월의 팬데믹 평가를 날짜순으로 놓아 보세요. 1월 말에 시장 참여자가 알 수 있던 정보는 어디까지였나요?",
+    "sourceName": "세계보건기구 · 코로나19 대응 연표",
+    "sourceUrl": "https://www.who.int/news/item/29-06-2020-covidtimeline"
+  },
+  "2020-02": {
+    "summary": "삼성전자는 고급형 스마트폰에 탑재할 16GB 모바일 D램 패키지의 양산을 시작했다고 밝혔다.",
+    "memo": "당시 발표된 메모리 양산 소식과 나중에 지정된 미국 경기 정점을 구분해 보세요. 두 정보는 언제 알 수 있었나요?",
+    "sourceName": "삼성전자 뉴스룸",
+    "sourceUrl": "https://news.samsung.com/global/samsung-begins-mass-production-of-industrys-first-16gb-lpddr5-dram-for-next-generation-premium-smartphones"
+  },
   "2020-03": {
     "summary": "WHO의 팬데믹 판단 뒤 미국과 한국의 금리 결정 및 달러 유동성 대책이 발표됐습니다.",
     "memo": "미국과 한국의 금리 결정, 중앙은행 간 달러 유동성 협정을 발표 순서로 읽어 보세요. 같은 달의 환율 추이와는 날짜를 맞춰 살펴봅니다.",
@@ -262,6 +274,48 @@
     "memo": "4월 20일 선물 가격과 아래 스냅샷의 월 첫날·마지막날 현물 가격을 구분해 보세요. 관측하는 시장과 날짜에 따라 다른 값이 나옵니다.",
     "sourceName": "미 에너지정보청 WTI 선물 분석",
     "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=43495"
+  },
+  "2020-05": {
+    "summary": "삼성전자는 5나노 이하 공정용 생산라인 공사를 5월에 시작했다고 밝혔다. 발표 당시 본격 가동 목표는 2021년 하반기였다.",
+    "memo": "라인 착공 발표와 제품 출하는 시차가 있습니다. 발표문에서 확인되는 공사 단계와 회사가 제시한 가동 목표를 각각 적어 보세요.",
+    "sourceName": "삼성전자 뉴스룸",
+    "sourceUrl": "https://news.samsung.com/global/samsung-electronics-expands-its-foundry-capacity-with-a-new-production-line-in-pyeongtaek-korea"
+  },
+  "2020-06": {
+    "summary": "유럽중앙은행은 팬데믹 긴급매입프로그램(PEPP)의 자산 매입 한도를 1조 3,500억 유로로 늘렸다.",
+    "memo": "6월과 12월 ECB 결정을 함께 보세요. 매입 한도가 늘어난 금액과 그날 실제 집행된 금액을 구분할 수 있나요?",
+    "sourceName": "유럽중앙은행 통화정책 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2020/html/ecb.mp200604~a307d3429c.en.html"
+  },
+  "2020-07": {
+    "summary": "정부는 국고와 지방비·민간 투자를 합해 2025년까지 160조 원을 투입한다는 계획을 발표했다.",
+    "memo": "한국과 EU의 회복 계획에서 발표 금액의 통화, 집행 기간, 자금 조달 주체를 찾아보세요.",
+    "sourceName": "대한민국 정책브리핑",
+    "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148874669"
+  },
+  "2020-08": {
+    "summary": "코로나19 대응을 위해 한시적으로 도입한 공매도 금지와 자기주식 취득한도 확대 조치의 연장이 발표됐다.",
+    "memo": "같은 날 발표된 국내 공매도 조치와 미국 통화정책 전략 중 어느 것이 국내 거래 규칙을 직접 바꾸었나요?",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/74509"
+  },
+  "2020-09": {
+    "summary": "금융위는 20조 원 조성 계획을 재정 3조 원, 정책금융기관 등 4조 원, 민간금융회사 등 13조 원으로 나눠 설명했다.",
+    "memo": "뉴딜펀드 20조 원 가운데 민간에서 조달할 계획이었던 금액은 얼마였나요? 계획과 실제 모집액을 구분해 보세요.",
+    "sourceName": "금융위원회 뉴딜펀드 문답",
+    "sourceUrl": "https://www.fsc.go.kr/po020201/27352"
+  },
+  "2020-10": {
+    "summary": "SK하이닉스는 인텔의 낸드 메모리·저장장치 사업을 90억 달러에 두 단계로 인수하는 계약을 발표했다.",
+    "memo": "인수 발표일에 넘어간 자산이 있었나요? 계약 체결과 1단계 거래 종결을 구분해 보세요.",
+    "sourceName": "SK하이닉스 뉴스룸",
+    "sourceUrl": "https://news.skhynix.co.kr/acquisition-of-intel-nand-memory-business/"
+  },
+  "2020-11": {
+    "summary": "일반청약자 배정 물량의 절반 이상에 균등방식을 도입하는 내용이다. 적용 기준은 12월 이후 증권신고서 제출 시점이었다.",
+    "memo": "최소 증거금을 충족한 청약자에게 균등배정 기회를 주면 기존 비례방식과 무엇이 달라질까요? 발표일과 적용 대상을 함께 확인해 보세요.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/74611"
   },
   "2020-12": {
     "summary": "S&P Global 집계에서 S&P 500은 12월에 3.8% 상승했습니다.",

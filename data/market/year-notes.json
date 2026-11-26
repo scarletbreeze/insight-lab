@@ -15,7 +15,25 @@
     "summary": "외국인이 국내 상장 주식에 직접 투자할 수 있게 됐습니다.",
     "memo": "해외 투자자가 직접 매수할 수 있게 된 때를 거래소 연혁에서 찾아보세요. 1991년 법 개정과 1992년 시장 개방은 따로 기록돼 있습니다.",
     "sourceName": "한국거래소 연혁",
-    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "해외 투자자에게 열린 국내 주식시장",
+        "summary": "외국인이 국내 상장 주식에 직접 투자할 수 있게 됐습니다.",
+        "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp",
+        "sourceName": "한국거래소 연혁",
+        "month": "01"
+      },
+      {
+        "label": "Surprise",
+        "title": "유럽 환율제도를 이탈한 파운드화",
+        "summary": "영국은 외환시장 개입 이후 파운드화의 유럽 환율제도(ERM) 참여를 중단했습니다.",
+        "sourceUrl": "https://www.bankofengland.co.uk/quarterly-bulletin/1992/q4/operation-of-monetary-policy",
+        "sourceName": "영란은행 1992년 통화정책 보고",
+        "month": "09"
+      }
+    ]
   },
   "1993": {
     "summary": "정부는 실명에 의한 금융거래와 비밀보장에 관한 대통령 긴급재정경제명령을 발령했습니다.",
@@ -45,7 +63,25 @@
     "summary": "외환위기 중 한국 정부가 IMF와 경제 프로그램을 협의했고, IMF 이사회는 12월에 대기성 차관을 승인했습니다.",
     "memo": "12월 3일의 협의 종료 발표와 12월 4일의 이사회 승인에서 당시 확인할 수 있었던 사실을 각각 기록해 보세요.",
     "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9755.htm",
-    "sourceName": "IMF 한국 대기성 차관 승인 발표"
+    "sourceName": "IMF 한국 대기성 차관 승인 발표",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "한국의 외환위기와 IMF 자금 지원",
+        "summary": "IMF가 한국에 3년 만기, SDR 155억 규모의 대기성 차관을 승인했습니다.",
+        "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr9755",
+        "sourceName": "IMF 발표",
+        "month": "12"
+      },
+      {
+        "label": "Surprise",
+        "title": "하루짜리 자금에 붙은 연 32% 금리",
+        "summary": "금융기관끼리 하루 동안 자금을 빌릴 때 적용하는 콜금리가 32%에 이르렀다. 이달 5일의 금리는 21%였다.",
+        "sourceUrl": "https://www.imf.org/external/pubs/ft/wp/2000/wp0025.pdf",
+        "sourceName": "IMF · 한국 기업자료로 본 금융위기",
+        "month": "12"
+      }
+    ]
   },
   "1998": {
     "summary": "외환위기 이후 한국이 금융·기업 부문의 후속 개혁을 이어간 해입니다.",
@@ -58,7 +94,16 @@
         "title": "외환위기 이후 금융 구조조정",
         "summary": "한국 정부와 IMF는 금융 부문 개혁과 대외 건전성 회복 과제를 협의했습니다.",
         "sourceUrl": "https://www.elibrary.imf.org/view/journals/002/2000/011/article-A001-en.xml",
-        "sourceName": "IMF 한국 경제·정책 평가"
+        "sourceName": "IMF 한국 경제·정책 평가",
+        "month": "06"
+      },
+      {
+        "label": "Surprise",
+        "title": "외채 만기를 둘러싼 해외 채권은행과의 잠정 합의",
+        "summary": "한국 정부와 해외 채권은행이 단기외채 만기를 연장하는 데 잠정 합의했다.",
+        "sourceUrl": "https://www.imf.org/external/np/ieo/2003/cac/pdf/Kor.pdf",
+        "sourceName": "IMF 독립평가국 · 한국 사례",
+        "month": "01"
       }
     ]
   },
@@ -114,7 +159,25 @@
     "summary": "연준은 담보를 받는 기간물 대출을 입찰 방식으로 공급하는 임시 제도를 발표했습니다.",
     "memo": "12월 입찰 제도의 담보, 만기, 대상 기관을 원문에서 찾아보세요. 정책금리 변경과 유동성 공급을 구분하는 단서입니다.",
     "sourceName": "미 연준 단기 자금시장 대응 발표",
-    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/20071212a.htm"
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/20071212a.htm",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "은행 단기자금 조달에 도입된 입찰 방식",
+        "summary": "연준은 담보를 받는 기간물 대출을 입찰 방식으로 공급하는 임시 제도를 발표했습니다.",
+        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/20071212a.htm",
+        "sourceName": "미 연준 단기 자금시장 대응 발표",
+        "month": "12"
+      },
+      {
+        "label": "Surprise",
+        "title": "휴대전화 시장에 진입한 애플",
+        "summary": "Apple은 Macworld에서 첫 iPhone을 공개했습니다.",
+        "sourceUrl": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/",
+        "sourceName": "Apple 제품 공개 자료",
+        "month": "01"
+      }
+    ]
   },
   "2008": {
     "summary": "금융기관 위기와 신용시장 불안에 대응해 미국의 금융 지원과 금리 정책이 빠르게 바뀐 해입니다.",
@@ -127,7 +190,16 @@
         "title": "금융기관 유동성 지원",
         "summary": "3월 연준은 증권화 시장의 자금조달을 돕기 위해 프라이머리 딜러 대출 창구 개설을 승인했습니다.",
         "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080316a.htm",
-        "sourceName": "미 연준 3월 발표"
+        "sourceName": "미 연준 3월 발표",
+        "month": "03"
+      },
+      {
+        "label": "Surprise",
+        "title": "예금보험공사 관리로 넘어간 인디맥",
+        "summary": "미국 저축기관감독청이 인디맥 은행을 폐쇄하고 연방예금보험공사(FDIC)가 관리에 들어갔다.",
+        "sourceUrl": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/indymac.html",
+        "sourceName": "미 연방예금보험공사 · 인디맥 처리 기록",
+        "month": "07"
       }
     ]
   },
@@ -171,13 +243,49 @@
     "summary": "유가증권시장과 코스닥의 하루 가격제한폭이 30%로 확대됐습니다.",
     "memo": "가격제한폭 확대 전후의 같은 등락률이 상한가에 해당하는지 살펴보세요. 하루의 허용 변동폭과 실현 수익률은 다릅니다.",
     "sourceName": "KIND 공시의 가격제한폭 제도 연혁",
-    "sourceUrl": "https://kind.krx.co.kr/external/2016/08/22/000492/20160822001575/10001.htm"
+    "sourceUrl": "https://kind.krx.co.kr/external/2016/08/22/000492/20160822001575/10001.htm",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "국내 거래소에서 거래하기 시작한 배출권",
+        "summary": "온실가스 배출권의 거래소 시장이 열렸습니다.",
+        "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm",
+        "sourceName": "KIND 공시의 국내 증권시장 연혁",
+        "month": "01"
+      },
+      {
+        "label": "Surprise",
+        "title": "국내 주식의 하루 가격 변동 허용 폭 확대",
+        "summary": "유가증권시장과 코스닥의 하루 가격제한폭이 30%로 확대됐습니다.",
+        "sourceUrl": "https://kind.krx.co.kr/external/2016/08/22/000492/20160822001575/10001.htm",
+        "sourceName": "KIND 공시의 가격제한폭 제도 연혁",
+        "month": "06"
+      }
+    ]
   },
   "2016": {
     "summary": "Nasdaq-100과 S&P 500 모두 올랐고, Nasdaq 연간 평가에 따르면 S&P 500의 가격 수익률이 더 높았습니다.",
     "memo": "지수의 전년 말 대비 등락률과 개별 종목의 그해 첫날 대비 수익률을 따로 읽어 보세요.",
     "sourceName": "Nasdaq-100 2016년 연간 평가",
-    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf"
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "일본은행의 마이너스 금리 실험",
+        "summary": "일본은행은 양적·질적 완화에 일부 당좌예금 잔액에 적용하는 마이너스 금리를 추가하기로 했습니다.",
+        "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/g160129.pdf",
+        "sourceName": "일본은행 2016년 1월 회의 의사록",
+        "month": "01"
+      },
+      {
+        "label": "Surprise",
+        "title": "국민투표에 부친 영국의 EU 회원국 지위",
+        "summary": "영국의 유럽연합 회원국 지위를 묻는 국민투표에서 탈퇴가 51.9%를 얻었습니다.",
+        "sourceUrl": "https://www.electoralcommission.org.uk/research-reports-and-data/our-reports-and-data-past-elections-and-referendums/report-23-june-2016-referendum-uks-membership-european-union",
+        "sourceName": "영국 선거관리위원회 국민투표 보고서",
+        "month": "06"
+      }
+    ]
   },
   "2017": {
     "summary": "CME는 12월 18일을 첫 거래일로 정해 비트코인 선물 계약을 상장했습니다.",
@@ -204,11 +312,20 @@
     "sourceName": "NBER 경기순환 판정",
     "highlights": [
       {
+        "label": "Theme",
+        "title": "한국판 뉴딜이 제시한 중기 투자 계획",
+        "summary": "정부는 국고와 지방비·민간 투자를 합해 2025년까지 160조 원을 투입한다는 계획을 발표했다.",
+        "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148874669",
+        "sourceName": "대한민국 정책브리핑",
+        "month": "07"
+      },
+      {
         "label": "Surprise",
         "title": "0달러 아래로 내려간 WTI 선물",
         "summary": "4월 20일 만기를 앞둔 WTI 선물 계약 가격이 마이너스를 기록했습니다.",
         "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=43495",
-        "sourceName": "미 에너지정보청 분석"
+        "sourceName": "미 에너지정보청 분석",
+        "month": "04"
       }
     ]
   },
@@ -216,25 +333,97 @@
     "summary": "SEC 실무진은 2021년 1월 게임스톱 거래를 중심으로 주식·옵션 시장의 변동성과 개인 주문 처리 구조를 검토했습니다.",
     "memo": "SEC 보고서에서 1월의 거래 기록과 10월의 사후 분석을 구분해 보세요. 사건이 진행될 때 투자자가 볼 수 있던 자료는 무엇인가요?",
     "sourceName": "미 SEC 2021년 시장 구조 보고서 발표",
-    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212"
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "한국은행의 기준금리 인상",
+        "summary": "한국은행 금리 추이에서 이날 기준금리는 연 0.50%에서 0.75%로 바뀌었습니다.",
+        "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656",
+        "sourceName": "한국은행 기준금리 추이",
+        "month": "08"
+      },
+      {
+        "label": "Surprise",
+        "title": "게임스톱 거래를 들여다본 미국 증권당국",
+        "summary": "SEC 실무진은 2021년 1월 게임스톱 거래를 중심으로 주식·옵션 시장의 변동성과 개인 주문 처리 구조를 검토했습니다.",
+        "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212",
+        "sourceName": "미 SEC 2021년 시장 구조 보고서 발표",
+        "month": "10"
+      }
+    ]
   },
   "2022": {
     "summary": "미 연준은 3월 금리 목표 범위를 인상했고, 6월에는 인상 폭을 0.75%p로 높였습니다.",
     "memo": "3월과 6월 FOMC 발표의 목표 범위를 확인한 뒤, 각 월의 10년물 국채금리 관측값과 비교해 보세요.",
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
-    "sourceName": "미 연준 FOMC 회의 기록"
+    "sourceName": "미 연준 FOMC 회의 기록",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "한국은행 기준금리 인상 폭 확대",
+        "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.75%에서 2.25%로 바뀌었습니다.",
+        "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656",
+        "sourceName": "한국은행 기준금리 추이",
+        "month": "07"
+      },
+      {
+        "label": "Surprise",
+        "title": "연구용으로 공개된 대화형 AI",
+        "summary": "OpenAI는 대화형 생성 AI 서비스의 초기 버전을 공개하고 이용자 피드백을 받기 시작했습니다.",
+        "sourceUrl": "https://openai.com/index/chatgpt/",
+        "sourceName": "OpenAI ChatGPT 공개 안내",
+        "month": "11"
+      }
+    ]
   },
   "2023": {
     "summary": "캘리포니아 금융당국이 은행을 폐쇄하고 미국 연방예금보험공사(FDIC)를 파산관재인으로 지정했습니다.",
     "memo": "실리콘밸리은행 폐쇄를 결정한 기관과 파산관재인으로 지정된 기관을 찾아보세요. 두 기관의 역할이 다릅니다.",
     "sourceName": "FDIC 의회 증언",
-    "sourceUrl": "https://www.fdic.gov/news/speeches/2023/spmar2923.html"
+    "sourceUrl": "https://www.fdic.gov/news/speeches/2023/spmar2923.html",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "미국 연방기금금리 목표 범위 상향",
+        "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 5.25~5.50%입니다. 변경 폭은 25bp 인상입니다.",
+        "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023",
+        "sourceName": "미 연준 공개시장운영 금리 변경표",
+        "month": "07"
+      },
+      {
+        "label": "Surprise",
+        "title": "실리콘밸리은행 폐쇄",
+        "summary": "캘리포니아 금융당국이 은행을 폐쇄하고 미국 연방예금보험공사(FDIC)를 파산관재인으로 지정했습니다.",
+        "sourceUrl": "https://www.fdic.gov/news/speeches/2023/spmar2923.html",
+        "sourceName": "FDIC 의회 증언",
+        "month": "03"
+      }
+    ]
   },
   "2024": {
     "summary": "미국 증권거래위원회가 여러 현물 비트코인 상장지수상품의 상장과 거래를 승인했습니다.",
     "memo": "SEC가 승인한 대상은 거래소에 상장되는 상품입니다. 2017년 비트코인 선물 상장과 비교해 투자자가 거래하는 계약을 구분해 보세요.",
     "sourceName": "미 SEC 위원장 발표",
-    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"
+    "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
+    "highlights": [
+      {
+        "label": "Theme",
+        "title": "현물 비트코인 상품의 미국 증시 진입",
+        "summary": "미국 증권거래위원회가 여러 현물 비트코인 상장지수상품의 상장과 거래를 승인했습니다.",
+        "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023",
+        "sourceName": "미 SEC 위원장 발표",
+        "month": "01"
+      },
+      {
+        "label": "Surprise",
+        "title": "금융·외환시장 안정 조치를 발표한 한국은행",
+        "summary": "한국은행은 금융시장과 외환시장 안정에 필요한 유동성 공급과 시장 대응 조치를 발표했습니다.",
+        "sourceUrl": "https://www.bok.or.kr/eng/bbs/E0000627/view.do?menuNo=400022&nttId=10088407",
+        "sourceName": "한국은행 시장안정화 조치",
+        "month": "12"
+      }
+    ]
   },
   "2025": {
     "summary": "대체거래소 출범, 공매도 재개와 상법 개정이 이어졌고, 코스피는 10월에 처음 4,000선을 넘겨 마감했습니다.",
@@ -247,14 +436,16 @@
         "title": "복수 거래소 체제",
         "summary": "넥스트레이드가 3월 4일 국내 최초의 대체거래소로 출범했습니다.",
         "sourceUrl": "https://www.fsc.go.kr/no040101?cnId=2628",
-        "sourceName": "금융위원회 대체거래소 출범 안내"
+        "sourceName": "금융위원회 대체거래소 출범 안내",
+        "month": "03"
       },
       {
         "label": "Surprise",
         "title": "코스피 첫 4,000선 마감",
         "summary": "코스피는 10월 27일 4,042.83에 마감했습니다.",
         "sourceUrl": "https://gonggamadmin.korea.kr/newsContentView.es?code_cd=0105000000&content=NC002&mid=a12603000000&news_id=651802d7-bc3d-44f8-8538-5d9a4dd77dc7&section_id=NCCD_POLICY",
-        "sourceName": "대한민국 정책주간지 K-공감"
+        "sourceName": "대한민국 정책주간지 K-공감",
+        "month": "10"
       }
     ]
   },

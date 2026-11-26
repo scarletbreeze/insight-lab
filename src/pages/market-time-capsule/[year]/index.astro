@@ -44,11 +44,11 @@ const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spy
   <AnnualEquityHighlights {year} />
   {highlights.length > 0 && <section class="lab-block">
     <h2>이 해에 주목할 사건</h2>
-    <div class="lab-grid">{highlights.map(({ label, title, summary, sourceUrl, sourceName }) => <article class="lab-card">
+    <div class="lab-grid">{highlights.map(({ label, title, summary, sourceUrl, sourceName, month }) => <article class="lab-card">
       <p>{label === 'Theme' ? '주요 주제' : '이례적 사건'}</p>
       <h3>{title}</h3>
       <p>{summary}</p>
-      <a href={sourceUrl}>{sourceName}</a>
+      <a href={sitePath('market-time-capsule/' + year + '/' + month)}>{Number(month)}월 시장 기록</a> · <a href={sourceUrl}>{sourceName}</a>
     </article>)}</div>
   </section>}
   <section class="lab-block"><h2>주요 사건</h2><EventList {items} /></section>

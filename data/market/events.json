@@ -2590,6 +2590,14 @@
     "now": "NBER 위원회는 2020년 6월에 정점 월을 발표했습니다."
   },
   {
+    "date": "2020-02-25",
+    "title": "삼성전자, 스마트폰용 16GB LPDDR5 양산 발표",
+    "category": "기술",
+    "summary": "삼성전자는 고급형 스마트폰에 탑재할 16GB 모바일 D램 패키지의 양산을 시작했다고 밝혔다.",
+    "sourceName": "삼성전자 뉴스룸",
+    "sourceUrl": "https://news.samsung.com/global/samsung-begins-mass-production-of-industrys-first-16gb-lpddr5-dram-for-next-generation-premium-smartphones"
+  },
+  {
     "date": "2020-03-04",
     "title": "미국 연방기금금리 목표 1.00~1.25% 적용",
     "category": "거시경제",
@@ -2676,6 +2684,14 @@
     "now": "미 에너지정보청은 낮은 유동성과 저장 공간 제약이 당시 가격 움직임에 기여했다고 분석했습니다."
   },
   {
+    "date": "2020-05-21",
+    "title": "삼성전자, 평택 EUV 파운드리 라인 착공 발표",
+    "category": "기업",
+    "summary": "삼성전자는 5나노 이하 공정용 생산라인 공사를 5월에 시작했다고 밝혔다. 발표 당시 본격 가동 목표는 2021년 하반기였다.",
+    "sourceName": "삼성전자 뉴스룸",
+    "sourceUrl": "https://news.samsung.com/global/samsung-electronics-expands-its-foundry-capacity-with-a-new-production-line-in-pyeongtaek-korea"
+  },
+  {
     "date": "2020-05-28",
     "title": "한국은행, 기준금리 0.50%로 인하",
     "category": "거시경제",
@@ -2684,12 +2700,109 @@
     "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
+    "date": "2020-06-04",
+    "title": "ECB, 팬데믹 긴급매입 한도 6천억 유로 증액",
+    "category": "통화정책",
+    "summary": "유럽중앙은행은 팬데믹 긴급매입프로그램(PEPP)의 자산 매입 한도를 1조 3,500억 유로로 늘렸다.",
+    "sourceName": "유럽중앙은행 통화정책 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2020/html/ecb.mp200604~a307d3429c.en.html",
+    "then": "6월 결정은 자산매입 한도를 6천억 유로 늘리는 것이었다.",
+    "now": "유럽중앙은행은 팬데믹 긴급매입프로그램의 한도를 5천억 유로 추가했다.",
+    "nowSourceUrl": "https://www.ecb.europa.eu/mopo/implement/pepp/html/index.en.html"
+  },
+  {
+    "date": "2020-07-14",
+    "title": "정부, 한국판 뉴딜 종합계획 발표",
+    "category": "거시경제",
+    "summary": "정부는 국고와 지방비·민간 투자를 합해 2025년까지 160조 원을 투입한다는 계획을 발표했다.",
+    "sourceName": "대한민국 정책브리핑",
+    "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148874669",
+    "then": "160조 원은 2025년까지의 투자 계획으로 발표된 금액이었다.",
+    "now": "2021년 7월 정부는 뉴딜 2.0을 발표하며 총투자 목표를 220조 원으로 높였다.",
+    "nowSourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148890141"
+  },
+  {
+    "date": "2020-07-21",
+    "title": "EU 정상, 7,500억 유로 회복기금에 합의",
+    "category": "거시경제",
+    "summary": "유럽이사회는 코로나19 이후 경제 회복을 위해 대출과 보조금을 포함하는 차세대 EU 기금에 합의했다.",
+    "sourceName": "유럽이사회 정상회의 결론",
+    "sourceUrl": "https://www.consilium.europa.eu/media/45109/210720-euco-final-conclusions-en.pdf"
+  },
+  {
     "date": "2020-08-27",
     "title": "미 연준, 장기 통화정책 전략 개정 발표",
     "category": "거시경제",
     "summary": "FOMC는 물가상승률이 긴 기간에 걸쳐 평균 2%가 되도록 운용하겠다는 전략을 발표했습니다.",
     "sourceName": "미 연준 장기 통화정책 전략",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200827a.htm"
+  },
+  {
+    "date": "2020-08-27",
+    "title": "금융위원회, 공매도 금지 6개월 연장 발표",
+    "category": "제도",
+    "summary": "코로나19 대응을 위해 한시적으로 도입한 공매도 금지와 자기주식 취득한도 확대 조치의 연장이 발표됐다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/74509"
+  },
+  {
+    "date": "2020-09-07",
+    "title": "금융위원회, 정책형 뉴딜펀드의 자금 구성 설명",
+    "category": "시장",
+    "summary": "금융위는 20조 원 조성 계획을 재정 3조 원, 정책금융기관 등 4조 원, 민간금융회사 등 13조 원으로 나눠 설명했다.",
+    "sourceName": "금융위원회 뉴딜펀드 문답",
+    "sourceUrl": "https://www.fsc.go.kr/po020201/27352"
+  },
+  {
+    "date": "2020-10-13",
+    "title": "애플, 5G 지원 아이폰 12·12 미니 발표",
+    "category": "기업",
+    "summary": "애플이 5G 통신을 지원하는 두 모델을 공개했다. 발표 자료에서 두 모델의 예약 및 판매 개시 일정은 달랐다.",
+    "sourceName": "애플 뉴스룸",
+    "sourceUrl": "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/"
+  },
+  {
+    "date": "2020-10-20",
+    "title": "SK하이닉스, 인텔 낸드 사업 인수 계약 발표",
+    "category": "기업",
+    "summary": "SK하이닉스는 인텔의 낸드 메모리·저장장치 사업을 90억 달러에 두 단계로 인수하는 계약을 발표했다.",
+    "sourceName": "SK하이닉스 뉴스룸",
+    "sourceUrl": "https://news.skhynix.co.kr/acquisition-of-intel-nand-memory-business/",
+    "then": "계약 발표 시점에는 사업 이전과 대금 지급이 남아 있었다.",
+    "now": "2021년 12월 SK하이닉스는 인텔 낸드 사업의 1단계 인수 완료를 발표했다.",
+    "nowSourceUrl": "https://news.skhynix.co.kr/intel-acquisition-complete/"
+  },
+  {
+    "date": "2020-11-10",
+    "title": "애플, 맥 전용 첫 자체 설계 칩 M1 공개",
+    "category": "기술",
+    "summary": "애플은 맥용으로 설계한 시스템온칩 M1을 발표했다. 칩 설계에 채택한 공정은 5나노미터였다.",
+    "sourceName": "애플 뉴스룸",
+    "sourceUrl": "https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/"
+  },
+  {
+    "date": "2020-11-16",
+    "title": "S&P DJI, 테슬라의 S&P 500 편입 예고",
+    "category": "시장",
+    "summary": "지수 산출기관이 12월 21일 개장 전 편입 일정을 알렸다. 발표 시점에는 한 번에 편입할지 두 차례로 나눌지 의견을 받고 있었다.",
+    "sourceName": "S&P 다우존스 인덱스 편입 공지",
+    "sourceUrl": "https://press.spglobal.com/2020-11-16-Tesla-Set-to-Join-S-P-500"
+  },
+  {
+    "date": "2020-11-18",
+    "title": "금융위원회, 일반청약자 공모주 균등배정 방안 발표",
+    "category": "제도",
+    "summary": "일반청약자 배정 물량의 절반 이상에 균등방식을 도입하는 내용이다. 적용 기준은 12월 이후 증권신고서 제출 시점이었다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/74611"
+  },
+  {
+    "date": "2020-12-10",
+    "title": "ECB, 긴급매입 한도를 1조 8,500억 유로로 확대",
+    "category": "통화정책",
+    "summary": "유럽중앙은행은 팬데믹 긴급매입프로그램의 한도를 5천억 유로 추가했다.",
+    "sourceName": "유럽중앙은행 PEPP 연혁",
+    "sourceUrl": "https://www.ecb.europa.eu/mopo/implement/pepp/html/index.en.html"
   },
   {
     "date": "2021-08-26",
