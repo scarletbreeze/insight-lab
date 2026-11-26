@@ -1803,6 +1803,14 @@
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
   },
   {
+    "date": "2008-02-13",
+    "title": "미국, 가계 세금 환급을 포함한 경기부양법 제정",
+    "category": "제도",
+    "summary": "개인 세금 환급과 기업 투자 인센티브가 법에 담겼다. 주택대출 관련 한도도 높였다.",
+    "sourceName": "미국 정부출판국 · 공법 110-185",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-110publ185"
+  },
+  {
     "date": "2008-03-16",
     "title": "미 연준, 프라이머리 딜러에 대출 창구 개설 발표",
     "category": "거시경제",
@@ -1833,6 +1841,24 @@
     "summary": "개별 주식을 기초자산으로 한 선물을 거래하는 시장이 열렸습니다.",
     "sourceName": "KIND 공시의 국내 증권시장 연혁",
     "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  {
+    "date": "2008-06-25",
+    "title": "미 연준, 연방기금금리 목표 2% 유지",
+    "category": "통화정책",
+    "summary": "4월 말 인하 후 열린 6월 회의에서 금리를 동결했다. 성명은 신용 여건 악화와 에너지 가격 상승을 함께 짚었다.",
+    "sourceName": "미 연준 · 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20080625a.htm"
+  },
+  {
+    "date": "2008-07-11",
+    "title": "미국 인디맥 은행 영업 폐쇄",
+    "category": "금융안정",
+    "summary": "미국 저축기관감독청이 인디맥 은행을 폐쇄하고 연방예금보험공사(FDIC)가 관리에 들어갔다.",
+    "sourceName": "미 연방예금보험공사 · 인디맥 처리 기록",
+    "sourceUrl": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/indymac.html",
+    "then": "FDIC는 7월 14일부터 영업시간에 보장 대상 예금을 이용할 수 있다고 안내했다.",
+    "now": "2009년 3월 인디맥 연방은행의 예금 전액이 원웨스트 은행으로 이전됐다."
   },
   {
     "date": "2008-08-07",
@@ -2543,6 +2569,16 @@
     "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.50~1.75%입니다. 변경 폭은 25bp 인하입니다.",
     "sourceName": "미 연준 공개시장운영 금리 변경표",
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2019"
+  },
+  {
+    "date": "2020-01-30",
+    "title": "WHO, 신종 코로나바이러스 국제공중보건 비상사태 선포",
+    "category": "국제",
+    "summary": "WHO 사무총장은 국제보건규칙에 따른 긴급위원회의 권고를 받아들였다.",
+    "sourceName": "세계보건기구 · 코로나19 대응 연표",
+    "sourceUrl": "https://www.who.int/news/item/29-06-2020-covidtimeline",
+    "now": "WHO가 전 세계 유행 상황을 팬데믹으로 평가한 것은 3월 11일이었다.",
+    "nowSourceUrl": "https://www.who.int/europe/emergencies/situations/Covid-19"
   },
   {
     "date": "2020-02",

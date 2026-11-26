@@ -22,7 +22,7 @@ Before any major task, read:
 - the relevant service requirements in `docs/`
 - `Insight_Lab_Requirements_v1.0.md` if present at repository root/docs
 
-Do not implement a large feature before proposing a plan.
+For a large feature, share a short plan naming the applicable requirement, expected files, and verification steps, then proceed.
 
 ## Tech stack
 - Astro
@@ -97,6 +97,14 @@ For major work:
 6. summarize
 7. review
 8. fix
+
+### Autonomous work
+
+Within the requested scope, choose the next unfinished requirement and carry it through implementation and verification. Install necessary project dependencies, consult public sources, and resolve recoverable failures independently. If a source is unavailable, record the affected period or claim and the evidence still needed, then continue other in-scope work.
+
+Ask when conflicting requirements materially change the outcome, a destructive or irreversible action needs authorization, or progress requires information only the user can supply. Keep private materials private under the content rules above. When deployment is requested, verify the changed content or interaction at the production URL before reporting release completion.
+
+Choose tools according to the evidence needed. Use the PDF skill when a report's table layout or footnotes affect interpretation, spreadsheet tools for workbook values and units, and a browser for navigation, responsive layout, or interaction checks. For a design comparison or release review, use the repository skill at `.agents/skills/insight-lab-review/SKILL.md`.
 
 ## Review severity
 - Critical: fix before merge
