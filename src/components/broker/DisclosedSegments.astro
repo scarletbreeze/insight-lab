@@ -1,8 +1,10 @@
 ---
 import { formatSegmentAmount, segmentFilings, segmentTag } from '../../utils/broker-segments';
+import { brokers } from '../../utils/brokers';
 interface Props { brokerId: string; }
 const { brokerId } = Astro.props;
 const filing = segmentFilings[brokerId];
+const brokerName = brokers.find(({ id }) => id === brokerId)?.name ?? brokerId;
 const latestIndex = filing ? filing.years.length - 1 : 0;
 const segments = [...(filing?.segments ?? [])].sort((a, b) => b.amounts[latestIndex] - a.amounts[latestIndex]);
 const scale = Math.max(1, ...segments.map(({ amounts }) => Math.abs(amounts[latestIndex])));
@@ -18,7 +20,7 @@ const scale = Math.max(1, ...segments.map(({ amounts }) => Math.abs(amounts[late
       <span class="amount">{formatSegmentAmount(amounts[latestIndex], filing.unit)}</span>
     </li>)}</ul>
   </figure>
-  <div class="lab-table-wrap">
+  <div class="lab-table-wrap" role="region" aria-label={brokerName + ' ' + (filing.period ?? '연간 결산') + ' 부문별 ' + filing.metric + ' 공시 표'} tabindex="0">
     <table class="lab-table">
       <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th>{filing.years.map((year) => <th scope="col">{year}년 {filing.period}</th>)}</tr></thead>
       <tbody>{filing.segments.map(({ name, amounts }) => <tr>

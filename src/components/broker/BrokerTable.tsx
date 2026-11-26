@@ -82,7 +82,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
         <span>{formatBrokerMetric(value, field.percent)}</span>
       </li>)}
     </ol></> : <p role="status">해당 지표 자료 확인 중</p>) : left === right ? <p role="status">서로 다른 증권사를 선택하세요.</p> :
-      <div className="lab-table-wrap"><table className="lab-table">
+      <div className="lab-table-wrap" role="region" aria-label={label(left) + '·' + label(right) + ' 연결 지표 비교 표'} tabIndex={0}><table className="lab-table compare-table">
         <caption>{isInterim ? interimProfit.label + ' 연결 실적' : year + '년 연결 결산'} · 차이는 첫 번째 회사에서 두 번째 회사를 뺀 값</caption>
         <thead><tr><th scope="col">연결 지표</th><th scope="col">{label(left)}</th><th scope="col">{label(right)}</th><th scope="col">차이</th></tr></thead>
         <tbody>{comparisonFields.map(({ key, title, percent }) => {

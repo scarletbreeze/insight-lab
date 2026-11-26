@@ -35,6 +35,8 @@ a:hover { color: var(--color-accent-blue); }
 .wordmark span { width: .65rem; height: .65rem; background: var(--color-accent-red); border-radius: 50%; }
 .desktop-nav, .footer-inner nav { display: flex; flex-wrap: wrap; gap: .75rem 1.1rem; }
 .desktop-nav { font-size: .91rem; }
+/* Header and footer links sit in flex rows; the block padding lifts each 23px line to the 24px target minimum without changing the layout. */
+.desktop-nav a, .footer-inner nav a { padding-block: .3rem; }
 [aria-current="page"], .site-header [aria-current="location"] { color: var(--color-accent-blue); text-decoration: underline; text-underline-offset: .3em; }
 .mobile-menu, .mobile-search { display: none; }
 .hero {
@@ -84,6 +86,12 @@ a:hover { color: var(--color-accent-blue); }
 .search-panel { margin-top: 2rem; }
 .search-panel input { display: block; width: 100%; color: var(--color-ink); background: var(--color-panel); border: 1px solid var(--color-rule); border-radius: .25rem; padding: .75rem; margin-block: .5rem 1rem; }
 .search-results { display: grid; gap: .65rem; margin-top: 1rem; }
+/* Safari draws a bare <select> as a 23px native popup button and ignores padding; drawing the control here keeps every engine on the same 44px field with a chevron. */
+main select {
+  appearance: none; padding: .5rem 2rem .5rem .75rem; border: 1px solid var(--color-rule); border-radius: .25rem;
+  background: var(--color-panel) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%23c6cbd4' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right .7rem center / .7rem auto;
+}
+main select:disabled { color: var(--color-muted); cursor: not-allowed; }
 .search-results a { display: grid; gap: .3rem; padding: 1rem; border: 1px solid var(--color-rule); border-radius: .35rem; }
 .search-results a:hover { border-color: var(--color-accent-blue); }
 .search-services { display: flex; flex-wrap: wrap; gap: .4rem .75rem; margin-block: .75rem 1.5rem; }

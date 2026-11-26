@@ -1,5 +1,11 @@
 [
   {
+    "updatedAt": "2026-11-26T23:43:30+09:00",
+    "service": "broker-atlas",
+    "title": "Safari(WebKit)·Chromium 접근성 검사 후 선택 상자·표 키보드 이동·링크 조작 크기를 전 사이트에서 통일 (비교 화면 등)",
+    "route": "broker-atlas/compare"
+  },
+  {
     "updatedAt": "2026-11-26T23:41:22+09:00",
     "service": "market-time-capsule",
     "title": "2024년 국내 검증 제외 종목 134개 중 123개의 기업행동 사유와 KIND·DART 근거 공개(11월 32개 전부)",
