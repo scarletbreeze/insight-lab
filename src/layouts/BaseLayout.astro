@@ -5,6 +5,11 @@ import { services } from '../utils/services';
 
 const { title } = Astro.props;
 const github = 'https://github.com/scarletbreeze/insight_lab';
+const current = (href: string) => {
+  if (href === Astro.url.pathname) return 'page';
+  if (Astro.url.pathname.startsWith(href)) return 'location';
+  return undefined;
+};
 const nav = [
   ...services.map(({ title, slug }) => ({ title, href: sitePath(slug) })),
   { title: '검색', href: sitePath('search') },
@@ -26,13 +31,13 @@ const nav = [
       <div class="container header-inner">
         <a class="wordmark" href={sitePath()} aria-label="Insight Lab 홈"><span aria-hidden="true"></span>Insight Lab</a>
         <nav class="desktop-nav" aria-label="주 메뉴">
-          {nav.map(({ title, href }) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{title}</a>)}
+          {nav.map(({ title, href }) => <a href={href} aria-current={current(href)}>{title}</a>)}
         </nav>
         <a class="mobile-search" href={sitePath('search')}>검색</a>
         <details class="mobile-menu">
           <summary>메뉴</summary>
           <nav aria-label="모바일 주 메뉴">
-            {nav.map(({ title, href }) => <a href={href} aria-current={Astro.url.pathname === href ? 'page' : undefined}>{title}</a>)}
+            {nav.map(({ title, href }) => <a href={href} aria-current={current(href)}>{title}</a>)}
           </nav>
         </details>
       </div>
@@ -47,8 +52,25 @@ const nav = [
           <a href={sitePath('content-policy')}>Content Policy</a>
           <a href={sitePath('source-policy')}>Source Policy</a>
         </nav>
-        <p>Last Updated <time datetime="2026-11-25">2026.11.25</time></p>
+        <p>Last Updated <time datetime="2026-11-26">2026.11.26</time></p>
       </div>
     </footer>
+    <script>
+      const menu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+      if (menu) {
+        document.addEventListener('keydown', (event) => {
+          if (event.key === 'Escape' && menu.open) {
+            menu.open = false;
+            menu.querySelector('summary')?.focus();
+          }
+        });
+        document.addEventListener('click', (event) => {
+          if (menu.open && event.target instanceof Node && !menu.contains(event.target)) menu.open = false;
+        });
+        menu.addEventListener('focusout', (event) => {
+          if (event.relatedTarget instanceof Node && !menu.contains(event.relatedTarget)) menu.open = false;
+        });
+      }
+    </script>
   </body>
 </html>

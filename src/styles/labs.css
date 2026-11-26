@@ -68,3 +68,35 @@ a.lab-card:hover { border-color: var(--lab-accent); color: var(--lab-accent); }
 .market-era-portal:has(.market-era-label) { border-block-start: 3px solid var(--lab-accent); }
 .market-era-blog:has(.market-era-label) { border-inline-start-style: double; }
 .market-era-mobile:has(.market-era-label), .market-era-finance:has(.market-era-label) { border-radius: .3rem; }
+
+/* The four milestone headers follow their period's portal, blog, mobile and trading styles. */
+.lab-heading:has([data-milestone]) {
+  margin-block: 1.5rem;
+  padding: clamp(1.25rem, 4vw, 3rem);
+  border: 1px solid var(--color-rule);
+  background-color: var(--color-panel);
+}
+.lab-heading:has([data-milestone]) .market-era {
+  background: transparent; padding: 0; border: 0; margin-top: 1rem; max-width: 64ch;
+}
+.lab-heading:has([data-milestone="1998"]) {
+  border: 3px ridge #8c9bb2;
+  background: linear-gradient(to right, #213b73, #36578b) top / 100% .9rem no-repeat, #171e2c;
+}
+.lab-heading:has([data-milestone="1998"]) h1 { font-family: var(--font-mono); }
+.lab-heading:has([data-milestone="2008"]) {
+  border-inline-start: .5rem solid var(--lab-accent);
+  border-block-end: 3px double #8b7569;
+  background: repeating-linear-gradient(0deg, transparent 0 1.7rem, #ffffff08 1.7rem calc(1.7rem + 1px)), #282025;
+}
+.lab-heading:has([data-milestone="2020"]) {
+  border-radius: 1.25rem;
+  background: linear-gradient(112deg, #28223b, #191c26 75%);
+}
+.lab-heading:has([data-milestone="2020"]) h1 { font-family: var(--font-sans); font-weight: 650; }
+.lab-heading:has([data-milestone="2026"]) {
+  border-block-start: 2px solid var(--lab-accent);
+  background: linear-gradient(#94d4ec0c 1px, transparent 1px), linear-gradient(90deg, #94d4ec0c 1px, transparent 1px), #141e27;
+  background-size: 1.5rem 1.5rem;
+}
+.lab-heading:has([data-milestone="2026"]) h1 { font-family: var(--font-mono); }

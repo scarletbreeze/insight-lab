@@ -65,10 +65,14 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
             ))}
           </dl>
         </> : label === '한국' && checked ? <>
-          <p>{checked.firstDate}~{checked.lastDate} · 연초 ETF 보유 주식 {checked.universeCount}개 중 {checked.eligibleCount}개가 연간 일별 시세 검사를 통과했습니다.</p>
-          <p>기간 중 전일 종가와 기준가격이 이어지고 상장주식수가 일정한 종목을 집계했습니다. 추가 확인 대상에는 연중 상장폐지나 기업행동이 발생한 종목이 포함될 수 있어, 결과를 전체 시장으로 확대해 해석하기 어렵습니다.</p>
-          <details><summary>추가 확인 대상 {checked.universeCount - checked.eligibleCount}개</summary>
-            <ul>{Object.entries(checked.exclusions).map(([reason,count]) => <li>{reason} · {count}개</li>)}</ul>
+          <p>{checked.firstDate} ~ {checked.lastDate}</p>
+          <div class="coverage-meter">
+            <label for="kr-annual-coverage">일별 시세 검사 통과 <strong>{checked.eligibleCount} / {checked.universeCount}개</strong></label>
+            <progress id="kr-annual-coverage" value={checked.eligibleCount} max={checked.universeCount}>{checked.eligibleCount} / {checked.universeCount}</progress>
+          </div>
+          <p>연초 두 ETF가 보유한 종목 중 전일 종가와 기준가격이 이어지고 상장주식수가 일정한 종목을 집계했습니다.</p>
+          <details class="coverage-reasons"><summary>추가 확인 대상 {checked.universeCount - checked.eligibleCount}개</summary>
+            <dl>{Object.entries(checked.exclusions).sort((a, b) => b[1] - a[1]).map(([reason,count]) => <div><dt>{reason}</dt><dd>{count}개</dd></div>)}</dl>
           </details>
           <p>연초 보유 명세 · <a href={checked.membershipSourceUrls[0]}>KODEX 200</a> · <a href={checked.membershipSourceUrls[1]}>KODEX 코스닥150</a></p>
           <p>개별 종목 순위는 공개 이용 조건을 확인 중입니다. <a href="https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA003.jsp">KRX 정보이용 안내</a></p>
@@ -78,3 +82,12 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
   </div> : <p>Winner, Loser, Tenbagger를 계산할 연초 구성종목과 조정 종가를 확인 중입니다.</p>}
   <p><a href={sitePath('market-time-capsule/equity-data')}>종목 수익률 산정 기준</a></p>
 </section>
+
+<style>
+  .coverage-meter label, .coverage-reasons dl div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+  .coverage-meter strong, .coverage-reasons dd { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .coverage-meter progress { display: block; width: 100%; height: .65rem; accent-color: var(--lab-accent); margin-top: .5rem; }
+  .coverage-reasons summary { cursor: pointer; padding-block: .5rem; }
+  .coverage-reasons dl div { border-top: 1px solid var(--color-rule); padding-block: .35rem; }
+  .coverage-reasons dl dt { margin: 0; }
+</style>
