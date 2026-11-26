@@ -5,7 +5,7 @@ import annualRankings from '../../data/market/annual-equity-rankings.json';
 import annualSpyRankings from '../../data/market/annual-spy-equity-rankings.json';
 import { brokers, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
 import { signals } from './ceo';
-import { screenByNumber, screens, workflows } from './hero';
+import { legends, screenByNumber, screens, workflows } from './hero';
 import { marketEvents } from './market';
 import { vocNotices, vocPosts } from './voc';
 
@@ -35,6 +35,12 @@ export const catalog: CatalogEntry[] = [
     service: 'hero-lab', route: 'hero-lab/screens/' + screen.number, title: screen.number + ' ' + screen.title,
     summary: [screen.summary, ...screen.tags].join(' '), date: screen.sources[0].retrievedAt,
     sourceUrls: screen.sources.map(({ sourceUrl }) => sourceUrl),
+  })),
+  ...legends.profiles.map((profile) => ({
+    service: 'hero-lab', route: 'hero-lab/hall-of-fame', anchor: 'legend-' + profile.chapter,
+    title: profile.name + ' · ' + profile.style, date: legends.book.printDate,
+    summary: profile.summary, keywords: [legends.book.title, ...profile.screens],
+    sourceUrls: [legends.book.contentsUrl],
   })),
   ...workflows.map(({ slug, title, summary, steps, sourceUrl }) => {
     const relatedScreens = steps.map(({ number }) => screenByNumber(number));

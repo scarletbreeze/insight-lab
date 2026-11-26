@@ -84,3 +84,5 @@ python3 scripts/market/rank_wiki_portfolio.py WIKI_PRICES.zip data/market/spy-ho
 - 2026년 1~8월 미국 지수는 키움 데일리, Roan Capital Partners의 시황, Portfolio Terminal의 날짜별 마감 정보에서 확인했다. 16개 거래일의 두 지수 값을 FRED 관측과 로컬에서 대조했다. 6월 2일 키움 데일리 표의 Nasdaq 값은 6월 1일 종합지수와 일치하지 않아 [해당 거래일 마감](https://portfolio-terminal.com/markets/stock-market-close/june-1-2026)을 사용했다.
 
 2024년 12월 ETF 보유 목록 353종목을 20거래일의 일별 시세로 대조했다. 하루의 종가에서 등락금액을 빼 얻은 기준가격이 직전 종가와 달랐던 종목은 7개, 상장주식수 변화가 있었던 종목은 22개였다. 두 조건을 통과한 324종목에 대해 로컬에서 시범 순위를 산출했다. `scripts/market/rank_kodex_price_research.py`는 날짜가 일치하는 공식 운용사 보유 명세와 금액 기준이 연결되는 가격만 사용한다. ETF 모집단은 당시 지수 목록과 다르며, 시세 자료의 공개 재이용 범위가 확인되지 않아 시범 순위는 공개 데이터에서 제외했다. [KRX 시장정보 이용정책](https://data.krx.co.kr/inc/datasale/Market%20Data%20Usage%20Polices_ko.pdf)
+
+2024년 국내·미국 지수는 각 시장의 거래일을 별도로 구해 12개월 모두 첫날·마지막 날 종가를 수록했다. 국내 1~10월은 네이버 일별 지수 값과 키움증권 보고서, SPARX 월말 공시 또는 KIND 투자설명서의 두 지수 값을 대조했다. 미국 1~9월은 S&P 500·Nasdaq Composite의 FRED 관측일·관측값을 증권사 보고서나 해당 거래일 AP 마감 기록과 대조했다. 3월 미국의 마지막 거래일은 28일, 한국은 29일이다. 각 시장·각 날짜의 원문 주소는 월간 지수 JSON에 있다.

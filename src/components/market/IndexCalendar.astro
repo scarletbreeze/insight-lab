@@ -1,0 +1,39 @@
+---
+import { koreaMonthlyCloses, months, usMonthlyCloses } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+
+interface Props { year: number }
+const { year } = Astro.props;
+const labels = ['KOSPI', 'KOSDAQ', 'S&P 500', 'Nasdaq Composite'];
+const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+const rows = months.flatMap((month) => {
+  const period = year + '-' + month;
+  const snapshots = [koreaMonthlyCloses[period], usMonthlyCloses[period]];
+  if (!snapshots.some(Boolean)) return [];
+  const changes = snapshots.flatMap((snapshot) => [0, 1].map((index) => {
+    const first = snapshot?.first[index];
+    const last = snapshot?.last[index];
+    return first && last != null ? last / first - 1 : null;
+  }));
+  return [{ month, changes }];
+});
+---
+{rows.length > 0 && <section class="lab-block" id="index-calendar">
+  <h2>한국·미국 지수 월별 등락</h2>
+  <p>각 시장의 첫 거래일 종가에서 마지막 거래일 종가까지의 변화입니다. 월을 선택하면 거래일과 원문 출처를 확인할 수 있습니다.</p>
+  <div class="lab-table-wrap"><table class="lab-table index-calendar">
+    <caption>{year}년 월별 지수 등락률</caption>
+    <thead><tr><th scope="col">월</th>{labels.map((label) => <th scope="col">{label}</th>)}</tr></thead>
+    <tbody>{rows.map(({ month, changes }) => <tr>
+      <th scope="row"><a href={sitePath('market-time-capsule/' + year + '/' + month)}>{Number(month)}월</a></th>
+      {changes.map((change) => <td data-direction={change == null || change === 0 ? undefined : change > 0 ? 'up' : 'down'}>
+        {change == null ? '자료 없음' : percent.format(change)}
+      </td>)}
+    </tr>)}</tbody>
+  </table></div>
+</section>}
+<style>
+  .index-calendar td { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .index-calendar td[data-direction="up"] { background-color: rgba(200, 81, 55, .13); }
+  .index-calendar td[data-direction="down"] { background-color: rgba(53, 128, 192, .14); }
+</style>

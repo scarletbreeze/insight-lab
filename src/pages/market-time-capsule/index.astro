@@ -21,6 +21,7 @@ const monthLabel = (period: string) => {
     <h2>1990–2026 연도별 탐색</h2>
     <ul class="lab-chips">{years.map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}</a></li>)}</ul>
     <p>{documented.size}개 연도에 시장 사건 {marketEvents.length}건을 수록했습니다.</p>
+    <p><a href={sitePath('market-time-capsule/2024') + '#index-calendar'}>2024년 한국·미국 4개 지수의 월별 등락 보기</a></p>
     <p><a href={sitePath('market-time-capsule/2025')}>2025년 12개월 시장 기록 보기</a> · 한국·미국 지수 종가와 주요 사건</p>
   </section>
   <section class="lab-block">

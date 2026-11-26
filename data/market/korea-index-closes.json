@@ -58,6 +58,146 @@
       "firstSource": "https://bbn.kiwoom.com/bbs/jsp/upload/newres/CorpAnal/202003/1583219784254.pdf",
       "lastSource": "https://kind.krx.co.kr/external/2021/07/27/000512/20210727001188/10002.htm"
     },
+    "2024-01": {
+      "firstDate": "2024-01-02",
+      "lastDate": "2024-01-31",
+      "first": [
+        2669.81,
+        878.93
+      ],
+      "last": [
+        2497.09,
+        799.24
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1704234693684.pdf&makeDt=2024.01.03&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1706740535229.pdf&makeDt=2024.02.01&rMenuGb=SD"
+    },
+    "2024-02": {
+      "firstDate": "2024-02-01",
+      "lastDate": "2024-02-29",
+      "first": [
+        2542.46,
+        798.73
+      ],
+      "last": [
+        2642.36,
+        862.96
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1706829022169.pdf&makeDt=2024.02.02&rMenuGb=SD",
+      "lastSource": "https://www2.jpx.co.jp/disc/87390/140120240405566688.pdf"
+    },
+    "2024-03": {
+      "firstDate": "2024-03-04",
+      "lastDate": "2024-03-29",
+      "first": [
+        2674.27,
+        872.97
+      ],
+      "last": [
+        2746.63,
+        905.5
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1709591579878.pdf&makeDt=2024.03.05&rMenuGb=SD",
+      "lastSource": "https://www2.jpx.co.jp/disc/87390/140120240405566688.pdf"
+    },
+    "2024-04": {
+      "firstDate": "2024-04-01",
+      "lastDate": "2024-04-30",
+      "first": [
+        2747.86,
+        912.45
+      ],
+      "last": [
+        2692.06,
+        868.93
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1712010903928.pdf&makeDt=2024.04.02&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1714603629988.pdf&makeDt=2024.05.02&rMenuGb=SD"
+    },
+    "2024-05": {
+      "firstDate": "2024-05-02",
+      "lastDate": "2024-05-31",
+      "first": [
+        2683.65,
+        867.48
+      ],
+      "last": [
+        2636.52,
+        839.98
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1714694310478.pdf&makeDt=2024.05.03&rMenuGb=SD",
+      "lastSource": "https://www2.jpx.co.jp/disc/87390/140120240705544798.pdf"
+    },
+    "2024-06": {
+      "firstDate": "2024-06-03",
+      "lastDate": "2024-06-28",
+      "first": [
+        2682.52,
+        844.72
+      ],
+      "last": [
+        2797.82,
+        840.44
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1717454040836.pdf&makeDt=2024.06.04&rMenuGb=SD",
+      "lastSource": "https://www2.jpx.co.jp/disc/87390/140120240705544798.pdf"
+    },
+    "2024-07": {
+      "firstDate": "2024-07-01",
+      "lastDate": "2024-07-31",
+      "first": [
+        2804.31,
+        847.15
+      ],
+      "last": [
+        2770.69,
+        803.15
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1719873458686.pdf&makeDt=2024.07.02&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1722466040798.pdf&makeDt=2024.08.01&rMenuGb=SD"
+    },
+    "2024-08": {
+      "firstDate": "2024-08-01",
+      "lastDate": "2024-08-30",
+      "first": [
+        2777.68,
+        813.53
+      ],
+      "last": [
+        2674.31,
+        767.66
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1722552464371.pdf&makeDt=2024.08.02&rMenuGb=SD",
+      "lastSource": "https://kind.krx.co.kr/external/2024/09/05/000304/20240905000855/10603.htm"
+    },
+    "2024-09": {
+      "firstDate": "2024-09-02",
+      "lastDate": "2024-09-30",
+      "first": [
+        2681.0,
+        769.21
+      ],
+      "last": [
+        2593.27,
+        763.88
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1725317160676.pdf&makeDt=2024.09.03&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1727822453527.pdf&makeDt=2024.10.02&rMenuGb=SD"
+    },
+    "2024-10": {
+      "firstDate": "2024-10-02",
+      "lastDate": "2024-10-31",
+      "first": [
+        2561.69,
+        762.13
+      ],
+      "last": [
+        2556.15,
+        743.06
+      ],
+      "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1727994082089.pdf&makeDt=2024.10.04&rMenuGb=SD",
+      "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1730413495905.pdf&makeDt=2024.11.01&rMenuGb=SD"
+    },
     "2024-11": {
       "firstDate": "2024-11-01",
       "lastDate": "2024-11-29",

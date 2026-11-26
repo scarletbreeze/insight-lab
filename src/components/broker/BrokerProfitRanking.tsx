@@ -25,7 +25,12 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
   }).sort((a, b) => b.value - a.value);
   const maxProfit = Math.max(1, ...profits.map(({ value }) => Math.abs(value)));
   const priorTotal = profits.reduce((sum, { previous }) => sum + (previous?.[profitMetric] ?? 0), 0);
-  const growth = isInterim && profits.length === rows.length && profits.every(({ previous }) => previous) && priorTotal > 0
+  const comparable = profits.length === rows.length && priorRows.length === rows.length
+    && profits.every(({ previous }) => previous?.[profitMetric] != null);
+  const previousValues = priorRows.flatMap((row) => row[profitMetric] ?? []);
+  const rankFor = (values: number[], value: number) => 1 + values.filter((other) => other > value).length;
+  const currentValues = profits.map(({ value }) => value);
+  const growth = comparable && priorTotal > 0
     ? (profits.reduce((sum, { value }) => sum + value, 0) / priorTotal - 1) * 100
     : null;
   const metricLeaders = (['netIncome', 'operatingIncome'] as const).flatMap((metric) => {
@@ -63,12 +68,13 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
       </div>
       <p role="status">연결 {profitLabel} · {profits.length}/{rows.length}개사
         {profits[0] && <> · 1위 {profits[0].name} {formatBrokerMetric(profits[0].value, false)}</>}
+        {comparable && <> · {priorLabel}과 같은 {profits.length}개사 기준</>}
         {growth != null && <> · 수록 {profits.length}개사 합계 전년 동기 대비 {formatGrowth.format(growth)}%</>}
       </p>
       {profits.length ? <ol className="lab-list">
-        {profits.map(({ id, name, value, source, status, operatingIncomeRounded, previous }, index) => <li className="lab-card" key={id}>
+        {profits.map(({ id, name, value, source, status, operatingIncomeRounded, previous }) => <li className="lab-card" key={id}>
           <div className="trend-row broker-profit-row">
-            <strong>{index + 1}. <a href={brokerBase + id + '/'}>{name}</a></strong>
+            <strong>{rankFor(currentValues, value)}. <a href={brokerBase + id + '/'}>{name}</a></strong>
             <span className="trend-track" aria-hidden="true">
               <span data-negative={value < 0} style={{ width: Math.abs(value) / maxProfit * 100 + '%' }} />
             </span>
@@ -78,6 +84,7 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
           {previous && previous[profitMetric] != null && <p className="broker-profit-prior">
             <a href={profitMetric === 'operatingIncome' && 'operatingIncomeSourceUrl' in previous && previous.operatingIncomeSourceUrl ? String(previous.operatingIncomeSourceUrl) : previous.sourceUrl}>{priorLabel}</a>{' '}
             {formatBrokerMetric(previous[profitMetric], false)}
+            {comparable && <> · 순위 {rankFor(previousValues, previous[profitMetric])}위 → {rankFor(currentValues, value)}위</>}
             {previous[profitMetric] > 0 && <> · 전년 동기 대비 {formatGrowth.format((value / previous[profitMetric] - 1) * 100)}%</>}
           </p>}
         </li>)}

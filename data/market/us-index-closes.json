@@ -1,4 +1,130 @@
 {
+  "2024-01": {
+    "firstDate": "2024-01-02",
+    "lastDate": "2024-01-31",
+    "first": [
+      4742.83,
+      14765.94
+    ],
+    "last": [
+      4845.65,
+      15164.01
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1704234693684.pdf&makeDt=2024.01.03&rMenuGb=SD",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1706740535229.pdf&makeDt=2024.02.01&rMenuGb=SD"
+  },
+  "2024-02": {
+    "firstDate": "2024-02-01",
+    "lastDate": "2024-02-29",
+    "first": [
+      4906.19,
+      15361.64
+    ],
+    "last": [
+      5096.27,
+      16091.92
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1706829022169.pdf&makeDt=2024.02.02&rMenuGb=SD",
+    "lastSource": "https://apnews.com/article/30fcfddd6b40f05b02c6216e99b93f6d"
+  },
+  "2024-03": {
+    "firstDate": "2024-03-01",
+    "lastDate": "2024-03-28",
+    "first": [
+      5137.08,
+      16274.94
+    ],
+    "last": [
+      5254.35,
+      16379.46
+    ],
+    "firstSource": "https://apnews.com/article/53cb2a5eefc907dafd0d10d209f7008e",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1711665840673.pdf&makeDt=2024.03.29&rMenuGb=SD"
+  },
+  "2024-04": {
+    "firstDate": "2024-04-01",
+    "lastDate": "2024-04-30",
+    "first": [
+      5243.77,
+      16396.83
+    ],
+    "last": [
+      5035.69,
+      15657.82
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1712010903928.pdf&makeDt=2024.04.02&rMenuGb=SD",
+    "lastSource": "https://apnews.com/article/831f67abfc5602eea65ac04553deb42f"
+  },
+  "2024-05": {
+    "firstDate": "2024-05-01",
+    "lastDate": "2024-05-31",
+    "first": [
+      5018.39,
+      15605.48
+    ],
+    "last": [
+      5277.51,
+      16735.02
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1714603629988.pdf&makeDt=2024.05.02&rMenuGb=SD",
+    "lastSource": "https://apnews.com/article/410564872b506c185cb4d7d3d0c16a18"
+  },
+  "2024-06": {
+    "firstDate": "2024-06-03",
+    "lastDate": "2024-06-28",
+    "first": [
+      5283.4,
+      16828.67
+    ],
+    "last": [
+      5460.48,
+      17732.6
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1717454040836.pdf&makeDt=2024.06.04&rMenuGb=SD",
+    "lastSource": "https://www.legacygr.com/wp-content/uploads/2024/07/2024.06.28-Weekly-Market-Summary.pdf"
+  },
+  "2024-07": {
+    "firstDate": "2024-07-01",
+    "lastDate": "2024-07-31",
+    "first": [
+      5475.09,
+      17879.3
+    ],
+    "last": [
+      5522.3,
+      17599.4
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1719873458686.pdf&makeDt=2024.07.02&rMenuGb=SD",
+    "lastSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1722466040798.pdf&makeDt=2024.08.01&rMenuGb=SD"
+  },
+  "2024-08": {
+    "firstDate": "2024-08-01",
+    "lastDate": "2024-08-30",
+    "first": [
+      5446.68,
+      17194.15
+    ],
+    "last": [
+      5648.4,
+      17713.62
+    ],
+    "firstSource": "https://finance.yahoo.com/news/major-us-stock-indexes-fared-203822499.html",
+    "lastSource": "https://efgi.com/wp-content/uploads/2024/09/Week-in-Review-August-30-2024.pdf"
+  },
+  "2024-09": {
+    "firstDate": "2024-09-03",
+    "lastDate": "2024-09-30",
+    "first": [
+      5528.93,
+      17136.3
+    ],
+    "last": [
+      5762.48,
+      18189.17
+    ],
+    "firstSource": "https://bbn.kiwoom.com/research/SPdfFileView?attaFile=1725404174072.pdf&makeDt=2024.09.04&rMenuGb=SD",
+    "lastSource": "https://apnews.com/article/c6c385a0f13af99de1d2d6076c4942b9"
+  },
   "2024-10": {
     "firstDate": "2024-10-01",
     "lastDate": "2024-10-31",

@@ -2,7 +2,7 @@
 import HeroLayout from '../../components/hero/HeroLayout.astro';
 import ScreenCard from '../../components/hero/ScreenCard.astro';
 import { sitePath } from '../../utils/paths';
-import { legends, screenByNumber } from '../../utils/hero';
+import { legends, screenByNumber, workflows } from '../../utils/hero';
 import mentions from '../../../data/voc/screen-mentions.json';
 const ranked = Object.entries(mentions.screens).sort(([a, x], [b, y]) => y - x || a.localeCompare(b));
 const inquiries = Object.values(mentions.years).reduce((sum, year) => sum + year.categories['문의'], 0);
@@ -31,7 +31,7 @@ const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenBy
     <h2>Legend’s Pick</h2>
     <p>『{legends.book.title}』 · {legends.book.author} · {legends.book.publisher}</p>
     <p>종이책 {legends.book.printDate} · 전자책 {legends.book.ebookDate}</p>
-    <p>공개 목차와 소개를 바탕으로 장별 접근을 요약했습니다. 함께 볼 화면은 Hero Lab이 학습용으로 선정했습니다.</p>
+    <p>공개 목차와 소개를 바탕으로 장별 접근을 요약했습니다. 함께 볼 화면과 복기 질문은 Hero Lab이 구성한 학습 자료입니다.</p>
     <div class="hero-grid">
       {legends.profiles.map((profile) => (
         <article class="hero-card" id={'legend-' + profile.chapter}>
@@ -45,6 +45,11 @@ const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenBy
               <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title}</a></li>
             ))}
           </ul>
+          <details><summary>화면으로 복기하기</summary>
+            <p>{profile.exercise}</p>
+            {workflows.filter(({ chapter }) => chapter === profile.chapter).map(({ slug, title }) =>
+              <p><a href={sitePath('hero-lab/recipes') + '#' + slug}>{title}</a></p>)}
+          </details>
         </article>
       ))}
     </div>

@@ -5,6 +5,7 @@ import equityRankings from '../../../../data/market/months/equity-rankings.json'
 import spyEquityRankings from '../../../../data/market/months/spy-equity-rankings.json';
 import PeriodNavigation from '../../../components/market/PeriodNavigation.astro';
 import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
+import IndexCalendar from '../../../components/market/IndexCalendar.astro';
 import IndexSnapshot from '../../../components/market/IndexSnapshot.astro';
 import GoldSnapshot from '../../../components/market/GoldSnapshot.astro';
 import UsIndexPerformance from '../../../components/market/UsIndexPerformance.astro';
@@ -39,6 +40,7 @@ const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spy
       {rankedMonths.has(`${year}-${month}`) && <small>· 종목 순위</small>}
     </a></li>)}</ul>
   </section>
+  <IndexCalendar {year} />
   <AnnualEquityHighlights {year} />
   {highlights.length > 0 && <section class="lab-block">
     <h2>이 해에 주목할 사건</h2>
