@@ -523,14 +523,33 @@ test('The 2008 price archive keeps issuers distinct when a ticker was reused', (
 });
 
 test('The 2021 equity review reconciles the 58 insured securities firms', () => {
-  const review = readJson<{ records: number; belowThreshold: {count: number; maxAssets: number};
+  type Resolved = { assets: number; liabilities: number; equity: number; balanceSheetDate: string; sourceUrl: string;
+    sourceValues: { liabilities: number; equity: number; total: number }; kdic: { assets: number; reportedEquity: number } };
+  const review = readJson<{ asOf: string; records: number; belowThreshold: {count: number; maxAssets: number};
     companies: {name: string; assets: number; equity: number; sourceUrl: string}[];
-    pending: {assets: number}[] }>('brokers/2021-equity-review.json');
+    resolved: Resolved[]; pending: {assets: number}[] }>('brokers/2021-equity-review.json');
   const { companies } = readJson<{ companies: {id: string; equity: number}[] }>('brokers/industry-2021.json');
   const threshold = (id: string) => companies.find((row) => row.id === id)!.equity / 100;
-  assert.equal(review.records, companies.length + 1 + review.belowThreshold.count + review.companies.length + review.pending.length);
+  assert.equal(review.records, companies.length + 1 + review.belowThreshold.count + review.companies.length
+    + review.resolved.length + review.pending.length);
   assert.ok(review.belowThreshold.maxAssets < threshold('daishin'));
   assert.ok(review.companies.every(({ assets, equity, sourceUrl }) =>
     assets > threshold('daishin') && equity < threshold('daishin') && new URL(sourceUrl).hostname === 'kisrating.com'));
-  assert.ok(review.pending.every(({ assets }) => assets < threshold('kiwoom') && assets >= threshold('daishin')));
+  assert.equal(review.resolved.length, 1);
+  for (const { assets, liabilities, equity, balanceSheetDate, sourceUrl, sourceValues, kdic } of review.resolved) {
+    assert.equal(balanceSheetDate, review.asOf);
+    assert.equal(new URL(sourceUrl).hostname, 'fisis.fss.or.kr');
+    assert.ok(assets < threshold('kiwoom') && assets >= threshold('daishin') && equity < threshold('daishin'));
+    assert.equal(Math.round(assets * 100), sourceValues.total);
+    assert.equal(Math.round(liabilities * 100), sourceValues.liabilities);
+    assert.equal(Math.round(equity * 100), sourceValues.equity);
+    assert.ok(Math.abs(sourceValues.liabilities + sourceValues.equity - sourceValues.total) <= 1); // 백만원 rounding in the source
+    assert.equal(Math.round(assets), kdic.assets);
+    assert.equal(kdic.reportedEquity, 0);
+  }
+  assert.equal(review.pending.length, 0);
+  // With no pending firm, formatIndustryRank renders a single rank; the guards it relies on hold in the data.
+  assert.ok(review.resolved.every(({ equity }) => equity < threshold('daishin')));
+  assert.ok(review.companies.every(({ equity }) => equity < threshold('daishin')));
+  assert.equal(companies.filter(({ equity }) => equity > companies.find((row) => row.id === 'daishin')!.equity).length, 9);
 });

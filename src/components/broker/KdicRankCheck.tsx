@@ -1,4 +1,4 @@
-import { yuanta2021 } from '../../utils/brokers';
+import { formatIndustryRank, industryPeriods, yuanta2021 } from '../../utils/brokers';
 import observations from '../../../data/brokers/kdic-year-end-equity.json';
 
 import check from '../../../data/brokers/2021-equity-review.json';
@@ -7,6 +7,12 @@ import annual from '../../../data/brokers/industry-2021.json';
 const filings = new Map(annual.companies.filter(company => company.sourceUrl).map(company =>
   [company.name, { equity: Math.round(company.equity / 100), url: company.sourceUrl }]));
 filings.set('유안타증권', { equity: Math.round(yuanta2021.equity), url: yuanta2021.url });
+
+// Firms whose separate balance sheet is still unverified. Typed here because the JSON array may be empty.
+const pending: { name: string; assets: number; reportedEquity: number; netOperatingCapital: number; sourceUrl: string }[] = check.pending;
+const period2021 = industryPeriods.find(({ date }) => date === check.asOf);
+const daishin2021 = period2021?.companies.find(({ id }) => id === 'daishin');
+const daishinRank = daishin2021 && formatIndustryRank(daishin2021.rank, period2021?.confirmedTopCount, check.asOf);
 
 export default function KdicRankCheck({ date }: {date: string}) {
   const year = date.slice(0, 4);
@@ -30,12 +36,19 @@ export default function KdicRankCheck({ date }: {date: string}) {
         <li>수록 10개사와 유안타는 회사 공시로 대조했습니다.</li>
         <li>{check.belowThreshold.count}개사는 총자산이 최대 {check.belowThreshold.maxAssets.toLocaleString('ko-KR')}억 원이어서 자본이 대신보다 작습니다.</li>
         <li>추가 {check.companies.length}개사는 한국신용평가의 해당일 별도 재무지표와 예보의 총자산이 억 원 단위로 일치합니다. 모두 대신보다 자본이 작습니다.</li>
-        {check.pending.map(({ name, assets, reportedEquity, netOperatingCapital, sourceUrl }) => <li key={name}>
+        {check.resolved.map(({ name, disclosedName, balanceSheetDate, assets, liabilities, equity, sourceUnit, sourceValues, sourceName, sourceUrl, kdic }) => <li key={name}>
+          {name}의 {balanceSheetDate} 자본총계는 {equity.toLocaleString('ko-KR')}억 원, 부채총계는 {liabilities.toLocaleString('ko-KR')}억 원입니다.
+          <a href={sourceUrl}>{sourceName}</a>에 {disclosedName} 이름으로 자본총계 {sourceValues.equity.toLocaleString('ko-KR')}{sourceUnit}, 부채 및 자본총계 {sourceValues.total.toLocaleString('ko-KR')}{sourceUnit}이 실려 있습니다.
+          총자산 {assets.toLocaleString('ko-KR')}억 원은 <a href={kdic.sourceUrl}>예보 연말 파일</a>의 {kdic.assets.toLocaleString('ko-KR')}억 원과 억 원 단위에서 일치하며, 같은 파일의 자기자본 {kdic.reportedEquity}(원문 값)과 영업용순자본 {kdic.netOperatingCapital.toLocaleString('ko-KR')}억 원은 그대로 표시합니다. 이 통계는 금융감독원이 업무보고서를 취합한 자료이며 지점의 감사보고서는 아닙니다.
+          자본총계는 대신보다 작습니다.
+        </li>)}
+        {pending.map(({ name, assets, reportedEquity, netOperatingCapital, sourceUrl }) => <li key={name}>
           {name}의 총자산은 {assets.toLocaleString('ko-KR')}억 원입니다. <a href={sourceUrl}>예보 연말 파일</a>에는 자기자본이 {reportedEquity}으로 기재돼 있습니다.
           영업용순자본 {netOperatingCapital.toLocaleString('ko-KR')}억 원은 규제 지표이고 ROE의 분모는 기간 평균입니다.
-          대신과 순서를 확정하려면 2021년 12월 31일 서울지점 재무상태표의 자본총계 또는 부채총계가 필요합니다. 현재 범위는 10–11위입니다.
+          대신과 순서를 확정하려면 {check.asOf} 재무상태표의 자본총계 또는 부채총계가 필요합니다.
         </li>)}
       </ul>
+      {daishin2021 && daishinRank && pending.length === 0 && <p>대신보다 별도 자본총계가 큰 회사는 명단 {check.records}개사 중 {daishin2021.rank - 1}개사입니다. 대신의 별도 자본 순위는 {daishinRank}입니다. 예보 파일의 자기자본 순위(위 표)와는 기준이 다릅니다.</p>}
       <details><summary>추가 {check.companies.length}개사 별도 재무지표와 출처</summary>
         <div className="lab-table-wrap"><table className="lab-table">
           <caption>{check.asOf} · {check.unit} · 자료의 당시 회사명</caption>

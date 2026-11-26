@@ -71,13 +71,17 @@ export const yuanta2021 = {
   url: 'https://kind.krx.co.kr/external/2023/03/02/000735/20230302002053/00591.htm',
 };
 
+// Insured firms whose separate balance sheet is still unverified; empty once every firm is resolved.
+const pendingReview2021: { name: string; assets: number }[] = review2021.pending;
+
 export function formatIndustryRank(rank: number, confirmedTopCount: number | undefined, date: string) {
   if (date === review2021.asOf && rank > (confirmedTopCount ?? 0)) {
     const company = industryPeriods.find((period) => period.date === date)?.companies[rank - 1];
     if (company && company.equity / 100 > review2021.belowThreshold.maxAssets
         && review2021.companies.every(({ equity }) => equity < company.equity / 100)
+        && review2021.resolved.every(({ equity }) => equity < company.equity / 100)
         && company.equity / 100 > yuanta2021.equity) {
-      const candidates = review2021.pending.filter(({ assets }) => assets > company.equity / 100);
+      const candidates = pendingReview2021.filter(({ assets }) => assets > company.equity / 100);
       const range = candidates.length ? rank + '–' + (rank + candidates.length) : String(rank);
       return '부보 ' + review2021.records + '개사 중 ' + range + '위';
     }

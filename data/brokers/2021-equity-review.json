@@ -87,13 +87,33 @@
       "sourceUrl": "https://kisrating.com/fileDown.do?fileName=rs20220331-36.pdf&gubun=2&menuCd=R8"
     }
   ],
-  "pending": [
+  "resolved": [
     {
       "name": "JP모간증권 서울지점",
-      "assets": 31430.0,
-      "reportedEquity": 0,
-      "netOperatingCapital": 6234,
-      "sourceUrl": "https://www.data.go.kr/data/15061054/fileData.do"
+      "disclosedName": "제이피모간증권회사서울지점",
+      "balanceSheetDate": "2021-12-31",
+      "fiscalYearEndMonth": 12,
+      "assets": 31429.77,
+      "liabilities": 25050.96,
+      "equity": 6378.82,
+      "sourceUnit": "백만원",
+      "sourceValues": {
+        "liabilities": 2505096,
+        "equity": 637882,
+        "total": 3142977
+      },
+      "sourceName": "금융감독원 금융통계정보시스템 · 증권사 요약재무상태표(부채 및 자본) 2021년 12월말",
+      "sourceUrl": "https://fisis.fss.or.kr/page/fsv101.jsp?LRG_DIV=SF&SML_DIV=FB&MID_DIV=FD&FORM_NO=SDSF304V&FINANCE_CD=0010158",
+      "sourceNote": "원자료의 부채총계와 자본총계 합(3,142,978백만원)은 부채 및 자본총계(3,142,977백만원)와 1백만원 차이가 있다. 각 행의 원문 값을 유지한다.",
+      "sourceExtractedAt": "2026-01-07",
+      "retrievedAt": "2026-11-26",
+      "kdic": {
+        "assets": 31430.0,
+        "reportedEquity": 0,
+        "netOperatingCapital": 6234,
+        "sourceUrl": "https://www.data.go.kr/data/15061054/fileData.do"
+      }
     }
-  ]
+  ],
+  "pending": []
 }
