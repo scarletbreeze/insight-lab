@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { hasCompleteInquiryYear, summarizeVocYear, vocTopics, vocYears } from '../../utils/voc';
 import VocKeywords from './VocKeywords';
-import { generalNoticeYear, publicBoardTopics, publicBoardYear } from '../../utils/voc-public-board';
+import { generalNoticeYear, publicBoardMonths, publicBoardTopics, publicBoardYear } from '../../utils/voc-public-board';
 
 const boardCategories = ['문의', '제안', '칭찬·불만', '분류 확인 중'];
 const formatCount = (value: number) => value.toLocaleString('ko-KR');
@@ -10,6 +10,33 @@ const formatShare = (count: number, total: number) => `${formatCount(count)}건 
 export default function VocCompare({ yearBase, topicBase }: { yearBase: string; topicBase: string }) {
   const [left, setLeft] = useState(2024);
   const [right, setRight] = useState(2025);
+  const [topic, setTopic] = useState('');
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    for (const [key, setYear] of [['left', setLeft], ['right', setRight]] as const) {
+      const year = Number(params.get(key));
+      if (vocYears.some((entry) => entry.year === year)) setYear(year);
+    }
+    const requested = params.get('topic');
+    if (requested && vocTopics.some(({ id }) => id === requested && id !== 'other')) setTopic(requested);
+  }, []);
+  function updateSelection(key: 'left' | 'right' | 'topic', value: string) {
+    if (key === 'left') setLeft(Number(value));
+    if (key === 'right') setRight(Number(value));
+    if (key === 'topic') setTopic(value);
+    const url = new URL(window.location.href);
+    if (value) url.searchParams.set(key, value);
+    else url.searchParams.delete(key);
+    window.history.replaceState(window.history.state, '', url);
+  }
+  const leftMonths = publicBoardMonths(left, topic);
+  const rightMonths = publicBoardMonths(right, topic);
+  const pairedMonths = leftMonths.flatMap((a) => {
+    const b = rightMonths.find((entry) => entry.period.slice(5) === a.period.slice(5));
+    return b && !a.partialThrough && !b.partialThrough ? [{ month: Number(a.period.slice(5)), left: a.count, right: b.count }] : [];
+  });
+  const leftSum = pairedMonths.reduce((sum, row) => sum + row.left, 0);
+  const rightSum = pairedMonths.reduce((sum, row) => sum + row.right, 0);
   const cells = [left, right].map((year) => ({ year, ...summarizeVocYear(year) }));
   const [leftCell, rightCell] = cells;
   const leftBoard = publicBoardYear(left);
@@ -39,12 +66,12 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
   return <section className="lab-block">
     <div className="lab-controls">
       <label>첫 번째 연도
-        <select value={left} onChange={(event) => setLeft(Number(event.target.value))}>
+        <select value={left} onChange={(event) => updateSelection('left', event.target.value)}>
           {vocYears.map(({ year }) => <option key={year}>{year}</option>)}
         </select>
       </label>
       <label>두 번째 연도
-        <select value={right} onChange={(event) => setRight(Number(event.target.value))}>
+        <select value={right} onChange={(event) => updateSelection('right', event.target.value)}>
           {vocYears.map(({ year }) => <option key={year}>{year}</option>)}
         </select>
       </label>
@@ -99,6 +126,24 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
           <dd>{declines.length ? declines.map(({ label, difference }) => `${label} ${formatCount(difference)}건`).join(' · ') : '없음'}</dd></div>
       </dl>}
     </div>}
+    {pairedMonths.length > 0 && <section id="monthly">
+      <h2>같은 달끼리 비교</h2>
+      <label>비교할 문의 주제 <select value={topic} onChange={(event) => updateSelection('topic', event.target.value)}>
+        <option value="">단일 주제 분류 전체</option>
+        {vocTopics.filter(({ id }) => id !== 'other').map(({ id, label }) => <option key={id} value={id}>{label}</option>)}
+      </select></label>
+      <p>두 연도에서 월말까지 수집한 달만 비교합니다. 여러 주제에 해당하거나 분류되지 않은 문의는 제외합니다.</p>
+      <div className="lab-table-wrap"><table className="lab-table">
+        <caption>{left}년과 {right}년의 월별 문의 건수</caption>
+        <thead><tr><th scope="col">월</th><th scope="col">{left}년</th><th scope="col">{right}년</th><th scope="col">건수 차이</th></tr></thead>
+        <tbody>{pairedMonths.map((row) => <tr key={row.month}>
+          <th scope="row">{row.month}월</th><td>{formatCount(row.left)}</td><td>{formatCount(row.right)}</td>
+          <td>{(row.right - row.left).toLocaleString('ko-KR', { signDisplay: 'exceptZero' })}</td>
+        </tr>)}</tbody>
+        <tfoot><tr><th scope="row">{pairedMonths.length}개월 합계</th><td>{formatCount(leftSum)}</td><td>{formatCount(rightSum)}</td>
+          <td>{(rightSum - leftSum).toLocaleString('ko-KR', { signDisplay: 'exceptZero' })}</td></tr></tfoot>
+      </table></div>
+    </section>}
     <div className="lab-grid">
       {cells.map(({ year, coverage, selectedPosts, selectedNotices, topicCounts, keywords }) => {
         const complete = hasCompleteInquiryYear(coverage);

@@ -56,6 +56,7 @@ export { vocYears, notices as vocNotices, vocPosts, topics as vocTopics };
 
 export const vocIntents: Record<string, string> = {
   how_to: '사용 방법',
+  info: '상품 정보',
   error: '오류',
   request: '개선 요청',
   policy: '제도',

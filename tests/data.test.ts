@@ -52,6 +52,23 @@ test('VOC public-board totals contain only sourced aggregate counts', () => {
   }
 });
 
+test('Independent VOC review reconciles year and topic agreement counts', () => {
+  type Counts = { reviewed: number; agreement: number };
+  const review = readJson<{
+    development: { reviewed: number; before: number; after: number };
+    years: (Counts & { year: number; sample: number })[];
+    topics: (Counts & { topic: string })[];
+  }>('voc/annual-classification-review.json');
+  assert.deepEqual(review.years.map(({ year }) => year), [2022, 2023, 2024, 2025, 2026]);
+  assert.ok(review.years.every(({ sample, reviewed, agreement }) => sample === 12 && sample >= reviewed && reviewed >= agreement && agreement >= 0));
+  const valid = new Set(readJson<{ id: string }[]>('voc/topics.json').map(({ id }) => id));
+  assert.ok(review.topics.every(({ topic, reviewed, agreement }) => valid.has(topic) && reviewed >= agreement && agreement >= 0));
+  for (const key of ['reviewed', 'agreement'] as const) {
+    assert.equal(review.years.reduce((sum, row) => sum + row[key], 0), review.topics.reduce((sum, row) => sum + row[key], 0));
+  }
+  assert.ok(review.development.reviewed >= Math.max(review.development.before, review.development.after));
+});
+
 test('Broker segment amounts reconcile with disclosed consolidated totals', () => {
   type Disclosure = { years: number[]; total: number[]; sourceUrl: string; segments: { name: string; amounts: number[] }[] };
   const filings = readJson<Record<string, Disclosure>>('brokers/disclosed-segments.json');
@@ -195,9 +212,12 @@ test('Index snapshots and the market timeline cover the documented periods', () 
     assert.ok(row.first.length === 2 && row.last.length === 2 && [...row.first, ...row.last].every((value) => value > 0));
     assert.ok([row.firstSource, row.lastSource].every((url) => new URL(url).protocol === 'https:'));
   }
-  for (const [year, count] of [[2025, 12], [2026, 10]]) {
+  for (const [year, count] of [[2024, 12], [2025, 12], [2026, 10]]) {
     assert.ok(Array.from({ length: count }, (_, i) => `${year}-${String(i + 1).padStart(2, '0')}`).every((period) => monthly[period]));
   }
+  assert.ok(Array.from({ length: 12 }, (_, i) => `2024-${String(i + 1).padStart(2, '0')}`).every((month) => us[month]));
+  assert.equal(us['2024-03'].lastDate, '2024-03-28');
+  assert.equal(monthly['2024-03'].lastDate, '2024-03-29');
   assert.equal(monthly['2025-03'].firstDate, '2025-03-04');
   assert.deepEqual(monthly['2025-10'].last, [4107.50, 900.42]);
   assert.ok(Array.from({ length: 12 }, (_, i) => `2025-${String(i + 1).padStart(2, '0')}`).every((period) => us[period]));

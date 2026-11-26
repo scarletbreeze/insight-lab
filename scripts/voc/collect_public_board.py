@@ -1,9 +1,11 @@
 """Count public Kiwoom customer threads without retaining raw board responses."""
 
 import argparse
+import hashlib
 import json
 import re
 import time
+import tempfile
 from collections import Counter
 from datetime import date
 from html import unescape
@@ -16,16 +18,16 @@ SOURCE = "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView"
 LIST_URL = "https://bbn.kiwoom.com/bbs/SBbsBoardBWCSZListAjax"
 CATEGORIES = {"a": "문의", "b": "제안", "c": "칭찬·불만"}
 TOPIC_TERMS = {
-    "orders": r"주문|체결|시장가|지정가|호가",
+    "orders": r"주문|체결|시장가|지정가|호가|스[탑톱]로스",
     "account": r"계좌\s*(개설|폐쇄|해지|등록)|비대면|휴면계좌|계좌번호",
-    "hts": r"HTS|MTS|영웅문|조건검색|차트|화면번호|관심종목",
-    "auth": r"인증서|본인인증|간편인증|로그인|OTP|생체인증",
+    "hts": r"HTS|MTS|영웅문|조건\s*(?:검색|식)|신호\s*검색|검색식|수식\s*관리자|일목균형표|(?:분|일|주|월)봉|차트|화면번호|관심종목",
+    "auth": r"인증서|본인인증|간편인증|고객\s*확인\s*(?:재\s*)?등록|로그인|OTP|생체인증",
     "overseas": r"해외\s*주식|미국\s*주식|환전|해외\s*소수점",
     "hours": r"거래시간|개장시간|폐장시간|선물옵션|선물\s*거래|파생상품",
-    "credit": r"신용\s*(거래|융자|한도|잔고)|미수금|미수\s*(거래|동결)|반대매매",
+    "credit": r"신용\s*(거래|융자|한도|잔고)|미수금|미수\s*(거래|동결)|반대매매|(?:매도\s*대금|주식)\s*담보\s*대출",
     "fees": r"수수료|제비용|거래세|양도소득세",
     "transfer": r"입출금|입금|출금|이체|대체출고|대체입고",
-    "products": r"ETF|ETN|ELS|채권|펀드|공모주",
+    "products": r"ETF|ETN|ELS|채권|펀드|공모주|비과세\s*종합\s*저축",
 }
 TOPIC_PATTERNS = {key: re.compile(value, re.IGNORECASE) for key, value in TOPIC_TERMS.items()}
 
@@ -71,7 +73,18 @@ def fetch_with_retry(page, cursor, page_size):
             time.sleep(2 ** (attempt + 1))
 
 
-def collect(first, last, limit, page_size, classify=False, include_daily=False, on_inquiry=None):
+def write_checkpoint(path, state):
+    with tempfile.NamedTemporaryFile(mode="w", dir=path.parent, delete=False, encoding="utf-8") as temp:
+        json.dump(state, temp, ensure_ascii=False, separators=(",", ":"))
+        name = temp.name
+    Path(name).replace(path)
+
+
+def digest(value):
+    return hashlib.sha256(value.encode()).hexdigest()
+
+
+def collect(first, last, limit, page_size, classify=False, include_daily=False, on_inquiry=None, checkpoint=None):
     cursor = {"prevPageNo": "", "maxGrpStep": "", "minGrpStep": ""}
     known_pages = set()
     customers = {}
@@ -79,7 +92,18 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
     pages = 0
     stop = "page-limit"
     previous_oldest = None
-    for page in range(1, limit + 1):
+    settings = [str(first), str(last), page_size, classify, include_daily, digest(json.dumps([CATEGORIES, TOPIC_TERMS], sort_keys=True))]
+    if checkpoint and on_inquiry:
+        raise ValueError("A callback must manage its own progress.")
+    if checkpoint and checkpoint.exists():
+        state = json.loads(checkpoint.read_text(encoding="utf-8"))
+        if state["settings"] != settings:
+            raise ValueError("Checkpoint dates, page size or classification rules differ.")
+        cursor, pages = state["cursor"], state["pages"]
+        oldest, newest, previous_oldest = [date.fromisoformat(v) if v else None for v in state["bounds"]]
+        known_pages = set(state["seen"])
+        customers = {key: (date.fromisoformat(d), category, topic) for key, (d, category, topic) in state["customers"].items()}
+    for page in range(pages + 1, limit + 1):
         if page > 1:
             time.sleep(0.25)
         try:
@@ -91,8 +115,8 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
             stop = "end-of-list"
             break
         entries = [row for row in rows if row["step"] > 0]
-        signature = tuple(sorted(row["seqid"] for row in entries))
-        if not signature or signature in known_pages:
+        signature = digest(json.dumps(sorted(row["seqid"] for row in entries)))
+        if not entries or signature in known_pages:
             stop = "missing-or-repeated-page"
             break
         customer_rows = []
@@ -114,7 +138,7 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
         pages += 1
         for row, posted, category, topic in customer_rows:
             if first <= posted <= last:
-                identifier = row["seqid"]
+                identifier = digest(str(row["seqid"]))
                 if on_inquiry and row["divTp2"] == "a" and identifier not in customers:
                     on_inquiry(posted, row)
                 record = (posted, category, topic)
@@ -130,6 +154,13 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
             stop = "missing-cursor"
             break
         cursor = {"prevPageNo": page, "maxGrpStep": marker["maxGrpStep"], "minGrpStep": marker["minGrpStep"]}
+
+        if checkpoint and (page % 25 == 0 or page == limit):
+            write_checkpoint(checkpoint, {
+                "settings": settings, "cursor": cursor, "pages": pages, "seen": list(known_pages),
+                "bounds": [v.isoformat() if v else None for v in (oldest, newest, previous_oldest)],
+                "customers": {key: [d.isoformat(), category, topic] for key, (d, category, topic) in customers.items()},
+            })
 
     counts = {}
     topic_counts = {}
@@ -157,6 +188,7 @@ def main():
     parser.add_argument("--last", type=date.fromisoformat, required=True)
     parser.add_argument("--max-pages", type=int, required=True)
     parser.add_argument("--page-size", type=int, choices=(20, 100), default=20)
+    parser.add_argument("--checkpoint", type=Path, help="Local progress file for resuming an interrupted run")
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--classify-topics", action="store_true")
     parser.add_argument("--daily-topics", action="store_true", help="Include daily topic counts for local notice analysis")
@@ -165,7 +197,9 @@ def main():
         parser.error("Use ordered dates and at least one page.")
     if args.daily_topics and not args.classify_topics:
         parser.error("--daily-topics requires --classify-topics.")
-    result = collect(args.first, args.last, args.max_pages, args.page_size, args.classify_topics, args.daily_topics)
+    if args.checkpoint and args.checkpoint.resolve() == args.out.resolve():
+        parser.error("--checkpoint and --out must use different files.")
+    result = collect(args.first, args.last, args.max_pages, args.page_size, args.classify_topics, args.daily_topics, checkpoint=args.checkpoint)
     args.out.write_text(json.dumps(result, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Public board: {result['pages']} pages, {result['stop']}, oldest {result['oldestObserved']}.")
 

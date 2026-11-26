@@ -6,15 +6,15 @@
       "noticeId": "general-8244",
       "date": "2025-02-26",
       "topic": "orders",
-      "before": 26,
-      "after": 83
+      "before": 25,
+      "after": 81
     },
     {
       "noticeId": "00002466",
       "date": "2026-05-11",
       "topic": "auth",
-      "before": 8,
-      "after": 19
+      "before": 12,
+      "after": 24
     },
     {
       "noticeId": "general-6355",
@@ -24,18 +24,25 @@
       "after": 6
     },
     {
+      "noticeId": "general-6775",
+      "date": "2023-03-17",
+      "topic": "auth",
+      "before": 19,
+      "after": 9
+    },
+    {
+      "noticeId": "00002469",
+      "date": "2026-05-21",
+      "topic": "products",
+      "before": 25,
+      "after": 15
+    },
+    {
       "noticeId": "00002503",
       "date": "2026-11-10",
       "topic": "credit",
       "before": 12,
       "after": 2
-    },
-    {
-      "noticeId": "general-6775",
-      "date": "2023-03-17",
-      "topic": "auth",
-      "before": 19,
-      "after": 10
     },
     {
       "noticeId": "00002482",
@@ -45,13 +52,6 @@
       "after": 4
     },
     {
-      "noticeId": "00002469",
-      "date": "2026-05-21",
-      "topic": "products",
-      "before": 22,
-      "after": 14
-    },
-    {
       "noticeId": "00002481",
       "date": "2026-08-04",
       "topic": "credit",
@@ -59,11 +59,18 @@
       "after": 5
     },
     {
+      "noticeId": "general-8004",
+      "date": "2024-11-13",
+      "topic": "overseas",
+      "before": 16,
+      "after": 10
+    },
+    {
       "noticeId": "00002447",
       "date": "2026-01-14",
       "topic": "auth",
-      "before": 15,
-      "after": 21
+      "before": 16,
+      "after": 22
     },
     {
       "noticeId": "00002457",
@@ -85,20 +92,6 @@
       "topic": "overseas",
       "before": 12,
       "after": 7
-    },
-    {
-      "noticeId": "general-8004",
-      "date": "2024-11-13",
-      "topic": "overseas",
-      "before": 16,
-      "after": 11
-    },
-    {
-      "noticeId": "00002471",
-      "date": "2026-05-29",
-      "topic": "hours",
-      "before": 7,
-      "after": 2
     },
     {
       "noticeId": "00002467",
@@ -125,15 +118,29 @@
       "noticeId": "00002487",
       "date": "2026-08-26",
       "topic": "credit",
-      "before": 5,
-      "after": 0
+      "before": 6,
+      "after": 1
     },
     {
       "noticeId": "general-9183",
       "date": "2026-05-15",
       "topic": "hts",
-      "before": 95,
-      "after": 99
+      "before": 131,
+      "after": 127
+    },
+    {
+      "noticeId": "00002470",
+      "date": "2026-05-27",
+      "topic": "products",
+      "before": 18,
+      "after": 14
+    },
+    {
+      "noticeId": "00002471",
+      "date": "2026-05-29",
+      "topic": "hours",
+      "before": 6,
+      "after": 2
     },
     {
       "noticeId": "general-7691",
@@ -141,13 +148,6 @@
       "topic": "overseas",
       "before": 5,
       "after": 8
-    },
-    {
-      "noticeId": "00002444",
-      "date": "2025-12-24",
-      "topic": "credit",
-      "before": 6,
-      "after": 3
     },
     {
       "noticeId": "00002449",
@@ -192,6 +192,13 @@
       "after": 4
     },
     {
+      "noticeId": "00002493",
+      "date": "2026-10-01",
+      "topic": "hours",
+      "before": 2,
+      "after": 5
+    },
+    {
       "noticeId": "00002495",
       "date": "2026-10-07",
       "topic": "hours",
@@ -213,6 +220,13 @@
       "after": 4
     },
     {
+      "noticeId": "00002438",
+      "date": "2025-11-05",
+      "topic": "hours",
+      "before": 2,
+      "after": 4
+    },
+    {
       "noticeId": "00002441",
       "date": "2025-11-28",
       "topic": "hours",
@@ -220,8 +234,15 @@
       "after": 4
     },
     {
-      "noticeId": "00002493",
-      "date": "2026-10-01",
+      "noticeId": "00002444",
+      "date": "2025-12-24",
+      "topic": "credit",
+      "before": 6,
+      "after": 8
+    },
+    {
+      "noticeId": "00002464",
+      "date": "2026-04-29",
       "topic": "hours",
       "before": 3,
       "after": 5
@@ -231,13 +252,6 @@
       "date": "2026-10-02",
       "topic": "auth",
       "before": 3,
-      "after": 5
-    },
-    {
-      "noticeId": "00002498",
-      "date": "2026-10-26",
-      "topic": "auth",
-      "before": 7,
       "after": 5
     }
   ]

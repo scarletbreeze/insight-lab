@@ -593,5 +593,159 @@
     "summary": "주문이 거부되거나 거절되는 상황을 문의했습니다.",
     "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
     "reviewMethod": "title-template"
+  },
+  {
+    "id": "review-2022-screen-lookup",
+    "date": "2022",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "기관 매수 종목 조회",
+    "keywords": [
+      "기관 매수",
+      "화면번호"
+    ],
+    "summary": "기관이 매수한 종목 목록을 볼 수 있는 화면번호를 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-daily-ma-intraday",
+    "date": "2022",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "일봉 이동평균선",
+    "keywords": [
+      "분봉",
+      "이동평균선"
+    ],
+    "summary": "일봉 기준 이동평균선을 분봉 차트에 표시하는 방법을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2022-indicator-display",
+    "date": "2022",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "보조지표 표시",
+    "keywords": [
+      "차트",
+      "보조지표"
+    ],
+    "summary": "차트에 보조지표가 표시되지 않는 문제를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-watchlist-import",
+    "date": "2023",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "관심종목 가져오기",
+    "keywords": [
+      "관심종목",
+      "엑셀"
+    ],
+    "summary": "엑셀 파일에 저장한 종목을 관심종목으로 불러오는 방법을 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-signal-marker",
+    "date": "2023",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "신호 표시 크기",
+    "keywords": [
+      "수식관리자",
+      "신호검색"
+    ],
+    "summary": "수식관리자에서 신호검색 결과를 나타내는 화살표의 크기에 관해 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2023-bond-etf",
+    "date": "2023",
+    "topic": "products",
+    "intent": "info",
+    "subtopic": "만기매칭형 채권 ETF",
+    "keywords": [
+      "채권",
+      "ETF"
+    ],
+    "summary": "만기를 정해 운용하는 채권 ETF에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2024-startup-after-settings",
+    "date": "2024",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "설정 복원 후 실행",
+    "keywords": [
+      "영웅문4",
+      "설정"
+    ],
+    "summary": "설정을 내려받은 뒤 영웅문4가 실행 중 종료되는 문제를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2025-chart-price-link",
+    "date": "2025",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "주식종합차트 가격 연동",
+    "keywords": [
+      "0601",
+      "차트"
+    ],
+    "summary": "주식종합차트에서 가격이 연동되지 않는 문제를 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2025-indicator-color",
+    "date": "2025",
+    "topic": "hts",
+    "intent": "how_to",
+    "subtopic": "보조지표 색상",
+    "keywords": [
+      "차트",
+      "보조지표"
+    ],
+    "summary": "차트와 보조지표 값의 색상을 따로 지정할 수 있는지 물었습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2026-search-rule-error",
+    "date": "2026",
+    "topic": "hts",
+    "intent": "error",
+    "subtopic": "조건검색식 오류",
+    "keywords": [
+      "조건검색",
+      "검색식"
+    ],
+    "summary": "조건검색식에서 발생한 오류에 대해 추가로 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
+  },
+  {
+    "id": "review-2026-stop-order",
+    "date": "2026",
+    "topic": "orders",
+    "intent": "how_to",
+    "subtopic": "호가주문 스탑로스",
+    "keywords": [
+      "호가주문",
+      "스탑로스"
+    ],
+    "summary": "호가주문 화면의 스탑로스 기능에 관해 문의했습니다.",
+    "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+    "reviewMethod": "reviewed-title"
   }
 ]

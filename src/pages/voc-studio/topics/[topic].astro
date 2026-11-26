@@ -56,13 +56,16 @@ const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && y
     {yearlyCounts.map(({ year }, index) => <details open={index === 0}>
       <summary>{year}년</summary>
       <VocMonthlyTrends {year} topic={id} />
+      {yearlyCounts.some((row) => row.year === year - 1) && <p>
+        <a href={sitePath('voc-studio/compare') + '?' + new URLSearchParams({ left: String(year - 1), right: String(year), topic: id }) + '#monthly'}>{label} 문의 전년 같은 달과 비교</a>
+      </p>}
     </details>)}
   </section>}
   <section class="lab-block">
     <h2>문의 표본</h2>
     {subtopics.length > 0 && <p>세부 주제 · {subtopics.join(' · ')}</p>}
     {items.length ? <ul class="lab-list">
-      {items.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li><time datetime={date}>{date}</time> · {subtopic && `${subtopic} · `}{vocIntents[intent]} · {summary} · {reviewMethod === 'title-template' && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a></li>)}
+      {items.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li><time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic && `${subtopic} · `}{vocIntents[intent]} · {summary} · {reviewMethod && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a></li>)}
     </ul> : <p class="empty-state">문의 자료 확인 중</p>}
   </section>
   {keywords.length > 0 && <section class="lab-block">

@@ -60,8 +60,8 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
           {priorCount > 0 && ` · 전년 대비 ${((count / priorCount - 1) * 100).toLocaleString('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 })}%`}
           <meter min="0" max={boardTopics.total} value={count} aria-label={label + ' 문의 비중'}></meter>
           {examples.length > 0 && <ul>{examples.map(({ summary, subtopic, date, reviewMethod }) => <li>
-            <time datetime={date}>{date}</time> · {subtopic && `${subtopic} · `}{summary}
-            {reviewMethod === 'title-template' && <small> · 제목 기반</small>}
+            <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic && `${subtopic} · `}{summary}
+            {reviewMethod && <small> · 제목 기반</small>}
           </li>)}</ul>}
         </li>;
       })}
@@ -72,6 +72,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     <h2>월별 문의 추이</h2>
     <p>제목과 본문 용어가 한 주제로 분류된 원글의 월별 건수입니다.</p>
     <VocMonthlyTrends {year} />
+    {vocYears.some((entry) => entry.year === year - 1) && <p><a href={sitePath('voc-studio/compare') + '?left=' + (year - 1) + '&right=' + year + '#monthly'}>전년 같은 달과 비교</a></p>}
   </section>}
   <section class="lab-block">
     <h2>{complete ? '문의 주제 Top 10' : '공개 문의 표본'}</h2>
@@ -84,7 +85,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
           <h3><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
           <p>{count}건{comparable && (priorCount ? ' · 전년 대비 ' + ((count / priorCount - 1) * 100).toFixed(1) + '%' : ' · 전년 수록 0건')}</p>
           <ul>{examplePosts.map(({ date, summary, subtopic, intent, sourceUrl }) => <li>
-            <time datetime={date}>{date}</time> · {subtopic ?? vocIntents[intent] ?? label} · {summary} · <a href={sourceUrl}>공개 게시판</a>
+            <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic ?? vocIntents[intent] ?? label} · {summary} · <a href={sourceUrl}>공개 게시판</a>
           </li>)}</ul>
         </li>;
       })}
@@ -95,7 +96,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
       <p>공개 목록에서 확인한 문의 예시 {selectedPosts.length}건입니다.</p>
       <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={sitePath('voc-studio/topics/' + id)}>{label} · {count}건</a></li>)}</ul>
       <ul class="lab-list">{selectedPosts.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li>
-        <time datetime={date}>{date}</time> · {subtopic ?? vocIntents[intent]} · {summary} · {reviewMethod === 'title-template' && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a>
+        <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic ?? vocIntents[intent]} · {summary} · {reviewMethod && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a>
       </li>)}</ul>
     </> : <p class="empty-state">문의 자료 확인 중</p>}
     </>}
