@@ -2,6 +2,7 @@
 import VocLayout from '../../components/voc/VocLayout.astro';
 import { publicBoardSnapshot as sample, publicBoardYear } from '../../utils/voc-public-board';
 import generalNotices from '../../../data/voc/general-notices.json';
+import annualReview from '../../../data/voc/annual-classification-review.json';
 import review from '../../../data/voc/classification-review.json';
 import topics from '../../../data/voc/topics.json';
 const labels: Record<string, string> = Object.fromEntries(topics.map(({ id, label }) => [id, label]));
@@ -62,8 +63,21 @@ const observed = [
     <p>문의 하나에는 주제 하나와 문의 목적을 부여하고, 필요한 경우 세부 주제를 기록합니다. 제목 기반으로 표시한 예시는 공개 제목에 나타난 문의 내용을 일반화했습니다. 공개 요약에서 확인한 키워드는 문의 한 건 안에서 한 번씩 셉니다.</p>
     <p>1월 1일부터 12월 31일까지 같은 게시판과 수집 기준으로 확인한 연도에는 문의 건수와 상위 주제를 표시합니다. 증감과 비중은 양쪽 연도의 수집 기준이 같을 때 계산합니다.</p>
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="classification-review">
     <h2>자동 분류 표본 점검</h2>
+    <p>{annualReview.start}~{annualReview.end} 공개 문의에서 연도마다 12건씩 선정했습니다. 제목을 읽고 한 가지 주제를 판단할 수 있는 글만 자동 분류와 대조했습니다. 본문을 읽어야 하거나 주제가 겹치는 제목은 판단 보류로 셌습니다.</p>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <caption>연도별 제목 검토와 자동 분류의 일치 건수</caption>
+      <thead><tr><th scope="col">연도</th><th scope="col">표본</th><th scope="col">판단 보류</th><th scope="col">판단 가능</th><th scope="col">일치</th></tr></thead>
+      <tbody>{annualReview.years.map(({ year, sample, reviewed, agreement }) => <tr>
+        <th scope="row">{year}</th><td>{sample}</td><td>{sample - reviewed}</td><td>{reviewed}</td><td>{agreement}</td>
+      </tr>)}</tbody>
+    </table></div>
+    <details><summary>표본 선정 방법과 해석</summary><p>공개 원글의 식별자를 고정된 방식으로 해시한 뒤 연도별로 값이 작은 순서대로 골랐습니다. 제목 검토는 AI로 수행했고, 자동 분류는 기존의 제목·본문 키워드 규칙을 사용했습니다. 연도별 표본이 작아 전체 문의의 분류 정확도를 추정하기 어렵습니다.</p></details>
+    <details><summary>제목에서 판별한 주제별 결과</summary>
+      <ul class="lab-list">{annualReview.topics.map(({ topic, reviewed, agreement }) => <li>{labels[topic]} · {reviewed}건 중 {agreement}건 일치</li>)}</ul>
+    </details>
+    <h3>최근 두 페이지의 개별 사례</h3>
     <p>{review.scope}의 문의 {review.inquiries}건을 확인했습니다. 제목으로 주제를 판단할 수 있었던 {review.rows.length}건 중 {review.rows.length - disagreements.length}건에서 검토 결과와 자동 분류가 일치했습니다. {review.insufficientTitle}건은 제목만으로 판단하기 어려웠습니다. 최근 두 페이지에 한정한 점검이므로 5개년 전체 정확도는 추정할 수 없습니다.</p>
     <div class="lab-table-wrap"><table class="lab-table">
       <caption>분류가 달랐던 문의</caption>

@@ -1,4 +1,5 @@
 ---
+import annualReview from '../../../../data/voc/annual-classification-review.json';
 import VocYearNavigation from '../../../components/voc/VocYearNavigation.astro';
 import VocLayout from '../../../components/voc/VocLayout.astro';
 import NoticeList from '../../../components/voc/NoticeList.astro';
@@ -27,6 +28,7 @@ const noticeCounts = [...new Set(selectedNotices.map(({ category }) => category)
 const context = vocContext.filter(({ date }) => date.startsWith(String(year)));
 const boardCount = publicBoardYear(year);
 const boardTopics = publicBoardTopics(year);
+const review = annualReview.years.find((row) => row.year === year);
 const generalNoticeCount = generalNoticeYear(year);
 const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.isFullYear
   ? publicBoardTopics(year - 1) : undefined;
@@ -48,6 +50,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
   {boardTopics && <section class="lab-block">
     <h2>공개 문의 주제 Top 10</h2>
     <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
+    {review && <p>올해의 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
     <ol class="lab-list">
       {boardTopics.ranked.slice(0, 10).map(({ id, label, count }) => {
         const priorCount = priorBoardTopics?.ranked.find((topic) => topic.id === id)?.count ?? 0;

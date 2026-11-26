@@ -1,0 +1,74 @@
+{
+  "start": "2022-01-01",
+  "end": "2026-11-25",
+  "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+  "years": [
+    {
+      "year": 2022,
+      "sample": 12,
+      "reviewed": 5,
+      "agreement": 2
+    },
+    {
+      "year": 2023,
+      "sample": 12,
+      "reviewed": 9,
+      "agreement": 4
+    },
+    {
+      "year": 2024,
+      "sample": 12,
+      "reviewed": 9,
+      "agreement": 3
+    },
+    {
+      "year": 2025,
+      "sample": 12,
+      "reviewed": 10,
+      "agreement": 7
+    },
+    {
+      "year": 2026,
+      "sample": 12,
+      "reviewed": 7,
+      "agreement": 6
+    }
+  ],
+  "topics": [
+    {
+      "topic": "hts",
+      "reviewed": 24,
+      "agreement": 12
+    },
+    {
+      "topic": "orders",
+      "reviewed": 5,
+      "agreement": 4
+    },
+    {
+      "topic": "credit",
+      "reviewed": 5,
+      "agreement": 3
+    },
+    {
+      "topic": "products",
+      "reviewed": 2,
+      "agreement": 1
+    },
+    {
+      "topic": "auth",
+      "reviewed": 2,
+      "agreement": 1
+    },
+    {
+      "topic": "account",
+      "reviewed": 1,
+      "agreement": 0
+    },
+    {
+      "topic": "overseas",
+      "reviewed": 1,
+      "agreement": 1
+    }
+  ]
+}
