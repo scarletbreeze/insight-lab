@@ -4,7 +4,7 @@ import { sitePath } from '../utils/paths';
 import { services } from '../utils/services';
 
 const { title } = Astro.props;
-const github = 'https://github.com/scarletbreeze/insight_lab';
+const github = 'https://github.com/scarletbreeze/insight-lab';
 const current = (href: string) => {
   if (href === Astro.url.pathname) return 'page';
   if (Astro.url.pathname.startsWith(href)) return 'location';
