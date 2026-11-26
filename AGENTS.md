@@ -84,8 +84,8 @@ Global style:
 Service themes may vary, but navigation/layout/component rules remain coherent.
 
 ## AI workflow
-Codex is the default implementation writer.
-Claude Code is the default reviewer.
+Codex and Claude Code can both implement and review.
+The agent that implements a change should not be its only reviewer.
 Do not let both modify the same files concurrently.
 
 For major work:

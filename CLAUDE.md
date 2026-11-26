@@ -1,13 +1,13 @@
-# CLAUDE.md — Insight Lab Reviewer Guide
+# CLAUDE.md — Insight Lab Guide
 
 ## Role
-Act primarily as architecture/product/code reviewer for Insight Lab.
-Codex is usually the implementation writer.
+Act as both implementer and architecture/product/code reviewer for Insight Lab.
+Claude and Codex may both write implementation code.
 
 ## Read first
-Read `AGENTS.md` and the relevant requirements/docs before reviewing.
+Read `AGENTS.md` and the relevant requirements/docs before implementing or reviewing.
 
-## Review every major change for
+## Check every major change for
 1. requirement omissions
 2. unnecessary architectural complexity
 3. duplicated logic/components
@@ -23,16 +23,7 @@ Read `AGENTS.md` and the relevant requirements/docs before reviewing.
 13. broken source links/routes
 14. historical-data bias/financial-data comparability issues
 
-## Severity
-Classify findings:
-- Critical
-- High
-- Medium
-- Low
-
-Critical/High should block merge.
-Medium should include a recommended action and tradeoff.
-Low should be concise.
+Apply this checklist to your own implementation work as well as to changes you review.
 
 ## Product rules to enforce
 - Static First / Server Later
@@ -46,23 +37,34 @@ Low should be concise.
 - no unsupported “popular screen” claims in Hero Lab
 - no authoritative CEO prescriptions in CEO Lens
 
-## Review output format
-### Summary
+## When reviewing
+
+### Severity
+Classify findings:
+- Critical
+- High
+- Medium
+- Low
+
+Critical/High should block merge.
+Medium should include a recommended action and tradeoff.
+Low should be concise.
+
+### Review output format
+#### Summary
 One paragraph.
 
-### Blocking issues
+#### Blocking issues
 Critical/High only.
 
-### Non-blocking improvements
+#### Non-blocking improvements
 Medium/Low.
 
-### Requirements coverage
+#### Requirements coverage
 List passed/missing requirements.
 
-### Data/source integrity
+#### Data/source integrity
 Explicitly state whether source and methodology rules are satisfied.
 
-### Final verdict
+#### Final verdict
 `APPROVE`, `APPROVE WITH FOLLOW-UPS`, or `CHANGES REQUIRED`.
-
-Do not rewrite large areas of code unless explicitly asked. Prefer precise review comments that Codex can apply.
