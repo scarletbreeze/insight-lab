@@ -1,4 +1,88 @@
 {
+  "2008-01": {
+    "firstDate": "2008-01-02",
+    "lastDate": "2008-01-31",
+    "first": [
+      1447.16,
+      2609.63
+    ],
+    "last": [
+      1378.55,
+      2389.86
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/01/03/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/02/01/business/market.html"
+  },
+  "2008-04": {
+    "firstDate": "2008-04-01",
+    "lastDate": "2008-04-30",
+    "first": [
+      1370.18,
+      2362.75
+    ],
+    "last": [
+      1385.59,
+      2412.8
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/04/02/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/05/01/business/market.html"
+  },
+  "2008-05": {
+    "firstDate": "2008-05-01",
+    "lastDate": "2008-05-30",
+    "first": [
+      1409.34,
+      2480.71
+    ],
+    "last": [
+      1400.38,
+      2522.66
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/05/02/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/05/31/business/market.html"
+  },
+  "2008-06": {
+    "firstDate": "2008-06-02",
+    "lastDate": "2008-06-30",
+    "first": [
+      1385.67,
+      2491.53
+    ],
+    "last": [
+      1280.0,
+      2292.98
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/06/03/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/07/01/business/market.html"
+  },
+  "2008-07": {
+    "firstDate": "2008-07-01",
+    "lastDate": "2008-07-31",
+    "first": [
+      1284.91,
+      2304.97
+    ],
+    "last": [
+      1267.38,
+      2325.55
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/07/02/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/08/01/business/market.html"
+  },
+  "2008-08": {
+    "firstDate": "2008-08-01",
+    "lastDate": "2008-08-29",
+    "first": [
+      1260.31,
+      2310.96
+    ],
+    "last": [
+      1282.83,
+      2367.52
+    ],
+    "firstSource": "https://archives.starbulletin.com/2008/08/02/business/market.html",
+    "lastSource": "https://archives.starbulletin.com/2008/08/30/business/market.html"
+  },
   "2016-12": {
     "firstDate": "2016-12-01",
     "lastDate": "2016-12-30",

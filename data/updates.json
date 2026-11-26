@@ -1,5 +1,12 @@
 [
   {
+    "updatedAt": "2026-11-27T00:22:28+09:00",
+    "service": "market-time-capsule",
+    "title": "2008년 1·4~8월 미국 S&P 500·Nasdaq 월초·월말 종가를 AP 마감 보도로 추가",
+    "route": "market-time-capsule/2008",
+    "anchor": "index-calendar"
+  },
+  {
     "updatedAt": "2026-11-26T23:43:30+09:00",
     "service": "broker-atlas",
     "title": "Safari(WebKit)·Chromium 접근성 검사 후 선택 상자·표 키보드 이동·링크 조작 크기를 전 사이트에서 통일 (비교 화면 등)",
