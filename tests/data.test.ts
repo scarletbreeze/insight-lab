@@ -86,6 +86,28 @@ test('Broker segment amounts reconcile with disclosed consolidated totals', () =
   }
 });
 
+test('Broker introductions keep a short character, disclosed segments and a sourced money map', () => {
+  type Broker = { id: string; name: string; character: string; segments: string[]; sourceUrl: string; characterSourceUrl?: string;
+    mapSourceTerm: string; map: { customer: string; business: string; revenue: string }[] };
+  const brokers = readJson<Broker[]>('brokers/brokers.json');
+  assert.equal(brokers.length, 10);
+  for (const broker of brokers) {
+    assert.ok(broker.character.length > 0 && broker.character.length <= 40, broker.id + ' character length');
+    assert.ok(broker.segments.length >= 3, broker.id + ' segments');
+    assert.equal(new Set(broker.segments).size, broker.segments.length, broker.id + ' duplicate segment');
+    assert.ok(broker.mapSourceTerm.length > 0, broker.id + ' mapSourceTerm');
+    for (const url of [broker.sourceUrl, broker.characterSourceUrl].filter((value): value is string => Boolean(value))) {
+      assert.equal(new URL(url).protocol, 'https:', broker.id + ' source protocol');
+    }
+    assert.ok(broker.map.length > 0, broker.id + ' map rows');
+    for (const row of broker.map) {
+      assert.ok(row.customer && row.business && row.revenue, broker.id + ' map row fields');
+      const [segment] = row.business.split(' · ');
+      assert.ok(broker.segments.includes(segment), broker.id + ' map business not a disclosed segment: ' + row.business);
+    }
+  }
+});
+
 test('VOC notice windows use published dates and cover both 14-day periods', () => {
   type Notice = { id: string; date: string; topic: string; dateType?: string; sourceUrl: string };
   const general = readJson<{ oldestObserved: string; start: string; notices: Notice[]; yearCounts: Record<string, number> }>('voc/general-notices.json');
