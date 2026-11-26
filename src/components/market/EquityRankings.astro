@@ -1,5 +1,6 @@
 ---
 import koreanCoverage from '../../../data/market/months/kr-equity-coverage.json';
+import priceCoverage from '../../../data/market/months/kr-price-coverage-2024.json';
 import raw from '../../../data/market/months/equity-rankings.json';
 import spyRaw from '../../../data/market/months/spy-equity-rankings.json';
 import { sitePath } from '../../utils/paths';
@@ -30,6 +31,7 @@ interface Ranking {
 }
 
 const { period } = Astro.props;
+const priceCheck = priceCoverage[period as keyof typeof priceCoverage];
 const checked = koreanCoverage[period as keyof typeof koreanCoverage];
 const rankings = (raw as Record<string, Partial<Record<Market, Ranking>>>)[period];
 const spy = (spyRaw as Record<string, { US: Ranking }>)[period]?.US;
@@ -68,7 +70,7 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
             {sourceUrl !== first?.sourceUrl && <a href={sourceUrl}>가격 출처</a>}
           </li>
         ))}</ol>
-      </> : market === '한국' && checked ? <p>당시 두 ETF 보유 주식 {checked.universe}개 중 {checked.eligible}개가 일별 종가 연속성과 상장주식수 검사를 통과했습니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-coverage'}>월별 제외 사유와 출처</a></p> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
+      </> : market === '한국' && checked ? <p>당시 두 ETF 보유 주식 {checked.universe}개 중 {checked.eligible}개가 일별 종가 연속성과 상장주식수 검사를 통과했습니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-coverage'}>월별 제외 사유와 출처</a></p> : market === '한국' && priceCheck ? <p>월초 상장 종목 {priceCheck.opening.toLocaleString('ko-KR')}개 중 {priceCheck.passed.toLocaleString('ko-KR')}개가 일별 시세 검사를 통과했습니다. 첫 거래일 ETF 보유 명세를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>시세 점검 결과</a></p> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
     </section>;
   })}
 </div>
