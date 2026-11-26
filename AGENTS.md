@@ -111,10 +111,11 @@ Choose tools according to the evidence needed. Use the PDF skill when a report's
 For a development batch spanning Market Time Capsule, VOC Studio and Broker Atlas, the current session leads integration and delegates one independent assignment to each relevant service agent. A single-service change can stay with one owner. The user can request the whole batch in this session.
 
 ```text
-Current session · integration, cross-service QA and release
+Current session · integration and release
 ├── Market agent · Market Time Capsule
 ├── VOC agent    · VOC Studio
-└── Broker agent · Broker Atlas
+├── Broker agent · Broker Atlas
+└── UI/UX reviewer · independent walkthrough of the integrated site
 ```
 
 | Owner | Scope for this batch |
@@ -122,14 +123,24 @@ Current session · integration, cross-service QA and release
 | Market Time Capsule | Requirements §9. Historical events, point-in-time holdings, prices, return calculations and market screens. |
 | VOC Studio | Requirements §7. Public-source collection, anonymized aggregates, classification checks and VOC screens. |
 | Broker Atlas | Requirements §8. Disclosures, comparable financial metrics, ranking evidence and broker screens. |
+| UI/UX reviewer | Read and operate the integrated site as a visitor. Report the most consequential navigation, readability, accessibility or visual issues to the lead. |
 | Integration lead | Shared components and navigation, cross-service tests, design audit, dependencies, Git and release verification. |
 
 1. The lead checks the working tree and any running collectors, then assigns each agent a requirement, an explicit set of files and a user flow to verify. Start independent work together and reuse completed collections.
 2. Give each changed file one writer. An agent needing a shared change sends the lead the affected path and expected behavior. Separate worktrees can isolate changes when scopes overlap. Use one full build per integrated revision in a shared checkout.
 3. Service agents implement and run focused checks. They hand back changed paths, the verified result and its source or test, and any remaining dependency. The lead resolves cross-service issues and updates `docs/v1-implementation-check.md` with the actual coverage.
-4. The lead runs integration checks and verifies affected flows on mobile and desktop. When deployment is in scope, the lead commits the reviewed files, pushes and checks the changed content at both the root site and the project site.
+4. The lead runs integration checks and verifies affected flows on mobile and desktop. Record user-visible editorial updates in `data/updates.json` with their actual site update time and destination. The home page displays the six most recent entries. When deployment is in scope, the lead commits the reviewed files, pushes and checks the changed content at both the root site and the project site.
 
 On resuming a batch, read these ownership rules and the latest entry in `docs/v1-implementation-check.md`, inspect the worktree and active jobs, and reassign unfinished work from its last verified result.
+
+### Independent UI/UX review
+
+For a batch that changes a visitor flow, delegate to the project agent `ux_review` defined in `.codex/agents/ux_review.toml`. Give the reviewer a runnable integrated build and a concrete question for each affected flow. With four concurrent slots including the lead, start the reviewer when the first implementation slot becomes available. Keep the implementation owners available for fixes.
+
+1. Begin at the usual entry point. For example, start at Broker Atlas and find the current cumulative net-income leader, its year-over-year change and the source. Use the interface before consulting the implementation.
+2. Walk through the task on a narrow mobile viewport and on desktop. Check keyboard operation, reading order, visual hierarchy, legibility, overflow and repeated or unnecessary content. Keep units, reporting periods, coverage limitations and source links visible where the answer depends on them.
+3. Return up to three findings in impact order, each with the route, viewport, reproduction steps, user impact, smallest useful change and a way to verify it. State what was actually tested. The reviewer reports to the lead, the implementation owner makes the change, and the reviewer repeats the affected task on the integrated build.
+4. Apply the review severity rules below. Record the resolved issues, retest result and remaining material limitations in the design audit before release.
 
 ## Review severity
 - Critical: fix before merge

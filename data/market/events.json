@@ -948,6 +948,25 @@
     "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
   },
   {
+    "date": "1997-11-21",
+    "category": "금융안정",
+    "title": "한국 정부, IMF 자금 지원 요청 방침 발표",
+    "summary": "임창열 경제부총리는 기자회견에서 외환위기에 대응하기 위해 정부가 IMF에 자금 지원을 요청하기로 했다고 밝혔다.",
+    "sourceName": "국가기록원 · IMF 외환위기 극복",
+    "sourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/imf.do",
+    "then": "기자회견 시점에 정부가 공개한 것은 지원을 요청한다는 결정이었다.",
+    "now": "12월 4일 IMF 이사회가 한국의 대기성 차관을 승인했다.",
+    "nowSourceUrl": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr9755"
+  },
+  {
+    "date": "1997-11-26",
+    "category": "금융안정",
+    "title": "서울에서 한국·IMF 대기성 차관 협상 시작",
+    "summary": "한국 정부와 IMF는 서울에서 대기성 차관의 조건을 협상하기 시작했다.",
+    "sourceName": "IMF · 한국 경제·정책 동향 보고서",
+    "sourceUrl": "https://www.imf.org/external/pubs/ft/scr/2000/cr0011.pdf"
+  },
+  {
     "date": "1997-12",
     "title": "원화 환율의 일일 변동폭 제한 폐지",
     "category": "제도",
@@ -985,6 +1004,14 @@
     "sourceUrl": "https://www.elibrary.imf.org/view/journals/001/2001/154/article-A001-en.xml"
   },
   {
+    "date": "1997-12-23",
+    "category": "금융안정",
+    "title": "세계은행, 한국 경제재건 차관 30억 달러 승인",
+    "summary": "세계은행 이사회가 금융·자본시장 개혁과 사회안전망 강화를 지원하는 차관을 승인했다. 자금은 한 번에 집행하는 조건이었다.",
+    "sourceName": "세계은행 이사회 차관 승인 발표",
+    "sourceUrl": "https://documents1.worldbank.org/curated/en/275861626682939355/pdf/Announcement-of-World-Bank-Approves-Economic-Reconstruction-Loan-to-Korea-on-December-23-1997.pdf"
+  },
+  {
     "date": "1997-12-24",
     "title": "코스피 351.45로 마감",
     "category": "시장",
@@ -999,6 +1026,14 @@
     "summary": "금융기관끼리 하루 동안 자금을 빌릴 때 적용하는 콜금리가 32%에 이르렀다. 이달 5일의 금리는 21%였다.",
     "sourceName": "IMF · 한국 기업자료로 본 금융위기",
     "sourceUrl": "https://www.imf.org/external/pubs/ft/wp/2000/wp0025.pdf"
+  },
+  {
+    "date": "1998-01-05",
+    "category": "거시경제",
+    "title": "KBS, 외환위기 금 모으기 캠페인 생방송 시작",
+    "summary": "가정에서 모은 금을 수출해 달러를 마련하자는 캠페인이 KBS 생방송을 통해 전국에 소개됐다.",
+    "sourceName": "국사편찬위원회 우리역사넷 · 금 모으기 운동",
+    "sourceUrl": "https://contents.history.go.kr/mobile/kc/view.do?levelId=kc_i501300"
   },
   {
     "date": "1998-01-15",
@@ -1027,6 +1062,14 @@
     "now": "4월에는 약 220억 달러 규모의 은행채무가 정부 보증이 붙은 만기 1~3년 대출로 전환됐다."
   },
   {
+    "date": "1998-02-06",
+    "category": "제도",
+    "title": "노사정위원회, 실업 대책과 고용조정에 관한 공동선언 발표",
+    "summary": "노동계·경영계·정부 대표는 경제 구조조정 과정에서 종합 실업대책을 마련하고 부당노동행위를 방지하기로 합의했다.",
+    "sourceName": "국정신문 · 제2차 노사정 공동선언문 전문",
+    "sourceUrl": "https://www.korea.kr/news/policyNewsView.do?newsId=148741398"
+  },
+  {
     "date": "1998-02-07",
     "title": "한국 정부, IMF에 2월 경제정책 의향서 전달",
     "category": "제도",
@@ -1034,6 +1077,14 @@
     "sourceName": "IMF 공개 한국 정부 2월 의향서",
     "sourceUrl": "https://www.imf.org/external/np/loi/020798.htm",
     "then": "2월 의향서에서 외환시장 안정과 금융기관 정리에 관한 정부 계획을 읽을 수 있었습니다."
+  },
+  {
+    "date": "1998-02-17",
+    "category": "금융안정",
+    "title": "IMF, 한국 차관 첫 분기 점검 후 15억 SDR 집행",
+    "summary": "IMF 이사회가 한국 대기성 차관의 첫 분기 점검을 마치고 특별인출권(SDR) 기준 15억을 추가 집행했다.",
+    "sourceName": "IMF 1998년 연차보고서 · 한국 지원 일정",
+    "sourceUrl": "https://www.imf.org/-/media/websites/imf/imported-flagship-issues/external/pubs/ft/ar/98/pdf/_file03pdf.pdf"
   },
   {
     "date": "1998-02-18",
@@ -2267,6 +2318,14 @@
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/20071212a.htm"
   },
   {
+    "date": "2008-01-15",
+    "category": "기술",
+    "title": "애플, 맥북 에어 공개",
+    "summary": "애플은 맥월드에서 두께가 가장 두꺼운 부분이 0.76인치인 노트북 맥북 에어를 발표했다.",
+    "sourceName": "애플 제품 발표",
+    "sourceUrl": "https://www.apple.com/newsroom/2008/01/15Apple-Introduces-MacBook-Air-The-Worlds-Thinnest-Notebook/"
+  },
+  {
     "date": "2008-01-22",
     "title": "미 연준, 임시 회의에서 기준금리 인하",
     "category": "거시경제",
@@ -2286,6 +2345,17 @@
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
   },
   {
+    "date": "2008-02-01",
+    "category": "기업",
+    "title": "마이크로소프트, 야후에 주당 31달러 인수 제안",
+    "summary": "마이크로소프트가 현금과 주식을 조합해 야후의 발행 주식을 취득하겠다고 공개 제안했다.",
+    "sourceName": "마이크로소프트 인수 제안",
+    "sourceUrl": "https://news.microsoft.com/source/2008/02/01/microsoft-proposes-acquisition-of-yahoo-for-31-per-share/",
+    "then": "이날 야후 주주에게 제시된 가격은 주당 31달러였다.",
+    "now": "마이크로소프트는 같은 해 5월 3일 제안을 철회했다.",
+    "nowSourceUrl": "https://news.microsoft.com/source/2008/05/03/microsoft-withdraws-proposal-to-acquire-yahoo/"
+  },
+  {
     "date": "2008-02-13",
     "title": "미국, 가계 세금 환급을 포함한 경기부양법 제정",
     "category": "제도",
@@ -2295,6 +2365,22 @@
     "then": "미국의 경기부양법에는 개인 세금 환급과 기업 투자 인센티브가 포함됐다.",
     "now": "10월에는 재무부의 부실자산 매입 프로그램을 승인하는 별도의 법률이 제정됐다.",
     "nowSourceUrl": "https://www.congress.gov/110/plaws/publ343/PLAW-110publ343.pdf"
+  },
+  {
+    "date": "2008-02-22",
+    "category": "금융안정",
+    "title": "영국, 노던록 은행을 한시적으로 국유화",
+    "summary": "노던록의 발행 주식 전부가 정부로 이전됐다. 국유화 방침을 발표한 17일과 실제 주식 이전일 사이에는 닷새가 있었다.",
+    "sourceName": "영국 국세청 · 노던록 주식 이전 연혁",
+    "sourceUrl": "https://www.gov.uk/hmrc-internal-manuals/inheritance-tax-manual/ihtm34158"
+  },
+  {
+    "date": "2008-03-14",
+    "category": "금융안정",
+    "title": "미 연준, 베어스턴스에 대한 긴급 자금 지원 승인",
+    "summary": "뉴욕 연방준비은행이 JP모건체이스를 통해 베어스턴스에 단기 자금을 공급하는 방안을 연준 이사회가 승인했다.",
+    "sourceName": "미 연준 · 베어스턴스 지원 기록",
+    "sourceUrl": "https://www.federalreserve.gov/regreform/reform-bearstearns.htm"
   },
   {
     "date": "2008-03-16",
@@ -2314,6 +2400,22 @@
     "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25%입니다. 변경 폭은 75bp 인하입니다.",
     "sourceName": "미 연준 공개시장운영 금리 변경표",
     "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2008"
+  },
+  {
+    "date": "2008-04-21",
+    "category": "금융안정",
+    "title": "영란은행, 은행 자산을 국채로 교환하는 유동성 제도 발표",
+    "summary": "은행이 보유한 적격 주택저당증권 등과 영국 재무부 단기증권을 한시적으로 교환하는 제도를 도입했다.",
+    "sourceName": "영란은행 특별유동성제도 발표",
+    "sourceUrl": "https://www.bankofengland.co.uk/-/media/boe/files/news/2008/april/special-liquidity-scheme.pdf"
+  },
+  {
+    "date": "2008-04-23",
+    "category": "기업",
+    "title": "애플, 2분기 순이익 10억 5천만 달러 발표",
+    "summary": "애플은 3월 29일로 끝난 회계 분기의 매출을 75억 1천만 달러, 순이익을 10억 5천만 달러로 발표했다.",
+    "sourceName": "애플 2008 회계연도 2분기 실적",
+    "sourceUrl": "https://www.apple.com/newsroom/2008/04/23Apple-Reports-Record-Second-Quarter-Results/"
   },
   {
     "date": "2008-04-30",
@@ -2338,6 +2440,38 @@
     "nowSourceUrl": "https://open.krx.co.kr/contents/OPN/01/01041401/%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%EC%8B%9C%EC%9E%A5%20%EC%95%BC%EA%B0%84%EA%B1%B0%EB%9E%98%20%EC%95%88%EB%82%B4.pdf"
   },
   {
+    "date": "2008-05-03",
+    "category": "기업",
+    "title": "마이크로소프트, 야후 인수 제안 철회",
+    "summary": "마이크로소프트가 야후 이사회에 제안을 철회한다고 통보하고 서한을 공개했다.",
+    "sourceName": "마이크로소프트 철회 발표",
+    "sourceUrl": "https://news.microsoft.com/source/2008/05/03/microsoft-withdraws-proposal-to-acquire-yahoo/"
+  },
+  {
+    "date": "2008-05-09",
+    "category": "제도",
+    "title": "ECB, TARGET2 세 번째 참여 그룹의 가동 일정 확정",
+    "summary": "유럽중앙은행은 결제망 시험을 마친 덴마크·에스토니아·그리스·이탈리아·폴란드와 ECB가 5월 19일 새 결제망으로 이전할 예정이라고 공지했다.",
+    "sourceName": "ECB · TARGET2 이전 일정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2008/html/pr080509_1.en.html"
+  },
+  {
+    "date": "2008-06-09",
+    "category": "기업",
+    "title": "리먼브러더스, 분기 순손실 약 28억 달러 예상 발표",
+    "summary": "리먼브러더스는 5월 31일 끝난 회계 분기의 예상 순손실을 공개했다. 28억 달러는 이날 회사가 제시한 잠정치다.",
+    "sourceName": "리먼브러더스 공시 · SEC 보관 원문",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/806085/000110465908038647/a08-16256_1ex99d1.htm"
+  },
+  {
+    "date": "2008-06-09",
+    "category": "기술",
+    "title": "애플, 아이폰 3G 발표",
+    "summary": "애플이 3G 이동통신과 GPS를 지원하는 아이폰을 발표하며 첫 출시일을 7월 11일로 제시했다.",
+    "sourceName": "애플 아이폰 3G 발표",
+    "sourceUrl": "https://www.apple.com/newsroom/2008/06/09Apple-Introduces-the-New-iPhone-3G/"
+  },
+  {
     "date": "2008-06-25",
     "title": "미 연준, 연방기금금리 목표 2% 유지",
     "category": "통화정책",
@@ -2349,6 +2483,14 @@
     "nowSourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081008a.htm"
   },
   {
+    "date": "2008-07-03",
+    "category": "통화정책",
+    "title": "ECB, 주요 재융자 금리 4.25%로 인상 결정",
+    "summary": "유럽중앙은행은 주요 재융자 입찰의 최저금리를 0.25%p 높여 7월 9일 결제분부터 적용하기로 했다.",
+    "sourceName": "ECB 정책금리 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2008/html/pr080703.en.html"
+  },
+  {
     "date": "2008-07-11",
     "title": "미국 인디맥 은행 영업 폐쇄",
     "category": "금융안정",
@@ -2357,6 +2499,14 @@
     "sourceUrl": "https://www.fdic.gov/resources/resolutions/bank-failures/failed-bank-list/indymac.html",
     "then": "FDIC는 7월 14일부터 영업시간에 보장 대상 예금을 이용할 수 있다고 안내했다.",
     "now": "2009년 3월 인디맥 연방은행의 예금 전액이 원웨스트 은행으로 이전됐다."
+  },
+  {
+    "date": "2008-07-30",
+    "category": "제도",
+    "title": "미국 주택경제회복법 제정",
+    "summary": "미국에서 주택금융기업 감독 체계를 개편하고 연방주택금융청을 신설하는 법이 제정됐다.",
+    "sourceName": "미국 정부출판국 · 공법 110–289",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-110publ289"
   },
   {
     "date": "2008-08-05",
@@ -2376,6 +2526,22 @@
     "then": "한국은행 기준금리는 5.00%에서 5.25%로 올랐다.",
     "now": "두 달 뒤 기준금리는 다시 5.00%로 낮아졌다.",
     "nowSourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+  },
+  {
+    "date": "2008-08-07",
+    "category": "제도",
+    "title": "씨티그룹, 경매금리증권 투자자와의 예비 합의 발표",
+    "summary": "미국 증권거래위원회는 씨티그룹이 대상 고객에게 경매금리증권 매입을 제안하는 데 원칙적으로 동의했다고 발표했다.",
+    "sourceName": "미국 SEC 예비 합의 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2008-168-citigroup-agrees-principle-auction-rate-securities-settlement"
+  },
+  {
+    "date": "2008-09-07",
+    "category": "금융안정",
+    "title": "미국, 패니메이·프레디맥 공적 관리 조치 발표",
+    "summary": "미국 재무부와 연방주택금융청은 두 주택금융기업의 관리 조치와 재무부의 우선주 매입 약정을 발표했다.",
+    "sourceName": "미국 재무부·FHFA 공동 발표",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/20089711172217483"
   },
   {
     "date": "2008-09-15",
@@ -2483,6 +2649,14 @@
     "then": "연방기금금리 목표가 단일 수치에서 0~0.25% 범위로 바뀌었다.",
     "now": "2009년 3월 FOMC는 장기 국채 매입에 나섰다.",
     "nowSourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20090318a.htm"
+  },
+  {
+    "date": "2008-12-19",
+    "category": "산업",
+    "title": "미국 정부, 자동차 산업 긴급 대출 계획 발표",
+    "summary": "재무부는 GM과 크라이슬러의 운영을 지원하기 위해 부실자산구제프로그램 자금을 사용한다는 계획을 발표했다.",
+    "sourceName": "미국 재무장관 자동차 산업 지원 성명",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/hp1332"
   },
   {
     "date": "2009-01-09",
@@ -3825,6 +3999,14 @@
     "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2019-584838"
   },
   {
+    "date": "2020-01-15",
+    "category": "국제",
+    "title": "미국·중국, 1단계 무역협정 서명",
+    "summary": "양국이 지식재산권, 기술 이전, 농산물 거래 등을 다루는 1단계 경제무역협정에 서명했다.",
+    "sourceName": "미국 백악관 · 협정 서명 기록",
+    "sourceUrl": "https://trumpwhitehouse.archives.gov/briefings-statements/president-donald-j-trump-signing-landmark-phase-one-trade-agreement-china/"
+  },
+  {
     "date": "2020-01-30",
     "title": "WHO, 신종 코로나바이러스 국제공중보건 비상사태 선포",
     "category": "국제",
@@ -3835,6 +4017,14 @@
     "nowSourceUrl": "https://www.who.int/europe/emergencies/situations/Covid-19"
   },
   {
+    "date": "2020-01-30",
+    "category": "제도",
+    "title": "EU 이사회, 영국 탈퇴협정 체결 승인",
+    "summary": "EU 이사회가 협정 체결 결정을 채택했다. 협정 발효일은 중부유럽 시간 2월 1일 0시였다.",
+    "sourceName": "EU 이사회 탈퇴협정 체결 결정",
+    "sourceUrl": "https://www.consilium.europa.eu/en/press/press-releases/2020/01/30/brexit-council-adopts-decision-to-conclude-the-withdrawal-agreement/"
+  },
+  {
     "date": "2020-02",
     "title": "미국 경기 정점",
     "category": "거시경제",
@@ -3842,6 +4032,14 @@
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions",
     "now": "NBER 위원회는 2020년 6월에 정점 월을 발표했습니다."
+  },
+  {
+    "date": "2020-02-12",
+    "category": "산업",
+    "title": "GSMA, 바르셀로나 모바일월드콩그레스 취소",
+    "summary": "행사 주최 측은 코로나바이러스 확산과 출장 우려로 2020년 바르셀로나 행사를 열 수 없다고 발표했다.",
+    "sourceName": "GSMA 공식 취소 성명",
+    "sourceUrl": "https://www.gsma.com/newsroom/press-release/gsma-statement-on-mwc-barcelona-2020/"
   },
   {
     "date": "2020-02-25",
@@ -3962,6 +4160,14 @@
     "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
   },
   {
+    "date": "2020-05-30",
+    "category": "기술",
+    "title": "스페이스X 크루 드래건, NASA 우주비행사 2명 태우고 발사",
+    "summary": "NASA와 스페이스X가 유인 시험 비행인 데모-2를 시작했다. 케네디우주센터에서 출발한 우주선의 목적지는 국제우주정거장이었다.",
+    "sourceName": "NASA 유인 시험 비행 발표",
+    "sourceUrl": "https://www.nasa.gov/news-release/nasa-astronauts-launch-from-america-in-historic-test-flight-of-spacex-crew-dragon/"
+  },
+  {
     "date": "2020-06-04",
     "title": "ECB, 팬데믹 긴급매입 한도 6천억 유로 증액",
     "category": "통화정책",
@@ -3979,6 +4185,14 @@
     "summary": "미국 연방공개시장위원회는 6월 10일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
     "sourceName": "미 연방준비제도 · FOMC 당시 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200610a.htm"
+  },
+  {
+    "date": "2020-06-22",
+    "category": "기술",
+    "title": "애플, 맥을 자체 설계 칩으로 전환하는 계획 발표",
+    "summary": "애플은 개발자 행사에서 첫 애플 실리콘 탑재 맥을 그해 말까지 공급하고 전체 전환에는 약 2년이 걸릴 것으로 예상했다.",
+    "sourceName": "애플 · 맥 프로세서 전환 발표",
+    "sourceUrl": "https://www.apple.com/newsroom/2020/06/apple-announces-mac-transition-to-apple-silicon/"
   },
   {
     "date": "2020-07-14",
@@ -4008,6 +4222,14 @@
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20200729a.htm"
   },
   {
+    "date": "2020-08-05",
+    "category": "기술",
+    "title": "삼성전자, 갤럭시 노트20 시리즈 공개",
+    "summary": "삼성전자가 온라인 언팩에서 갤럭시 노트20과 노트20 울트라를 공개했다.",
+    "sourceName": "삼성전자 갤럭시 언팩 발표",
+    "sourceUrl": "https://news.samsung.com/us/samsung-unveils-five-devices-unpacked-galaxy-ecosystem-galaxy-note20-ultra-galaxy-z-fold2/"
+  },
+  {
     "date": "2020-08-27",
     "title": "미 연준, 장기 통화정책 전략 개정 발표",
     "category": "거시경제",
@@ -4032,6 +4254,17 @@
     "sourceUrl": "https://www.fsc.go.kr/po020201/27352"
   },
   {
+    "date": "2020-09-13",
+    "category": "기업",
+    "title": "엔비디아, 소프트뱅크에서 Arm을 인수하는 계약 발표",
+    "summary": "엔비디아는 약 400억 달러 규모의 계약을 공개했다. 거래 종결에는 규제 당국의 승인이 필요했다.",
+    "sourceName": "엔비디아 인수 계약 발표",
+    "sourceUrl": "https://nvidianews.nvidia.com/news/nvidia-to-acquire-arm-for-40-billion-creating-worlds-premier-computing-company-for-the-age-of-ai",
+    "then": "공개된 정보는 계약 조건과 예정된 거래 절차였다.",
+    "now": "엔비디아와 소프트뱅크는 규제 문제를 이유로 2022년 2월 계약 종료를 발표했다.",
+    "nowSourceUrl": "https://nvidianews.nvidia.com/news/nvidia-and-softbank-group-announce-termination-of-nvidias-acquisition-of-arm-limited"
+  },
+  {
     "date": "2020-09-16",
     "title": "미 연준, 연방기금금리 0~0.25% 동결",
     "category": "통화정책",
@@ -4046,6 +4279,14 @@
     "summary": "애플이 5G 통신을 지원하는 두 모델을 공개했다. 발표 자료에서 두 모델의 예약 및 판매 개시 일정은 달랐다.",
     "sourceName": "애플 뉴스룸",
     "sourceUrl": "https://www.apple.com/newsroom/2020/10/apple-announces-iphone-12-and-iphone-12-mini-a-new-era-for-iphone-with-5g/"
+  },
+  {
+    "date": "2020-10-13",
+    "category": "거시경제",
+    "title": "IMF, 2020년 세계 경제성장률을 −4.4%로 전망",
+    "summary": "국제통화기금이 10월 세계경제전망에서 2020년 세계 실질 GDP가 전년보다 4.4% 줄어들 것으로 예상했다.",
+    "sourceName": "IMF · 10월 세계경제전망 브리핑",
+    "sourceUrl": "https://www.imf.org/en/News/Articles/2020/10/13/tr101320-transcript-of-october-2020-world-economic-outlook-press-briefing"
   },
   {
     "date": "2020-10-20",
@@ -4089,6 +4330,14 @@
     "summary": "유럽중앙은행은 팬데믹 긴급매입프로그램의 한도를 5천억 유로 추가했다.",
     "sourceName": "유럽중앙은행 PEPP 연혁",
     "sourceUrl": "https://www.ecb.europa.eu/mopo/implement/pepp/html/index.en.html"
+  },
+  {
+    "date": "2020-12-11",
+    "category": "제도",
+    "title": "미 FDA, 화이자·바이오엔테크 코로나19 백신 긴급사용 승인",
+    "summary": "미국 식품의약국이 당시 16세 이상을 대상으로 이 백신의 긴급사용을 허가했다.",
+    "sourceName": "미 FDA 긴급사용 승인 발표",
+    "sourceUrl": "https://content.govdelivery.com/accounts/USFDA/bulletins/2b0c525"
   },
   {
     "date": "2020-12-16",

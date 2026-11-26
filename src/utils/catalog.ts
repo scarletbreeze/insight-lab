@@ -1,9 +1,10 @@
+import directory from '../../data/hero/official-directory.json';
 import { notes } from './archive';
 import monthlyRankings from '../../data/market/months/equity-rankings.json';
 import monthlySpyRankings from '../../data/market/months/spy-equity-rankings.json';
 import annualRankings from '../../data/market/annual-equity-rankings.json';
 import annualSpyRankings from '../../data/market/annual-spy-equity-rankings.json';
-import { brokers, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
+import { brokers, brokerEvents, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
 import { signals } from './ceo';
 import { legends, screenByNumber, screens, workflows } from './hero';
 import { marketEvents } from './market';
@@ -13,6 +14,7 @@ interface CatalogEntry {
   service: string;
   route: string;
   anchor?: string;
+  query?: string;
   title: string;
   summary?: string;
   keywords?: string[];
@@ -30,11 +32,23 @@ const equitySeries = [
   { usFund: 'SPY', monthly: monthlySpyRankings, annual: annualSpyRankings },
 ] as const;
 
+const analyzedScreens = new Set(screens.map(({ number }) => number));
+const menuKeywords = new Map(directory.screens.map(screen => [
+  screen.number, [screen.title, screen.group, ...(screen.menuTitles ?? []), ...(screen.otherGroups ?? [])],
+]));
+
 export const catalog: CatalogEntry[] = [
   ...screens.map((screen) => ({
     service: 'hero-lab', route: 'hero-lab/screens/' + screen.number, title: screen.number + ' ' + screen.title,
     summary: [screen.summary, screen.observation, ...screen.menuPath, ...screen.tags].join(' '), date: screen.sources[0].retrievedAt,
+    keywords: menuKeywords.get(screen.number),
     sourceUrls: screen.sources.map(({ sourceUrl }) => sourceUrl),
+  })),
+  ...directory.screens.filter(({ number }) => !analyzedScreens.has(number)).map(screen => ({
+    service: 'hero-lab', route: 'hero-lab/directory', query: 'q=' + screen.number,
+    title: screen.number + ' ' + screen.title, summary: screen.group + ' · 공식 도움말',
+    keywords: [...(screen.menuTitles ?? []), ...(screen.otherGroups ?? [])], date: directory.retrievedAt,
+    sourceUrls: ['https://download.kiwoom.com/hero4_help_new/' + screen.number + '.htm'],
   })),
   ...legends.profiles.map((profile) => ({
     service: 'hero-lab', route: 'hero-lab/hall-of-fame', anchor: 'legend-' + profile.chapter,
@@ -56,13 +70,19 @@ export const catalog: CatalogEntry[] = [
     summary: notice.summary, date: notice.date, sourceUrls: [notice.sourceUrl],
   })),
   ...vocPosts.map((post) => ({
-    service: 'voc-studio', route: 'voc-studio/topics/' + post.topic, title: post.summary,
+    service: 'voc-studio', route: 'voc-studio/topics/' + post.topic, anchor: 'example-' + post.id, title: post.summary,
+    keywords: [post.date, ...(post.subtopic ? [post.subtopic] : []), ...(post.keywords ?? [])],
     date: post.date, sourceUrls: [post.sourceUrl],
   })),
   ...brokers.map((broker) => ({
     service: 'broker-atlas', route: 'broker-atlas/brokers/' + broker.id, title: broker.name,
     date: String(Math.max(...brokerMetrics.filter(({ id }) => id === broker.id).map(({ year }) => year))),
     summary: broker.character, sourceUrls: [broker.sourceUrl, ...brokerMetrics.filter(({ id }) => id === broker.id).map(({ sourceUrl }) => sourceUrl)],
+  })),
+  ...brokerEvents.map(event => ({
+    service: 'broker-atlas', route: 'broker-atlas/brokers/' + event.id, anchor: 'event-' + event.date,
+    title: brokers.find(broker => broker.id === event.id)!.name + ' · ' + event.title,
+    summary: event.summary, date: event.date, keywords: [event.date, '전환점'], sourceUrls: [event.sourceUrl],
   })),
   ...industryRanks.filter(({ id }) => !brokers.some((broker) => broker.id === id)).map(({ id, name }) => ({
     service: 'broker-atlas', route: 'broker-atlas/brokers/' + id, title: name,
@@ -117,11 +137,4 @@ export const catalog: CatalogEntry[] = [
   })),
 ];
 
-export function searchCatalog(query: string) {
-  const terms = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
-  if (!terms.length) return [];
-  return catalog.filter(({ title, summary, keywords }) => {
-    const text = [title, summary, ...(keywords ?? [])].join(' ').toLowerCase();
-    return terms.every((term) => text.includes(term));
-  });
-}
+export type SearchRecord = Pick<CatalogEntry, 'service' | 'route' | 'query' | 'anchor' | 'title' | 'summary' | 'keywords'>;

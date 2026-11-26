@@ -1,9 +1,11 @@
 ---
 import BrokerLayout from '../../../components/broker/BrokerLayout.astro';
 import BrokerTrend from '../../../components/broker/BrokerTrend';
+import BrokerTurningPoints from '../../../components/broker/BrokerTurningPoints';
 import MoneyMap from '../../../components/broker/MoneyMap.astro';
 import DisclosedSegments from '../../../components/broker/DisclosedSegments.astro';
-import { brokers, brokerEvents, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
+import { brokers, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
+import { sitePath } from '../../../utils/paths';
 
 export function getStaticPaths() {
   return industryRanks.map((company) => ({
@@ -18,7 +20,6 @@ const snapshots = industryPeriods.flatMap((period) => {
   const entry = period.companies.find(({ id }) => id === company.id);
   return entry ? [{ ...period, entry }] : [];
 });
-const turningPoints = brokerEvents.filter(({ id }) => id === company.id);
 const currentProfit = interimProfit.companies.find(({ id }) => id === company.id);
 const previousProfit = priorInterimProfit.companies.find(({ id }) => id === company.id);
 const profitFields = [
@@ -93,11 +94,10 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
     <a href={broker.sourceUrl}>사업 공시</a>
   </section>
   <DisclosedSegments brokerId={company.id} />
-  <section class="lab-block">
+  <section class="lab-block" id="turning-points">
     <h2>주요 전환점</h2>
-    {turningPoints.length ? <ul class="lab-list">{turningPoints.map(({ date, title, sourceUrl }) => (
-      <li><time datetime={date}>{date}</time> <a href={sourceUrl}>{title}</a></li>
-    ))}</ul> : <p class="empty-state">전환점 자료 확인 중</p>}
+    <a href={sitePath('broker-atlas/compare') + '?left=' + company.id + '#compare-turning-points'}>다른 증권사와 전환점 비교</a>
+    <BrokerTurningPoints brokerId={company.id} detail />
   </section>
   </> : <section class="lab-block"><h2>연결 결산 추이와 사업 구조</h2><p class="empty-state">자료 확인 중</p></section>}
 </BrokerLayout>

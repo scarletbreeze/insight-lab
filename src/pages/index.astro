@@ -3,14 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import { sitePath } from '../utils/paths';
 import { services } from '../utils/services';
 import { catalog } from '../utils/catalog';
+import updates from '../../data/updates.json';
 
 const sourceCount = new Set(catalog.flatMap(({ sourceUrls }) => sourceUrls)).size;
 const coveredYears = catalog.map(({ date }) => Number(date.slice(0, 4)));
-const latest = [...catalog].sort((a, b) => b.date.localeCompare(a.date));
-const latestByService = services.flatMap(({ slug, title }) => {
-  const entry = latest.find(({ service }) => service === slug);
-  return entry ? [{ ...entry, serviceTitle: title }] : [];
-}).sort((a, b) => b.date.localeCompare(a.date));
+const latest = updates.toSorted((a, b) => Date.parse(b.updatedAt) - Date.parse(a.updatedAt)).slice(0, 6);
 ---
 <BaseLayout>
   <section class="hero">
@@ -40,8 +37,8 @@ const latestByService = services.flatMap(({ slug, title }) => {
   <section class="section editorial">
     <h2>Latest from the Lab</h2>
     <ul class="updates-list">
-      {latestByService.map(({ serviceTitle, title, route, anchor, date }) => (
-        <li><span>{serviceTitle}</span><a href={sitePath(route) + (anchor ? '#' + anchor : '')}>{title}</a><time datetime={date}>{date}</time></li>
+      {latest.map(({ service, title, route, query, anchor, updatedAt }) => (
+        <li><span>{services.find(item => item.slug === service)?.title}</span><a href={sitePath(route) + (query ? '?' + query : '') + (anchor ? '#' + anchor : '')}>{title}</a><time datetime={updatedAt}>갱신 {updatedAt.slice(0, 10)}</time></li>
       ))}
     </ul>
   </section>

@@ -1,0 +1,69 @@
+[
+  {
+    "updatedAt": "2026-11-26T19:47:45+09:00",
+    "service": "market-time-capsule",
+    "title": "2008·2020년 매월 사건 3건 이상 수록, 외환위기 전환기 기록 보강",
+    "route": "market-time-capsule/methodology",
+    "anchor": "event-coverage"
+  },
+  {
+    "updatedAt": "2026-11-26T19:47:45+09:00",
+    "service": "voc-studio",
+    "title": "공개 고객 문의 예시 32건 추가, 연도별·주제별 원문 검색 연결",
+    "route": "voc-studio/year/2026",
+    "anchor": "examples"
+  },
+  {
+    "updatedAt": "2026-11-26T19:47:45+09:00",
+    "service": "broker-atlas",
+    "title": "증권사 10곳의 주요 전환점 30건 비교",
+    "route": "broker-atlas/compare",
+    "anchor": "compare-turning-points"
+  },
+  {
+    "updatedAt": "2026-11-26T19:47:45+09:00",
+    "service": "hero-lab",
+    "title": "통합 검색에서 영웅문4 화면 864개 조회",
+    "route": "search",
+    "query": "q=0010"
+  },
+  {
+    "updatedAt": "2026-11-26T19:37:56+09:00",
+    "service": "market-time-capsule",
+    "title": "1990년부터 2026년까지 월별 시장 사건 443개월 연결",
+    "route": "market-time-capsule/methodology",
+    "anchor": "event-coverage"
+  },
+  {
+    "updatedAt": "2026-11-26T19:37:56+09:00",
+    "service": "voc-studio",
+    "title": "2025년 고객 문의 36건 독립 표본 검토",
+    "route": "voc-studio/methodology",
+    "anchor": "focus-2025"
+  },
+  {
+    "updatedAt": "2026-11-26T19:37:56+09:00",
+    "service": "broker-atlas",
+    "title": "KB증권의 위탁영업·기업금융 수익 경로 추가",
+    "route": "broker-atlas/brokers/kb"
+  },
+  {
+    "updatedAt": "2026-11-26T17:48:34+09:00",
+    "service": "hero-lab",
+    "title": "영웅문 공식 화면 864개와 상세 가이드 216개 연결",
+    "route": "hero-lab/directory"
+  },
+  {
+    "updatedAt": "2026-11-26T08:36:39+09:00",
+    "service": "ceo-lens",
+    "title": "변동성 대응과 디지털자산 제도 주간 기록",
+    "route": "ceo-lens/archive",
+    "anchor": "weekly"
+  },
+  {
+    "updatedAt": "2026-11-26T08:36:39+09:00",
+    "service": "normalman-archive",
+    "title": "2019년 Truffle 프로젝트의 계약 배포 기록 복원",
+    "route": "normalman-archive/notes/2019-05-06-blockchain-dapp8"
+  }
+]

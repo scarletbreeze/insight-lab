@@ -7,13 +7,16 @@ import { sitePath } from '../../utils/paths';
 ---
 <BrokerLayout title="Broker Atlas">
   <p slot="intro">공시로 증권사의 규모, 수익성, 사업 구조를 살펴봅니다.</p>
-  <p><a href="#broker-profit-title">올해 당기순이익·영업이익 순위 보기</a></p>
-  <section class="lab-block">
+  <nav class="lab-chips" aria-label="실적 바로가기">
+    <a href="#broker-profit-title">이익 순위</a>
+    <a href="#annual-results">연도별 결산</a>
+  </nav>
+  <BrokerProfitRanking client:load brokerBase={sitePath('broker-atlas/brokers')} />
+  <section class="lab-block" id="annual-results">
     <h2>연도별 연결 결산</h2>
     <BrokerYearOverview client:load brokerBase={sitePath('broker-atlas/brokers')} />
     <p><a href={sitePath('broker-atlas/rankings')}>자본총계·이익·ROE·성장률 순위</a></p>
   </section>
-  <BrokerProfitRanking client:load brokerBase={sitePath('broker-atlas/brokers')} />
   <section class="lab-block">
     <h2>기준일별 별도 자본총계</h2>
     <IndustrySnapshot client:load view="cards" brokerBase={sitePath('broker-atlas/brokers')} />

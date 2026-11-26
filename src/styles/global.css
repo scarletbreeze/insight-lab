@@ -59,6 +59,10 @@ a:hover { color: var(--color-accent-blue); }
 .search-results { display: grid; gap: .65rem; margin-top: 1rem; }
 .search-results a { display: grid; gap: .3rem; padding: 1rem; border: 1px solid var(--color-rule); border-radius: .35rem; }
 .search-results a:hover { border-color: var(--color-accent-blue); }
+.search-services { display: flex; flex-wrap: wrap; gap: .4rem .75rem; margin-block: .75rem 1.5rem; }
+.search-services a, .search-more summary { color: var(--color-accent-blue); text-decoration: underline; text-underline-offset: .2em; }
+.search-services a { padding-block: .35rem; }
+.search-more summary { width: fit-content; padding-block: .65rem; cursor: pointer; }
 @media (max-width: 1160px) {
   .site-header { position: relative; z-index: 3; }
   .desktop-nav { display: none; }

@@ -1,86 +1,272 @@
 [
   {
-    "id": "kb",
-    "date": "2026-08-04",
-    "title": "개인 고객용 Open API 공개 베타 발표",
-    "sourceUrl": "https://blog.kbsec.com/kb-news/%EA%B0%9C%EC%9D%B8-%EA%B3%A0%EA%B0%9D-%EB%8C%80%EC%83%81-open-api-%EC%98%A4%ED%94%88/"
-  },
-  {
-    "id": "kb",
-    "date": "2019-05",
-    "title": "단기금융업 인가",
-    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
-  },
-  {
-    "id": "mirae-asset",
-    "date": "2025-04-16",
-    "title": "사내 AI 개발·운영 플랫폼 구축 발표",
-    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=669"
-  },
-  {
-    "id": "nh-investment",
-    "date": "2024-12-09",
-    "title": "고객용 생성형 AI 시황 요약 서비스 혁신금융서비스 지정 공개",
-    "sourceUrl": "https://www.fsc.go.kr/no010101/83554"
-  },
-  {
-    "id": "meritz",
-    "date": "2026-09-23",
-    "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
-    "sourceUrl": "https://www.fsc.go.kr/no010101/87782"
-  },
-  {
-    "id": "samsung",
-    "date": "2026-09-09",
-    "title": "단기금융업 인가",
-    "sourceUrl": "https://www.fsc.go.kr/no010101/87676"
+    "id": "kiwoom",
+    "year": 2016,
+    "date": "2016-10-10",
+    "type": "ma",
+    "title": "티에스저축은행 지분 전량 인수",
+    "summary": "키움증권이 티에스저축은행의 주식을 전액 인수했다. 같은 날 저축은행의 사명이 키움예스저축은행으로 바뀌었다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
   },
   {
     "id": "kiwoom",
+    "year": 2022,
+    "date": "2022-04-27",
+    "type": "regulation",
+    "title": "종합금융투자사업자 지정",
+    "summary": "키움증권 공시의 회사 연혁에 종합금융투자사업자로 처음 지정된 날짜가 기록돼 있다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
+  },
+  {
+    "id": "kiwoom",
+    "year": 2023,
+    "date": "2023-06-28",
+    "type": "global",
+    "title": "아시아 자산운용 법인 설립",
+    "summary": "키움증권 공시 연혁에 해외 자산운용 법인 Kiwoom Asset Management Asia Pte. Ltd.의 설립을 기록했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
+  },
+  {
+    "id": "kiwoom",
+    "year": 2025,
     "date": "2025-11-19",
+    "type": "regulation",
     "title": "종합금융투자사업자 지정 및 단기금융업 인가",
+    "summary": "금융위가 키움증권을 자기자본 4조원 이상 종투사로 지정하고 발행어음 업무를 인가했다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
   },
   {
     "id": "mirae-asset",
+    "year": 2016,
+    "date": "2016-12-29",
+    "type": "ma",
+    "title": "미래에셋대우와 미래에셋증권 합병",
+    "summary": "미래에셋대우가 당시 미래에셋증권을 흡수합병했다. 존속 법인은 2021년 3월 미래에셋증권으로 사명을 바꿨다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2024/03/18/000781/20240318003508/11011.htm"
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2024,
+    "date": "2024-08-26",
+    "type": "digital",
+    "title": "해외 공시 번역·요약 서비스 개시",
+    "summary": "미국·일본·중국·홍콩 공시의 번역과 요약을 M-STOCK과 카이로스에서 제공하기 시작했다.",
+    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=596"
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2025,
+    "date": "2025-04-16",
+    "type": "digital",
+    "title": "사내 AI 개발·운영 플랫폼 구축 발표",
+    "summary": "사내에서 데이터 분석과 모델 배포를 함께 처리하고 반복 업무를 자동화하는 플랫폼을 발표했다.",
+    "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=669"
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2025,
     "date": "2025-11-19",
+    "type": "regulation",
     "title": "자기자본 8조원 이상 종합금융투자사업자 지정",
+    "summary": "종합투자계좌(IMA) 업무를 할 수 있는 사업자로 지정됐다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
   },
   {
     "id": "nh-investment",
+    "year": 2018,
+    "date": "2018-05",
+    "type": "regulation",
+    "title": "단기금융업 인가",
+    "summary": "NH투자증권이 발행어음 업무를 할 수 있게 됐다. 금융위의 종투사 지정 현황표에서 인가 월을 확인할 수 있다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "nh-investment",
+    "year": 2024,
+    "date": "2024-12-09",
+    "type": "digital",
+    "title": "고객용 생성형 AI 시황 요약 서비스 혁신금융서비스 지정 공개",
+    "summary": "금융위는 11월 27일 고객 맞춤형 시황 정보를 실시간으로 요약하는 서비스를 지정하고 12월 9일 지정 내용을 공개했다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/83554"
+  },
+  {
+    "id": "nh-investment",
+    "year": 2026,
     "date": "2026-03-18",
+    "type": "regulation",
     "title": "자기자본 8조원 이상 종합금융투자사업자 지정 의결",
+    "summary": "금융위 의결로 NH투자증권도 종합투자계좌(IMA) 업무를 할 수 있게 됐다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/86489"
   },
   {
+    "id": "samsung",
+    "year": 2017,
+    "date": "2017-11",
+    "type": "regulation",
+    "title": "자기자본 4조원 이상 종합금융투자사업자 지정",
+    "summary": "삼성증권이 자기자본 4조원 요건을 충족해 지정됐다. 발행어음 업무에 필요한 단기금융업은 별도 인가 대상이다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "samsung",
+    "year": 2026,
+    "date": "2026-09-09",
+    "type": "regulation",
+    "title": "단기금융업 인가",
+    "summary": "2017년 4조원 이상 종투사로 지정된 삼성증권이 이번 의결로 발행어음 업무를 할 수 있게 됐다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87676"
+  },
+  {
     "id": "korea-investment",
+    "year": 2005,
+    "date": "2005-05-20",
+    "type": "ma",
+    "title": "한국투자증권과 동원증권 합병",
+    "summary": "동원금융지주가 예금보험공사 보유 한국투자증권 지분을 인수한 뒤 두 증권사를 합병했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2022/09/07/000080/20220907000110/10601.htm"
+  },
+  {
+    "id": "korea-investment",
+    "year": 2017,
+    "date": "2017-11",
+    "type": "regulation",
+    "title": "단기금융업 인가",
+    "summary": "금융위 현황표에서 한국투자증권은 4조원 이상 종투사 지정과 발행어음 업무 인가를 같은 달에 받았다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "korea-investment",
+    "year": 2025,
     "date": "2025-11-19",
+    "type": "regulation",
     "title": "자기자본 8조원 이상 종합금융투자사업자 지정",
+    "summary": "금융위가 한국투자증권의 종합투자계좌(IMA) 업무를 허용하는 지정을 의결했다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
   },
   {
     "id": "meritz",
+    "year": 2017,
+    "date": "2017-11",
+    "type": "regulation",
+    "title": "자기자본 3조원 이상 종합금융투자사업자 지정",
+    "summary": "금융위 종투사 지정 현황에 메리츠증권의 최초 지정 시점이 기록됐다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "meritz",
+    "year": 2023,
     "date": "2023-04-05",
+    "type": "ma",
     "title": "메리츠금융지주의 완전 자회사 편입",
+    "summary": "포괄적 주식교환을 통해 메리츠금융지주가 메리츠증권 주식 전부를 보유하게 됐다.",
     "sourceUrl": "https://kind.krx.co.kr/external/2026/03/18/002029/20260318009409/11011.htm"
   },
   {
-    "id": "hana",
-    "date": "2025-12-17",
+    "id": "meritz",
+    "year": 2026,
+    "date": "2026-09-23",
+    "type": "regulation",
     "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "summary": "금융위 의결로 메리츠증권이 발행어음 업무를 할 수 있게 됐다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/87782"
+  },
+  {
+    "id": "kb",
+    "year": 2016,
+    "date": "2016-12-30",
+    "type": "ma",
+    "title": "현대증권과 KB투자증권 합병",
+    "summary": "현대증권이 KB투자증권을 흡수합병하고 사명을 KB증권으로 바꿨다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/05/28/000055/20250528000102/10601.htm"
+  },
+  {
+    "id": "kb",
+    "year": 2019,
+    "date": "2019-05",
+    "type": "regulation",
+    "title": "단기금융업 인가",
+    "summary": "금융위원회가 KB증권의 발행어음 업무에 필요한 단기금융업을 인가했다.",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "kb",
+    "year": 2026,
+    "date": "2026-08-04",
+    "type": "digital",
+    "title": "개인 고객용 Open API 공개 베타 발표",
+    "summary": "7월 20일 개인 고객용 오픈 베타를 시작한 사실을 8월 4일 발표했다. 외부 프로그램에서 주식 시세를 조회하고 주문과 계좌 조회를 연동할 수 있다.",
+    "sourceUrl": "https://blog.kbsec.com/kb-news/%EA%B0%9C%EC%9D%B8-%EA%B3%A0%EA%B0%9D-%EB%8C%80%EC%83%81-open-api-%EC%84%9C%EB%B9%84%EC%8A%A4-%EC%98%A4%ED%94%88/"
+  },
+  {
+    "id": "hana",
+    "year": 2016,
+    "date": "2016-08-01",
+    "type": "ma",
+    "title": "하나선물 흡수합병",
+    "summary": "하나증권의 당시 법인인 하나금융투자가 하나선물을 흡수합병했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm"
+  },
+  {
+    "id": "hana",
+    "year": 2019,
+    "date": "2019-07-10",
+    "type": "regulation",
+    "title": "종합금융투자사업자 지정",
+    "summary": "하나금융투자가 기업 신용공여 등의 업무를 할 수 있는 종합금융투자사업자로 지정됐다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm"
+  },
+  {
+    "id": "hana",
+    "year": 2025,
+    "date": "2025-12-17",
+    "type": "regulation",
+    "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "summary": "금융위가 하나증권의 자기자본 요건을 심의하고 발행어음 업무를 인가했다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
   },
   {
     "id": "daishin",
+    "year": 1975,
+    "date": "1975-10-01",
+    "type": "business",
+    "title": "유가증권시장 상장",
+    "summary": "삼락증권에서 대신증권으로 사명을 바꾼 해에 기업을 공개하고 유가증권시장에 상장했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm"
+  },
+  {
+    "id": "daishin",
+    "year": 2017,
+    "date": "2017-08-29",
+    "type": "global",
+    "title": "싱가포르 현지법인 계열 편입",
+    "summary": "대신증권은 현지법인 Daishin Investments Pte. Ltd. 설립에 따른 계열회사 추가를 공시 연혁에 기록했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/08/13/001039/20250813002845/11011.htm"
+  },
+  {
+    "id": "daishin",
+    "year": 2024,
     "date": "2024-12-24",
+    "type": "regulation",
     "title": "자기자본 3조원 이상 종합금융투자사업자 지정",
+    "summary": "대신증권이 자기자본 요건을 갖춰 기업 신용공여 업무를 할 수 있는 종투사에 합류했다.",
     "sourceUrl": "https://www.fsc.go.kr/po010102/83709"
   },
   {
     "id": "shinhan",
+    "year": 2021,
+    "date": "2021-06-14",
+    "type": "capital",
+    "title": "미화 2억 7천만 달러 외화 신종자본증권 발행",
+    "summary": "당시 신한금융투자가 자본 확충을 목적으로 만기가 영구인 외화 신종자본증권을 사모 방식으로 발행했다.",
+    "sourceUrl": "https://kind.krx.co.kr/external/2025/11/14/002362/20251114005361/11013.htm"
+  },
+  {
+    "id": "shinhan",
+    "year": 2025,
     "date": "2025-12-17",
+    "type": "regulation",
     "title": "자기자본 4조원 이상 종합금융투자사업자 지정 및 단기금융업 인가",
+    "summary": "금융위 의결로 신한투자증권이 자체 신용을 바탕으로 발행어음을 발행할 수 있게 됐다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
   }
 ]

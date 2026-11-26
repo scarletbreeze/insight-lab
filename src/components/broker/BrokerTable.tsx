@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import BrokerSegmentPeriod from './BrokerSegmentPeriod';
 import BrokerTrend from './BrokerTrend';
+import BrokerTurningPoints from './BrokerTurningPoints';
 import IndustryCompare from './IndustryCompare';
-import { brokerEvents, brokerMetrics, brokerYears, brokers, fields, formatBrokerMetric, interimProfit } from '../../utils/brokers';
+import { brokerMetrics, brokerYears, brokers, fields, formatBrokerMetric, interimProfit } from '../../utils/brokers';
 
 export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'rank', brokerBase: string }) {
   const [period, setPeriod] = useState(mode === 'compare' ? interimProfit.end : String(brokerYears[0]));
@@ -108,7 +109,6 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
       <div className="lab-grid">
         {[left, right].map((id) => {
           const company = brokers.find((item) => item.id === id);
-          const events = brokerEvents.filter((event) => event.id === id);
           return <article className="lab-card" key={id}>
             <h3><a href={brokerBase + id + '/'}>{label(id)}</a></h3>
             {company && <p>회사 소개 초안 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
@@ -116,13 +116,19 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
             <p>{company?.segments.join(' · ') || '자료 확인 중'}</p>
             <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
               interim={isInterim} detailUrl={brokerBase + id + '/'} />
-            <strong>주요 전환점</strong>
-            {events.length ? <ul>{events.map(({ date, title, sourceUrl }) => (
-              <li key={date}><time dateTime={date}>{date}</time><a href={sourceUrl}>{title}</a></li>
-            ))}</ul> : <p>자료 확인 중</p>}
           </article>;
         })}
       </div>
+      <section className="lab-block" id="compare-turning-points">
+        <h2>주요 전환점 비교</h2>
+        <p>두 회사의 주요 사건을 결산 연도와 관계없이 최근순으로 표시합니다. 사건 제목을 누르면 공시나 발표 원문을 볼 수 있습니다.</p>
+        <div className="lab-grid">
+          {[left, right].map((id) => <article className="lab-card content-start" key={id}>
+            <h3><a href={brokerBase + id + '/#turning-points'}>{label(id)} 연혁</a></h3>
+            <BrokerTurningPoints brokerId={id} />
+          </article>)}
+        </div>
+      </section>
     </>}
   </section>;
 }

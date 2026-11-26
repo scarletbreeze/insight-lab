@@ -85,7 +85,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     <VocMonthlyTrends {year} />
     {vocYears.some((entry) => entry.year === year - 1) && <p><a href={sitePath('voc-studio/compare') + '?left=' + (year - 1) + '&right=' + year + '#monthly'}>전년 같은 달과 비교</a></p>}
   </section>}
-  <section class="lab-block">
+  <section class="lab-block" id="examples">
     <h2>{complete ? '문의 주제 Top 10' : '공개 문의 표본'}</h2>
     {complete && <p>{coverage?.collectionStart}~{coverage?.collectionEnd} · 총 {selectedPosts.length}건</p>}
     {complete && topicCounts.length > 0 && <ol class="lab-list">
@@ -105,10 +105,14 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     {!complete && <>
     {selectedPosts.length ? <>
       <p>공개 목록에서 확인한 문의 예시 {selectedPosts.length}건입니다.</p>
-      <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={sitePath('voc-studio/topics/' + id)}>{label} · {count}건</a></li>)}</ul>
-      <ul class="lab-list">{selectedPosts.map(({ date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li>
-        <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic ?? vocIntents[intent]} · {summary} · {reviewMethod && <small>제목 기반 · </small>}<a href={sourceUrl}>공개 게시판</a>
-      </li>)}</ul>
+      <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={'#examples-' + id}>{label} · {count}건</a></li>)}</ul>
+      {topicCounts.map(({ id: topic, label, count }) => <section>
+        <h3 id={'examples-' + topic} tabindex="-1">{year}년 {label} 문의 예시 · {count}건</h3>
+        <ul class="lab-list">{selectedPosts.filter((post) => post.topic === topic).map(({ id, date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li>
+          <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · <a href={sitePath('voc-studio/topics/' + topic) + '#example-' + id}>{subtopic ?? vocIntents[intent]}</a> · {summary} · {reviewMethod && <small>제목 기반 · </small>}<a href={sourceUrl}>{new URL(sourceUrl).searchParams.has('f_key') ? '공개 게시판 검색 결과' : '공개 게시판'}</a>
+        </li>)}</ul>
+        <p><a href={sitePath('voc-studio/topics/' + topic) + '#examples'}>전체 연도 {label} 문의 예시</a></p>
+      </section>)}
     </> : <p class="empty-state">문의 자료 확인 중</p>}
     </>}
   </section>

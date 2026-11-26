@@ -7,6 +7,7 @@ const formatGrowth = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 1, 
 export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string }) {
   const [period, setPeriod] = useState(interim.end);
   const isInterim = period === interim.end;
+  const periodLabel = isInterim ? interim.label : period + '년 결산';
   const rows = isInterim ? interim.companies.map((row) => ({ ...row, operatingIncomeSourceUrl: undefined, operatingIncomeRounded: false })) : brokerMetrics
     .filter(({ year }) => String(year) === period)
     .map((row) => ({ ...row, status: 'annual' }));
@@ -38,14 +39,16 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
     const leader = [...rows].sort((a, b) => (b[metric] ?? -Infinity) - (a[metric] ?? -Infinity))[0];
     const value = leader?.[metric];
     return value == null ? [] : [{
-      metric, value, id: leader.id,
+      metric, value, id: leader.id, status: leader.status,
+      source: metric === 'operatingIncome' ? leader.operatingIncomeSourceUrl ?? leader.sourceUrl : leader.sourceUrl,
+      previous: priorByCompany.get(leader.id),
       name: brokers.find(({ id }) => id === leader.id)?.name ?? leader.id,
     }];
   });
   return (
     <section className="lab-block" aria-labelledby="broker-profit-title">
-      <h2 id="broker-profit-title">누가 가장 많이 벌었나</h2>
-      <p>{isInterim ? '2026년 1월 1일~9월 30일 분기보고서의 연결 누적 실적입니다.' : '선택한 연도의 연결 결산입니다.'}</p>
+      <h2 id="broker-profit-title">{periodLabel} 이익 순위</h2>
+      <p>수록 증권사 {rows.length}곳의 연결 실적 · {isInterim ? interim.start + ' ~ ' + interim.end : period + '년 연간 결산'}</p>
       <div className="lab-controls">
         <label>비교 기간
           <select value={period} onChange={(event) => setPeriod(event.target.value)}>
@@ -61,10 +64,12 @@ export default function BrokerProfitRanking({ brokerBase }: { brokerBase: string
         </label>
       </div>
       <div className="lab-grid broker-profit-leaders">
-        {metricLeaders.map(({ metric, value, id, name }) => <article className="lab-card" key={metric}>
+        {metricLeaders.map(({ metric, value, id, name, previous, source, status }) => <article className="lab-card" key={metric}>
           <h3>{metric === 'netIncome' ? '당기순이익' : '영업이익'} 1위</h3>
           <strong><a href={brokerBase + id + '/'}>{name}</a></strong>
           <span>{formatBrokerMetric(value, false)}</span>
+          {previous?.[metric] != null && <small>{priorLabel} {formatBrokerMetric(previous[metric], false)}</small>}
+          <a href={source} aria-label={name + ' ' + periodLabel + ' ' + (metric === 'netIncome' ? '당기순이익' : '영업이익') + ' ' + profitSourceLabel(status)}>{profitSourceLabel(status)}</a>
         </article>)}
       </div>
       <p role="status">연결 {profitLabel} · {profits.length}/{rows.length}개사

@@ -101,6 +101,8 @@ export const interimProfit = interimProfitData;
 export const priorInterimProfit = priorInterimProfitData;
 
 export function profitSourceLabel(status: string) {
+  if (status === 'report') return '분기보고서';
+  if (status === 'annual') return '연간 결산 공시';
   if (status === 'corrected-preliminary') return '정정 잠정 공시';
   return status === 'preliminary' ? '잠정 공시' : '공시';
 }
