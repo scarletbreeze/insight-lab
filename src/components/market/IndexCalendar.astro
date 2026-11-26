@@ -21,11 +21,11 @@ const rows = months.flatMap((month) => {
 {rows.length > 0 && <section class="lab-block" id="index-calendar">
   <h2>한국·미국 지수 월별 등락</h2>
   <p>각 시장의 첫 거래일 종가에서 마지막 거래일 종가까지의 변화입니다. 월을 선택하면 거래일과 원문 출처를 확인할 수 있습니다.</p>
-  <div class="lab-table-wrap"><table class="lab-table index-calendar">
+  <div class="lab-table-wrap" role="region" aria-label={year + '년 월별 지수 등락률 표'} tabindex="0"><table class="lab-table index-calendar">
     <caption>{year}년 월별 지수 등락률</caption>
     <thead><tr><th scope="col">월</th>{labels.map((label) => <th scope="col">{label}</th>)}</tr></thead>
     <tbody>{rows.map(({ month, changes }) => <tr>
-      <th scope="row"><a href={sitePath('market-time-capsule/' + year + '/' + month)}>{Number(month)}월</a></th>
+      <th scope="row"><a href={sitePath('market-time-capsule/' + year + '/' + month) + (koreaMonthlyCloses[year + '-' + month] ? '#kr-index' : '#us-index')}>{Number(month)}월</a></th>
       {changes.map((change) => <td data-direction={change == null || change === 0 ? undefined : change > 0 ? 'up' : 'down'}>
         {change == null ? '자료 없음' : percent.format(change)}
       </td>)}
@@ -33,6 +33,14 @@ const rows = months.flatMap((month) => {
   </table></div>
 </section>}
 <style>
+  .index-calendar th:first-child {
+    position: sticky;
+    inset-inline-start: 0;
+    z-index: 1;
+    white-space: nowrap;
+    background: var(--color-panel);
+    box-shadow: inset -1px 0 var(--color-rule);
+  }
   .index-calendar td { font-variant-numeric: tabular-nums; white-space: nowrap; }
   .index-calendar td[data-direction="up"] { background-color: rgba(200, 81, 55, .13); }
   .index-calendar td[data-direction="down"] { background-color: rgba(53, 128, 192, .14); }

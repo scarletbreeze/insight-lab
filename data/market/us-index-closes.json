@@ -1,4 +1,180 @@
 {
+  "2020-01": {
+    "firstDate": "2020-01-02",
+    "lastDate": "2020-01-31",
+    "first": [
+      3257.85,
+      9092.19
+    ],
+    "last": [
+      3225.52,
+      9150.94
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/01/02/how-major-us-stock-indexes-fared-thursday-52/",
+    "lastSource": "https://vancouver.citynews.ca/2020/01/31/how-major-us-stock-indexes-fared-friday-54/"
+  },
+  "2020-02": {
+    "firstDate": "2020-02-03",
+    "lastDate": "2020-02-28",
+    "first": [
+      3248.92,
+      9273.4
+    ],
+    "last": [
+      2954.22,
+      8567.37
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/02/03/how-major-us-stock-indexes-fared-monday-56/",
+    "lastSource": "https://vancouver.citynews.ca/2020/02/28/how-major-us-stock-indexes-fared-friday-58/"
+  },
+  "2020-03": {
+    "firstDate": "2020-03-02",
+    "lastDate": "2020-03-31",
+    "first": [
+      3090.23,
+      8952.16
+    ],
+    "last": [
+      2584.59,
+      7700.1
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/03/02/how-major-us-stock-indexes-fared-monday-59/",
+    "lastSource": "https://vancouver.citynews.ca/2020/03/31/how-major-us-stock-indexes-fared-tuesday-66/"
+  },
+  "2020-04": {
+    "firstDate": "2020-04-01",
+    "lastDate": "2020-04-30",
+    "first": [
+      2470.5,
+      7360.58
+    ],
+    "last": [
+      2912.43,
+      8889.55
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/04/01/asian-stocks-mixed-as-economic-toll-of-virus-worsens/",
+    "lastSource": "https://vancouver.citynews.ca/2020/04/30/how-major-us-stock-indexes-fared-on-thursday-2/"
+  },
+  "2020-05": {
+    "firstDate": "2020-05-01",
+    "lastDate": "2020-05-29",
+    "first": [
+      2830.71,
+      8604.95
+    ],
+    "last": [
+      3044.31,
+      9489.87
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/05/01/how-major-us-stock-indexes-fared-friday-66/",
+    "lastSource": "https://vancouver.citynews.ca/2020/05/29/how-major-us-stock-indexes-fared-friday-70/"
+  },
+  "2020-06": {
+    "firstDate": "2020-06-01",
+    "lastDate": "2020-06-30",
+    "first": [
+      3055.73,
+      9552.05
+    ],
+    "last": [
+      3100.29,
+      10058.77
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/06/01/how-major-us-stock-indexes-fared-monday-71/",
+    "lastSource": "https://vancouver.citynews.ca/2020/06/30/how-major-us-stock-indexes-fared-tuesday-79/"
+  },
+  "2020-07": {
+    "firstDate": "2020-07-01",
+    "lastDate": "2020-07-31",
+    "first": [
+      3115.86,
+      10154.63
+    ],
+    "last": [
+      3271.12,
+      10745.27
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/07/01/how-major-us-stock-indexes-fared-wednesday-72/",
+    "lastSource": "https://vancouver.citynews.ca/2020/07/31/how-major-us-stock-indexes-fared-friday-77/"
+  },
+  "2020-08": {
+    "firstDate": "2020-08-03",
+    "lastDate": "2020-08-31",
+    "first": [
+      3294.61,
+      10902.8
+    ],
+    "last": [
+      3500.31,
+      11775.46
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/08/03/how-major-us-stock-indexes-fared-monday-80/",
+    "lastSource": "https://vancouver.citynews.ca/2020/08/31/how-major-us-stock-indexes-fared-monday-83/"
+  },
+  "2020-09": {
+    "firstDate": "2020-09-01",
+    "lastDate": "2020-09-30",
+    "first": [
+      3526.65,
+      11939.67
+    ],
+    "last": [
+      3363.0,
+      11167.51
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/09/01/how-major-us-stock-indexes-fared-tuesday-87/",
+    "lastSource": "https://vancouver.citynews.ca/2020/09/30/how-major-us-stock-indexes-fared-wednesday-84/",
+    "sourceNote": {
+      "text": "9월 30일 Nasdaq Composite는 AP가 장 마감 직후 보도한 종가를 사용했습니다. Nasdaq이 FRED에 제공한 값은 이보다 0.17포인트 높습니다.",
+      "url": "https://fred.stlouisfed.org/graph/?id=NASDAQCOM&cosd=2020-09-30&coed=2020-10-01"
+    }
+  },
+  "2020-10": {
+    "firstDate": "2020-10-01",
+    "lastDate": "2020-10-30",
+    "first": [
+      3380.8,
+      11326.51
+    ],
+    "last": [
+      3269.96,
+      10911.59
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/10/01/how-major-us-stock-indexes-fared-thursday-87/",
+    "lastSource": "https://vancouver.citynews.ca/2020/10/30/how-major-us-stock-indexes-fared-friday-90/",
+    "sourceNote": {
+      "text": "10월 1일 Nasdaq Composite는 AP가 장 마감 직후 보도한 종가를 사용했습니다. Nasdaq이 FRED에 제공한 값은 이보다 0.10포인트 높습니다.",
+      "url": "https://fred.stlouisfed.org/graph/?id=NASDAQCOM&cosd=2020-09-30&coed=2020-10-01"
+    }
+  },
+  "2020-11": {
+    "firstDate": "2020-11-02",
+    "lastDate": "2020-11-30",
+    "first": [
+      3310.24,
+      10957.61
+    ],
+    "last": [
+      3621.63,
+      12198.74
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/11/02/how-major-us-stock-indexes-fared-monday-90/",
+    "lastSource": "https://vancouver.citynews.ca/2020/11/30/how-major-us-stock-indexes-fared-monday-94/"
+  },
+  "2020-12": {
+    "firstDate": "2020-12-01",
+    "lastDate": "2020-12-31",
+    "first": [
+      3662.45,
+      12355.11
+    ],
+    "last": [
+      3756.07,
+      12888.28
+    ],
+    "firstSource": "https://vancouver.citynews.ca/2020/12/01/how-major-us-stock-indexes-fared-tuesday-98/",
+    "lastSource": "https://vancouver.citynews.ca/2020/12/31/how-major-us-stock-indexes-fared-thursday-97/"
+  },
   "2021-11": {
     "firstDate": "2021-11-01",
     "lastDate": "2021-11-30",

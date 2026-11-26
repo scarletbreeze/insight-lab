@@ -32,6 +32,10 @@ jobs:
       - run: npm run build
         env:
           INSIGHT_LAB_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+      - name: Check internal links and search destinations
+        run: python3 scripts/check_site_links.py
+        env:
+          INSIGHT_LAB_BASE_PATH: ${{ steps.pages.outputs.base_path }}
       - uses: actions/upload-pages-artifact@v3
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         with:

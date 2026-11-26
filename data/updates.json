@@ -1,5 +1,33 @@
 [
   {
+    "updatedAt": "2026-11-26T20:07:55+09:00",
+    "service": "market-time-capsule",
+    "title": "2020년 한국·미국 4개 지수의 12개월 등락과 종가 원문",
+    "route": "market-time-capsule/2020",
+    "anchor": "index-calendar"
+  },
+  {
+    "updatedAt": "2026-11-26T20:07:55+09:00",
+    "service": "voc-studio",
+    "title": "공지 전후 14일의 주제별 문의 건수와 비중 비교",
+    "route": "voc-studio/year/2025",
+    "anchor": "notice-window-general-8244"
+  },
+  {
+    "updatedAt": "2026-11-26T20:07:55+09:00",
+    "service": "broker-atlas",
+    "title": "10개 증권사의 고객·업무·수익 경로 32개와 근거 공시",
+    "route": "broker-atlas/money-map",
+    "anchor": "map-daishin"
+  },
+  {
+    "updatedAt": "2026-11-26T20:07:55+09:00",
+    "service": "hero-lab",
+    "title": "추천 화면 조합 12개를 모니터 1~3대에 배치",
+    "route": "hero-lab/layouts",
+    "query": "recipe=market-to-watchlist&monitors=2"
+  },
+  {
     "updatedAt": "2026-11-26T19:47:45+09:00",
     "service": "market-time-capsule",
     "title": "2008·2020년 매월 사건 3건 이상 수록, 외환위기 전환기 기록 보강",

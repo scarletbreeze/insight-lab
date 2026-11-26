@@ -22,7 +22,7 @@ const snapshot = annual && domestic
 const number = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 'exceptZero', maximumFractionDigits: 2 });
 ---
-<section class="lab-block">
+<section class="lab-block" id={domestic ? 'kr-index' : 'us-index'}>
   <h2>{domestic ? '국내 주가지수' : '미국 주가지수'}</h2>
   {snapshot ? <>
   <p>{annual ? '직전 연말 종가와 해당 연말 종가를 비교합니다.' : '현지 기준 월 첫 거래일과 마지막 거래일의 종가를 비교합니다.'} 단위는 포인트입니다.</p>
@@ -47,5 +47,6 @@ const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 
     </table>
   </div>
   {monthly?.calendarSource && <p>월초 거래일은 당시 시황 보도와 대조했습니다. <a href={monthly.calendarSource}>첫 거래일 확인 근거</a></p>}
+  {monthly?.sourceNote && <p>{monthly.sourceNote.text} <a href={monthly.sourceNote.url}>Nasdaq 제공 시계열</a></p>}
   </> : <p class="empty-state">{annual ? '연말 종가' : '첫 거래일과 마지막 거래일의 종가'} 자료 확인 중</p>}
 </section>

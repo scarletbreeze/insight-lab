@@ -98,16 +98,19 @@ test('VOC notice windows use published dates and cover both 14-day periods', () 
       notices.set(notice.id, filename === 'notices.json' ? { ...notice, dateType: 'published' } : notice);
     }
   }
-  const { collectionStart, collectionEnd, observations } = readJson<{
+  const { collectionStart, collectionEnd, observations, exclusions } = readJson<{
     collectionStart: string; collectionEnd: string;
-    observations: { noticeId: string; date: string; topic: string; before: number; after: number }[];
+    observations: { noticeId: string; date: string; topic: string; before: number; after: number; beforeTotal: number; afterTotal: number }[];
+    exclusions: Record<string, string>;
   }>('voc/notice-windows.json');
   assert.ok(observations.length > 0);
   assert.equal(new Set(observations.map(({ noticeId }) => noticeId)).size, observations.length);
-  for (const { noticeId, date, topic, before, after } of observations) {
+  for (const { noticeId, date, topic, before, after, beforeTotal, afterTotal } of observations) {
     const notice = notices.get(noticeId);
     assert.ok(notice?.dateType === 'published' && notice.date === date && notice.topic === topic, noticeId);
     assert.ok(before >= 0 && after >= 0 && before + after >= 5 && Math.abs(before - after) >= 2, noticeId);
+    assert.ok(Number.isInteger(beforeTotal) && beforeTotal >= before && Number.isInteger(afterTotal) && afterTotal >= after, noticeId);
+    assert.ok(!(noticeId in exclusions), noticeId);
     assert.ok(Date.parse(date) - 14 * 86_400_000 >= Date.parse(collectionStart), noticeId);
     assert.ok(Date.parse(date) + 14 * 86_400_000 <= Date.parse(collectionEnd), noticeId);
   }

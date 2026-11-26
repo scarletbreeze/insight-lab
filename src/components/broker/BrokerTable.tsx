@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import BrokerSegmentPeriod from './BrokerSegmentPeriod';
 import BrokerTrend from './BrokerTrend';
 import BrokerTurningPoints from './BrokerTurningPoints';
+import MoneyMap from './MoneyMap';
 import IndustryCompare from './IndustryCompare';
 import { brokerMetrics, brokerYears, brokers, fields, formatBrokerMetric, interimProfit } from '../../utils/brokers';
 
@@ -53,6 +54,9 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
   const rightInterim = interimProfit.companies.find(({ id }) => id === right);
   const comparisonFields = isInterim ? fields.filter(({ key }) => key === 'netIncome' || key === 'operatingIncome') : fields;
   const label = (id: string) => brokers.find((broker) => broker.id === id)?.name ?? id;
+  const rightBrokerSelect = <select value={right} onChange={(event) => selectComparison(left, event.target.value, period)}>
+    {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === left}>{name}</option>)}
+  </select>;
 
   return <section className="lab-block">
     {mode === 'compare' && <h2>비교할 두 증권사</h2>}
@@ -67,9 +71,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
         <label>첫 번째 증권사 <select value={left} onChange={(event) => selectComparison(event.target.value, right, period)}>
           {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === right}>{name}</option>)}
         </select></label>
-        <label>두 번째 증권사 <select value={right} onChange={(event) => selectComparison(left, event.target.value, period)}>
-          {brokers.map(({ id, name }) => <option key={id} value={id} disabled={id === left}>{name}</option>)}
-        </select></label>
+        <label>두 번째 증권사 {rightBrokerSelect}</label>
       </>}
     </div>
     {mode === 'rank' ? (ranked.length ? <><p role="status">{year}년 연결 {field.title} · {ranked.length}/{data.length}개사</p><ol className="lab-list">
@@ -106,19 +108,26 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
       </ul>}
       <IndustryCompare leftCompany={{ id: left, name: label(left) }} rightCompany={{ id: right, name: label(right) }} />
       <BrokerTrend companies={[{ id: left, name: label(left) }, { id: right, name: label(right) }]} />
-      <div className="lab-grid">
-        {[left, right].map((id) => {
-          const company = brokers.find((item) => item.id === id);
-          return <article className="lab-card" key={id}>
-            <h3><a href={brokerBase + id + '/'}>{label(id)}</a></h3>
-            {company && <p>회사 소개 초안 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
-            <strong>공시 사업 분류</strong>
-            <p>{company?.segments.join(' · ') || '자료 확인 중'}</p>
-            <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
-              interim={isInterim} detailUrl={brokerBase + id + '/'} />
-          </article>;
-        })}
-      </div>
+      <section className="lab-block" id="compare-money-map" aria-labelledby="money-map-comparison-title">
+        <h2 id="money-map-comparison-title">회사별 수익 경로 비교</h2>
+        <div className="lab-controls">
+          <label>{label(left)}과 비교할 증권사 {rightBrokerSelect}</label>
+        </div>
+        <p>화살표는 공시에 설명된 업무와 수익원의 관계를 보여줍니다. 부문별 실적은 각 회사의 공시 단위로 표시합니다.</p>
+        <div className="lab-grid">
+          {[left, right].map((id) => {
+            const company = brokers.find((item) => item.id === id);
+            return <article className="lab-card content-start" key={id}>
+              <h3><a href={brokerBase + id + '/'}>{label(id)}</a></h3>
+              {company && <p>회사 소개 초안 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
+              {company && <MoneyMap broker={company} />}
+              <strong>선택 기간의 공시 부문별 실적</strong>
+              <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
+                interim={isInterim} detailUrl={brokerBase + id + '/'} />
+            </article>;
+          })}
+        </div>
+      </section>
       <section className="lab-block" id="compare-turning-points">
         <h2>주요 전환점 비교</h2>
         <p>두 회사의 주요 사건을 결산 연도와 관계없이 최근순으로 표시합니다. 사건 제목을 누르면 공시나 발표 원문을 볼 수 있습니다.</p>

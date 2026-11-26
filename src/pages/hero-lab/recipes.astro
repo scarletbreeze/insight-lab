@@ -20,6 +20,7 @@ const classes = { curated: 'Hero Lab 추천 조합', official: '공식 가이드
           <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title}</a><p>{note}</p></li>
         ))}
       </ol>
+      <p><a href={sitePath('hero-lab/layouts') + '?' + new URLSearchParams({ recipe: workflow.slug })}>이 조합을 모니터에 배치하기</a></p>
     </section>
   ))}
 </HeroLayout>

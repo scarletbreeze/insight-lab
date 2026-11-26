@@ -2,15 +2,21 @@
 import BrokerLayout from '../../components/broker/BrokerLayout.astro';
 import BrokerageFees from '../../components/broker/BrokerageFees';
 import { sitePath } from '../../utils/paths';
-import MoneyMap from '../../components/broker/MoneyMap.astro';
+import MoneyMap from '../../components/broker/MoneyMap';
 import DisclosedSegments from '../../components/broker/DisclosedSegments.astro';
 import { brokers } from '../../utils/brokers';
 ---
 <BrokerLayout title="Money Map">
-  <p slot="intro">고객에서 사업을 거쳐 수익원으로 이어지는 경로를 살펴봅니다.</p>
-  <BrokerageFees client:load brokerBase={sitePath('broker-atlas/brokers')} />
-  {brokers.map((broker) => <section class="lab-block">
-    <h2>{broker.name}</h2><MoneyMap {broker} /><a href={broker.sourceUrl}>사업 공시</a>
+  <p slot="intro">고객과 시장에서 어떤 업무와 수익이 생기는지 회사별 공시를 바탕으로 정리했습니다. 각 회사의 공시 부문별 금액도 함께 볼 수 있습니다.</p>
+  <nav aria-label="수익 경로를 볼 증권사" class="lab-chips">
+    {brokers.map(({id, name}) => <a href={'#map-' + id}>{name}</a>)}
+    <a href="#brokerage-fees">위탁매매 수수료 비교</a>
+  </nav>
+  {brokers.map((broker) => <section class="lab-block" id={'map-' + broker.id}>
+    <h2>{broker.name} 수익 경로</h2>
+    <MoneyMap {broker} />
+    <p><a href={sitePath('broker-atlas/brokers/' + broker.id) + '#money-map'}>{broker.name} 상세</a> · <a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a></p>
     <DisclosedSegments brokerId={broker.id} />
   </section>)}
+  <div id="brokerage-fees"><BrokerageFees client:load brokerBase={sitePath('broker-atlas/brokers')} /></div>
 </BrokerLayout>

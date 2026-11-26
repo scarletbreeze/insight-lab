@@ -18,6 +18,7 @@ npm run lint
 npm run typecheck
 npm test
 npm run build
+python3 scripts/check_site_links.py
 ```
 
 ## 자료 갱신

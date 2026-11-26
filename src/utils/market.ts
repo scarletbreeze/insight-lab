@@ -10,6 +10,7 @@ interface IndexMonthCloses {
   last: number[];
   secondIndexSource?: string;
   calendarSource?: string;
+  sourceNote?: { text: string; url: string };
   firstSource: string;
   lastSource: string;
 }

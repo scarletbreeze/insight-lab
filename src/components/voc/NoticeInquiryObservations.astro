@@ -1,27 +1,39 @@
 ---
-import type { noticeInquiryObservations } from '../../utils/voc';
+import { vocPosts, vocTopics, type noticeInquiryObservations } from '../../utils/voc';
 import { sitePath } from '../../utils/paths';
 
 interface Props {
-  items: ReturnType<typeof noticeInquiryObservations>;
+  items: Array<ReturnType<typeof noticeInquiryObservations>[number] & { beforeTotal?: number; afterTotal?: number }>;
   verified: boolean;
   automated?: boolean;
 }
 const { items, verified, automated } = Astro.props;
+const topicNames = new Map(vocTopics.map(({ id, label }) => [id, label]));
+const format = (count: number) => count.toLocaleString('ko-KR');
+const difference = new Intl.NumberFormat('ko-KR', { signDisplay: 'exceptZero' });
+const percent = (count: number, total: number) => (count / total * 100).toLocaleString('ko-KR', { maximumFractionDigits: 1 });
 ---
-<section class="lab-block">
+<section class="lab-block" id="notice-windows">
   <h2>공지 전후 문의 변화</h2>
   {items.length ? <>
-    <p>공지 게시일을 제외한 앞뒤 14일 동안 같은 주제의 공개 문의를 {automated ? '자동 분류한 집계입니다. 분류가 불확실한 문의는 제외합니다.' : '집계했습니다.'} 공지와 문의 변화의 인과관계는 이 자료로 판단할 수 없습니다.</p>
-    <ul class="lab-list">{items.map(({ notice, before, after, beforeStart, beforeEnd, afterStart, afterEnd }) => (
-      <li class="lab-card">
-        <h3><a href={notice.sourceUrl}>{notice.title}</a></h3>
-        <p><time datetime={notice.date}>{notice.date}</time> 게시 · <a href={sitePath('voc-studio/topics/' + notice.topic)}>문의 주제 보기</a></p>
+    <p>공지 게시일을 제외한 앞뒤 14일 동안 같은 주제의 공개 문의를 {automated ? '자동 분류했습니다. 각 기간의 전체 공개 문의를 분모로 비중을 계산했습니다.' : '집계했습니다.'} 공지와 문의 변화의 인과관계는 이 자료로 판단할 수 없습니다. <a href={sitePath('voc-studio/methodology') + '#notice-method'}>집계 범위와 표시 기준</a></p>
+    <ul class="lab-list">{items.map(({ notice, before, after, beforeTotal, afterTotal, beforeStart, beforeEnd, afterStart, afterEnd }) => {
+      const year = notice.date.slice(0, 4);
+      const label = topicNames.get(notice.topic);
+      const exampleCount = vocPosts.filter(({ date, topic }) => date.startsWith(year) && topic === notice.topic).length;
+      return <li class="lab-card" id={'notice-window-' + notice.id} tabindex="-1">
+        <h3>{notice.title}</h3>
+        <p><time datetime={notice.date}>{notice.date}</time> 게시 · {label} 문의 전후 14일 관측 차이 <strong>{difference.format(after - before)}건</strong></p>
         <dl class="lab-facts">
-          <div><dt>게시 전 {beforeStart}~{beforeEnd}</dt><dd>{before}건</dd></div>
-          <div><dt>게시 후 {afterStart}~{afterEnd}</dt><dd>{after}건</dd></div>
+          {([[beforeStart, beforeEnd, before, beforeTotal], [afterStart, afterEnd, after, afterTotal]] as const).map(([start, end, count, total], index) =>
+            <div><dt>게시 {index ? '후' : '전'} {start} ~ {end}</dt>
+              <dd>{label} {count}건{total !== undefined &&
+                <> / 전체 문의 {format(total)}건{total > 0 && ' (' + percent(count, total) + '%)'}</>}</dd>
+            </div>)}
         </dl>
-      </li>
-    ))}</ul>
+        <p><a href={sitePath('voc-studio/methodology') + '#notice-method'}>{automated ? '자동 분류·관측 차이 해석' : '관측 차이 해석'}</a> · <a href={notice.sourceUrl}>공지 원문</a> · {exampleCount > 0 && <><a href={automated ? '#examples-' + notice.topic : '#examples'}>{year}년 {label} 문의 예시 {exampleCount}건</a> · </>}
+          <a href={sitePath('voc-studio/topics/' + notice.topic)}>{label} 문의 추이</a></p>
+      </li>;
+    })}</ul>
   </> : <p>{verified ? '확인한 자료에서 표시 기준을 충족한 관찰이 없습니다.' : '공지 앞뒤의 공개 문의 수집 범위를 확인 중입니다.'}</p>}
 </section>

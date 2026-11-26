@@ -2,7 +2,7 @@
 import BrokerLayout from '../../../components/broker/BrokerLayout.astro';
 import BrokerTrend from '../../../components/broker/BrokerTrend';
 import BrokerTurningPoints from '../../../components/broker/BrokerTurningPoints';
-import MoneyMap from '../../../components/broker/MoneyMap.astro';
+import MoneyMap from '../../../components/broker/MoneyMap';
 import DisclosedSegments from '../../../components/broker/DisclosedSegments.astro';
 import { brokers, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
 import { sitePath } from '../../../utils/paths';
@@ -87,11 +87,9 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
       </td>)}</tr>)}</tbody>
     </table></div>
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="money-map">
     <h2>Money Map</h2><MoneyMap {broker} />
-    <p>사업 구조를 개념적으로 표시했습니다.</p>
-    {broker.segments.length > 0 && <p>공시상 영위 업종 · {broker.segments.join(' · ')}</p>}
-    <a href={broker.sourceUrl}>사업 공시</a>
+    <p><a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a> · <a href={'#disclosed-segments-' + broker.id}>공시 부문별 금액</a></p>
   </section>
   <DisclosedSegments brokerId={company.id} />
   <section class="lab-block" id="turning-points">

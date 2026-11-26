@@ -187,8 +187,11 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
     counts = {}
     topic_counts = {}
     daily_counts = {}
+    daily_inquiries = Counter()
     for posted, category, topic in customers.values():
         counts.setdefault(posted.year, Counter())[category] += 1
+        if include_daily and category == "문의":
+            daily_inquiries[posted.isoformat()] += 1
         if topic is not None:
             topic_counts.setdefault(posted.year, Counter())[topic] += 1
             if include_daily and topic in TOPIC_PATTERNS:
@@ -203,7 +206,8 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
             "screens": dict(sorted(Counter(code for codes in mentions.values() for code in codes).items()))}
            if screen_numbers is not None else {}),
         **({"topicCounts": {year: dict(groups) for year, groups in sorted(topic_counts.items())}} if classify else {}),
-        **({"dailyTopics": dict(sorted(daily_counts.items()))} if include_daily else {}),
+        **({"dailyTopics": dict(sorted(daily_counts.items())),
+            "dailyInquiries": dict(sorted(daily_inquiries.items()))} if include_daily else {}),
     }
 
 

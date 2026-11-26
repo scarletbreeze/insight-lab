@@ -51,6 +51,16 @@ const notices = [...indexed.values()].map((notice) => ({
   channel: notice.channel ?? (new URL(notice.sourceUrl).searchParams.get('tp') === 'HG' ? '해외투자 공지' : '영웅문4'),
 })).sort((a, b) => b.date.localeCompare(a.date));
 const noticesById = new Map(notices.map((notice) => [notice.id, notice]));
+const observedIds = new Set(noticeWindows.observations.map(({ noticeId }) => noticeId));
+const exclusions: Record<string, string> = noticeWindows.exclusions;
+export const windowLabels: Record<string, string> = {
+  observed: '전후 변화 관찰', 'no-change': '전후 건수 동일', 'below-threshold': '표시 기준 미달',
+  'unverified-date': '게시일 미확인', 'unclassified-topic': '비교할 주제 미확인',
+  'incomplete-window': '전후 14일 수집 미완료', 'not-screened': '대조 전',
+};
+export function noticeWindowStatus(id: string) {
+  return observedIds.has(id) ? 'observed' : (exclusions[id] ?? 'not-screened');
+}
 
 export { vocYears, notices as vocNotices, vocPosts, topics as vocTopics };
 
@@ -97,12 +107,12 @@ export function publicNoticeObservations(year: number) {
   const to = `${year}-12-31`;
   const covered = Boolean(noticeWindows.collectionStart && noticeWindows.collectionEnd)
     && noticeWindows.collectionStart <= to && noticeWindows.collectionEnd >= from;
-  const items = noticeWindows.observations.flatMap(({ noticeId, date, topic, before, after }) => {
+  const items = noticeWindows.observations.flatMap(({ noticeId, date, topic, before, after, beforeTotal, afterTotal }) => {
     if (date < from || date > to) return [];
     const notice = noticesById.get(noticeId);
     const timestamp = publicationDate(date);
     if (!notice || timestamp === undefined || notice.date !== date || notice.topic !== topic) return [];
-    return [{ notice, before, after, ...noticeDateWindows(timestamp) }];
+    return [{ notice, before, after, beforeTotal, afterTotal, ...noticeDateWindows(timestamp) }];
   });
   return { covered, items };
 }

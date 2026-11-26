@@ -5,6 +5,8 @@ import generalNotices from '../../../data/voc/general-notices.json';
 import annualReview from '../../../data/voc/annual-classification-review.json';
 import review from '../../../data/voc/classification-review.json';
 import topics from '../../../data/voc/topics.json';
+import { noticeWindowStatus, vocNotices, windowLabels } from '../../utils/voc';
+import { sitePath } from '../../utils/paths';
 const labels: Record<string, string> = Object.fromEntries(topics.map(({ id, label }) => [id, label]));
 labels.ambiguous = '여러 주제';
 labels.unclassified = '미분류';
@@ -98,7 +100,7 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
     </table></div>
     <a href={review.sourceUrl}>키움증권 공개 고객게시판</a>
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="notice-method">
     <h2>공지와 문의 해석</h2>
     <p>키움증권 일반 공지 목록은 {generalNotices.pages}페이지를 순회해 {generalNotices.oldestObserved}에 도달했습니다. 키움 사이트의 일반 공지 채널에서 확인한 등록일 기준 건수입니다.</p>
     <ul class="lab-list">{Object.entries(generalNotices.yearCounts).map(([year, count]) => <li>
@@ -107,6 +109,11 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
     <p>타임라인은 일반 공지에서 선별한 글과 다른 채널의 검토 표본을 표시합니다.</p>
     <p><a href={generalNotices.sourceUrl}>키움증권 일반 공지 목록</a></p>
     <p>게시일이 확인된 공지에서 게시 당일을 제외하고 앞뒤 14일씩 같은 주제의 문의를 셉니다. 두 기간이 검증된 수집 범위 안에 있고, 합계가 5건 이상이며 건수 차이가 2건 이상인 관찰을 표시합니다.</p>
+    <p>각 기간의 비중은 같은 주제로 분류한 문의 건수를 그 기간의 전체 공개 문의 건수로 나눈 값입니다. 분모에는 여러 주제에 걸치거나 자동 분류가 되지 않은 문의도 포함합니다.</p>
+    <ul class="lab-list">{Object.entries(windowLabels).map(([key, label]) => {
+      const count = vocNotices.filter(({ id }) => noticeWindowStatus(id) === key).length;
+      return count > 0 && <li><a href={sitePath('voc-studio/timeline') + '?window=' + key}>{label} · {count}건</a></li>;
+    })}</ul>
     <p>시점이 겹치는 사실만으로 공지가 문의 변화의 원인이라고 해석할 수 없습니다.</p>
   </section>
 </VocLayout>

@@ -5,10 +5,11 @@ import monthlySpyRankings from '../../data/market/months/spy-equity-rankings.jso
 import annualRankings from '../../data/market/annual-equity-rankings.json';
 import annualSpyRankings from '../../data/market/annual-spy-equity-rankings.json';
 import { brokers, brokerEvents, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
+import { segmentFilings } from './broker-segments';
 import { signals } from './ceo';
 import { legends, screenByNumber, screens, workflows } from './hero';
 import { marketEvents } from './market';
-import { vocNotices, vocPosts } from './voc';
+import { publicNoticeObservations, vocNotices, vocPosts, vocTopics, vocYears } from './voc';
 
 interface CatalogEntry {
   service: string;
@@ -69,6 +70,13 @@ export const catalog: CatalogEntry[] = [
     service: 'voc-studio', route: 'voc-studio/timeline', anchor: notice.id, title: notice.title,
     summary: notice.summary, date: notice.date, sourceUrls: [notice.sourceUrl],
   })),
+  ...vocYears.flatMap(({ year }) => publicNoticeObservations(year).items.map(({ notice, before, after, beforeTotal, afterTotal }) => ({
+    service: 'voc-studio', route: 'voc-studio/year/' + year, anchor: 'notice-window-' + notice.id,
+    title: notice.title + ' · 게시 전후 14일 문의 비교',
+    summary: (vocTopics.find(({ id }) => id === notice.topic)?.label ?? notice.topic)
+      + ' 문의 · 게시 전 ' + before + '/' + beforeTotal + '건 · 게시 후 ' + after + '/' + afterTotal + '건',
+    keywords: [notice.date, '공지 전후 변화 비중'], date: notice.date, sourceUrls: [notice.sourceUrl],
+  }))),
   ...vocPosts.map((post) => ({
     service: 'voc-studio', route: 'voc-studio/topics/' + post.topic, anchor: 'example-' + post.id, title: post.summary,
     keywords: [post.date, ...(post.subtopic ? [post.subtopic] : []), ...(post.keywords ?? [])],
@@ -79,6 +87,16 @@ export const catalog: CatalogEntry[] = [
     date: String(Math.max(...brokerMetrics.filter(({ id }) => id === broker.id).map(({ year }) => year))),
     summary: broker.character, sourceUrls: [broker.sourceUrl, ...brokerMetrics.filter(({ id }) => id === broker.id).map(({ sourceUrl }) => sourceUrl)],
   })),
+  ...brokers.flatMap(broker => {
+    const filing = segmentFilings[broker.id];
+    if (!filing || !broker.map.length) return [];
+    return [{
+      service: 'broker-atlas', route: 'broker-atlas/money-map', anchor: 'map-' + broker.id,
+      title: broker.name + ' 수익 경로', summary: broker.map.map(({ revenue }) => revenue).join(' · '),
+      keywords: ['Money Map 사업 구조', ...broker.map.flatMap(({ customer, business }) => [customer, business])],
+      date: String(Math.max(...filing.years)), sourceUrls: [filing.sourceUrl],
+    }];
+  }),
   ...brokerEvents.map(event => ({
     service: 'broker-atlas', route: 'broker-atlas/brokers/' + event.id, anchor: 'event-' + event.date,
     title: brokers.find(broker => broker.id === event.id)!.name + ' · ' + event.title,
