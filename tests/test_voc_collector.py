@@ -8,6 +8,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "voc"))
 import collect_public_board as board
+from review_classifications import summarize
 
 
 class TopicClassificationTest(unittest.TestCase):
@@ -18,11 +19,27 @@ class TopicClassificationTest(unittest.TestCase):
             ("미수 이자", "인증서", "credit"),
             ("수식 문의", "입출금", "hts"),
             ("문의", "프리마켓", "hours"),
+            ("조회한 계좌 거래내역", "다른 문의", "account"),
+            ("화면 툴바", "", "hts"),
+            ("외화 RP", "", "products"),
+            ("양도세 조회", "", "fees"),
+            ("주식선물", "", "hours"),
             ("문의", "", "unclassified"),
         ]
         for title, body, expected in cases:
             with self.subTest(title=title, body=body):
                 self.assertEqual(board.classify_topic(dict(ttl=title, dtlCntn=body)), expected)
+
+
+class ClassificationReviewTest(unittest.TestCase):
+    def test_disagreements_and_deferred_titles_reconcile(self):
+        sample = {"2026": [[str(k) * 8, "비공개", prediction] for k, prediction in
+                           enumerate(("hts", "ambiguous", "unclassified", "orders", "fees"))]}
+        labels = {key: ("?" if index == 4 else "hts") for index, (key, _, _) in enumerate(sample["2026"])}
+        result = summarize(sample, labels)
+        self.assertEqual(result["years"], [dict(year=2026, sample=5, reviewed=4, agreement=1)])
+        self.assertEqual(result["differences"], dict(unclassified=1, ambiguous=1, differentTopic=1))
+        self.assertNotIn("비공개", str(result))
 
 
 class LocalCheckpointTest(unittest.TestCase):

@@ -70,7 +70,7 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
             <label for="kr-annual-coverage">일별 시세 검사 통과 <strong>{checked.eligibleCount} / {checked.universeCount}개</strong></label>
             <progress id="kr-annual-coverage" value={checked.eligibleCount} max={checked.universeCount}>{checked.eligibleCount} / {checked.universeCount}</progress>
           </div>
-          <p>연초 두 ETF가 보유한 종목 중 전일 종가와 기준가격이 이어지고 상장주식수가 일정한 종목을 집계했습니다.</p>
+          <p>연초 두 ETF가 보유한 종목 중 첫날·마지막 날에 거래량이 있고 전일 종가와 기준가격이 이어지고 상장주식수가 일정한 종목을 집계했습니다.</p>
           <details class="coverage-reasons"><summary>추가 확인 대상 {checked.universeCount - checked.eligibleCount}개</summary>
             <dl>{Object.entries(checked.exclusions).sort((a, b) => b[1] - a[1]).map(([reason,count]) => <div><dt>{reason}</dt><dd>{count}개</dd></div>)}</dl>
           </details>

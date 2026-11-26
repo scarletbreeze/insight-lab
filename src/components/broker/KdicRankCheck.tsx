@@ -1,3 +1,4 @@
+import { yuanta2021 } from '../../utils/brokers';
 import observations from '../../../data/brokers/kdic-year-end-equity.json';
 
 import check from '../../../data/brokers/2021-equity-review.json';
@@ -5,10 +6,7 @@ import annual from '../../../data/brokers/industry-2021.json';
 
 const filings = new Map(annual.companies.filter(company => company.sourceUrl).map(company =>
   [company.name, { equity: Math.round(company.equity / 100), url: company.sourceUrl }]));
-filings.set('유안타증권', {
-  equity: Math.round(1481817285 / 100000), // 별도 재무상태표 원문 단위는 천 원
-  url: 'https://kind.krx.co.kr/external/2023/03/02/000735/20230302002053/00591.htm',
-});
+filings.set('유안타증권', { equity: Math.round(yuanta2021.equity), url: yuanta2021.url });
 
 export default function KdicRankCheck({ date }: {date: string}) {
   const year = date.slice(0, 4);
@@ -32,7 +30,7 @@ export default function KdicRankCheck({ date }: {date: string}) {
         <li>수록 10개사와 유안타는 회사 공시로 대조했습니다.</li>
         <li>{check.belowThreshold.count}개사는 총자산이 최대 {check.belowThreshold.maxAssets.toLocaleString('ko-KR')}억 원이어서 자본이 대신보다 작습니다.</li>
         <li>추가 {check.companies.length}개사는 한국신용평가의 해당일 별도 재무지표와 예보의 총자산이 억 원 단위로 일치합니다. 모두 대신보다 자본이 작습니다.</li>
-        {check.pending.map(({ name, assets }) => <li key={name}>{name}은 총자산 {assets.toLocaleString('ko-KR')}억 원으로 키움보다 작습니다. 대신과의 순서는 해당일 지점 자본을 확인한 뒤 반영합니다.</li>)}
+        {check.pending.map(({ name, assets }) => <li key={name}>{name}은 총자산 {assets.toLocaleString('ko-KR')}억 원으로 키움보다 작습니다. 해당일 부채나 자본의 원문 확인 전까지 대신의 범위는 10–11위입니다.</li>)}
       </ul>
       <details><summary>추가 {check.companies.length}개사 별도 재무지표와 출처</summary>
         <div className="lab-table-wrap"><table className="lab-table">

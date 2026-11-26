@@ -3,153 +3,190 @@
     "first": "2024-01-02",
     "last": "2024-01-31",
     "universe": 350,
-    "eligible": 318,
+    "eligible": 317,
     "excluded": {
       "상장주식수 변경 확인": 29,
-      "전일 종가와 기준가격 차이 확인": 3
+      "전일 종가와 기준가격 차이 확인": 3,
+      "첫날·마지막 날 거래량 미확인 또는 0": 1
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.01.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.01.02"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-02": {
     "first": "2024-02-01",
     "last": "2024-02-29",
     "universe": 350,
-    "eligible": 322,
+    "eligible": 321,
     "excluded": {
       "상장주식수 변경 확인": 27,
-      "전일 종가와 기준가격 차이 확인": 1
+      "전일 종가와 기준가격 차이 확인": 1,
+      "첫날·마지막 날 거래량 미확인 또는 0": 1
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.02.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.02.01"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-03": {
     "first": "2024-03-04",
     "last": "2024-03-29",
     "universe": 351,
-    "eligible": 323,
+    "eligible": 321,
     "excluded": {
-      "상장주식수 변경 확인": 27,
-      "전일 종가와 기준가격 차이 확인": 1
+      "상장주식수 변경 확인": 26,
+      "전일 종가와 기준가격 차이 확인": 1,
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.03.04",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.03.04"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-04": {
     "first": "2024-04-01",
     "last": "2024-04-30",
     "universe": 351,
-    "eligible": 313,
+    "eligible": 310,
     "excluded": {
-      "상장주식수 변경 확인": 37,
-      "전일 종가와 기준가격 차이 확인": 1
+      "상장주식수 변경 확인": 36,
+      "전일 종가와 기준가격 차이 확인": 1,
+      "첫날·마지막 날 거래량 미확인 또는 0": 4
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.04.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.04.01"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-05": {
     "first": "2024-05-02",
     "last": "2024-05-31",
     "universe": 352,
-    "eligible": 315,
+    "eligible": 312,
     "excluded": {
       "상장주식수 변경 확인": 35,
-      "전일 종가와 기준가격 차이 확인": 2
+      "전일 종가와 기준가격 차이 확인": 2,
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.05.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.05.02"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-06": {
     "first": "2024-06-03",
     "last": "2024-06-28",
     "universe": 353,
-    "eligible": 324,
+    "eligible": 320,
     "excluded": {
-      "상장주식수 변경 확인": 28,
-      "전일 종가와 기준가격 차이 확인": 1
+      "상장주식수 변경 확인": 27,
+      "전일 종가와 기준가격 차이 확인": 1,
+      "첫날·마지막 날 거래량 미확인 또는 0": 5
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.06.03",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.06.03"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-07": {
     "first": "2024-07-01",
     "last": "2024-07-31",
     "universe": 352,
-    "eligible": 326,
+    "eligible": 324,
     "excluded": {
-      "상장주식수 변경 확인": 25,
-      "전일 종가와 기준가격 차이 확인": 1
+      "상장주식수 변경 확인": 24,
+      "전일 종가와 기준가격 차이 확인": 1,
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.07.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.07.01"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-08": {
     "first": "2024-08-01",
     "last": "2024-08-30",
     "universe": 353,
-    "eligible": 324,
+    "eligible": 321,
     "excluded": {
-      "상장주식수 변경 확인": 27,
-      "전일 종가와 기준가격 차이 확인": 2
+      "상장주식수 변경 확인": 26,
+      "전일 종가와 기준가격 차이 확인": 2,
+      "첫날·마지막 날 거래량 미확인 또는 0": 4
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.08.01",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.08.01"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-09": {
     "first": "2024-09-02",
     "last": "2024-09-30",
     "universe": 352,
-    "eligible": 328,
+    "eligible": 326,
     "excluded": {
-      "상장주식수 변경 확인": 24
+      "상장주식수 변경 확인": 23,
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.09.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.09.02"
-    ]
+    ],
+    "provider": "KODEX"
   },
   "2024-10": {
     "first": "2024-10-02",
     "last": "2024-10-31",
     "universe": 354,
-    "eligible": 333,
+    "eligible": 330,
     "excluded": {
       "상장주식수 변경 확인": 19,
-      "전일 종가와 기준가격 차이 확인": 2
+      "전일 종가와 기준가격 차이 확인": 2,
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.10.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.10.02"
-    ]
+    ],
+    "provider": "KODEX"
+  },
+  "2024-11": {
+    "first": "2024-11-01",
+    "last": "2024-11-29",
+    "universe": 355,
+    "eligible": 323,
+    "excluded": {
+      "상장주식수 변경 확인": 27,
+      "첫날·마지막 날 거래량 미확인 또는 0": 5
+    },
+    "holdingsSources": [
+      "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7102110004&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500",
+      "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7232080002&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500"
+    ],
+    "provider": "TIGER"
   },
   "2024-12": {
     "first": "2024-12-02",
     "last": "2024-12-30",
     "universe": 353,
-    "eligible": 324,
+    "eligible": 321,
     "excluded": {
+      "상장주식수 변경 확인": 22,
       "전일 종가와 기준가격 차이 확인": 7,
-      "상장주식수 변경 확인": 22
+      "첫날·마지막 날 거래량 미확인 또는 0": 3
     },
     "holdingsSources": [
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.12.02",
       "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.12.02"
-    ]
+    ],
+    "provider": "KODEX"
   }
 }

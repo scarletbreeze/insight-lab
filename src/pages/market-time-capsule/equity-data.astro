@@ -46,20 +46,29 @@ const years = coverage(annual, spyAnnual);
 
   <section class="lab-block" id="kr-coverage">
     <h2>한국 ETF 보유 종목의 월별 검증 범위</h2>
-    <p>각 월 첫 거래일의 KODEX 200과 KODEX 코스닥150 보유 주식을 일별 시세와 대조했습니다. 모든 관측일에 종가가 이어지고 상장주식수가 일정했던 종목 수를 표시합니다. 순위는 가격 자료의 공개 이용 범위를 확인 중입니다.</p>
+    <p>2024년 12개월의 첫 거래일에 KOSPI 200·코스닥150을 추종한 두 ETF의 보유 주식을 일별 시세와 대조했습니다. 11월은 미래에셋 TIGER, 다른 달은 삼성 KODEX 명세를 사용했습니다. 첫날과 마지막 날에 거래가 있었고 모든 관측일에 종가가 이어지며 상장주식수가 일정했던 종목 수를 표시합니다. 순위는 가격 자료의 공개 이용 범위를 확인 중입니다.</p>
+    <ul class="coverage-months" aria-label="월별 국내 ETF 보유 종목 검증 통과율">
+      {Object.entries(koreanCoverage).map(([period, row]) => (
+        <li><a href={'#coverage-' + period}>
+          <span>{Number(period.slice(-2))}월 · {row.provider}</span>
+          <strong>{(row.eligible / row.universe * 100).toFixed(1)}%</strong>
+          <meter min="0" max={row.universe} value={row.eligible} aria-label={period + ' 검증 통과 종목 비중'}></meter>
+        </a></li>
+      ))}
+    </ul>
     <div class="lab-table-wrap"><table class="lab-table">
       <caption>월별 ETF 보유 주식과 가격 대조 결과 · 종목 수</caption>
       <thead><tr><th scope="col">기간</th><th scope="col">보유 주식</th><th scope="col">검사 통과</th><th scope="col">추가 확인</th><th scope="col">보유 명세 원문</th></tr></thead>
-      <tbody>{Object.entries(koreanCoverage).map(([period, row]) => <tr>
+      <tbody>{Object.entries(koreanCoverage).map(([period, row]) => <tr id={'coverage-' + period}>
         <th scope="row"><a href={sitePath('market-time-capsule/' + period.replace('-', '/')) + '#equity-rankings'}>{row.first}~{row.last}</a></th>
         <td>{row.universe}</td><td>{row.eligible}</td><td>{Object.entries(row.excluded).map(([reason, count]) => <div>{reason} · {count}개</div>)}</td>
-        <td><a href={row.holdingsSources[0]}>KODEX 200</a> · <a href={row.holdingsSources[1]}>코스닥150</a></td>
+        <td><a href={row.holdingsSources[0]}>{row.provider} 200</a> · <a href={row.holdingsSources[1]}>{row.provider} 코스닥150</a></td>
       </tr>)}</tbody>
     </table></div>
   </section>
   <section class="lab-block">
     <h2 id="kr-price-coverage">2024년 국내 월초 상장 종목 시세 점검</h2>
-    <p>각 월 첫 거래일에 KOSPI·KOSDAQ(KOSDAQ GLOBAL 포함) 시세 파일에 등장한 종목코드를 추적했습니다. 검사 통과는 매 관측일에 종가가 있고 전일 종가와 기준가격이 이어지며 상장주식수가 일정했다는 뜻입니다. ETF 편입 여부는 별도로 확인합니다.</p>
+    <p>각 월 첫 거래일에 KOSPI·KOSDAQ(KOSDAQ GLOBAL 포함) 시세 파일에 등장한 종목코드를 추적했습니다. 검사 통과는 첫날·마지막 날 거래량이 양수이고 매 관측일에 종가가 있고 전일 종가와 기준가격이 이어지며 상장주식수가 일정했다는 뜻입니다. ETF 편입 여부는 별도로 확인합니다.</p>
     <div class="lab-table-wrap"><table class="lab-table">
       <caption>월초 종목코드 기준 · 종목 수</caption>
       <thead><tr><th scope="col">월</th><th scope="col">월초 종목</th><th scope="col">통과</th><th scope="col">추가 확인 사유</th></tr></thead>
@@ -86,7 +95,7 @@ const years = coverage(annual, spyAnnual);
       <section class="lab-card">
         <h3>한국</h3>
         <p>KOSPI 200과 KOSDAQ 150의 당시 구성종목 및 해당일 가격을 확인합니다.</p>
-        <p>2024년 12월 2일과 30일의 국내 원종가 5,482행을 일괄 조회했습니다. 당시 ETF 보유 종목 353개를 대조한 결과, 324개는 기간 중 전일 종가와 당일 기준가격이 일치하고 상장주식수가 일정했습니다. 나머지 29개는 기업행동 추가 확인 대상으로 분류했습니다.</p>
+        <p>2024년 12월 2일과 30일의 국내 원종가 5,482행을 일괄 조회했습니다. 당시 ETF 보유 종목 353개를 대조한 결과, {koreanCoverage['2024-12'].eligible}개가 거래량·종가 연속성·상장주식수 검사를 통과했습니다. 월별 검증 표에서 나머지 종목의 제외 사유를 확인할 수 있습니다.</p>
         <p>지수 순위 산정에는 당시의 공식 편입 목록과 기업행동을 반영한 가격이 필요합니다.</p>
         <ul class="lab-list">
           <li><a href="https://data.krx.co.kr/contents/MDC/STAT/standard/MDCSTAT006.jsp">KRX 지수 구성종목</a></li>
@@ -116,3 +125,10 @@ const years = coverage(annual, spyAnnual);
     </div>
   </section>
 </MarketLayout>
+
+<style>
+  .coverage-months { display:grid; grid-template-columns:repeat(auto-fit,minmax(min(100%,8rem),1fr)); gap:.5rem; list-style:none; padding:0; }
+  .coverage-months a { display:grid; gap:.3rem; padding:.65rem; border:1px solid var(--color-rule); border-radius:.4rem; }
+  .coverage-months meter { width:100%; }
+  tr:target { outline:2px solid currentColor; outline-offset:-2px; scroll-margin-top:5rem; }
+</style>

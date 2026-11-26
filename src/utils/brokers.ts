@@ -1,3 +1,4 @@
+import review2021 from '../../data/brokers/2021-equity-review.json';
 import brokerData from '../../data/brokers/brokers.json';
 import metricData from '../../data/brokers/metrics.json';
 import events from '../../data/brokers/turning-points.json';
@@ -65,8 +66,23 @@ export const industryPeriods = publishedIndustryPeriods.map(({ companies, ...per
     })),
 }));
 
-export function formatIndustryRank(rank: number, confirmedTopCount: number = 0) {
-  return (rank <= confirmedTopCount ? '업계 ' : '수록 회사 중 ') + rank + '위';
+export const yuanta2021 = {
+  equity: 1481817285 / 100000, // Separate equity in 억 원, converted from the filing's 천 원.
+  url: 'https://kind.krx.co.kr/external/2023/03/02/000735/20230302002053/00591.htm',
+};
+
+export function formatIndustryRank(rank: number, confirmedTopCount: number | undefined, date: string) {
+  if (date === review2021.asOf && rank > (confirmedTopCount ?? 0)) {
+    const company = industryPeriods.find((period) => period.date === date)?.companies[rank - 1];
+    if (company && company.equity / 100 > review2021.belowThreshold.maxAssets
+        && review2021.companies.every(({ equity }) => equity < company.equity / 100)
+        && company.equity / 100 > yuanta2021.equity) {
+      const candidates = review2021.pending.filter(({ assets }) => assets > company.equity / 100);
+      const range = candidates.length ? rank + '–' + (rank + candidates.length) : String(rank);
+      return '부보 ' + review2021.records + '개사 중 ' + range + '위';
+    }
+  }
+  return (rank <= (confirmedTopCount ?? 0) ? '업계 ' : '수록 회사 중 ') + rank + '위';
 }
 
 export const industry2025 = industry;

@@ -34,7 +34,7 @@ export default function IndustryCompare({ leftCompany, rightCompany }: { leftCom
             <tr key={key}>
               <th scope="row">{title}</th>
               {[left, right].map((company, index) => <td key={index}>{
-                key === 'rank' && company ? formatIndustryRank(company.rank, period.confirmedTopCount) : formatBrokerMetric(company?.[key], false)
+                key === 'rank' && company ? formatIndustryRank(company.rank, period.confirmedTopCount, period.date) : formatBrokerMetric(company?.[key], false)
               }</td>)}
             </tr>
           ))}</tbody>

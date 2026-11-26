@@ -69,9 +69,9 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
   </section>
   <section class="lab-block" id="classification-review">
     <h2>자동 분류 표본 점검</h2>
-    <p>수식·화면번호, 거래시간, 미수이자 및 이체 채널 등의 표현을 분류 규칙에 추가했습니다. 규칙을 조정할 때 참고한 표본에서는 판별 가능한 {annualReview.development.reviewed}건 중 일치 건수가 {annualReview.development.before}건에서 {annualReview.development.after}건으로 바뀌었습니다.</p>
+    <p>계좌 거래내역, 화면 툴바, 주식선물, 외화 RP, 양도세 등의 표현을 분류 규칙에 추가했습니다. 규칙을 조정할 때 참고한 표본에서는 판별 가능한 {annualReview.development.reviewed}건 중 일치 건수가 {annualReview.development.before}건에서 {annualReview.development.after}건으로 바뀌었습니다.</p>
     <h3>규칙 조정에 사용하지 않은 표본</h3>
-    <p>{annualReview.start}~{annualReview.end} 공개 문의에서 앞선 두 검토에 쓰인 120건을 제외하고 연도마다 {annualReview.samplePerYear}건씩 선정했습니다. 제목을 읽고 한 가지 주제를 판단할 수 있는 글만 자동 분류와 대조했습니다. 본문을 읽어야 하거나 주제가 겹치는 제목은 판단 보류로 셌습니다.</p>
+    <p>{annualReview.start}~{annualReview.end} 공개 문의에서 앞선 세 검토에 선정한 190건을 제외하고 연도마다 {annualReview.samplePerYear}건씩 선정했습니다. 제목을 읽고 한 가지 주제를 판단할 수 있는 글만 자동 분류와 대조했습니다. 본문을 읽어야 하거나 주제가 겹치는 제목은 판단 보류로 셌습니다.</p>
     <div class="lab-table-wrap"><table class="lab-table">
       <caption>연도별 제목 검토와 자동 분류의 일치 건수</caption>
       <thead><tr><th scope="col">연도</th><th scope="col">표본</th><th scope="col">판단 보류</th><th scope="col">판단 가능</th><th scope="col">일치</th></tr></thead>
@@ -81,6 +81,7 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
       <tfoot><tr><th scope="row">5개년 합계</th><td>{reviewTotals.sample}</td><td>{reviewTotals.sample - reviewTotals.reviewed}</td><td>{reviewTotals.reviewed}</td><td>{reviewTotals.agreement}</td></tr></tfoot>
     </table></div>
     <details><summary>표본 선정 방법과 해석</summary><p>공개 원글의 식별자를 고정된 방식으로 해시한 뒤 연도별로 값이 작은 순서대로 골랐습니다. 제목 검토는 AI로 수행했고, 자동 분류는 기존의 제목·본문 키워드 규칙을 사용했습니다. 연도별 표본이 작아 전체 문의의 분류 정확도를 추정하기 어렵습니다.</p></details>
+    <p>판별 가능한 제목과 규칙 결과가 달랐던 경우 중 {annualReview.differences.unclassified}건은 분류 용어가 없었고, {annualReview.differences.ambiguous}건은 여러 주제에 해당했습니다. {annualReview.differences.differentTopic}건은 규칙이 다른 단일 주제를 선택했습니다.</p>
     <details><summary>제목에서 판별한 주제별 결과</summary>
       <ul class="lab-list">{annualReview.topics.map(({ topic, reviewed, agreement }) => <li>{labels[topic]} · {reviewed}건 중 {agreement}건 일치</li>)}</ul>
     </details>

@@ -6,43 +6,36 @@
       "noticeId": "general-8244",
       "date": "2025-02-26",
       "topic": "orders",
-      "before": 21,
-      "after": 68
+      "before": 23,
+      "after": 61
     },
     {
       "noticeId": "00002490",
       "date": "2026-09-03",
       "topic": "hours",
       "before": 1,
-      "after": 30
+      "after": 28
     },
     {
       "noticeId": "00002469",
       "date": "2026-05-21",
       "topic": "products",
-      "before": 31,
-      "after": 16
+      "before": 35,
+      "after": 17
     },
     {
       "noticeId": "general-9183",
       "date": "2026-05-15",
       "topic": "hts",
-      "before": 157,
-      "after": 143
+      "before": 158,
+      "after": 145
     },
     {
       "noticeId": "00002466",
       "date": "2026-05-11",
       "topic": "auth",
       "before": 12,
-      "after": 24
-    },
-    {
-      "noticeId": "00002493",
-      "date": "2026-10-01",
-      "topic": "hours",
-      "before": 19,
-      "after": 8
+      "after": 23
     },
     {
       "noticeId": "general-6355",
@@ -57,6 +50,13 @@
       "topic": "credit",
       "before": 13,
       "after": 3
+    },
+    {
+      "noticeId": "00002493",
+      "date": "2026-10-01",
+      "topic": "hours",
+      "before": 18,
+      "after": 8
     },
     {
       "noticeId": "00002503",
@@ -80,32 +80,18 @@
       "after": 4
     },
     {
-      "noticeId": "general-8004",
-      "date": "2024-11-13",
-      "topic": "overseas",
-      "before": 16,
-      "after": 9
+      "noticeId": "00002470",
+      "date": "2026-05-27",
+      "topic": "products",
+      "before": 24,
+      "after": 17
     },
     {
-      "noticeId": "00002474",
-      "date": "2026-07-02",
-      "topic": "hours",
-      "before": 7,
-      "after": 0
-    },
-    {
-      "noticeId": "00002447",
-      "date": "2026-01-14",
-      "topic": "auth",
-      "before": 16,
-      "after": 22
-    },
-    {
-      "noticeId": "00002457",
-      "date": "2026-03-24",
-      "topic": "account",
-      "before": 11,
-      "after": 5
+      "noticeId": "00002072",
+      "date": "2022-09-26",
+      "topic": "orders",
+      "before": 12,
+      "after": 18
     },
     {
       "noticeId": "00002471",
@@ -129,11 +115,25 @@
       "after": 7
     },
     {
+      "noticeId": "kiwoogo-7948",
+      "date": "2022-07-04",
+      "topic": "hours",
+      "before": 1,
+      "after": 6
+    },
+    {
       "noticeId": "general-6694",
       "date": "2023-01-20",
       "topic": "overseas",
       "before": 12,
       "after": 7
+    },
+    {
+      "noticeId": "general-8004",
+      "date": "2024-11-13",
+      "topic": "overseas",
+      "before": 13,
+      "after": 8
     },
     {
       "noticeId": "general-8231",
@@ -143,11 +143,18 @@
       "after": 6
     },
     {
-      "noticeId": "00002470",
-      "date": "2026-05-27",
-      "topic": "products",
-      "before": 22,
-      "after": 17
+      "noticeId": "00002447",
+      "date": "2026-01-14",
+      "topic": "auth",
+      "before": 16,
+      "after": 21
+    },
+    {
+      "noticeId": "00002457",
+      "date": "2026-03-24",
+      "topic": "account",
+      "before": 15,
+      "after": 10
     },
     {
       "noticeId": "00002467",
@@ -164,25 +171,18 @@
       "after": 10
     },
     {
+      "noticeId": "general-9399",
+      "date": "2026-08-10",
+      "topic": "overseas",
+      "before": 10,
+      "after": 5
+    },
+    {
       "noticeId": "00002487",
       "date": "2026-08-26",
       "topic": "credit",
       "before": 6,
       "after": 1
-    },
-    {
-      "noticeId": "00002072",
-      "date": "2022-09-26",
-      "topic": "orders",
-      "before": 13,
-      "after": 17
-    },
-    {
-      "noticeId": "00002438",
-      "date": "2025-11-05",
-      "topic": "hours",
-      "before": 2,
-      "after": 6
     },
     {
       "noticeId": "00002449",
@@ -199,25 +199,25 @@
       "after": 6
     },
     {
-      "noticeId": "kiwoogo-7948",
-      "date": "2022-07-04",
-      "topic": "hours",
+      "noticeId": "general-8245",
+      "date": "2025-02-27",
+      "topic": "fees",
       "before": 2,
       "after": 5
     },
     {
-      "noticeId": "00002453",
-      "date": "2026-02-26",
+      "noticeId": "00002438",
+      "date": "2025-11-05",
       "topic": "hours",
-      "before": 5,
-      "after": 8
+      "before": 3,
+      "after": 6
     },
     {
-      "noticeId": "general-9399",
-      "date": "2026-08-10",
-      "topic": "overseas",
-      "before": 10,
-      "after": 7
+      "noticeId": "00002474",
+      "date": "2026-07-02",
+      "topic": "hours",
+      "before": 7,
+      "after": 4
     },
     {
       "noticeId": "general-9529",
@@ -227,25 +227,18 @@
       "after": 5
     },
     {
-      "noticeId": "general-7691",
-      "date": "2024-06-27",
-      "topic": "overseas",
-      "before": 5,
-      "after": 7
-    },
-    {
-      "noticeId": "general-8245",
-      "date": "2025-02-27",
-      "topic": "fees",
-      "before": 2,
-      "after": 4
-    },
-    {
       "noticeId": "00002441",
       "date": "2025-11-28",
       "topic": "hours",
       "before": 3,
       "after": 5
+    },
+    {
+      "noticeId": "00002453",
+      "date": "2026-02-26",
+      "topic": "hours",
+      "before": 5,
+      "after": 7
     },
     {
       "noticeId": "00002461",
@@ -260,6 +253,13 @@
       "topic": "hours",
       "before": 2,
       "after": 4
+    },
+    {
+      "noticeId": "general-9274",
+      "date": "2026-06-23",
+      "topic": "overseas",
+      "before": 3,
+      "after": 5
     }
   ]
 }

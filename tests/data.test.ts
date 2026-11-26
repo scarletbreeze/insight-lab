@@ -56,6 +56,7 @@ test('Independent VOC review reconciles year and topic agreement counts', () => 
   type Counts = { reviewed: number; agreement: number };
   const review = readJson<{
     samplePerYear: number;
+    differences: Record<string, number>;
     development: { reviewed: number; before: number; after: number };
     years: (Counts & { year: number; sample: number })[];
     topics: (Counts & { topic: string })[];
@@ -67,6 +68,9 @@ test('Independent VOC review reconciles year and topic agreement counts', () => 
   for (const key of ['reviewed', 'agreement'] as const) {
     assert.equal(review.years.reduce((sum, row) => sum + row[key], 0), review.topics.reduce((sum, row) => sum + row[key], 0));
   }
+  assert.deepEqual(Object.keys(review.differences).sort(), ['ambiguous', 'differentTopic', 'unclassified']);
+  assert.equal(Object.values(review.differences).reduce((sum, count) => sum + count, 0),
+    review.years.reduce((sum, row) => sum + row.reviewed - row.agreement, 0));
   assert.ok(review.development.reviewed >= Math.max(review.development.before, review.development.after));
 });
 
@@ -461,15 +465,22 @@ test('VOC context references valid topics and has sources for all five years', (
 });
 
 test('Korean monthly research reconciles eligibility and points to dated fund holdings', () => {
-  type Coverage = { first: string; last: string; universe: number; eligible: number; excluded: Record<string, number>; holdingsSources: string[] };
+  type Coverage = { provider: string; first: string; last: string; universe: number; eligible: number; excluded: Record<string, number>; holdingsSources: string[] };
   const periods = readJson<Record<string, Coverage>>('market/months/kr-equity-coverage.json');
   const korea = readJson<{monthly: Record<string, {firstDate: string; lastDate: string}>}>('market/korea-index-closes.json');
+  assert.equal(periods['2024-11'].universe, 355);
+  assert.equal(periods['2024-11'].eligible, 323);
+  assert.equal(periods['2024-11'].excluded['첫날·마지막 날 거래량 미확인 또는 0'], 5);
+  assert.equal(Object.keys(periods).filter((period) => period.startsWith('2024-')).length, 12);
   for (const [period, data] of Object.entries(periods)) {
     assert.equal(data.first, korea.monthly[period].firstDate);
     assert.equal(data.last, korea.monthly[period].lastDate);
     assert.equal(data.eligible + Object.values(data.excluded).reduce((a,b) => a + b, 0), data.universe);
     assert.equal(new Set(data.holdingsSources).size, 2);
-    assert.ok(data.holdingsSources.every((url) => new URL(url).searchParams.get('gijunYMD') === data.first.replaceAll('-', '.')));
+    const tiger = data.provider === 'TIGER';
+    const sources = data.holdingsSources.map((value) => new URL(value));
+    assert.ok(sources.every((url) => url.searchParams.get(tiger ? 'fixDate' : 'gijunYMD') === data.first.replaceAll('-', '.')));
+    if (tiger) assert.deepEqual(sources.map((url) => url.searchParams.get('ksdFund')), ['KR7102110004', 'KR7232080002']);
   }
 });
 
