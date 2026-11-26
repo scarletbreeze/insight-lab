@@ -1,6 +1,7 @@
 ---
 import data from '../../../data/market/annual-equity-rankings.json';
 import krCoverage from '../../../data/market/kr-annual-price-coverage.json';
+import krActions from '../../../data/market/kr-exclusion-actions.json';
 import spyData from '../../../data/market/annual-spy-equity-rankings.json';
 import { sitePath } from '../../utils/paths';
 
@@ -27,6 +28,25 @@ interface Summary {
   loser: Equity;
   tenbaggers: Equity[];
 }
+interface ActionGroup { action: string; kindReason?: string; kindName?: string; dates: string[]; shares: number[]; priceRebasing: boolean; }
+interface ExcludedStock {
+  symbol: string;
+  name: string;
+  exclusionReason: string;
+  status: string;
+  documented: boolean;
+  actions: ActionGroup[];
+  zeroVolumeDays?: string[];
+  priceBreakDays?: string[];
+  documents?: Array<{ title: string; date: string; url: string }>;
+}
+interface ActionPeriod {
+  excludedCount: number;
+  documentedCount: number;
+  byReason: Record<string, { count: number; documented: number; statuses: Record<string, number> }>;
+  actionCounts: Record<string, number>;
+  stocks: ExcludedStock[];
+}
 type Market = 'KR' | 'US';
 interface Props { year: number; }
 const { year } = Astro.props;
@@ -36,6 +56,13 @@ const spy = (spyData as Record<string, { US: Summary }>)[String(year)]?.US;
 const comparisons: Array<[string, Summary | undefined]> = [['한국', summaries?.KR], ['미국 · QQQ', summaries?.US]];
 if (spy) comparisons.push(['미국 · SPY', spy]);
 const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDisplay: 'exceptZero' });
+const actions = (krActions.periods as Record<string, ActionPeriod | undefined>)[String(year)];
+const actionMethod = krActions.method;
+const shareFormat = new Intl.NumberFormat('ko-KR', { signDisplay: 'exceptZero' });
+const describeActions = (groups: ActionGroup[]) => groups.map(({ action, kindReason, kindName, dates, shares }) =>
+  `${kindReason ?? action}${kindName ? ` (KIND 법인명 ${kindName})` : ''} · ${dates.length > 1 ? `${dates.length}회 ${dates[0]}~${dates[dates.length - 1]}` : dates[0]} · ${shares.map((count) => shareFormat.format(count)).join(', ')}주`).join(' / ');
+const describeCheck = ({ exclusionReason, zeroVolumeDays, priceBreakDays }: ExcludedStock) =>
+  [exclusionReason, zeroVolumeDays?.length ? `거래량 0: ${zeroVolumeDays.join(', ')}` : '', priceBreakDays?.length ? `기준가격 차이: ${priceBreakDays.join(', ')}` : ''].filter(Boolean).join(' · ');
 ---
 <section class="lab-block" id="annual-equity">
   <h2>연간 종목 수익률</h2>
@@ -74,6 +101,26 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
           <details class="coverage-reasons"><summary>추가 확인 대상 {checked.universeCount - checked.eligibleCount}개</summary>
             <dl>{Object.entries(checked.exclusions).sort((a, b) => b[1] - a[1]).map(([reason,count]) => <div><dt>{reason}</dt><dd>{count}개</dd></div>)}</dl>
           </details>
+          {actions && <details class="coverage-actions"><summary>제외 종목의 기업행동 · {actions.excludedCount}개 중 {actions.documentedCount}개 사유 확인</summary>
+            <p>상장주식수가 바뀐 날과 변동 주식수를 <a href={actionMethod.kindSource}>{actionMethod.kindSourceTitle}</a>과 대조하고, 거래정지는 DART에 게시된 거래소 공시로 확인했습니다. {actionMethod.kindHint}</p>
+            <dl>{Object.entries(actions.byReason).sort((a, b) => b[1].count - a[1].count).map(([reason, { count, documented, statuses }]) => (
+              <div><dt>{reason} {count}개 중 {documented}개 확인</dt><dd>{Object.entries(statuses).map(([status, n]) => `${status} ${n}`).join(' · ')}</dd></div>
+            ))}</dl>
+            <p>기업행동 종류별 종목 수(한 종목이 여러 종류에 해당하면 각각 셈): {Object.entries(actions.actionCounts).sort((a, b) => b[1] - a[1]).map(([action, count]) => `${action} ${count}`).join(' · ')}</p>
+            <p>{actionMethod.note}</p>
+            <p class="basis">{actionMethod.localBasis}</p>
+            <div class="lab-table-wrap"><table class="lab-table">
+              <caption>제외 종목 {actions.excludedCount}개의 검사 결과와 공시로 확인한 기업행동</caption>
+              <thead><tr><th scope="col">종목</th><th scope="col">검사 결과 (KRX 일별 시세 기준 로컬 검증)</th><th scope="col">기업행동 · 근거 (KIND 사유 · 상장일 · 변동 주식수)</th><th scope="col">확인 상태</th></tr></thead>
+              <tbody>{actions.stocks.map((stock) => <tr>
+                <th scope="row">{stock.name} <span class="symbol">{stock.symbol}</span></th>
+                <td>{describeCheck(stock)}</td>
+                <td>{stock.actions.length ? describeActions(stock.actions) : '주식수 변동 없음'}{stock.documents?.map(({ title, date, url }) => <> / <a href={url}>{title} ({date})</a></>)}</td>
+                <td class:list={{ unresolved: !stock.documented }}>{stock.status}</td>
+              </tr>)}</tbody>
+            </table></div>
+            <p><a href={actionMethod.kindSource}>KIND 주식발행내역</a> · <a href={actionMethod.dartSource}>DART 공시검색</a> · 조회 {actionMethod.collectedAt}</p>
+          </details>}
           <p>연초 보유 명세 · <a href={checked.membershipSourceUrls[0]}>KODEX 200</a> · <a href={checked.membershipSourceUrls[1]}>KODEX 코스닥150</a></p>
           <p>개별 종목 순위는 공개 이용 조건을 확인 중입니다. <a href="https://openapi.krx.co.kr/contents/OPP/DATA/OPPDATA003.jsp">KRX 정보이용 안내</a></p>
         </> : <p>자료 확인 중</p>}
@@ -84,10 +131,16 @@ const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDi
 </section>
 
 <style>
-  .coverage-meter label, .coverage-reasons dl div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
-  .coverage-meter strong, .coverage-reasons dd { font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .coverage-meter label, .coverage-reasons dl div, .coverage-actions dl div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+  .coverage-meter strong, .coverage-reasons dd, .coverage-actions dd { font-variant-numeric: tabular-nums; white-space: nowrap; }
   .coverage-meter progress { display: block; width: 100%; height: .65rem; accent-color: var(--lab-accent); margin-top: .5rem; }
-  .coverage-reasons summary { cursor: pointer; padding-block: .5rem; }
-  .coverage-reasons dl div { border-top: 1px solid var(--color-rule); padding-block: .35rem; }
-  .coverage-reasons dl dt { margin: 0; }
+  .coverage-reasons summary, .coverage-actions summary { cursor: pointer; padding-block: .5rem; }
+  .coverage-reasons dl div, .coverage-actions dl div { border-top: 1px solid var(--color-rule); padding-block: .35rem; }
+  .coverage-reasons dl dt, .coverage-actions dl dt { margin: 0; }
+  .coverage-actions dl dd { white-space: normal; text-align: right; }
+  .coverage-actions .basis { color: var(--color-muted); font-size: .9em; }
+  .coverage-actions .lab-table th[scope="row"] { font-weight: 600; min-width: 9rem; }
+  .coverage-actions .lab-table td { font-size: .9em; min-width: 10rem; }
+  .coverage-actions .lab-table td.unresolved { color: var(--color-muted); }
+  .coverage-actions .symbol { font-variant-numeric: tabular-nums; opacity: .7; font-weight: 400; }
 </style>

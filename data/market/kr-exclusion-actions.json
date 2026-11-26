@@ -1,0 +1,4645 @@
+{
+ "method": {
+  "kindSource": "https://kind.krx.co.kr/corpgeneral/stockissuelist.do?method=loadInitPage",
+  "kindSourceTitle": "KIND 주식발행내역(추가상장·변경상장)",
+  "kindHint": "KIND 주식발행내역에서 조회 기간을 상장일로, 회사명에 KIND 법인명을 넣으면 해당 행이 나온다.",
+  "dartSource": "https://dart.fss.or.kr/dsab007/main.do",
+  "localBasis": "제외 사유, 거래량 0인 날, 기준가격 차이가 난 날은 KRX 일별 시세(marcap 사본) 기준의 로컬 검증 결과이며 날짜만 공개한다.",
+  "description": "로컬 시세 파일에서 관측한 상장주식수 변동일·변동 주식수를 KIND 주식발행내역의 같은 회사(DART로 확인한 법인명·구명 포함)·같은 날짜(±3일, 달력 기준) 행과 대조해 사유를 옮겼다. 같은 날의 여러 행은 합산하거나 최대 3행을 조합한다. 일치하는 행이 없으면 자료 확인 중으로 둔다. 거래량 0 종목은 DART에 게시된 거래소 매매거래정지 공시로, 기준가격 차이는 차이가 난 날로부터 80일 안에 상장된 권리락 발생 행동(무상증자·주식분할·주식배당·회사분할·구주주배정 유상증자)으로 확인한다.",
+  "priceRebasingActions": [
+   "무상증자",
+   "주식분할",
+   "주식배당",
+   "회사분할",
+   "유상증자(구주주배정)"
+  ],
+  "note": "주식소각·주식매수선택권 행사·전환사채 전환·우선주 전환·제3자배정 유상증자·합병 신주처럼 기준가격 변경이 없는 변동은 첫날·마지막 날 종가를 그대로 비교할 수 있다. 권리락이 생기는 행동은 권리락일이 상장일보다 앞서며 기간 시작 전에 권리락이 지난 경우도 있어 수정 종가가 필요하다.",
+  "collectedAt": "2026-11-26"
+ },
+ "periods": {
+  "2024": {
+   "firstDate": "2024-01-02",
+   "lastDate": "2024-12-30",
+   "universe": "KODEX 200 · KODEX 코스닥150 보유 주식",
+   "provider": "KODEX",
+   "holdingsSources": [
+    "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF01.do?gijunYMD=2024.01.02",
+    "https://www.samsungfund.com/api/v1/kodex/product-pdf/2ETF54.do?gijunYMD=2024.01.02"
+   ],
+   "universeCount": 350,
+   "excludedCount": 134,
+   "documentedCount": 123,
+   "exclusions": {
+    "관측 누락·중복 또는 가격 확인 필요": 3,
+    "상장주식수 변경 확인": 105,
+    "전일 종가와 기준가격 차이 확인": 23,
+    "첫날·마지막 날 거래량 미확인 또는 0": 3
+   },
+   "byReason": {
+    "관측 누락·중복 또는 가격 확인 필요": {
+     "count": 3,
+     "documented": 0,
+     "statuses": {
+      "자료 확인 중": 3
+     }
+    },
+    "상장주식수 변경 확인": {
+     "count": 105,
+     "documented": 105,
+     "statuses": {
+      "DART 공시 확인 · KIND 일부 불일치": 1,
+      "KIND 발행내역 일치 · 권리락 조정 필요": 4,
+      "KIND 발행내역 일치 · 기준가 조정 없음": 100
+     }
+    },
+    "전일 종가와 기준가격 차이 확인": {
+     "count": 23,
+     "documented": 15,
+     "statuses": {
+      "권리락 추정 · KIND 상장일 기준(권리락일 미확인)": 15,
+      "자료 확인 중": 2,
+      "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중": 6
+     }
+    },
+    "첫날·마지막 날 거래량 미확인 또는 0": {
+     "count": 3,
+     "documented": 3,
+     "statuses": {
+      "거래정지 공시 확인": 3
+     }
+    }
+   },
+   "actionCounts": {
+    "무상증자": 8,
+    "신주인수권 행사": 7,
+    "우선주 전환": 8,
+    "유상증자": 17,
+    "자료 확인 중": 6,
+    "전환사채 전환": 25,
+    "주식교환": 2,
+    "주식매수선택권 행사": 44,
+    "주식배당": 2,
+    "주식분할": 2,
+    "주식소각": 47,
+    "합병 신주": 5,
+    "회사분할": 3
+   },
+   "stocks": [
+    {
+     "symbol": "068270",
+     "name": "셀트리온",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-01-12"
+       ],
+       "shares": [
+        73887750
+       ],
+       "priceRebasing": false,
+       "kindReason": "합병"
+      },
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-01-15",
+        "2024-05-10"
+       ],
+       "shares": [
+        -2309813,
+        -1119924
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-14",
+        "2024-05-14",
+        "2024-11-13"
+       ],
+       "shares": [
+        69055,
+        63385,
+        57364
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      },
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-08-13"
+       ],
+       "shares": [
+        27967
+       ],
+       "priceRebasing": false
+      }
+     ],
+     "priceBreakDays": [
+      "2024-12-27"
+     ]
+    },
+    {
+     "symbol": "005490",
+     "name": "POSCO홀딩스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-08-26"
+       ],
+       "shares": [
+        -1946853
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "035420",
+     "name": "NAVER",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-08-20",
+        "2024-11-25"
+       ],
+       "shares": [
+        -1624086,
+        -2347500
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "005380",
+     "name": "현대차",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-16"
+       ],
+       "shares": [
+        -2115315
+       ],
+       "priceRebasing": false,
+       "kindReason": "이익소각",
+       "kindName": "현대자동차"
+      }
+     ]
+    },
+    {
+     "symbol": "000270",
+     "name": "기아",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-28",
+        "2024-11-27"
+       ],
+       "shares": [
+        -2185786,
+        -2185785
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "105560",
+     "name": "KB금융",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-09-05"
+       ],
+       "shares": [
+        -9982649
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "055550",
+     "name": "신한지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-01-11",
+        "2024-04-05",
+        "2024-11-18"
+       ],
+       "shares": [
+        -2744718,
+        -3366257,
+        -5947889
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "035720",
+     "name": "카카오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-12",
+        "2024-02-08",
+        "2024-03-15",
+        "2024-04-12",
+        "2024-05-10",
+        "2024-06-07",
+        "2024-07-12",
+        "2024-08-09",
+        "2024-09-13",
+        "2024-10-11",
+        "2024-11-08",
+        "2024-12-13"
+       ],
+       "shares": [
+        100718,
+        149209,
+        154263,
+        90537,
+        48794,
+        69095,
+        48096,
+        48467,
+        35546,
+        3519,
+        21626,
+        10947
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      },
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-20"
+       ],
+       "shares": [
+        -1966496
+       ],
+       "priceRebasing": false,
+       "kindReason": "감자(주식소각)"
+      }
+     ]
+    },
+    {
+     "symbol": "012330",
+     "name": "현대모비스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-17"
+       ],
+       "shares": [
+        -660000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "028260",
+     "name": "삼성물산",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-10"
+       ],
+       "shares": [
+        -7807563
+       ],
+       "priceRebasing": false,
+       "kindReason": "감자(주식소각) · 주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "086790",
+     "name": "하나금융지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-09-03"
+       ],
+       "shares": [
+        -5115718
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "323410",
+     "name": "카카오뱅크",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-10",
+        "2024-03-06",
+        "2024-03-21",
+        "2024-06-05",
+        "2024-08-26",
+        "2024-09-05",
+        "2024-11-06"
+       ],
+       "shares": [
+        35000,
+        44000,
+        5000,
+        5000,
+        2500,
+        35000,
+        5000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "316140",
+     "name": "우리금융지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-05"
+       ],
+       "shares": [
+        -9357960
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "033780",
+     "name": "KT&G",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-11",
+        "2024-11-01",
+        "2024-12-17"
+       ],
+       "shares": [
+        -3500000,
+        -3610000,
+        -1350000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각",
+       "kindName": "케이티앤지"
+      }
+     ]
+    },
+    {
+     "symbol": "096770",
+     "name": "SK이노베이션",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-06"
+       ],
+       "shares": [
+        -4919974
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-11-20"
+       ],
+       "shares": [
+        55299186
+       ],
+       "priceRebasing": false,
+       "kindReason": "합병"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주요사항보고서(회사합병결정)",
+       "date": "2024-07-17",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000415"
+      }
+     ]
+    },
+    {
+     "symbol": "030200",
+     "name": "KT",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-05",
+        "2024-06-07"
+       ],
+       "shares": [
+        -695775,
+        -5143300
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각",
+       "kindName": "케이티"
+      }
+     ]
+    },
+    {
+     "symbol": "017670",
+     "name": "SK텔레콤",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-02-22"
+       ],
+       "shares": [
+        -4043091
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "034730",
+     "name": "SK",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-20"
+       ],
+       "shares": [
+        -695626
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "138040",
+     "name": "메리츠금융지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-12",
+        "2024-04-24"
+       ],
+       "shares": [
+        -8701000,
+        -3951000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "011200",
+     "name": "HMM",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-06-11",
+        "2024-07-15",
+        "2024-11-13"
+       ],
+       "shares": [
+        20000000,
+        40000000,
+        132000000
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내CB전환"
+      }
+     ]
+    },
+    {
+     "symbol": "259960",
+     "name": "크래프톤",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-24",
+        "2024-05-27",
+        "2024-06-25",
+        "2024-07-16",
+        "2024-08-20",
+        "2024-09-23",
+        "2024-10-23",
+        "2024-11-19",
+        "2024-12-26"
+       ],
+       "shares": [
+        1750,
+        1400,
+        1050,
+        1150,
+        3619,
+        2981,
+        3112,
+        500,
+        6059
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      },
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-12"
+       ],
+       "shares": [
+        -477690
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "010130",
+     "name": "고려아연",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-10"
+       ],
+       "shares": [
+        -205305
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "402340",
+     "name": "SK스퀘어",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-23"
+       ],
+       "shares": [
+        -4231076
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "012450",
+     "name": "한화에어로스페이스",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "회사분할",
+       "dates": [
+        "2024-09-27"
+       ],
+       "shares": [
+        -5048839
+       ],
+       "priceRebasing": true,
+       "kindReason": "회사분할(존속)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-09-27"
+     ]
+    },
+    {
+     "symbol": "000100",
+     "name": "유한양행",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 권리락 조정 필요",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-01-19"
+       ],
+       "shares": [
+        3570407
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ]
+    },
+    {
+     "symbol": "001570",
+     "name": "금양",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-11-28"
+       ],
+       "shares": [
+        5917159
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "086280",
+     "name": "현대글로비스",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-08-02"
+       ],
+       "shares": [
+        37500000
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-07-12"
+     ]
+    },
+    {
+     "symbol": "377300",
+     "name": "카카오페이",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-15",
+        "2024-03-14",
+        "2024-04-15",
+        "2024-05-17",
+        "2024-06-14",
+        "2024-07-15",
+        "2024-08-14",
+        "2024-09-13",
+        "2024-10-15",
+        "2024-11-15",
+        "2024-12-17",
+        "2024-12-26"
+       ],
+       "shares": [
+        29014,
+        44113,
+        131825,
+        58427,
+        27575,
+        4966,
+        41253,
+        2704,
+        11043,
+        6573,
+        4869,
+        7313
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "034220",
+     "name": "LG디스플레이",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-03-26"
+       ],
+       "shares": [
+        142184300
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-01-25"
+     ]
+    },
+    {
+     "symbol": "128940",
+     "name": "한미약품",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 권리락 조정 필요",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-01-19"
+       ],
+       "shares": [
+        248833
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ]
+    },
+    {
+     "symbol": "042660",
+     "name": "한화오션",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-07-25"
+       ],
+       "shares": [
+        54495
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "450080",
+     "name": "에코프로머티",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-06-20",
+        "2024-12-20"
+       ],
+       "shares": [
+        85380,
+        667970
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "006800",
+     "name": "미래에셋증권",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-15",
+        "2024-12-16"
+       ],
+       "shares": [
+        -10000000,
+        -10000000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "011780",
+     "name": "금호석유",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-15",
+        "2024-10-18"
+       ],
+       "shares": [
+        -875000,
+        -338092
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각",
+       "kindName": "금호석유화학"
+      }
+     ]
+    },
+    {
+     "symbol": "138930",
+     "name": "BNK금융지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-09-06"
+       ],
+       "shares": [
+        -1651711
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "175330",
+     "name": "JB금융지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-04"
+       ],
+       "shares": [
+        -1899696
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "302440",
+     "name": "SK바이오사이언스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-04"
+       ],
+       "shares": [
+        43704
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-10-21"
+       ],
+       "shares": [
+        1519543
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "081660",
+     "name": "휠라홀딩스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-13"
+       ],
+       "shares": [
+        -656383
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각",
+       "kindName": "미스토홀딩스"
+      }
+     ]
+    },
+    {
+     "symbol": "010060",
+     "name": "OCI홀딩스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-02-29",
+        "2024-05-17",
+        "2024-10-31"
+       ],
+       "shares": [
+        -206453,
+        -42279,
+        -436630
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "005940",
+     "name": "NH투자증권",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-04-26"
+       ],
+       "shares": [
+        -4173622
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "039490",
+     "name": "키움증권",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-09"
+       ],
+       "shares": [
+        -700000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "008930",
+     "name": "한미사이언스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-10"
+       ],
+       "shares": [
+        -1565390
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "375500",
+     "name": "DL이앤씨",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-02-21"
+       ],
+       "shares": [
+        -2939077
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "주식교환",
+       "dates": [
+        "2024-03-04"
+       ],
+       "shares": [
+        2939077
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식교환"
+      }
+     ]
+    },
+    {
+     "symbol": "185750",
+     "name": "종근당",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-01-24"
+       ],
+       "shares": [
+        605956
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-12-27"
+     ]
+    },
+    {
+     "symbol": "042670",
+     "name": "HD현대인프라코어",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "DART 공시 확인 · KIND 일부 불일치",
+     "documented": true,
+     "actions": [
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-08-27"
+       ],
+       "shares": [
+        -6947586
+       ],
+       "priceRebasing": false
+      }
+     ],
+     "documents": [
+      {
+       "title": "[기재정정]주식소각결정",
+       "date": "2024-08-13",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240813800639"
+      }
+     ]
+    },
+    {
+     "symbol": "007070",
+     "name": "GS리테일",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각 · 회사분할",
+       "dates": [
+        "2024-12-23"
+       ],
+       "shares": [
+        -21110507
+       ],
+       "priceRebasing": true,
+       "kindReason": "감자(주식소각) · 회사분할(존속)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-12-23"
+     ],
+     "documents": [
+      {
+       "title": "[첨부정정]주요사항보고서(회사분할결정)",
+       "date": "2024-11-28",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241128001296"
+      }
+     ]
+    },
+    {
+     "symbol": "161890",
+     "name": "한국콜마",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식교환",
+       "dates": [
+        "2024-03-06"
+       ],
+       "shares": [
+        723897
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식교환"
+      }
+     ]
+    },
+    {
+     "symbol": "001440",
+     "name": "대한전선",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-04-02"
+       ],
+       "shares": [
+        62000000
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-01-30"
+     ]
+    },
+    {
+     "symbol": "069960",
+     "name": "현대백화점",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-29"
+       ],
+       "shares": [
+        -773628
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "003620",
+     "name": "KG모빌리티",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-04-01",
+        "2024-04-03",
+        "2024-04-05",
+        "2024-04-16",
+        "2024-04-18",
+        "2024-04-23",
+        "2024-05-16",
+        "2024-06-04",
+        "2024-06-14",
+        "2024-08-01",
+        "2024-08-05",
+        "2024-08-12",
+        "2024-08-14",
+        "2024-08-23",
+        "2024-08-27",
+        "2024-09-12"
+       ],
+       "shares": [
+        6944436,
+        515871,
+        370369,
+        238093,
+        99206,
+        19841,
+        49682,
+        39682,
+        19841,
+        396825,
+        39682,
+        99206,
+        39682,
+        138888,
+        297619,
+        39682
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내CB전환"
+      },
+      {
+       "action": "신주인수권 행사 · 전환사채 전환",
+       "dates": [
+        "2024-07-30"
+       ],
+       "shares": [
+        99625
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내CB전환 · 신주인수권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "003410",
+     "name": "쌍용C&E",
+     "exclusionReason": "관측 누락·중복 또는 가격 확인 필요",
+     "status": "자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-05-10"
+       ],
+       "shares": [
+        -54910102
+       ],
+       "priceRebasing": false
+      }
+     ]
+    },
+    {
+     "symbol": "004800",
+     "name": "효성",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-04"
+       ],
+       "shares": [
+        -604691
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "회사분할",
+       "dates": [
+        "2024-07-29"
+       ],
+       "shares": [
+        -3725927
+       ],
+       "priceRebasing": true,
+       "kindReason": "회사분할(존속)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-07-29"
+     ]
+    },
+    {
+     "symbol": "093370",
+     "name": "후성",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-04-30"
+       ],
+       "shares": [
+        12903226
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-02-28"
+     ]
+    },
+    {
+     "symbol": "020560",
+     "name": "아시아나항공",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-12-30"
+       ],
+       "shares": [
+        131578947
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "001740",
+     "name": "SK네트웍스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-21"
+       ],
+       "shares": [
+        -14500363
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "032350",
+     "name": "롯데관광개발",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-01-17",
+        "2024-03-13",
+        "2024-04-18",
+        "2024-06-20"
+       ],
+       "shares": [
+        52830,
+        396432,
+        14866,
+        10314
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내CB전환"
+      }
+     ]
+    },
+    {
+     "symbol": "192080",
+     "name": "더블유게임즈",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-02-14"
+       ],
+       "shares": [
+        3305149
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-01-17"
+     ]
+    },
+    {
+     "symbol": "010780",
+     "name": "아이에스동서",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-21"
+       ],
+       "shares": [
+        -705630
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "000670",
+     "name": "영풍",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "자료 확인 중",
+     "documented": false,
+     "actions": [],
+     "priceBreakDays": [
+      "2024-12-27"
+     ]
+    },
+    {
+     "symbol": "086520",
+     "name": "에코프로",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식분할",
+       "dates": [
+        "2024-04-25"
+       ],
+       "shares": [
+        106510672
+       ],
+       "priceRebasing": true,
+       "kindReason": "액면분할"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-04-25"
+     ]
+    },
+    {
+     "symbol": "028300",
+     "name": "HLB",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사 · 전환사채 전환",
+       "dates": [
+        "2024-01-08",
+        "2024-01-16",
+        "2024-02-20",
+        "2024-02-26"
+       ],
+       "shares": [
+        190882,
+        738881,
+        96140,
+        122505
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사 · 국내사모 전환사채 전환"
+      },
+      {
+       "action": "신주인수권 행사",
+       "dates": [
+        "2024-01-09",
+        "2024-01-23",
+        "2024-01-30",
+        "2024-02-08",
+        "2024-04-08",
+        "2024-09-30",
+        "2024-10-29"
+       ],
+       "shares": [
+        128265,
+        75262,
+        103484,
+        62934,
+        18323,
+        241872,
+        260197
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-20",
+        "2024-09-03"
+       ],
+       "shares": [
+        15000,
+        40000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "066970",
+     "name": "엘앤에프",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-03-22",
+        "2024-04-26",
+        "2024-08-23",
+        "2024-12-24"
+       ],
+       "shares": [
+        8168,
+        38745,
+        1600,
+        836
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "196170",
+     "name": "알테오젠",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-01-17"
+       ],
+       "shares": [
+        827350
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-22",
+        "2024-10-29"
+       ],
+       "shares": [
+        136700,
+        170300
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "035900",
+     "name": "JYP Ent.",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-07"
+       ],
+       "shares": [
+        15000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "403870",
+     "name": "HPSP",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-01",
+        "2024-02-29",
+        "2024-11-25",
+        "2024-12-18"
+       ],
+       "shares": [
+        82640,
+        7230,
+        64832,
+        216000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "328130",
+     "name": "루닛",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-19",
+        "2024-02-13",
+        "2024-05-16",
+        "2024-08-02",
+        "2024-11-13"
+       ],
+       "shares": [
+        225969,
+        57533,
+        70820,
+        42522,
+        69748
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "068760",
+     "name": "셀트리온제약",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-23",
+        "2024-05-22",
+        "2024-08-22",
+        "2024-11-22"
+       ],
+       "shares": [
+        2773,
+        11479,
+        3734,
+        3200
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      },
+      {
+       "action": "주식배당",
+       "dates": [
+        "2024-04-19"
+       ],
+       "shares": [
+        1972158
+       ],
+       "priceRebasing": true,
+       "kindReason": "주식배당"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-12-27"
+     ]
+    },
+    {
+     "symbol": "141080",
+     "name": "레고켐바이오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-01-12",
+        "2024-06-05"
+       ],
+       "shares": [
+        677966,
+        401655
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환",
+       "kindName": "리가켐바이오"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-04-23"
+       ],
+       "shares": [
+        7963283
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)",
+       "kindName": "리가켐바이오"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-09",
+        "2024-10-29"
+       ],
+       "shares": [
+        82100,
+        42990
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사",
+       "kindName": "리가켐바이오"
+      }
+     ]
+    },
+    {
+     "symbol": "277810",
+     "name": "레인보우로보틱스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-01-10"
+       ],
+       "shares": [
+        2000
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "041510",
+     "name": "에스엠",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-15",
+        "2024-09-13"
+       ],
+       "shares": [
+        -241379,
+        -235895
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "086900",
+     "name": "메디톡스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-05-20"
+       ],
+       "shares": [
+        29
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      }
+     ]
+    },
+    {
+     "symbol": "036930",
+     "name": "주성엔지니어링",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-08-05"
+       ],
+       "shares": [
+        -980891
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "112040",
+     "name": "위메이드",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-01-16",
+        "2024-04-18"
+       ],
+       "shares": [
+        101014,
+        50507
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "121600",
+     "name": "나노신소재",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-26"
+       ],
+       "shares": [
+        36200
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "293490",
+     "name": "카카오게임즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-08",
+        "2024-02-05",
+        "2024-03-08",
+        "2024-04-04",
+        "2024-05-07",
+        "2024-06-05",
+        "2024-07-03",
+        "2024-08-05",
+        "2024-09-05",
+        "2024-10-08",
+        "2024-11-05",
+        "2024-12-04",
+        "2024-12-12"
+       ],
+       "shares": [
+        300,
+        12102,
+        54405,
+        39666,
+        4440,
+        15335,
+        11200,
+        8700,
+        1500,
+        334,
+        5700,
+        12003,
+        150000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "067310",
+     "name": "하나마이크론",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-25",
+        "2024-01-31",
+        "2024-02-06",
+        "2024-02-07",
+        "2024-02-26",
+        "2024-02-27",
+        "2024-02-29",
+        "2024-03-26",
+        "2024-05-09",
+        "2024-05-17"
+       ],
+       "shares": [
+        24000,
+        4800,
+        10000,
+        10000,
+        16000,
+        18000,
+        6000,
+        5500,
+        5000,
+        28000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-03-29",
+        "2024-12-26"
+       ],
+       "shares": [
+        4062321,
+        527053
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-08-20"
+       ],
+       "shares": [
+        5000000
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      },
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-09-04"
+       ],
+       "shares": [
+        8575421
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-06-19",
+      "2024-08-08"
+     ]
+    },
+    {
+     "symbol": "067630",
+     "name": "HLB생명과학",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사",
+       "dates": [
+        "2024-01-15",
+        "2024-01-31",
+        "2024-02-15",
+        "2024-02-29",
+        "2024-03-15",
+        "2024-03-29",
+        "2024-04-17",
+        "2024-04-30",
+        "2024-05-16",
+        "2024-05-31",
+        "2024-06-17",
+        "2024-06-28",
+        "2024-07-15",
+        "2024-07-31",
+        "2024-08-16",
+        "2024-08-30",
+        "2024-09-19",
+        "2024-09-30",
+        "2024-10-04",
+        "2024-10-18",
+        "2024-11-15",
+        "2024-11-29",
+        "2024-12-16"
+       ],
+       "shares": [
+        18527,
+        42890,
+        1067836,
+        1469701,
+        738038,
+        770889,
+        227418,
+        21627,
+        22962,
+        6906,
+        6285,
+        3177,
+        289,
+        4998,
+        445,
+        1176,
+        910,
+        344,
+        1602,
+        3143,
+        467,
+        66,
+        271
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내공모 신주인수권부사채 신주인수권 행사"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-02-20",
+        "2024-02-22",
+        "2024-03-20",
+        "2024-04-19",
+        "2024-12-30"
+       ],
+       "shares": [
+        743393,
+        174916,
+        20990,
+        477522,
+        3203559
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-07-08"
+       ],
+       "shares": [
+        11005125
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-05-09"
+     ]
+    },
+    {
+     "symbol": "393890",
+     "name": "더블유씨피",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-12-20"
+       ],
+       "shares": [
+        146626
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "048410",
+     "name": "현대바이오",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-23",
+        "2024-02-05",
+        "2024-04-09",
+        "2024-07-11"
+       ],
+       "shares": [
+        3000,
+        4400,
+        3200,
+        1000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-12-17"
+     ]
+    },
+    {
+     "symbol": "140410",
+     "name": "메지온",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-03-29",
+        "2024-07-10",
+        "2024-10-31"
+       ],
+       "shares": [
+        92232,
+        32284,
+        4419
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-08",
+        "2024-06-21",
+        "2024-07-31",
+        "2024-09-13",
+        "2024-09-30"
+       ],
+       "shares": [
+        55006,
+        37500,
+        112507,
+        19500,
+        2500
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "348370",
+     "name": "엔켐",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-01-08",
+        "2024-01-18",
+        "2024-03-13",
+        "2024-04-09",
+        "2024-08-08",
+        "2024-12-26"
+       ],
+       "shares": [
+        230291,
+        106137,
+        656596,
+        295854,
+        32119,
+        1
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      },
+      {
+       "action": "신주인수권 행사 · 우선주 전환",
+       "dates": [
+        "2024-02-05",
+        "2024-02-15",
+        "2024-02-29",
+        "2024-03-15"
+       ],
+       "shares": [
+        489500,
+        80129,
+        187932,
+        304806
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사 · 우선주의 보통주전환"
+      },
+      {
+       "action": "우선주 전환 · 주식매수선택권 행사",
+       "dates": [
+        "2024-03-29"
+       ],
+       "shares": [
+        71001
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환 · 주식매수선택권행사"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-05-10",
+        "2024-05-31",
+        "2024-06-19",
+        "2024-07-22",
+        "2024-12-17"
+       ],
+       "shares": [
+        394993,
+        268578,
+        972657,
+        424257,
+        323301
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "145020",
+     "name": "휴젤",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-01-11"
+       ],
+       "shares": [
+        -371563
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-06-20"
+       ],
+       "shares": [
+        590141
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "137400",
+     "name": "피엔티",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-07-03",
+        "2024-07-05"
+       ],
+       "shares": [
+        894543,
+        107345
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      }
+     ]
+    },
+    {
+     "symbol": "365340",
+     "name": "성일하이텍",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-23",
+        "2024-05-24",
+        "2024-08-27",
+        "2024-12-04"
+       ],
+       "shares": [
+        62464,
+        30207,
+        2250,
+        10653
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "298380",
+     "name": "에이비엘바이오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-06-17",
+        "2024-11-25"
+       ],
+       "shares": [
+        155250,
+        234153
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "140860",
+     "name": "파크시스템스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-03-15",
+        "2024-04-05",
+        "2024-04-26",
+        "2024-05-22",
+        "2024-06-19",
+        "2024-09-12",
+        "2024-11-29",
+        "2024-12-30"
+       ],
+       "shares": [
+        2000,
+        2900,
+        2500,
+        2500,
+        4700,
+        3050,
+        1968,
+        2000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "131970",
+     "name": "두산테스나",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-12-12"
+       ],
+       "shares": [
+        2320672
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      }
+     ]
+    },
+    {
+     "symbol": "039200",
+     "name": "오스코텍",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-03-12",
+        "2024-09-06"
+       ],
+       "shares": [
+        10007,
+        250211
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-01"
+       ],
+       "shares": [
+        3500
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "383310",
+     "name": "에코프로에이치엔",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-12-26"
+       ],
+       "shares": [
+        5670000
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-10-11"
+     ]
+    },
+    {
+     "symbol": "122870",
+     "name": "와이지엔터테인먼트",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-01-03",
+        "2024-01-19",
+        "2024-02-07",
+        "2024-04-19"
+       ],
+       "shares": [
+        6540,
+        1920,
+        1630,
+        330
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "214450",
+     "name": "파마리서치",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사 · 전환사채 전환",
+       "dates": [
+        "2024-05-02"
+       ],
+       "shares": [
+        38631
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사 · 국내사모 전환사채 전환"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-05-17",
+        "2024-07-15",
+        "2024-08-27",
+        "2024-11-04"
+       ],
+       "shares": [
+        19883,
+        39767,
+        11362,
+        11362
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "신주인수권 행사",
+       "dates": [
+        "2024-05-31",
+        "2024-10-23"
+       ],
+       "shares": [
+        34086,
+        34086
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "237690",
+     "name": "에스티팜",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-04-05",
+        "2024-05-22",
+        "2024-05-29",
+        "2024-06-19",
+        "2024-07-25",
+        "2024-09-02",
+        "2024-09-03",
+        "2024-09-05",
+        "2024-09-06",
+        "2024-09-09",
+        "2024-09-12",
+        "2024-09-20",
+        "2024-10-07",
+        "2024-10-15",
+        "2024-10-30",
+        "2024-11-26",
+        "2024-12-12"
+       ],
+       "shares": [
+        125129,
+        202243,
+        181873,
+        145498,
+        218248,
+        43943,
+        4394,
+        50534,
+        32639,
+        65286,
+        119272,
+        65286,
+        22599,
+        21971,
+        18832,
+        5022,
+        3766
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "214150",
+     "name": "클래시스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-03-18"
+       ],
+       "shares": [
+        -777183
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      },
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-10-22"
+       ],
+       "shares": [
+        1506140
+       ],
+       "priceRebasing": false,
+       "kindReason": "타법인흡수합병"
+      }
+     ]
+    },
+    {
+     "symbol": "099190",
+     "name": "아이센스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-03",
+        "2024-11-29"
+       ],
+       "shares": [
+        119000,
+        4000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "034230",
+     "name": "파라다이스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-05-22"
+       ],
+       "shares": [
+        12548
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "060280",
+     "name": "큐렉소",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-16",
+        "2024-03-22",
+        "2024-04-30"
+       ],
+       "shares": [
+        124000,
+        5000,
+        5000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "166090",
+     "name": "하나머티리얼즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-25"
+       ],
+       "shares": [
+        25000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "287410",
+     "name": "제이시스메디칼",
+     "exclusionReason": "관측 누락·중복 또는 가격 확인 필요",
+     "status": "자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-03-27",
+        "2024-07-04",
+        "2024-08-23",
+        "2024-09-10"
+       ],
+       "shares": [
+        168444,
+        72317,
+        57865,
+        -1075838
+       ],
+       "priceRebasing": false
+      }
+     ]
+    },
+    {
+     "symbol": "348210",
+     "name": "넥스틴",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-05-30",
+        "2024-09-04"
+       ],
+       "shares": [
+        79028,
+        79890
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "052020",
+     "name": "에스티큐브",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "우선주 전환",
+       "dates": [
+        "2024-02-13",
+        "2024-02-20",
+        "2024-12-24"
+       ],
+       "shares": [
+        215748,
+        200000,
+        17186
+       ],
+       "priceRebasing": false,
+       "kindReason": "우선주의 보통주전환"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-11-11",
+        "2024-12-11"
+       ],
+       "shares": [
+        2771856,
+        18500000
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-10-23"
+     ]
+    },
+    {
+     "symbol": "222080",
+     "name": "씨아이에스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-03-21",
+        "2024-12-20"
+       ],
+       "shares": [
+        544552,
+        5642512
+       ],
+       "priceRebasing": false,
+       "kindReason": "타법인흡수합병",
+       "kindName": "SFA넥셀"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-03-25",
+        "2024-03-29",
+        "2024-06-25"
+       ],
+       "shares": [
+        350261,
+        288451,
+        288451
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환",
+       "kindName": "SFA넥셀"
+      }
+     ]
+    },
+    {
+     "symbol": "215600",
+     "name": "신라젠",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-07-09"
+       ],
+       "shares": [
+        34500000
+       ],
+       "priceRebasing": true,
+       "kindReason": "유상증자(구주주배정)"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-05-09"
+     ]
+    },
+    {
+     "symbol": "310210",
+     "name": "보로노이",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-05",
+        "2024-07-15",
+        "2024-10-22"
+       ],
+       "shares": [
+        381418,
+        15000,
+        262762
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-07-24"
+       ],
+       "shares": [
+        298605
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "215200",
+     "name": "메가스터디교육",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-05-20",
+        "2024-07-24"
+       ],
+       "shares": [
+        -68597,
+        -163922
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "058970",
+     "name": "엠로",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사 · 전환사채 전환",
+       "dates": [
+        "2024-08-13"
+       ],
+       "shares": [
+        641598
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사 · 국내사모 전환사채 전환"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-27"
+       ],
+       "shares": [
+        302092
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "178320",
+     "name": "서진시스템",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-05-14",
+        "2024-05-20",
+        "2024-07-31",
+        "2024-10-15"
+       ],
+       "shares": [
+        10462209,
+        7659572,
+        297872,
+        127659
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-09-03"
+       ],
+       "shares": [
+        120000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "418550",
+     "name": "제이오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-18",
+        "2024-12-02"
+       ],
+       "shares": [
+        206500,
+        245400
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "272290",
+     "name": "이녹스첨단소재",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-07-19"
+       ],
+       "shares": [
+        26000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "182400",
+     "name": "엔케이맥스",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-01-12"
+       ],
+       "shares": [
+        41433988
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자",
+       "kindName": "엔케이젠바이오텍코리아"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-02-21",
+        "2024-02-27"
+       ],
+       "shares": [
+        333695,
+        2315445
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환",
+       "kindName": "엔케이젠바이오텍코리아"
+      }
+     ],
+     "zeroVolumeDays": [
+      "2024-12-30"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (회생절차 개시결정)",
+       "date": "2024-06-10",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240610900382"
+      }
+     ]
+    },
+    {
+     "symbol": "016790",
+     "name": "카나리아바이오",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-01-09",
+        "2024-01-12",
+        "2024-03-12"
+       ],
+       "shares": [
+        2947306,
+        1964215,
+        1480165
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환",
+       "kindName": "현대사료"
+      },
+      {
+       "action": "유상증자 · 전환사채 전환",
+       "dates": [
+        "2024-01-17"
+       ],
+       "shares": [
+        2025879
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환 · 유상증자(제3자배정)",
+       "kindName": "현대사료"
+      }
+     ],
+     "zeroVolumeDays": [
+      "2024-12-30"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (상장적격성 실질심사 대상(사유발생))",
+       "date": "2024-09-19",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240919900422"
+      }
+     ]
+    },
+    {
+     "symbol": "007390",
+     "name": "네이처셀",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-08-16"
+       ],
+       "shares": [
+        200000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "053800",
+     "name": "안랩",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-10-18"
+       ],
+       "shares": [
+        1112651
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "068240",
+     "name": "다원시스",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-05-13"
+       ],
+       "shares": [
+        3900000
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-03-13"
+     ]
+    },
+    {
+     "symbol": "025980",
+     "name": "아난티",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-01-08",
+        "2024-06-03"
+       ],
+       "shares": [
+        -1000000,
+        -2000000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "336570",
+     "name": "원텍",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-30"
+       ],
+       "shares": [
+        1166704
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "299030",
+     "name": "하나기술",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-06-28"
+       ],
+       "shares": [
+        9986
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-08-22"
+       ],
+       "shares": [
+        -175683
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "194480",
+     "name": "데브시스터즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-08",
+        "2024-05-10",
+        "2024-09-03",
+        "2024-11-07"
+       ],
+       "shares": [
+        12220,
+        15000,
+        22100,
+        5170
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "425040",
+     "name": "티이엠씨",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 권리락 조정 필요",
+     "documented": true,
+     "actions": [
+      {
+       "action": "무상증자",
+       "dates": [
+        "2024-01-25"
+       ],
+       "shares": [
+        10626108
+       ],
+       "priceRebasing": true,
+       "kindReason": "무상증자"
+      },
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-26",
+        "2024-07-26"
+       ],
+       "shares": [
+        46440,
+        17400
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "095700",
+     "name": "제넥신",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-10-17"
+       ],
+       "shares": [
+        4029900
+       ],
+       "priceRebasing": false,
+       "kindReason": "타법인흡수합병"
+      }
+     ]
+    },
+    {
+     "symbol": "225570",
+     "name": "넥슨게임즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-07",
+        "2024-04-05",
+        "2024-07-05",
+        "2024-08-07",
+        "2024-09-06",
+        "2024-10-11"
+       ],
+       "shares": [
+        6000,
+        3000,
+        18000,
+        24000,
+        6404,
+        8000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "036810",
+     "name": "에프에스티",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "자료 확인 중",
+     "documented": false,
+     "actions": [],
+     "priceBreakDays": [
+      "2024-12-27"
+     ]
+    },
+    {
+     "symbol": "095660",
+     "name": "네오위즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-01"
+       ],
+       "shares": [
+        -176903
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "025900",
+     "name": "동화기업",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "권리락 추정 · KIND 상장일 기준(권리락일 미확인)",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-04-19",
+        "2024-07-19"
+       ],
+       "shares": [
+        5421,
+        5245
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      },
+      {
+       "action": "주식분할",
+       "dates": [
+        "2024-05-03"
+       ],
+       "shares": [
+        30331224
+       ],
+       "priceRebasing": true,
+       "kindReason": "액면분할"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-05-03"
+     ]
+    },
+    {
+     "symbol": "200130",
+     "name": "콜마비앤에이치",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-01-25"
+       ],
+       "shares": [
+        -128000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "119860",
+     "name": "커넥트웨이브",
+     "exclusionReason": "관측 누락·중복 또는 가격 확인 필요",
+     "status": "자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-05-20",
+        "2024-08-01",
+        "2024-09-13"
+       ],
+       "shares": [
+        -1445789,
+        -235470,
+        -5175097
+       ],
+       "priceRebasing": false
+      }
+     ]
+    },
+    {
+     "symbol": "006730",
+     "name": "서부T&D",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 권리락 조정 필요",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식배당",
+       "dates": [
+        "2024-04-19"
+       ],
+       "shares": [
+        5863682
+       ],
+       "priceRebasing": true,
+       "kindReason": "주식배당"
+      },
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-06-11",
+        "2024-12-24"
+       ],
+       "shares": [
+        -1000000,
+        -500000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "101670",
+     "name": "하이드로리튬",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사 · 전환사채 전환",
+       "dates": [
+        "2024-01-18",
+        "2024-10-25"
+       ],
+       "shares": [
+        5538732,
+        605326
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사 · 국내사모 전환사채 전환"
+      },
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-01-22",
+        "2024-03-13"
+       ],
+       "shares": [
+        1513317,
+        3631961
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      },
+      {
+       "action": "신주인수권 행사",
+       "dates": [
+        "2024-03-07",
+        "2024-06-27"
+       ],
+       "shares": [
+        605326,
+        756658
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 신주인수권부사채 신주인수권 행사"
+      },
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-12-04"
+       ],
+       "shares": [
+        2478314
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ]
+    },
+    {
+     "symbol": "360070",
+     "name": "탑머티리얼",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-26",
+        "2024-03-12",
+        "2024-03-27",
+        "2024-04-09",
+        "2024-04-26",
+        "2024-05-09",
+        "2024-05-28",
+        "2024-06-27",
+        "2024-07-10"
+       ],
+       "shares": [
+        54000,
+        8400,
+        2000,
+        10000,
+        7200,
+        3200,
+        2000,
+        4400,
+        1200
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "041960",
+     "name": "코미팜",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-07-29"
+       ],
+       "shares": [
+        17769
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "230240",
+     "name": "에치에프알",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-08-21"
+       ],
+       "shares": [
+        -180026
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ]
+    },
+    {
+     "symbol": "298540",
+     "name": "더네이쳐홀딩스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-02-15",
+        "2024-08-02"
+       ],
+       "shares": [
+        40500,
+        14780
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "073570",
+     "name": "리튬포어스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-02-05",
+        "2024-02-08",
+        "2024-02-15",
+        "2024-03-05",
+        "2024-03-19",
+        "2024-04-12",
+        "2024-07-03"
+       ],
+       "shares": [
+        5005446,
+        185790,
+        92896,
+        923492,
+        218575,
+        677594,
+        218579
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "268600",
+     "name": "셀리버리",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [
+      {
+       "action": "자료 확인 중",
+       "dates": [
+        "2024-07-25",
+        "2024-08-12",
+        "2024-09-20"
+       ],
+       "shares": [
+        132475,
+        339027,
+        43887
+       ],
+       "priceRebasing": false
+      }
+     ],
+     "zeroVolumeDays": [
+      "2024-01-02",
+      "2024-12-30"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (상장폐지 사유 발생)",
+       "date": "2023-03-23",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230323902230"
+      },
+      {
+       "title": "주권매매거래정지기간변경 (개선기간 부여)",
+       "date": "2023-04-07",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20230407900945"
+      },
+      {
+       "title": "주권매매거래정지해제 (상장폐지에 따른 정리매매 개시)",
+       "date": "2024-06-03",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240603900639"
+      },
+      {
+       "title": "주권매매거래정지 (투자자 보호)",
+       "date": "2024-06-04",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240604900303"
+      }
+     ]
+    },
+    {
+     "symbol": "294090",
+     "name": "이오플로우",
+     "exclusionReason": "전일 종가와 기준가격 차이 확인",
+     "status": "주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중",
+     "documented": false,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-07-03"
+       ],
+       "shares": [
+        18972
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ],
+     "priceBreakDays": [
+      "2024-10-30"
+     ]
+    }
+   ]
+  },
+  "2024-11": {
+   "firstDate": "2024-11-01",
+   "lastDate": "2024-11-29",
+   "universe": "TIGER 200 · TIGER 코스닥150 보유 주식",
+   "provider": "TIGER",
+   "holdingsSources": [
+    "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7102110004&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500",
+    "https://investments.miraeasset.com/tigeretf/ko/product/search/detail/pdfListAjax.ajax?ksdFund=KR7232080002&fixDate=2024.11.01&prfPrd=Week01&order=SRD&pageIndex=1&firstIndex=0&listCnt=500"
+   ],
+   "universeCount": 355,
+   "excludedCount": 32,
+   "documentedCount": 32,
+   "exclusions": {
+    "상장주식수 변경 확인": 27,
+    "첫날·마지막 날 거래량 미확인 또는 0": 5
+   },
+   "byReason": {
+    "상장주식수 변경 확인": {
+     "count": 27,
+     "documented": 27,
+     "statuses": {
+      "KIND 발행내역 일치 · 기준가 조정 없음": 27
+     }
+    },
+    "첫날·마지막 날 거래량 미확인 또는 0": {
+     "count": 5,
+     "documented": 5,
+     "statuses": {
+      "거래정지 공시 확인": 5
+     }
+    }
+   },
+   "actionCounts": {
+    "신주인수권 행사": 1,
+    "유상증자": 1,
+    "전환사채 전환": 3,
+    "주식매수선택권 행사": 16,
+    "주식소각": 5,
+    "합병 신주": 1
+   },
+   "stocks": [
+    {
+     "symbol": "068270",
+     "name": "셀트리온",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-13"
+       ],
+       "shares": [
+        57364
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "000270",
+     "name": "기아",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-27"
+       ],
+       "shares": [
+        -2185785
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주식소각결정",
+       "date": "2024-10-25",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241025800218"
+      }
+     ]
+    },
+    {
+     "symbol": "035420",
+     "name": "NAVER",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-25"
+       ],
+       "shares": [
+        -2347500
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ],
+     "documents": [
+      {
+       "title": "[기재정정]주식소각결정",
+       "date": "2024-11-06",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241106800514"
+      }
+     ]
+    },
+    {
+     "symbol": "055550",
+     "name": "신한지주",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-18"
+       ],
+       "shares": [
+        -5947889
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ],
+     "documents": [
+      {
+       "title": "[기재정정]주식소각결정",
+       "date": "2024-10-28",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241028800362"
+      }
+     ]
+    },
+    {
+     "symbol": "035720",
+     "name": "카카오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-08"
+       ],
+       "shares": [
+        21626
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "259960",
+     "name": "크래프톤",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-19"
+       ],
+       "shares": [
+        500
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "323410",
+     "name": "카카오뱅크",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-06"
+       ],
+       "shares": [
+        5000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "096770",
+     "name": "SK이노베이션",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "합병 신주",
+       "dates": [
+        "2024-11-20"
+       ],
+       "shares": [
+        55299186
+       ],
+       "priceRebasing": false,
+       "kindReason": "합병"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주요사항보고서(회사합병결정)",
+       "date": "2024-07-17",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240717000415"
+      }
+     ]
+    },
+    {
+     "symbol": "011200",
+     "name": "HMM",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-11-13"
+       ],
+       "shares": [
+        132000000
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내CB전환"
+      }
+     ]
+    },
+    {
+     "symbol": "042700",
+     "name": "한미반도체",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-28"
+       ],
+       "shares": [
+        -379375
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주식소각결정",
+       "date": "2024-10-25",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241025800282"
+      }
+     ]
+    },
+    {
+     "symbol": "001570",
+     "name": "금양",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "유상증자",
+       "dates": [
+        "2024-11-28"
+       ],
+       "shares": [
+        5917159
+       ],
+       "priceRebasing": false,
+       "kindReason": "유상증자(제3자배정)"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주요사항보고서(유상증자결정)",
+       "date": "2024-10-31",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241031000530"
+      },
+      {
+       "title": "[기재정정]유상증자또는주식관련사채등의발행결과(자율공시)",
+       "date": "2024-11-14",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241114802847"
+      }
+     ]
+    },
+    {
+     "symbol": "007070",
+     "name": "GS리테일",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [],
+     "zeroVolumeDays": [
+      "2024-11-29"
+     ],
+     "documents": [
+      {
+       "title": "[첨부정정]주요사항보고서(회사분할결정)",
+       "date": "2024-11-28",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241128001296"
+      }
+     ]
+    },
+    {
+     "symbol": "069960",
+     "name": "현대백화점",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식소각",
+       "dates": [
+        "2024-11-29"
+       ],
+       "shares": [
+        -773628
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식소각"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주식소각결정",
+       "date": "2024-11-07",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241107800123"
+      }
+     ]
+    },
+    {
+     "symbol": "377300",
+     "name": "카카오페이",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-15"
+       ],
+       "shares": [
+        6573
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "403870",
+     "name": "HPSP",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-25"
+       ],
+       "shares": [
+        64832
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "214450",
+     "name": "파마리서치",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-11-04"
+       ],
+       "shares": [
+        11362
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "298380",
+     "name": "에이비엘바이오",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-25"
+       ],
+       "shares": [
+        234153
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "068760",
+     "name": "셀트리온제약",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-22"
+       ],
+       "shares": [
+        3200
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "237690",
+     "name": "에스티팜",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "전환사채 전환",
+       "dates": [
+        "2024-11-26"
+       ],
+       "shares": [
+        5022
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내사모 전환사채 전환"
+      }
+     ]
+    },
+    {
+     "symbol": "140860",
+     "name": "파크시스템스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-29"
+       ],
+       "shares": [
+        1968
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "328130",
+     "name": "루닛",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-13"
+       ],
+       "shares": [
+        69748
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "067630",
+     "name": "HLB생명과학",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "신주인수권 행사",
+       "dates": [
+        "2024-11-15",
+        "2024-11-29"
+       ],
+       "shares": [
+        467,
+        66
+       ],
+       "priceRebasing": false,
+       "kindReason": "국내공모 신주인수권부사채 신주인수권 행사"
+      }
+     ]
+    },
+    {
+     "symbol": "293490",
+     "name": "카카오게임즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-05"
+       ],
+       "shares": [
+        5700
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "099190",
+     "name": "아이센스",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-29"
+       ],
+       "shares": [
+        4000
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "058970",
+     "name": "엠로",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-27"
+       ],
+       "shares": [
+        302092
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ],
+     "documents": [
+      {
+       "title": "주식매수선택권행사",
+       "date": "2024-11-13",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20241113900679"
+      }
+     ]
+    },
+    {
+     "symbol": "358570",
+     "name": "지아이이노베이션",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-15"
+       ],
+       "shares": [
+        86988
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "194480",
+     "name": "데브시스터즈",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-07"
+       ],
+       "shares": [
+        5170
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "394280",
+     "name": "오픈엣지테크놀로지",
+     "exclusionReason": "상장주식수 변경 확인",
+     "status": "KIND 발행내역 일치 · 기준가 조정 없음",
+     "documented": true,
+     "actions": [
+      {
+       "action": "주식매수선택권 행사",
+       "dates": [
+        "2024-11-04"
+       ],
+       "shares": [
+        22930
+       ],
+       "priceRebasing": false,
+       "kindReason": "주식매수선택권행사"
+      }
+     ]
+    },
+    {
+     "symbol": "182400",
+     "name": "엔케이맥스",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [],
+     "zeroVolumeDays": [
+      "2024-11-01",
+      "2024-11-29"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (회생절차 개시결정)",
+       "date": "2024-06-10",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240610900382"
+      }
+     ]
+    },
+    {
+     "symbol": "268600",
+     "name": "셀리버리",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [],
+     "zeroVolumeDays": [
+      "2024-11-01",
+      "2024-11-29"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지해제 (상장폐지에 따른 정리매매 개시)",
+       "date": "2024-06-03",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240603900639"
+      },
+      {
+       "title": "주권매매거래정지 (투자자 보호)",
+       "date": "2024-06-04",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240604900303"
+      }
+     ]
+    },
+    {
+     "symbol": "016790",
+     "name": "현대사료",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [],
+     "zeroVolumeDays": [
+      "2024-11-01",
+      "2024-11-29"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (상장적격성 실질심사 대상(사유발생))",
+       "date": "2024-09-19",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240919900422"
+      }
+     ]
+    },
+    {
+     "symbol": "078130",
+     "name": "국일제지",
+     "exclusionReason": "첫날·마지막 날 거래량 미확인 또는 0",
+     "status": "거래정지 공시 확인",
+     "documented": true,
+     "actions": [],
+     "zeroVolumeDays": [
+      "2024-11-01",
+      "2024-11-29"
+     ],
+     "documents": [
+      {
+       "title": "주권매매거래정지기간변경 (개선기간 부여)",
+       "date": "2024-05-29",
+       "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20240529900610"
+      }
+     ]
+    }
+   ]
+  }
+ }
+}

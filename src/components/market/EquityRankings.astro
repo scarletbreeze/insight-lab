@@ -1,5 +1,6 @@
 ---
 import koreanCoverage from '../../../data/market/months/kr-equity-coverage.json';
+import krActions from '../../../data/market/kr-exclusion-actions.json';
 import priceCoverage from '../../../data/market/months/kr-price-coverage-2024.json';
 import raw from '../../../data/market/months/equity-rankings.json';
 import spyRaw from '../../../data/market/months/spy-equity-rankings.json';
@@ -31,8 +32,17 @@ interface Ranking {
   items: Equity[];
 }
 
+interface ActionGroup { action: string; kindReason?: string; kindName?: string; dates: string[]; shares: number[]; priceRebasing: boolean; }
+interface ExcludedStock { symbol: string; name: string; exclusionReason: string; status: string; documented: boolean; actions: ActionGroup[]; zeroVolumeDays?: string[]; priceBreakDays?: string[]; documents?: Array<{ title: string; date: string; url: string }>; }
+interface ActionPeriod { excludedCount: number; documentedCount: number; byReason: Record<string, { count: number; documented: number; statuses: Record<string, number> }>; stocks: ExcludedStock[]; }
+
 const { period } = Astro.props;
 const priceCheck = priceCoverage[period as keyof typeof priceCoverage];
+const actions = (krActions.periods as Record<string, ActionPeriod | undefined>)[period];
+const actionMethod = krActions.method;
+const shareFormat = new Intl.NumberFormat('ko-KR', { signDisplay: 'exceptZero' });
+const describeActions = (groups: ActionGroup[]) => groups.map(({ action, kindReason, kindName, dates, shares }) =>
+  `${kindReason ?? action}${kindName ? ` (KIND 법인명 ${kindName})` : ''} · ${dates.join(', ')} · ${shares.map((count) => shareFormat.format(count)).join(', ')}주`).join(' / ');
 const checked = koreanCoverage[period as keyof typeof koreanCoverage];
 const rankings = (raw as Record<string, Partial<Record<Market, Ranking>>>)[period];
 const spy = (spyRaw as Record<string, { US: Ranking }>)[period]?.US;
@@ -79,6 +89,21 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
         {market === '미국 · QQQ' && <p><a href={sitePath('market-time-capsule/game') + '?equityPeriod=' + period}>이달의 종목 수익률 퀴즈 풀기</a></p>}
       </> : market === '한국' && checked ? <p>{checked.provider} 200·{checked.provider} 코스닥150의 첫 거래일 보유 주식 {checked.universe}개 중 {checked.eligible}개가 거래량·종가 연속성·상장주식수 검사를 통과했습니다. 종목별 순위는 수정 가격과 공개 이용 범위를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#coverage-' + period}>이달의 제외 사유와 보유 명세</a></p> : market === '한국' && priceCheck ? <p>월초 상장 종목 {priceCheck.opening.toLocaleString('ko-KR')}개 중 {priceCheck.passed.toLocaleString('ko-KR')}개가 일별 시세 검사를 통과했습니다. 첫 거래일 ETF 보유 명세를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>시세 점검 결과</a></p> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
       {market === '한국' && checked && <p>두 번째 시세 출처로 {checked.priceCrossCheck.covered}개 종목을 재계산해 상위 10개 중 {checked.priceCrossCheck.matchedRanks}개의 순서가 일치했습니다.</p>}
+      {market === '한국' && actions && <details class="exclusion-actions"><summary>제외 종목 {actions.excludedCount}개의 기업행동 · {actions.documentedCount}개 사유 확인</summary>
+        <p>{Object.entries(actions.byReason).map(([reason, { count, documented, statuses }]) => `${reason} ${count}개 중 ${documented}개 확인 (${Object.entries(statuses).map(([status, n]) => `${status} ${n}`).join(', ')})`).join(' · ')}. 상장주식수 변동은 <a href={actionMethod.kindSource}>{actionMethod.kindSourceTitle}</a>, 거래정지는 DART에 게시된 거래소 공시로 확인했습니다. {actionMethod.kindHint}</p>
+        <p class="basis">{actionMethod.localBasis}</p>
+        <div class="lab-table-wrap"><table class="lab-table">
+          <caption>{period} 제외 종목의 검사 결과와 공시 근거</caption>
+          <thead><tr><th scope="col">종목</th><th scope="col">검사 결과 (KRX 일별 시세 기준 로컬 검증)</th><th scope="col">기업행동 · 근거</th><th scope="col">확인 상태</th></tr></thead>
+          <tbody>{actions.stocks.map((stock) => <tr>
+            <th scope="row">{stock.name} <span class="symbol">{stock.symbol}</span></th>
+            <td>{[stock.exclusionReason, stock.zeroVolumeDays?.length ? `거래량 0: ${stock.zeroVolumeDays.join(', ')}` : '', stock.priceBreakDays?.length ? `기준가격 차이: ${stock.priceBreakDays.join(', ')}` : ''].filter(Boolean).join(' · ')}</td>
+            <td>{stock.actions.length ? describeActions(stock.actions) : '주식수 변동 없음'}{stock.documents?.map(({ title, date, url }) => <> / <a href={url}>{title} ({date})</a></>)}</td>
+            <td class:list={{ unresolved: !stock.documented }}>{stock.status}</td>
+          </tr>)}</tbody>
+        </table></div>
+        <p><a href={actionMethod.kindSource}>KIND 주식발행내역</a> · <a href={actionMethod.dartSource}>DART 공시검색</a> · 조회 {actionMethod.collectedAt}</p>
+      </details>}
     </section>;
   })}
 </div>
@@ -94,4 +119,10 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
   .signed span { position: absolute; left: 50%; }
   .signed .negative { left: auto; right: 50%; }
   .equity-rank-track .negative { background: #a55443; }
+  .exclusion-actions summary { cursor: pointer; padding-block: .5rem; }
+  .exclusion-actions .basis { color: var(--color-muted); font-size: .9em; }
+  .exclusion-actions .lab-table th[scope="row"] { font-weight: 600; min-width: 9rem; }
+  .exclusion-actions .lab-table td { font-size: .9em; min-width: 10rem; }
+  .exclusion-actions .lab-table td.unresolved { color: var(--color-muted); }
+  .exclusion-actions .symbol { font-variant-numeric: tabular-nums; opacity: .7; font-weight: 400; }
 </style>

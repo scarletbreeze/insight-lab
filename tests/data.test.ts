@@ -519,6 +519,65 @@ test('Korean monthly research reconciles eligibility and points to dated fund ho
   }
 });
 
+test('Korean exclusion corporate actions reconcile with coverage counts and cite KIND or DART', () => {
+  type ActionGroup = { action: string; kindReason?: string; kindName?: string; dates: string[]; shares: number[]; priceRebasing: boolean };
+  type Document = { title: string; date: string; url: string };
+  type Stock = { symbol: string; name: string; exclusionReason: string; status: string; documented: boolean; actions: ActionGroup[]; zeroVolumeDays?: string[]; priceBreakDays?: string[]; documents?: Document[] };
+  type Reason = { count: number; documented: number; statuses: Record<string, number> };
+  type Period = { firstDate: string; lastDate: string; universeCount: number; excludedCount: number; documentedCount: number; exclusions: Record<string, number>; byReason: Record<string, Reason>; actionCounts: Record<string, number>; stocks: Stock[] };
+  const { method, periods } = readJson<{ method: { kindSource: string; dartSource: string; collectedAt: string; kindHint: string; localBasis: string }; periods: Record<string, Period> }>('market/kr-exclusion-actions.json');
+  assert.ok(method.kindSource.startsWith('https://kind.krx.co.kr/') && method.dartSource.startsWith('https://dart.fss.or.kr/') && method.kindHint && method.localBasis);
+  const aliases = readJson<{ companies: Record<string, { names: string[] }> }>('market/kr-company-aliases.json').companies;
+  const monthly = readJson<Record<string, { universe: number; eligible: number; excluded: Record<string, number> }>>('market/months/kr-equity-coverage.json');
+  const annual = readJson<Record<string, { universeCount: number; eligibleCount: number; exclusions: Record<string, number> }>>('market/kr-annual-price-coverage.json');
+  assert.deepEqual(Object.keys(periods).sort(), ['2024', '2024-11']);
+  assert.equal(periods['2024-11'].excludedCount, monthly['2024-11'].universe - monthly['2024-11'].eligible);
+  assert.deepEqual(periods['2024-11'].exclusions, monthly['2024-11'].excluded);
+  assert.equal(periods['2024'].excludedCount, annual['2024'].universeCount - annual['2024'].eligibleCount);
+  assert.deepEqual(periods['2024'].exclusions, annual['2024'].exclusions);
+  assert.equal(periods['2024-11'].documentedCount, 32);
+  assert.ok(periods['2024'].documentedCount < periods['2024'].excludedCount);
+  const unexplained = new Set(['자료 확인 중', '주식수 변동은 확인, 기준가격 차이 원인은 자료 확인 중']);
+  for (const period of Object.values(periods)) {
+    assert.equal(period.stocks.length, period.excludedCount);
+    assert.equal(new Set(period.stocks.map(({ symbol }) => symbol)).size, period.excludedCount);
+    assert.equal(Object.values(period.exclusions).reduce((a, b) => a + b, 0), period.excludedCount);
+    assert.equal(period.stocks.filter(({ documented }) => documented).length, period.documentedCount);
+    for (const [reason, { count, documented, statuses }] of Object.entries(period.byReason)) {
+      const stocks = period.stocks.filter((stock) => stock.exclusionReason === reason);
+      assert.equal(stocks.length, count);
+      assert.equal(period.exclusions[reason], count);
+      assert.equal(stocks.filter(({ documented: ok }) => ok).length, documented);
+      assert.equal(Object.values(statuses).reduce((a, b) => a + b, 0), count);
+    }
+    for (const stock of period.stocks) {
+      assert.match(stock.symbol, /^\d{6}$/);
+      const matched = stock.actions.filter(({ kindReason }) => kindReason);
+      const hasDocuments = (stock.documents?.length ?? 0) > 0;
+      // A stock with nothing sourced is never documented; the status must say so.
+      if (!matched.length && !hasDocuments) assert.ok(!stock.documented && unexplained.has(stock.status), `${stock.symbol} ${stock.status}`);
+      assert.equal(stock.documented, !unexplained.has(stock.status));
+      if (stock.documented) assert.ok(matched.length || hasDocuments);
+      if (stock.exclusionReason === '상장주식수 변경 확인') assert.ok(stock.actions.length, stock.symbol);
+      if (stock.exclusionReason === '첫날·마지막 날 거래량 미확인 또는 0') assert.equal(stock.documented, hasDocuments);
+      if (stock.exclusionReason === '전일 종가와 기준가격 차이 확인') assert.ok(stock.priceBreakDays?.length, stock.symbol);
+      // A matched share change alone never explains a reference-price gap.
+      if (stock.exclusionReason === '전일 종가와 기준가격 차이 확인' && stock.documented && !hasDocuments) {
+        assert.ok(matched.some(({ priceRebasing }) => priceRebasing), stock.symbol);
+      }
+      for (const { action, kindReason, kindName, dates, shares } of stock.actions) {
+        assert.equal(dates.length, shares.length);
+        assert.ok(dates.every((date) => date >= period.firstDate && date <= period.lastDate));
+        assert.ok(action === '자료 확인 중' ? kindReason === undefined : typeof kindReason === 'string');
+        if (kindName) assert.ok(kindName !== stock.name && aliases[stock.symbol]?.names.includes(kindName), `${stock.symbol} ${kindName}`);
+      }
+      for (const { url, date } of stock.documents ?? []) {
+        assert.ok(url.startsWith('https://dart.fss.or.kr/dsaf001/main.do?rcpNo=') && /^\d{4}-\d{2}-\d{2}$/.test(date));
+      }
+    }
+  }
+});
+
 test('The 2008 price archive keeps issuers distinct when a ticker was reused', () => {
   type Member = { symbol: string; archiveSymbol?: string };
   const { members } = readJson<{ members: Member[] }>('market/qqq-holdings-2008-09.json');
