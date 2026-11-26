@@ -5,6 +5,12 @@
     "sourceName": "한국은행 환율제도 연혁",
     "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
   },
+  "1990-05": {
+    "summary": "교통부가 수도권 신공항을 지을 위치를 정했다. 이달의 기록은 공사 착수에 앞선 입지 결정이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_5_17",
+    "memo": "영종도 입지가 확정된 달과 1992년 5월 건설 사업계획이 확정된 달을 찾아보세요. 각각의 결정으로 무엇이 정해졌나요?"
+  },
   "1990-08": {
     "summary": "이라크의 쿠웨이트 침공으로 두 나라의 원유 공급이 차질을 빚었습니다.",
     "memo": "침공일과 이달 WTI의 첫·마지막 관측일을 구분해 원유 공급 충격을 살펴보세요.",
@@ -29,6 +35,18 @@
     "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
     "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
   },
+  "1992-06": {
+    "summary": "경부고속철도 건설이 천안~대전 구간에서 시작됐다. 열차의 영업 운행은 2004년 4월 시작됐다.",
+    "sourceName": "국가기록원 · 경부고속철도 건설",
+    "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=316",
+    "memo": "1992년 3월 공단 설립, 6월 착공, 2004년 4월 영업 개시를 순서대로 놓고 건설기간과 운영기간을 구분해 보세요."
+  },
+  "1992-10": {
+    "summary": "삼성전자가 미국에서 달러 표시 채권인 양키본드를 발행해 자금을 조달했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf",
+    "memo": "양키본드를 발행한 기업은 어느 통화로 빚을 갚아야 할까요? 원화로 매출을 올린다고 가정하고 환율 변동의 영향을 생각해 보세요."
+  },
   "1993-04": {
     "summary": "CERN이 웹 소프트웨어의 소스 코드를 사용료 없이 쓸 수 있도록 공개했습니다.",
     "memo": "웹의 개발, 외부 배포, 소스 코드 무상 공개를 서로 다른 사건으로 놓고 순서를 확인해 보세요.",
@@ -47,6 +65,18 @@
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1994-12": {
+    "summary": "재무부가 1995년부터 개인의 외환보유를 전면 자유화하는 내용의 외환제도 개편안을 공개했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_12_5",
+    "memo": "발표는 12월이고 개편안이 제시한 적용 시기는 이듬해입니다. 연도별 제도 변화를 기록할 때 어떤 날짜를 기준으로 삼았는지 적어 보세요."
+  },
+  "1995-11": {
+    "summary": "삼성전자가 미화 1억 5천만 달러 규모의 주식예탁증서(DR)를 발행했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf",
+    "memo": "9월의 변동금리부채권과 11월의 주식예탁증서를 비교해 보세요. 어느 쪽이 회사의 빚이고 어느 쪽이 주식에 대한 권리를 나타내나요?"
+  },
   "1995-12": {
     "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±1.5%에서 ±2.25%로 넓어졌습니다.",
     "memo": "환율 제한폭의 변화와 연방기금금리 목표의 변화를 각각 어떤 단위로 읽어야 하는지 비교해 보세요.",
@@ -59,6 +89,12 @@
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1996-06": {
+    "summary": "예금보험제도를 운영할 공사가 발족했다. 전년도 10월 국무회의의 예금자보호법안 의결에 이어 등장한 운영기관이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_6_1",
+    "memo": "1995년 10월 법안 의결에서 예금보험공사 출범까지의 순서를 확인해 보세요. 법적 근거와 운영 주체가 마련된 시점은 어떻게 다른가요?"
+  },
   "1996-12": {
     "summary": "한국에 OECD 협약이 발효되면서 회원국이 됐습니다.",
     "memo": "OECD 협약이 한국에 발효된 날과 국내 주식시장이 외국인에게 개방된 날을 구분해 보세요.",
@@ -70,6 +106,12 @@
     "memo": "승인된 차관 한도와 승인 직후 인출할 수 있는 금액을 구분해 보세요.",
     "sourceName": "IMF 태국 차관 승인 보도자료",
     "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9737.htm"
+  },
+  "1997-10": {
+    "summary": "두 자동차 회사가 법정관리를 신청했다. 신청과 법원의 후속 결정을 구분해 읽을 수 있다.",
+    "sourceName": "국가기록원 · 기아·아시아자동차 법정관리 신청",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?archiveEvntId=0050752098&year=1997",
+    "memo": "법정관리 신청 소식을 읽은 당일 투자자가 알 수 있었던 내용과 법원의 결정 이후에 확인할 수 있는 내용을 구분해 보세요."
   },
   "1997-12": {
     "summary": "IMF의 협의 종료 발표에 이어 이사회가 한국의 대기성 차관을 승인했습니다.",

@@ -1,5 +1,21 @@
 [
   {
+    "date": "1990-01-17",
+    "title": "외국인 투자 신고제 도입 결정",
+    "category": "제도",
+    "summary": "통상장관회의에서 외국인 투자 절차에 신고제를 도입하기로 했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_1_17"
+  },
+  {
+    "date": "1990-02-06",
+    "title": "서해안 개발 투자계획 확정",
+    "category": "산업",
+    "summary": "정부가 서해안 개발에 들어갈 투자를 사업별·연도별로 나눠 확정했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_2_6"
+  },
+  {
     "date": "1990-03",
     "title": "한국, 시장평균환율제도 도입",
     "category": "제도",
@@ -8,6 +24,30 @@
     "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186",
     "then": "당일 환율이 움직일 수 있는 범위에는 상한과 하한이 있었습니다.",
     "now": "1997년 12월 일일 변동폭 제한이 폐지됐습니다."
+  },
+  {
+    "date": "1990-04-04",
+    "title": "금융실명제 시행 연기 발표",
+    "category": "제도",
+    "summary": "경제기획원이 경제활성화 종합대책을 발표하면서 금융실명제 시행을 기한 없이 미뤘다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_4_4"
+  },
+  {
+    "date": "1990-05-17",
+    "title": "수도권 신공항 부지로 영종도 확정",
+    "category": "산업",
+    "summary": "교통부가 수도권 신공항을 지을 위치를 정했다. 이달의 기록은 공사 착수에 앞선 입지 결정이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_5_17"
+  },
+  {
+    "date": "1990-06-15",
+    "title": "삼성전자 헝가리 공장 준공",
+    "category": "기업",
+    "summary": "삼성전자가 헝가리 현지 공장을 완공했다. 같은 달 19일에는 스페인 공장도 준공했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
   },
   {
     "date": "1990-07",
@@ -41,6 +81,14 @@
     "sourceName": "미 에너지정보청 원유 공급 중단 사례",
     "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=730",
     "then": "침공 소식과 두 산유국의 공급 차질이 국제 원유시장에 전해졌습니다."
+  },
+  {
+    "date": "1990-09-25",
+    "title": "남북 교역물품 반출입 승인절차 시행",
+    "category": "제도",
+    "summary": "국토통일원이 남북 간에 교역품을 보내거나 들여올 때 적용할 승인 절차를 고시했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_9_25"
   },
   {
     "date": "1990-10-29",
@@ -147,6 +195,30 @@
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
+    "date": "1991-05-16",
+    "title": "외국 증권사 국내 사무소 설치 기준 마련",
+    "category": "시장",
+    "summary": "재무부가 외국 증권사의 사무소 설치를 허용하는 기준을 정했다. 허용 대상은 사무소였다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_5_16"
+  },
+  {
+    "date": "1991-06-05",
+    "title": "한국·소련 과학협정 의정서 서명",
+    "category": "기술",
+    "summary": "한국과 소련이 과학협정 의정서에 서명했다. 양국 기술 교류를 살펴볼 수 있는 외교 기록이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_6_5"
+  },
+  {
+    "date": "1991-07-01",
+    "title": "외환시장 활성화 1단계 조치 발표",
+    "category": "시장",
+    "summary": "외환시장 활성화를 단계적으로 추진하기 위한 첫 조치가 발표됐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_7_1"
+  },
+  {
     "date": "1991-08",
     "title": "웹 소프트웨어, 인터넷 뉴스그룹에 소개",
     "category": "기술",
@@ -246,12 +318,36 @@
     "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
   },
   {
+    "date": "1992-03",
+    "title": "한국고속철도건설공단 설립",
+    "category": "산업",
+    "summary": "경부고속철도 건설을 맡을 공단이 출범했다. 천안~대전 구간 착공은 그해 6월이었다.",
+    "sourceName": "국가기록원 · 경부고속철도 건설",
+    "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=316"
+  },
+  {
     "date": "1992-04-09",
     "title": "미국 연방기금금리 목표 3.75%로 하락",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 4.00%에서 3.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1992-05-23",
+    "title": "영종도 신공항 건설 사업계획 확정",
+    "category": "산업",
+    "summary": "교통부가 영종도에 들어설 신공항의 건설 사업계획을 확정했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_5_23"
+  },
+  {
+    "date": "1992-06-30",
+    "title": "경부고속철도 천안~대전 구간 착공",
+    "category": "산업",
+    "summary": "경부고속철도 건설이 천안~대전 구간에서 시작됐다. 열차의 영업 운행은 2004년 4월 시작됐다.",
+    "sourceName": "국가기록원 · 경부고속철도 건설",
+    "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=316"
   },
   {
     "date": "1992-07",
@@ -268,6 +364,14 @@
     "summary": "FRED 일별 계열에서 목표금리가 3.75%에서 3.25%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1992-08-24",
+    "title": "한국·중국 수교",
+    "category": "국제",
+    "summary": "한국과 중국이 공식 외교관계를 맺었다. 이후의 양국 교역·기업 진출 기록을 읽는 기준점이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_8_24"
   },
   {
     "date": "1992-09-04",
@@ -288,6 +392,14 @@
     "nowSourceUrl": "https://www.bankofengland.co.uk/about/history"
   },
   {
+    "date": "1992-10-29",
+    "title": "삼성전자, 미국 시장에서 양키본드 발행",
+    "category": "기업",
+    "summary": "삼성전자가 미국에서 달러 표시 채권인 양키본드를 발행해 자금을 조달했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  {
     "date": "1992-11",
     "title": "미국·유럽, 농업 협상 쟁점에 합의",
     "category": "국제",
@@ -296,12 +408,60 @@
     "sourceUrl": "https://www.wto.org/english/theWto_e/whatis_e/tif_e/fact5_e.htm"
   },
   {
+    "date": "1992-12-26",
+    "title": "외국인 투자 절차를 신고제로 전환",
+    "category": "제도",
+    "summary": "재무부가 외국인 투자를 허가받던 절차를 신고하는 방식으로 바꿨다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_12_26"
+  },
+  {
+    "date": "1993-01",
+    "title": "삼성전기, 평면 컬러 모니터용 편향코일 개발",
+    "category": "기술",
+    "summary": "삼성전기 연혁에 평면 컬러 모니터용 편향코일 개발이 기록됐다. 브라운관에서 전자빔의 방향을 조절하는 부품이다.",
+    "sourceName": "삼성전기 2018년 연차보고서 · 연혁",
+    "sourceUrl": "https://www.sem.samsung.com/resources/file/kr/ir/archive/annual_2018_kor.pdf"
+  },
+  {
+    "date": "1993-02-20",
+    "title": "건설부, 주택 55만 가구 건설 계획 수립",
+    "category": "산업",
+    "summary": "주택건설종합계획에 55만 가구 건설 목표가 담겼다. 이 숫자는 해당 연도의 계획 물량이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_2_20"
+  },
+  {
+    "date": "1993-03-22",
+    "title": "정부, 신경제 100일 계획 발표",
+    "category": "거시경제",
+    "summary": "정부가 단기 경제정책을 묶어 신경제 100일 계획으로 발표했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_3_22"
+  },
+  {
     "date": "1993-04-30",
     "title": "CERN, 웹 소프트웨어 무상 공개",
     "category": "기술",
     "summary": "CERN이 웹 소프트웨어의 소스 코드를 사용료 없이 쓸 수 있도록 공개했습니다.",
     "sourceName": "CERN 웹 개발 연혁",
     "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1993-05-03",
+    "title": "삼성전자, 미국 HMS 인수",
+    "category": "기업",
+    "summary": "삼성전자가 미국 HMS를 인수했다. 회사 반기보고서의 주요 연혁에서 인수일을 확인할 수 있다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  {
+    "date": "1993-06-03",
+    "title": "삼성전자, 16메가 D램 양산공장 준공",
+    "category": "기술",
+    "summary": "삼성전자가 16메가비트 D램을 대량 생산할 공장을 완공했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
   },
   {
     "date": "1993-07-02",
@@ -318,6 +478,14 @@
     "summary": "정부는 실명에 의한 금융거래와 비밀보장에 관한 대통령 긴급재정경제명령을 발령했습니다.",
     "sourceName": "국가기록원 긴급재정경제명령 기록",
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0050754025&flag=1&isPop=Y"
+  },
+  {
+    "date": "1993-09-03",
+    "title": "한국·중국, 한국 자동차의 중국 진출에 합의",
+    "category": "산업",
+    "summary": "양국이 한국 자동차의 중국 진출에 관한 합의서를 체결했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_9_3"
   },
   {
     "date": "1993-10",
@@ -410,12 +578,36 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1994-07-05",
+    "title": "정부, 농어촌특별세 투자계획 확정",
+    "category": "제도",
+    "summary": "정부가 농어촌특별세를 재원으로 하는 투자계획을 확정했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_7_5"
+  },
+  {
     "date": "1994-08-16",
     "title": "미국 연방기금금리 목표 4.75%로 상승",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 4.25%에서 4.75%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1994-09-01",
+    "title": "수도권 전철 분당선 개통",
+    "category": "산업",
+    "summary": "분당선이 개통됐다. 수도권 교통망의 변화를 실제 운행이 시작된 달에 기록했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_9_1"
+  },
+  {
+    "date": "1994-10-14",
+    "title": "포항제철, 뉴욕증시 상장",
+    "category": "기업",
+    "summary": "포항제철이 뉴욕증시에 상장했다. 국내 철강기업이 해외 자본시장에 진입한 시점이다.",
+    "sourceName": "포스코 2000년 환경보고서 · 연혁",
+    "sourceUrl": "https://www.posco.co.kr/homepage/docs/kor6/jsp/dn/irinfo/2000_environment_kr.pdf"
   },
   {
     "date": "1994-11",
@@ -432,6 +624,14 @@
     "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 5.50%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1994-12-05",
+    "title": "개인 외환보유 자유화 계획 발표",
+    "category": "제도",
+    "summary": "재무부가 1995년부터 개인의 외환보유를 전면 자유화하는 내용의 외환제도 개편안을 공개했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_12_5"
   },
   {
     "date": "1995-01-01",
@@ -459,6 +659,14 @@
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
+    "date": "1995-03-14",
+    "title": "초고속정보통신 기반 구축계획 확정",
+    "category": "기술",
+    "summary": "초고속정보화추진위원회가 2015년까지 정보통신 기반을 구축한다는 장기계획을 확정했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_3_14"
+  },
+  {
     "date": "1995-04",
     "title": "프랑스 INRIA, W3C 유럽 거점으로 참여",
     "category": "기술",
@@ -467,12 +675,60 @@
     "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
   },
   {
+    "date": "1995-05-30",
+    "title": "APEC 통신장관회의서 정보통신 협력 논의",
+    "category": "국제",
+    "summary": "아시아·태평양 지역 통신장관들이 정보통신 분야의 협력을 강화하는 방안을 논의했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_5_30"
+  },
+  {
+    "date": "1995-06-29",
+    "title": "서울 삼풍백화점 붕괴",
+    "category": "국내",
+    "summary": "서울 서초동에서 영업 중이던 삼풍백화점이 무너졌다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_6_29"
+  },
+  {
     "date": "1995-07-06",
     "title": "미국 연방기금금리 목표 5.75%로 하락",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 6.00%에서 5.75%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1995-08-05",
+    "title": "국내 첫 상용 방송통신위성 무궁화 1호 발사",
+    "category": "기술",
+    "summary": "방송과 통신에 쓰일 무궁화 1호가 발사됐다. 날짜는 국가기록원 연표 표기를 따랐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_8_5"
+  },
+  {
+    "date": "1995-09-22",
+    "title": "삼성전자, 달러 변동금리부채권 발행",
+    "category": "기업",
+    "summary": "삼성전자가 미화 1억 8,900만 달러 규모의 변동금리부채권을 발행했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  {
+    "date": "1995-10-13",
+    "title": "국무회의, 예금자보호법안 의결",
+    "category": "제도",
+    "summary": "예금자 보호에 관한 법안이 국무회의를 통과했다. 이달의 기록은 정부 법안의 의결 단계다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_10_13"
+  },
+  {
+    "date": "1995-11-02",
+    "title": "삼성전자, 해외 주식예탁증서 발행",
+    "category": "기업",
+    "summary": "삼성전자가 미화 1억 5천만 달러 규모의 주식예탁증서(DR)를 발행했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
   },
   {
     "date": "1995-12",
@@ -499,6 +755,30 @@
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
+    "date": "1996-02-25",
+    "title": "재정경제원, 해외 증권투자 자유화 계획 발표",
+    "category": "시장",
+    "summary": "국내 주식시장 개방을 확대하고 해외 증권투자를 자유화하는 계획이 발표됐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_2_25"
+  },
+  {
+    "date": "1996-03-11",
+    "title": "외국인 주식투자 개선안에 장외거래 공시 포함",
+    "category": "시장",
+    "summary": "재정경제원이 외국인의 국내 주식투자 환경 개선 방안을 발표했다. 장외에서 거래한 내역을 공시하는 제도가 포함됐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_3_11"
+  },
+  {
+    "date": "1996-04-03",
+    "title": "자본재 기술개발 지원자금 규모 확정",
+    "category": "산업",
+    "summary": "통상산업부가 자본재산업 육성대책에 따라 산업기술 개발에 지원할 자금 규모를 정했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_4_3"
+  },
+  {
     "date": "1996-05-03",
     "title": "국내 주가지수선물시장 개설",
     "category": "시장",
@@ -515,12 +795,52 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1996-06-01",
+    "title": "예금보험공사 출범",
+    "category": "금융안정",
+    "summary": "예금보험제도를 운영할 공사가 발족했다. 전년도 10월 국무회의의 예금자보호법안 의결에 이어 등장한 운영기관이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_6_1"
+  },
+  {
     "date": "1996-07-01",
     "title": "코스닥시장 개설",
     "category": "시장",
     "summary": "중소·벤처기업의 자금조달을 지원하는 코스닥시장이 열렸습니다.",
     "sourceName": "한국거래소 코스닥시장 안내",
     "sourceUrl": "https://global.krx.co.kr/contents/GLB/02/0201/0201010304/kosdaq_brochure.pdf"
+  },
+  {
+    "date": "1996-08-07",
+    "title": "노동부, 산업안전 3개년 계획 발표",
+    "category": "산업",
+    "summary": "노동부가 앞으로 3년간 추진할 산업안전 개선계획을 공개했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_8_7"
+  },
+  {
+    "date": "1996-09-10",
+    "title": "배타적 경제수역법 발효",
+    "category": "제도",
+    "summary": "배타적 경제수역에 관한 국내법이 효력을 갖기 시작했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_9_10"
+  },
+  {
+    "date": "1996-10-15",
+    "title": "국무회의, 유럽공동체와 무역·협력 협정안 의결",
+    "category": "국제",
+    "summary": "한국과 유럽공동체 및 회원국 간 무역·협력 기본협정을 체결하는 안이 국무회의를 통과했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_10_15"
+  },
+  {
+    "date": "1996-11-11",
+    "title": "통상산업부, 국가에너지 기본계획안 공개",
+    "category": "산업",
+    "summary": "정부가 국가 차원의 에너지 정책 방향을 담은 기본계획안을 발표했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_11_11"
   },
   {
     "date": "1996-12-12",
@@ -539,12 +859,44 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1997-02-15",
+    "title": "인텔, 삼성 오스틴 반도체 공장 지분 참여",
+    "category": "기업",
+    "summary": "삼성전자 회사 연혁은 인텔이 미국 오스틴 반도체 공장에 지분 10%로 참여했다고 기록한다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  {
     "date": "1997-03-25",
     "title": "미국 연방기금금리 목표 5.50%로 상승",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1997-04-14",
+    "title": "금융개혁위원회, 단기 개혁과제 18개 보고",
+    "category": "제도",
+    "summary": "금융개혁위원회가 대통령에게 단기 과제 18개를 보고했다. 정부의 최종 금융개혁안은 6월에 확정됐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_4_14"
+  },
+  {
+    "date": "1997-05-29",
+    "title": "케이블TV 2차 방송사업자 선정 발표",
+    "category": "산업",
+    "summary": "공보처가 2차 종합유선방송국 사업자 선정 결과를 발표했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_5_29"
+  },
+  {
+    "date": "1997-06-16",
+    "title": "정부 금융개혁안 확정",
+    "category": "제도",
+    "summary": "정부가 금융개혁안을 최종 확정했다. 4월 위원회의 단기과제 보고와 구분해 볼 수 있다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_6_16"
   },
   {
     "date": "1997-07-02",
@@ -570,6 +922,22 @@
     "sourceName": "IMF 태국 차관 승인 보도자료",
     "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9737.htm",
     "then": "즉시 인출할 수 있는 금액은 12억 SDR이었고, 후속 인출에는 조건이 붙었습니다."
+  },
+  {
+    "date": "1997-09-03",
+    "title": "월성 원전 2호기 준공식",
+    "category": "산업",
+    "summary": "통상산업부가 월성 2호기 준공식을 열었다. 기록된 날짜는 준공식 기준이다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_9_3"
+  },
+  {
+    "date": "1997-10-24",
+    "title": "기아자동차와 아시아자동차, 법정관리 신청",
+    "category": "기업",
+    "summary": "두 자동차 회사가 법정관리를 신청했다. 신청과 법원의 후속 결정을 구분해 읽을 수 있다.",
+    "sourceName": "국가기록원 · 기아·아시아자동차 법정관리 신청",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?archiveEvntId=0050752098&year=1997"
   },
   {
     "date": "1997-11",
@@ -609,6 +977,14 @@
     "now": "이 자료는 승인 시점의 발표를 기록합니다. 이후 정책 결과는 별도 자료로 확인해야 합니다."
   },
   {
+    "date": "1998-01-15",
+    "title": "외환위기 중 노사정위원회 출범",
+    "category": "제도",
+    "summary": "노동계·사용자·정부가 참여하는 노사정위원회가 공식 출범했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_1_15"
+  },
+  {
     "date": "1998-02-07",
     "title": "한국 정부, IMF에 2월 경제정책 의향서 전달",
     "category": "제도",
@@ -616,6 +992,22 @@
     "sourceName": "IMF 공개 한국 정부 2월 의향서",
     "sourceUrl": "https://www.imf.org/external/np/loi/020798.htm",
     "then": "2월 의향서에서 외환시장 안정과 금융기관 정리에 관한 정부 계획을 읽을 수 있었습니다."
+  },
+  {
+    "date": "1998-03-27",
+    "title": "대통령 직속 기획예산위원회 출범",
+    "category": "제도",
+    "summary": "정부 예산 정책을 다룰 기획예산위원회가 대통령 직속 기구로 발족했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_3_27"
+  },
+  {
+    "date": "1998-04-22",
+    "title": "한미 항공자유화 협상 타결 발표",
+    "category": "산업",
+    "summary": "건설교통부가 미국과의 항공자유화협정 체결 협상이 타결됐다고 발표했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_4_22"
   },
   {
     "date": "1998-05-02",
@@ -757,12 +1149,36 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1999-04-01",
+    "title": "국민연금 적용 대상 전국민으로 확대",
+    "category": "제도",
+    "summary": "국민연금관리공단이 전국민을 대상으로 국민연금 확대 시행에 들어갔다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_4_1"
+  },
+  {
+    "date": "1999-05-26",
+    "title": "우리별 3호 발사",
+    "category": "기술",
+    "summary": "국산 과학위성 우리별 3호가 발사됐다. 1992년 우리별 1호 이후 이어진 위성 개발 기록이다.",
+    "sourceName": "국가기록원 · 우리별 위성",
+    "sourceUrl": "https://archives.go.kr/next/newsearch/listSubjectDescription.do?id=002048&pageFlag=C&sitePage=1-2-2&subjectTypeId=03"
+  },
+  {
     "date": "1999-06-30",
     "title": "미국 연방기금금리 목표 5.00%로 상승",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 5.00%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1999-07-30",
+    "title": "애플, 삼성전자에 1억 달러 투자",
+    "category": "기업",
+    "summary": "삼성전자가 회사 연혁에 애플의 미화 1억 달러 투자를 기록했다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
   },
   {
     "date": "1999-08-24",
@@ -781,12 +1197,28 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1999-10-06",
+    "title": "인천지하철 1호선 개통",
+    "category": "산업",
+    "summary": "인천지하철 1호선이 운행을 시작했다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_10_6"
+  },
+  {
     "date": "1999-11-16",
     "title": "미국 연방기금금리 목표 5.50%로 상승",
     "category": "거시경제",
     "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
     "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
     "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1999-12-08",
+    "title": "대외무역관리규정 개정",
+    "category": "제도",
+    "summary": "수출입 행정의 근거가 되는 대외무역관리규정이 개정됐다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_12_8"
   },
   {
     "date": "2000-02-10",
