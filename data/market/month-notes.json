@@ -1,9 +1,21 @@
 {
+  "1990-03": {
+    "summary": "은행 간 거래를 바탕으로 정한 기준환율에서 원·달러 환율이 하루 ±0.4% 범위 안에서 움직이는 제도가 시작됐습니다.",
+    "memo": "일일 제한폭과 한 달 동안의 환율 변동률은 기간이 다릅니다. 당시 ±0.4%가 어느 기준에 적용됐는지 확인해 보세요.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
   "1990-08": {
     "summary": "이라크의 쿠웨이트 침공으로 두 나라의 원유 공급이 차질을 빚었습니다.",
     "memo": "침공일과 이달 WTI의 첫·마지막 관측일을 구분해 원유 공급 충격을 살펴보세요.",
     "sourceName": "미 에너지정보청 원유 공급 중단 사례",
     "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=730"
+  },
+  "1991-08": {
+    "summary": "버너스리가 인터넷 뉴스그룹에 WWW 소프트웨어를 알리면서 CERN 밖의 개발자도 프로젝트를 접할 수 있게 됐습니다.",
+    "memo": "소프트웨어를 외부에 알린 시점과 이용 조건을 바꾼 시점을 분리해 기록해 보세요.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
   },
   "1992-01": {
     "summary": "외국인이 국내 상장 주식에 직접 투자할 수 있게 됐습니다.",
@@ -11,17 +23,53 @@
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1992-02": {
+    "summary": "유럽 12개국 대표가 경제통화동맹과 단일통화의 기반을 담은 조약에 서명했습니다.",
+    "memo": "조약 서명일과 발효일을 나란히 적고 두 시점 사이에 어떤 절차가 남아 있었는지 살펴보세요.",
+    "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
+  },
+  "1993-04": {
+    "summary": "CERN이 웹 소프트웨어의 소스 코드를 사용료 없이 쓸 수 있도록 공개했습니다.",
+    "memo": "웹의 개발, 외부 배포, 소스 코드 무상 공개를 서로 다른 사건으로 놓고 순서를 확인해 보세요.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  "1994-04": {
+    "summary": "각료들이 최종의정서에 서명하면서 GATT에서 WTO 체제로 이행하는 절차가 진행됐습니다.",
+    "memo": "협상 타결, 최종의정서 서명, WTO 출범을 각각 어느 달의 사건으로 기록할지 정리해 보세요.",
+    "sourceName": "WTO 마라케시 선언",
+    "sourceUrl": "https://www.wto.org/english/docs_e/legal_e/marrakesh_decl_e.htm"
+  },
   "1994-06": {
     "summary": "국내 대표 주가지수인 KOSPI 200을 발표했습니다.",
     "memo": "이달 도입된 KOSPI 200과 연간 스냅샷의 종합지수 KOSPI를 구분해 보세요.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1995-12": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±1.5%에서 ±2.25%로 넓어졌습니다.",
+    "memo": "환율 제한폭의 변화와 연방기금금리 목표의 변화를 각각 어떤 단위로 읽어야 하는지 비교해 보세요.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
   "1996-05": {
     "summary": "한국거래소 연혁은 주가지수선물시장 개설일을 1996년 5월 3일로 기록합니다.",
     "memo": "주가지수선물 개설과 이듬해 주가지수옵션 개설을 연표에서 이어서 보세요.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1996-12": {
+    "summary": "한국에 OECD 협약이 발효되면서 회원국이 됐습니다.",
+    "memo": "OECD 협약이 한국에 발효된 날과 국내 주식시장이 외국인에게 개방된 날을 구분해 보세요.",
+    "sourceName": "OECD 협약 회원국별 발효일",
+    "sourceUrl": "https://www.oecd.org/en/about/legal.html"
+  },
+  "1997-08": {
+    "summary": "IMF가 태국에 34개월 동안 최대 29억 SDR을 인출할 수 있는 차관을 승인했습니다.",
+    "memo": "승인된 차관 한도와 승인 직후 인출할 수 있는 금액을 구분해 보세요.",
+    "sourceName": "IMF 태국 차관 승인 보도자료",
+    "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9737.htm"
   },
   "1997-12": {
     "summary": "IMF의 협의 종료 발표에 이어 이사회가 한국의 대기성 차관을 승인했습니다.",
@@ -76,6 +124,12 @@
     "memo": "9월·10월·11월 정책금리 경로를 적고, 각 달의 10년물 금리와 비교해 보세요.",
     "sourceName": "미 연준 11월 FOMC 의사록",
     "sourceUrl": "https://www.federalreserve.gov/fomc/MINUTES/19981117.HTM"
+  },
+  "1999-03": {
+    "summary": "국내에 국채 거래를 위한 전문 유통시장이 열렸습니다.",
+    "memo": "3월에 개설된 국채 유통시장과 9월에 개설된 국채선물시장에서 각각 무엇을 거래하는지 적어 보세요.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   "2007-01": {
     "summary": "Apple은 Macworld에서 첫 iPhone을 공개했습니다.",

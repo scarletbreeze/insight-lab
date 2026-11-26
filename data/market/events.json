@@ -1,11 +1,37 @@
 [
   {
+    "date": "1990-03",
+    "title": "한국, 시장평균환율제도 도입",
+    "category": "제도",
+    "summary": "은행 간 거래를 바탕으로 정한 기준환율에서 원·달러 환율이 하루 ±0.4% 범위 안에서 움직이는 제도가 시작됐습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186",
+    "then": "당일 환율이 움직일 수 있는 범위에는 상한과 하한이 있었습니다.",
+    "now": "1997년 12월 일일 변동폭 제한이 폐지됐습니다."
+  },
+  {
     "date": "1990-07",
     "title": "미국 경기 정점",
     "category": "거시경제",
     "summary": "NBER는 1990년 7월을 미국 경기 정점으로 분류합니다.",
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  {
+    "date": "1990-07-01",
+    "title": "유럽 경제통화동맹 1단계 시작",
+    "category": "제도",
+    "summary": "회원국 간 자본 이동 제한 철폐와 경제정책 협력 강화를 추진하는 첫 단계가 시작됐습니다.",
+    "sourceName": "유럽중앙은행 경제통화동맹 연혁",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.ga.html"
+  },
+  {
+    "date": "1990-07-13",
+    "title": "미국 연방기금금리 목표 8.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 8.25%에서 8.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
     "date": "1990-08-02",
@@ -17,6 +43,54 @@
     "then": "침공 소식과 두 산유국의 공급 차질이 국제 원유시장에 전해졌습니다."
   },
   {
+    "date": "1990-10-29",
+    "title": "미국 연방기금금리 목표 7.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 8.00%에서 7.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1990-11",
+    "title": "CERN 연구진, 월드와이드웹 제안 구체화",
+    "category": "기술",
+    "summary": "팀 버너스리와 로베르 카이오가 브라우저로 하이퍼텍스트 문서를 읽는 시스템을 제안서에 담았습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1990-11-14",
+    "title": "미국 연방기금금리 목표 7.50%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 7.75%에서 7.50%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1990-12-07",
+    "title": "브뤼셀 각료회의, 무역협상 타결 없이 종료",
+    "category": "국제",
+    "summary": "우루과이라운드를 끝낼 예정이었던 회의가 합의에 이르지 못했습니다.",
+    "sourceName": "GATT 우루과이라운드 협상 연표",
+    "sourceUrl": "https://www.wto.org/gatt_docs/English/HAZPDF/11.pdf"
+  },
+  {
+    "date": "1990-12-07",
+    "title": "미국 연방기금금리 목표 7.25%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 7.50%에서 7.25%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1990-12-19",
+    "title": "미국 연방기금금리 목표 7.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 7.25%에서 7.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
     "date": "1991",
     "title": "외자도입법 개정과 자본시장 개방",
     "category": "제도",
@@ -25,12 +99,132 @@
     "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=318"
   },
   {
+    "date": "1991-01-09",
+    "title": "미국 연방기금금리 목표 6.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 7.00%에서 6.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-02-01",
+    "title": "미국 연방기금금리 목표 6.25%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 6.75%에서 6.25%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-02-26",
+    "title": "GATT, 우루과이라운드 협상 재개 계획 채택",
+    "category": "국제",
+    "summary": "무역협상위원회가 중단된 협상을 재개하기 위한 작업 계획을 채택했습니다.",
+    "sourceName": "GATT 우루과이라운드 협상 연표",
+    "sourceUrl": "https://www.wto.org/gatt_docs/English/HAZPDF/11.pdf"
+  },
+  {
     "date": "1991-03",
     "title": "미국 경기 저점",
     "category": "거시경제",
     "summary": "NBER 경기순환 연표에서 1991년 3월은 직전 수축기의 마지막 달입니다.",
     "sourceName": "NBER 경기순환 연표",
     "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  {
+    "date": "1991-03-08",
+    "title": "미국 연방기금금리 목표 6.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 6.25%에서 6.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-04-30",
+    "title": "미국 연방기금금리 목표 5.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 6.00%에서 5.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-08",
+    "title": "웹 소프트웨어, 인터넷 뉴스그룹에 소개",
+    "category": "기술",
+    "summary": "버너스리가 인터넷 뉴스그룹에 WWW 소프트웨어를 알리면서 CERN 밖의 개발자도 프로젝트를 접할 수 있게 됐습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1991-08-06",
+    "title": "미국 연방기금금리 목표 5.50%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.75%에서 5.50%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-09",
+    "title": "원·달러 환율 일일 변동폭 ±0.6%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.4%에서 ±0.6%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  {
+    "date": "1991-09-13",
+    "title": "미국 연방기금금리 목표 5.25%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.50%에서 5.25%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-10-31",
+    "title": "미국 연방기금금리 목표 5.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-11-06",
+    "title": "미국 연방기금금리 목표 4.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.00%에서 4.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-12",
+    "title": "미국 최초 웹 서버 가동",
+    "category": "기술",
+    "summary": "미국 스탠퍼드 선형가속기센터에 웹 서버가 들어서면서 유럽 밖에서도 웹 문서를 제공하게 됐습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1991-12-06",
+    "title": "미국 연방기금금리 목표 4.50%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 4.50%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1991-12-20",
+    "title": "우루과이라운드 최종의정서 초안 제출",
+    "category": "국제",
+    "summary": "아르투르 둔켈이 시장접근 양허를 제외한 협상 결과를 담은 초안을 제출했습니다.",
+    "sourceName": "GATT 우루과이라운드 협상 연표",
+    "sourceUrl": "https://www.wto.org/gatt_docs/English/HAZPDF/11.pdf"
+  },
+  {
+    "date": "1991-12-20",
+    "title": "미국 연방기금금리 목표 4.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.50%에서 4.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
     "date": "1992-01-03",
@@ -44,6 +238,46 @@
     "nowSourceUrl": "https://theme.archives.go.kr/next/koreaOfRecord/stockMarket.do"
   },
   {
+    "date": "1992-02-07",
+    "title": "마스트리흐트 조약 서명",
+    "category": "제도",
+    "summary": "유럽 12개국 대표가 경제통화동맹과 단일통화의 기반을 담은 조약에 서명했습니다.",
+    "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
+  },
+  {
+    "date": "1992-04-09",
+    "title": "미국 연방기금금리 목표 3.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.00%에서 3.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1992-07",
+    "title": "원·달러 환율 일일 변동폭 ±0.8%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.6%에서 ±0.8%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  {
+    "date": "1992-07-02",
+    "title": "미국 연방기금금리 목표 3.25%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 3.75%에서 3.25%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1992-09-04",
+    "title": "미국 연방기금금리 목표 3.00%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 3.25%에서 3.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
     "date": "1992-09-16",
     "title": "영국, 파운드화의 유럽 환율제도 참여 중단",
     "category": "제도",
@@ -52,6 +286,22 @@
     "sourceUrl": "https://www.bankofengland.co.uk/quarterly-bulletin/1992/q4/operation-of-monetary-policy",
     "now": "영란은행의 기관 연혁에서는 이날을 블랙 웬즈데이로 기록합니다.",
     "nowSourceUrl": "https://www.bankofengland.co.uk/about/history"
+  },
+  {
+    "date": "1992-11",
+    "title": "미국·유럽, 농업 협상 쟁점에 합의",
+    "category": "국제",
+    "summary": "블레어하우스 합의로 우루과이라운드의 농업 분야 주요 이견을 좁혔습니다.",
+    "sourceName": "WTO 우루과이라운드 협상사",
+    "sourceUrl": "https://www.wto.org/english/theWto_e/whatis_e/tif_e/fact5_e.htm"
+  },
+  {
+    "date": "1993-04-30",
+    "title": "CERN, 웹 소프트웨어 무상 공개",
+    "category": "기술",
+    "summary": "CERN이 웹 소프트웨어의 소스 코드를 사용료 없이 쓸 수 있도록 공개했습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
   },
   {
     "date": "1993-07-02",
@@ -70,6 +320,38 @@
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0050754025&flag=1&isPop=Y"
   },
   {
+    "date": "1993-10",
+    "title": "원·달러 환율 일일 변동폭 ±1.0%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.8%에서 ±1.0%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  {
+    "date": "1993-11-01",
+    "title": "마스트리흐트 조약 발효",
+    "category": "제도",
+    "summary": "회원국 비준을 거친 조약이 발효되면서 유럽연합이 공식 출범했습니다.",
+    "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
+  },
+  {
+    "date": "1993-12-15",
+    "title": "우루과이라운드 협상 실질 타결",
+    "category": "국제",
+    "summary": "다자간 무역 협상이 실질적으로 마무리됐습니다. 최종의정서 서명은 이듬해 4월에 이뤄졌습니다.",
+    "sourceName": "WTO 마라케시 선언",
+    "sourceUrl": "https://www.wto.org/english/docs_e/legal_e/marrakesh_decl_e.htm"
+  },
+  {
+    "date": "1994-01-01",
+    "title": "유럽통화기구 설립",
+    "category": "제도",
+    "summary": "유럽통화기구가 출범하면서 단일 통화정책을 준비하는 경제통화동맹 2단계가 시작됐습니다.",
+    "sourceName": "유럽중앙은행 경제통화동맹 연혁",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.ga.html"
+  },
+  {
     "date": "1994-02-04",
     "title": "미 연준, 연방기금금리 목표 3.25%로 인상",
     "category": "통화정책",
@@ -80,12 +362,76 @@
     "nowSourceUrl": "https://www.federalreserve.gov/monetarypolicy/files/FOMC20150116memo05.pdf"
   },
   {
+    "date": "1994-03-22",
+    "title": "미국 연방기금금리 목표 3.50%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 3.25%에서 3.50%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1994-04-15",
+    "title": "마라케시에서 우루과이라운드 최종의정서 서명",
+    "category": "국제",
+    "summary": "각료들이 최종의정서에 서명하면서 GATT에서 WTO 체제로 이행하는 절차가 진행됐습니다.",
+    "sourceName": "WTO 마라케시 선언",
+    "sourceUrl": "https://www.wto.org/english/docs_e/legal_e/marrakesh_decl_e.htm"
+  },
+  {
+    "date": "1994-04-18",
+    "title": "미국 연방기금금리 목표 3.75%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 3.50%에서 3.75%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1994-05",
+    "title": "첫 국제 월드와이드웹 회의 개최",
+    "category": "기술",
+    "summary": "CERN에 웹 사용자와 개발자들이 모여 웹 기술을 논의했습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1994-05-17",
+    "title": "미국 연방기금금리 목표 4.25%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 3.75%에서 4.25%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
     "date": "1994-06-15",
     "title": "KOSPI 200 발표",
     "category": "시장",
     "summary": "국내 대표 주가지수인 KOSPI 200을 발표했습니다.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1994-08-16",
+    "title": "미국 연방기금금리 목표 4.75%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.25%에서 4.75%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1994-11",
+    "title": "원·달러 환율 일일 변동폭 ±1.5%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±1.0%에서 ±1.5%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  {
+    "date": "1994-11-15",
+    "title": "미국 연방기금금리 목표 5.50%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 5.50%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
     "date": "1995-01-01",
@@ -105,10 +451,66 @@
     "then": "IMF는 승인액 중 즉시 이용할 수 있는 금액을 약 78억 달러로 발표했습니다."
   },
   {
+    "date": "1995-02-01",
+    "title": "미국 연방기금금리 목표 6.00%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.50%에서 6.00%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1995-04",
+    "title": "프랑스 INRIA, W3C 유럽 거점으로 참여",
+    "category": "기술",
+    "summary": "프랑스 국립연구기관 INRIA가 웹 표준을 다루는 W3C의 유럽 거점이 됐습니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  {
+    "date": "1995-07-06",
+    "title": "미국 연방기금금리 목표 5.75%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 6.00%에서 5.75%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1995-12",
+    "title": "원·달러 환율 일일 변동폭 ±2.25%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±1.5%에서 ±2.25%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  {
+    "date": "1995-12-19",
+    "title": "미국 연방기금금리 목표 5.50%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.75%에서 5.50%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1996-01-31",
+    "title": "미국 연방기금금리 목표 5.25%로 하락",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.50%에서 5.25%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
     "date": "1996-05-03",
     "title": "국내 주가지수선물시장 개설",
     "category": "시장",
     "summary": "한국거래소 연혁은 주가지수선물시장 개설일을 1996년 5월 3일로 기록합니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1996-05-17",
+    "title": "코스닥증권시장 법인 설립",
+    "category": "시장",
+    "summary": "코스닥증권시장이 주식회사로 설립됐습니다. 시장 개설은 같은 해 7월입니다.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
@@ -121,6 +523,14 @@
     "sourceUrl": "https://global.krx.co.kr/contents/GLB/02/0201/0201010304/kosdaq_brochure.pdf"
   },
   {
+    "date": "1996-12-12",
+    "title": "한국, OECD 가입",
+    "category": "국제",
+    "summary": "한국에 OECD 협약이 발효되면서 회원국이 됐습니다.",
+    "sourceName": "OECD 협약 회원국별 발효일",
+    "sourceUrl": "https://www.oecd.org/en/about/legal.html"
+  },
+  {
     "date": "1997-01-03",
     "title": "코스닥지수 발표",
     "category": "시장",
@@ -129,12 +539,45 @@
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
   {
+    "date": "1997-03-25",
+    "title": "미국 연방기금금리 목표 5.50%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1997-07-02",
+    "title": "태국 바트화, 달러 대비 평가절하",
+    "category": "국제",
+    "summary": "수개월간 외환보유액이 감소한 뒤 바트화 가치가 하락했습니다.",
+    "sourceName": "미 연준 아시아 금융위기 기록",
+    "sourceUrl": "https://www.federalreservehistory.org/essays/asian-financial-crisis/"
+  },
+  {
     "date": "1997-07-07",
     "title": "국내 주가지수옵션시장 개설",
     "category": "시장",
     "summary": "한국거래소 연혁은 주가지수옵션시장 개설일을 1997년 7월 7일로 기록합니다.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1997-08-20",
+    "title": "IMF, 태국 대기성 차관 승인",
+    "category": "국제",
+    "summary": "IMF가 태국에 34개월 동안 최대 29억 SDR을 인출할 수 있는 차관을 승인했습니다.",
+    "sourceName": "IMF 태국 차관 승인 보도자료",
+    "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9737.htm",
+    "then": "즉시 인출할 수 있는 금액은 12억 SDR이었고, 후속 인출에는 조건이 붙었습니다."
+  },
+  {
+    "date": "1997-11",
+    "title": "원·달러 환율 일일 변동폭 ±10%로 확대",
+    "category": "제도",
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±2.25%에서 ±10%로 넓어졌습니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
   },
   {
     "date": "1997-12",
@@ -254,6 +697,14 @@
     "then": "연준은 세계 경제와 미국 금융시장의 변화를 결정 배경으로 제시했습니다."
   },
   {
+    "date": "1998-10-12",
+    "title": "코스닥위원회 설립",
+    "category": "시장",
+    "summary": "한국거래소 연혁에 코스닥위원회의 설립일로 기록된 날입니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
     "date": "1998-10-15",
     "title": "미 연준, 회의 사이에 연방기금금리 목표 인하",
     "category": "거시경제",
@@ -290,12 +741,52 @@
     "nowSourceUrl": "https://www.ecb.europa.eu/euro/changeover/2002/html/index.en.html"
   },
   {
+    "date": "1999-02-06",
+    "title": "한국선물거래소 설립",
+    "category": "시장",
+    "summary": "국내 선물시장을 운영할 한국선물거래소가 설립됐습니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1999-03-29",
+    "title": "국채전문유통시장 개설",
+    "category": "시장",
+    "summary": "국내에 국채 거래를 위한 전문 유통시장이 열렸습니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1999-06-30",
+    "title": "미국 연방기금금리 목표 5.00%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 5.00%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
+    "date": "1999-08-24",
+    "title": "미국 연방기금금리 목표 5.25%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.00%에서 5.25%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  {
     "date": "1999-09-29",
     "title": "국채선물시장 개설",
     "category": "시장",
     "summary": "한국거래소 연혁은 국채선물시장 개설일을 1999년 9월 29일로 기록합니다.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  {
+    "date": "1999-11-16",
+    "title": "미국 연방기금금리 목표 5.50%로 상승",
+    "category": "거시경제",
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   {
     "date": "2000-02-10",
