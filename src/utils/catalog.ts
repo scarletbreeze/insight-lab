@@ -33,7 +33,7 @@ const equitySeries = [
 export const catalog: CatalogEntry[] = [
   ...screens.map((screen) => ({
     service: 'hero-lab', route: 'hero-lab/screens/' + screen.number, title: screen.number + ' ' + screen.title,
-    summary: [screen.summary, ...screen.tags].join(' '), date: screen.sources[0].retrievedAt,
+    summary: [screen.summary, screen.observation, ...screen.menuPath, ...screen.tags].join(' '), date: screen.sources[0].retrievedAt,
     sourceUrls: screen.sources.map(({ sourceUrl }) => sourceUrl),
   })),
   ...legends.profiles.map((profile) => ({

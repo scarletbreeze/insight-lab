@@ -22,7 +22,7 @@ npm run build
 
 ## 자료 갱신
 
-- Hero Lab 화면 목록과 사용 예시는 `data/hero/`에 있다. 공식 화면 목록으로 확인한 항목과 화면별 도움말을 읽고 정리한 항목을 각각의 출처로 구분한다.
+- Hero Lab 화면 목록과 사용 예시는 `data/hero/`에 있다. 공식 화면 색인은 `python3 scripts/hero/collect_official_directory.py /tmp/hero-directory.json`으로 재조회할 수 있다. 모든 개별 도움말 표제를 화면번호와 대조한 뒤 결과를 기록한다. 상세 가이드와 활용 메모는 별도로 편집한다.
 - VOC Studio 공지·문의 표본의 수집 범위와 부족한 자료는 [공개 자료 조사](docs/voc-source-research.md)에 기록한다.
 - 시장 지표는 `python3 scripts/market/collect_prices.py --through YYYY-MM-DD`로 FRED의 일별 관측값을 월별로 집계한다.
 - 월간 종목 순위는 검증한 시점별 모집단과 분할 조정 종가를 담은 CSV가 있어야 생성할 수 있다. 필수 열은 `scripts/market/calculate_returns.py`의 `REQUIRED`를 참고한다.

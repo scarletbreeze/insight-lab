@@ -1,0 +1,62 @@
+---
+import HeroLayout from '../../components/hero/HeroLayout.astro';
+import directory from '../../../data/hero/official-directory.json';
+import { screens } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+
+const analyzed = new Set(screens.map(screen => screen.number));
+const groups = Object.entries(Object.groupBy(directory.screens, screen => screen.group))
+  .sort(([a], [b]) => a.localeCompare(b, 'ko'));
+---
+<HeroLayout title="영웅문4 공식 화면 색인">
+  <p slot="intro">키움 도움말 목차에서 확인한 화면 {directory.screens.length}개입니다. 화면명으로 공식 도움말을 열거나, 분석이 있는 화면은 Hero Lab 가이드로 이동할 수 있습니다. 목차와 본문의 이름이 다르면 두 이름 모두 검색됩니다.</p>
+  <a href={sitePath('hero-lab/discover')}>분석한 화면 탐색으로 돌아가기</a>
+  <hero-directory>
+    <label class="hero-finder">번호·화면명·메뉴 검색<input type="search" placeholder="예: 0276, 거래원, 해외주식" /></label>
+    <p class="hero-status" role="status">{directory.screens.length}개 화면</p>
+    {groups.map(([group, items]) => <details class="hero-branch">
+      <summary>{group} <span>{items!.length}개</span></summary>
+      <ul>{items!.map(({ number, title, menuTitles, otherGroups }) => <li data-key={[number, title, ...(menuTitles ?? []), group, ...(otherGroups ?? [])].join(' ').toLowerCase()}>
+        <div><a href={'https://download.kiwoom.com/hero4_help_new/' + number + '.htm'}>{number} · {title}</a>{menuTitles && <small>목차 표기 · {menuTitles.join(' / ')}</small>}</div>
+        {analyzed.has(number) && <a class="directory-guide" href={sitePath('hero-lab/screens/' + number)} aria-label={number + ' ' + title + ' 분석 보기'}>분석 보기</a>}
+      </li>)}</ul>
+    </details>)}
+    <p data-empty hidden>일치하는 화면이 없습니다.</p>
+  </hero-directory>
+  <p class="hero-status"><a href={directory.sourceUrl}>키움증권 공식 목차</a> · 확인일 {directory.retrievedAt}</p>
+</HeroLayout>
+<script>
+  class HeroDirectory extends HTMLElement {
+    connectedCallback() {
+      const input = this.querySelector('input')!;
+      const groups = Array.from(this.querySelectorAll('details'));
+      const update = () => {
+        const words = input.value.trim().toLowerCase().split(/\s+/).filter(Boolean);
+        let total = 0;
+        for (const group of groups) {
+          let matches = 0;
+          for (const item of group.querySelectorAll('li')) {
+            item.hidden = !words.every(word => item.dataset.key!.includes(word));
+            if (!item.hidden) matches++;
+          }
+          group.hidden = !matches;
+          group.open = !!words.length && matches > 0;
+          group.querySelector('summary span')!.textContent = matches + '개';
+          total += matches;
+        }
+        this.querySelector('[role=status]')!.textContent = total + '개 화면';
+        this.querySelector<HTMLElement>('[data-empty]')!.hidden = !!total;
+      };
+      input.value = new URLSearchParams(location.search).get('q') ?? '';
+      input.oninput = () => {
+        const url = new URL(location.href);
+        if (input.value.trim()) url.searchParams.set('q', input.value.trim());
+        else url.searchParams.delete('q');
+        history.replaceState(history.state, '', url);
+        update();
+      };
+      update();
+    }
+  }
+  customElements.define('hero-directory', HeroDirectory);
+</script>

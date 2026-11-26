@@ -1,9 +1,20 @@
 ---
 import HeroLayout from '../../components/hero/HeroLayout.astro';
 import LayoutPlanner from '../../components/hero/LayoutPlanner';
+import layouts from '../../../data/hero/layouts.json';
+import { screenByNumber } from '../../utils/hero';
 import { sitePath } from '../../utils/paths';
+
+const numbers = new Set([
+  ...Object.values(layouts.style).flat(), ...Object.values(layouts.focus),
+  ...Object.values(layouts.derivativeFocus), ...Object.values(layouts.overseasFocus),
+]);
+const cards = Object.fromEntries([...numbers].map(number => {
+  const { title, screenType } = screenByNumber(number);
+  return [number, { title, screenType }];
+}));
 ---
 <HeroLayout title="Layout Lab">
   <p slot="intro">모니터 수, 투자 스타일, 관심 분야를 선택해 화면 배치 예시를 확인하세요.</p>
-  <LayoutPlanner client:load screenBase={sitePath('hero-lab/screens')} />
+  <LayoutPlanner client:load cards={cards} screenBase={sitePath('hero-lab/screens')} />
 </HeroLayout>

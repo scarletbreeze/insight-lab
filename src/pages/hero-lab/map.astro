@@ -29,7 +29,7 @@ const initial = branches[0].items[0].number;
     <div class="hero-map-panels" aria-label="선택한 화면">
       {screens.map((screen) => {
         const related = relatedScreens(screen.number);
-        return <article class="hero-map-panel" id={'screen-' + screen.number} data-screen-panel={screen.number}>
+        return <article class="hero-map-panel" id={'screen-' + screen.number} data-screen-panel={screen.number} data-default={screen.number === initial || undefined}>
           <p class="category">{screen.purpose} · {screen.product}</p>
           <h2 tabindex="-1">{screen.number} {screen.title}</h2>
           <p>{screen.summary}</p>

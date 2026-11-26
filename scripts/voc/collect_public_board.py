@@ -89,7 +89,11 @@ def digest(value):
     return hashlib.sha256(value.encode()).hexdigest()
 
 
-def collect(first, last, limit, page_size, classify=False, include_daily=False, on_inquiry=None, checkpoint=None):
+SCREEN_REFERENCE = re.compile(r"\[\s*(\d{4})\s*\]|화면\s*(?:번호)?\s*[:#]?\s*(\d{4})(?!\d)|(?<!\d)(\d{4})\s*(?:번\s*)?화면")
+
+
+def collect(first, last, limit, page_size, classify=False, include_daily=False, on_inquiry=None, checkpoint=None,
+            screen_numbers=None):
     cursor = {"prevPageNo": "", "maxGrpStep": "", "minGrpStep": ""}
     known_pages = set()
     customers = {}
@@ -98,6 +102,9 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
     stop = "page-limit"
     previous_oldest = None
     settings = [str(first), str(last), page_size, classify, include_daily, digest(json.dumps([CATEGORIES, TOPIC_TERMS, "platform-transfer-v1"], sort_keys=True))]
+    mentions = {}
+    if screen_numbers is not None:
+        settings.append(digest(json.dumps([SCREEN_REFERENCE.pattern, sorted(screen_numbers)])))
     if checkpoint and on_inquiry:
         raise ValueError("A callback must manage its own progress.")
     if checkpoint and checkpoint.exists():
@@ -105,6 +112,8 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
         if state["settings"] != settings:
             raise ValueError("Checkpoint dates, page size or classification rules differ.")
         cursor, pages = state["cursor"], state["pages"]
+        if screen_numbers is not None:
+            mentions = state["mentions"]
         oldest, newest, previous_oldest = [date.fromisoformat(v) if v else None for v in state["bounds"]]
         known_pages = set(state["seen"])
         customers = {key: (date.fromisoformat(d), category, topic) for key, (d, category, topic) in state["customers"].items()}
@@ -144,8 +153,15 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
         for row, posted, category, topic in customer_rows:
             if first <= posted <= last:
                 identifier = digest(str(row["seqid"]))
-                if on_inquiry and row["divTp2"] == "a" and identifier not in customers:
-                    on_inquiry(posted, row)
+                if row["divTp2"] == "a" and identifier not in customers:
+                    if on_inquiry:
+                        on_inquiry(posted, row)
+                    if screen_numbers is not None:
+                        title = unescape(re.sub(r"<[^>]*>", " ", row.get("ttl") or ""))
+                        codes = {next(code for code in match if code) for match in SCREEN_REFERENCE.findall(title)}
+                        matched = sorted(codes & screen_numbers)
+                        if matched:
+                            mentions[identifier] = matched
                 record = (posted, category, topic)
                 if customers.setdefault(identifier, record) != record:
                     raise ValueError("A repeated customer thread changed date or category.")
@@ -164,6 +180,7 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
             write_checkpoint(checkpoint, {
                 "settings": settings, "cursor": cursor, "pages": pages, "seen": list(known_pages),
                 "bounds": [v.isoformat() if v else None for v in (oldest, newest, previous_oldest)],
+                **({"mentions": mentions} if screen_numbers is not None else {}),
                 "customers": {key: [d.isoformat(), category, topic] for key, (d, category, topic) in customers.items()},
             })
 
@@ -182,6 +199,9 @@ def collect(first, last, limit, page_size, classify=False, include_daily=False, 
         "newestObserved": str(newest) if newest else None, "stop": stop,
         "years": {year: {"total": sum(groups.values()), "categories": dict(groups)}
                   for year, groups in sorted(counts.items())},
+        **({"catalogSize": len(screen_numbers), "matchedThreads": len(mentions),
+            "screens": dict(sorted(Counter(code for codes in mentions.values() for code in codes).items()))}
+           if screen_numbers is not None else {}),
         **({"topicCounts": {year: dict(groups) for year, groups in sorted(topic_counts.items())}} if classify else {}),
         **({"dailyTopics": dict(sorted(daily_counts.items()))} if include_daily else {}),
     }

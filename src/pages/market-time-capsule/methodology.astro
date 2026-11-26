@@ -1,13 +1,32 @@
 ---
 import MarketLayout from '../../components/market/MarketLayout.astro';
 import { sitePath } from '../../utils/paths';
-import { gold, koreaMonthlyCloses, usMonthlyCloses } from '../../utils/market';
+import { gold, koreaMonthlyCloses, marketEvents, months, usMonthlyCloses, years } from '../../utils/market';
+const byMonth = Object.groupBy(marketEvents.filter(event => event.date.length >= 7), event => event.date.slice(0, 7));
+const coverage = years.map(year => {
+  const annual = marketEvents.filter(event => event.date.startsWith(String(year)));
+  const counts = months.map(month => byMonth[year + '-' + month]?.length ?? 0);
+  return { year, total: annual.length, datedMonths: counts.filter(count => count > 0).length,
+    threeEvents: counts.filter(count => count >= 3).length };
+});
 ---
 <MarketLayout title="시장 자료 방법론">
   <section class="lab-block">
     <h2>시장 사건</h2>
     <p>원자료가 일자를 제공하면 연·월·일을 표기합니다. 월 단위로 분류한 경기 정점·저점은 해당 월만 표시하고 발표 시점과 구분합니다.</p>
     <p>한국은행 금리 연표는 2008년 2월까지 콜금리 목표, 이후 기준금리를 기록합니다. 미국 연준의 공개시장운영 표는 목표금리 변경 적용일 기준이며 FOMC 발표일과 하루 차이가 날 수 있습니다.</p>
+    <details id="event-coverage">
+      <summary>연도별 사건 수록 범위</summary>
+      <p>현재 사건 {marketEvents.length}건을 수록했습니다. 연도만 확인된 사건은 연간 합계에 포함합니다. 월별 건수는 월 또는 일까지 확인된 사건으로 계산합니다.</p>
+      <div class="lab-table-wrap"><table class="lab-table">
+        <caption>연도별 수록 사건과 사건이 기록된 월 수</caption>
+        <thead><tr><th scope="col">연도</th><th scope="col">사건</th><th scope="col">1건 이상인 달</th><th scope="col">3건 이상인 달</th></tr></thead>
+        <tbody>{coverage.toReversed().map(row => <tr>
+          <th scope="row"><a href={sitePath('market-time-capsule/' + row.year)}>{row.year}</a></th>
+          <td>{row.total}건</td><td>{row.datedMonths}개월</td><td>{row.threeEvents}개월</td>
+        </tr>)}</tbody>
+      </table></div>
+    </details>
   </section>
   <section class="lab-block">
     <h2>월별 시장 스냅샷</h2>

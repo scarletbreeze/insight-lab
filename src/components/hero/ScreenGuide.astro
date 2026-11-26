@@ -1,10 +1,12 @@
 ---
-import { screenGuides } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+import { screenGuides, screens } from '../../utils/hero';
 
 interface Props { number: string; title: string; }
 const { number, title } = Astro.props;
 const guide = screenGuides[number];
 const sections = guide?.sections;
+const analyzed = new Set(screens.map(screen => screen.number));
 const official = 'https://download.kiwoom.com/hero4_help_new/';
 ---
 {guide && <section class="hero-section">
@@ -23,14 +25,17 @@ const official = 'https://download.kiwoom.com/hero4_help_new/';
   </figure>}
   {guide.image && <><h2>공식 화면 가이드</h2>
   <figure class="hero-guide">
-    <a href={official + number + '.htm'}>
-      <img src={official + 'images/' + guide.image} loading="lazy" decoding="async" alt={guide.imageCaption ?? title + ' · 키움증권 공식 도움말 화면 예시'} />
+    <a class="hero-image-link" href={official + number + '.htm'}
+      style={{ width: `min(100%, ${guide.width}px, ${33 * guide.width / guide.height}rem)` }}>
+      <img src={official + 'images/' + guide.image} width={guide.width} height={guide.height} loading="lazy" decoding="async" alt={guide.imageCaption ?? title + ' · 키움증권 공식 도움말 화면 예시'} />
     </a>
     <figcaption><a href={official + number + '.htm'}>{guide.imageCaption ?? '키움증권 영웅문4 화면 도움말'}</a></figcaption>
   </figure></>}
   {guide.relatedHelp && <details>
     <summary>공식 도움말에서 연결한 세부 화면 {guide.relatedHelp.length}개</summary>
-    <ul>{guide.relatedHelp.map((item) => <li><a href={official + item.number + '.htm'}>[{item.number}] {item.title}</a></li>)}</ul>
+    <ul>{guide.relatedHelp.map((item) => <li><a href={official + item.number + '.htm'}>[{item.number}] {item.title}</a>
+      {analyzed.has(item.number) && <> · <a href={sitePath('hero-lab/screens/' + item.number)} aria-label={item.title + ' 분석 보기'}>분석 보기</a></>}
+    </li>)}</ul>
   </details>}
 </section>}
 <style>

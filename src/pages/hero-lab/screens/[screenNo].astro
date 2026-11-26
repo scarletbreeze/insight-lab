@@ -3,6 +3,7 @@ import HeroLayout from '../../../components/hero/HeroLayout.astro';
 import ScreenGuide from '../../../components/hero/ScreenGuide.astro';
 import ScreenCard from '../../../components/hero/ScreenCard.astro';
 import { heroGuides, legends, relatedScreens, screenLearning, screens, workflows } from '../../../utils/hero';
+import mentions from '../../../../data/voc/screen-mentions.json';
 import { sitePath } from '../../../utils/paths';
 
 export function getStaticPaths() {
@@ -14,14 +15,20 @@ const related = relatedScreens(screen.number);
 const similar = screens.filter((item) => item.number !== screen.number
   && item.purpose === screen.purpose
   && item.screenType === screen.screenType
-  && item.product === screen.product).slice(0, 3);
+  && item.product === screen.product)
+  .map(item => ({ item, sameMenu: item.menuPath.join('/') === screen.menuPath.join('/'),
+    sharedTags: item.tags.filter(tag => screen.tags.includes(tag)).length }))
+  .sort((a, b) => Number(b.sameMenu) - Number(a.sameMenu) || b.sharedTags - a.sharedTags
+    || Math.abs(Number(a.item.number) - Number(screen.number)) - Math.abs(Number(b.item.number) - Number(screen.number)))
+  .slice(0, 3).map(({ item }) => item);
 const companions = related.filter((item) => !similar.some(({ number }) => item.number === number));
 const reading = legends.profiles.filter((profile) => profile.screens.includes(screen.number));
 const recommended = workflows.filter((workflow) => workflow.steps.some(({ number }) => number === screen.number));
 const learning = screenLearning[screen.number];
+const mentionCount = (mentions.screens as Record<string, number>)[screen.number];
 ---
 <HeroLayout title={screen.title} heading={screen.number + ' · ' + screen.title}>
-  <p slot="intro">{screen.purpose} · {screen.product}</p>
+  <p slot="intro">키움 공식 메뉴 · {screen.menuPath.join(' › ')}</p>
   <section class="hero-section">
     <h2>화면에서 볼 수 있는 것</h2>
     <p>{screen.summary}</p>
@@ -30,6 +37,7 @@ const learning = screenLearning[screen.number];
   <section class="hero-section">
     <h2>Hero Lab 화면 분류</h2>
     <dl class="hero-metadata">
+      <div><dt>목적·상품</dt><dd>{screen.purpose} · {screen.product}</dd></div>
       <div><dt>투자 스타일</dt><dd>{screen.styles.join(' · ')}</dd></div>
       <div><dt>유형</dt><dd>{screen.screenType}</dd></div>
       <div><dt>난이도</dt><dd>{screen.level}</dd></div>
@@ -51,6 +59,11 @@ const learning = screenLearning[screen.number];
     <ul class="hero-chips">{reading.map(({ chapter, name }) => (
       <li><a href={sitePath('hero-lab/hall-of-fame') + '#legend-' + chapter}>{name}</a></li>
     ))}</ul>
+  </section>}
+  {mentionCount > 0 && <section class="hero-section">
+    <h2>공개 문의에서 언급된 횟수</h2>
+    <p>{mentions.start}~{mentions.end} 키움 고객게시판의 공개 문의 중 {mentionCount}건의 제목에 이 화면번호가 명시됐습니다. 한 문의에 번호가 여러 번 나와도 한 번으로 셉니다.</p>
+    <a href={sitePath('hero-lab/hall-of-fame') + '#screen-mentions'}>화면별 문의 건수와 집계 기준</a>
   </section>}
   {similar.length > 0 && <section class="hero-section">
     <h2>비슷한 화면</h2>

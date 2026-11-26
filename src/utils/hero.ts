@@ -5,6 +5,8 @@ import guideData from '../../data/hero/screen-guides.json';
 
 interface ScreenGuide {
   image?: string;
+  width: number;
+  height: number;
   imageCaption?: string;
   relatedHelp?: { number: string; title: string }[];
   focus: string[];
@@ -54,13 +56,14 @@ export const screenLearning: Record<string, { title: string; url: string }[]> = 
 
 export function relatedScreens(number: string) {
   const screen = screenByNumber(number);
+  const helpNumbers = new Set(screenGuides[number]?.relatedHelp?.map(item => item.number));
   const companionNumbers = new Set(workflows
     .filter(({ steps }) => steps.some((step) => step.number === number))
     .flatMap(({ steps }) => steps.map((step) => step.number)));
   return screens.filter((candidate) => candidate.number !== number)
     .map((candidate) => ({
       candidate,
-      score: Number(companionNumbers.has(candidate.number)) * 4
+      score: Number(companionNumbers.has(candidate.number)) * 8 + Number(helpNumbers.has(candidate.number)) * 4
         + Number(candidate.purpose === screen.purpose) * 2
         + Number(candidate.tags.some((tag) => screen.tags.includes(tag))),
     }))

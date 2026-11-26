@@ -144,6 +144,20 @@ test('Hero screen numbers and workflow references resolve to sourced records', (
   }
 });
 
+test('Official directory keeps distinct numbers, searchable names and image dimensions for every guide', () => {
+  const index = readJson<{ screens: { number: string; title: string; group: string; menuTitles?: string[] }[] }>('hero/official-directory.json');
+  const entries = new Map(index.screens.map(row => [row.number, row]));
+  assert.equal(entries.size, index.screens.length);
+  assert.ok(index.screens.every(row => /^\d{4}$/.test(row.number) && row.title.trim() && row.group.trim()));
+  assert.ok(entries.get('0279')?.menuTitles?.includes('ETF시간대별추이'));
+  const guides = readJson<Record<string, { width: number; height: number; relatedHelp?: { number: string }[] }>>('hero/screen-guides.json');
+  for (const [number, guide] of Object.entries(guides)) {
+    assert.ok(entries.has(number));
+    assert.ok(Number.isInteger(guide.width) && guide.width > 0 && Number.isInteger(guide.height) && guide.height > 0);
+    for (const link of guide.relatedHelp ?? []) assert.ok(entries.has(link.number), link.number);
+  }
+});
+
 test('VOC notice and inquiry samples use known topics and retain distinct coverage', () => {
   const topics = new Set(readJson<{ id: string }[]>('voc/topics.json').map(({ id }) => id));
   const years = readJson<{ year: number, questionCoverage: string }[]>('voc/years.json');

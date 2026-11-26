@@ -18,9 +18,9 @@ const essentials = ['0101', '0130', '0150', '0600', '0641', '0780'].map(screenBy
     <p>시장 파악, 종목 검색, 차트 분석을 시작할 때 참고할 화면입니다.</p>
     <div class="hero-grid">{essentials.map((screen) => <ScreenCard screen={screen} />)}</div>
   </section>
-  <section class="hero-section">
+  <section class="hero-section" id="screen-mentions">
     <h2>Most Asked · 문의 제목에 나온 화면</h2>
-    <p>{mentions.start}~{mentions.end} 공개 문의 {inquiries.toLocaleString('ko-KR')}건 중 {mentions.matchedThreads.toLocaleString('ko-KR')}건의 제목에서 수록 화면번호를 확인했습니다. 대괄호 안의 번호 또는 ‘화면’과 함께 쓴 번호를 셌습니다. 같은 문의에 같은 번호가 반복되면 한 번만 셉니다.</p>
+    <p>{mentions.start}~{mentions.end} 공개 문의 {inquiries.toLocaleString('ko-KR')}건 중 {mentions.matchedThreads.toLocaleString('ko-KR')}건의 제목에서 집계 대상 {mentions.catalogSize}개 화면번호 중 하나 이상을 확인했습니다. 대괄호 안의 번호 또는 ‘화면’과 함께 쓴 번호를 셌습니다. 같은 문의에 같은 번호가 반복되면 한 번만 셉니다.</p>
     <ul class="hero-chips">{leaders.map(([number, count]) => <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title} · {count}건</a></li>)}</ul>
     {remaining.length > 0 && <details><summary>다른 화면 {remaining.length}개</summary>
       <ul class="hero-chips">{remaining.map(([number, count]) => <li><a href={sitePath('hero-lab/screens/' + number)}>{number} {screenByNumber(number).title} · {count}건</a></li>)}</ul>

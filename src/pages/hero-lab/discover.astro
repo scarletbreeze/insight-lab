@@ -2,7 +2,11 @@
 import HeroLayout from '../../components/hero/HeroLayout.astro';
 import ScreenCard from '../../components/hero/ScreenCard.astro';
 import { interests, purposes, screenGuides, screens, styles } from '../../utils/hero';
+import { sitePath } from '../../utils/paths';
+import directory from '../../../data/hero/official-directory.json';
 
+const helpTitles = new Map(directory.screens.map(item => [item.number, [item.title, ...(item.menuTitles ?? [])].join(' ')]));
+const pageSize = 24;
 const options = [
   { name: 'purpose', label: '목적', values: purposes },
   { name: 'style', label: '투자 스타일', values: styles },
@@ -15,7 +19,8 @@ const options = [
 ---
 <HeroLayout title="화면 탐색">
   <p slot="intro">화면번호, 화면명, 관심사로 영웅문4 화면을 찾으세요. 투자 스타일과 난이도는 Hero Lab의 편집 분류입니다.</p>
-  <hero-discovery>
+  <p class="hero-directory-link"><a href={sitePath('hero-lab/directory')}>공식 화면 색인 {directory.screens.length}개 보기</a></p>
+  <hero-discovery data-page-size={pageSize}>
     <form class="hero-finder">
       <label for="hero-query">화면 검색</label>
       <input id="hero-query" name="q" type="search" placeholder="예: 0130, 관심종목, 수급" />
@@ -32,11 +37,11 @@ const options = [
       <button type="reset">필터 초기화</button>
     </form>
     <p class="hero-status" role="status">{screens.length}개 화면</p>
-    <div class="hero-grid">
-      {screens.map((screen) => {
+    <div class="hero-grid hero-results">
+      {screens.map((screen, index) => {
         const guide = screenGuides[screen.number];
-        const keywords = [screen.number, screen.title, screen.summary, ...screen.tags, ...(guide?.sections?.flat() ?? [])];
-        return <div data-result data-search={keywords.join(' ')}
+        const keywords = [screen.number, screen.title, helpTitles.get(screen.number), screen.summary, screen.observation, ...screen.menuPath, ...screen.tags, ...(guide?.sections?.flat() ?? [])];
+        return <div data-result data-later={index >= pageSize || undefined} data-search={keywords.join(' ')}
           data-purpose={screen.purpose} data-style={screen.styles.join('|')} data-interest={screen.tags.join('|')}
           data-screen-type={screen.screenType} data-product={screen.product} data-level={screen.level}
           data-guide={guide?.image ? '공식 가이드 있음' : undefined}>
@@ -44,7 +49,8 @@ const options = [
         </div>;
       })}
     </div>
-    <p class="empty-state" data-empty hidden>일치하는 화면이 없습니다. 검색어나 필터를 바꿔보세요.</p>
+    <button type="button" class="hero-more" data-more hidden>다음 화면 보기</button>
+    <p class="empty-state" data-empty hidden>일치하는 화면이 없습니다. 검색어나 필터를 바꿔보세요. <a data-directory href={sitePath('hero-lab/directory')}>공식 색인에서 찾기</a></p>
   </hero-discovery>
 </HeroLayout>
 <script>
@@ -63,6 +69,11 @@ const options = [
       const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('[name]'));
       const filterNames = Array.from(form.querySelectorAll('select[name]'), (field) => field.getAttribute('name')!);
 
+      const more = this.querySelector<HTMLButtonElement>('[data-more]')!;
+      const directoryLink = this.querySelector<HTMLAnchorElement>('[data-directory]')!;
+      const pageSize = Number(this.dataset.pageSize);
+      let limit = pageSize;
+
       function render() {
         if (!form || !status || !empty) return;
         const criteria = new FormData(form);
@@ -76,15 +87,19 @@ const options = [
             const value = String(criteria.get(field));
             return !value || entry.dataset[field]?.split('|').includes(value);
           });
-          entry.hidden = !(matchesQuery && matchesFilters);
-          if (!entry.hidden) count++;
+          if (matchesQuery && matchesFilters) count++;
+          entry.hidden = !(matchesQuery && matchesFilters && count <= limit);
         }
 
-        status.textContent = `${count}개 화면`;
+        status.textContent = count > limit ? `${count}개 화면 중 ${limit}개 표시` : `${count}개 화면`;
+        more.hidden = count <= limit;
+        more.textContent = `다음 ${Math.min(pageSize, Math.max(0, count - limit))}개 보기`;
         empty.hidden = count > 0;
+        directoryLink.search = query ? new URLSearchParams({ q: query }).toString() : '';
       }
 
       function readUrl() {
+        limit = pageSize;
         const parameters = new URLSearchParams(location.search);
         for (const field of fields) {
           const value = parameters.get(field.name) ?? '';
@@ -95,6 +110,7 @@ const options = [
 
       function update() {
         if (signal.aborted) return;
+        limit = pageSize;
         const url = new URL(location.href);
         for (const field of fields) {
           const value = field.value.trim();
@@ -105,6 +121,13 @@ const options = [
         render();
       }
 
+      more.addEventListener('click', () => {
+        const last = entries.filter(entry => !entry.hidden).at(-1);
+        limit += pageSize;
+        render();
+        const firstNew = entries.slice(entries.indexOf(last!) + 1).find(entry => !entry.hidden);
+        firstNew?.querySelector('a')?.focus();
+      }, { signal });
       form.addEventListener('input', update, { signal });
       form.addEventListener('submit', (event) => event.preventDefault(), { signal });
       form.addEventListener('reset', () => requestAnimationFrame(update), { signal });

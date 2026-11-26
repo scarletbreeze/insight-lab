@@ -1,0 +1,4926 @@
+{
+  "retrievedAt": "2026-11-26",
+  "sourceUrl": "https://download.kiwoom.com/hero4_help_new/whgdata/whlstt0.htm",
+  "screens": [
+    {
+      "number": "0010",
+      "title": "Front Page",
+      "group": "고객서비스"
+    },
+    {
+      "number": "0038",
+      "title": "증거금률변경안내",
+      "group": "고객서비스"
+    },
+    {
+      "number": "0101",
+      "title": "키움현재가",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0102",
+      "title": "키움현재가2",
+      "group": "주식"
+    },
+    {
+      "number": "0104",
+      "title": "통합현재가",
+      "group": "주식",
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "0106",
+      "title": "주식현재가(5단)",
+      "group": "주식"
+    },
+    {
+      "number": "0107",
+      "title": "주식가로호가",
+      "group": "주식"
+    },
+    {
+      "number": "0109",
+      "title": "복수현재가(5단)",
+      "group": "주식"
+    },
+    {
+      "number": "0110",
+      "title": "당일체결상세",
+      "group": "주식"
+    },
+    {
+      "number": "0111",
+      "title": "주식호가",
+      "group": "주식"
+    },
+    {
+      "number": "0112",
+      "title": "당일체결(수치+차트)",
+      "group": "주식"
+    },
+    {
+      "number": "0113",
+      "title": "기본호가",
+      "group": "주식"
+    },
+    {
+      "number": "0114",
+      "title": "종목상세정보",
+      "group": "주식"
+    },
+    {
+      "number": "0115",
+      "title": "주식호가1(5단)",
+      "group": "주식"
+    },
+    {
+      "number": "0116",
+      "title": "주식호가2(5단)",
+      "group": "주식"
+    },
+    {
+      "number": "0117",
+      "title": "주식호가추이",
+      "group": "주식"
+    },
+    {
+      "number": "0118",
+      "title": "종목별 예상체결",
+      "group": "주식"
+    },
+    {
+      "number": "0119",
+      "title": "주식복수호가",
+      "group": "주식"
+    },
+    {
+      "number": "0120",
+      "title": "미니체결",
+      "group": "주식"
+    },
+    {
+      "number": "0121",
+      "title": "시간대별/Tick",
+      "group": "주식"
+    },
+    {
+      "number": "0122",
+      "title": "당일전일체결",
+      "group": "주식"
+    },
+    {
+      "number": "0123",
+      "title": "가격대별거래비중/차트",
+      "group": "주식",
+      "menuTitles": [
+        "가격대별거래비중/그래프"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0124",
+      "title": "일별주가",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0125",
+      "title": "시간대별 전일비거래비중",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0126",
+      "title": "미니거래원변동",
+      "group": "주식"
+    },
+    {
+      "number": "0127",
+      "title": "거래원순간거래량",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0128",
+      "title": "거래원입체분석 (통합)",
+      "group": "주식"
+    },
+    {
+      "number": "0129",
+      "title": "미니거래원",
+      "group": "주식"
+    },
+    {
+      "number": "0130",
+      "title": "관심종목",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0141",
+      "title": "종목별 신용매매동향",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0142",
+      "title": "종목별 공매도추이",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0143",
+      "title": "일별거래상세",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0144",
+      "title": "거래원별 매매상위",
+      "group": "주식"
+    },
+    {
+      "number": "0146",
+      "title": "시간대별/Tick차트2",
+      "group": "주식"
+    },
+    {
+      "number": "0147",
+      "title": "상한가/하한가 실시간 포착",
+      "group": "주식"
+    },
+    {
+      "number": "0148",
+      "title": "순간체결량",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0149",
+      "title": "거래원상세분석",
+      "group": "주식"
+    },
+    {
+      "number": "0150",
+      "title": "조건검색",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL",
+        "영웅검색"
+      ]
+    },
+    {
+      "number": "0151",
+      "title": "가격대별주가",
+      "group": "주식"
+    },
+    {
+      "number": "0152",
+      "title": "그룹사별주가",
+      "group": "주식"
+    },
+    {
+      "number": "0153",
+      "title": "관리종목",
+      "group": "주식"
+    },
+    {
+      "number": "0154",
+      "title": "투자주의/경고/위험종목",
+      "group": "주식"
+    },
+    {
+      "number": "0155",
+      "title": "신규상장/정리매매 종목",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0156",
+      "title": "조건검색실시간",
+      "group": "주식",
+      "otherGroups": [
+        "영웅검색"
+      ]
+    },
+    {
+      "number": "0158",
+      "title": "장중대량매매 전체시세",
+      "group": "주식"
+    },
+    {
+      "number": "0159",
+      "title": "대량매매종목",
+      "group": "주식"
+    },
+    {
+      "number": "0160",
+      "title": "특이종목(T)",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0161",
+      "title": "신고가/신저가",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0162",
+      "title": "상한가/하한가",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0163",
+      "title": "고가/저가근접",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0164",
+      "title": "가격급등/급락",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0165",
+      "title": "호가잔량상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0166",
+      "title": "호가잔량급증",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0167",
+      "title": "잔량율급증",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0168",
+      "title": "거래량급증",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0169",
+      "title": "거래량갱신",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0170",
+      "title": "매물대집중",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0171",
+      "title": "고PER/저PER",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0172",
+      "title": "시간외 호가잔량 상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0173",
+      "title": "코넥스 전체종목",
+      "group": "주식"
+    },
+    {
+      "number": "0174",
+      "title": "코넥스 경매매대상종목정보",
+      "group": "주식"
+    },
+    {
+      "number": "0175",
+      "title": "회전율 상위",
+      "group": "주식"
+    },
+    {
+      "number": "0176",
+      "title": "초저유동성 종목",
+      "group": "주식"
+    },
+    {
+      "number": "0177",
+      "title": "특정일자 상한가/하한가",
+      "group": "주식"
+    },
+    {
+      "number": "0178",
+      "title": "체결강도추이",
+      "group": "주식"
+    },
+    {
+      "number": "0179",
+      "title": "투자주의환기종목",
+      "group": "주식"
+    },
+    {
+      "number": "0180",
+      "title": "순위분석(T)",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0181",
+      "title": "전일대비등락률상위",
+      "group": "주식",
+      "menuTitles": [
+        "전일대비 등락율 상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0182",
+      "title": "시가대비등락률상위",
+      "group": "주식",
+      "menuTitles": [
+        "시가대비등락율상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0183",
+      "title": "예상체결등락률상위",
+      "group": "주식",
+      "menuTitles": [
+        "예상체결 등락율 상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0184",
+      "title": "당일거래상위(거래량/회전율/거래대금)",
+      "group": "주식",
+      "menuTitles": [
+        "당일거래량상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0185",
+      "title": "전일거래상위(거래량/거래대금)",
+      "group": "주식",
+      "menuTitles": [
+        "전일거래량상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0186",
+      "title": "거래대금상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0187",
+      "title": "시가총액상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0188",
+      "title": "신용비율상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0189",
+      "title": "기간별 공매도순위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0190",
+      "title": "대량체결상위(매수상위종목별 거래비중)",
+      "group": "주식"
+    },
+    {
+      "number": "0191",
+      "title": "증거금률별 대상종목",
+      "group": "주식"
+    },
+    {
+      "number": "0192",
+      "title": "주식상태변경이력",
+      "group": "주식"
+    },
+    {
+      "number": "0193",
+      "title": "변동성완화장치(VI) 발동종목현황",
+      "group": "주식"
+    },
+    {
+      "number": "0194",
+      "title": "누적등락률상위",
+      "group": "주식"
+    },
+    {
+      "number": "0195",
+      "title": "누적거래상위",
+      "group": "주식"
+    },
+    {
+      "number": "0196",
+      "title": "체결금액대별 매매비중",
+      "group": "주식"
+    },
+    {
+      "number": "0197",
+      "title": "체결분석(T)",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0200",
+      "title": "시장종합",
+      "group": "주식"
+    },
+    {
+      "number": "0201",
+      "title": "증시주변자금추이",
+      "group": "주식"
+    },
+    {
+      "number": "0202",
+      "title": "금현물주문종합",
+      "group": "주식주문"
+    },
+    {
+      "number": "0207",
+      "title": "금현물현재가",
+      "group": "주식"
+    },
+    {
+      "number": "0208",
+      "title": "금현물체결추이",
+      "group": "주식"
+    },
+    {
+      "number": "0209",
+      "title": "금현물일별추이",
+      "group": "주식"
+    },
+    {
+      "number": "0210",
+      "title": "시장지도",
+      "group": "주식"
+    },
+    {
+      "number": "0211",
+      "title": "업종현재가",
+      "group": "주식"
+    },
+    {
+      "number": "0212",
+      "title": "시간대별업종지수",
+      "group": "주식"
+    },
+    {
+      "number": "0213",
+      "title": "업종별주가",
+      "group": "주식"
+    },
+    {
+      "number": "0214",
+      "title": "전업종지수",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0215",
+      "title": "일별업종지수",
+      "group": "주식"
+    },
+    {
+      "number": "0216",
+      "title": "업종별거래비중",
+      "group": "주식"
+    },
+    {
+      "number": "0217",
+      "title": "업종별등락추이",
+      "group": "주식"
+    },
+    {
+      "number": "0218",
+      "title": "업종별구성종목",
+      "group": "주식"
+    },
+    {
+      "number": "0219",
+      "title": "기간별 업종 시세와 수급",
+      "group": "주식"
+    },
+    {
+      "number": "0220",
+      "title": "ETF주문종합",
+      "group": "ETF/ELW",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0221",
+      "title": "현물지수종목시세",
+      "group": "주식",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0222",
+      "title": "현물지수추이",
+      "group": "주식",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0223",
+      "title": "예상지수추이",
+      "group": "주식",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0224",
+      "title": "동시호가수량배분종목",
+      "group": "주식"
+    },
+    {
+      "number": "0225",
+      "title": "코넥스 경매매주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0226",
+      "title": "코넥스 주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0227",
+      "title": "코넥스 투자자 유의사항 확인",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0230",
+      "title": "ELW/기초자산 호가비교",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0231",
+      "title": "ELW/기초자산 체결비교",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0232",
+      "title": "ELW/기초자산 일별비교",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0234",
+      "title": "계좌별 조기종료 ELW 발생현황",
+      "group": "ETF/ELW",
+      "menuTitles": [
+        "계좌별 조기종료 ELW 발행현황"
+      ]
+    },
+    {
+      "number": "0235",
+      "title": "ELW/기초자산 차트",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0236",
+      "title": "ELW/기초자산 비교차트",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0237",
+      "title": "조기종료 ELW 종목현황",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0238",
+      "title": "조기종료 ELW 예상평가진행현황",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0239",
+      "title": "일별 조기종료 ELW 예상평가현황",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0240",
+      "title": "외국인종목별매매동향",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0241",
+      "title": "외국인한도소진율상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0242",
+      "title": "기간별매매상위",
+      "group": "주식",
+      "menuTitles": [
+        "외국인기간별매매상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0243",
+      "title": "연속순매매상위",
+      "group": "주식",
+      "menuTitles": [
+        "외국인연속순매매상위"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0244",
+      "title": "한도소진율증가상위",
+      "group": "주식"
+    },
+    {
+      "number": "0245",
+      "title": "외국인일별거래동향차트",
+      "group": "주식"
+    },
+    {
+      "number": "0246",
+      "title": "매매상위",
+      "group": "주식"
+    },
+    {
+      "number": "0248",
+      "title": "미니매매상위",
+      "group": "주식"
+    },
+    {
+      "number": "0250",
+      "title": "종목매매동향",
+      "group": "주식",
+      "menuTitles": [
+        "증권사별종목매매동향"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0251",
+      "title": "종목별증권사순위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0252",
+      "title": "증권사별매매상위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0253",
+      "title": "전증권사동향",
+      "group": "주식"
+    },
+    {
+      "number": "0254",
+      "title": "당일주요거래원",
+      "group": "주식"
+    },
+    {
+      "number": "0256",
+      "title": "거래원매물대분석",
+      "group": "주식"
+    },
+    {
+      "number": "0257",
+      "title": "일별 기관매매종목",
+      "group": "주식"
+    },
+    {
+      "number": "0258",
+      "title": "종목별 기관매매추이",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0260",
+      "title": "자사주신청내역",
+      "group": "주식"
+    },
+    {
+      "number": "0261",
+      "title": "자사주체결추이",
+      "group": "주식"
+    },
+    {
+      "number": "0262",
+      "title": "자사주일별추이",
+      "group": "주식"
+    },
+    {
+      "number": "0263",
+      "title": "동시호가임의연장예상종목",
+      "group": "주식"
+    },
+    {
+      "number": "0264",
+      "title": "임의연장 종목현황",
+      "group": "주식"
+    },
+    {
+      "number": "0266",
+      "title": "ETF/ETN종목별 과표기준가조회",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0267",
+      "title": "ETF조건검색",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0270",
+      "title": "외국인 ELW 종목별 매매현황",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0271",
+      "title": "ELW 한도소진율 상위",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0272",
+      "title": "ELW가격급등/급락",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0273",
+      "title": "거래원별ELW순매매상위",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0275",
+      "title": "ETF현재가",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0276",
+      "title": "ETF구성종목",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0277",
+      "title": "ETF/ETN일별추이",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0278",
+      "title": "ETF전체시세",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0279",
+      "title": "ETF/ETN시간대별추이",
+      "group": "ETF/ELW",
+      "menuTitles": [
+        "ETF시간대별추이"
+      ]
+    },
+    {
+      "number": "0280",
+      "title": "K-OTC현재가",
+      "group": "주식"
+    },
+    {
+      "number": "0281",
+      "title": "신주인수권일별추이",
+      "group": "주식"
+    },
+    {
+      "number": "0282",
+      "title": "K-OTC호가",
+      "group": "주식"
+    },
+    {
+      "number": "0283",
+      "title": "K-OTC주가추이",
+      "group": "주식"
+    },
+    {
+      "number": "0284",
+      "title": "K-OTC순위분석",
+      "group": "주식"
+    },
+    {
+      "number": "0285",
+      "title": "ELW LP보유일별추이",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0286",
+      "title": "ELW 일별민감도지표",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0287",
+      "title": "ELW괴리율",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0288",
+      "title": "ELW 시장동향",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0289",
+      "title": "ELW조건검색",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0290",
+      "title": "ELW현재가",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0291",
+      "title": "ELW종목상세정보",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0292",
+      "title": "ELW 투자지표",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0293",
+      "title": "ELW등락률순위",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0294",
+      "title": "ELW잔량순위",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0295",
+      "title": "ELW거래량순위",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0296",
+      "title": "ELW 시세현황",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0297",
+      "title": "신주인수권현재가",
+      "group": "주식"
+    },
+    {
+      "number": "0298",
+      "title": "신주인수권전체시세",
+      "group": "주식"
+    },
+    {
+      "number": "0299",
+      "title": "ELW 민감도지표",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0302",
+      "title": "키움주문(5단)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0303",
+      "title": "주식펼친주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0304",
+      "title": "주식바로주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0306",
+      "title": "권리입고예정주식매도주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0307",
+      "title": "멀티호가주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0308",
+      "title": "주식바로주문2",
+      "group": "주식주문"
+    },
+    {
+      "number": "0309",
+      "title": "실시간 잔고/미체결",
+      "group": "주식주문"
+    },
+    {
+      "number": "0311",
+      "title": "주식Stop주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0312",
+      "title": "주식쾌속주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0313",
+      "title": "멀티쾌속주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0315",
+      "title": "매수시세감시",
+      "group": "주식주문"
+    },
+    {
+      "number": "0317",
+      "title": "매도시세감시",
+      "group": "주식주문"
+    },
+    {
+      "number": "0319",
+      "title": "주식분할주문 (통합)",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0320",
+      "title": "신용복수종목주문",
+      "group": "SPECIAL"
+    },
+    {
+      "number": "0322",
+      "title": "ELW주문종합",
+      "group": "주식주문",
+      "otherGroups": [
+        "ETF/ELW"
+      ]
+    },
+    {
+      "number": "0323",
+      "title": "주식바이앤셀주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0324",
+      "title": "개인(신용)정보 수집이용/제공/조회 동의서",
+      "group": "주식주문"
+    },
+    {
+      "number": "0325",
+      "title": "계좌별 매체별 약정현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0326",
+      "title": "정정취소",
+      "group": "주식주문"
+    },
+    {
+      "number": "0328",
+      "title": "일별 종목별 실현손익",
+      "group": "주식주문"
+    },
+    {
+      "number": "0329",
+      "title": "일별 실현손익",
+      "group": "주식주문"
+    },
+    {
+      "number": "0331",
+      "title": "예약주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0334",
+      "title": "신용주문(융자/대주/대출매도상환)",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0335",
+      "title": "주식복수종목주문종합",
+      "group": "SPECIAL"
+    },
+    {
+      "number": "0336",
+      "title": "K-OTC 주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0337",
+      "title": "신주인수권주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0338",
+      "title": "실시간 잔고(15단)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0340",
+      "title": "실시간계좌관리(T)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0341",
+      "title": "실시간 미체결",
+      "group": "주식주문"
+    },
+    {
+      "number": "0342",
+      "title": "원장미체결(당일)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0343",
+      "title": "기간별 주문체결상세",
+      "group": "주식주문"
+    },
+    {
+      "number": "0344",
+      "title": "과거 특정일자 잔고",
+      "group": "주식주문"
+    },
+    {
+      "number": "0345",
+      "title": "실시간 잔고",
+      "group": "주식주문"
+    },
+    {
+      "number": "0346",
+      "title": "잔고확인",
+      "group": "주식주문"
+    },
+    {
+      "number": "0347",
+      "title": "주문/인출 가능금 추정",
+      "group": "주식주문"
+    },
+    {
+      "number": "0348",
+      "title": "결제예정내역상세",
+      "group": "주식주문"
+    },
+    {
+      "number": "0349",
+      "title": "일별 추정예탁자산 현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0350",
+      "title": "체결확인(당일)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0351",
+      "title": "금일주문체결내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0352",
+      "title": "전일체결내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0353",
+      "title": "당일매매일지",
+      "group": "주식주문"
+    },
+    {
+      "number": "0354",
+      "title": "당일매매정리",
+      "group": "주식주문"
+    },
+    {
+      "number": "0355",
+      "title": "당일실현손익상세",
+      "group": "주식주문"
+    },
+    {
+      "number": "0356",
+      "title": "종목별당일손익",
+      "group": "주식주문"
+    },
+    {
+      "number": "0357",
+      "title": "청약예약내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0358",
+      "title": "ELW권리행사 종목조회",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0359",
+      "title": "권리현황(유상/무상/배당 등)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0360",
+      "title": "주식시뮬레이션",
+      "group": "주식주문"
+    },
+    {
+      "number": "0361",
+      "title": "예수금",
+      "group": "주식주문"
+    },
+    {
+      "number": "0362",
+      "title": "예수금상세현황",
+      "group": "주식주문",
+      "otherGroups": [
+        "신용/대출"
+      ]
+    },
+    {
+      "number": "0363",
+      "title": "미수금현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0364",
+      "title": "미수동결현황 조회",
+      "group": "주식주문"
+    },
+    {
+      "number": "0365",
+      "title": "거래내역(결제기준)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0366",
+      "title": "계좌잔고 상세내역 조회",
+      "group": "주식주문"
+    },
+    {
+      "number": "0367",
+      "title": "권리정보 상세조회(유상/무상/배당 등)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0368",
+      "title": "금일반대매매 현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0369",
+      "title": "익일미수반대매매대상 현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0370",
+      "title": "저축주문종합",
+      "group": "주식주문"
+    },
+    {
+      "number": "0374",
+      "title": "ELW만기행사 예상손익",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0375",
+      "title": "저축주문체결(T)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0376",
+      "title": "금일저축주문체결",
+      "group": "주식주문"
+    },
+    {
+      "number": "0377",
+      "title": "전일저축주문체결",
+      "group": "주식주문"
+    },
+    {
+      "number": "0379",
+      "title": "익일추정 신용담보부족/미상환 반대매매",
+      "group": "주식주문"
+    },
+    {
+      "number": "0380",
+      "title": "저축예수금",
+      "group": "주식주문"
+    },
+    {
+      "number": "0381",
+      "title": "저축미납내역현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0382",
+      "title": "저축거래내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0383",
+      "title": "저축잔고평가현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0385",
+      "title": "저축재사용현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0386",
+      "title": "매수일별저축잔고현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0388",
+      "title": "저축계좌정보조회",
+      "group": "주식주문"
+    },
+    {
+      "number": "0390",
+      "title": "기간별수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0391",
+      "title": "계좌평가 잔고내역(합산)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0392",
+      "title": "일별계좌수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0393",
+      "title": "월별계좌수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0396",
+      "title": "주식호가스탑로스 감시내역 조회",
+      "group": "주식주문"
+    },
+    {
+      "number": "0398",
+      "title": "계좌증거금률 변경 등록",
+      "group": "주식주문"
+    },
+    {
+      "number": "0399",
+      "title": "주문가능수량(종목별/증거금률별)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0400",
+      "title": "주식셀앤바이주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0401",
+      "title": "선물현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0402",
+      "title": "선물현재가2",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0409",
+      "title": "선물전체시세",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0411",
+      "title": "선물옵션미니호가1",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0413",
+      "title": "선물옵션미니호가2",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0419",
+      "title": "선물옵션복수호가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0420",
+      "title": "선물옵션체결추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0422",
+      "title": "선물시세추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0423",
+      "title": "선물옵션일별추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0424",
+      "title": "선물옵션호가잔량추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0425",
+      "title": "옵션시세추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0426",
+      "title": "선물개별종목 시세 추이 (KRX)",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0427",
+      "title": "옵션개별종목 시세 추이 (KRX)",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0429",
+      "title": "선물옵션 실시간 상/하한가 시간대",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0430",
+      "title": "타임스프레드차트",
+      "group": "차트",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0431",
+      "title": "선물주문 증거금",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0432",
+      "title": "ETN현재가",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0433",
+      "title": "ETN구성종목",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0435",
+      "title": "ETN 전체시세",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0437",
+      "title": "장중 선물옵션 가격제한폭 변경내역 조회",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0440",
+      "title": "선물옵션가격대별비중차트",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0441",
+      "title": "선물옵션미결제약정차트",
+      "group": "차트",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0442",
+      "title": "베이시스추이/차트",
+      "group": "차트",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0443",
+      "title": "풋/콜옵션 비율차트",
+      "group": "차트",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0446",
+      "title": "잔고확인(실시간)",
+      "group": "주식주문"
+    },
+    {
+      "number": "0451",
+      "title": "옵션현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0459",
+      "title": "옵션복수현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0460",
+      "title": "옵션결제월별시세",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0461",
+      "title": "민감도지표추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0465",
+      "title": "옵션매도 주문증거금",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0469",
+      "title": "ETN종목상세정보",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0471",
+      "title": "변동성분석차트",
+      "group": "차트",
+      "otherGroups": [
+        "SPECIAL",
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0476",
+      "title": "ETF/ETN보유기간과세 체결내역조회",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0477",
+      "title": "ETF/ETN보유기간과세 시뮬레이션",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "0480",
+      "title": "주식선물현재가(10단)",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0481",
+      "title": "주식옵션현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0482",
+      "title": "주식선물옵션미니호가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0483",
+      "title": "주식선물옵션추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0485",
+      "title": "주식옵션거래량/거래대금 상위",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0486",
+      "title": "주식선물거래량/거래대금 상위",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0487",
+      "title": "위탁종합계좌 잔고",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0488",
+      "title": "위탁대용매도 주문종합",
+      "group": "주식주문"
+    },
+    {
+      "number": "0489",
+      "title": "위탁종합계좌 거래내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0490",
+      "title": "위탁종합계좌 예수금",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0491",
+      "title": "주식선물옵션체결추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0492",
+      "title": "주식선물옵션일별추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0493",
+      "title": "주식선물시세표",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0495",
+      "title": "주식종목별월수익현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "0499",
+      "title": "주식선물 조건검색",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0501",
+      "title": "선물옵션주문종합",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0502",
+      "title": "선물옵션주문종합2",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0503",
+      "title": "선물옵션일괄청산주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0504",
+      "title": "선물옵션주문종합3",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0505",
+      "title": "선물옵션호가주문플러스",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0506",
+      "title": "선물옵션호가주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0507",
+      "title": "선물옵션멀티호가주문",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0508",
+      "title": "주식선물옵션호가주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0509",
+      "title": "Power옵션",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0510",
+      "title": "옵션특화주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0511",
+      "title": "선물옵션호가스탑로스",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0512",
+      "title": "주식호가스탑로스",
+      "group": "주식주문"
+    },
+    {
+      "number": "0513",
+      "title": "옵션월물별시세",
+      "group": "선물옵션"
+    },
+    {
+      "number": "0514",
+      "title": "선물옵션 타겟종목 시세감시주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0515",
+      "title": "선물옵션다중주문",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0516",
+      "title": "선물옵션 동시주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0520",
+      "title": "선물옵션미니주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0522",
+      "title": "선물옵션Stop주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0523",
+      "title": "선물옵션 바이앤셀주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0524",
+      "title": "주식선물옵션바이앤셀주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0527",
+      "title": "계좌별 장중추가 증거금 발생내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0528",
+      "title": "선물옵션 시세감시주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0530",
+      "title": "선물/CFD대용주문종합",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "CFD주식"
+      ]
+    },
+    {
+      "number": "0531",
+      "title": "선물옵션 예약주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0532",
+      "title": "주식선물옵션주문종합",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0533",
+      "title": "주식선물옵션미니주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0534",
+      "title": "선물옵션 KRX주문변경내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0535",
+      "title": "선물옵션 KRX주문거부내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0536",
+      "title": "주식선물바로주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0537",
+      "title": "선물옵션호가스탑로스 감시내역 조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0538",
+      "title": "주식선물옵션주문종합2",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0541",
+      "title": "실시간잔고",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0542",
+      "title": "실시간주문체결",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0543",
+      "title": "실시간미체결",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0545",
+      "title": "선물옵션 복수계좌손익잔고",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0546",
+      "title": "당일매매정리",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0547",
+      "title": "잔고현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0548",
+      "title": "잔고상세내역",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0549",
+      "title": "종목별당일잔고손익",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0550",
+      "title": "기간별실현손익상세",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0551",
+      "title": "일별선물옵션수익률현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0552",
+      "title": "월별선물옵션수익률현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0555",
+      "title": "전략시뮬레이터",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0556",
+      "title": "선물옵션 빠른전략 선택",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0561",
+      "title": "주문체결현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0562",
+      "title": "주문체결상세",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0563",
+      "title": "당일매매현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0565",
+      "title": "옵션매도가능수량 변경신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0567",
+      "title": "당일선물옵션반대매매예정내역",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0568",
+      "title": "선물옵션 특정일자 잔고",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0569",
+      "title": "기본예탁금 조회/변경",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0570",
+      "title": "예탁금및증거금",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0571",
+      "title": "선물옵션ID별 추가증거금 조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0572",
+      "title": "추가증거금",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0573",
+      "title": "주문가능수량및증거금",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0574",
+      "title": "예비증거금",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0576",
+      "title": "미결제청산가능수량조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0577",
+      "title": "기간별선물옵션수익률현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0578",
+      "title": "실시간증거금",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0579",
+      "title": "예탁금/증거금 상세현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0580",
+      "title": "매매내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0581",
+      "title": "결제내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0582",
+      "title": "입출금내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0583",
+      "title": "대용증권변동내역조회",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0584",
+      "title": "계좌별 매체별 약정현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0585",
+      "title": "선물옵션 실물인수도내역",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0586",
+      "title": "옵션원월물 거래 신청/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0590",
+      "title": "선물/CFD대용연계계좌지정/해지",
+      "group": "선/옵주문",
+      "menuTitles": [
+        "선물대용연계계좌지정/해지"
+      ],
+      "otherGroups": [
+        "CFD주식"
+      ]
+    },
+    {
+      "number": "0591",
+      "title": "선물대용지정/해지",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0592",
+      "title": "선물대용지정현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0593",
+      "title": "파생상품 헤지계좌 신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0594",
+      "title": "파생상품 헤지계좌 해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0598",
+      "title": "파생상품 주문수량한도 제한",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0600",
+      "title": "키움종합차트",
+      "group": "차트"
+    },
+    {
+      "number": "0601",
+      "title": "주식종합차트",
+      "group": "차트"
+    },
+    {
+      "number": "0602",
+      "title": "업종종합차트",
+      "group": "차트"
+    },
+    {
+      "number": "0603",
+      "title": "선물옵션종합차트",
+      "group": "차트"
+    },
+    {
+      "number": "0604",
+      "title": "재무차트",
+      "group": "영웅검색",
+      "otherGroups": [
+        "차트"
+      ]
+    },
+    {
+      "number": "0605",
+      "title": "키움복기차트",
+      "group": "차트"
+    },
+    {
+      "number": "0606",
+      "title": "자동일지차트",
+      "group": "차트",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0607",
+      "title": "멀티차트",
+      "group": "차트"
+    },
+    {
+      "number": "0611",
+      "title": "미니주식차트",
+      "group": "차트"
+    },
+    {
+      "number": "0612",
+      "title": "미니TICK차트",
+      "group": "차트"
+    },
+    {
+      "number": "0613",
+      "title": "키움일주월차트",
+      "group": "차트"
+    },
+    {
+      "number": "0615",
+      "title": "키움미니차트",
+      "group": "차트"
+    },
+    {
+      "number": "0617",
+      "title": "미니모아차트",
+      "group": "차트"
+    },
+    {
+      "number": "0618",
+      "title": "미니투자자별차트(당일)",
+      "group": "주식",
+      "otherGroups": [
+        "차트",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0619",
+      "title": "금현물차트",
+      "group": "차트"
+    },
+    {
+      "number": "0620",
+      "title": "미니업종차트",
+      "group": "차트"
+    },
+    {
+      "number": "0621",
+      "title": "주식StopLoss",
+      "group": "주식주문"
+    },
+    {
+      "number": "0622",
+      "title": "선물옵션Stoploss",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0623",
+      "title": "선물옵션Stoploss감시내역",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0624",
+      "title": "주식 자동감시주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "0625",
+      "title": "선물옵션 서버자동주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "0626",
+      "title": "주식 자동주문내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0627",
+      "title": "선물옵션 자동주문내역",
+      "group": "선/옵주문",
+      "menuTitles": [
+        "선물옵션감시주문 자동주문내역"
+      ]
+    },
+    {
+      "number": "0628",
+      "title": "주식 자동감시내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "0629",
+      "title": "선물옵션 자동감시내역",
+      "group": "선/옵주문",
+      "menuTitles": [
+        "선물옵션 서버감시주문 감시내역"
+      ]
+    },
+    {
+      "number": "0630",
+      "title": "선물옵션미니차트",
+      "group": "차트"
+    },
+    {
+      "number": "0631",
+      "title": "선물전일대비차트",
+      "group": "차트"
+    },
+    {
+      "number": "0640",
+      "title": "복합비교차트",
+      "group": "차트"
+    },
+    {
+      "number": "0641",
+      "title": "시장 당일등락률차트",
+      "group": "차트"
+    },
+    {
+      "number": "0649",
+      "title": "테마그룹별 구성종목",
+      "group": "투자정보"
+    },
+    {
+      "number": "0650",
+      "title": "테마그룹별",
+      "group": "투자정보"
+    },
+    {
+      "number": "0652",
+      "title": "테마수익률비교",
+      "group": "투자정보"
+    },
+    {
+      "number": "0653",
+      "title": "테마별종목비교",
+      "group": "투자정보"
+    },
+    {
+      "number": "0654",
+      "title": "인포스탁 테마그룹별",
+      "group": "투자정보"
+    },
+    {
+      "number": "0655",
+      "title": "인포스탁 섹터구성종목",
+      "group": "투자정보"
+    },
+    {
+      "number": "0656",
+      "title": "인포스탁 섹터수익률비교",
+      "group": "투자정보"
+    },
+    {
+      "number": "0657",
+      "title": "인포스탁 섹터별종목비교",
+      "group": "투자정보"
+    },
+    {
+      "number": "0658",
+      "title": "증권사 종목별 투자의견",
+      "group": "투자정보"
+    },
+    {
+      "number": "0659",
+      "title": "인포스탁 섹터그룹별 구성종목",
+      "group": "투자정보"
+    },
+    {
+      "number": "0660",
+      "title": "기업개요",
+      "group": "투자정보"
+    },
+    {
+      "number": "0661",
+      "title": "종목별증자예정현황",
+      "group": "투자정보"
+    },
+    {
+      "number": "0663",
+      "title": "재무추이",
+      "group": "투자정보"
+    },
+    {
+      "number": "0670",
+      "title": "일별증시일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0671",
+      "title": "공모주청약 일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0672",
+      "title": "무상증자일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0673",
+      "title": "배당일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0674",
+      "title": "상장정보일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0675",
+      "title": "실권주일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0676",
+      "title": "액면교체일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0677",
+      "title": "유상증자일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0678",
+      "title": "자본감소일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0679",
+      "title": "주식매수청구일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0680",
+      "title": "의무예치일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0681",
+      "title": "주주총회일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0682",
+      "title": "합병/분할일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0683",
+      "title": "배당금 자동출금 신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0684",
+      "title": "배당금 자동출금 조회/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0686",
+      "title": "종목별공모주청약",
+      "group": "투자정보"
+    },
+    {
+      "number": "0687",
+      "title": "종목별무상증자",
+      "group": "투자정보"
+    },
+    {
+      "number": "0688",
+      "title": "종목별배당",
+      "group": "투자정보"
+    },
+    {
+      "number": "0689",
+      "title": "종목별실권주",
+      "group": "투자정보"
+    },
+    {
+      "number": "0690",
+      "title": "종목별액면교체",
+      "group": "투자정보"
+    },
+    {
+      "number": "0691",
+      "title": "종목별유상증자",
+      "group": "투자정보"
+    },
+    {
+      "number": "0692",
+      "title": "종목별자본감소",
+      "group": "투자정보"
+    },
+    {
+      "number": "0693",
+      "title": "종목별주식매수청구",
+      "group": "투자정보"
+    },
+    {
+      "number": "0694",
+      "title": "종목별의무예치",
+      "group": "투자정보"
+    },
+    {
+      "number": "0695",
+      "title": "종목별주주총회",
+      "group": "투자정보"
+    },
+    {
+      "number": "0696",
+      "title": "종목별합병/분할",
+      "group": "투자정보"
+    },
+    {
+      "number": "0697",
+      "title": "종목전체일정",
+      "group": "투자정보"
+    },
+    {
+      "number": "0700",
+      "title": "종합시황뉴스 (국내뉴스)",
+      "group": "투자정보",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0701",
+      "title": "공시",
+      "group": "투자정보"
+    },
+    {
+      "number": "0702",
+      "title": "뉴스",
+      "group": "투자정보"
+    },
+    {
+      "number": "0709",
+      "title": "금감원 전자공시",
+      "group": "투자정보"
+    },
+    {
+      "number": "0710",
+      "title": "증시캘린더",
+      "group": "투자정보",
+      "menuTitles": [
+        "증시Calendar"
+      ]
+    },
+    {
+      "number": "0711",
+      "title": "파생상품 증시일정",
+      "group": "투자정보",
+      "otherGroups": [
+        "선물옵션"
+      ]
+    },
+    {
+      "number": "0714",
+      "title": "종목별투자자누적순매수",
+      "group": "주식"
+    },
+    {
+      "number": "0717",
+      "title": "투자주체별 상세분석",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0718",
+      "title": "ETN 거래신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0720",
+      "title": "투자주체별 입체분석",
+      "group": "주식"
+    },
+    {
+      "number": "0721",
+      "title": "세계주요지수",
+      "group": "투자정보"
+    },
+    {
+      "number": "0722",
+      "title": "전일금융시장정리",
+      "group": "투자정보"
+    },
+    {
+      "number": "0723",
+      "title": "파생상품 ETF 거래신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0724",
+      "title": "장중변동데이터",
+      "group": "투자정보"
+    },
+    {
+      "number": "0725",
+      "title": "해외주요지수",
+      "group": "투자정보",
+      "otherGroups": [
+        "해외주식"
+      ]
+    },
+    {
+      "number": "0726",
+      "title": "지수/업종현재가",
+      "group": "투자정보"
+    },
+    {
+      "number": "0727",
+      "title": "등락률현황",
+      "group": "투자정보"
+    },
+    {
+      "number": "0728",
+      "title": "미국지수선물",
+      "group": "투자정보"
+    },
+    {
+      "number": "0729",
+      "title": "해외DR시세",
+      "group": "투자정보"
+    },
+    {
+      "number": "0730",
+      "title": "해외증시차트",
+      "group": "투자정보",
+      "otherGroups": [
+        "차트",
+        "해외주식"
+      ]
+    },
+    {
+      "number": "0731",
+      "title": "지수/업종상대비교차트",
+      "group": "투자정보",
+      "otherGroups": [
+        "차트",
+        "해외주식"
+      ]
+    },
+    {
+      "number": "0732",
+      "title": "업종상세비교차트",
+      "group": "투자정보",
+      "otherGroups": [
+        "차트",
+        "해외주식"
+      ]
+    },
+    {
+      "number": "0733",
+      "title": "주요지수변동성차트",
+      "group": "투자정보"
+    },
+    {
+      "number": "0734",
+      "title": "ELW 거래신청 해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0736",
+      "title": "해외뉴스",
+      "group": "투자정보",
+      "otherGroups": [
+        "미국주식"
+      ]
+    },
+    {
+      "number": "0738",
+      "title": "ELW 거래신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0739",
+      "title": "ELW 교육이수 등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0740",
+      "title": "주요통화기준환율",
+      "group": "투자정보"
+    },
+    {
+      "number": "0741",
+      "title": "환율시세",
+      "group": "투자정보"
+    },
+    {
+      "number": "0742",
+      "title": "환율차트",
+      "group": "투자정보"
+    },
+    {
+      "number": "0743",
+      "title": "환율상대비교차트",
+      "group": "투자정보"
+    },
+    {
+      "number": "0745",
+      "title": "주요통화환율변환",
+      "group": "투자정보"
+    },
+    {
+      "number": "0751",
+      "title": "국내주요금리",
+      "group": "투자정보"
+    },
+    {
+      "number": "0755",
+      "title": "투자자정보확인서 등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0757",
+      "title": "투자자정보확인서 조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0760",
+      "title": "주요상품시세",
+      "group": "투자정보"
+    },
+    {
+      "number": "0761",
+      "title": "주요상품시세",
+      "group": "투자정보"
+    },
+    {
+      "number": "0762",
+      "title": "공매도 포지션 보고대상 내역조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0763",
+      "title": "기관/외국인 연속 매매 현황",
+      "group": "주식"
+    },
+    {
+      "number": "0765",
+      "title": "프로그램매매현황",
+      "group": "투자정보"
+    },
+    {
+      "number": "0766",
+      "title": "프로그램순매수상위",
+      "group": "투자정보",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0767",
+      "title": "종목별프로그램매매현황",
+      "group": "투자정보",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0768",
+      "title": "프로그램매매추이",
+      "group": "투자정보",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0769",
+      "title": "프로그램매매추이차트",
+      "group": "투자정보",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0770",
+      "title": "주식프로그램/투자자별매매",
+      "group": "투자정보"
+    },
+    {
+      "number": "0771",
+      "title": "베이시스별 프로그램 매매현황",
+      "group": "투자정보"
+    },
+    {
+      "number": "0772",
+      "title": "프로그램매매미체결/사전공시",
+      "group": "투자정보"
+    },
+    {
+      "number": "0773",
+      "title": "차익잔고추이",
+      "group": "투자정보"
+    },
+    {
+      "number": "0777",
+      "title": "프로그램매매누적추이",
+      "group": "투자정보"
+    },
+    {
+      "number": "0778",
+      "title": "종목일별 프로그램매매추이",
+      "group": "투자정보",
+      "menuTitles": [
+        "종목별일별프로그램매매추이"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0780",
+      "title": "투자자별매매종합",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0781",
+      "title": "미니투자자매매동향",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0782",
+      "title": "시간대별투자자",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0783",
+      "title": "투자자별당일추이",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0784",
+      "title": "일별동향/차트",
+      "group": "주식",
+      "menuTitles": [
+        "투자자별일별동향"
+      ],
+      "otherGroups": [
+        "SPECIAL",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0785",
+      "title": "외국인기관매매상위",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0786",
+      "title": "선물투자주체",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0787",
+      "title": "투자자별당일매매현황",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0788",
+      "title": "투자자별순매수추이",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0789",
+      "title": "투자자별누적순매수",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0790",
+      "title": "선물옵션투자자별만기손익차트",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0791",
+      "title": "투자자별만기손익차트 상세",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0792",
+      "title": "투자자별종목순매수",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0793",
+      "title": "종목별투자자순매수",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0794",
+      "title": "투자자별포지션종합",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0795",
+      "title": "투자자별일별매매종목",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0796",
+      "title": "종목별투자자",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0797",
+      "title": "업종별투자자별순매수",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0798",
+      "title": "기관/외국인 동일순매매순위",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "0799",
+      "title": "종목별투자자2",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "0801",
+      "title": "연계은행입출금",
+      "group": "온라인업무",
+      "menuTitles": [
+        "은행이체거래내역"
+      ]
+    },
+    {
+      "number": "0802",
+      "title": "당사계좌간 입출금",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0803",
+      "title": "이체거래내역",
+      "group": "주식주문",
+      "menuTitles": [
+        "은행이체거래내역"
+      ],
+      "otherGroups": [
+        "온라인업무"
+      ]
+    },
+    {
+      "number": "0804",
+      "title": "이체한도 등록 및 조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0805",
+      "title": "계좌간유가증권대체",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0806",
+      "title": "매입단가 변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0807",
+      "title": "반송계좌해제등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0810",
+      "title": "유상청약신청/취소(위탁/저축)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0811",
+      "title": "공모주 청약 가능종목",
+      "group": "온라인업무",
+      "menuTitles": [
+        "청약가능종목"
+      ]
+    },
+    {
+      "number": "0812",
+      "title": "공모주 청약 상세정보",
+      "group": "온라인업무",
+      "menuTitles": [
+        "청약상세정보"
+      ]
+    },
+    {
+      "number": "0813",
+      "title": "공모주 청약 신청/취소",
+      "group": "온라인업무",
+      "menuTitles": [
+        "청약입력/취소"
+      ]
+    },
+    {
+      "number": "0814",
+      "title": "공무주 청약 결과",
+      "group": "온라인업무",
+      "menuTitles": [
+        "청약내역"
+      ]
+    },
+    {
+      "number": "0815",
+      "title": "공모주 청약 경쟁률",
+      "group": "온라인업무",
+      "menuTitles": [
+        "경쟁률"
+      ]
+    },
+    {
+      "number": "0816",
+      "title": "우대여부",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0817",
+      "title": "청약 증거금",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0819",
+      "title": "추가납입 신청/취소",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0820",
+      "title": "신용추가 담보요구 통보방법 조회및변경신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0821",
+      "title": "거래내역서 발급",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0822",
+      "title": "입고계좌 및 환불계좌별 청약현황 조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0826",
+      "title": "신용 당일매매일지",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0827",
+      "title": "신용 당일매매정리",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0828",
+      "title": "신용 당일실현손익상세",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0829",
+      "title": "신용 종목별 당일실현손익",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0830",
+      "title": "유상청약예약신청(위탁/저축)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0831",
+      "title": "주주반대의사신청/취소(위탁/저축)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0832",
+      "title": "주식매수청구권행사/취소(위탁/저축)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0834",
+      "title": "고객업무신청조회",
+      "group": "온라인업무",
+      "menuTitles": [
+        "잔고증명서발급신청"
+      ]
+    },
+    {
+      "number": "0835",
+      "title": "잔고증명서 우편/이메일신청(서류발급)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0836",
+      "title": "타사대체출고신청(위탁/동일명의)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0837",
+      "title": "유가증권(실물)출고예약신청(위탁)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0838",
+      "title": "전환/교환사채 청구신청(위탁)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0839",
+      "title": "타사대체출고신청 내역조회/취소",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0840",
+      "title": "중도해지신청(저축)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0841",
+      "title": "매도대금 담보대출 중도상환",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0846",
+      "title": "매입자금대출 약정 변경/해지",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0849",
+      "title": "과거 일자별 담보비율",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0850",
+      "title": "신용한도조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0851",
+      "title": "신용 현금/현물상환",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0852",
+      "title": "신용 현금/현물상환가능내역",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0853",
+      "title": "신용융자/대주 이자조회",
+      "group": "신용/대출",
+      "menuTitles": [
+        "신용융자 이자조회"
+      ]
+    },
+    {
+      "number": "0854",
+      "title": "신용/대출 체결잔고상세",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0855",
+      "title": "증권(예탁)담보대출 신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0857",
+      "title": "신용계좌설정해지",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0858",
+      "title": "신용/대출 잔고평가손익",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0859",
+      "title": "과거상환 신용매매수익률",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0860",
+      "title": "신용거래 유형변경 등록",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0862",
+      "title": "알리미 서비스 신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0863",
+      "title": "모바일 이용신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0864",
+      "title": "ARS주문이용신청/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0865",
+      "title": "ARS주문비밀번호등록/변경/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0866",
+      "title": "계좌연결해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0867",
+      "title": "매도대금 담보대출 신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0868",
+      "title": "매도대금 담보대출내역",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0869",
+      "title": "매도대금 담보대출상환내역",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0870",
+      "title": "ARS관심종목 등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0871",
+      "title": "담보대출 현금상환가능내역",
+      "group": "신용/대출",
+      "menuTitles": [
+        "현금상환 가능내역 조회"
+      ]
+    },
+    {
+      "number": "0872",
+      "title": "담보대출 현금상환",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0873",
+      "title": "담보대출 이자조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0874",
+      "title": "신용/대출 담보비율조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0875",
+      "title": "담보대출 담보교체신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0876",
+      "title": "신용/대출 잔고현황",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0877",
+      "title": "신용/대출/대주 만기일연장신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0878",
+      "title": "신용대주가능종목",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0879",
+      "title": "신용융자가능종목",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0882",
+      "title": "고객정보변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0883",
+      "title": "ID 비밀번호 변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0884",
+      "title": "계좌연결",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0886",
+      "title": "계좌비밀번호변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0887",
+      "title": "준회원 탈퇴",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0888",
+      "title": "증권연계계좌조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0890",
+      "title": "계좌확인인증조회(비대면계좌)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0896",
+      "title": "예약이체출금",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0897",
+      "title": "계좌간예약이체",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0898",
+      "title": "예약이체조회/취소",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0899",
+      "title": "예약이체결과조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0900",
+      "title": "퀵넘버플러스 등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0918",
+      "title": "IR정보",
+      "group": "투자정보",
+      "menuTitles": [
+        "IR정보 - IR정보"
+      ]
+    },
+    {
+      "number": "0919",
+      "title": "기업분석",
+      "group": "투자정보"
+    },
+    {
+      "number": "0928",
+      "title": "계좌별 대주권리금 내역조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0929",
+      "title": "대주거래 위험 고지안내",
+      "group": "온라인업무"
+    },
+    {
+      "number": "0942",
+      "title": "담보대출 가능종목",
+      "group": "신용/대출"
+    },
+    {
+      "number": "0948",
+      "title": "신용이자시뮬레이션",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1001",
+      "title": "미수동결제도공지(당일 미수금)",
+      "group": "주식주문"
+    },
+    {
+      "number": "1002",
+      "title": "미수동결제도공지(추정 예수금)",
+      "group": "주식주문"
+    },
+    {
+      "number": "1020",
+      "title": "즉시이체출금",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1021",
+      "title": "미체결 알림 등록/해지",
+      "group": "주식주문"
+    },
+    {
+      "number": "1022",
+      "title": "목표수익률 알림 등록/해지",
+      "group": "주식주문"
+    },
+    {
+      "number": "1023",
+      "title": "일등락률 알림 등록/해지",
+      "group": "주식주문"
+    },
+    {
+      "number": "1024",
+      "title": "당일 내역조회",
+      "group": "주식주문"
+    },
+    {
+      "number": "1025",
+      "title": "알림 설정",
+      "group": "주식주문"
+    },
+    {
+      "number": "1026",
+      "title": "즉시이체출금 결과조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1027",
+      "title": "지정계좌등록",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1039",
+      "title": "매도대금 담보대출 시뮬레이션",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1050",
+      "title": "장중경쟁대량매매주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "1051",
+      "title": "종목별 투자자별매매추이(잠정)",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "1052",
+      "title": "장중투자자별매매종합(잠정)",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "1053",
+      "title": "장중투자자별매매상위(잠정)",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "1054",
+      "title": "장마감후투자자별매매",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "1057",
+      "title": "투자자별시장종합",
+      "group": "투자정보"
+    },
+    {
+      "number": "1060",
+      "title": "대차거래내역",
+      "group": "주식"
+    },
+    {
+      "number": "1061",
+      "title": "대차거래추이",
+      "group": "주식"
+    },
+    {
+      "number": "1062",
+      "title": "대차거래상위10종목",
+      "group": "주식"
+    },
+    {
+      "number": "1064",
+      "title": "입출고거래내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "1089",
+      "title": "계좌정보 일괄신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1091",
+      "title": "주식 약정/서비스 가입내역조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1092",
+      "title": "위탁대용연계계좌지정/해지",
+      "group": "주식주문"
+    },
+    {
+      "number": "1093",
+      "title": "위탁대용증권지정/해지",
+      "group": "주식주문"
+    },
+    {
+      "number": "1094",
+      "title": "대용증권지정현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "1095",
+      "title": "매도대금 담보대출 자동서비스 신청및해지",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1096",
+      "title": "옵션신규매도제한 신청/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1097",
+      "title": "신주인수권취소",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1098",
+      "title": "신주인수권전환신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1099",
+      "title": "신주인수권전환내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1100",
+      "title": "펀드매매",
+      "group": "자산관리"
+    },
+    {
+      "number": "1101",
+      "title": "신용 공여담보유지비율 변경 동의",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1102",
+      "title": "펀드 납입증명서 우편신청(서류발급)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1103",
+      "title": "ARS퀵패스 등록 및 변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1105",
+      "title": "금융소득내역서 서류발급(우편/이메일)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1106",
+      "title": "금융소득내역서 신청내역조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1108",
+      "title": "선물옵션위험고지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1120",
+      "title": "펀드 주문내역",
+      "group": "자산관리"
+    },
+    {
+      "number": "1121",
+      "title": "잔고조회",
+      "group": "자산관리"
+    },
+    {
+      "number": "1122",
+      "title": "입금일별 잔고조회",
+      "group": "자산관리"
+    },
+    {
+      "number": "1124",
+      "title": "거래내역",
+      "group": "자산관리"
+    },
+    {
+      "number": "1125",
+      "title": "출금가능금액조회",
+      "group": "자산관리"
+    },
+    {
+      "number": "1132",
+      "title": "장외채권 가상매매",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "1136",
+      "title": "지수 기여도 상위",
+      "group": "주식"
+    },
+    {
+      "number": "1137",
+      "title": "KRX/NXT 괴리율 순위",
+      "group": "대체거래소"
+    },
+    {
+      "number": "1138",
+      "title": "P＆F차트 목표가 괴리율 상위",
+      "group": "주식"
+    },
+    {
+      "number": "1228",
+      "title": "프리미엄서비스 가입내역",
+      "group": "종목추천"
+    },
+    {
+      "number": "1241",
+      "title": "포트폴리오매니저",
+      "group": "종목추천"
+    },
+    {
+      "number": "1242",
+      "title": "포트폴리오매니저 추천현황상세",
+      "group": "종목추천"
+    },
+    {
+      "number": "1247",
+      "title": "포트폴리오매니저 제외종목",
+      "group": "종목추천"
+    },
+    {
+      "number": "1259",
+      "title": "ELW기본예탁금 조회/변경",
+      "group": "ETF/ELW",
+      "otherGroups": [
+        "온라인업무"
+      ]
+    },
+    {
+      "number": "1271",
+      "title": "수수료쿠폰 등록하기",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1280",
+      "title": "수수료쿠폰 사용하기",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1281",
+      "title": "사용내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1282",
+      "title": "쿠폰 안내",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1289",
+      "title": "멀티로그인 신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1298",
+      "title": "주식Stoploss감시내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "1310",
+      "title": "자동일지(T)",
+      "group": "주식주문",
+      "menuTitles": [
+        "자동일지"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1333",
+      "title": "보유종목수익률비교",
+      "group": "주식주문"
+    },
+    {
+      "number": "1336",
+      "title": "대여신주인수권 매도주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "주식대여"
+      ]
+    },
+    {
+      "number": "1340",
+      "title": "ELS/ELB 청약신청/취소",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "1341",
+      "title": "ELS/ELB 기준가조회",
+      "group": "발행어음/채권/ELS",
+      "menuTitles": [
+        "ELS 기준가조회"
+      ]
+    },
+    {
+      "number": "1342",
+      "title": "ELS/ELB 중도상환/취소",
+      "group": "발행어음/채권/ELS",
+      "menuTitles": [
+        "ELS 중도상환/취소"
+      ]
+    },
+    {
+      "number": "1343",
+      "title": "ELS/ELB 잔고조회",
+      "group": "자산관리",
+      "menuTitles": [
+        "ELS 잔고조회"
+      ]
+    },
+    {
+      "number": "1344",
+      "title": "ELS/ELB 거래내역",
+      "group": "자산관리",
+      "menuTitles": [
+        "ELS 거래내역"
+      ]
+    },
+    {
+      "number": "1362",
+      "title": "금현물 상품출고예약신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1363",
+      "title": "금현물일별수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "1364",
+      "title": "금현물월별수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "1365",
+      "title": "금현물거래내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "1367",
+      "title": "금현물거래 위험고지(온라인계좌개설용)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1368",
+      "title": "금현물 당사간 현물대체",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1369",
+      "title": "야간선옵 주문체결상세",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "1379",
+      "title": "EUREX연계 야간선물옵션거래 신청/해지",
+      "group": "선물옵션"
+    },
+    {
+      "number": "1400",
+      "title": "X-Ray 잔량분석",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1401",
+      "title": "X-Ray 현재가",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1403",
+      "title": "X-Ray 미니잔량분석",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1410",
+      "title": "X-Ray 주문종합",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1411",
+      "title": "X-Ray호가주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1412",
+      "title": "X-Ray 미니주문추적",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL",
+        "주식주문"
+      ]
+    },
+    {
+      "number": "1413",
+      "title": "X-Ray 순간체결량",
+      "group": "주식",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1421",
+      "title": "X-Ray 선물옵션호가주문",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1422",
+      "title": "X-Ray 선물현재가",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1423",
+      "title": "X-Ray 옵션현재가",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1424",
+      "title": "X-Ray 선옵미니잔량분석",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1426",
+      "title": "X-Ray ELW현재가",
+      "group": "ETF/ELW",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1427",
+      "title": "X-Ray 선물옵션미니주문추적",
+      "group": "선물옵션",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1515",
+      "title": "종목 비교분석(조건식)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1516",
+      "title": "성과검증(조건식)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1517",
+      "title": "기술적지표 분석",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1518",
+      "title": "이동평균선 분석",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1519",
+      "title": "봉 패턴 분석",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1520",
+      "title": "목표가 추정",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1521",
+      "title": "종목 비교분석(기술적지표)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1522",
+      "title": "성과검증(기술적지표)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1523",
+      "title": "보유종목 분석",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1524",
+      "title": "과거시점 분석(기술적지표)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1525",
+      "title": "성과검증 상세(기술적지표)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1526",
+      "title": "원-클릭 동시검증",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1528",
+      "title": "과거시점 분석(이동평균선)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1529",
+      "title": "종목 비교분석(이동평균선)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1530",
+      "title": "성과검증(이동평균선)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1531",
+      "title": "성과검증 상세(이동평균선)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1532",
+      "title": "성과검증 상세(조건식)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1535",
+      "title": "반복검증(조건식)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1539",
+      "title": "알고리즘 추출 서비스",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1541",
+      "title": "채권가상매매",
+      "group": "자산관리"
+    },
+    {
+      "number": "1542",
+      "title": "복수채권 현재가",
+      "group": "자산관리"
+    },
+    {
+      "number": "1543",
+      "title": "계좌 시뮬레이션(조건식)",
+      "group": "영웅검색"
+    },
+    {
+      "number": "1544",
+      "title": "(일반) 장내채권 주문",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "1545",
+      "title": "장내채권 현재가",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "1546",
+      "title": "장내채권 거래량상위",
+      "group": "자산관리"
+    },
+    {
+      "number": "1547",
+      "title": "장내채권 일별추이",
+      "group": "자산관리"
+    },
+    {
+      "number": "1548",
+      "title": "장내채권 호가현황",
+      "group": "자산관리"
+    },
+    {
+      "number": "1549",
+      "title": "(일반) 장내채권 종합",
+      "group": "SPECIAL",
+      "otherGroups": [
+        "발행어음/채권/ELS"
+      ]
+    },
+    {
+      "number": "1561",
+      "title": "종목별 장중투자자별매매(잠정)차트",
+      "group": "주식",
+      "otherGroups": [
+        "차트",
+        "투자정보"
+      ]
+    },
+    {
+      "number": "1580",
+      "title": "대출계좌현황",
+      "group": "신용/대출",
+      "menuTitles": [
+        "대출계좌현황(통합)"
+      ]
+    },
+    {
+      "number": "1585",
+      "title": "반대매매내역(통합)",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1588",
+      "title": "장외채권 매수",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "1611",
+      "title": "자동분할반복주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "1612",
+      "title": "자동분할반복주문 주문내역",
+      "group": "주식주문"
+    },
+    {
+      "number": "1620",
+      "title": "제휴대출 대출심사요청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1621",
+      "title": "제휴대출 심사결과조회/심사요청취소",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1622",
+      "title": "제휴대출 대출신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1623",
+      "title": "제휴대출 대출신청결과조회/신청취소",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1624",
+      "title": "제휴대출 현금상환신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1625",
+      "title": "제휴대출 담보 질권해지신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1626",
+      "title": "제휴대출 추가담보신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1627",
+      "title": "제휴대출 정보변경",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1628",
+      "title": "제휴대출 신청내역조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1629",
+      "title": "제휴대출 상환예상금액조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1631",
+      "title": "제휴대출 거래내역",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1633",
+      "title": "제휴대출 권리예정 현황",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1634",
+      "title": "제휴대출 매도상환 주문",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1635",
+      "title": "제휴대출 대출현황",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1636",
+      "title": "제휴대출 약정해지신청",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1640",
+      "title": "제휴대출 종목별 대출가능여부조회",
+      "group": "신용/대출"
+    },
+    {
+      "number": "1651",
+      "title": "대여종목 제한등록",
+      "group": "주식대여"
+    },
+    {
+      "number": "1652",
+      "title": "대여종목 제한해지",
+      "group": "주식대여"
+    },
+    {
+      "number": "1653",
+      "title": "대여종목 제한/해지내역",
+      "group": "주식대여"
+    },
+    {
+      "number": "1654",
+      "title": "대여 체결내역조회",
+      "group": "주식대여"
+    },
+    {
+      "number": "1655",
+      "title": "대여 체결잔조회",
+      "group": "주식대여"
+    },
+    {
+      "number": "1656",
+      "title": "대여 수수료지급내역조회",
+      "group": "주식대여"
+    },
+    {
+      "number": "1664",
+      "title": "K-OTC 유의사항확인",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1671",
+      "title": "금융거래목적 확인서",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1676",
+      "title": "파생상품 교육이수 등록신청",
+      "group": "선물옵션",
+      "otherGroups": [
+        "온라인업무"
+      ]
+    },
+    {
+      "number": "1678",
+      "title": "파생상품 모의투자 이수 등록",
+      "group": "선물옵션",
+      "otherGroups": [
+        "온라인업무"
+      ]
+    },
+    {
+      "number": "1682",
+      "title": "파생상품 거래가능여부 조회",
+      "group": "선물옵션",
+      "otherGroups": [
+        "온라인업무"
+      ]
+    },
+    {
+      "number": "1690",
+      "title": "일별 잔고 수익률",
+      "group": "주식주문"
+    },
+    {
+      "number": "1691",
+      "title": "매매 수익 현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "1693",
+      "title": "일지메모",
+      "group": "주식주문",
+      "menuTitles": [
+        "자동일지 - 일지 메모"
+      ]
+    },
+    {
+      "number": "1694",
+      "title": "수익률 비교차트",
+      "group": "주식주문"
+    },
+    {
+      "number": "1695",
+      "title": "상환 예약신청 내역조회",
+      "group": "주식대여"
+    },
+    {
+      "number": "1696",
+      "title": "공모주 풋백옵션 신청/취소",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1697",
+      "title": "공모주 풋백옵션 신청내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1698",
+      "title": "공모주 풋백옵션 권리내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1699",
+      "title": "공모주 풋백옵션 매도내역",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1700",
+      "title": "수급매매종합",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "1701",
+      "title": "리서치동향",
+      "group": "투자정보"
+    },
+    {
+      "number": "1702",
+      "title": "컨센서스",
+      "group": "투자정보"
+    },
+    {
+      "number": "1703",
+      "title": "랭킹분석",
+      "group": "투자정보"
+    },
+    {
+      "number": "1704",
+      "title": "부가정보",
+      "group": "투자정보"
+    },
+    {
+      "number": "1705",
+      "title": "ETF정보",
+      "group": "투자정보"
+    },
+    {
+      "number": "1716",
+      "title": "거래소 장외주식(KSM) 거래신청/해지",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1718",
+      "title": "변동성 ETN 거래신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1807",
+      "title": "전자투표 서비스",
+      "group": "온라인업무"
+    },
+    {
+      "number": "1881",
+      "title": "기준시각대비 예상체결가 급변",
+      "group": "주식"
+    },
+    {
+      "number": "1893",
+      "title": "연도별계좌수익률현황",
+      "group": "주식주문"
+    },
+    {
+      "number": "1895",
+      "title": "고객확인(CDD/EDD) 정보 조회 및 변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "2000",
+      "title": "주식종합",
+      "group": "주식주문",
+      "menuTitles": [
+        "주식종합 (통합)"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "2010",
+      "title": "ELW 종합",
+      "group": "ETF/ELW",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "2011",
+      "title": "ELW 마스터",
+      "group": "ETF/ELW"
+    },
+    {
+      "number": "2093",
+      "title": "해외주식 가격급등/급락",
+      "group": "미국주식"
+    },
+    {
+      "number": "2111",
+      "title": "주식호가2",
+      "group": "주식"
+    },
+    {
+      "number": "2124",
+      "title": "연관 조회 종목",
+      "group": "주식",
+      "otherGroups": [
+        "데이터K"
+      ]
+    },
+    {
+      "number": "2222",
+      "title": "공모펀드(상장클래스) 거래신청",
+      "group": "온라인업무"
+    },
+    {
+      "number": "2335",
+      "title": "주식복수종목주문",
+      "group": "SPECIAL"
+    },
+    {
+      "number": "2341",
+      "title": "취소주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "2366",
+      "title": "불공정거래 서면통보 수신방법 조회/변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "2500",
+      "title": "외화RP주문종합",
+      "group": "발행어음/채권/ELS"
+    },
+    {
+      "number": "3010",
+      "title": "홍콩주식 현재가",
+      "group": "해외주식"
+    },
+    {
+      "number": "3020",
+      "title": "홍콩주식 관심종목",
+      "group": "해외주식"
+    },
+    {
+      "number": "3058",
+      "title": "홍콩주식 주문체결상세",
+      "group": "해외주식"
+    },
+    {
+      "number": "3070",
+      "title": "(홍콩)종목분석",
+      "group": "해외주식"
+    },
+    {
+      "number": "3098",
+      "title": "홍콩주식 종합차트 15분 지연시세",
+      "group": "해외주식"
+    },
+    {
+      "number": "3103",
+      "title": "홍콩주식 유의사항",
+      "group": "해외주식"
+    },
+    {
+      "number": "3104",
+      "title": "홍콩주식 주문체결",
+      "group": "해외주식"
+    },
+    {
+      "number": "3105",
+      "title": "홍콩주식 미체결",
+      "group": "해외주식"
+    },
+    {
+      "number": "3106",
+      "title": "홍콩주식 예수금",
+      "group": "해외주식"
+    },
+    {
+      "number": "3107",
+      "title": "홍콩주식 잔고",
+      "group": "해외주식"
+    },
+    {
+      "number": "3108",
+      "title": "홍콩 일자별 실현손익",
+      "group": "해외주식"
+    },
+    {
+      "number": "3110",
+      "title": "해외주식 거래내역",
+      "group": "해외주식"
+    },
+    {
+      "number": "3124",
+      "title": "외화대용지정/해지",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "3125",
+      "title": "외화대용금현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "3126",
+      "title": "외화대용환전",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "3130",
+      "title": "외화환전신청",
+      "group": "해외주식"
+    },
+    {
+      "number": "3133",
+      "title": "일별 환율조회",
+      "group": "해외주식"
+    },
+    {
+      "number": "3135",
+      "title": "해외계좌간 외화이체",
+      "group": "온라인업무"
+    },
+    {
+      "number": "3137",
+      "title": "해외주식 고객업무신청조회",
+      "group": "온라인업무"
+    },
+    {
+      "number": "3139",
+      "title": "해외주식 계좌간 유가증권대체",
+      "group": "온라인업무"
+    },
+    {
+      "number": "3140",
+      "title": "해외주식 유상청약",
+      "group": "온라인업무"
+    },
+    {
+      "number": "3144",
+      "title": "KDR 전환신청/취소(해외원주→KDR)",
+      "group": "해외주식"
+    },
+    {
+      "number": "3145",
+      "title": "KDR 해지신청/취소(KDR→해외원주)",
+      "group": "해외주식"
+    },
+    {
+      "number": "3150",
+      "title": "홍콩주식 실시간 잔고",
+      "group": "해외주식"
+    },
+    {
+      "number": "3151",
+      "title": "홍콩주식 실시간 주문체결",
+      "group": "해외주식"
+    },
+    {
+      "number": "3152",
+      "title": "홍콩주식 실시간 미체결",
+      "group": "해외주식"
+    },
+    {
+      "number": "3153",
+      "title": "홍콩주식 당일 매매",
+      "group": "해외주식"
+    },
+    {
+      "number": "3154",
+      "title": "홍콩주식 당일 매매 정리",
+      "group": "해외주식"
+    },
+    {
+      "number": "3155",
+      "title": "홍콩주식 당일 실현손익 상세",
+      "group": "해외주식"
+    },
+    {
+      "number": "3156",
+      "title": "홍콩주식 종목별 당일 실현손익",
+      "group": "해외주식"
+    },
+    {
+      "number": "3157",
+      "title": "홍콩주식 일별 종목별 실현손익",
+      "group": "해외주식"
+    },
+    {
+      "number": "3158",
+      "title": "홍콩주식 일별 실현손익",
+      "group": "해외주식"
+    },
+    {
+      "number": "3509",
+      "title": "해외주식거래위험고지 및 정보제공 동의",
+      "group": "온라인업무"
+    },
+    {
+      "number": "4000",
+      "title": "캐치 서비스 시작하기",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 시작하기"
+      ]
+    },
+    {
+      "number": "4003",
+      "title": "캐치(KATCH) 서비스 주문설정",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩"
+      ]
+    },
+    {
+      "number": "4007",
+      "title": "캐치 매매보고서",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 보고서"
+      ]
+    },
+    {
+      "number": "4008",
+      "title": "캐치(KATCH) 주문내역",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 주문내역"
+      ]
+    },
+    {
+      "number": "4009",
+      "title": "캐치(KATCH) 조건식별성과비교",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 조건식별성과비교"
+      ]
+    },
+    {
+      "number": "4010",
+      "title": "캐치(KATCH) 매매성과(종목)",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 매매성과(종목)"
+      ]
+    },
+    {
+      "number": "4012",
+      "title": "캐치(KATCH) 거래별손익",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 거래별손익"
+      ]
+    },
+    {
+      "number": "4013",
+      "title": "캐치(KATCH) 거래내역",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "알고리즘 트레이딩 거래내역"
+      ]
+    },
+    {
+      "number": "4016",
+      "title": "캐치(KATCH) 서비스 주문설정",
+      "group": "알고리즘 트레이딩",
+      "menuTitles": [
+        "캐치(KATCH) 모의매매"
+      ]
+    },
+    {
+      "number": "4020",
+      "title": "(모의) 캐치 매매보고서",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4021",
+      "title": "(모의) 캐치(KATCH) 주문내역",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4022",
+      "title": "(모의) 캐치(KATCH) 조건식별 성과비교",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4023",
+      "title": "(모의) 캐치(KATCH) 매매성과(종목)",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4025",
+      "title": "(모의) 캐치(KATCH) 거래별손익",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4026",
+      "title": "(모의) 캐치(KATCH) 거래내역",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4030",
+      "title": "캐치 전용계좌 개설",
+      "group": "알고리즘 트레이딩"
+    },
+    {
+      "number": "4989",
+      "title": "키움주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "4990",
+      "title": "통합키움주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "4991",
+      "title": "스톱지정가/GTP 주문",
+      "group": "주식주문",
+      "menuTitles": [
+        "스톱지정가주문"
+      ],
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "4992",
+      "title": "거래소정정 일괄주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "5000",
+      "title": "WTS 주식종합",
+      "group": "주식주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "5541",
+      "title": "야간선옵 실시간잔고",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "5543",
+      "title": "야간선옵 실시간미체결",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "5561",
+      "title": "야간선옵 주문체결현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "5564",
+      "title": "야간선옵 미체결현황",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "6600",
+      "title": "통합키움차트",
+      "group": "대체거래소",
+      "otherGroups": [
+        "차트"
+      ]
+    },
+    {
+      "number": "7160",
+      "title": "공매도 과열종목",
+      "group": "주식"
+    },
+    {
+      "number": "7161",
+      "title": "이상급등종목",
+      "group": "주식"
+    },
+    {
+      "number": "7165",
+      "title": "레버리지 ETF/ETN 기본예탁금 조회/변경",
+      "group": "온라인업무"
+    },
+    {
+      "number": "7333",
+      "title": "신용대주 투자자한도 확인",
+      "group": "온라인업무"
+    },
+    {
+      "number": "7334",
+      "title": "대주주문종합",
+      "group": "신용/대출",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "7340",
+      "title": "증권금융 담보활용 신청/변경",
+      "group": "신용/대출"
+    },
+    {
+      "number": "7401",
+      "title": "상품선물종합현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7402",
+      "title": "상품옵션종합현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7411",
+      "title": "상품선물옵션미니호가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7486",
+      "title": "상품선물거래량상위",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7491",
+      "title": "상품선물옵션체결추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7492",
+      "title": "상품선물옵션일별추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7493",
+      "title": "상품선물전체시세표",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7501",
+      "title": "상품선물/옵션 주문종합",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "7506",
+      "title": "상품선물/옵션 호가 주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "7520",
+      "title": "상품선물/옵션 미니 주문",
+      "group": "선/옵주문"
+    },
+    {
+      "number": "7601",
+      "title": "파생상품 종합현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7611",
+      "title": "국내파생상품 양도소득세 예정내역(전계좌)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "7612",
+      "title": "국내파생상품 양도소득세 예정내역(계좌별)",
+      "group": "온라인업무"
+    },
+    {
+      "number": "7780",
+      "title": "투자자별매매종합",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7782",
+      "title": "시간대별투자자",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7783",
+      "title": "주식선물 시간대별투자자",
+      "group": "주식",
+      "otherGroups": [
+        "투자정보"
+      ]
+    },
+    {
+      "number": "7784",
+      "title": "일별동향",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7788",
+      "title": "순매수추이",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7801",
+      "title": "파생상품 종합주문",
+      "group": "선/옵주문",
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    },
+    {
+      "number": "7901",
+      "title": "현물전체현재가",
+      "group": "선물옵션"
+    },
+    {
+      "number": "7910",
+      "title": "상품선물옵션 최종결제가격",
+      "group": "선물옵션"
+    },
+    {
+      "number": "8080",
+      "title": "주식호가주문플러스",
+      "group": "주식주문"
+    },
+    {
+      "number": "8249",
+      "title": "빠른매수",
+      "group": "주식주문"
+    },
+    {
+      "number": "8282",
+      "title": "주식호가주문",
+      "group": "주식주문"
+    },
+    {
+      "number": "8283",
+      "title": "주식호가주문2",
+      "group": "주식주문"
+    },
+    {
+      "number": "8284",
+      "title": "통합주식호가주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "8289",
+      "title": "빠른매도",
+      "group": "주식주문"
+    },
+    {
+      "number": "8545",
+      "title": "통합미니주문",
+      "group": "주식주문",
+      "otherGroups": [
+        "대체거래소"
+      ]
+    },
+    {
+      "number": "8949",
+      "title": "주식미니주문",
+      "group": "주식주문",
+      "menuTitles": [
+        "미니주문"
+      ],
+      "otherGroups": [
+        "SPECIAL"
+      ]
+    }
+  ]
+}

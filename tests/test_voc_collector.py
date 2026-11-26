@@ -48,7 +48,7 @@ class LocalCheckpointTest(unittest.TestCase):
             self.assertEqual(cursor["prevPageNo"], number - 1 if number > 1 else "")
             day = ["2022.01.02", "2022.01.01", "2021.12.31"][number - 1]
             return [dict(step=1, seqid=number, pareSeqid=0, mngrYn="N", makeTime=day,
-                         divTp2="a", ttl="신호검색 관련 비공개 표본", maxGrpStep=number, minGrpStep=number)]
+                         divTp2="a", ttl="신호검색 관련 비공개 표본 [0130] 0130번 화면 [0341]", maxGrpStep=number, minGrpStep=number)]
 
         first, last = date(2022, 1, 1), date(2022, 1, 2)
         with tempfile.TemporaryDirectory() as directory, patch.object(board, "fetch_with_retry", page), patch.object(board.time, "sleep"):
@@ -62,6 +62,15 @@ class LocalCheckpointTest(unittest.TestCase):
             actual = board.collect(first, last, 3, 20, True, True, checkpoint=checkpoint)
             self.assertEqual(actual, expected)
             self.assertEqual(actual["topicCounts"], {2022: {"hts": 2}})
+            screen_state = Path(directory) / "screens.json"
+            codes = {"0130", "0341"}
+            board.collect(first, last, 1, 20, screen_numbers=codes, checkpoint=screen_state)
+            resumed = board.collect(first, last, 3, 20, screen_numbers=codes, checkpoint=screen_state)
+            self.assertEqual(resumed["matchedThreads"], 2)
+            self.assertEqual(resumed["screens"], {"0130": 2, "0341": 2})
+            self.assertNotIn("비공개 표본", screen_state.read_text())
+            with self.assertRaisesRegex(ValueError, "differ"):
+                board.collect(first, last, 3, 20, screen_numbers={"0130"}, checkpoint=screen_state)
             with self.assertRaisesRegex(ValueError, "differ"):
                 board.collect(first, last, 3, 100, True, True, checkpoint=checkpoint)
 
