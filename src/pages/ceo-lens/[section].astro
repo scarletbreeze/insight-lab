@@ -3,6 +3,7 @@ import CeoLayout from '../../components/ceo/CeoLayout.astro';
 import CapitalRoadmap from '../../components/ceo/CapitalRoadmap.astro';
 import DigitalAssetGuide from '../../components/ceo/DigitalAssetGuide.astro';
 import SignalList from '../../components/ceo/SignalList.astro';
+import Timeline from '../../components/charts/Timeline.astro';
 import { ceoSections, signals, weeklyEditions } from '../../utils/ceo';
 import { sitePath } from '../../utils/paths';
 
@@ -16,6 +17,8 @@ const years = [...new Set(items.map(({ date }) => date.slice(0, 4)))].sort().rev
 const businessAreas = [...new Set(items.flatMap((item) => item.businessAreas))].sort();
 const categories = [...new Set(items.map(({ category }) => category))];
 const applications = [...new Set(items.flatMap(({ applications }) => applications ?? []))].sort((a, b) => a.localeCompare(b, 'ko'));
+const timelineEvents = items.map(({ date, title, id, region }) => ({ date, label: title, href: '#' + id, kind: region === 'KR' ? 'kr' : 'global' }));
+const timelineKinds = [{ id: 'kr', label: '국내' }, { id: 'global', label: '해외' }];
 ---
 <CeoLayout {title}>
   {section === 'archive' && <section class="lab-block" id="weekly">
@@ -38,6 +41,11 @@ const applications = [...new Set(items.flatMap(({ applications }) => application
     <p>주간 발행에는 자료를 확인한 시작일과 마지막 날을 표시합니다. 발행 범위에 들어오는 시그널과 대표 질문은 아카이브에 남깁니다.</p>
   </section> : <section class="lab-block">
     {section === 'digital-assets' && <h2>정책과 인프라 타임라인</h2>}
+    {section === 'regulation' && <>
+      <h2>규제 시그널 타임라인</h2>
+      <Timeline events={timelineEvents} kinds={timelineKinds} title={`규제 시그널 ${items.length}건의 발표 시점`} fallback="narrow"
+        caption={`<strong>규제 시그널 ${items.length}건의 발표 시점</strong> — 넓은 화면에서는 연도 축 위의 제목을, 좁은 화면에서는 연도별 목록의 제목을 누르면 아래 카드로 이동합니다. 아래 필터는 카드에만 적용됩니다.`} />
+    </>}
     <ceo-filters>
       <div class="lab-controls">
         <label>발표 연도 <select data-filter="year"><option value="">전체</option>{years.map((year) => <option>{year}</option>)}</select></label>

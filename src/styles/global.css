@@ -11,6 +11,17 @@
   --font-sans: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: ui-monospace, monospace;
+  /* Chart marks (docs/01-design-system.md § 차트). Validated as an adjacent-pair categorical order on #171713
+     and #292923 (OKLCH L .48–.70, chroma ≥ .10, CVD ΔE ≥ 11.6). Text never wears these colors. */
+  --color-chart-1: #b78a2c;
+  --color-chart-2: #cf6e96;
+  --color-chart-3: #6591e1;
+  --color-chart-4: #00ab9d;
+  --color-chart-5: #d17746;
+  --color-chart-6: #9f7ed6;
+  --color-chart-7: #65a556;
+  --color-chart-negative: #cf6e96;
+  --color-chart-dim: #807c72; /* 3.5:1 on #292923, 4.3:1 on #171713 */
 }
 
 :root { color-scheme: dark; }

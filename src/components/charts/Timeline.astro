@@ -1,0 +1,96 @@
+---
+// Horizontal timeline of dated events. Above 64rem the SVG overview is shown: every label is a focusable
+// link with a hit rectangle of at least 24px, and a <desc> gives the per-year counts. The year-grouped list
+// below carries the same links and is the only rendering on narrower screens; fallback="always" keeps the
+// list visible beside the SVG on wide screens as well.
+import '../../styles/charts.css';
+
+export interface TimelineEvent { date: string; label: string; href?: string; kind?: string; }
+export interface TimelineKind { id: string; label: string; }
+interface Props { events: TimelineEvent[]; kinds?: TimelineKind[]; caption?: string; title: string; fallback?: 'always' | 'narrow'; id?: string; }
+const { events, kinds = [], caption, title, fallback = 'always', id } = Astro.props;
+const shapes = ['dot', 'ring', 'dot', 'ring', 'dot', 'ring', 'dot'];
+const kindIndex = new Map(kinds.map(({ id }, index) => [id, index]));
+const swatch = (kind?: string) => `var(--color-chart-${(kindIndex.get(kind ?? '') ?? 0) + 1})`;
+const shape = (kind?: string) => shapes[kindIndex.get(kind ?? '') ?? 0];
+
+const sorted = [...events].sort((a, b) => a.date.localeCompare(b.date));
+const firstYear = sorted.length ? Number(sorted[0].date.slice(0, 4)) : new Date().getUTCFullYear();
+const lastYear = sorted.length ? Number(sorted[sorted.length - 1].date.slice(0, 4)) : firstYear;
+const start = Date.UTC(firstYear, 0, 1), end = Date.UTC(lastYear + 1, 0, 1);
+const width = 1000, padX = 28, font = 13, lane = 20;
+const inner = width - padX * 2;
+const xOf = (date: string) => padX + (Date.parse(date + 'T00:00:00Z') - start) / (end - start) * inner;
+const clip = (text: string) => text.length > 20 ? text.slice(0, 19) + '…' : text;
+const measure = (text: string) => [...text].reduce((sum, ch) => sum + (ch.charCodeAt(0) > 0x2e7f ? font : font * 0.56), 0) + 14;
+
+// Labels alternate above and below the axis; each side packs greedily into lanes so no two labels overlap.
+type Placed = { x: number; y: number; w: number; end: boolean; text: string; full: string; date: string; href?: string; kind?: string; side: number; lane: number };
+const lanes: Record<number, number[]> = { [-1]: [], [1]: [] };
+const placed: Placed[] = sorted.map((event, index) => {
+  const x = xOf(event.date), text = clip(event.label), w = measure(text);
+  const endAnchor = x + w > width - padX;
+  const x0 = endAnchor ? x - w : x, x1 = x0 + w;
+  const side = index % 2 === 0 ? -1 : 1;
+  const used = lanes[side];
+  let laneIndex = used.findIndex((right) => right < x0 - 6);
+  if (laneIndex < 0) { laneIndex = used.length; used.push(x1); } else used[laneIndex] = x1;
+  return { x, y: 0, w, end: endAnchor, text, full: event.label, date: event.date, href: event.href, kind: event.kind, side, lane: laneIndex };
+});
+const above = lanes[-1].length, below = lanes[1].length;
+const axisY = 12 + above * lane + 10;
+const height = axisY + 36 + below * lane + 8;
+for (const item of placed) item.y = item.side < 0 ? axisY - 14 - item.lane * lane : axisY + 34 + item.lane * lane;
+const years = Array.from({ length: lastYear - firstYear + 2 }, (_, index) => firstYear + index);
+const byYear = new Map<string, TimelineEvent[]>();
+for (const event of sorted) byYear.set(event.date.slice(0, 4), [...(byYear.get(event.date.slice(0, 4)) ?? []), event]);
+const yearList = [...byYear.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+// A stable id keeps the build reproducible: the prop wins, otherwise a short hash of the title.
+const hash = [...title].reduce((h, ch) => (h * 31 + ch.charCodeAt(0)) >>> 0, 7).toString(36);
+const baseId = id ?? 'tl-' + hash;
+const titleId = baseId + '-title', descId = baseId + '-desc';
+const desc = `${firstYear}년부터 ${lastYear}년까지 ${sorted.length}건. ` + yearList.map(([year, list]) => `${year}년 ${list.length}건`).reverse().join(', ') + '.';
+---
+<figure class="chart" data-fallback={fallback}>
+  {caption && <figcaption set:html={caption} />}
+  {kinds.length > 1 && <ul class="tl-legend" aria-label="구분">
+    {kinds.map(({ id, label }) => <li><i style={`--swatch: ${swatch(id)}`} data-shape={shape(id)} aria-hidden="true"></i>{label}</li>)}
+  </ul>}
+  {sorted.length > 0 && <svg class="tl-svg" viewBox={`0 0 ${width} ${height}`} aria-labelledby={titleId} aria-describedby={descId}>
+    <title id={titleId}>{title}</title>
+    <desc id={descId}>{desc}</desc>
+    <line class="tl-axis" x1={padX} x2={width - padX} y1={axisY} y2={axisY} />
+    {years.map((year) => {
+      const x = padX + (Date.UTC(year, 0, 1) - start) / (end - start) * inner;
+      return <g>
+        <line class="tl-tick" x1={x} x2={x} y1={axisY - 5} y2={axisY + 5} />
+        <text class="tl-tick-text" x={x} y={axisY + 17} text-anchor={year === lastYear + 1 ? 'end' : 'start'} font-size="11" dx={year === lastYear + 1 ? -3 : 3}>{year}</text>
+      </g>;
+    })}
+    {placed.map(({ x, y, w, text, full, date, href, kind, side, end }, index) => {
+      // The link's name is its visible (possibly clipped) text; the <title> describes it with the date and full label.
+      const label = <text x={x} y={y} dx={end ? -3 : 3} text-anchor={end ? 'end' : 'start'} font-size={font}>{text}</text>;
+      const noteId = baseId + '-e' + index;
+      return <g>
+        <line class="tl-lead" x1={x} x2={x} y1={axisY} y2={side < 0 ? y + 4 : y - 11} />
+        <circle class="tl-dot" cx={x} cy={axisY} r="5" fill={swatch(kind)} stroke={shape(kind) === 'ring' ? swatch(kind) : undefined} data-shape={shape(kind)} />
+        {href ? <a href={href} aria-describedby={noteId}>
+          <title id={noteId}>{date} {full}</title>
+          <rect class="tl-hit" x={end ? x - w : x} y={y - 18} width={w} height="26" rx="3" />
+          {label}
+        </a> : <g><title>{date} {full}</title>{label}</g>}
+      </g>;
+    })}
+  </svg>}
+  <ol class="tl-list">
+    {yearList.map(([year, list]) => <li class="tl-year"><strong>{year}</strong>
+      <ol>{[...list].reverse().map(({ date, label, href, kind }) => <li>
+        {kinds.length > 1 && <i style={`--swatch: ${swatch(kind)}`} data-shape={shape(kind)} aria-hidden="true"></i>}
+        <time datetime={date}>{date}</time>
+        {href ? <a href={href}>{label}</a> : label}
+        {kind && kinds.length > 1 && <span>{kinds.find(({ id }) => id === kind)?.label}</span>}
+      </li>)}</ol>
+    </li>)}
+  </ol>
+  <slot />
+</figure>

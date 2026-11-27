@@ -1,5 +1,23 @@
 [
   {
+    "updatedAt": "2026-11-27T12:40:00+09:00",
+    "service": "voc-studio",
+    "title": "VOC Studio 설계서 대조 보완 · 설계서 분류 대응표, 주제별 한 줄 관찰 50건, 금융위 맥락 16건, 2022~2024 공지 9건, 연도 범위 표시 정비",
+    "route": "voc-studio/methodology"
+  },
+  {
+    "updatedAt": "2026-11-27T12:40:00+09:00",
+    "service": "ceo-lens",
+    "title": "CEO Lens 화면 재구성 · 종투사 10개사 자본총계를 3조·4조·8조 기준선과 함께 가로 막대로, 규제 시그널은 타임라인으로, 수록 구성은 누적 막대로 표시",
+    "route": "ceo-lens/capital-roadmap"
+  },
+  {
+    "updatedAt": "2026-11-27T12:40:00+09:00",
+    "service": "ceo-lens",
+    "title": "CEO Lens 브리프 추가 · 종투사 3단계(발행어음·IMA)와 토큰증권 제도·컨소시엄 11건, 디지털자산업법 제정안을 출처·기준일·읽을 자료와 함께 정리",
+    "route": "ceo-lens/briefs"
+  },
+  {
     "updatedAt": "2026-11-27T12:10:00+09:00",
     "service": "market-time-capsule",
     "title": "국내 월간 Top 10을 1995년 5월~2026년 10월 378개월, 연간 Winner·Loser 30개년으로 확장 · 근사 모집단·원종가 기준, 출처와 결정일 공개",

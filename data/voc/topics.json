@@ -1,13 +1,143 @@
 [
-  {"id":"orders","label":"주문"},
-  {"id":"account","label":"계좌"},
-  {"id":"hts","label":"HTS·MTS"},
-  {"id":"auth","label":"인증"},
-  {"id":"overseas","label":"해외주식"},
-  {"id":"hours","label":"거래시간·파생"},
-  {"id":"credit","label":"신용·미수"},
-  {"id":"fees","label":"수수료"},
-  {"id":"transfer","label":"입출금·이체"},
-  {"id":"products","label":"상품"},
-  {"id":"other","label":"기타"}
+  {
+    "id": "orders",
+    "label": "주문",
+    "designCategory": "주문",
+    "keywords": [
+      "주문",
+      "체결",
+      "시장가",
+      "지정가",
+      "호가",
+      "스탑로스",
+      "자동매수"
+    ]
+  },
+  {
+    "id": "account",
+    "label": "계좌",
+    "designCategory": "계좌",
+    "keywords": [
+      "계좌개설",
+      "비대면",
+      "휴면계좌",
+      "계좌번호",
+      "거래내역"
+    ]
+  },
+  {
+    "id": "hts",
+    "label": "HTS·MTS",
+    "designCategory": "HTS/MTS",
+    "keywords": [
+      "HTS",
+      "MTS",
+      "영웅문",
+      "조건검색",
+      "수식",
+      "차트",
+      "화면번호",
+      "관심종목",
+      "DDE"
+    ]
+  },
+  {
+    "id": "auth",
+    "label": "인증",
+    "designCategory": "인증",
+    "keywords": [
+      "인증서",
+      "본인인증",
+      "간편인증",
+      "로그인",
+      "OTP",
+      "생체인증"
+    ]
+  },
+  {
+    "id": "overseas",
+    "label": "해외주식",
+    "designCategory": "해외주식",
+    "keywords": [
+      "해외주식",
+      "미국주식",
+      "환전",
+      "해외소수점"
+    ]
+  },
+  {
+    "id": "hours",
+    "label": "거래시간·파생",
+    "designCategory": "파생",
+    "designNote": "설계서의 해외주식 Level 2 ‘거래시간’ 문의를 파생 문의와 함께 집계",
+    "keywords": [
+      "거래시간",
+      "정규장",
+      "프리마켓",
+      "애프터마켓",
+      "주식선물",
+      "선물옵션",
+      "파생상품"
+    ]
+  },
+  {
+    "id": "credit",
+    "label": "신용·미수",
+    "designCategory": "신용/미수",
+    "keywords": [
+      "신용거래",
+      "신용융자",
+      "미수금",
+      "반대매매",
+      "주식담보대출",
+      "대주매도"
+    ]
+  },
+  {
+    "id": "fees",
+    "label": "수수료",
+    "designCategory": "수수료",
+    "keywords": [
+      "수수료",
+      "제비용",
+      "거래세",
+      "양도세"
+    ]
+  },
+  {
+    "id": "transfer",
+    "label": "입출금·이체",
+    "designCategory": "입출금/이체",
+    "keywords": [
+      "입출금",
+      "입금",
+      "출금",
+      "이체",
+      "대체출고",
+      "대체입고"
+    ]
+  },
+  {
+    "id": "products",
+    "label": "상품",
+    "designCategory": "기타",
+    "designNote": "설계서에 없는 운영 분류. 상품 문의를 기타에서 분리해 집계",
+    "keywords": [
+      "연금저축",
+      "중개형 ISA",
+      "외화 RP",
+      "ETF",
+      "ETN",
+      "ELS",
+      "채권",
+      "펀드",
+      "공모주"
+    ]
+  },
+  {
+    "id": "other",
+    "label": "기타",
+    "designCategory": "기타",
+    "keywords": []
+  }
 ]

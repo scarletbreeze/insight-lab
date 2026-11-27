@@ -6,12 +6,12 @@ interface Props { selected?: number; }
 const { selected } = Astro.props;
 ---
 <nav aria-label="고객 문의 분석 연도">
-  <ul class="years">{[...vocYears].reverse().map(({ year }) => {
+  <ul class="years">{[...vocYears].reverse().map(({ year, questionLabel, collectionEnd }) => {
     const board = publicBoardYear(year);
     return <li><a href={sitePath('voc-studio/year/' + year)} aria-current={year === selected ? 'page' : undefined}>
       <strong>{year}년</strong>
       {board && <span>문의 {(board.categories['문의'] ?? 0).toLocaleString('ko-KR')}건</span>}
-      {board && !board.isFullYear && <small>{board.through.slice(5).replace('-', '.')}까지</small>}
+      {questionLabel && <small>{questionLabel}{!board?.isFullYear && collectionEnd && ` · ${collectionEnd.slice(5).replace('-', '.')}까지`}</small>}
     </a></li>;
   })}</ul>
 </nav>

@@ -1,0 +1,66 @@
+---
+// Ranked horizontal bars with optional vertical reference lines. Values may be negative; a null value renders
+// the empty state text instead of a bar. Rows are list items, so the label, note and value read in order
+// without the bar; the threshold labels are real text, prefixed for screen readers.
+import '../../styles/charts.css';
+
+export interface BarItem { id?: string; label: string; value: number | null | undefined; note?: string; href?: string; }
+export interface Threshold { value: number; label: string; }
+interface Props {
+  items: BarItem[];
+  format?: (value: number) => string;
+  thresholds?: Threshold[];
+  highlight?: string[];
+  caption?: string;
+  emptyText?: string;
+  labelWidth?: string;
+  valueWidth?: string;
+  max?: number;
+  min?: number;
+}
+const {
+  items, format = (value: number) => value.toLocaleString('ko-KR'), thresholds = [], highlight = [],
+  caption, emptyText = '자료 확인 중', labelWidth, valueWidth, max: maxProp, min: minProp,
+} = Astro.props;
+const values = items.map(({ value }) => value).filter((value): value is number => typeof value === 'number' && Number.isFinite(value));
+const all = [...values, ...thresholds.map(({ value }) => value), 0];
+const min = minProp ?? Math.min(...all);
+const max = maxProp ?? Math.max(...all);
+const range = max - min || 1;
+const pct = (value: number) => (Math.min(max, Math.max(min, value)) - min) / range * 100;
+const zero = pct(0);
+const refs = thresholds.map(({ value, label }) => ({ x: pct(value), label })).sort((a, b) => a.x - b.x)
+  .map((ref, index, list) => ({ ...ref, row: index > 0 && ref.x - list[index - 1].x < 16 && list[index - 1].x >= 0 ? (index % 2) : 0 }));
+const emphasis = highlight.length > 0 || undefined;
+const style = [labelWidth && `--hbars-label: ${labelWidth}`, valueWidth && `--hbars-value: ${valueWidth}`].filter(Boolean).join('; ') || undefined;
+---
+<figure class="chart">
+  {caption && <figcaption set:html={caption} />}
+  <ol class="hbars" data-emphasis={emphasis} style={style}>
+    {refs.length > 0 && <li class="hbars-head">
+      <span><span class="chart-sr">기준선</span></span>
+      <span class="hbars-track">
+        {refs.map(({ x, label, row }) => <>
+          <i class="hbars-ref" style={`--x: ${x}%`} aria-hidden="true"></i>
+          <span class="hbars-ref-label" data-row={row} style={`--x: ${x}%`}>{label}</span>
+        </>)}
+      </span>
+      <span></span>
+    </li>}
+    {items.map(({ id, label, value, note, href }) => {
+      const ok = typeof value === 'number' && Number.isFinite(value);
+      const x = ok ? Math.min(zero, pct(value!)) : zero;
+      const w = ok ? Math.abs(pct(value!) - zero) : 0;
+      return <li class="hbars-row" data-highlight={id && highlight.includes(id) ? '' : undefined}>
+        <span class="hbars-label">{href ? <a href={href}>{label}</a> : label}{note && <small>{note}</small>}</span>
+        <span class="hbars-track" aria-hidden="true">
+          {min < 0 && <i class="hbars-zero" style={`--x: ${zero}%`}></i>}
+          {refs.map(({ x }) => <i class="hbars-ref" style={`--x: ${x}%`}></i>)}
+          {ok && <i class="hbars-bar" data-negative={value! < 0 ? '' : undefined} style={`--x: ${x}%; --w: ${w}%`}></i>}
+        </span>
+        <span class="hbars-value" data-empty={ok ? undefined : ''}>{ok ? format(value!) : emptyText}</span>
+      </li>;
+    })}
+  </ol>
+  <slot />
+</figure>

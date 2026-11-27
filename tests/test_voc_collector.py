@@ -9,6 +9,9 @@ from unittest.mock import patch
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts" / "voc"))
 import collect_public_board as board
 from review_classifications import summarize
+from summarize_topic_observations import build as build_observations
+
+DATA = Path(__file__).resolve().parents[1] / "data" / "voc"
 
 
 class TopicClassificationTest(unittest.TestCase):
@@ -76,6 +79,42 @@ class LocalCheckpointTest(unittest.TestCase):
                 board.collect(first, last, 3, 20, screen_numbers={"0130"}, checkpoint=screen_state)
             with self.assertRaisesRegex(ValueError, "differ"):
                 board.collect(first, last, 3, 100, True, True, checkpoint=checkpoint)
+
+
+
+
+class TopicMetadataTest(unittest.TestCase):
+    def test_keyword_families_follow_the_collector_rules(self):
+        topics = json.loads((DATA / "topics.json").read_text(encoding="utf-8"))
+        self.assertEqual({topic["id"] for topic in topics} - {"other"}, set(board.TOPIC_PATTERNS))
+        for topic in topics:
+            for keyword in topic["keywords"]:
+                with self.subTest(topic=topic["id"], keyword=keyword):
+                    self.assertRegex(keyword, board.TOPIC_PATTERNS[topic["id"]])
+                    others = [other for other, pattern in board.TOPIC_PATTERNS.items() if other != topic["id"] and pattern.search(keyword)]
+                    self.assertEqual(others, [], f"{keyword} also matches {others}")
+
+
+class TopicObservationTest(unittest.TestCase):
+    def test_published_observations_reproduce_from_monthly_aggregates(self):
+        monthly = json.loads((DATA / "monthly-topics.json").read_text(encoding="utf-8"))
+        windows = json.loads((DATA / "notice-windows.json").read_text(encoding="utf-8"))
+        stored = json.loads((DATA / "topic-observations.json").read_text(encoding="utf-8"))
+        self.assertEqual(build_observations(monthly, windows), stored)
+
+    def test_templates_stay_short_and_descriptive(self):
+        monthly = {"end": "2024-11-25", "months": {
+            **{f"2024-{m:02d}": {"orders": 40 + m, "hours": 3} for m in range(1, 11)},
+            "2024-11": {"orders": 900, "hours": 2},
+        }}
+        result = build_observations(monthly, {"observations": [{"date": "2024-11-03", "topic": "orders"}]})
+        by_topic = {row["topic"]: row for row in result["observations"]}
+        self.assertEqual(set(by_topic), {"orders", "hours"})
+        self.assertIn("11월 900건", by_topic["orders"]["observation"])
+        self.assertIn("공지 전후 14일 관찰 1건", by_topic["orders"]["basis"])
+        self.assertTrue(by_topic["hours"]["observation"].startswith("11월 25일까지"))
+        for row in result["observations"]:
+            self.assertLessEqual(len(row["observation"]), result["maxLength"])
 
 
 if __name__ == "__main__":

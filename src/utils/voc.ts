@@ -7,6 +7,7 @@ import topics from '../../data/voc/topics.json';
 import contextData from '../../data/voc/context.json';
 import noticeWindows from '../../data/voc/notice-windows.json';
 import generalNotices from '../../data/voc/general-notices.json';
+import topicObservations from '../../data/voc/topic-observations.json';
 import { signals } from './ceo';
 
 const relatedSignals: Record<string, string[]> = contextData.relatedSignals;
@@ -17,14 +18,33 @@ export const vocContext = [
     : []),
 ].sort((a, b) => b.date.localeCompare(a.date));
 
-interface VocYear {
+export interface VocYear {
   year: number;
-  questionCoverage: 'unverified' | 'sample' | 'verified';
+  /** full: public list covers 1월 1일~12월 31일 · partial: public list through collectionEnd · sample: curated examples only */
+  questionCoverage: 'unverified' | 'sample' | 'partial' | 'full';
+  questionLabel?: string;
   noticeCoverage: string;
   period: string;
   collectionId?: string;
   collectionStart?: string;
   collectionEnd?: string;
+}
+
+export interface VocTopic {
+  id: string;
+  label: string;
+  /** Level-1 category of the design document (§7.6) that this working topic reports under. */
+  designCategory: string;
+  designNote?: string;
+  /** Keyword family of the collector's title/body rule (scripts/voc/collect_public_board.py TOPIC_TERMS). */
+  keywords: string[];
+}
+
+export interface VocTopicObservation {
+  year: number;
+  topic: string;
+  observation: string;
+  basis: string;
 }
 
 interface VocPost {
@@ -41,6 +61,9 @@ interface VocPost {
 
 const vocYears: VocYear[] = years as VocYear[];
 const vocPosts: VocPost[] = posts;
+const vocTopics: VocTopic[] = topics;
+export const vocTopicObservations: VocTopicObservation[] = topicObservations.observations;
+export const designCategories = ['주문', '계좌', 'HTS/MTS', '인증', '해외주식', '파생', '신용/미수', '수수료', '입출금/이체', '기타'];
 type VocNotice = (typeof index)[number] & { channel?: string };
 const indexed = new Map<string, VocNotice>(index.map((notice) => [notice.id, notice]));
 for (const notice of generalNotices.notices) indexed.set(notice.id, notice);
@@ -62,7 +85,7 @@ export function noticeWindowStatus(id: string) {
   return observedIds.has(id) ? 'observed' : (exclusions[id] ?? 'not-screened');
 }
 
-export { vocYears, notices as vocNotices, vocPosts, topics as vocTopics };
+export { vocYears, notices as vocNotices, vocPosts, vocTopics };
 
 export const vocIntents: Record<string, string> = {
   how_to: '사용 방법',
@@ -75,9 +98,13 @@ export const vocIntents: Record<string, string> = {
 };
 
 export function hasCompleteInquiryYear(coverage?: VocYear) {
-  return Boolean(coverage?.questionCoverage === 'verified' && coverage.collectionId
+  return Boolean(coverage?.questionCoverage === 'full' && coverage.collectionId
     && coverage.collectionStart === `${coverage.year}-01-01`
     && coverage.collectionEnd === `${coverage.year}-12-31`);
+}
+
+export function topicObservation(year: number, topic: string) {
+  return vocTopicObservations.find((row) => row.year === year && row.topic === topic);
 }
 
 export function summarizeKeywords(items: readonly VocPost[]) {
@@ -124,7 +151,7 @@ export function noticeInquiryObservations(
 ) {
   const start = coverage?.collectionStart;
   const end = coverage?.collectionEnd;
-  if (coverage?.questionCoverage !== 'verified' || !coverage.collectionId || !start || !end
+  if (coverage?.questionCoverage !== 'full' || !coverage.collectionId || !start || !end
     || publicationDate(start) === undefined || publicationDate(end) === undefined || start > end) return [];
   const datedInquiries = inquiries.filter(({ date }) => publicationDate(date) !== undefined);
 
@@ -146,7 +173,7 @@ export function summarizeVocYear(year: number) {
   const coverage = vocYears.find((entry) => entry.year === year);
   const selectedPosts = vocPosts.filter(({ date }) => date.startsWith(String(year)));
   const selectedNotices = notices.filter(({ date }) => date.startsWith(String(year)));
-  const topicCounts = topics
+  const topicCounts = vocTopics
     .map(({ id, label }) => ({ id, label, count: selectedPosts.filter(({ topic }) => topic === id).length }))
     .filter(({ count }) => count > 0)
     .sort((a, b) => b.count - a.count);

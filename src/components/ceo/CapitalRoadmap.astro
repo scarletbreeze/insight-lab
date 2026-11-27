@@ -1,6 +1,8 @@
 ---
 import roadmap from '../../../data/ceo/capital-roadmap.json';
+import HorizontalBars from '../charts/HorizontalBars.astro';
 import { formatBrokerMetric, industryPeriods } from '../../utils/brokers';
+import { formatKrwMillion } from '../../utils/krw';
 import { sitePath } from '../../utils/paths';
 
 const stages = [8, 4, 3];
@@ -8,6 +10,21 @@ const capital = industryPeriods.find(({ date }) => date === '2026-09-30')!;
 const companies = new Map(capital.companies.map((company) => [company.id, company]));
 const imaCount = roadmap.filter(({ stage }) => stage === 8).length;
 const paperCount = roadmap.filter(({ paperLicense }) => paperLicense).length;
+const stageLabel = (stage: number) => stage === 8 ? 'IMA 가능 · 8조원 지정' : stage + '조원 지정';
+const bars = roadmap.map((entry) => {
+  const company = companies.get(entry.broker);
+  return {
+    id: entry.broker, label: company?.name ?? entry.broker, value: company?.equity ?? null,
+    href: sitePath('broker-atlas/brokers/' + entry.broker),
+    note: stageLabel(entry.stage) + ' ' + entry.designation + (entry.paperLicense ? ' · 단기금융업 ' + entry.paperLicense : ''),
+  };
+}).sort((a, b) => (b.value ?? -1) - (a.value ?? -1));
+const report = capital.companies[0]?.sourceName?.match(/\d{4}년 \d분기보고서/)?.[0] ?? '분기보고서';
+const thresholds = [
+  { value: 3_000_000, label: '3조 종투사' },
+  { value: 4_000_000, label: '4조 발행어음' },
+  { value: 8_000_000, label: '8조 IMA' },
+];
 ---
 <section class="lab-block">
   <h2>주요 증권사의 확인된 지정 단계</h2>
@@ -17,23 +34,31 @@ const paperCount = roadmap.filter(({ paperLicense }) => paperLicense).length;
     <div><dt>단기금융업 인가</dt><dd>{paperCount}개사</dd></div>
     <div><dt>종합투자계좌(IMA) 업무 가능</dt><dd>{imaCount}개사</dd></div>
   </dl>
-  <div class="lab-grid">
-    {stages.map((stage) => <section>
-      <h3>{stage}조원 이상 종투사</h3>
-      <ul class="lab-list">
-        {roadmap.filter((entry) => entry.stage === stage).map((entry) => {
-          const company = companies.get(entry.broker);
-          return <li class="lab-card">
-            <strong><a href={sitePath('broker-atlas/brokers/' + entry.broker)}>{company?.name}</a></strong>
-            <span>별도 자본총계 {formatBrokerMetric(company?.equity, false)}</span>
-            <span>{stage === 8 ? '종합투자계좌(IMA) 업무 가능 · 8조원 지정 ' : '지정 '}{entry.designation}</span>
-            <span>{entry.paperLicense ? '단기금융업 인가 ' + entry.paperLicense : '기준 발표에서 단기금융업 인가 미확인'}</span>
-            <a href={entry.sourceUrl}>금융위원회 지정·인가 자료</a>
-            {company?.sourceUrl && <a href={company.sourceUrl}>별도 자본총계 공시</a>}
-          </li>;
-        })}
-      </ul>
-    </section>)}
-  </div>
+  <HorizontalBars items={bars} format={formatKrwMillion} {thresholds} labelWidth="10.5rem" valueWidth="8.5rem"
+    caption={`<strong>종투사 ${roadmap.length}개사의 별도 자본총계와 지정 단계</strong> — 막대는 ${capital.date} 별도 재무제표의 자본총계이고, 기준선 3조·4조·8조원은 지정 당시 심사한 자기자본 요건이라 같은 지표가 아닙니다.`}>
+    <p class="chart-note">자본총계 출처: 각사 {report}(DART, {capital.basis}; {capital.scope}) — 회사별 원문은 아래 표의 ‘별도 자본총계 공시’ 링크. 지정·인가 일자 출처: 금융위원회 보도자료. 막대 왼쪽 회사명은 Broker Atlas의 회사 화면으로 이동합니다.</p>
+  </HorizontalBars>
+  <details>
+    <summary>단계별 지정·인가 일자와 원문 출처</summary>
+    <div class="lab-table-wrap">
+      <table class="lab-table">
+        <caption>금융위원회 지정·인가 자료와 각사 별도 자본총계 공시</caption>
+        <thead><tr><th scope="col">단계</th><th scope="col">증권사</th><th scope="col">별도 자본총계</th><th scope="col">종투사 지정</th><th scope="col">단기금융업 인가</th><th scope="col">출처</th></tr></thead>
+        <tbody>
+          {stages.flatMap((stage) => roadmap.filter((entry) => entry.stage === stage).map((entry) => {
+            const company = companies.get(entry.broker);
+            return <tr>
+              <td>{stage === 8 ? '8조원 · 종합투자계좌(IMA) 업무 가능' : stage + '조원 이상'}</td>
+              <th scope="row"><a href={sitePath('broker-atlas/brokers/' + entry.broker)}>{company?.name}</a></th>
+              <td>{formatBrokerMetric(company?.equity, false)}</td>
+              <td>{entry.designation}</td>
+              <td>{entry.paperLicense ?? '기준 발표에서 미확인'}</td>
+              <td><a href={entry.sourceUrl}>금융위원회 지정·인가 자료</a>{company?.sourceUrl && <> · <a href={company.sourceUrl}>별도 자본총계 공시</a></>}</td>
+            </tr>;
+          }))}
+        </tbody>
+      </table>
+    </div>
+  </details>
   <a href="https://www.fsc.go.kr/no010101/87782">2026년 9월 단기금융업 인가 현황</a>
 </section>

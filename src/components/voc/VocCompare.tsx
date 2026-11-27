@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { hasCompleteInquiryYear, summarizeVocYear, vocTopics, vocYears } from '../../utils/voc';
+import { summarizeVocYear, vocTopics, vocYears } from '../../utils/voc';
 import VocKeywords from './VocKeywords';
 import { generalNoticeYear, publicBoardMonths, publicBoardTopics, publicBoardYear } from '../../utils/voc-public-board';
 
@@ -38,7 +38,6 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
   const leftSum = pairedMonths.reduce((sum, row) => sum + row.left, 0);
   const rightSum = pairedMonths.reduce((sum, row) => sum + row.right, 0);
   const cells = [left, right].map((year) => ({ year, ...summarizeVocYear(year) }));
-  const [leftCell, rightCell] = cells;
   const leftBoard = publicBoardYear(left);
   const rightBoard = publicBoardYear(right);
   const boardComparable = leftBoard?.isFullYear && rightBoard?.isFullYear;
@@ -52,13 +51,6 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
   const declines = [...boardTopicRows].filter(({ difference }) => difference < 0)
     .sort((a, b) => a.difference - b.difference).slice(0, 3);
   const emerging = boardTopicRows.filter(({ leftCount }) => leftCount === 0);
-  const comparable = cells.every(({ coverage }) => hasCompleteInquiryYear(coverage))
-    && leftCell.coverage?.collectionId === rightCell.coverage?.collectionId;
-  const questionRows = comparable ? vocTopics.map(({ id, label }) => {
-    const leftCount = leftCell.topicCounts.find((topic) => topic.id === id)?.count ?? 0;
-    const rightCount = rightCell.topicCounts.find((topic) => topic.id === id)?.count ?? 0;
-    return { id, label, leftCount, rightCount };
-  }).filter(({ leftCount, rightCount }) => leftCount || rightCount) : [];
   const noticeRows = vocTopics.map(({ id, label }) => ({
     id, label, counts: cells.map(({ selectedNotices }) => selectedNotices.filter(({ topic }) => topic === id).length),
   })).filter(({ counts }) => counts.some(Boolean));
@@ -146,13 +138,12 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
     </section>}
     <div className="lab-grid">
       {cells.map(({ year, coverage, selectedPosts, selectedNotices, topicCounts, keywords }) => {
-        const complete = hasCompleteInquiryYear(coverage);
         const boardTopics = publicBoardTopics(year);
         const noticeCount = generalNoticeYear(year);
         return <article key={year} className="lab-card">
           <h2><a href={yearBase + year + '/'}>{year}년</a></h2>
           <p>{coverage?.period}</p>
-          <p>{complete ? '확인 범위 문의' : '수록 문의 표본'} {complete || selectedPosts.length ? selectedPosts.length + '건' : '자료 확인 중'}</p>
+          <p>문의 예시 {selectedPosts.length ? selectedPosts.length + '건' : '자료 확인 중'}</p>
           <p>수록 공지 {selectedNotices.length ? selectedNotices.length + '건' : '자료 확인 중'}</p>
           {noticeCount !== undefined && <p>일반 공지 등록 {formatCount(noticeCount)}건 · {publicBoardYear(year)?.label}</p>}
           {boardTopics && <>
@@ -162,26 +153,14 @@ export default function VocCompare({ yearBase, topicBase }: { yearBase: string; 
             </li>)}</ol>
           </>}
           {topicCounts.length > 0 && <>
-            <h3>{complete ? '문의 주제 Top 10' : '표본 주제'}</h3>
-            <ol>{topicCounts.slice(0, complete ? 10 : undefined).map(({ id, label, count }) => <li key={id}><a href={topicBase + id + '/'}>{label}</a> {count}건</li>)}</ol>
+            <h3>예시 주제</h3>
+            <ol>{topicCounts.map(({ id, label, count }) => <li key={id}><a href={topicBase + id + '/'}>{label}</a> {count}건</li>)}</ol>
           </>}
-          <h3>{complete ? '문의 키워드' : '표본 키워드'}</h3>
+          <h3>예시 키워드</h3>
           <VocKeywords keywords={keywords} />
         </article>;
       })}
     </div>
-    {comparable ? <div className="lab-table-wrap">
-      <table className="lab-table">
-        <caption>같은 수집 기준의 연간 문의 비교</caption>
-        <thead><tr><th scope="col">주제</th><th scope="col">{left}년 건수·비중</th><th scope="col">{right}년 건수·비중</th><th scope="col">{left}년에서 {right}년 변화</th></tr></thead>
-        <tbody>{questionRows.map(({ id, label, leftCount, rightCount }) => <tr key={id}>
-          <th scope="row"><a href={topicBase + id + '/'}>{label}</a></th>
-          <td>{leftCount}건 · {leftCell.selectedPosts.length ? (100 * leftCount / leftCell.selectedPosts.length).toFixed(1) + '%' : '비중 없음'}</td>
-          <td>{rightCount}건 · {rightCell.selectedPosts.length ? (100 * rightCount / rightCell.selectedPosts.length).toFixed(1) + '%' : '비중 없음'}</td>
-          <td>{(rightCount - leftCount).toLocaleString('ko-KR', { signDisplay: 'exceptZero' })}건</td>
-        </tr>)}</tbody>
-      </table>
-    </div> : <p>본문 검토 표본은 두 연도의 주제 증감률을 산정하기에 부족합니다.</p>}
     {noticeRows.length > 0 && <div className="lab-table-wrap">
       <table className="lab-table">
         <caption>주제별 수록 공지 표본</caption>

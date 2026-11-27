@@ -1,7 +1,52 @@
 [
-  {"year":2026,"questionCoverage":"sample","noticeCoverage":"sample","period":"2026년 수록 표본"},
-  {"year":2025,"questionCoverage":"sample","noticeCoverage":"sample","period":"2025년 수록 표본"},
-  {"year":2024,"questionCoverage":"sample","noticeCoverage":"sample","period":"2024년 수록 표본"},
-  {"year":2023,"questionCoverage":"sample","noticeCoverage":"sample","period":"2023년 수록 표본"},
-  {"year":2022,"questionCoverage":"sample","noticeCoverage":"sample","period":"2022년 수록 표본"}
+  {
+    "year": 2026,
+    "questionCoverage": "partial",
+    "questionLabel": "연중 집계",
+    "noticeCoverage": "selected",
+    "period": "2026년 1월 1일~11월 25일 공개 고객게시판 집계(연중)",
+    "collectionId": "public-board-2026-11-25",
+    "collectionStart": "2026-01-01",
+    "collectionEnd": "2026-11-25"
+  },
+  {
+    "year": 2025,
+    "questionCoverage": "full",
+    "questionLabel": "연간 집계",
+    "noticeCoverage": "selected",
+    "period": "2025년 공개 고객게시판 연간 집계",
+    "collectionId": "public-board-2026-11-25",
+    "collectionStart": "2025-01-01",
+    "collectionEnd": "2025-12-31"
+  },
+  {
+    "year": 2024,
+    "questionCoverage": "full",
+    "questionLabel": "연간 집계",
+    "noticeCoverage": "selected",
+    "period": "2024년 공개 고객게시판 연간 집계",
+    "collectionId": "public-board-2026-11-25",
+    "collectionStart": "2024-01-01",
+    "collectionEnd": "2024-12-31"
+  },
+  {
+    "year": 2023,
+    "questionCoverage": "full",
+    "questionLabel": "연간 집계",
+    "noticeCoverage": "selected",
+    "period": "2023년 공개 고객게시판 연간 집계",
+    "collectionId": "public-board-2026-11-25",
+    "collectionStart": "2023-01-01",
+    "collectionEnd": "2023-12-31"
+  },
+  {
+    "year": 2022,
+    "questionCoverage": "full",
+    "questionLabel": "연간 집계",
+    "noticeCoverage": "selected",
+    "period": "2022년 공개 고객게시판 연간 집계",
+    "collectionId": "public-board-2026-11-25",
+    "collectionStart": "2022-01-01",
+    "collectionEnd": "2022-12-31"
+  }
 ]

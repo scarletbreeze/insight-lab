@@ -1,25 +1,85 @@
 {
   "relatedSignals": {
-    "dtcc-project-ion": ["overseas"],
-    "token-framework": ["products"],
-    "foreign-investor-registration": ["account", "auth"],
-    "treasury-clearing": ["overseas", "products"],
-    "nasdaq-dynamic-melo": ["orders", "overseas"],
-    "settlement-t1": ["overseas", "transfer"],
-    "spot-bitcoin-etp": ["products", "overseas"],
-    "network-separation": ["hts", "auth"],
-    "virtual-asset-protection": ["products"],
-    "mirae-overseas-disclosure-ai": ["hts", "overseas"],
-    "next-trade-license": ["orders", "hours", "hts"],
-    "short-selling-resumption": ["orders", "credit"],
-    "capital-licenses": ["products", "account"],
-    "hana-shinhan-paper": ["products"],
-    "treasury-clearing-extension": ["overseas", "products"],
-    "token-working-group": ["products"],
-    "token-rules-consultation": ["products", "orders"],
-    "nh-ima": ["products", "account"],
-    "ibkr-krx-nxt-access": ["hours", "orders"],
-    "kb-personal-open-api": ["hts", "orders"]
+    "dtcc-project-ion": [
+      "overseas"
+    ],
+    "token-framework": [
+      "products"
+    ],
+    "foreign-investor-registration": [
+      "account",
+      "auth"
+    ],
+    "treasury-clearing": [
+      "overseas",
+      "products"
+    ],
+    "nasdaq-dynamic-melo": [
+      "orders",
+      "overseas"
+    ],
+    "settlement-t1": [
+      "overseas",
+      "transfer"
+    ],
+    "spot-bitcoin-etp": [
+      "products",
+      "overseas"
+    ],
+    "network-separation": [
+      "hts",
+      "auth"
+    ],
+    "virtual-asset-protection": [
+      "products"
+    ],
+    "mirae-overseas-disclosure-ai": [
+      "hts",
+      "overseas"
+    ],
+    "next-trade-license": [
+      "orders",
+      "hours",
+      "hts"
+    ],
+    "short-selling-resumption": [
+      "orders",
+      "credit"
+    ],
+    "capital-licenses": [
+      "products",
+      "account"
+    ],
+    "hana-shinhan-paper": [
+      "products"
+    ],
+    "treasury-clearing-extension": [
+      "overseas",
+      "products"
+    ],
+    "token-working-group": [
+      "products"
+    ],
+    "token-rules-consultation": [
+      "products",
+      "orders"
+    ],
+    "nh-ima": [
+      "products",
+      "account"
+    ],
+    "ibkr-krx-nxt-access": [
+      "hours",
+      "orders"
+    ],
+    "kb-personal-open-api": [
+      "hts",
+      "orders"
+    ],
+    "electronic-finance-security-draft-nov-2026": [
+      "hts",
+      "auth"
+    ]
   },
   "events": [
     {
@@ -28,7 +88,20 @@
       "summary": "금융위원회는 주문을 모아 온주 단위로 거래하고 수익증권을 분할 발행하는 방식의 소수단위 거래 서비스를 지정했습니다.",
       "sourceName": "금융위원회 혁신금융서비스 지정",
       "sourceUrl": "https://www.fsc.go.kr/no010101/77381",
-      "topics": ["orders", "products"]
+      "topics": [
+        "orders",
+        "products"
+      ]
+    },
+    {
+      "date": "2022-07-01",
+      "title": "증시 변동성 완화조치 시행",
+      "summary": "금융위원회와 금융감독원은 7월 4일부터 3개월간 증권사의 신용융자담보비율 유지의무를 면제하고 상장기업의 1일 자사주 매수주문 수량 제한을 완화하는 조치를 발표했습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/78012",
+      "topics": [
+        "credit"
+      ]
     },
     {
       "date": "2022-07-28",
@@ -36,7 +109,10 @@
       "summary": "금융위원회와 관계기관은 불법공매도 조사·처벌과 공매도 제도 보완 방안을 발표했습니다.",
       "sourceName": "금융위원회 관계기관 합동 발표",
       "sourceUrl": "https://www.fsc.go.kr/no010101/78193",
-      "topics": ["credit", "orders"]
+      "topics": [
+        "credit",
+        "orders"
+      ]
     },
     {
       "date": "2022-09-05",
@@ -44,7 +120,30 @@
       "summary": "금융위원회는 공시 강화, 반대주주 주식매수청구권과 상장심사 개선을 포함한 방안을 발표했습니다.",
       "sourceName": "금융위원회 일반주주 권익 제고 방안",
       "sourceUrl": "https://www.fsc.go.kr/no010101/78449",
-      "topics": ["products"]
+      "topics": [
+        "products"
+      ]
+    },
+    {
+      "date": "2022-11-17",
+      "title": "금융투자소득세 도입 영향 업계 간담회",
+      "summary": "금융위원회와 금융투자협회는 증권사와 함께 금융투자소득세가 주식시장에 미치는 영향을 논의하는 간담회를 열었고, 참석자들은 도입 유예가 필요하다는 의견을 모았습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/78934",
+      "topics": [
+        "fees"
+      ]
+    },
+    {
+      "date": "2022-11-23",
+      "title": "클라우드·망분리 규제 완화 전자금융감독규정 개정",
+      "summary": "금융위원회는 클라우드 이용 사전보고를 사후보고로 전환하고 연구·개발 분야의 망분리 규제를 완화하는 전자금융감독규정 개정안을 의결했습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/78962",
+      "topics": [
+        "hts",
+        "auth"
+      ]
     },
     {
       "date": "2022-12-20",
@@ -52,7 +151,19 @@
       "summary": "상장기업의 물적분할에 반대하는 주주에게 주식매수청구권을 부여하는 시행령 개정안이 국무회의를 통과했습니다.",
       "sourceName": "금융위원회 시행령 개정 발표",
       "sourceUrl": "https://www.fsc.go.kr/no010101/79125",
-      "topics": ["products"]
+      "topics": [
+        "products"
+      ]
+    },
+    {
+      "date": "2023-01-31",
+      "title": "배당절차 개선방안 발표",
+      "summary": "금융위원회는 배당액을 확인한 뒤 투자를 결정할 수 있도록 상법 유권해석과 자본시장법 개정으로 배당절차를 개선하는 방안을 발표했습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/79358",
+      "topics": [
+        "products"
+      ]
     },
     {
       "date": "2023-04-10",
@@ -60,7 +171,140 @@
       "summary": "금융위원회는 법정대리권을 가진 부모가 자녀 명의의 금융계좌를 비대면 개설할 수 있도록 실명확인 가이드라인 개편을 안내했습니다. 서비스 시작 일정은 금융회사마다 달랐습니다.",
       "sourceName": "금융위원회 비대면 계좌 개설 안내",
       "sourceUrl": "https://www.fsc.go.kr/no010101/79779",
-      "topics": ["account", "auth"]
+      "topics": [
+        "account",
+        "auth"
+      ]
+    },
+    {
+      "date": "2023-07-19",
+      "title": "넥스트레이드 다자간매매체결회사 예비인가",
+      "summary": "금융위원회는 정례회의에서 넥스트레이드의 ATS 투자중개업을 2013년 제도 도입 이후 처음으로 예비인가했습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/80433",
+      "topics": [
+        "hours",
+        "orders"
+      ]
+    },
+    {
+      "date": "2023-11-05",
+      "title": "공매도 전면 금지 의결",
+      "summary": "임시금융위원회는 11월 6일부터 2024년 상반기까지 코스피·코스닥·코넥스 전 종목의 공매도를 금지하기로 의결했으며 시장조성자 등의 차입공매도는 허용됩니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/81013",
+      "topics": [
+        "credit",
+        "orders"
+      ]
+    },
+    {
+      "date": "2024-02-26",
+      "title": "기업 밸류업 지원방안 1차 세미나",
+      "summary": "금융위원회는 한국거래소 등 유관기관과 함께 기업 밸류업 지원방안의 주요 내용을 소개하는 1차 세미나를 열었습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/81780",
+      "topics": [
+        "products"
+      ]
+    },
+    {
+      "date": "2024-03-29",
+      "title": "혁신금융서비스 300건 지정 기념식",
+      "summary": "금융위원회는 3월 20일 정례회의에서 5건을 추가 지정해 누적 지정이 303건이 됐다고 발표하고, 대출상품 비교·추천 플랫폼과 해외주식 소수점 투자를 사례로 들었습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/81996",
+      "topics": [
+        "overseas"
+      ]
+    },
+    {
+      "date": "2024-06-13",
+      "title": "공매도 제도개선 방안 발표",
+      "summary": "기관투자자의 잔고관리 시스템 구축 의무화, 한국거래소 중앙점검 시스템 구축, 대차·대주 상환기간 12개월과 담보비율 105% 통일을 담은 방안이 발표됐습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/82450",
+      "topics": [
+        "credit"
+      ]
+    },
+    {
+      "date": "2024-06-13",
+      "title": "공매도 금지 조치 2025년 3월 30일까지 연장",
+      "summary": "임시금융위원회는 공매도 전산시스템 구축을 위해 2024년 6월 30일까지였던 공매도 전면 금지를 2025년 3월 30일까지 연장하기로 의결했습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/82454",
+      "topics": [
+        "credit",
+        "orders"
+      ]
+    },
+    {
+      "date": "2025-03-12",
+      "title": "비대면 계좌개설 안심차단 서비스 시행",
+      "summary": "금융위원회와 금융감독원은 본인 명의의 비대면 계좌 개설을 사전에 차단하는 안심차단 서비스를 3,613개 금융회사 참여로 시행했습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/84123",
+      "topics": [
+        "account",
+        "auth"
+      ]
+    },
+    {
+      "date": "2025-06-25",
+      "title": "해외주식 소수단위 거래 등 혁신금융서비스 14건 지정",
+      "summary": "금융위원회는 정례회의에서 해외주식 소수단위 거래 서비스 등 14건을 혁신금융서비스로 신규 지정해 누적 지정이 705건이 됐습니다.",
+      "sourceName": "금융위원회 보도자료",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/84808",
+      "topics": [
+        "overseas"
+      ]
+    },
+    {
+      "date": "2025-09-03",
+      "title": "대체거래소 거래한도 규제 한시 유예",
+      "summary": "금융위원회는 대체거래소의 종목별 거래한도 초과 시 한국거래소 거래량의 100% 미만 유지를 전제로 비조치하기로 하고, 한국거래소의 거래시간 연장·수수료 체계 검토를 함께 추진합니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/85231",
+      "topics": [
+        "hours",
+        "orders"
+      ]
+    },
+    {
+      "date": "2026-01-15",
+      "title": "토큰증권 도입 전자증권법·자본시장법 개정안 국회 통과",
+      "summary": "분산원장 기술로 증권 정보를 관리하는 토큰증권을 도입하고 증권사를 통한 투자계약증권 유통을 허용하는 개정안이 국회 본회의를 통과해 공포 후 1년 뒤 시행됩니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/86064",
+      "topics": [
+        "products"
+      ]
+    },
+    {
+      "date": "2026-11-04",
+      "title": "홍콩 H지수 ELS 은행·증권사 검사 결과 조치",
+      "summary": "금융위원회는 홍콩 H지수 ELS 불완전판매와 관련해 7개 은행과 6개 증권사에 과징금과 과태료 부과를 의결했습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88082",
+      "topics": [
+        "products"
+      ]
+    },
+    {
+      "date": "2026-11-06",
+      "title": "주식시장 변동성 확대에 따른 단계별 대응조치 가동",
+      "summary": "관계기관 합동 시장상황점검회의는 증권사 신용융자 담보비율 유지 의무를 3개월간 면제하는 등 단계별 대응조치를 가동했습니다.",
+      "sourceName": "금융위원회 보도참고",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88100",
+      "topics": [
+        "credit",
+        "orders"
+      ]
     }
-  ]
+  ],
+  "sourceCheck": {
+    "date": "2026-11-27",
+    "method": "각 sourceUrl에 HTTP GET을 보내 200 응답과 제목을 확인"
+  }
 }

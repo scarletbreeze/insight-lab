@@ -4,7 +4,7 @@ import NoticeList from '../../../components/voc/NoticeList.astro';
 import VocKeywords from '../../../components/voc/VocKeywords';
 import VocContextList from '../../../components/voc/VocContextList.astro';
 import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
-import { hasCompleteInquiryYear, summarizeKeywords, vocContext, vocIntents, vocNotices, vocPosts, vocTopics, vocYears } from '../../../utils/voc';
+import { summarizeKeywords, vocContext, vocIntents, vocNotices, vocPosts, vocTopics, vocYears } from '../../../utils/voc';
 import { sitePath } from '../../../utils/paths';
 import { publicBoardTopics, publicBoardYear } from '../../../utils/voc-public-board';
 
@@ -18,7 +18,6 @@ const counts = vocYears.map((coverage) => ({
   year: coverage.year,
   boardTopics: publicBoardTopics(coverage.year),
   boardYear: publicBoardYear(coverage.year),
-  complete: hasCompleteInquiryYear(coverage),
   inquiries: items.filter(({ date }) => date.startsWith(String(coverage.year))).length,
   notices: notices.filter(({ date }) => date.startsWith(String(coverage.year))).length,
 }));
@@ -38,11 +37,11 @@ const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && y
     <h2>연도별 수록 범위</h2>
     <div class="lab-table-wrap"><table class="lab-table">
       <thead><tr><th scope="col">연도</th><th scope="col">문의 수록 범위</th><th scope="col">공지 표본</th></tr></thead>
-      <tbody>{counts.map(({ year, boardTopics, boardYear, complete, inquiries, notices }) => <tr>
+      <tbody>{counts.map(({ year, boardTopics, boardYear, inquiries, notices }) => <tr>
         <th scope="row"><a href={sitePath('voc-studio/year/' + year)}>{year}</a></th>
         <td>{boardTopics && id !== 'other'
           ? `자동 분류 ${(boardTopics.ranked.find((topic) => topic.id === id)?.count ?? 0).toLocaleString('ko-KR')}건 · ${boardYear?.label}`
-          : complete ? '범위 확인 · ' + inquiries + '건' : inquiries ? '표본 ' + inquiries + '건' : '자료 확인 중'}</td>
+          : inquiries ? '예시 ' + inquiries + '건' : '자료 확인 중'}</td>
         <td>{notices ? notices + '건' : '수록 표본 없음'}</td>
       </tr>)}</tbody>
     </table></div>

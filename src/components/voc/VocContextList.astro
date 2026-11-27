@@ -10,7 +10,7 @@ interface Props {
 const { title, items, linkTopics = false } = Astro.props;
 const labels = new Map(vocTopics.map(({ id, label }) => [id, label]));
 ---
-{items.length > 0 && <section class="lab-block">
+{items.length > 0 && <section class="lab-block" id="context">
   <h2>{title}</h2>
   <ul class="lab-list">{items.map(({ date, title, summary, sourceName, sourceUrl, topics }) => <li class="lab-card">
     <time datetime={date}>{date}</time>

@@ -7,7 +7,8 @@ import VocKeywords from '../../../components/voc/VocKeywords';
 import NoticeInquiryObservations from '../../../components/voc/NoticeInquiryObservations.astro';
 import VocContextList from '../../../components/voc/VocContextList.astro';
 import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
-import { hasCompleteInquiryYear, noticeInquiryObservations, publicNoticeObservations, summarizeVocYear, vocContext, vocIntents, vocYears } from '../../../utils/voc';
+import VocTopicRanking from '../../../components/voc/VocTopicRanking.astro';
+import { noticeInquiryObservations, publicNoticeObservations, summarizeVocYear, vocContext, vocIntents, vocYears } from '../../../utils/voc';
 import { sitePath } from '../../../utils/paths';
 import { generalNoticeYear, publicBoardTopics, publicBoardYear } from '../../../utils/voc-public-board';
 
@@ -16,12 +17,8 @@ export function getStaticPaths() {
 }
 const { year } = Astro.props;
 const { coverage, selectedPosts, selectedNotices, topicCounts, keywords } = summarizeVocYear(year);
-const previous = summarizeVocYear(year - 1);
 const publicWindows = publicNoticeObservations(year);
 const observations = publicWindows.covered ? publicWindows.items : noticeInquiryObservations(coverage, selectedNotices, selectedPosts);
-const complete = hasCompleteInquiryYear(coverage);
-const comparable = complete && hasCompleteInquiryYear(previous.coverage)
-  && coverage?.collectionId === previous.coverage?.collectionId;
 const noticeCounts = [...new Set(selectedNotices.map(({ category }) => category))]
   .map((category) => ({ category, count: selectedNotices.filter((notice) => notice.category === category).length }))
   .sort((a, b) => b.count - a.count);
@@ -34,11 +31,11 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
   ? publicBoardTopics(year - 1) : undefined;
 ---
 <VocLayout title={year + '년 고객 문의와 공지'}>
-  <p slot="intro">{boardCount ? `공개 고객게시판 원글 ${boardCount.total.toLocaleString('ko-KR')}건과 키움증권 공지를 살펴봅니다. ${boardCount.label}.` : coverage?.period}</p>
+  <p slot="intro">{boardCount ? `공개 고객게시판 원글 ${boardCount.total.toLocaleString('ko-KR')}건과 키움증권 공지를 살펴봅니다. ${coverage?.period ?? boardCount.label}.` : coverage?.period}</p>
   <VocYearNavigation selected={year} />
   {boardCount && <section class="lab-block">
     <h2>공개 고객게시판 원글 {boardCount.total.toLocaleString('ko-KR')}건</h2>
-    <p>{boardCount.label} · 게시판의 분류 기준</p>
+    <p>{coverage?.questionLabel ?? boardCount.label}{coverage?.collectionStart && coverage.collectionEnd && ` · ${coverage.collectionStart}~${coverage.collectionEnd}`} · 게시판의 분류 기준</p>
     <ul class="lab-list">
       {Object.entries(boardCount.categories).sort(([, a], [, b]) => b - a).map(([category, count]) => <li>
         <strong>{category}</strong> · {count.toLocaleString('ko-KR')}건 ({(count / boardCount.total * 100).toFixed(1)}%)
@@ -52,31 +49,8 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
     {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 현재 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
     {review && <p>직전 규칙으로 점검한 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
-    <ol class="voc-rankings">
-      {boardTopics.ranked.slice(0, 10).map(({ id, label, count }) => {
-        const rank = 1 + boardTopics.ranked.filter((row) => row.count > count).length;
-        const priorCount = priorBoardTopics?.ranked.find((topic) => topic.id === id)?.count;
-        const examples = selectedPosts.filter(({ topic }) => topic === id).slice(0, 3);
-        const percent = (count / boardTopics.total * 100).toFixed(1);
-        return <li class="lab-card">
-          <div class="voc-rank-heading">
-            <h3><span>{rank}위</span> <a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
-            <strong>{count.toLocaleString('ko-KR')}건</strong>
-          </div>
-          <div class="voc-rank-share">
-            <meter min="0" max={boardTopics.total} value={count} aria-label={label + ' 문의 비중'}></meter>
-            <span>전체 문의의 {percent}%</span>
-          </div>
-          {priorCount != null && priorCount > 0 && <p>전년 {priorCount.toLocaleString('ko-KR')}건 대비 {((count / priorCount - 1) * 100).toLocaleString('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 })}%</p>}
-          {examples.length > 0 && <details>
-            <summary>대표 문의 {examples.length}건</summary>
-            <ul>{examples.map(({ summary, subtopic, intent, sourceUrl }) => <li>
-              <strong>{subtopic ?? label} · {vocIntents[intent]}</strong><p>{summary} <a href={sourceUrl}>출처</a></p>
-            </li>)}</ul>
-          </details>}
-        </li>;
-      })}
-    </ol>
+    <VocTopicRanking {year} board={boardTopics} prior={priorBoardTopics} />
+    <p>태그는 설계서의 Level 1 분류와 자동 분류 규칙의 대표 용어입니다. 한 줄 관찰은 월별 집계의 수치만 서술하며 원인은 판단하지 않습니다. <a href={sitePath('voc-studio/methodology') + '#taxonomy-map'}>분류 대응표와 관찰 문장 규칙</a></p>
     <a href={sitePath('voc-studio/methodology') + '#board-topics'}>자동 분류 기준</a>
   </section>}
   {boardTopics && <section class="lab-block">
@@ -86,25 +60,9 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     {vocYears.some((entry) => entry.year === year - 1) && <p><a href={sitePath('voc-studio/compare') + '?left=' + (year - 1) + '&right=' + year + '#monthly'}>전년 같은 달과 비교</a></p>}
   </section>}
   <section class="lab-block" id="examples">
-    <h2>{complete ? '문의 주제 Top 10' : '공개 문의 표본'}</h2>
-    {complete && <p>{coverage?.collectionStart}~{coverage?.collectionEnd} · 총 {selectedPosts.length}건</p>}
-    {complete && topicCounts.length > 0 && <ol class="lab-list">
-      {topicCounts.slice(0, 10).map(({ id, label, count }) => {
-        const priorCount = previous.topicCounts.find((topic) => topic.id === id)?.count ?? 0;
-        const examplePosts = selectedPosts.filter(({ topic }) => topic === id).slice(0, 3);
-        return <li class="lab-card">
-          <h3><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
-          <p>{count}건{comparable && (priorCount ? ' · 전년 대비 ' + ((count / priorCount - 1) * 100).toFixed(1) + '%' : ' · 전년 수록 0건')}</p>
-          <ul>{examplePosts.map(({ date, summary, subtopic, intent, sourceUrl }) => <li>
-            <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · {subtopic ?? vocIntents[intent] ?? label} · {summary} · <a href={sourceUrl}>공개 게시판</a>
-          </li>)}</ul>
-        </li>;
-      })}
-    </ol>}
-    {complete && !selectedPosts.length && <p role="status">확인 범위에 집계 대상 문의가 없습니다.</p>}
-    {!complete && <>
+    <h2>공개 문의 예시</h2>
     {selectedPosts.length ? <>
-      <p>공개 목록에서 확인한 문의 예시 {selectedPosts.length}건입니다.</p>
+      <p>공개 목록에서 확인해 일반화한 문의 예시 {selectedPosts.length}건입니다. 세부 주제와 문의 목적은 이 예시에만 부여합니다. 건수 순위는 위의 자동 분류 집계를 따릅니다.</p>
       <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={'#examples-' + id}>{label} · {count}건</a></li>)}</ul>
       {topicCounts.map(({ id: topic, label, count }) => <section>
         <h3 id={'examples-' + topic} tabindex="-1">{year}년 {label} 문의 예시 · {count}건</h3>
@@ -113,11 +71,10 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
         </li>)}</ul>
         <p><a href={sitePath('voc-studio/topics/' + topic) + '#examples'}>전체 연도 {label} 문의 예시</a></p>
       </section>)}
-    </> : <p class="empty-state">문의 자료 확인 중</p>}
-    </>}
+    </> : <p class="empty-state">문의 예시 자료 확인 중</p>}
   </section>
   <section class="lab-block">
-    <h2>{complete ? '문의 키워드' : '수록 문의 키워드'}</h2>
+    <h2>수록 문의 예시의 키워드</h2>
     <VocKeywords {keywords} />
   </section>
   <section class="lab-block">
@@ -134,18 +91,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
     </>}
     <NoticeList items={selectedNotices} />
   </section>
-  <NoticeInquiryObservations items={observations} verified={publicWindows.covered || coverage?.questionCoverage === 'verified'} automated={publicWindows.covered} />
+  <NoticeInquiryObservations items={observations} verified={publicWindows.covered || coverage?.questionCoverage === 'full'} automated={publicWindows.covered} />
   <VocContextList title="같은 해 시장·제도 변화" items={context} linkTopics />
 </VocLayout>
 
-<style>
-  .voc-rankings { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,19rem),1fr)); gap: .75rem; margin-block: 1rem; }
-  .voc-rankings .lab-card { align-content: start; }
-  .voc-rank-heading, .voc-rank-share { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
-  .voc-rank-heading span { font-family: var(--font-mono); }
-  .voc-rank-share { align-items: center; }
-  .voc-rank-share meter { flex: 1; min-width: 2rem; }
-  .voc-rank-share span { font-size: .85rem; font-variant-numeric: tabular-nums; }
-  .voc-rankings summary { cursor: pointer; padding-block: .4rem; }
-  .voc-rankings details li { border-top: 1px solid var(--color-rule); padding-block: .5rem; }
-</style>

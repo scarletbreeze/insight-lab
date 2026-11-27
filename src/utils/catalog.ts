@@ -8,7 +8,7 @@ import monthlyKrRankings from '../../data/market/months/kr-equity-rankings.json'
 import annualKrRankings from '../../data/market/kr-annual-equity-rankings.json';
 import { brokers, brokerEvents, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
 import { segmentFilings } from './broker-segments';
-import { signals } from './ceo';
+import { briefs, signals } from './ceo';
 import { legends, screenByNumber, screens, workflows } from './hero';
 import { marketEvents } from './market';
 import { publicNoticeObservations, vocNotices, vocPosts, vocTopics, vocYears } from './voc';
@@ -151,6 +151,10 @@ export const catalog: CatalogEntry[] = [
   ...signals.map((signal) => ({
     service: 'ceo-lens', route: 'ceo-lens/signals', anchor: signal.id, title: signal.title,
     summary: signal.summary, date: signal.date, sourceUrls: [signal.sourceUrl],
+  })),
+  ...briefs.map((brief) => ({
+    service: 'ceo-lens', route: 'ceo-lens/briefs/' + brief.id, title: brief.title,
+    summary: brief.oneLine, date: brief.lastUpdated, sourceUrls: brief.readings.map(({ url }) => url),
   })),
   ...notes.map((note) => ({
     service: 'normalman-archive', route: 'normalman-archive/notes/' + encodeURIComponent(note.slug),

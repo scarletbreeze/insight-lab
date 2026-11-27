@@ -101,6 +101,28 @@
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=8004"
     },
     {
+      "id": "general-7971",
+      "date": "2024-10-31",
+      "dateType": "published",
+      "title": "영웅문S (구) 종료 안내",
+      "topic": "hts",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7971"
+    },
+    {
+      "id": "general-7718",
+      "date": "2024-07-08",
+      "dateType": "published",
+      "title": "HTS(영웅문4/영웅문G) 접속 실패시 조치방법 안내",
+      "topic": "hts",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7718"
+    },
+    {
       "id": "general-7691",
       "date": "2024-06-27",
       "dateType": "published",
@@ -110,6 +132,17 @@
       "summary": "",
       "channel": "키움증권 일반 공지",
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7691"
+    },
+    {
+      "id": "general-7550",
+      "date": "2024-04-02",
+      "dateType": "published",
+      "title": "업무수수료 및 공모주청약 우대기준 변경 안내",
+      "topic": "other",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7550"
     },
     {
       "id": "general-7239",
@@ -123,6 +156,17 @@
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7239"
     },
     {
+      "id": "general-7237",
+      "date": "2023-11-06",
+      "dateType": "published",
+      "title": "공매도 금지에 따른 신용대주 서비스 중단 안내",
+      "topic": "other",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=7237"
+    },
+    {
       "id": "general-6775",
       "date": "2023-03-17",
       "dateType": "published",
@@ -132,6 +176,17 @@
       "summary": "",
       "channel": "키움증권 일반 공지",
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6775"
+    },
+    {
+      "id": "general-6695",
+      "date": "2023-01-20",
+      "dateType": "published",
+      "title": "한국거래소 차세대 시스템 이행(1/25 시행) 관련 매매제도 변경사항 안내",
+      "topic": "other",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6695"
     },
     {
       "id": "general-6694",
@@ -145,6 +200,17 @@
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6694"
     },
     {
+      "id": "general-6684",
+      "date": "2023-01-12",
+      "dateType": "published",
+      "title": "영웅문S# ‘키움영웅전’, ‘종목톡’ 서비스 오픈 안내",
+      "topic": "hts",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6684"
+    },
+    {
       "id": "general-6664",
       "date": "2022-12-23",
       "dateType": "published",
@@ -156,6 +222,28 @@
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6664"
     },
     {
+      "id": "general-6478",
+      "date": "2022-08-19",
+      "dateType": "published",
+      "title": "영웅문S# 그랜드오픈 안내",
+      "topic": "hts",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6478"
+    },
+    {
+      "id": "general-6409",
+      "date": "2022-06-13",
+      "dateType": "published",
+      "title": "인터넷 익스플로러(IE) 서비스 종료 안내 (6/15)",
+      "topic": "other",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6409"
+    },
+    {
       "id": "general-6355",
       "date": "2022-05-03",
       "dateType": "published",
@@ -165,6 +253,18 @@
       "summary": "",
       "channel": "키움증권 일반 공지",
       "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6355"
+    },
+    {
+      "id": "general-6269",
+      "date": "2022-03-19",
+      "dateType": "published",
+      "title": "AI음성봇 오픈 안내",
+      "topic": "other",
+      "category": "일반 공지",
+      "summary": "",
+      "channel": "키움증권 일반 공지",
+      "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsNoticeNWWNZDetailView?seqid=6269"
     }
-  ]
+  ],
+  "selectionNote": "2026-11-27: 2022~2024년 공지 9건을 공개 목록의 제목 검색(영웅문·시스템·서비스 종료·오픈·중단·수수료 등)으로 추가했다. 주제는 제목 규칙으로 부여하며 규칙과 일치하지 않거나 여러 주제에 해당하면 기타로 둔다."
 }

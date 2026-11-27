@@ -1,0 +1,70 @@
+---
+import HorizontalBars from '../charts/HorizontalBars.astro';
+import { sitePath } from '../../utils/paths';
+import { topicObservation, vocIntents, vocPosts, vocTopics } from '../../utils/voc';
+import type { publicBoardTopics } from '../../utils/voc-public-board';
+
+interface Props {
+  year: number;
+  board: NonNullable<ReturnType<typeof publicBoardTopics>>;
+  prior?: ReturnType<typeof publicBoardTopics>;
+}
+const { year, board, prior } = Astro.props;
+const topicsById = new Map(vocTopics.map((topic) => [topic.id, topic]));
+const change = new Intl.NumberFormat('ko-KR', { signDisplay: 'exceptZero', maximumFractionDigits: 1 });
+const rows = board.ranked.slice(0, 10).map(({ id, label, count }) => {
+  const priorCount = prior?.ranked.find((row) => row.id === id)?.count;
+  return {
+    id, label, count,
+    rank: 1 + board.ranked.filter((row) => row.count > count).length,
+    share: (count / board.total * 100).toFixed(1),
+    yoy: priorCount ? change.format((count / priorCount - 1) * 100) + '%' : undefined,
+    topic: topicsById.get(id),
+    observation: topicObservation(year, id),
+    examples: vocPosts.filter(({ date, topic }) => date.startsWith(String(year)) && topic === id).slice(0, 3),
+  };
+});
+---
+<HorizontalBars
+  caption={`${year}년 단일 주제로 분류된 공개 문의 ${board.total.toLocaleString('ko-KR')}건 중 주제별 건수`}
+  items={rows.map(({ id, rank, label, count, share, yoy }) => ({
+    id, label: `${rank}위 ${label}`, value: count, href: sitePath('voc-studio/topics/' + id),
+    note: `${share}%${yoy ? ' · 전년 대비 ' + yoy : ''}`,
+  }))}
+  format={(value) => value.toLocaleString('ko-KR') + '건'}
+  labelWidth="11rem"
+  valueWidth="5.5rem"
+/>
+<ol class="voc-ranking" aria-label={year + '년 주제별 태그와 관찰'}>
+  {rows.map(({ id, rank, label, topic, observation, examples }) => <li class="voc-ranking-row" id={'rank-' + id}>
+    <h3><span class="voc-ranking-rank">{rank}위</span> <a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
+    {topic && <ul class="lab-chips voc-ranking-tags" aria-label={label + ' 분류 태그'}>
+      <li class="voc-tag-design">{topic.designCategory}</li>
+      {topic.keywords.slice(0, 4).map((keyword) => <li>{keyword}</li>)}
+    </ul>}
+    {observation
+      ? <p class="voc-ranking-observation">{observation.observation} <small>· {observation.basis}</small></p>
+      : <p class="voc-ranking-observation empty-state">월별 관찰 자료 확인 중</p>}
+    {examples.length > 0 ? <details>
+      <summary>대표 문의 {examples.length}건</summary>
+      <ul>{examples.map(({ summary, subtopic, intent, sourceUrl }) => <li>
+        <strong>{subtopic ?? label} · {vocIntents[intent]}</strong><p>{summary} <a href={sourceUrl}>출처</a></p>
+      </li>)}</ul>
+    </details> : <p class="voc-ranking-empty">이 연도의 공개 문의 예시는 아직 수록하지 않았습니다.</p>}
+  </li>)}
+</ol>
+<style>
+  .voc-ranking { list-style: none; padding: 0; margin-block: 1rem; display: grid; gap: .2rem; }
+  .voc-ranking-row { display: grid; gap: .15rem; padding: .6rem .25rem; border-bottom: 1px solid var(--color-rule); }
+  .voc-ranking-row h3 { margin: 0; font-size: 1rem; display: flex; gap: .5rem; align-items: baseline; }
+  .voc-ranking-rank { font-family: var(--font-mono); color: var(--color-muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
+  .voc-ranking-tags { margin-block: .25rem .1rem; gap: .3rem; }
+  .voc-ranking-tags li { font-size: .78rem; padding: .15rem .45rem; border: 1px solid var(--color-rule); border-radius: .25rem; color: var(--color-muted); }
+  .voc-ranking-tags .voc-tag-design { border-color: var(--lab-accent, var(--color-accent-blue)); color: inherit; }
+  .voc-ranking-tags .voc-tag-design::before { content: '설계서 '; color: var(--color-muted); }
+  .voc-ranking-observation { margin-block: .2rem; font-size: .92rem; }
+  .voc-ranking-observation small { color: var(--color-muted); }
+  .voc-ranking-empty { font-size: .85rem; margin-block: .15rem; }
+  .voc-ranking details summary { cursor: pointer; padding-block: .3rem; font-size: .9rem; }
+  .voc-ranking details li { border-top: 1px solid var(--color-rule); padding-block: .5rem; }
+</style>

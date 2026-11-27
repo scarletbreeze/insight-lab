@@ -5,7 +5,9 @@ import generalNotices from '../../../data/voc/general-notices.json';
 import annualReview from '../../../data/voc/annual-classification-review.json';
 import review from '../../../data/voc/classification-review.json';
 import topics from '../../../data/voc/topics.json';
-import { noticeWindowStatus, vocNotices, windowLabels } from '../../utils/voc';
+import topicObservations from '../../../data/voc/topic-observations.json';
+import context from '../../../data/voc/context.json';
+import { designCategories, noticeWindowStatus, vocContext, vocIntents, vocNotices, vocPosts, vocYears, windowLabels } from '../../utils/voc';
 import { sitePath } from '../../utils/paths';
 const labels: Record<string, string> = Object.fromEntries(topics.map(({ id, label }) => [id, label]));
 labels.ambiguous = '여러 주제';
@@ -20,6 +22,8 @@ const observed = [
   [2025, '02.27', '12.23'],
   [2026, '01.10', '11.25'],
 ] as const;
+const contextByYear = vocYears.map(({ year }) => ({ year, count: vocContext.filter(({ date }) => date.startsWith(String(year))).length }));
+const subtopicCount = new Set(vocPosts.flatMap(({ subtopic }) => subtopic ? [subtopic] : [])).size;
 const reviewTotals = annualReview.years.reduce((total, row) => ({
   sample: total.sample + row.sample, reviewed: total.reviewed + row.reviewed,
   agreement: total.agreement + row.agreement,
@@ -101,13 +105,48 @@ const reviewTotals = annualReview.years.reduce((total, row) => ({
     </table></div>
     <a href={review.sourceUrl}>키움증권 공개 고객게시판</a>
   </section>
+  <section class="lab-block" id="taxonomy-map">
+    <h2>설계서 분류 ↔ 운영 분류</h2>
+    <p>설계서(요구사항 7.6절)는 Level 1 분류 {designCategories.length}개를 정합니다. 운영 분류는 {topics.length}개로, 거래시간·파생과 상품을 따로 집계합니다. 자동 분류 집계와 순위는 운영 분류로 계산하고, 각 주제가 보고되는 설계서 분류를 아래 표와 연도 화면의 태그로 표시합니다.</p>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <caption>운영 주제와 설계서 Level 1 분류의 대응</caption>
+      <thead><tr><th scope="col">운영 주제</th><th scope="col">설계서 Level 1</th><th scope="col">자동 분류 대표 용어</th><th scope="col">비고</th></tr></thead>
+      <tbody>{topics.map(({ id, label, designCategory, keywords, ...rest }) => <tr>
+        <th scope="row"><a href={sitePath('voc-studio/topics/' + id)}>{label}</a></th>
+        <td>{designCategory}</td>
+        <td>{keywords.length ? keywords.join(', ') : '규칙 없음 · 다른 주제에 해당하지 않는 공지'}</td>
+        <td>{'designNote' in rest ? rest.designNote : ''}</td>
+      </tr>)}</tbody>
+    </table></div>
+    <p>설계서의 Level 2 세부 주제와 문의 목적({Object.values(vocIntents).join(', ')})은 원문을 저장하지 않는 자동 집계에는 부여할 수 없습니다. 공개 목록에서 확인해 일반화한 문의 예시 {vocPosts.length}건에만 세부 주제 {subtopicCount}종과 문의 목적을 기록합니다. 설계서의 감성 분석은 하지 않습니다.</p>
+  </section>
+  <section class="lab-block" id="topic-observations">
+    <h2>주제별 한 줄 관찰</h2>
+    <p>연도 화면의 Top 10에 붙는 한 줄 관찰 {topicObservations.observations.length}건은 <code>scripts/voc/summarize_topic_observations.py</code>가 월별 단일 주제 집계와 공지 전후 관찰 건수에서 생성합니다. {topicObservations.method} 문장은 {topicObservations.maxLength}자를 넘지 않고, ‘때문’·‘탓’·‘덕분’·‘영향’처럼 원인을 가리키는 표현을 쓰지 않습니다. 근거란에는 사용한 집계와 월, 같은 연도·주제의 공지 전후 관찰 건수를 적습니다.</p>
+    <p>관찰은 수치의 분포를 설명할 뿐이며 고객이 왜 그 시점에 문의했는지는 이 자료로 알 수 없습니다.</p>
+  </section>
+  <section class="lab-block" id="coverage-labels">
+    <h2>연도별 집계 범위 표시</h2>
+    <p>연도 화면과 연도 선택 메뉴의 범위 표시는 <code>data/voc/years.json</code>을 읽습니다. 1월 1일~12월 31일을 모두 수집한 연도는 ‘연간 집계’, 수집 기준일까지만 있는 연도는 ‘연중 집계’로 표시하고, 두 표시는 공개 목록 수집 결과의 날짜 범위와 자동 검사로 대조합니다.</p>
+    <div class="lab-table-wrap"><table class="lab-table">
+      <thead><tr><th scope="col">연도</th><th scope="col">표시</th><th scope="col">수집 범위</th><th scope="col">수집 기준</th></tr></thead>
+      <tbody>{vocYears.map(({ year, questionLabel, collectionStart, collectionEnd, collectionId }) => <tr>
+        <th scope="row">{year}</th><td>{questionLabel}</td><td>{collectionStart}~{collectionEnd}</td><td>{collectionId}</td>
+      </tr>)}</tbody>
+    </table></div>
+  </section>
+  <section class="lab-block" id="external-context">
+    <h2>외부 시장·제도 맥락</h2>
+    <p>연도별로 금융위원회 보도자료와 CEO Lens에 수록한 공개 자료에서 사건을 고르고 관련 문의 주제를 연결합니다. 사건의 요약은 원문의 사실만 적고, 문의 변화와의 관계는 서술하지 않습니다. {('sourceCheck' in context) ? `${context.sourceCheck.date}에 ${context.sourceCheck.method}했습니다.` : ''}</p>
+    <ul class="lab-list">{contextByYear.map(({ year, count }) => <li><a href={sitePath('voc-studio/year/' + year) + '#context'}>{year}년</a> · {count}건</li>)}</ul>
+  </section>
   <section class="lab-block" id="notice-method">
     <h2>공지와 문의 해석</h2>
     <p>키움증권 일반 공지 목록은 {generalNotices.pages}페이지를 순회해 {generalNotices.oldestObserved}에 도달했습니다. 키움 사이트의 일반 공지 채널에서 확인한 등록일 기준 건수입니다.</p>
     <ul class="lab-list">{Object.entries(generalNotices.yearCounts).map(([year, count]) => <li>
       {year}년 {count.toLocaleString('ko-KR')}건{year === generalNotices.end.slice(0, 4) && ` · ${generalNotices.end}까지`}
     </li>)}</ul>
-    <p>타임라인은 일반 공지에서 선별한 글과 다른 채널의 검토 표본을 표시합니다.</p>
+    <p>타임라인은 일반 공지에서 선별한 글과 다른 채널의 검토 표본을 표시합니다. {'selectionNote' in generalNotices ? generalNotices.selectionNote : ''}</p>
     <p><a href={generalNotices.sourceUrl}>키움증권 일반 공지 목록</a></p>
     <p>게시일이 확인된 공지에서 게시 당일을 제외하고 앞뒤 14일씩 같은 주제의 문의를 셉니다. 두 기간이 검증된 수집 범위 안에 있고, 합계가 5건 이상이며 건수 차이가 2건 이상인 관찰을 표시합니다.</p>
     <p>각 기간의 비중은 같은 주제로 분류한 문의 건수를 그 기간의 전체 공개 문의 건수로 나눈 값입니다. 분모에는 여러 주제에 걸치거나 자동 분류가 되지 않은 문의도 포함합니다.</p>

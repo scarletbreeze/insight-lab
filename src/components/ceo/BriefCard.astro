@@ -1,0 +1,16 @@
+---
+import type { CeoBrief } from '../../utils/ceo';
+import { sitePath } from '../../utils/paths';
+interface Props { brief: CeoBrief; }
+const { brief } = Astro.props;
+const sources = new Set([...brief.howItWorks.map(({ sourceUrl }) => sourceUrl), ...brief.keyNumbers.map(({ sourceUrl }) => sourceUrl)]);
+---
+<li class="lab-card" id={brief.id}>
+  <div><time datetime={brief.lastUpdated}>{brief.lastUpdated}</time><span>브리프 · 출처 {sources.size}개 · 읽어볼 자료 {brief.readings.length}건</span></div>
+  <h2><a href={sitePath('ceo-lens/briefs/' + brief.id)}>{brief.title}</a></h2>
+  <p>{brief.oneLine}</p>
+  <dl>
+    <dt>핵심 수치</dt>
+    <dd>{brief.keyNumbers.slice(0, 3).map(({ label, value, unit }, index) => <>{index > 0 && ' · '}{label} {value}{unit && ' ' + unit}</>)}</dd>
+  </dl>
+</li>

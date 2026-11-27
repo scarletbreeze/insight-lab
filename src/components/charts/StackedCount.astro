@@ -1,0 +1,28 @@
+---
+// One whole split into parts as a single 28px segmented bar with a legend in block order. The legend carries
+// every name, count and share, so the bar itself is decorative for assistive technology.
+import '../../styles/charts.css';
+
+export interface StackPart { id?: string; label: string; value: number; href?: string; }
+interface Props { parts: StackPart[]; caption?: string; unit?: string; total?: number; }
+const { parts, caption, unit = '건', total: totalProp } = Astro.props;
+const shown = parts.slice(0, 7);
+const total = totalProp ?? shown.reduce((sum, { value }) => sum + value, 0);
+const rows = shown.map((part, index) => ({ ...part, share: total ? part.value / total * 100 : 0, swatch: `var(--color-chart-${index + 1})` }));
+---
+<figure class="chart">
+  {caption && <figcaption set:html={caption} />}
+  {total > 0 && <div class="stack-bar" aria-hidden="true">
+    {rows.filter(({ value }) => value > 0).map(({ value, share, swatch }) => (
+      <span style={`--g: ${value}; --swatch: ${swatch}`} data-small={share < 14 ? '' : undefined}>{share >= 9 && <b>{Math.round(share)}%</b>}</span>
+    ))}
+  </div>}
+  <ol class="stack-legend">
+    {rows.map(({ label, value, share, href, swatch }) => <li>
+      <i style={`--swatch: ${swatch}`} aria-hidden="true"></i>
+      {href ? <a href={href}>{label}</a> : label}
+      <span>{value.toLocaleString('ko-KR')}{unit} · {Math.round(share)}%</span>
+    </li>)}
+  </ol>
+  <slot />
+</figure>

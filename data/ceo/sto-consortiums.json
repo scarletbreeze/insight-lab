@@ -1,0 +1,274 @@
+{
+  "asOf": "2026-11-27",
+  "note": "증권사 보도자료, 금융위원회 의결 자료, 언론 보도에서 확인한 발표 사실만 수록합니다. 참여사 수와 준비 단계는 출처 시점에 따라 다르며, 어느 회사가 앞서 있는지 비교하지 않습니다.",
+  "rows": [
+    {
+      "consortium": "넥스트 파이낸스 이니셔티브(NFI)",
+      "leadBroker": "미래에셋증권",
+      "brokerId": "mirae-asset",
+      "brokerIds": [
+        "mirae-asset",
+        "hana"
+      ],
+      "members": "SK텔레콤, 하나금융그룹(하나은행·하나증권)",
+      "announced": "2023-03-30",
+      "focus": "자체 메인넷 인프라; 사모 MMF·사모채권 토큰화 상품(2027년 1분기 출시 목표, 보도 기준)",
+      "status": "자체 메인넷 구축 완료, 예탁결제원 연계 테스트 완료(2026년 6월 보도). 2027년 1분기 사모 MMF·사모채권 토큰화 상품 출시 목표(2026년 11월 보도)",
+      "statusAsOf": "2026-11-07",
+      "statusSources": [
+        {
+          "name": "서울경제(2026-06-18)",
+          "url": "https://www.sedaily.com/article/20057450",
+          "date": "2026-06-18"
+        },
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "한국데이터경제신문(2026-11-07)",
+          "url": "https://www.dataeconomy.co.kr/news/articleView.html?idxno=43701",
+          "date": "2026-11-07"
+        }
+      ],
+      "sourceUrl": "https://www.asiae.co.kr/en/article/2023033010120908085",
+      "sourceName": "아시아경제(영문, 2023-03-30) SK텔레콤·미래에셋증권 컨소시엄 결성"
+    },
+    {
+      "consortium": "한국투자 ST 프렌즈",
+      "leadBroker": "한국투자증권",
+      "brokerId": "korea-investment",
+      "brokerIds": [
+        "korea-investment"
+      ],
+      "members": "카카오뱅크, 토스뱅크(분산원장 시범 운영), 카카오엔터프라이즈(기술)",
+      "announced": "2023-03-22",
+      "focus": "분산원장 인프라와 발행 플랫폼; 채권·MMF 통합 발행 시스템(RFP 기준)",
+      "status": "2026년 5월 채권·MMF를 포함한 자체 토큰증권 발행 플랫폼 구축 제안요청서(RFP) 발송(보도)",
+      "statusAsOf": "2026-07-26",
+      "statusSources": [
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        }
+      ],
+      "sourceUrl": "https://www.smarttoday.co.kr/ko-kr/articles/28191",
+      "sourceName": "스마트투데이(2023-03-22) 한국투자 ST 프렌즈 결성"
+    },
+    {
+      "consortium": "ST 오너스",
+      "leadBroker": "KB증권",
+      "brokerId": "kb",
+      "brokerIds": [
+        "kb"
+      ],
+      "members": "스탁키퍼, 서울옥션블루, 펀더풀, 하이카이브, 웹툰올, 알엔알(사업자); SK C&C, EQBR, 하이파이브랩, 웨이브릿지(기술)",
+      "announced": "2023-03-08",
+      "focus": "한우·미술품·공연·웹툰 등 조각투자 발행사 생태계; 회사채·펀드·신탁수익증권 토큰화 추진(2026년 보도)",
+      "status": "회사채·펀드·신탁수익증권 등 기존 금융자산의 토큰화 추진(보도)",
+      "statusAsOf": "2026-07-26",
+      "statusSources": [
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        }
+      ],
+      "sourceUrl": "https://www.metroseoul.co.kr/article/20230308500195",
+      "sourceName": "메트로신문(2023-03-08) KB증권 ST 오너스 구성"
+    },
+    {
+      "consortium": "STO 얼라이언스",
+      "leadBroker": "신한투자증권",
+      "brokerId": "shinhan",
+      "brokerIds": [
+        "shinhan"
+      ],
+      "members": "금융·기술·발행사 회원(명단과 회원 수는 출범 발표에 공개되지 않음)",
+      "announced": "2023-02-06",
+      "focus": "발행·유통 표준과 회원사 발행 비용 절감",
+      "status": "2026년 2월 넥스트레이드 및 조각투자 7개사와 발행·유통 협력 MOU(보도). NXT컨소시엄 5% 이상 주주(2026-02-13 예비인가 자료)",
+      "statusAsOf": "2026-07-26",
+      "statusSources": [
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "금융위원회 예비인가 의결(2026-02-13)",
+          "url": "https://www.fsc.go.kr/no010101/86295",
+          "date": "2026-02-13"
+        }
+      ],
+      "sourceUrl": "https://dealsite.co.kr/articles/98564",
+      "sourceName": "딜사이트(2023-02-06) 신한투자증권 STO 얼라이언스 출범"
+    },
+    {
+      "consortium": "프로젝트 펄스(PULSE)",
+      "leadBroker": "신한투자증권",
+      "brokerId": "shinhan",
+      "brokerIds": [
+        "shinhan"
+      ],
+      "members": "SK증권, 블록체인글로벌(기술); LS증권의 분산원장 노드 참여는 2024년 출범 발표가 아닌 2025-07-16 신한금융그룹 자료에서 확인",
+      "announced": "2024-03-18",
+      "focus": "복수 증권사가 노드로 참여하는 공동 분산원장(시큐체인 기반)",
+      "status": "2025년 7월 예탁결제원 토큰증권 테스트베드 실증 사업 완료(신한투자증권·SK증권·LS증권 노드)",
+      "statusAsOf": "2025-07-16",
+      "statusSources": [
+        {
+          "name": "신한금융그룹 보도자료(2025-07-16)",
+          "url": "https://shinhangroup.com/kr/archive/press/detail/155",
+          "date": "2025-07-16"
+        }
+      ],
+      "sourceUrl": "https://biz.sbs.co.kr/amp/article/20000161938",
+      "sourceName": "SBS Biz(2024-03-18) 프로젝트 펄스 출범"
+    },
+    {
+      "consortium": "STO 비전그룹",
+      "leadBroker": "NH투자증권",
+      "brokerId": "nh-investment",
+      "brokerIds": [
+        "nh-investment"
+      ],
+      "members": "출범 시 투게더아트, 트레져러, 그리너리, 서울거래비상장, 블록오디세이, 파라메타, 한국기업평가 등 8개사; 2026년 보도 기준 NH농협은행·케이뱅크 포함 12개사",
+      "announced": "2023-03-24",
+      "focus": "조각투자·비상장주식 생태계와 플랫폼 표준",
+      "status": "코스콤 공동 발행 플랫폼 KoSTO 참여사(2026년 9월 보도)",
+      "statusAsOf": "2026-09-08",
+      "statusSources": [
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        },
+        {
+          "name": "토큰포스트(2026-09-08)",
+          "url": "https://www.tokenpost.kr/news/policy/403940",
+          "date": "2026-09-08"
+        }
+      ],
+      "sourceUrl": "https://www.etoday.co.kr/news/view/2234152",
+      "sourceName": "이투데이(2023-03-26) NH투자증권 STO 비전그룹 출범식"
+    },
+    {
+      "consortium": "KB·NH·신한 3사 컨소시엄",
+      "leadBroker": "KB증권·NH투자증권·신한투자증권(공동)",
+      "brokerId": null,
+      "brokerIds": [
+        "kb",
+        "nh-investment",
+        "shinhan"
+      ],
+      "members": "KB증권, NH투자증권, 신한투자증권",
+      "announced": "2023-09-27",
+      "focus": "토큰증권 시장 공동 진출(발행·유통의 규모 확보)",
+      "status": "자료 확인 중 — 2023년 협약 이후 공동 인프라 진행 상황을 확인할 공개 자료를 찾지 못했습니다",
+      "statusAsOf": "2026-11-27",
+      "statusSources": [],
+      "sourceUrl": "https://www.news1.kr/articles/5185012",
+      "sourceName": "뉴스1(2023-09-27) 3사 업무협약"
+    },
+    {
+      "consortium": "Finance 3.0 Partners(F3P)",
+      "leadBroker": "우리은행·삼성증권·SK증권(공동)",
+      "brokerId": null,
+      "brokerIds": [
+        "samsung"
+      ],
+      "members": "우리은행, 삼성증권, SK증권",
+      "announced": "2023-08-30",
+      "focus": "사업모델 공동 발굴, 분산원장 공동 검증, 투자자 보호 방안",
+      "status": "삼성증권: 자체 토큰증권 플랫폼 구축 RFP 발송, 두나무 지분 2% 취득 결정(2026년 5월, 보도). 협의체 공동 활동은 자료 확인 중",
+      "statusAsOf": "2026-07-26",
+      "statusSources": [
+        {
+          "name": "한국경제(2026-07-26)",
+          "url": "https://www.hankyung.com/article/2026072446766",
+          "date": "2026-07-26"
+        }
+      ],
+      "sourceUrl": "https://www.smarttoday.co.kr/ko-kr/articles/34393",
+      "sourceName": "스마트투데이(2023-08-31) 우리은행·삼성증권·SK증권 협약"
+    },
+    {
+      "consortium": "코스콤 공동 발행 플랫폼(KoSTO)",
+      "leadBroker": "코스콤(공동 플랫폼 운영)",
+      "brokerId": null,
+      "brokerIds": [
+        "kiwoom",
+        "daishin",
+        "meritz",
+        "nh-investment"
+      ],
+      "members": "키움증권, 대신증권, IBK투자증권, 유안타증권, BNK투자증권, DB증권, iM증권, 메리츠증권, 교보증권, 다올투자증권, 우리투자증권, NH투자증권, 현대차증권(2026-09-01 합류)",
+      "announced": "2025-10-02",
+      "focus": "공동 발행 플랫폼(프라이빗 분산원장), 예탁결제원 총량관리 시스템 연계",
+      "status": "참여 증권사 13곳(2026-09-02 보도). LG CNS와 발행 인프라 구축, 예탁결제원 총량관리 테스트베드 실증 완료. 결성 시점은 증권사별 협약일이 달라 2025-10-02 메리츠증권 협약(당시 8개사) 보도를 기준으로 적었습니다",
+      "statusAsOf": "2026-09-08",
+      "statusSources": [
+        {
+          "name": "디지털데일리(2026-09-02)",
+          "url": "https://www.ddaily.co.kr/page/view/2026090214164877564",
+          "date": "2026-09-02"
+        },
+        {
+          "name": "토큰포스트(2026-09-08)",
+          "url": "https://www.tokenpost.kr/news/policy/403940",
+          "date": "2026-09-08"
+        }
+      ],
+      "sourceUrl": "https://www.ddaily.co.kr/page/view/2025100211442479895",
+      "sourceName": "디지털데일리(2025-10-02) 코스콤·메리츠증권 협약"
+    },
+    {
+      "consortium": "KDX(조각투자 장외거래소 컨소시엄)",
+      "leadBroker": "최대주주 키움증권·교보생명·카카오페이증권(공동)",
+      "brokerId": "kiwoom",
+      "brokerIds": [
+        "kiwoom"
+      ],
+      "members": "5% 이상 주주 한국거래소·흥국증권; 20여 개 증권사와 카사코리아·세종DX·드림시큐리티·투게더아트·스탁키퍼 등 핀테크",
+      "announced": "2026-02-13",
+      "focus": "조각투자 증권(수익증권) 장외거래소",
+      "status": "2026-02-13 예비인가(외부평가 725점). 2026년 8월 본인가 신청(보도)",
+      "statusAsOf": "2026-09-14",
+      "statusSources": [
+        {
+          "name": "세계일보(2026-09-14)",
+          "url": "https://www.segye.com/newsView/20260914516424",
+          "date": "2026-09-14"
+        }
+      ],
+      "sourceUrl": "https://www.fsc.go.kr/no010101/86295",
+      "sourceName": "금융위원회 예비인가 의결(2026-02-13)"
+    },
+    {
+      "consortium": "NXT컨소시엄(조각투자 장외거래소 컨소시엄)",
+      "leadBroker": "넥스트레이드(최대주주)",
+      "brokerId": null,
+      "brokerIds": [
+        "shinhan",
+        "hana"
+      ],
+      "members": "5% 이상 주주 뮤직카우, 신한투자증권, 하나증권, 한양증권, 유진투자증권, 아이앤에프컨설팅; 금융회사 10개사와 세종DX·아톤·블록체인글로벌·스탁키퍼·투게더아트 등",
+      "announced": "2026-02-13",
+      "focus": "조각투자 증권(수익증권) 장외거래소",
+      "status": "2026-02-13 조건부 예비인가(외부평가 750점; 공정위 행정조사 개시 시 본인가 심사 중단 조건). 2026년 8월 본인가 신청(보도)",
+      "statusAsOf": "2026-09-14",
+      "statusSources": [
+        {
+          "name": "세계일보(2026-09-14)",
+          "url": "https://www.segye.com/newsView/20260914516424",
+          "date": "2026-09-14"
+        }
+      ],
+      "sourceUrl": "https://www.fsc.go.kr/no010101/86295",
+      "sourceName": "금융위원회 예비인가 의결(2026-02-13)"
+    }
+  ]
+}

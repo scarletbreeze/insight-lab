@@ -4,35 +4,42 @@ import { sitePath } from '../../utils/paths';
 import { brokers } from '../../utils/brokers';
 import { marketEvents } from '../../utils/market';
 import followUpData from '../../../data/ceo/follow-ups.json';
+// The card shows the date, title, confirmed fact, question and source; the remaining lines fold into <details>
+// so a list of signals reads as a report rather than a wall of equal-weight cards.
 interface Props { items: typeof signals; }
 const { items } = Astro.props;
 const brokerIds = new Map(brokers.map(({ name, id }) => [name, id]));
 const marketMonths = new Map(marketEvents.filter(({ date }) => date.length >= 7).map(({ sourceUrl, date }) => [sourceUrl, date.slice(0, 7)]));
 const followUps: Record<string, { date: string; label: string; sourceUrl: string }[]> = followUpData;
 ---
-<ul class="lab-list">
+<ul class="lab-list signal-list">
   {items.map(({ id, date, category, title, summary, why, companies, question, region, businessAreas, sourceName, sourceUrl, stage, applications, areas }) => (
-    <li class="lab-card" id={id} data-year={date.slice(0, 4)} data-topic={category} data-region={region} data-area={businessAreas.join("|")} data-application={applications?.join('|')}>
-      <div><time datetime={date}>{date}</time><span>{category} · {region === "KR" ? "국내" : "해외"}{stage && ' · ' + stage}</span></div>
+    <li class="lab-card signal-card" id={id} data-year={date.slice(0, 4)} data-topic={category} data-region={region} data-area={businessAreas.join("|")} data-application={applications?.join('|')}>
+      <div class="signal-meta"><time datetime={date}>{date}</time><span>{category} · {region === "KR" ? "국내" : "해외"}{stage && ' · ' + stage}</span></div>
       <h2>{title}</h2>
       <dl>
         <dt>확인한 사실</dt><dd>{summary}</dd>
-        <dt>살펴볼 이유</dt><dd>{why}</dd>
-        <dt>관련 기관·회사</dt><dd>{companies.map((name, index) => <>{index > 0 && ' · '}{brokerIds.has(name) ? <a href={sitePath('broker-atlas/brokers/' + brokerIds.get(name))}>{name}</a> : name}</>)}</dd>
-        {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
         <dt>생각해 볼 질문</dt><dd>{question}</dd>
       </dl>
       <a href={sourceUrl}>{sourceName}</a>
-      {marketMonths.get(sourceUrl) === date.slice(0, 7) && <p><a href={sitePath('market-time-capsule/' + date.slice(0, 7).replace('-', '/'))}>같은 달의 시장 지표와 사건</a></p>}
-      {followUps[id]?.length && <div>
-        <h3>후속 확인 일정</h3>
-        <ul class="lab-list">{followUps[id].map(({ date, label, sourceUrl }) => <li>
-          <time datetime={date}>{date}</time> · <a href={sourceUrl}>{label}</a>
-        </li>)}</ul>
-      </div>}
-      <p>관련 주제 {ceoSections.filter(([, slug]) => areas.includes(slug)).map(([label, slug]) => (
-        <> · <a href={sitePath('ceo-lens/' + slug) + '#' + id}>{label}</a></>
-      ))}</p>
+      <details class="signal-more">
+        <summary>살펴볼 이유와 관련 기관{followUps[id]?.length ? ' · 후속 확인 일정' : ''}</summary>
+        <dl>
+          <dt>살펴볼 이유</dt><dd>{why}</dd>
+          <dt>관련 기관·회사</dt><dd>{companies.map((name, index) => <>{index > 0 && ' · '}{brokerIds.has(name) ? <a href={sitePath('broker-atlas/brokers/' + brokerIds.get(name))}>{name}</a> : name}</>)}</dd>
+          {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
+        </dl>
+        {marketMonths.get(sourceUrl) === date.slice(0, 7) && <p><a href={sitePath('market-time-capsule/' + date.slice(0, 7).replace('-', '/'))}>같은 달의 시장 지표와 사건</a></p>}
+        {followUps[id]?.length && <div>
+          <h3>후속 확인 일정</h3>
+          <ul class="lab-list">{followUps[id].map(({ date, label, sourceUrl }) => <li>
+            <time datetime={date}>{date}</time> · <a href={sourceUrl}>{label}</a>
+          </li>)}</ul>
+        </div>}
+        <p>관련 주제 {ceoSections.filter(([, slug]) => areas.includes(slug)).map(([label, slug]) => (
+          <> · <a href={sitePath('ceo-lens/' + slug) + '#' + id}>{label}</a></>
+        ))}</p>
+      </details>
     </li>
   ))}
 </ul>

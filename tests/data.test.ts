@@ -239,8 +239,48 @@ test('VOC notice and inquiry samples use known topics and retain distinct covera
       && years.some(({ year }) => date.startsWith(String(year)))));
   }
   const posts = readJson<{ date: string }[]>('voc/posts.json');
-  for (const { year, questionCoverage } of years) {
-    assert.equal(posts.some(({ date }) => date.startsWith(String(year))), questionCoverage === 'sample');
+  for (const { year } of years) assert.ok(posts.some(({ date }) => date.startsWith(String(year))), String(year));
+});
+
+test('VOC year coverage labels match the public-list collection range', () => {
+  type Year = { year: number; questionCoverage: string; questionLabel: string; period: string; collectionId: string; collectionStart: string; collectionEnd: string };
+  const snapshot = readJson<{ start: string; end: string; oldestObserved: string; years: Record<string, unknown> }>('voc/public-board-sample.json');
+  for (const row of readJson<Year[]>('voc/years.json')) {
+    const { year, questionCoverage, questionLabel, period, collectionId, collectionStart, collectionEnd } = row;
+    assert.ok(String(year) in snapshot.years, String(year));
+    const full = snapshot.start <= `${year}-01-01` && snapshot.oldestObserved < `${year}-01-01` && snapshot.end >= `${year}-12-31`;
+    assert.equal(questionCoverage, full ? 'full' : 'partial', String(year));
+    assert.equal(questionLabel, full ? '연간 집계' : '연중 집계', String(year));
+    assert.equal(collectionId, 'public-board-' + snapshot.end);
+    assert.equal(collectionStart, `${year}-01-01`);
+    assert.equal(collectionEnd, full ? `${year}-12-31` : snapshot.end);
+    assert.ok(period.startsWith(`${year}년`) && period.includes(full ? '연간' : `${Number(collectionEnd.slice(5, 7))}월 ${Number(collectionEnd.slice(8))}일`), period);
+  }
+});
+
+test('VOC topics map to design categories and observations describe counts without causes', () => {
+  const design = ['주문', '계좌', 'HTS/MTS', '인증', '해외주식', '파생', '신용/미수', '수수료', '입출금/이체', '기타'];
+  const topics = readJson<{ id: string; label: string; designCategory: string; keywords: string[] }[]>('voc/topics.json');
+  assert.equal(topics.length, 11);
+  for (const { id, designCategory, keywords } of topics) {
+    assert.ok(design.includes(designCategory), id);
+    assert.ok(Array.isArray(keywords) && (id === 'other' ? keywords.length === 0 : keywords.length > 0), id);
+  }
+  assert.deepEqual([...new Set(topics.map(({ designCategory }) => designCategory))].sort(), [...design].sort());
+  const { maxLength, observations } = readJson<{ maxLength: number; observations: { year: number; topic: string; observation: string; basis: string }[] }>('voc/topic-observations.json');
+  const { topicCounts } = readJson<{ topicCounts: Record<string, Record<string, number>> }>('voc/public-board-sample.json');
+  const ids = new Set(topics.map(({ id }) => id));
+  const causal = ['때문', '탓', '덕분', '영향', '원인', '인해', '따라', '효과'];
+  assert.equal(new Set(observations.map(({ year, topic }) => `${year}-${topic}`)).size, observations.length);
+  for (const { year, topic, observation, basis } of observations) {
+    assert.ok(ids.has(topic) && Number.isInteger(year), `${year} ${topic}`);
+    assert.ok([...observation].length <= maxLength && maxLength <= 70, observation);
+    assert.ok(causal.every((word) => !observation.includes(word)), observation);
+    assert.ok(basis.trim().length > 0, `${year} ${topic}`);
+  }
+  for (const [year, counts] of Object.entries(topicCounts)) {
+    const ranked = Object.keys(counts).filter((topic) => ids.has(topic) && counts[topic] > 0);
+    for (const topic of ranked) assert.ok(observations.some((row) => row.year === Number(year) && row.topic === topic), `${year} ${topic}`);
   }
 });
 
@@ -546,7 +586,7 @@ test('SPY rankings retain period coverage and account for ticker changes and exc
 });
 
 test('VOC context references valid topics and has sources for all five years', () => {
-  type Item = { date: string; sourceUrl: string; topics: string[] };
+  type Item = { date: string; sourceUrl: string; topics: string[]; title: string; summary: string; sourceName: string };
   const { events, relatedSignals } = readJson<{ events: Item[]; relatedSignals: Record<string, string[]> }>('voc/context.json');
   const signals = readJson<{ id: string; date: string; sourceUrl: string }[]>('ceo/signals.json');
   const topics = new Set(readJson<{ id: string }[]>('voc/topics.json').map(({ id }) => id));
@@ -556,10 +596,12 @@ test('VOC context references valid topics and has sources for all five years', (
     return { ...signal, topics: tags };
   });
   const items = [...events, ...imported];
-  assert.ok(items.every(({ topics: tags, sourceUrl }) => tags.length && tags.every((tag) => topics.has(tag))
-    && new URL(sourceUrl).protocol === 'https:'));
+  assert.ok(items.every(({ topics: tags, sourceUrl, date }) => tags.length && tags.every((tag) => topics.has(tag))
+    && new URL(sourceUrl).protocol === 'https:' && /^\d{4}-\d{2}-\d{2}$/.test(date)));
+  assert.equal(new Set(events.map(({ sourceUrl }) => sourceUrl)).size, events.length);
+  assert.ok(events.every(({ title, summary, sourceName }) => title.trim() && summary.trim() && sourceName.trim()));
   for (const year of [2022, 2023, 2024, 2025, 2026]) {
-    assert.ok(items.filter(({ date }) => date.startsWith(String(year))).length >= 5);
+    assert.ok(items.filter(({ date }) => date.startsWith(String(year))).length >= 8, String(year));
   }
 });
 
@@ -751,4 +793,62 @@ test('Korean approximate-universe rankings are complete, disclosed and consisten
   }
   assert.equal(annual['2023'].KR.tenbaggers.length, 1);
   assert.equal(annual['2024'].KR.universeCount, 350);
+});
+
+test('CEO Lens briefs are sourced, dated and non-prescriptive', () => {
+  type Dated = { date: string };
+  type Brief = {
+    id: string; title: string; oneLine: string; whatItIs: string; whyItMatters: string; lastUpdated: string;
+    howItWorks: { text: string; sourceName: string; sourceUrl: string }[];
+    keyNumbers: { label: string; value: string; unit: string; asOf: string; sourceUrl: string }[];
+    readings: ({ title: string; publisher: string; url: string; note: string } & Dated)[];
+    relatedSignalIds: string[];
+  };
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  const https = (url: string) => new URL(url).protocol === 'https:';
+  const prescriptive = /해야 (한다|합니다|할 것)|\bmust\b|\bshould\b/i;
+  const briefs = readJson<Brief[]>('ceo/briefs.json');
+  const signalIds = new Set(readJson<{ id: string }[]>('ceo/signals.json').map(({ id }) => id));
+  assert.equal(new Set(briefs.map(({ id }) => id)).size, briefs.length);
+  assert.ok(['ima-issuance-notes', 'token-securities'].every((id) => briefs.some((brief) => brief.id === id)));
+  for (const brief of briefs) {
+    assert.ok(/^[a-z0-9-]+$/.test(brief.id) && brief.title.trim() && brief.whatItIs.trim(), brief.id);
+    assert.ok(brief.oneLine.length <= 60, `${brief.id} oneLine`);
+    assert.ok(isoDate.test(brief.lastUpdated), `${brief.id} lastUpdated`);
+    assert.ok(brief.howItWorks.length >= 3 && brief.howItWorks.every(({ text, sourceName, sourceUrl }) => text.trim() && sourceName.trim() && https(sourceUrl)), `${brief.id} howItWorks`);
+    assert.ok(brief.keyNumbers.length >= 3, `${brief.id} keyNumbers`);
+    for (const { label, value, asOf, sourceUrl } of brief.keyNumbers) {
+      assert.ok(label.trim() && value.trim() && isoDate.test(asOf) && https(sourceUrl), `${brief.id} ${label}`);
+    }
+    assert.ok(brief.readings.length >= 2, `${brief.id} readings`);
+    for (const { title, publisher, url, date, note } of brief.readings) {
+      assert.ok(title.trim() && publisher.trim() && https(url) && isoDate.test(date) && note.length <= 40, `${brief.id} ${title}`);
+    }
+    assert.ok(brief.relatedSignalIds.length > 0 && brief.relatedSignalIds.every((id) => signalIds.has(id)), `${brief.id} relatedSignalIds`);
+    assert.ok(!prescriptive.test(brief.whyItMatters), `${brief.id} whyItMatters is prescriptive`);
+    assert.ok(!prescriptive.test(brief.whatItIs), `${brief.id} whatItIs is prescriptive`);
+  }
+});
+
+test('STO consortium rows are sourced facts tied to Broker Atlas ids', () => {
+  type Row = { consortium: string; leadBroker: string; brokerId: string | null; brokerIds: string[]; members: string; announced: string;
+    focus: string; status: string; statusAsOf: string; statusSources: { name: string; url: string; date: string }[]; sourceUrl: string; sourceName: string };
+  const isoDate = /^\d{4}-\d{2}-\d{2}$/;
+  const https = (url: string) => new URL(url).protocol === 'https:';
+  const { asOf, rows } = readJson<{ asOf: string; note: string; rows: Row[] }>('ceo/sto-consortiums.json');
+  const brokerIds = new Set(readJson<{ id: string }[]>('brokers/brokers.json').map(({ id }) => id));
+  assert.ok(isoDate.test(asOf));
+  assert.equal(new Set(rows.map(({ consortium }) => consortium)).size, rows.length);
+  assert.ok(rows.length >= 8);
+  for (const row of rows) {
+    assert.ok(row.consortium.trim() && row.leadBroker.trim() && row.members.trim() && row.focus.trim() && row.status.trim(), row.consortium);
+    assert.ok(isoDate.test(row.announced) && isoDate.test(row.statusAsOf) && row.statusAsOf <= asOf && row.announced <= row.statusAsOf, `${row.consortium} dates`);
+    assert.ok(https(row.sourceUrl) && row.sourceName.trim(), `${row.consortium} source`);
+    assert.ok(row.brokerId === null || brokerIds.has(row.brokerId), `${row.consortium} brokerId`);
+    assert.ok(row.brokerIds.every((id) => brokerIds.has(id)), `${row.consortium} brokerIds`);
+    assert.ok(row.statusSources.every(({ name, url, date }) => name.trim() && https(url) && isoDate.test(date)), `${row.consortium} statusSources`);
+    // A status without its own source must say so instead of asserting progress.
+    assert.ok(row.statusSources.length > 0 || row.status.startsWith('자료 확인 중'), `${row.consortium} unsourced status`);
+    assert.ok(!/선두|앞서|우위|1위|최초로 앞/.test(row.status + row.focus), `${row.consortium} ranks consortia`);
+  }
 });
