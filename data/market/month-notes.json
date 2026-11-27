@@ -1,9 +1,27 @@
 {
+  "1990-01": {
+    "summary": "통상장관회의에서 외국인 투자 절차에 신고제를 도입하기로 했다.",
+    "memo": "1990년 1월의 '신고제 도입 결정'과 1992년 12월 재무부가 절차를 실제로 신고제로 바꾼 기록은 다른 달에 있습니다. 결정과 시행 사이의 간격을 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_1_17"
+  },
+  "1990-02": {
+    "summary": "정부가 서해안 개발에 들어갈 투자를 사업별·연도별로 나눠 확정했다.",
+    "memo": "사업별·연도별로 나눠 확정한 투자계획입니다. 계획이 확정된 달과 실제 집행이 이뤄진 연도는 다릅니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_2_6"
+  },
   "1990-03": {
     "summary": "은행 간 거래를 바탕으로 정한 기준환율에서 원·달러 환율이 하루 ±0.4% 범위 안에서 움직이는 제도가 시작됐습니다.",
     "memo": "일일 제한폭과 한 달 동안의 환율 변동률은 기간이 다릅니다. 당시 ±0.4%가 어느 기준에 적용됐는지 확인해 보세요.",
     "sourceName": "한국은행 환율제도 연혁",
     "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  "1990-04": {
+    "summary": "경제기획원이 경제활성화 종합대책을 발표하면서 금융실명제 시행을 기한 없이 미뤘다.",
+    "memo": "이달 기한 없이 미뤄진 금융실명제는 1993년 8월 긴급명령으로 도입됐습니다. 두 기록 사이의 햇수를 세어 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_4_4"
   },
   "1990-05": {
     "summary": "교통부가 수도권 신공항을 지을 위치를 정했다. 이달의 기록은 공사 착수에 앞선 입지 결정이다.",
@@ -11,15 +29,117 @@
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_5_17",
     "memo": "영종도 입지가 확정된 달과 1992년 5월 건설 사업계획이 확정된 달을 찾아보세요. 각각의 결정으로 무엇이 정해졌나요?"
   },
+  "1990-06": {
+    "summary": "삼성전자가 헝가리 현지 공장을 완공했다. 같은 달 19일에는 스페인 공장도 준공했다.",
+    "memo": "같은 달 유럽의 두 공장이 준공됐습니다. 회사 연혁의 날짜가 준공식 기준인지 가동 기준인지 원문에서 확인해 보세요.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1990-07": {
+    "summary": "NBER는 1990년 7월을 미국 경기 정점으로 분류합니다.",
+    "memo": "NBER의 경기 정점 판정은 사후에 발표됩니다. 1990년 7월 당시에는 이 달이 정점이라는 사실을 알 수 없었다는 점을 기억해 두세요.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
   "1990-08": {
     "summary": "이라크의 쿠웨이트 침공으로 두 나라의 원유 공급이 차질을 빚었습니다.",
     "memo": "침공일과 이달 WTI의 첫·마지막 관측일을 구분해 원유 공급 충격을 살펴보세요.",
     "sourceName": "미 에너지정보청 원유 공급 중단 사례",
     "sourceUrl": "https://www.eia.gov/TodayinEnergy/detail.php?id=730"
   },
+  "1990-09": {
+    "summary": "국토통일원이 남북 간에 교역품을 보내거나 들여올 때 적용할 승인 절차를 고시했다.",
+    "memo": "승인 절차의 고시는 제도 기록입니다. 실제 반출입 실적은 별도 통계에서 확인해야 합니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1990#search_1990_9_25"
+  },
+  "1990-10": {
+    "summary": "FRED 일별 계열에서 목표금리가 8.00%에서 7.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 8.00%에서 7.75%로 바뀐 날(1990년 10월 29일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1990-11": {
+    "summary": "팀 버너스리와 로베르 카이오가 브라우저로 하이퍼텍스트 문서를 읽는 시스템을 제안서에 담았습니다.",
+    "memo": "제안서가 작성된 1990년 11월, 소프트웨어가 뉴스그룹에 소개된 1991년 8월, 무상 공개된 1993년 4월을 이어서 읽어 보세요.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  "1990-12": {
+    "summary": "우루과이라운드를 끝낼 예정이었던 회의가 합의에 이르지 못했습니다.",
+    "memo": "같은 달 연방기금금리 목표가 두 차례 낮아졌습니다. 변경 날짜와 이달 US 10년물 관측값의 날짜를 구분해 보세요.",
+    "sourceName": "GATT 우루과이라운드 협상 연표",
+    "sourceUrl": "https://www.wto.org/gatt_docs/English/HAZPDF/11.pdf"
+  },
+  "1991-01": {
+    "summary": "FRED 일별 계열에서 목표금리가 7.00%에서 6.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 7.00%에서 6.75%로 바뀐 날(1991년 1월 9일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1991-02": {
+    "summary": "무역협상위원회가 중단된 협상을 재개하기 위한 작업 계획을 채택했습니다.",
+    "memo": "협상 재개 작업계획이 채택된 달입니다. 우루과이라운드의 실질 타결은 1993년 12월, 최종의정서 서명은 1994년 4월에 기록돼 있습니다.",
+    "sourceName": "GATT 우루과이라운드 협상 연표",
+    "sourceUrl": "https://www.wto.org/gatt_docs/English/HAZPDF/11.pdf"
+  },
+  "1991-03": {
+    "summary": "NBER 경기순환 연표에서 1991년 3월은 직전 수축기의 마지막 달입니다.",
+    "memo": "NBER는 1991년 3월을 수축기의 마지막 달로 분류하지만 이 판정은 사후에 발표됐습니다. 당시 알 수 있었던 것과 이후 확정된 것을 구분해 보세요.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  "1991-04": {
+    "summary": "FRED 일별 계열에서 목표금리가 6.00%에서 5.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 6.00%에서 5.75%로 바뀐 날(1991년 4월 30일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1991-05": {
+    "summary": "재무부가 외국 증권사의 사무소 설치를 허용하는 기준을 정했다. 허용 대상은 사무소였다.",
+    "memo": "허용 대상이 사무소였다는 점을 확인해 보세요. 영업 지점이 아니라 사무소라는 단어가 무엇을 의미했는지 원문 연표에서 살펴볼 수 있습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_5_16"
+  },
+  "1991-06": {
+    "summary": "한국과 소련이 과학협정 의정서에 서명했다. 양국 기술 교류를 살펴볼 수 있는 외교 기록이다.",
+    "memo": "외교 기록입니다. 시장 자료와 함께 읽을 때는 서명일과 발효일을 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_6_5"
+  },
+  "1991-07": {
+    "summary": "외환시장 활성화를 단계적으로 추진하기 위한 첫 조치가 발표됐다.",
+    "memo": "'1단계'라는 표현이 붙은 조치입니다. 1990년 3월 시장평균환율제도와 이후 변동폭 확대 기록을 순서대로 놓아 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1991#search_1991_7_1"
+  },
   "1991-08": {
     "summary": "버너스리가 인터넷 뉴스그룹에 WWW 소프트웨어를 알리면서 CERN 밖의 개발자도 프로젝트를 접할 수 있게 됐습니다.",
     "memo": "소프트웨어를 외부에 알린 시점과 이용 조건을 바꾼 시점을 분리해 기록해 보세요.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  "1991-09": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.4%에서 ±0.6%로 넓어졌습니다.",
+    "memo": "변동폭이 ±0.4%에서 ±0.6%로 넓어진 달입니다. 1992년 7월, 1993년 10월, 1994년 11월, 1995년 12월, 1997년 11월의 확대 기록이 이어집니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  "1991-10": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.00%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 5.25%에서 5.00%로 바뀐 날(1991년 10월 31일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1991-11": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.00%에서 4.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 5.00%에서 4.75%로 바뀐 날(1991년 11월 6일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1991-12": {
+    "summary": "미국 스탠퍼드 선형가속기센터에 웹 서버가 들어서면서 유럽 밖에서도 웹 문서를 제공하게 됐습니다.",
+    "memo": "이달에는 연방기금금리 목표가 두 번 낮아졌고, 미국에 첫 웹 서버가 가동됐습니다. 서로 무관한 두 기록이 같은 달에 놓여 있습니다.",
     "sourceName": "CERN 웹 개발 연혁",
     "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
   },
@@ -35,11 +155,47 @@
     "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
     "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
   },
+  "1992-03": {
+    "summary": "경부고속철도 건설을 맡을 공단이 출범했다. 천안~대전 구간 착공은 그해 6월이었다.",
+    "memo": "공단 설립(3월), 천안~대전 착공(6월), 영업 운행(2004년 4월)의 세 시점을 구분해 보세요.",
+    "sourceName": "국가기록원 · 경부고속철도 건설",
+    "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=316"
+  },
+  "1992-04": {
+    "summary": "FRED 일별 계열에서 목표금리가 4.00%에서 3.75%로 바뀐 날짜입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원한 수치입니다.",
+    "memo": "연방기금금리 목표가 4.00%에서 3.75%로 바뀐 날(1992년 4월 9일)입니다. 1994년 이전 값은 세인트루이스 연은 연구로 복원된 수치입니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1992-05": {
+    "summary": "교통부가 영종도에 들어설 신공항의 건설 사업계획을 확정했다.",
+    "memo": "1990년 5월 입지 결정과 1992년 5월 사업계획 확정을 비교해 보세요. 각 결정에서 정해진 내용이 다릅니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_5_23"
+  },
   "1992-06": {
     "summary": "경부고속철도 건설이 천안~대전 구간에서 시작됐다. 열차의 영업 운행은 2004년 4월 시작됐다.",
     "sourceName": "국가기록원 · 경부고속철도 건설",
     "sourceUrl": "https://theme.archives.go.kr/next/govpo/detail.do?policySeq=316",
     "memo": "1992년 3월 공단 설립, 6월 착공, 2004년 4월 영업 개시를 순서대로 놓고 건설기간과 운영기간을 구분해 보세요."
+  },
+  "1992-07": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.6%에서 ±0.8%로 넓어졌습니다.",
+    "memo": "변동폭 ±0.8% 확대 기록입니다. 같은 달 미국 목표금리 변경과 함께 읽되 두 기록은 별개의 결정입니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  "1992-08": {
+    "summary": "한국과 중국이 공식 외교관계를 맺었다. 이후의 양국 교역·기업 진출 기록을 읽는 기준점이다.",
+    "memo": "수교일은 이후 양국 교역·기업 진출 기록을 읽는 기준점입니다. 이달 코스피 관측값과 수교 날짜를 함께 놓아 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_8_24"
+  },
+  "1992-09": {
+    "summary": "영국은 외환시장 개입 이후 파운드화의 유럽 환율제도(ERM) 참여를 중단했습니다.",
+    "memo": "영국의 ERM 참여 중단은 9월 16일 기록입니다. 이달 US 10년물·환율 관측값의 날짜와 비교해 보세요.",
+    "sourceName": "영란은행 1992년 통화정책 보고",
+    "sourceUrl": "https://www.bankofengland.co.uk/quarterly-bulletin/1992/q4/operation-of-monetary-policy"
   },
   "1992-10": {
     "summary": "삼성전자가 미국에서 달러 표시 채권인 양키본드를 발행해 자금을 조달했다.",
@@ -47,11 +203,107 @@
     "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf",
     "memo": "양키본드를 발행한 기업은 어느 통화로 빚을 갚아야 할까요? 원화로 매출을 올린다고 가정하고 환율 변동의 영향을 생각해 보세요."
   },
+  "1992-11": {
+    "summary": "블레어하우스 합의로 우루과이라운드의 농업 분야 주요 이견을 좁혔습니다.",
+    "memo": "농업 분야 이견을 좁힌 합의입니다. 이듬해 12월 실질 타결까지 어떤 쟁점이 남았는지는 WTO 연혁에서 확인할 수 있습니다.",
+    "sourceName": "WTO 우루과이라운드 협상사",
+    "sourceUrl": "https://www.wto.org/english/theWto_e/whatis_e/tif_e/fact5_e.htm"
+  },
+  "1992-12": {
+    "summary": "재무부가 외국인 투자를 허가받던 절차를 신고하는 방식으로 바꿨다.",
+    "memo": "1990년 1월의 도입 결정과 1992년 12월의 실제 전환 사이에 약 3년이 있습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1992#search_1992_12_26"
+  },
+  "1993-01": {
+    "summary": "삼성전기 연혁에 평면 컬러 모니터용 편향코일 개발이 기록됐다. 브라운관에서 전자빔의 방향을 조절하는 부품이다.",
+    "memo": "브라운관 모니터 부품의 개발 기록입니다. 회사 연혁에서 개발과 양산 시점이 구분돼 있는지 확인해 보세요.",
+    "sourceName": "삼성전기 2018년 연차보고서 · 연혁",
+    "sourceUrl": "https://www.sem.samsung.com/resources/file/kr/ir/archive/annual_2018_kor.pdf"
+  },
+  "1993-02": {
+    "summary": "주택건설종합계획에 55만 가구 건설 목표가 담겼다. 이 숫자는 해당 연도의 계획 물량이다.",
+    "memo": "55만 가구는 그 해의 계획 물량입니다. 실제 건설 실적과는 다른 숫자라는 점을 기억해 두세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_2_20"
+  },
+  "1993-03": {
+    "summary": "정부가 단기 경제정책을 묶어 신경제 100일 계획으로 발표했다.",
+    "memo": "100일 계획(3월)과 5개년계획(7월)은 기간이 다른 두 계획입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_3_22"
+  },
   "1993-04": {
     "summary": "CERN이 웹 소프트웨어의 소스 코드를 사용료 없이 쓸 수 있도록 공개했습니다.",
     "memo": "웹의 개발, 외부 배포, 소스 코드 무상 공개를 서로 다른 사건으로 놓고 순서를 확인해 보세요.",
     "sourceName": "CERN 웹 개발 연혁",
     "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  "1993-05": {
+    "summary": "삼성전자가 미국 HMS를 인수했다. 회사 반기보고서의 주요 연혁에서 인수일을 확인할 수 있다.",
+    "memo": "회사 반기보고서 연혁에 기록된 인수일입니다. 계약일과 완료일이 구분돼 있는지 원문에서 확인해 보세요.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1993-06": {
+    "summary": "삼성전자가 16메가비트 D램을 대량 생산할 공장을 완공했다.",
+    "memo": "공장 준공과 제품 양산 시작은 다른 시점일 수 있습니다. 연혁의 표기를 확인해 보세요.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1993-07": {
+    "summary": "정부가 금융·재정 개혁과 경제성장 기반 확충을 포함한 경제계획을 확정했습니다.",
+    "memo": "3월 100일 계획과 비교해 어떤 항목이 추가됐는지 원문에서 살펴보세요.",
+    "sourceName": "국가기록원 신경제 5개년계획 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0050754102&flag=1&page=20&sort="
+  },
+  "1993-08": {
+    "summary": "정부는 실명에 의한 금융거래와 비밀보장에 관한 대통령 긴급재정경제명령을 발령했습니다.",
+    "memo": "1990년 4월 연기 발표에서 1993년 8월 긴급명령까지의 기간을 세어 보세요. 시행 방식이 법 개정이 아닌 긴급명령이었다는 점도 기록돼 있습니다.",
+    "sourceName": "국가기록원 긴급재정경제명령 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/archiveDetail.do?evntId=0050754025&flag=1&isPop=Y"
+  },
+  "1993-09": {
+    "summary": "양국이 한국 자동차의 중국 진출에 관한 합의서를 체결했다.",
+    "memo": "합의서 체결 기록입니다. 실제 공장 가동이나 판매 기록은 별도 자료가 필요합니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1993#search_1993_9_3"
+  },
+  "1993-10": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±0.8%에서 ±1.0%로 넓어졌습니다.",
+    "memo": "변동폭이 ±1.0%로 넓어진 달입니다. 이달 환율 스냅샷의 변동률과 일일 제한폭은 기준이 다릅니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
+  "1993-11": {
+    "summary": "회원국 비준을 거친 조약이 발효되면서 유럽연합이 공식 출범했습니다.",
+    "memo": "1992년 2월 서명과 1993년 11월 발효 사이에 각국의 비준 절차가 있었습니다.",
+    "sourceName": "유럽중앙은행 마스트리흐트 조약 해설",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb-and-you/explainers/tell-me-more/html/maastricht_treaty.nb.html"
+  },
+  "1993-12": {
+    "summary": "다자간 무역 협상이 실질적으로 마무리됐습니다. 최종의정서 서명은 이듬해 4월에 이뤄졌습니다.",
+    "memo": "실질 타결(12월)과 최종의정서 서명(1994년 4월), WTO 출범(1995년 1월)을 순서대로 놓아 보세요.",
+    "sourceName": "WTO 마라케시 선언",
+    "sourceUrl": "https://www.wto.org/english/docs_e/legal_e/marrakesh_decl_e.htm"
+  },
+  "1994-01": {
+    "summary": "유럽통화기구가 출범하면서 단일 통화정책을 준비하는 경제통화동맹 2단계가 시작됐습니다.",
+    "memo": "경제통화동맹 2단계의 시작입니다. 단일 통화인 유로의 도입은 1999년 1월에 기록돼 있습니다.",
+    "sourceName": "유럽중앙은행 경제통화동맹 연혁",
+    "sourceUrl": "https://www.ecb.europa.eu/ecb/history-arts-culture/history/emu/html/index.ga.html"
+  },
+  "1994-02": {
+    "summary": "연방기금금리 목표를 0.25%p 올렸습니다.",
+    "memo": "1994년 2월부터 시작된 금리 인상이 몇 차례 이어졌는지 이 해의 사건 목록에서 세어 보세요.",
+    "sourceName": "미 연준 공개시장조작 연표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket_archive.htm"
+  },
+  "1994-03": {
+    "summary": "FRED 일별 계열에서 목표금리가 3.25%에서 3.50%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 3.25%에서 3.50%로 바뀐 날(1994년 3월 22일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
   },
   "1994-04": {
     "summary": "각료들이 최종의정서에 서명하면서 GATT에서 WTO 체제로 이행하는 절차가 진행됐습니다.",
@@ -59,17 +311,113 @@
     "sourceName": "WTO 마라케시 선언",
     "sourceUrl": "https://www.wto.org/english/docs_e/legal_e/marrakesh_decl_e.htm"
   },
+  "1994-05": {
+    "summary": "CERN에 웹 사용자와 개발자들이 모여 웹 기술을 논의했습니다.",
+    "memo": "첫 국제 WWW 회의와 연방기금금리 인상이 같은 달에 있습니다. 두 기록은 서로 무관합니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
   "1994-06": {
     "summary": "국내 대표 주가지수인 KOSPI 200을 발표했습니다.",
     "memo": "이달 도입된 KOSPI 200과 연간 스냅샷의 종합지수 KOSPI를 구분해 보세요.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1994-07": {
+    "summary": "정부가 농어촌특별세를 재원으로 하는 투자계획을 확정했다.",
+    "memo": "농어촌특별세를 재원으로 한 투자계획입니다. 세금의 신설 시점과 투자계획 확정 시점이 다를 수 있으니 원문을 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_7_5"
+  },
+  "1994-08": {
+    "summary": "FRED 일별 계열에서 목표금리가 4.25%에서 4.75%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 4.25%에서 4.75%로 바뀐 날(1994년 8월 16일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1994-09": {
+    "summary": "분당선이 개통됐다. 수도권 교통망의 변화를 실제 운행이 시작된 달에 기록했다.",
+    "memo": "개통일 기준 기록입니다. 당시 개통 구간이 어디까지였는지 원문에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_9_1"
+  },
+  "1994-10": {
+    "summary": "포항제철이 뉴욕증시에 상장했다. 국내 철강기업이 해외 자본시장에 진입한 시점이다.",
+    "memo": "국내 기업의 해외 상장 기록입니다. 1992년 10월 삼성전자 양키본드 발행과 비교해 자본조달 방식의 차이를 살펴보세요.",
+    "sourceName": "포스코 2000년 환경보고서 · 연혁",
+    "sourceUrl": "https://www.posco.co.kr/homepage/docs/kor6/jsp/dn/irinfo/2000_environment_kr.pdf"
+  },
+  "1994-11": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±1.0%에서 ±1.5%로 넓어졌습니다.",
+    "memo": "이달 연방기금금리 목표는 0.75%p 올랐고 원·달러 변동폭은 ±1.5%로 넓어졌습니다. 별개의 두 결정입니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
+  },
   "1994-12": {
     "summary": "재무부가 1995년부터 개인의 외환보유를 전면 자유화하는 내용의 외환제도 개편안을 공개했다.",
     "sourceName": "국가기록원 · 연표와 기록",
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1994#search_1994_12_5",
     "memo": "발표는 12월이고 개편안이 제시한 적용 시기는 이듬해입니다. 연도별 제도 변화를 기록할 때 어떤 날짜를 기준으로 삼았는지 적어 보세요."
+  },
+  "1995-01": {
+    "summary": "대한민국은 세계무역기구(WTO) 출범일인 1995년 1월 1일부터 회원국으로 참여했습니다.",
+    "memo": "WTO 출범일에 회원국으로 참여했습니다. 1993년 12월 실질 타결부터 이어진 기록입니다.",
+    "sourceName": "WTO 회원국 가입일 명세",
+    "sourceUrl": "https://www.wto.org/english/res_e/booksp_e/sli_e/4wtomembers.pdf"
+  },
+  "1995-02": {
+    "summary": "IMF는 최대 약 178억 달러 규모의 18개월 대기성 차관을 승인했습니다.",
+    "memo": "IMF가 승인한 차관의 한도와 약정 기간, 같은 날 바뀐 미국 목표금리를 따로 읽어 보세요. 승인액만으로 당일 집행액을 알 수는 없습니다.",
+    "sourceName": "IMF의 멕시코 지원 발표",
+    "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/14/01/49/pr9510"
+  },
+  "1995-03": {
+    "summary": "초고속정보화추진위원회가 2015년까지 정보통신 기반을 구축한다는 장기계획을 확정했다.",
+    "memo": "2015년까지의 장기계획입니다. 계획 확정 시점과 목표 연도 사이가 20년입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_3_14"
+  },
+  "1995-04": {
+    "summary": "프랑스 국립연구기관 INRIA가 웹 표준을 다루는 W3C의 유럽 거점이 됐습니다.",
+    "memo": "웹 표준 기구의 유럽 거점 기록입니다. 시장 자료와 직접 연결되지 않는 기술 연표입니다.",
+    "sourceName": "CERN 웹 개발 연혁",
+    "sourceUrl": "https://home.cern/science/computing/the-birth-of-the-web/short-history-web/"
+  },
+  "1995-05": {
+    "summary": "아시아·태평양 지역 통신장관들이 정보통신 분야의 협력을 강화하는 방안을 논의했다.",
+    "memo": "협력 논의 기록입니다. 구체적 합의 사항은 원문 연표에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_5_30"
+  },
+  "1995-06": {
+    "summary": "서울 서초동에서 영업 중이던 삼풍백화점이 무너졌다.",
+    "memo": "재해 기록입니다. 이달 시장 스냅샷과 같은 달에 있다는 사실만 기록하며 인과관계는 말하지 않습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_6_29"
+  },
+  "1995-07": {
+    "summary": "FRED 일별 계열에서 목표금리가 6.00%에서 5.75%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 6.00%에서 5.75%로 바뀐 날(1995년 7월 6일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1995-08": {
+    "summary": "방송과 통신에 쓰일 무궁화 1호가 발사됐다. 날짜는 국가기록원 연표 표기를 따랐다.",
+    "memo": "날짜는 국가기록원 연표 표기를 따랐습니다. 발사일과 방송·통신 서비스 개시일을 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_8_5"
+  },
+  "1995-09": {
+    "summary": "삼성전자가 미화 1억 8,900만 달러 규모의 변동금리부채권을 발행했다.",
+    "memo": "변동금리부채권의 발행 규모가 기록돼 있습니다. 같은 해 11월의 DR 발행과 조달 방식을 비교해 보세요.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1995-10": {
+    "summary": "예금자 보호에 관한 법안이 국무회의를 통과했다. 이달의 기록은 정부 법안의 의결 단계다.",
+    "memo": "국무회의 의결(1995년 10월)과 예금보험공사 출범(1996년 6월)을 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1995#search_1995_10_13"
   },
   "1995-11": {
     "summary": "삼성전자가 미화 1억 5천만 달러 규모의 주식예탁증서(DR)를 발행했다.",
@@ -83,6 +431,30 @@
     "sourceName": "한국은행 환율제도 연혁",
     "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
   },
+  "1996-01": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.50%에서 5.25%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 5.50%에서 5.25%로 바뀐 날(1996년 1월 31일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1996-02": {
+    "summary": "국내 주식시장 개방을 확대하고 해외 증권투자를 자유화하는 계획이 발표됐다.",
+    "memo": "계획 발표 기록입니다. 실제 자유화 조치가 시행된 시점은 원문에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_2_25"
+  },
+  "1996-03": {
+    "summary": "재정경제원이 외국인의 국내 주식투자 환경 개선 방안을 발표했다. 장외에서 거래한 내역을 공시하는 제도가 포함됐다.",
+    "memo": "장외거래 공시 제도가 포함됐습니다. 1992년 1월 직접투자 허용 이후 어떤 제도가 추가됐는지 순서대로 놓아 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_3_11"
+  },
+  "1996-04": {
+    "summary": "통상산업부가 자본재산업 육성대책에 따라 산업기술 개발에 지원할 자금 규모를 정했다.",
+    "memo": "지원 자금 규모가 확정된 기록입니다. 금액은 원문 연표에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_4_3"
+  },
   "1996-05": {
     "summary": "한국거래소 연혁은 주가지수선물시장 개설일을 1996년 5월 3일로 기록합니다.",
     "memo": "주가지수선물 개설과 이듬해 주가지수옵션 개설을 연표에서 이어서 보세요.",
@@ -95,11 +467,83 @@
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_6_1",
     "memo": "1995년 10월 법안 의결에서 예금보험공사 출범까지의 순서를 확인해 보세요. 법적 근거와 운영 주체가 마련된 시점은 어떻게 다른가요?"
   },
+  "1996-07": {
+    "summary": "중소·벤처기업의 자금조달을 지원하는 코스닥시장이 열렸습니다.",
+    "memo": "코스닥증권시장 법인 설립(5월)과 시장 개설(7월), 코스닥지수 발표(1997년 1월)를 순서대로 놓아 보세요.",
+    "sourceName": "한국거래소 코스닥시장 안내",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/02/0201/0201010304/kosdaq_brochure.pdf"
+  },
+  "1996-08": {
+    "summary": "노동부가 앞으로 3년간 추진할 산업안전 개선계획을 공개했다.",
+    "memo": "노동 행정 기록입니다. 시장 자료와 직접 연결되지 않습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_8_7"
+  },
+  "1996-09": {
+    "summary": "배타적 경제수역에 관한 국내법이 효력을 갖기 시작했다.",
+    "memo": "법률 발효 기록입니다. 수산·해양 산업 자료와 함께 읽을 수 있는 기준점입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_9_10"
+  },
+  "1996-10": {
+    "summary": "한국과 유럽공동체 및 회원국 간 무역·협력 기본협정을 체결하는 안이 국무회의를 통과했다.",
+    "memo": "국무회의 의결 기록입니다. 협정의 서명·발효는 별도 시점입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_10_15"
+  },
+  "1996-11": {
+    "summary": "정부가 국가 차원의 에너지 정책 방향을 담은 기본계획안을 발표했다.",
+    "memo": "기본계획안 공개 기록입니다. 확정 시점과 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1996#search_1996_11_11"
+  },
   "1996-12": {
     "summary": "한국에 OECD 협약이 발효되면서 회원국이 됐습니다.",
     "memo": "OECD 협약이 한국에 발효된 날과 국내 주식시장이 외국인에게 개방된 날을 구분해 보세요.",
     "sourceName": "OECD 협약 회원국별 발효일",
     "sourceUrl": "https://www.oecd.org/en/about/legal.html"
+  },
+  "1997-01": {
+    "summary": "한국거래소 연혁에 따르면 시장 개설 이듬해인 1997년 1월 코스닥지수가 발표됐습니다.",
+    "memo": "코스닥지수는 1997년 1월부터 발표됐습니다. 이 사이트의 연간 지표에서 코스닥 값이 1997년부터 채워지는 이유입니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1997-02": {
+    "summary": "삼성전자 회사 연혁은 인텔이 미국 오스틴 반도체 공장에 지분 10%로 참여했다고 기록한다.",
+    "memo": "회사 연혁에 지분율 10%로 기록돼 있습니다. 이후 지분 변동은 별도 확인이 필요합니다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1997-03": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 5.25%에서 5.50%로 바뀐 날(1997년 3월 25일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1997-04": {
+    "summary": "금융개혁위원회가 대통령에게 단기 과제 18개를 보고했다. 정부의 최종 금융개혁안은 6월에 확정됐다.",
+    "memo": "4월 위원회 보고와 6월 정부 확정안을 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_4_14"
+  },
+  "1997-05": {
+    "summary": "공보처가 2차 종합유선방송국 사업자 선정 결과를 발표했다.",
+    "memo": "방송 사업자 선정 기록입니다. 1차 선정 시점은 원문 연표에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_5_29"
+  },
+  "1997-06": {
+    "summary": "정부가 금융개혁안을 최종 확정했다. 4월 위원회의 단기과제 보고와 구분해 볼 수 있다.",
+    "memo": "6월 확정안과 같은 해 11월 IMF 지원 요청을 순서대로 놓아 보세요. 두 기록 사이에는 다섯 달이 있습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_6_16"
+  },
+  "1997-07": {
+    "summary": "수개월간 외환보유액이 감소한 뒤 바트화 가치가 하락했습니다.",
+    "memo": "7월 2일 바트화 가치 하락과 7월 7일 국내 주가지수옵션시장 개설이 같은 달에 있습니다. 두 기록은 별개입니다.",
+    "sourceName": "미 연준 아시아 금융위기 기록",
+    "sourceUrl": "https://www.federalreservehistory.org/essays/asian-financial-crisis/"
   },
   "1997-08": {
     "summary": "IMF가 태국에 34개월 동안 최대 29억 SDR을 인출할 수 있는 차관을 승인했습니다.",
@@ -107,11 +551,23 @@
     "sourceName": "IMF 태국 차관 승인 보도자료",
     "sourceUrl": "https://www.imf.org/external/np/sec/pr/1997/pr9737.htm"
   },
+  "1997-09": {
+    "summary": "통상산업부가 월성 2호기 준공식을 열었다. 기록된 날짜는 준공식 기준이다.",
+    "memo": "준공식 기준 날짜입니다. 상업운전 개시일과 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1997#search_1997_9_3"
+  },
   "1997-10": {
     "summary": "두 자동차 회사가 법정관리를 신청했다. 신청과 법원의 후속 결정을 구분해 읽을 수 있다.",
     "sourceName": "국가기록원 · 기아·아시아자동차 법정관리 신청",
     "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?archiveEvntId=0050752098&year=1997",
     "memo": "법정관리 신청 소식을 읽은 당일 투자자가 알 수 있었던 내용과 법원의 결정 이후에 확인할 수 있는 내용을 구분해 보세요."
+  },
+  "1997-11": {
+    "summary": "은행 간 원·달러 환율이 기준환율을 중심으로 움직일 수 있는 폭이 ±2.25%에서 ±10%로 넓어졌습니다.",
+    "memo": "11월 21일 IMF 지원 요청 방침 발표, 26일 협상 시작, 같은 달 변동폭 ±10% 확대를 날짜순으로 놓아 보세요. 12월에 변동폭 제한이 폐지됩니다.",
+    "sourceName": "한국은행 환율제도 연혁",
+    "sourceUrl": "https://www.bok.or.kr/eng/main/contents.do?menuNo=400186"
   },
   "1997-12": {
     "summary": "IMF의 협의 종료 발표에 이어 이사회가 한국의 대기성 차관을 승인했습니다.",
@@ -130,6 +586,12 @@
     "memo": "2월과 5월 의향서에서 같은 정책이 어떻게 구체화됐는지 확인해 보세요.",
     "sourceName": "IMF 공개 한국 정부 2월 의향서",
     "sourceUrl": "https://www.imf.org/external/np/loi/020798.htm"
+  },
+  "1998-03": {
+    "summary": "정부 예산 정책을 다룰 기획예산위원회가 대통령 직속 기구로 발족했다.",
+    "memo": "정부 조직 기록입니다. 같은 해 1~2월의 외채 협상 기록과 구분해 읽어 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1998#search_1998_3_27"
   },
   "1998-04": {
     "summary": "1998년에 만기가 돌아올 은행채무 가운데 약 220억 달러가 정부 보증을 갖춘 만기 1~3년 대출로 전환됐다.",
@@ -179,17 +641,659 @@
     "sourceName": "미 연준 11월 FOMC 의사록",
     "sourceUrl": "https://www.federalreserve.gov/fomc/MINUTES/19981117.HTM"
   },
+  "1998-12": {
+    "summary": "IMF는 한국의 지원 프로그램 검토를 완료하고 약 10억 2,200만 달러의 추가 인출을 승인했습니다.",
+    "memo": "1998년 2월, 5월, 12월의 IMF 분기 검토를 순서대로 놓아 보세요. 집행된 금액의 단위(SDR·달러)가 자료마다 다릅니다.",
+    "sourceName": "IMF 발표",
+    "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/29/18/03/nb9852"
+  },
+  "1999-01": {
+    "summary": "유럽연합 11개국이 고정환율을 적용해 유로화를 도입했고 유로시스템이 공동 통화정책을 맡았습니다.",
+    "memo": "유로 도입(1999년 1월)과 지폐·동전 유통 시작(2002년 1월)은 3년 간격입니다.",
+    "sourceName": "유럽중앙은행의 유로 도입 기록",
+    "sourceUrl": "https://www.ecb.europa.eu/press/key/date/1999/html/sp990929.en.html"
+  },
+  "1999-02": {
+    "summary": "국내 선물시장을 운영할 한국선물거래소가 설립됐습니다.",
+    "memo": "선물거래소 설립(1999년 2월)과 2005년 1월 통합 거래소 출범을 이어서 읽어 보세요.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
   "1999-03": {
     "summary": "국내에 국채 거래를 위한 전문 유통시장이 열렸습니다.",
     "memo": "3월에 개설된 국채 유통시장과 9월에 개설된 국채선물시장에서 각각 무엇을 거래하는지 적어 보세요.",
     "sourceName": "한국거래소 연혁",
     "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
   },
+  "1999-04": {
+    "summary": "국민연금관리공단이 전국민을 대상으로 국민연금 확대 시행에 들어갔다.",
+    "memo": "적용 대상 확대 기록입니다. 가입자 수 변화는 별도 통계가 필요합니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_4_1"
+  },
+  "1999-05": {
+    "summary": "국산 과학위성 우리별 3호가 발사됐다. 1992년 우리별 1호 이후 이어진 위성 개발 기록이다.",
+    "memo": "1992년 우리별 1호 이후 이어진 위성 개발 기록입니다.",
+    "sourceName": "국가기록원 · 우리별 위성",
+    "sourceUrl": "https://archives.go.kr/next/newsearch/listSubjectDescription.do?id=002048&pageFlag=C&sitePage=1-2-2&subjectTypeId=03"
+  },
+  "1999-06": {
+    "summary": "FRED 일별 계열에서 목표금리가 4.75%에서 5.00%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 4.75%에서 5.00%로 바뀐 날(1999년 6월 30일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1999-07": {
+    "summary": "삼성전자가 회사 연혁에 애플의 미화 1억 달러 투자를 기록했다.",
+    "memo": "회사 연혁에 기록된 투자 금액입니다. 투자 조건과 이후 변동은 별도 확인이 필요합니다.",
+    "sourceName": "삼성전자 2005년 반기보고서 · 회사 연혁",
+    "sourceUrl": "https://images.samsung.com/is/content/samsung/p5/sec/ir/financialinfo/business/2005/2005_work_quarter02.pdf"
+  },
+  "1999-08": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.00%에서 5.25%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 5.00%에서 5.25%로 바뀐 날(1999년 8월 24일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1999-09": {
+    "summary": "한국거래소 연혁은 국채선물시장 개설일을 1999년 9월 29일로 기록합니다.",
+    "memo": "3월 국채전문유통시장 개설과 9월 국채선물시장 개설을 구분해 보세요. 현물과 선물 시장입니다.",
+    "sourceName": "한국거래소 연혁",
+    "sourceUrl": "https://info.krx.co.kr/contents/KRX/01/01040000/KRX01040000T2.jsp"
+  },
+  "1999-10": {
+    "summary": "인천지하철 1호선이 운행을 시작했다.",
+    "memo": "개통 기록입니다. 시장 자료와 직접 연결되지 않는 지역 교통 기록입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_10_6"
+  },
+  "1999-11": {
+    "summary": "FRED 일별 계열에서 목표금리가 5.25%에서 5.50%로 바뀐 날짜입니다.",
+    "memo": "연방기금금리 목표가 5.25%에서 5.50%로 바뀐 날(1999년 11월 16일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "세인트루이스 연은 FRED · DFEDTAR",
+    "sourceUrl": "https://fred.stlouisfed.org/series/dfedtar"
+  },
+  "1999-12": {
+    "summary": "수출입 행정의 근거가 되는 대외무역관리규정이 개정됐다.",
+    "memo": "규정 개정 기록입니다. 개정 내용은 원문에서 확인해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=1999#search_1999_12_8"
+  },
+  "2000-01": {
+    "summary": "경제정책조정회의에서 2000년에 적용할 경제정책 방향을 정했다.",
+    "memo": "연초 정책 방향 기록입니다. 이후 실제 집행과 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_1_17"
+  },
+  "2000-02": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.75%에서 5.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 4.75%에서 5.00%로 바뀐 날(2000년 2월 10일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2000-03": {
+    "summary": "기존 거래소와 별도의 장외 주식거래 시장이 열렸습니다.",
+    "memo": "거래소·코스닥과 별도의 장외시장이 열렸습니다. 이후 명칭과 제도가 바뀌었는지 거래소 연혁에서 확인해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2000-04": {
+    "summary": "상장사 공시의 접수와 배포에 전자공시 체계를 도입했습니다.",
+    "memo": "전자공시 도입 기록입니다. 이 사이트가 인용하는 KIND 문서는 이 체계 위에서 공개됩니다.",
+    "sourceName": "한국거래소 전자공시 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/common/JLDDST35000.html"
+  },
+  "2000-05": {
+    "summary": "FOMC는 연방기금금리 목표를 0.50%p 올렸습니다.",
+    "memo": "연방기금금리 목표가 6.50%로 바뀐 날(2000년 5월 16일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 2000년 5월 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/General/2000/20000516/default.htm"
+  },
+  "2000-06": {
+    "summary": "금융감독위원회는 공적자금을 투입해 부실 종금사를 연내 정리한다는 계획을 발표했다.",
+    "memo": "공적자금 투입 계획입니다. 9월 2차 공적자금 조성 발표와 이어서 읽어 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_6_20"
+  },
+  "2000-07": {
+    "summary": "농업협동조합과 축산업협동조합이 합병해 통합농협이 출범했다.",
+    "memo": "조직 통합 기록입니다. 시장 자료와 직접 연결되지 않습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_7_1"
+  },
+  "2000-08": {
+    "summary": "서울 지하철 7호선이 전 구간에서 운행을 시작했다.",
+    "memo": "2000년 8월 1일에 '서울 지하철 7호선 전 구간 개통' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_8_1"
+  },
+  "2000-09": {
+    "summary": "재정경제부가 공적자금 40조 원을 새로 조성한다는 방침을 발표했다.",
+    "memo": "40조 원은 조성 방침 금액입니다. 2002년 6월 상환대책 발표와 이어 읽어 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_9_22"
+  },
+  "2000-10": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.00%에서 5.25%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 5.00%에서 5.25%로 바뀐 날(2000년 10월 5일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2000-11": {
+    "summary": "영종대교를 지나는 공항 고속도로가 개통됐다.",
+    "memo": "2000년 11월 21일에 '인천국제공항고속도로 개통' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_11_21"
+  },
+  "2000-12": {
+    "summary": "정보통신부가 IMT-2000 사업자로 SK텔레콤과 한국통신을 선정했다.",
+    "memo": "사업자 선정 기록입니다. 실제 서비스 개시 시점과 구분해 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2000#search_2000_12_15"
+  },
+  "2001-01": {
+    "summary": "코스닥50 지수를 기초로 한 선물 거래가 시작됐습니다.",
+    "memo": "코스닥50 선물 상장 기록입니다. 2018년 3월 코스닥150 옵션 상장 기록과 비교해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2001-02": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.25%에서 5.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 5.25%에서 5.00%로 바뀐 날(2001년 2월 8일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2001-03": {
+    "summary": "NBER는 2001년 3월을 경기 정점으로 분류합니다.",
+    "memo": "NBER 판정은 사후 발표입니다. 당시에는 알 수 없었던 사실입니다.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  "2001-04": {
+    "summary": "금융감독위원회가 피해 신고를 접수하는 창구를 열었다.",
+    "memo": "신고 창구 개설 기록입니다. 접수 건수 등은 별도 자료가 필요합니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2001#search_2001_4_2"
+  },
+  "2001-05": {
+    "summary": "환경부가 전문인력 보강 등을 포함한 20조 원 규모의 수돗물 관리 계획을 발표했다.",
+    "memo": "2001년 5월 8일에 '환경부, 수돗물 관리 투자대책 발표' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2001#search_2001_5_8"
+  },
+  "2001-06": {
+    "summary": "재정경제부 장관이 증권 관련 집단소송을 단계적으로 도입하는 방안을 발표했다.",
+    "memo": "단계 도입 계획 발표입니다. 법 제정과 시행은 이후의 기록입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2001#search_2001_6_4"
+  },
+  "2001-07": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 5.00%에서 4.75%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 5.00%에서 4.75%로 바뀐 날(2001년 7월 5일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2001-08": {
+    "summary": "IMF는 1997년 승인한 대기성 차관의 잔액을 한국이 예정보다 앞서 상환하는 일정에 맞춰 성명을 발표했습니다.",
+    "memo": "콜금리 인하와 IMF 차관 조기 상환 일정이 같은 달에 있습니다. 1997년 12월 승인된 차관의 상환 시점입니다.",
+    "sourceName": "IMF 공식 성명",
+    "sourceUrl": "https://www.imf.org/en/news/articles/2015/09/29/18/03/nb0182"
+  },
+  "2001-09": {
+    "summary": "미 연준 역사자료에 따르면 9·11 이후 결제 차질이 이어지면서 9월 12일 할인창구 대출이 약 460억 달러에 이르렀습니다.",
+    "memo": "9월 12일 할인창구 대출 규모와 9월 19일 콜금리 인하는 서로 다른 기관의 조치입니다.",
+    "sourceName": "미 연준 9·11 금융시장 대응 기록",
+    "sourceUrl": "https://www.federalreservehistory.org/essays/september-11"
+  },
+  "2001-10": {
+    "summary": "다목적댐인 용담댐이 착공 9년 만에 완공됐다.",
+    "memo": "2001년 10월 13일에 '전북 진안 용담댐 완공' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2001#search_2001_10_13"
+  },
+  "2001-11": {
+    "summary": "NBER 기준 2001년 경기 수축은 11월에 끝났습니다.",
+    "memo": "NBER 판정은 사후 발표입니다. 당시에는 알 수 없었던 사실입니다.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  "2001-12": {
+    "summary": "중국은 세계무역기구의 143번째 회원국이 됐습니다.",
+    "memo": "중국은 143번째 회원국이 됐습니다. 1995년 1월 한국의 회원국 참여와 비교해 보세요.",
+    "sourceName": "WTO 중국 가입 기록",
+    "sourceUrl": "https://www.wto.org/English/thewto_e/acc_e/a1_chine_e.htm"
+  },
+  "2002-01": {
+    "summary": "유로 지역 12개국에서 유로 현금이 유통되기 시작했습니다.",
+    "memo": "유로 현금 유통(1월 1일), 국내 개별주식옵션시장 개설(28일), 미 연준 동결(30일)이 한 달에 있습니다.",
+    "sourceName": "유럽중앙은행 유로 현금 전환 기록",
+    "sourceUrl": "https://www.ecb.europa.eu/euro/changeover/2002/html/index.en.html"
+  },
+  "2002-02": {
+    "summary": "건설교통부가 그린벨트 해제 지역에 주택 10만 가구를 짓겠다는 계획을 공개했다.",
+    "memo": "2002년 2월 19일에 '개발제한구역 해제 지역 주택 건설계획 발표' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_2_19"
+  },
+  "2002-03": {
+    "summary": "농림부가 주택과 레저시설을 갖춘 신도시로 개발하는 방침을 정했다.",
+    "memo": "2002년 3월 13일에 '김포매립지 신도시 개발 방침 확정' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 같은 달에는 '미 연준, 연방기금금리 1.75% 동결'(2002년 3월 19일) 기록이 함께 있습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_3_13"
+  },
+  "2002-04": {
+    "summary": "양양국제공항이 준공돼 개항식을 열었다.",
+    "memo": "2002년 4월 2일에 '양양국제공항 개항' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_4_2"
+  },
+  "2002-05": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 4.25%로 바뀌었습니다.",
+    "memo": "한국은행은 콜금리를 올리고 미 연준은 동결한 달입니다. 두 결정의 날짜가 같습니다(5월 7일).",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2002-06": {
+    "summary": "재정경제부가 공적자금의 상환 방안을 발표했다.",
+    "memo": "공적자금 상환대책과 미 연준 동결이 같은 달입니다. 2000년 9월 조성 방침과 이어 읽어 보세요.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_6_27"
+  },
+  "2002-07": {
+    "summary": "미국은 상장기업 회계감독위원회 설립을 포함한 회계감독 개혁 법안을 제정했습니다.",
+    "memo": "회계감독 개혁 법입니다. 상장기업 회계감독위원회(PCAOB) 설립이 포함됐습니다.",
+    "sourceName": "미 SEC 회계감독위원회 관련 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2002-118-statement-commission-regarding-public-company-accounting-oversight-board"
+  },
+  "2002-08": {
+    "summary": "태풍 루사가 전국에 영향을 미쳤다. 당시 국내 시장을 돌아볼 때 함께 볼 수 있는 재해 기록이다.",
+    "memo": "재해 기록과 금리 동결이 같은 달에 있습니다. 인과관계를 말하지 않습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_8_31"
+  },
+  "2002-09": {
+    "summary": "경의선과 동해선 철도 및 도로를 연결하기 위한 공사가 시작됐다.",
+    "memo": "2002년 9월 18일에 '남북 철도·도로 연결 공사 착공' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 같은 달에는 '미 연준, 연방기금금리 1.75% 동결'(2002년 9월 24일) 기록이 함께 있습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_9_18"
+  },
+  "2002-10": {
+    "summary": "국내 거래소에서 상장지수펀드를 거래하는 시장이 열렸습니다.",
+    "memo": "국내 ETF 시장 개설 기록입니다. 2014년 11월 ETN 시장 개설과 비교해 보세요.",
+    "sourceName": "한국거래소 ETF 시장 소개",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/eng_brochure1.pdf"
+  },
+  "2002-11": {
+    "summary": "정보통신부가 국내 초고속인터넷 가입자 1천만 명 돌파를 기념하는 행사를 열었다.",
+    "memo": "2002년 11월 6일에 '초고속인터넷 가입자 1천만 돌파 기념식' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_11_6"
+  },
+  "2002-12": {
+    "summary": "해양수산부가 강릉·기장·군산 등을 포함해 바다목장 조성 후보지를 선정했다.",
+    "memo": "12월 10일 성명의 목표 1.25%는 11월 회의에서 낮아진 수준입니다. 11월 변경 기록은 이 사이트에 수록되지 않았습니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2002#search_2002_12_21"
+  },
+  "2003-01": {
+    "summary": "미국 연방공개시장위원회는 1월 29일 성명에서 연방기금금리 목표를 1.25%로 유지하기로 했다.",
+    "memo": "2003년 1월 29일 성명은 연방기금금리 목표 범위 1.25%를 유지했습니다. 같은 달에는 '부산 광안대교 개통'(2003년 1월 6일) 기록이 함께 있습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030129/default.htm"
+  },
+  "2003-02": {
+    "summary": "한국과 칠레가 자유무역협정에 공식 서명했다. 기록한 시점은 협정 서명일이다.",
+    "memo": "서명일 기준입니다. 발효는 별도 시점입니다.",
+    "sourceName": "국가기록원 · 연표와 기록",
+    "sourceUrl": "https://theme.archives.go.kr/next/chronology/yearRecord.do?year=2003#search_2003_2_15"
+  },
+  "2003-03": {
+    "summary": "미국 연방공개시장위원회는 3월 18일 성명에서 연방기금금리 목표를 1.25%로 유지하기로 했다.",
+    "memo": "2003년 3월 18일 성명은 연방기금금리 목표 범위 1.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030318/default.htm"
+  },
+  "2003-04": {
+    "summary": "증권거래소 연혁에 주가연계증권의 첫 상장이 기록돼 있습니다.",
+    "memo": "주가연계증권 첫 상장 기록입니다. 상장 시점과 상품 판매 시점을 구분해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2003-05": {
+    "summary": "미국 연방공개시장위원회는 5월 6일 성명에서 연방기금금리 목표를 1.25%로 유지하기로 했다.",
+    "memo": "미 연준 동결(6일)과 한국은행 콜금리 인하(13일)가 같은 달에 있습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030506/default.htm"
+  },
+  "2003-06": {
+    "summary": "FOMC는 연방기금금리 목표를 0.25%p 낮췄습니다.",
+    "memo": "연방기금금리 목표가 1.00%로 바뀐 날(2003년 6월 25일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 2003년 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030625/default.htm"
+  },
+  "2003-07": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 3.75%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 4.00%에서 3.75%로 바뀐 날(2003년 7월 10일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2003-08": {
+    "summary": "미국 연방공개시장위원회는 8월 12일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2003년 8월 12일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030812/default.htm"
+  },
+  "2003-09": {
+    "summary": "미국 연방공개시장위원회는 9월 16일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2003년 9월 16일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20030916/default.htm"
+  },
+  "2003-10": {
+    "summary": "미국 연방공개시장위원회는 10월 28일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2003년 10월 28일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20031028/default.htm"
+  },
+  "2003-11": {
+    "summary": "미국 노동통계국이 발표한 2003년 10월 실업률은 6.0%였다. 비농업 부문 일자리는 전월보다 126,000개 늘었다.",
+    "memo": "2003년 10월 실업률 6.0%와 비농업 일자리 126,000개 증가는 2003년 11월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2003-494759"
+  },
+  "2003-12": {
+    "summary": "미국 연방공개시장위원회는 12월 9일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2003년 12월 9일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2003/20031209/default.htm"
+  },
+  "2004-01": {
+    "summary": "미국 연방공개시장위원회는 1월 28일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2004년 1월 28일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2004/20040128/default.htm"
+  },
+  "2004-02": {
+    "summary": "미국 노동통계국이 발표한 2004년 1월 실업률은 5.6%였다. 비농업 부문 일자리는 전월보다 112,000개 늘었다.",
+    "memo": "2004년 1월 실업률 5.6%와 비농업 일자리 112,000개 증가는 2004년 2월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2004-494762"
+  },
+  "2004-03": {
+    "summary": "미국 연방공개시장위원회는 3월 16일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2004년 3월 16일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2004/20040316/default.htm"
+  },
+  "2004-04": {
+    "summary": "미국 노동통계국이 발표한 2004년 3월 실업률은 5.7%였다. 비농업 부문 일자리는 전월보다 308,000개 늘었다.",
+    "memo": "2004년 3월 실업률 5.7%와 비농업 일자리 308,000개 증가는 2004년 4월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2004-494764"
+  },
+  "2004-05": {
+    "summary": "미국 연방공개시장위원회는 5월 4일 성명에서 연방기금금리 목표를 1%로 유지하기로 했다.",
+    "memo": "2004년 5월 4일 성명은 연방기금금리 목표 범위 1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2004/20040504/default.htm"
+  },
+  "2004-06": {
+    "summary": "FOMC는 연방기금금리 목표를 0.25%p 올렸습니다.",
+    "memo": "연방기금금리 목표가 1.25%로 바뀐 날(2004년 6월 30일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 2004년 6월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/press/monetary/2004/20040630/default.htm"
+  },
+  "2004-07": {
+    "summary": "미국 노동통계국이 발표한 2004년 6월 실업률은 5.6%였다. 비농업 부문 일자리는 전월보다 112,000개 늘었다.",
+    "memo": "2004년 6월 실업률 5.6%와 비농업 일자리 112,000개 증가는 2004년 7월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2004-494767"
+  },
+  "2004-08": {
+    "summary": "구글은 기업공개 투자설명서에 클래스 A 보통주의 공모가를 주당 85달러로 제시했습니다.",
+    "memo": "같은 달 미 연준은 올리고 한국은행은 내렸습니다. 구글의 공모가 85달러 기록도 이 달에 있습니다.",
+    "sourceName": "구글 SEC 투자설명서",
+    "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1288776/000119312504143377/d424b4.htm"
+  },
+  "2004-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 1.75%로 바뀐 날(2004년 9월 21일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
+  },
+  "2004-10": {
+    "summary": "미국 노동통계국이 발표한 2004년 9월 실업률은 5.4%였다. 비농업 부문 일자리는 전월보다 96,000개 늘었다.",
+    "memo": "2004년 9월 실업률 5.4%와 비농업 일자리 96,000개 증가는 2004년 10월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2004-494770"
+  },
+  "2004-11": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "같은 달 미 연준은 올리고 한국은행은 내렸습니다. 두 결정은 하루 차이입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2004"
+  },
+  "2004-12": {
+    "summary": "재정경제부가 증권산업의 규제를 완화하는 방안을 내놓았습니다.",
+    "memo": "규제완화 방안 발표 기록입니다. 2005년 1월 통합 거래소 출범과 이어 읽어 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2005-01": {
+    "summary": "증권거래소·코스닥증권시장·선물거래소를 통합한 거래소가 출범했습니다.",
+    "memo": "증권거래소·코스닥·선물거래소 통합 기록입니다. 1999년 2월 선물거래소 설립부터 이어지는 연혁입니다.",
+    "sourceName": "한국거래소 연혁 자료",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/eng_brochure1.pdf"
+  },
+  "2005-02": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 2.50%로 바뀐 날(2005년 2월 2일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-03": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 2.75%로 바뀐 날(2005년 3월 22일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-04": {
+    "summary": "미국 노동통계국이 발표한 2005년 3월 실업률은 5.2%였다. 비농업 부문 일자리는 전월보다 110,000개 늘었다.",
+    "memo": "2005년 3월 실업률 5.2%와 비농업 일자리 110,000개 증가는 2005년 4월 1일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2005-494776"
+  },
+  "2005-05": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 3.00%로 바뀐 날(2005년 5월 3일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-06": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 3.25%로 바뀐 날(2005년 6월 30일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-07": {
+    "summary": "미국 노동통계국이 발표한 2005년 6월 실업률은 5.0%였다. 비농업 부문 일자리는 전월보다 146,000개 늘었다.",
+    "memo": "2005년 6월 실업률 5.0%와 비농업 일자리 146,000개 증가는 2005년 7월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2005-494779"
+  },
+  "2005-08": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 3.50%로 바뀐 날(2005년 8월 9일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 3.75%로 바뀐 날(2005년 9월 20일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-10": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.25%에서 3.50%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 3.25%에서 3.50%로 바뀐 날(2005년 10월 11일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2005-11": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 4.00%로 바뀐 날(2005년 11월 1일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2005"
+  },
+  "2005-12": {
+    "summary": "주식워런트를 거래할 수 있는 시장이 열렸습니다.",
+    "memo": "주식워런트증권 시장 개설, 한국은행 콜금리 인상, 미 연준 인상이 같은 달에 있습니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2006-01": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 4.50%로 바뀐 날(2006년 1월 31일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  "2006-02": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 3.75%에서 4.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 3.75%에서 4.00%로 바뀐 날(2006년 2월 9일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2006-03": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 4.75%로 바뀐 날(2006년 3월 28일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  "2006-04": {
+    "summary": "미국 노동통계국이 발표한 2006년 3월 실업률은 4.7%였다. 비농업 부문 일자리는 전월보다 211,000개 늘었다.",
+    "memo": "2006년 3월 실업률 4.7%와 비농업 일자리 211,000개 증가는 2006년 4월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2006-494788"
+  },
+  "2006-05": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 5.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 5.00%로 바뀐 날(2006년 5월 10일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2006"
+  },
+  "2006-06": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.00%에서 4.25%로 바뀌었습니다.",
+    "memo": "한국은행과 미 연준이 같은 달 금리를 올렸습니다. 두 결정의 날짜와 폭을 비교해 보세요.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2006-07": {
+    "summary": "미국 노동통계국이 발표한 2006년 6월 실업률은 4.6%였다. 비농업 부문 일자리는 전월보다 121,000개 늘었다.",
+    "memo": "2006년 6월 실업률 4.6%와 비농업 일자리 121,000개 증가는 2006년 7월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2006-494791"
+  },
+  "2006-08": {
+    "summary": "미국 연방공개시장위원회는 8월 8일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "미 연준은 동결했고 한국은행은 콜금리를 올렸습니다. 같은 달의 두 결정입니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20060808a.htm"
+  },
+  "2006-09": {
+    "summary": "미국 연방공개시장위원회는 9월 20일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2006년 9월 20일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20060920a.htm"
+  },
+  "2006-10": {
+    "summary": "미국 연방공개시장위원회는 10월 25일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2006년 10월 25일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20061025a.htm"
+  },
+  "2006-11": {
+    "summary": "미국 노동통계국이 발표한 2006년 10월 실업률은 4.4%였다. 비농업 부문 일자리는 전월보다 92,000개 늘었다.",
+    "memo": "2006년 10월 실업률 4.4%와 비농업 일자리 92,000개 증가는 2006년 11월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2006-494795"
+  },
+  "2006-12": {
+    "summary": "미국 연방공개시장위원회는 12월 12일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2006년 12월 12일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20061212a.htm"
+  },
   "2007-01": {
     "summary": "Apple은 Macworld에서 첫 iPhone을 공개했습니다.",
     "memo": "제품을 공개한 1월과 미국 출시 예정 시점인 6월을 따로 기록해 보세요.",
     "sourceName": "Apple 제품 공개 자료",
     "sourceUrl": "https://www.apple.com/newsroom/2007/01/09Apple-Reinvents-the-Phone-with-iPhone/"
+  },
+  "2007-02": {
+    "summary": "미국 노동통계국이 발표한 2007년 1월 실업률은 4.6%였다. 비농업 부문 일자리는 전월보다 111,000개 늘었다.",
+    "memo": "2007년 1월 실업률 4.6%와 비농업 일자리 111,000개 증가는 2007년 2월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2007-494798"
+  },
+  "2007-03": {
+    "summary": "미국 연방공개시장위원회는 3월 21일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2007년 3월 21일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20070321a.htm"
+  },
+  "2007-04": {
+    "summary": "미국 노동통계국이 발표한 2007년 3월 실업률은 4.4%였다. 비농업 부문 일자리는 전월보다 180,000개 늘었다.",
+    "memo": "2007년 3월 실업률 4.4%와 비농업 일자리 180,000개 증가는 2007년 4월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2007-494800"
+  },
+  "2007-05": {
+    "summary": "미국 연방공개시장위원회는 5월 9일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2007년 5월 9일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20070509a.htm"
+  },
+  "2007-06": {
+    "summary": "미국 연방공개시장위원회는 6월 18일 성명에서 연방기금금리 목표를 5.25%로 유지하기로 했다.",
+    "memo": "2007년 6월 18일 성명은 연방기금금리 목표 범위 5.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/press/monetary/20070618a.htm"
+  },
+  "2007-07": {
+    "summary": "한국은행 금리 추이에서 이날 콜금리 목표는 연 4.50%에서 4.75%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 4.50%에서 4.75%로 바뀐 날(2007년 7월 12일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2007-08": {
+    "summary": "미 연준은 일부 연방준비은행의 1차 신용금리를 0.50%p 내린 5.75%로 조정하는 안을 승인했습니다.",
+    "memo": "8월 7일 동결, 9일 한국은행 인상, 17일 연준의 1차 신용금리 인하가 열흘 사이에 있습니다. 연방기금금리 목표 자체는 9월에 바뀌었습니다.",
+    "sourceName": "미 연준 2007년 연차보고서 정책조치",
+    "sourceUrl": "https://www.federalreserve.gov/boarddocs/rptcongress/annual07/sec3/c1.htm"
+  },
+  "2007-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75%입니다. 변경 폭은 50bp 인하입니다.",
+    "memo": "연방기금금리 목표가 4.75%로 바뀐 날(2007년 9월 18일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2007"
+  },
+  "2007-10": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50%입니다. 변경 폭은 25bp 인하입니다.",
+    "memo": "연방기금금리 목표가 4.50%로 바뀐 날(2007년 10월 31일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2007"
+  },
+  "2007-11": {
+    "summary": "미국 노동통계국이 발표한 2007년 10월 실업률은 4.7%였다. 비농업 부문 일자리는 전월보다 166,000개 늘었다.",
+    "memo": "2007년 10월 실업률 4.7%와 비농업 일자리 166,000개 증가는 2007년 11월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2007-494807"
+  },
+  "2007-12": {
+    "summary": "NBER 연표에서 2007년 12월은 2009년 6월 저점에 앞선 경기 정점입니다.",
+    "memo": "NBER의 정점 판정은 사후에 발표됐습니다. 당시 기록은 금리 인하와 기간물 입찰 제도 발표입니다.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
   },
   "2008-01": {
     "summary": "FOMC는 연방기금금리 목표를 0.75%p 내려 3.50%로 정했습니다.",
@@ -237,7 +1341,7 @@
     "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 5.25%로 바뀌었습니다.",
     "memo": "8월 인상과 10월 인하를 시간순으로 놓아 보세요. 연말 금리만 보면 어떤 방향 전환을 놓치나요?",
     "sourceName": "한국은행 기준금리 추이",
-    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
   },
   "2008-09": {
     "summary": "리먼브러더스 파산과 AIG 지원이 잇따랐습니다.",
@@ -249,7 +1353,7 @@
     "summary": "한국은행 금리 추이에서 이날 기준금리는 연 5.00%에서 4.25%로 바뀌었습니다.",
     "memo": "10월 9일과 27일 두 번의 결정을 나눠 적어 보세요. 이달 총 인하 폭 중 어느 결정이 더 컸나요?",
     "sourceName": "한국은행 기준금리 추이",
-    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?menuNo=200656"
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
   },
   "2008-11": {
     "summary": "미 연준은 주택금융 관련 기관의 채권 최대 1,000억 달러와 기관 보증 MBS 최대 5,000억 달러를 매입하는 계획을 발표했습니다.",
@@ -263,11 +1367,137 @@
     "sourceName": "미 연준 12월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20081216b.htm"
   },
+  "2009-01": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 2.50%로 바뀌었습니다.",
+    "memo": "한국은행 인하(9일)와 미 연준 동결(28일)이 같은 달입니다. 미국 목표는 이미 범위(0~0.25%)로 바뀐 뒤였습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2009-02": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 2.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 2.50%에서 2.00%로 바뀐 날(2009년 2월 12일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
   "2009-03": {
     "summary": "미 연준은 앞으로 6개월 동안 장기 국채를 최대 3,000억 달러 매입하기로 결정했습니다.",
     "memo": "시장 스냅샷의 10년물 금리와 정책 발표의 장기 국채 매입액을 함께 확인해 보세요.",
     "sourceName": "미 연준 3월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20090318a.htm"
+  },
+  "2009-04": {
+    "summary": "미국 노동통계국이 발표한 2009년 3월 실업률은 8.5%였다. 비농업 부문 일자리는 전월보다 663,000개 줄었다.",
+    "memo": "2009년 3월 실업률 8.5%와 비농업 일자리 663,000개 감소는 2009년 4월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2009-494824"
+  },
+  "2009-05": {
+    "summary": "미국 노동통계국이 발표한 2009년 4월 실업률은 8.9%였다. 비농업 부문 일자리는 전월보다 539,000개 줄었다.",
+    "memo": "2009년 4월 실업률 8.9%와 비농업 일자리 539,000개 감소는 2009년 5월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2009-494825"
+  },
+  "2009-06": {
+    "summary": "NBER 연표에서 2009년 6월은 18개월 동안 이어진 수축기의 마지막 달입니다.",
+    "memo": "NBER의 저점 판정은 사후에 발표됐습니다. 2009년 6월 당시에는 알 수 없었던 사실입니다.",
+    "sourceName": "NBER 경기순환 연표",
+    "sourceUrl": "https://www.nber.org/research/data/us-business-cycle-expansions-and-contractions"
+  },
+  "2009-07": {
+    "summary": "미국 노동통계국이 발표한 2009년 6월 실업률은 9.5%였다. 비농업 부문 일자리는 전월보다 467,000개 줄었다.",
+    "memo": "2009년 6월 실업률 9.5%와 비농업 일자리 467,000개 감소는 2009년 7월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2009-494827"
+  },
+  "2009-08": {
+    "summary": "미국 노동통계국이 발표한 2009년 7월 실업률은 9.4%였다. 비농업 부문 일자리는 전월보다 247,000개 줄었다.",
+    "memo": "2009년 7월 실업률 9.4%와 비농업 일자리 247,000개 감소는 2009년 8월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/july-2009-494828"
+  },
+  "2009-09": {
+    "summary": "FTSE의 한국 주식시장 분류가 선진시장으로 변경됐습니다.",
+    "memo": "FTSE 분류 변경 기록입니다. 다른 지수 제공업체의 분류는 별개입니다.",
+    "sourceName": "한국거래소 영문 시장 안내",
+    "sourceUrl": "https://global.krx.co.kr/contents/GLB/01/0107/0107010000/20170630_eng_brochure.pdf"
+  },
+  "2009-10": {
+    "summary": "미국 노동통계국이 발표한 2009년 9월 실업률은 9.8%였다. 비농업 부문 일자리는 전월보다 263,000개 줄었다.",
+    "memo": "2009년 9월 실업률 9.8%와 비농업 일자리 263,000개 감소는 2009년 10월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2009-494830"
+  },
+  "2009-11": {
+    "summary": "한국거래소는 CME와 연계해 코스피200 선물의 야간 거래를 제공했습니다.",
+    "memo": "코스피200 선물의 야간 거래 기록입니다. 거래 시간대가 국내 정규장과 다릅니다.",
+    "sourceName": "한국거래소 야간거래 연혁",
+    "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01041401/%ED%95%9C%EA%B5%AD%EA%B1%B0%EB%9E%98%EC%86%8C%20%ED%8C%8C%EC%83%9D%EC%83%81%ED%92%88%EC%8B%9C%EC%9E%A5%20%EC%95%BC%EA%B0%84%EA%B1%B0%EB%9E%98%20%EC%95%88%EB%82%B4.pdf"
+  },
+  "2009-12": {
+    "summary": "미국 노동통계국이 발표한 2009년 11월 실업률은 10.0%였다. 비농업 부문 일자리는 전월보다 11,000개 줄었다.",
+    "memo": "2009년 11월 실업률 10.0%와 비농업 일자리 11,000개 감소는 2009년 12월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2009-494832"
+  },
+  "2010-01": {
+    "summary": "미국 노동통계국이 발표한 2009년 12월 실업률은 10.0%였다. 비농업 부문 일자리는 전월보다 85,000개 줄었다.",
+    "memo": "2009년 12월 실업률 10.0%와 비농업 일자리 85,000개 감소는 2010년 1월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/december-2009-494833"
+  },
+  "2010-02": {
+    "summary": "미국 노동통계국이 발표한 2010년 1월 실업률은 9.7%였다. 비농업 부문 일자리는 전월보다 20,000개 줄었다.",
+    "memo": "2010년 1월 실업률 9.7%와 비농업 일자리 20,000개 감소는 2010년 2월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2010-494834"
+  },
+  "2010-03": {
+    "summary": "미국 노동통계국이 발표한 2010년 2월 실업률은 9.7%였다. 비농업 부문 일자리는 전월보다 36,000개 줄었다.",
+    "memo": "2010년 2월 실업률 9.7%와 비농업 일자리 36,000개 감소는 2010년 3월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/february-2010-494835"
+  },
+  "2010-04": {
+    "summary": "미국 노동통계국이 발표한 2010년 3월 실업률은 9.7%였다. 비농업 부문 일자리는 전월보다 162,000개 늘었다.",
+    "memo": "2010년 3월 실업률 9.7%와 비농업 일자리 162,000개 증가는 2010년 4월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2010-494836"
+  },
+  "2010-05": {
+    "summary": "미국 노동통계국이 발표한 2010년 4월 실업률은 9.9%였다. 비농업 부문 일자리는 전월보다 290,000개 늘었다.",
+    "memo": "2010년 4월 실업률 9.9%와 비농업 일자리 290,000개 증가는 2010년 5월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2010-494837"
+  },
+  "2010-06": {
+    "summary": "미국 노동통계국이 발표한 2010년 5월 실업률은 9.7%였다. 비농업 부문 일자리는 전월보다 431,000개 늘었다.",
+    "memo": "2010년 5월 실업률 9.7%와 비농업 일자리 431,000개 증가는 2010년 6월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/may-2010-494838"
+  },
+  "2010-07": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.00%에서 2.25%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 2.00%에서 2.25%로 바뀐 날(2010년 7월 9일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2010-08": {
+    "summary": "한국거래소와 유렉스를 연계한 코스피200 옵션 거래가 시작됐습니다.",
+    "memo": "코스피200 옵션의 유렉스 연계 거래 기록입니다. 2009년 11월 CME 연계 선물 야간거래와 비교해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2010-09": {
+    "summary": "미국 노동통계국이 발표한 2010년 8월 실업률은 9.6%였다. 비농업 부문 일자리는 전월보다 54,000개 줄었다.",
+    "memo": "2010년 8월 실업률 9.6%와 비농업 일자리 54,000개 감소는 2010년 9월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/august-2010-494841"
+  },
+  "2010-10": {
+    "summary": "미국 노동통계국이 발표한 2010년 9월 실업률은 9.6%였다. 비농업 부문 일자리는 전월보다 95,000개 줄었다.",
+    "memo": "2010년 9월 실업률 9.6%와 비농업 일자리 95,000개 감소는 2010년 10월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2010-494842"
   },
   "2010-11": {
     "summary": "미 연준은 2011년 2분기 말까지 장기 국채 6,000억 달러를 추가 매입하는 계획을 발표했습니다.",
@@ -275,17 +1505,497 @@
     "sourceName": "미 연준 2010년 11월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20101103a.htm"
   },
+  "2010-12": {
+    "summary": "미국 노동통계국이 발표한 2010년 11월 실업률은 9.8%였다. 비농업 부문 일자리는 전월보다 39,000개 늘었다.",
+    "memo": "2010년 11월 실업률 9.8%와 비농업 일자리 39,000개 증가는 2010년 12월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2010-494844"
+  },
+  "2011-01": {
+    "summary": "한국거래소가 지분을 출자한 라오스 증권시장이 열렸습니다.",
+    "memo": "라오스 증권시장 개설과 한국은행 기준금리 인상이 같은 달입니다. 두 기록은 별개입니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2011-02": {
+    "summary": "미국 노동통계국이 발표한 2011년 1월 실업률은 9.0%였다. 비농업 부문 일자리는 전월보다 36,000개 늘었다.",
+    "memo": "2011년 1월 실업률 9.0%와 비농업 일자리 36,000개 증가는 2011년 2월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2011-494846"
+  },
+  "2011-03": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.75%에서 3.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 2.75%에서 3.00%로 바뀐 날(2011년 3월 10일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2011-04": {
+    "summary": "미국 노동통계국이 발표한 2011년 3월 실업률은 8.8%였다. 비농업 부문 일자리는 전월보다 216,000개 늘었다.",
+    "memo": "2011년 3월 실업률 8.8%와 비농업 일자리 216,000개 증가는 2011년 4월 1일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2011-494848"
+  },
+  "2011-05": {
+    "summary": "미국 노동통계국이 발표한 2011년 4월 실업률은 9.0%였다. 비농업 부문 일자리는 전월보다 244,000개 늘었다.",
+    "memo": "2011년 4월 실업률 9.0%와 비농업 일자리 244,000개 증가는 2011년 5월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2011-494849"
+  },
+  "2011-06": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 3.25%로 바뀌었습니다.",
+    "memo": "한국은행 인상(10일)과 미 연준 동결(22일)이 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2011-07": {
+    "summary": "미국 노동통계국이 발표한 2011년 6월 실업률은 9.2%였다. 비농업 부문 일자리는 전월보다 18,000개 늘었다.",
+    "memo": "2011년 6월 실업률 9.2%와 비농업 일자리 18,000개 증가는 2011년 7월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2011-494851"
+  },
+  "2011-08": {
+    "summary": "미국 연방공개시장위원회는 8월 9일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2011년 8월 9일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20110809a.htm"
+  },
+  "2011-09": {
+    "summary": "FOMC는 잔존 만기 3년 이하 국채 4,000억 달러어치를 매도하고 만기 6~30년 국채를 같은 규모로 매입하겠다고 발표했습니다.",
+    "memo": "4,000억 달러 규모의 만기 연장 계획입니다. 보유 총액은 유지하면서 만기 구성을 바꾸는 조치였습니다.",
+    "sourceName": "미 연준 대차대조표 정책 연표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/timeline-balance-sheet-policies.htm"
+  },
+  "2011-10": {
+    "summary": "미국 노동통계국이 발표한 2011년 9월 실업률은 9.1%였다. 비농업 부문 일자리는 전월보다 103,000개 늘었다.",
+    "memo": "2011년 9월 실업률 9.1%와 비농업 일자리 103,000개 증가는 2011년 10월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2011-494854"
+  },
+  "2011-11": {
+    "summary": "미국 연방공개시장위원회는 11월 2일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2011년 11월 2일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20111102a.htm"
+  },
+  "2011-12": {
+    "summary": "미국 연방공개시장위원회는 12월 13일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2011년 12월 13일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20111213a.htm"
+  },
+  "2012-01": {
+    "summary": "미국 연방공개시장위원회는 1월 25일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2012년 1월 25일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20120125a.htm"
+  },
+  "2012-02": {
+    "summary": "미국 노동통계국이 발표한 2012년 1월 실업률은 8.3%였다. 비농업 부문 일자리는 전월보다 243,000개 늘었다.",
+    "memo": "2012년 1월 실업률 8.3%와 비농업 일자리 243,000개 증가는 2012년 2월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2012-494858"
+  },
+  "2012-03": {
+    "summary": "한국거래소가 국내 석유 거래를 위한 전자시장을 열었습니다.",
+    "memo": "석유 전자상거래 시장 개설과 미 연준 동결이 같은 달입니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2012-04": {
+    "summary": "미국 연방공개시장위원회는 4월 25일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2012년 4월 25일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20120425a.htm"
+  },
+  "2012-05": {
+    "summary": "미국 노동통계국이 발표한 2012년 4월 실업률은 8.1%였다. 비농업 부문 일자리는 전월보다 115,000개 늘었다.",
+    "memo": "2012년 4월 실업률 8.1%와 비농업 일자리 115,000개 증가는 2012년 5월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2012-494861"
+  },
+  "2012-06": {
+    "summary": "미국 연방공개시장위원회는 6월 20일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2012년 6월 20일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20120620a.htm"
+  },
+  "2012-07": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.25%에서 3.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 3.25%에서 3.00%로 바뀐 날(2012년 7월 12일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2012-08": {
+    "summary": "미국 연방공개시장위원회는 8월 1일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2012년 8월 1일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20120801a.htm"
+  },
+  "2012-09": {
+    "summary": "유럽중앙은행은 유통시장에서 유로 지역 국채를 매입할 수 있는 제도의 조건과 범위를 발표했습니다.",
+    "memo": "OMT 설계 공개 기록입니다. 실제 매입 실행 여부는 별도 확인이 필요합니다.",
+    "sourceName": "ECB OMT 설계 발표",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2012/html/pr120906_1.en.html"
+  },
+  "2012-10": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.00%에서 2.75%로 바뀌었습니다.",
+    "memo": "한국은행 인하(11일)와 미 연준 동결(24일)이 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2012-11": {
+    "summary": "미국 노동통계국이 발표한 2012년 10월 실업률은 7.9%였다. 비농업 부문 일자리는 전월보다 171,000개 늘었다.",
+    "memo": "2012년 10월 실업률 7.9%와 비농업 일자리 171,000개 증가는 2012년 11월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2012-494867"
+  },
+  "2012-12": {
+    "summary": "미국 연방공개시장위원회는 12월 12일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2012년 12월 12일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20121212a.htm"
+  },
+  "2013-01": {
+    "summary": "미국 연방공개시장위원회는 1월 30일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2013년 1월 30일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20130130a.htm"
+  },
+  "2013-02": {
+    "summary": "미국 노동통계국이 발표한 2013년 1월 실업률은 7.9%였다. 비농업 부문 일자리는 전월보다 157,000개 늘었다.",
+    "memo": "2013년 1월 실업률 7.9%와 비농업 일자리 157,000개 증가는 2013년 2월 1일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2013-494870"
+  },
+  "2013-03": {
+    "summary": "미국 연방공개시장위원회는 3월 20일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2013년 3월 20일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20130320a.htm"
+  },
+  "2013-04": {
+    "summary": "일본은행은 공개시장조작의 주된 목표를 무담보 익일물 콜금리에서 본원통화로 바꿨습니다.",
+    "memo": "일본은행이 조작 목표를 콜금리에서 본원통화로 바꾼 기록입니다. 2016년 1월 마이너스 금리, 2016년 9월 수익률곡선 관리로 이어집니다.",
+    "sourceName": "일본은행 2013년 4월 금융정책결정회의",
+    "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2013/g130404.pdf"
+  },
+  "2013-05": {
+    "summary": "미국 연방공개시장위원회는 5월 1일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "미 연준 동결(1일)과 한국은행 인하(9일)가 같은 달입니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20130501a.htm"
+  },
+  "2013-06": {
+    "summary": "미국 연방공개시장위원회는 6월 19일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2013년 6월 19일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20130619a.htm"
+  },
+  "2013-07": {
+    "summary": "별도의 주식시장인 코넥스가 열리고 관련 전자공시를 제공하기 시작했습니다.",
+    "memo": "코넥스 시장 개설과 미 연준 동결이 같은 달입니다.",
+    "sourceName": "한국거래소 전자공시 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/common/JLDDST35000.html"
+  },
+  "2013-08": {
+    "summary": "미국 노동통계국이 발표한 2013년 7월 실업률은 7.4%였다. 비농업 부문 일자리는 전월보다 162,000개 늘었다.",
+    "memo": "2013년 7월 실업률 7.4%와 비농업 일자리 162,000개 증가는 2013년 8월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/july-2013-494876"
+  },
+  "2013-09": {
+    "summary": "미국 연방공개시장위원회는 9월 18일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2013년 9월 18일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20130918a.htm"
+  },
+  "2013-10": {
+    "summary": "미국 연방공개시장위원회는 10월 30일 성명에서 연방기금금리 목표 범위를 0~0.25%로 유지하기로 했다.",
+    "memo": "2013년 10월 30일 성명은 연방기금금리 목표 범위 0~0.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20131030a.htm"
+  },
+  "2013-11": {
+    "summary": "미국 노동통계국이 발표한 2013년 10월 실업률은 7.3%였다. 비농업 부문 일자리는 전월보다 204,000개 늘었다.",
+    "memo": "2013년 10월 실업률 7.3%와 비농업 일자리 204,000개 증가는 2013년 11월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2013-494879"
+  },
+  "2013-12": {
+    "summary": "FOMC는 2014년 1월부터 장기 국채와 주택저당증권의 월간 매입 규모를 각각 50억 달러씩 줄이기로 했습니다.",
+    "memo": "2014년 1월부터 월 매입 규모를 각각 50억 달러 줄이는 결정입니다. 매입을 멈춘 것은 아닙니다.",
+    "sourceName": "미 연준 12월 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20131218a.htm"
+  },
+  "2014-01": {
+    "summary": "미국 노동통계국이 발표한 2013년 12월 실업률은 6.7%였다. 비농업 부문 일자리는 전월보다 74,000개 늘었다.",
+    "memo": "2013년 12월 실업률 6.7%와 비농업 일자리 74,000개 증가는 2014년 1월 10일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/december-2013-494881"
+  },
+  "2014-02": {
+    "summary": "미국 노동통계국이 발표한 2014년 1월 실업률은 6.6%였다. 비농업 부문 일자리는 전월보다 113,000개 늘었다.",
+    "memo": "2014년 1월 실업률 6.6%와 비농업 일자리 113,000개 증가는 2014년 2월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2014-494882"
+  },
+  "2014-03": {
+    "summary": "금의 장내 현물 거래가 시작됐습니다.",
+    "memo": "금 현물시장 개설 기록입니다. 이 사이트의 금 스냅샷은 별도 출처의 월평균값입니다.",
+    "sourceName": "한국거래소 금시장 공식 안내",
+    "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01050204/KRX_GOLD_Download.pdf"
+  },
+  "2014-04": {
+    "summary": "미국 노동통계국이 발표한 2014년 3월 실업률은 6.7%였다. 비농업 부문 일자리는 전월보다 192,000개 늘었다.",
+    "memo": "2014년 3월 실업률 6.7%와 비농업 일자리 192,000개 증가는 2014년 4월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2014-494884"
+  },
+  "2014-05": {
+    "summary": "미국 노동통계국이 발표한 2014년 4월 실업률은 6.3%였다. 비농업 부문 일자리는 전월보다 288,000개 늘었다.",
+    "memo": "2014년 4월 실업률 6.3%와 비농업 일자리 288,000개 증가는 2014년 5월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2014-494885"
+  },
+  "2014-06": {
+    "summary": "유럽중앙은행은 예금금리를 0.10%p 인하해 6월 11일부터 적용한다고 발표했습니다.",
+    "memo": "유럽중앙은행 예금금리가 −0.10%로 내려간 기록입니다. 2016년 3월 −0.40%, 2019년 9월 −0.50% 기록이 이어집니다.",
+    "sourceName": "유럽중앙은행 2014년 6월 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2014/html/pr140605.en.html"
+  },
+  "2014-07": {
+    "summary": "미국 노동통계국이 발표한 2014년 6월 실업률은 6.1%였다. 비농업 부문 일자리는 전월보다 288,000개 늘었다.",
+    "memo": "2014년 6월 실업률 6.1%와 비농업 일자리 288,000개 증가는 2014년 7월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2014-494887"
+  },
+  "2014-08": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.50%에서 2.25%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 2.50%에서 2.25%로 바뀐 날(2014년 8월 14일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2014-09": {
+    "summary": "미국 노동통계국이 발표한 2014년 8월 실업률은 6.1%였다. 비농업 부문 일자리는 전월보다 142,000개 늘었다.",
+    "memo": "2014년 8월 실업률 6.1%와 비농업 일자리 142,000개 증가는 2014년 9월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/august-2014-494889"
+  },
+  "2014-10": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.25%에서 2.00%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 2.25%에서 2.00%로 바뀐 날(2014년 10월 15일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2014-11": {
+    "summary": "국내 거래소에서 ETN 거래가 시작됐습니다.",
+    "memo": "ETN 시장 개설 기록입니다. 2002년 10월 ETF 시장 개설과 비교해 보세요.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2014-12": {
+    "summary": "미국 노동통계국이 발표한 2014년 11월 실업률은 5.8%였다. 비농업 부문 일자리는 전월보다 321,000개 늘었다.",
+    "memo": "2014년 11월 실업률 5.8%와 비농업 일자리 321,000개 증가는 2014년 12월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2014-494892"
+  },
+  "2015-01": {
+    "summary": "온실가스 배출권의 거래소 시장이 열렸습니다.",
+    "memo": "배출권 거래시장 개설과 유럽중앙은행의 월 600억 유로 매입 계획, 미 연준 동결이 같은 달입니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2015-02": {
+    "summary": "미국 노동통계국이 발표한 2015년 1월 실업률은 5.7%였다. 비농업 부문 일자리는 전월보다 257,000개 늘었다.",
+    "memo": "2015년 1월 실업률 5.7%와 비농업 일자리 257,000개 증가는 2015년 2월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2015-494894"
+  },
+  "2015-03": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 2.00%에서 1.75%로 바뀌었습니다.",
+    "memo": "한국은행 인하(12일)와 미 연준 동결(18일)이 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2015-04": {
+    "summary": "미국 노동통계국이 발표한 2015년 3월 실업률은 5.5%였다. 비농업 부문 일자리는 전월보다 126,000개 늘었다.",
+    "memo": "2015년 3월 실업률 5.5%와 비농업 일자리 126,000개 증가는 2015년 4월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2015년 4월 29일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2015-494896"
+  },
+  "2015-05": {
+    "summary": "미국 노동통계국이 발표한 2015년 4월 실업률은 5.4%였다. 비농업 부문 일자리는 전월보다 223,000개 늘었다.",
+    "memo": "2015년 4월 실업률 5.4%와 비농업 일자리 223,000개 증가는 2015년 5월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2015-494897"
+  },
+  "2015-06": {
+    "summary": "유가증권시장과 코스닥의 하루 가격제한폭이 30%로 확대됐습니다.",
+    "memo": "가격제한폭이 ±30%로 넓어진 날(6월 15일)과 기준금리 인하(11일)가 같은 달입니다. 이달 이후의 일별 등락률은 이전과 범위가 다릅니다.",
+    "sourceName": "KIND 공시의 가격제한폭 제도 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2016/08/22/000492/20160822001575/10001.htm"
+  },
+  "2015-07": {
+    "summary": "미국 노동통계국이 발표한 2015년 6월 실업률은 5.3%였다. 비농업 부문 일자리는 전월보다 223,000개 늘었다.",
+    "memo": "2015년 6월 실업률 5.3%와 비농업 일자리 223,000개 증가는 2015년 7월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2015년 7월 29일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2015-495671"
+  },
+  "2015-08": {
+    "summary": "미국 노동통계국이 발표한 2015년 7월 실업률은 5.3%였다. 비농업 부문 일자리는 전월보다 215,000개 늘었다.",
+    "memo": "2015년 7월 실업률 5.3%와 비농업 일자리 215,000개 증가는 2015년 8월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/july-2015-495947"
+  },
+  "2015-09": {
+    "summary": "미국 노동통계국이 발표한 2015년 8월 실업률은 5.1%였다. 비농업 부문 일자리는 전월보다 173,000개 늘었다.",
+    "memo": "2015년 8월 실업률 5.1%와 비농업 일자리 173,000개 증가는 2015년 9월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2015년 9월 17일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/august-2015-500037"
+  },
+  "2015-10": {
+    "summary": "미국 노동통계국이 발표한 2015년 9월 실업률은 5.1%였다. 비농업 부문 일자리는 전월보다 142,000개 늘었다.",
+    "memo": "2015년 9월 실업률 5.1%와 비농업 일자리 142,000개 증가는 2015년 10월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2015년 10월 28일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2015-501788"
+  },
+  "2015-11": {
+    "summary": "미국 노동통계국이 발표한 2015년 10월 실업률은 5.0%였다. 비농업 부문 일자리는 전월보다 271,000개 늘었다.",
+    "memo": "2015년 10월 실업률 5.0%와 비농업 일자리 271,000개 증가는 2015년 11월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2015-517186"
+  },
+  "2015-12": {
+    "summary": "Expedia·T-Mobile US 등 일곱 회사가 들어갔고, 기존 일곱 회사와 LiLAC 두 주식 종류가 빠졌습니다.",
+    "memo": "2008년 12월 목표 범위 0~0.25% 설정 이후 처음으로 목표가 올라간 달입니다. Nasdaq-100 정기 변경도 같은 달입니다.",
+    "sourceName": "Nasdaq 2015년 편입 변경 발표",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-4"
+  },
+  "2016-01": {
+    "summary": "일본은행은 양적·질적 완화에 일부 당좌예금 잔액에 적용하는 마이너스 금리를 추가하기로 했습니다.",
+    "memo": "일본은행 마이너스 금리 도입 결정과 미 연준 동결이 같은 달입니다.",
+    "sourceName": "일본은행 2016년 1월 회의 의사록",
+    "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmsche_minu/minu_2016/g160129.pdf"
+  },
+  "2016-02": {
+    "summary": "금융위원장이 3월 14일 출시를 앞둔 개인종합자산관리계좌(ISA)의 금융회사별 준비상황을 점검했다.",
+    "memo": "ISA 출시(3월 14일)를 앞둔 준비 점검 기록입니다. 출시 전 점검과 출시 이후 가입 통계는 별개입니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/71990"
+  },
+  "2016-03": {
+    "summary": "ECB는 예금금리를 −0.40%로 내리고, 자산매입 대상에 일정 요건을 갖춘 비은행 기업의 유로화 회사채를 넣기로 했습니다.",
+    "memo": "유럽중앙은행 예금금리 −0.40%, ISA 출시 최종 점검, 미 연준 동결이 같은 달입니다.",
+    "sourceName": "ECB 2016년 3월 통화정책 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2016/html/pr160310.ga.html"
+  },
   "2016-04": {
     "summary": "Liberty Media가 기존 주식을 세 가지 사업을 추적하는 주식으로 재편했습니다.",
     "memo": "이달의 수익률 표에서 제외 종목을 펼쳐 보세요. 주식 하나가 여러 추적주로 바뀐 사례와 단순 주식분할의 차이를 확인할 수 있습니다.",
     "sourceName": "Liberty Media SEC 8-K",
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm"
   },
+  "2016-05": {
+    "summary": "미국 노동통계국이 발표한 2016년 4월 실업률은 5.0%였다. 비농업 부문 일자리는 전월보다 160,000개 늘었다.",
+    "memo": "2016년 4월 실업률 5.0%와 비농업 일자리 160,000개 증가는 2016년 5월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/april-2016-529160"
+  },
+  "2016-06": {
+    "summary": "영국의 유럽연합 회원국 지위를 묻는 국민투표에서 탈퇴가 51.9%를 얻었습니다.",
+    "memo": "6월 23일 국민투표 결과는 탈퇴 51.9%였습니다. 같은 달 한국은행은 기준금리를 1.25%로 내렸습니다. 별개의 기록입니다.",
+    "sourceName": "영국 선거관리위원회 국민투표 보고서",
+    "sourceUrl": "https://www.electoralcommission.org.uk/research-reports-and-data/our-reports-and-data-past-elections-and-referendums/report-23-june-2016-referendum-uks-membership-european-union"
+  },
+  "2016-07": {
+    "summary": "미국 연방공개시장위원회는 7월 27일 성명에서 연방기금금리 목표 범위를 0.25~0.5%로 유지하기로 했다.",
+    "memo": "2016년 7월 27일 성명은 연방기금금리 목표 범위 0.25~0.5%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20160727a.htm"
+  },
+  "2016-08": {
+    "summary": "미국 노동통계국이 발표한 2016년 7월 실업률은 4.9%였다. 비농업 부문 일자리는 전월보다 255,000개 늘었다.",
+    "memo": "2016년 7월 실업률 4.9%와 비농업 일자리 255,000개 증가는 2016년 8월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/july-2016-533206"
+  },
+  "2016-09": {
+    "summary": "삼성전자는 미국 소비자제품안전위원회와 협력해 갤럭시 노트7 리콜 및 교환 계획을 발표했습니다.",
+    "memo": "갤럭시 노트7 리콜, 일본은행 수익률곡선 관리 도입, 미 연준 동결이 같은 달입니다.",
+    "sourceName": "미국 소비자제품안전위원회 리콜 공지",
+    "sourceUrl": "https://www.cpsc.gov/Recalls/2016/Samsung-Recalls-Galaxy-Note7-Smartphones"
+  },
+  "2016-10": {
+    "summary": "Nasdaq는 10월 19일 장 시작 전 Shire가 Linear Technology를 대체한다고 발표했습니다.",
+    "memo": "Nasdaq-100 구성 변경 기록입니다. 발표일과 적용일이 다릅니다.",
+    "sourceName": "Nasdaq 지수 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/shire-plc-join-nasdaq-100-index-beginning-october-19-2016"
+  },
+  "2016-11": {
+    "summary": "한국거래소가 스타트업 주식 거래를 지원하는 KSM을 열었습니다.",
+    "memo": "KRX 스타트업 시장 개설과 미 연준 동결이 같은 달입니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
   "2016-12": {
     "summary": "미 연준이 목표 금리를 올렸고 Nasdaq-100은 정기 편입 변경을 적용했습니다.",
     "memo": "12월 종목 순위에는 월초에 편입돼 있던 주식을 사용합니다. 19일 정기 변경이 반영된 모집단은 이듬해 1월 순위에서 확인할 수 있습니다.",
     "sourceName": "Nasdaq 2016년 정기 변경 공지",
     "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-5"
+  },
+  "2017-01": {
+    "summary": "미국 노동통계국이 발표한 2016년 12월 실업률은 4.7%였다. 비농업 부문 일자리는 전월보다 156,000개 늘었다.",
+    "memo": "2016년 12월 실업률 4.7%와 비농업 일자리 156,000개 증가는 2017년 1월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/december-2016-536841"
+  },
+  "2017-02": {
+    "summary": "운송업체 J.B. Hunt가 장 시작 전 NXP Semiconductors를 대체했습니다.",
+    "memo": "미 연준 동결과 Nasdaq-100 구성 변경이 같은 달입니다.",
+    "sourceName": "Nasdaq 지수 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/node/92481"
+  },
+  "2017-03": {
+    "summary": "동물 진단 업체 IDEXX Laboratories가 SBA Communications를 대체했습니다.",
+    "memo": "미 연준 인상과 Nasdaq-100 구성 변경이 같은 달입니다.",
+    "sourceName": "Nasdaq 지수 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/news-releases/news-release-details/idexx-laboratories-inc-join-nasdaq-100-index-beginning-march-20"
+  },
+  "2017-04": {
+    "summary": "Wynn Resorts가 Tripadvisor를 대체했습니다.",
+    "memo": "Nasdaq-100 구성 변경 기록입니다. 교체된 종목을 확인해 보세요.",
+    "sourceName": "Nasdaq 지수 변경 공지",
+    "sourceUrl": "https://ir.nasdaq.com/node/93181"
+  },
+  "2017-05": {
+    "summary": "미국 연방공개시장위원회는 5월 3일 성명에서 연방기금금리 목표 범위를 0.75~1%로 유지하기로 했다.",
+    "memo": "2017년 5월 3일 성명은 연방기금금리 목표 범위 0.75~1%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20170503a.htm"
+  },
+  "2017-06": {
+    "summary": "상장지수펀드를 기초자산으로 하는 선물이 상장됐습니다.",
+    "memo": "국내 ETF 선물 상장, 미 연준 인상, Nasdaq-100 구성 변경이 같은 달입니다.",
+    "sourceName": "KIND 공시의 국내 증권시장 연혁",
+    "sourceUrl": "https://kind.krx.co.kr/external/2020/09/09/000076/20200909000167/00591.htm"
+  },
+  "2017-07": {
+    "summary": "미국 연방공개시장위원회는 7월 26일 성명에서 연방기금금리 목표 범위를 1~1.25%로 유지하기로 했다.",
+    "memo": "2017년 7월 26일 성명은 연방기금금리 목표 범위 1~1.25%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20170726a.htm"
+  },
+  "2017-08": {
+    "summary": "미국 노동통계국이 발표한 2017년 7월 실업률은 4.3%였다. 비농업 부문 일자리는 전월보다 209,000개 늘었다.",
+    "memo": "2017년 7월 실업률 4.3%와 비농업 일자리 209,000개 증가는 2017년 8월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/july-2017-553647"
+  },
+  "2017-09": {
+    "summary": "Apple은 Face ID와 OLED 화면을 적용한 iPhone X를 공개했습니다.",
+    "memo": "대차대조표 축소 계획과 iPhone X 공개가 같은 달입니다. 두 기록은 별개입니다.",
+    "sourceName": "Apple Newsroom",
+    "sourceUrl": "https://www.apple.com/newsroom/2017/09/the-future-is-here-iphone-x/"
   },
   "2017-10": {
     "summary": "Nasdaq-100에서 Align Technology가 Mattel을 대체했습니다.",
@@ -305,11 +2015,143 @@
     "sourceName": "미국 연방 공법 115-97",
     "sourceUrl": "https://www.congress.gov/115/plaws/publ97/PLAW-115publ97.pdf"
   },
+  "2018-01": {
+    "summary": "미국 노동통계국이 발표한 2017년 12월 실업률은 4.1%였다. 비농업 부문 일자리는 전월보다 148,000개 늘었다.",
+    "memo": "2017년 12월 실업률 4.1%와 비농업 일자리 148,000개 증가는 2018년 1월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 1.25~1.5% 동결'(2018년 1월 31일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/december-2017-576415"
+  },
   "2018-02": {
     "summary": "미국 옵션시장의 변동성을 반영하는 VIX가 2월 5일 급등했습니다.",
     "memo": "하루 변동성 충격과 주식의 월간 종가 수익률은 서로 다른 구간을 측정합니다. 날짜 범위를 함께 보세요.",
     "sourceName": "Cboe 시장 분석",
     "sourceUrl": "https://cdn.cboe.com/resources/education/research_publications/after-the-volpocalypse-market-observation.pdf"
+  },
+  "2018-03": {
+    "summary": "한국거래소는 코스닥150지수를 기초로 하는 옵션을 상장했습니다.",
+    "memo": "미 연준 인상과 코스닥150 옵션 상장이 같은 달입니다.",
+    "sourceName": "한국거래소 코스닥150 옵션 안내",
+    "sourceUrl": "https://open.krx.co.kr/contents/OPN/01/01040210/KOSDAQ150Option.pdf"
+  },
+  "2018-05": {
+    "summary": "미국 연방공개시장위원회는 5월 2일 성명에서 연방기금금리 목표 범위를 1.5~1.75%로 유지하기로 했다.",
+    "memo": "2018년 5월 2일 성명은 연방기금금리 목표 범위 1.5~1.75%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20180502a.htm"
+  },
+  "2018-06": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 1.75~2.00%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 1.75~2.00%로 바뀐 날(2018년 6월 14일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  "2018-07": {
+    "summary": "미국 노동통계국이 발표한 2018년 6월 실업률은 4.0%였다. 비농업 부문 일자리는 전월보다 213,000개 늘었다.",
+    "memo": "2018년 6월 실업률 4.0%와 비농업 일자리 213,000개 증가는 2018년 7월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/june-2018-579069"
+  },
+  "2018-08": {
+    "summary": "미국 연방공개시장위원회는 8월 1일 성명에서 연방기금금리 목표 범위를 1.75~2%로 유지하기로 했다.",
+    "memo": "2018년 8월 1일 성명은 연방기금금리 목표 범위 1.75~2%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20180801a.htm"
+  },
+  "2018-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.00~2.25%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 2.00~2.25%로 바뀐 날(2018년 9월 27일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  "2018-10": {
+    "summary": "미국 노동통계국이 발표한 2018년 9월 실업률은 3.7%였다. 비농업 부문 일자리는 전월보다 134,000개 늘었다.",
+    "memo": "2018년 9월 실업률 3.7%와 비농업 일자리 134,000개 증가는 2018년 10월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/september-2018-579704"
+  },
+  "2018-11": {
+    "summary": "미국 연방공개시장위원회는 11월 8일 성명에서 연방기금금리 목표 범위를 2~2.25%로 유지하기로 했다.",
+    "memo": "미 연준 동결(8일)과 한국은행 인상(30일)이 같은 달입니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20181108a.htm"
+  },
+  "2018-12": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 2.25~2.50%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 2.25~2.50%로 바뀐 날(2018년 12월 20일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2018"
+  },
+  "2019-01": {
+    "summary": "미국 연방공개시장위원회는 1월 30일 성명에서 연방기금금리 목표 범위를 2.25~2.5%로 유지하기로 했다.",
+    "memo": "2019년 1월 30일 성명은 연방기금금리 목표 범위 2.25~2.5%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190130a.htm"
+  },
+  "2019-02": {
+    "summary": "미국 노동통계국이 발표한 2019년 1월 실업률은 4.0%였다. 비농업 부문 일자리는 전월보다 304,000개 늘었다.",
+    "memo": "2019년 1월 실업률 4.0%와 비농업 일자리 304,000개 증가는 2019년 2월 1일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/january-2019-581885"
+  },
+  "2019-03": {
+    "summary": "미국 연방공개시장위원회는 3월 20일 성명에서 연방기금금리 목표 범위를 2.25~2.5%로 유지하기로 했다.",
+    "memo": "2019년 3월 20일 성명은 연방기금금리 목표 범위 2.25~2.5%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190320a.htm"
+  },
+  "2019-04": {
+    "summary": "미국 노동통계국이 발표한 2019년 3월 실업률은 3.8%였다. 비농업 부문 일자리는 전월보다 196,000개 늘었다.",
+    "memo": "2019년 3월 실업률 3.8%와 비농업 일자리 196,000개 증가는 2019년 4월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2019-583210"
+  },
+  "2019-05": {
+    "summary": "미국 연방공개시장위원회는 5월 1일 성명에서 연방기금금리 목표 범위를 2.25~2.5%로 유지하기로 했다.",
+    "memo": "2019년 5월 1일 성명은 연방기금금리 목표 범위 2.25~2.5%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190501a.htm"
+  },
+  "2019-06": {
+    "summary": "미국 연방공개시장위원회는 6월 19일 성명에서 연방기금금리 목표 범위를 2.25~2.5%로 유지하기로 했다.",
+    "memo": "2019년 6월 19일 성명은 연방기금금리 목표 범위 2.25~2.5%를 유지했습니다. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연방준비제도 · FOMC 당시 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20190619a.htm"
+  },
+  "2019-07": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.75%에서 1.50%로 바뀌었습니다.",
+    "memo": "한국은행 인하(18일)와 미 연준 인하(31일)가 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2019-08": {
+    "summary": "미국 재무부는 중국을 환율조작국으로 지정했다고 발표했다.",
+    "memo": "미 재무부의 환율조작국 지정과 7월 고용동향 발표가 같은 달입니다.",
+    "sourceName": "미국 재무부 보도자료",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/sm751"
+  },
+  "2019-09": {
+    "summary": "유럽중앙은행은 예금금리를 0.10%p 내려 −0.50%로 하고, 11월 1일부터 월 200억 유로의 순자산매입을 재개하기로 했다.",
+    "memo": "유럽중앙은행 예금금리 −0.50%와 미 연준 인하가 같은 달입니다.",
+    "sourceName": "유럽중앙은행 통화정책 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2019/html/ecb.mp190912~08de50b4d2.en.html"
+  },
+  "2019-10": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.50%에서 1.25%로 바뀌었습니다.",
+    "memo": "한국은행 인하(16일)와 미 연준 인하(31일)가 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2019-11": {
+    "summary": "미국 노동통계국이 발표한 2019년 10월 실업률은 3.6%였다. 비농업 부문 일자리는 전월보다 128,000개 늘었다.",
+    "memo": "2019년 10월 실업률 3.6%와 비농업 일자리 128,000개 증가는 2019년 11월 1일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/october-2019-584579"
+  },
+  "2019-12": {
+    "summary": "미국 노동통계국이 발표한 2019년 11월 실업률은 3.5%였다. 비농업 부문 일자리는 전월보다 266,000개 늘었다.",
+    "memo": "2019년 11월 실업률 3.5%와 비농업 일자리 266,000개 증가는 2019년 12월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 1.5~1.75% 동결'(2019년 12월 11일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2019-584838"
   },
   "2020-01": {
     "summary": "WHO 사무총장은 국제보건규칙에 따른 긴급위원회의 권고를 받아들였다.",
@@ -393,17 +2235,263 @@
       "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2021/1/newcomer-tesla-among-s-p-500-s-top-performers-in-december-61971872"
     }
   },
+  "2021-01": {
+    "summary": "SEC 위원장 직무대행과 위원들은 일부 종목의 극심한 가격 변동을 면밀히 관찰·평가하고 있다고 밝혔다.",
+    "memo": "SEC 공동성명(29일)과 12월 고용동향 발표, 미 연준 동결이 같은 달입니다.",
+    "sourceName": "미 SEC 공동성명",
+    "sourceUrl": "https://www.sec.gov/news/public-statement/joint-statement-market-volatility-2021-01-29"
+  },
+  "2021-02": {
+    "summary": "금융위원회는 공매도 금지를 5월 2일까지 연장하고 5월 3일부터 코스피200·코스닥150 구성종목에 한해 재개하기로 의결했다.",
+    "memo": "공매도 부분 재개 결정(3일)과 1월 고용동향 발표가 같은 달입니다. 재개일은 5월 3일이었습니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/75290"
+  },
+  "2021-03": {
+    "summary": "코로나19 대응 재정 지원을 담은 미국 구조 계획법(American Rescue Plan Act)이 공법 117-2로 제정됐다.",
+    "memo": "미국 구조 계획법 제정과 미 연준 동결이 같은 달입니다.",
+    "sourceName": "GovInfo 공법 117-2",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-117publ2"
+  },
+  "2021-04": {
+    "summary": "금융위원회는 불법 공매도에 대한 과징금·형사처벌 도입 등 제도 개선을 마치고 5월 3일부터 공매도를 부분 재개한다고 발표했다.",
+    "memo": "공매도 부분 재개 준비 완료 발표와 미 연준 동결이 같은 달입니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/75830"
+  },
+  "2021-05": {
+    "summary": "미 노동통계국은 4월 소비자물가(CPI-U)가 계절조정 전월 대비 0.8%, 전년 동월 대비 4.2% 상승했다고 발표했다.",
+    "memo": "4월 소비자물가 12개월 상승률 4.2%가 발표된 달입니다. 같은 달 공매도 부분 재개가 시행됐습니다.",
+    "sourceName": "미국 노동통계국 CPI 보도자료 아카이브",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/cpi_05122021.htm"
+  },
+  "2021-06": {
+    "summary": "미국 노동통계국이 발표한 2021년 5월 실업률은 5.8%였다. 비농업 부문 일자리는 전월보다 559,000개 늘었다.",
+    "memo": "2021년 5월 실업률 5.8%와 비농업 일자리 559,000개 증가는 2021년 6월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2021년 6월 16일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_06042021.htm"
+  },
+  "2021-07": {
+    "summary": "미국 노동통계국이 발표한 2021년 6월 실업률은 5.9%였다. 비농업 부문 일자리는 전월보다 850,000개 늘었다.",
+    "memo": "2021년 6월 실업률 5.9%와 비농업 일자리 850,000개 증가는 2021년 7월 2일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2021년 7월 28일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_07022021.htm"
+  },
+  "2021-08": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 0.50%에서 0.75%로 바뀌었습니다.",
+    "memo": "한국은행 기준금리 인상 기록입니다. 2020년 5월 0.50%로 내려간 뒤 첫 변경이었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2021-09": {
+    "summary": "미국 노동통계국이 발표한 2021년 8월 실업률은 5.2%였다. 비농업 부문 일자리는 전월보다 235,000개 늘었다.",
+    "memo": "2021년 8월 실업률 5.2%와 비농업 일자리 235,000개 증가는 2021년 9월 3일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 0~0.25% 동결'(2021년 9월 22일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_09032021.htm"
+  },
+  "2021-10": {
+    "summary": "SEC 실무진은 2021년 1월 게임스톱 거래를 중심으로 주식·옵션 시장의 변동성과 개인 주문 처리 구조를 검토했습니다.",
+    "memo": "SEC 실무진 보고서 기록입니다. 2021년 1월 거래를 다룬 사후 검토입니다.",
+    "sourceName": "미 SEC 2021년 시장 구조 보고서 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2021-212"
+  },
+  "2021-11": {
+    "summary": "FOMC는 목표 범위 0~0.25%를 유지하면서 월간 순자산매입을 국채 100억 달러, 기관 MBS 50억 달러씩 줄이기 시작하기로 했다.",
+    "memo": "미 연준의 자산매입 축소 시작과 한국은행 인상이 같은 달입니다.",
+    "sourceName": "미 연준 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211103a.htm"
+  },
+  "2021-12": {
+    "summary": "FOMC는 목표 범위 0~0.25%를 유지하면서 월간 순자산매입 축소 폭을 국채 200억 달러, 기관 MBS 100억 달러로 늘렸다.",
+    "memo": "미 연준은 축소 속도를 두 배로 올렸습니다. 11월 고용동향 발표도 같은 달입니다.",
+    "sourceName": "미 연준 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20211215a.htm"
+  },
+  "2022-01": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.00%에서 1.25%로 바뀌었습니다.",
+    "memo": "한국은행 인상(14일)과 미 연준 동결(26일)이 같은 달입니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2022-02": {
+    "summary": "미국 재무부는 러시아 최대 은행 두 곳과 약 90개 금융기관 자회사를 포함한 제재를 발표했다.",
+    "memo": "러시아 금융기관 제재 발표(24일)와 1월 고용동향 발표가 같은 달입니다.",
+    "sourceName": "미국 재무부 보도자료",
+    "sourceUrl": "https://home.treasury.gov/news/press-releases/jy0608"
+  },
+  "2022-03": {
+    "summary": "FOMC가 연방기금금리 목표 범위를 0.25~0.50%로 올렸습니다.",
+    "memo": "연방기금금리 목표가 0.25~0.50%로 바뀐 날(2022년 3월 16일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220316a.htm"
+  },
+  "2022-04": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 1.25%에서 1.50%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 1.25%에서 1.50%로 바뀐 날(2022년 4월 14일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2022-05": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 0.75~1.00%입니다. 변경 폭은 50bp 인상입니다.",
+    "memo": "미 연준 0.50%p 인상(5일)과 한국은행 인상(26일)이 같은 달입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
   "2022-06": {
     "summary": "FOMC가 연방기금금리 목표 범위를 1.50~1.75%로 인상했습니다.",
     "memo": "성명에 나온 정책금리와 월간 시장 스냅샷의 10년물 국채금리가 같은 폭으로 움직였는지 살펴보세요.",
     "sourceName": "미 연준 2022년 6월 FOMC 성명",
     "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20220615a.htm"
   },
+  "2022-07": {
+    "summary": "미 노동통계국은 6월 소비자물가(CPI-U)가 계절조정 전월 대비 1.3%, 전년 동월 대비 9.1% 상승했다고 발표했다.",
+    "memo": "6월 소비자물가 12개월 상승률 9.1% 발표, 한국은행·미 연준·유럽중앙은행의 인상이 같은 달입니다.",
+    "sourceName": "미국 노동통계국 CPI 보도자료 아카이브",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/cpi_07132022.htm"
+  },
+  "2022-08": {
+    "summary": "반도체 제조 지원을 담은 CHIPS and Science Act가 공법 117-167로 제정됐다.",
+    "memo": "한국은행 인상, 반도체·과학법과 인플레이션 감축법 제정이 같은 달입니다.",
+    "sourceName": "GovInfo 공법 117-167",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-117publ167"
+  },
+  "2022-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 3.00~3.25%입니다. 변경 폭은 75bp 인상입니다.",
+    "memo": "연방기금금리 목표가 3.00~3.25%로 바뀐 날(2022년 9월 22일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2022"
+  },
+  "2022-10": {
+    "summary": "금융위원회는 10월 23일 비상거시경제금융회의에서 발표한 50조 원+α 유동성 지원 조치의 추진현황을 점검하는 회의를 열었다.",
+    "memo": "한국은행 인상(12일)과 50조 원+α 유동성 지원 조치 점검(28일)이 같은 달입니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/78804"
+  },
+  "2022-11": {
+    "summary": "미 노동통계국은 10월 소비자물가(CPI-U)가 계절조정 전월 대비 0.4%, 전년 동월 대비 7.7% 상승했다고 발표했다.",
+    "memo": "미 연준·한국은행 인상, 10월 소비자물가 발표, ChatGPT 공개가 같은 달입니다.",
+    "sourceName": "미국 노동통계국 CPI 보도자료 아카이브",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/cpi_11102022.htm"
+  },
+  "2022-12": {
+    "summary": "미국 증권거래위원회는 FTX의 CEO 겸 공동창업자를 주식 투자자 대상 사기 혐의로 제소했다.",
+    "memo": "미 연준 인상, SEC의 FTX 창업자 제소, 일본은행 변동 허용폭 확대가 같은 달입니다.",
+    "sourceName": "미 SEC 보도자료",
+    "sourceUrl": "https://www.sec.gov/news/press-release/2022-219"
+  },
+  "2023-01": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.25%에서 3.50%로 바뀌었습니다.",
+    "memo": "한국은행 정책금리가 연 3.25%에서 3.50%로 바뀐 날(2023년 1월 13일)입니다. 같은 시기 미국 연방기금금리 목표와의 차이를 계산해 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
+  },
+  "2023-02": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.50~4.75%입니다. 변경 폭은 25bp 인상입니다.",
+    "memo": "연방기금금리 목표가 4.50~4.75%로 바뀐 날(2023년 2월 2일)입니다. 변경 방향을 이달 US 10년물 관측값과 나란히 놓아 보세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2023"
+  },
+  "2023-03": {
+    "summary": "캘리포니아 금융당국이 은행을 폐쇄하고 미국 연방예금보험공사(FDIC)를 파산관재인으로 지정했습니다.",
+    "memo": "실리콘밸리은행 폐쇄(10일), 공동성명과 시그니처은행 가교은행 설립(12일), 미 연준 인상(23일)을 날짜순으로 놓아 보세요.",
+    "sourceName": "FDIC 의회 증언",
+    "sourceUrl": "https://www.fdic.gov/news/speeches/2023/spmar2923.html"
+  },
+  "2023-04": {
+    "summary": "미국 노동통계국이 발표한 2023년 3월 실업률은 3.5%였다. 비농업 부문 일자리는 전월보다 236,000개 늘었다.",
+    "memo": "2023년 3월 실업률 3.5%와 비농업 일자리 236,000개 증가는 2023년 4월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_04072023.htm"
+  },
+  "2023-05": {
+    "summary": "FDIC는 JP모건체이스가 폐쇄된 퍼스트리퍼블릭은행의 예금 전부를 인수한다고 발표했다.",
+    "memo": "미 연준 인상(4일)과 퍼스트리퍼블릭은행 예금 인수(1일)가 같은 달입니다.",
+    "sourceName": "미 FDIC 보도자료",
+    "sourceUrl": "https://www.fdic.gov/news/press-releases/2023/pr23034.html"
+  },
+  "2023-06": {
+    "summary": "연방 부채한도 조정을 담은 재정책임법이 공법 118-5로 제정됐다.",
+    "memo": "재정책임법 제정(3일), 5월 고용동향 발표, 미 연준 동결(14일)이 같은 달입니다.",
+    "sourceName": "GovInfo 공법 118-5",
+    "sourceUrl": "https://www.govinfo.gov/app/details/PLAW-118publ5"
+  },
+  "2023-07": {
+    "summary": "미 노동통계국은 6월 소비자물가(CPI-U)가 계절조정 전월 대비 0.2%, 전년 동월 대비 3.0% 상승했다고 발표했다.",
+    "memo": "6월 소비자물가 12개월 상승률 3.0% 발표와 미 연준 인상이 같은 달입니다.",
+    "sourceName": "미국 노동통계국 CPI 보도자료 아카이브",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/cpi_07122023.htm"
+  },
+  "2023-08": {
+    "summary": "미국 노동통계국이 발표한 2023년 7월 실업률은 3.5%였다. 비농업 부문 일자리는 전월보다 187,000개 늘었다.",
+    "memo": "2023년 7월 실업률 3.5%와 비농업 일자리 187,000개 증가는 2023년 8월 4일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_08042023.htm"
+  },
+  "2023-09": {
+    "summary": "유럽중앙은행은 세 가지 정책금리를 25bp 올렸다.",
+    "memo": "2023년 9월 14일에 '유럽중앙은행, 3개 정책금리 0.25%p 인상' 기록이 있습니다. 이달 시장 스냅샷의 첫·마지막 관측일과 이 날짜를 나란히 놓고 읽어 보세요. 같은 달에는 '미국 8월 고용동향 발표, 실업률 3.8%'(2023년 9월 1일) 기록이 함께 있습니다.",
+    "sourceName": "유럽중앙은행 통화정책 결정",
+    "sourceUrl": "https://www.ecb.europa.eu/press/pr/date/2023/html/ecb.mp230914~aab39f8c21.en.html"
+  },
+  "2023-10": {
+    "summary": "미국 노동통계국이 발표한 2023년 9월 실업률은 3.8%였다. 비농업 부문 일자리는 전월보다 336,000개 늘었다.",
+    "memo": "2023년 9월 실업률 3.8%와 비농업 일자리 336,000개 증가는 2023년 10월 6일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · 고용동향 발표",
+    "sourceUrl": "https://www.bls.gov/news.release/archives/empsit_10062023.htm"
+  },
+  "2023-11": {
+    "summary": "금융위원회는 임시회의에서 11월 6일부터 2024년 상반기까지 국내 증시 전 종목의 공매도를 금지하기로 의결했다.",
+    "memo": "공매도 전면 금지 의결(5일), 미 연준 동결(1일), 10월 고용동향 발표가 같은 달입니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/81013"
+  },
+  "2023-12": {
+    "summary": "미국 노동통계국이 발표한 2023년 11월 실업률은 3.7%였다. 비농업 부문 일자리는 전월보다 199,000개 늘었다.",
+    "memo": "2023년 11월 실업률 3.7%와 비농업 일자리 199,000개 증가는 2023년 12월 8일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 5.25~5.5% 동결'(2023년 12월 13일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/november-2023-656421"
+  },
   "2024-01": {
     "summary": "미국 증권거래위원회가 여러 현물 비트코인 상장지수상품의 상장과 거래를 승인했습니다.",
     "memo": "승인 대상인 상장지수상품과 그 상품이 담는 기초자산을 구분해 보세요.",
     "sourceName": "미 SEC 위원장 발표",
     "sourceUrl": "https://www.sec.gov/newsroom/speeches-statements/gensler-statement-spot-bitcoin-011023"
+  },
+  "2024-02": {
+    "summary": "금융위원회는 상장기업의 기업가치 제고 계획 수립·공시 지원 등을 담은 기업 밸류업 지원방안을 발표했다.",
+    "memo": "기업 밸류업 지원방안 발표와 1월 고용동향 발표가 같은 달입니다.",
+    "sourceName": "금융위원회 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/81780"
+  },
+  "2024-03": {
+    "summary": "일본은행은 무담보 익일물 콜금리를 0~0.1% 수준으로 유도하기로 하고 수익률곡선 관리 체계를 끝냈다.",
+    "memo": "일본은행의 마이너스 금리 종료와 미 연준 동결이 같은 달입니다.",
+    "sourceName": "일본은행 금융정책결정회합 결정문",
+    "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240319a.pdf"
+  },
+  "2024-04": {
+    "summary": "미국 노동통계국이 발표한 2024년 3월 실업률은 3.8%였다. 비농업 부문 일자리는 전월보다 303,000개 늘었다.",
+    "memo": "2024년 3월 실업률 3.8%와 비농업 일자리 303,000개 증가는 2024년 4월 5일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 이달에 수록된 다른 사건은 없습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/march-2024-666205"
+  },
+  "2024-05": {
+    "summary": "미국 연방공개시장위원회는 5월 1일 성명에서 연방기금금리 목표 범위를 5.25~5.5%로 유지하기로 했다.",
+    "memo": "2024년 5월 1일 성명은 연방기금금리 목표 범위 5.25~5.5%를 유지했습니다. 같은 달에는 '미국 4월 고용동향 발표, 실업률 3.9%'(2024년 5월 3일) 기록이 함께 있습니다.",
+    "sourceName": "미 연준 FOMC 성명",
+    "sourceUrl": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20240501a.htm"
+  },
+  "2024-06": {
+    "summary": "미국 노동통계국이 발표한 2024년 5월 실업률은 4.0%였다. 비농업 부문 일자리는 전월보다 272,000개 늘었다.",
+    "memo": "2024년 5월 실업률 4.0%와 비농업 일자리 272,000개 증가는 2024년 6월 7일에 발표된 첫 추정치입니다. 조사 대상 달과 발표 달이 다르다는 점을 기억해 두세요. 같은 달에는 '미 연준, 연방기금금리 5.25~5.5% 동결'(2024년 6월 12일) 기록이 함께 있습니다.",
+    "sourceName": "미국 노동통계국 · FRASER 보관 원문",
+    "sourceUrl": "https://fraser.stlouisfed.org/title/employment-situation-144/may-2024-669371"
+  },
+  "2024-07": {
+    "summary": "일본은행은 무담보 익일물 콜금리를 0.25% 수준으로 유도하기로 했다. 국채 매입 축소 계획은 2025년 6월 회의에서 중간 점검하기로 했다.",
+    "memo": "일본은행 인상(31일)과 미 연준 동결(31일)이 같은 날입니다.",
+    "sourceName": "일본은행 금융정책결정회합 결정문",
+    "sourceUrl": "https://www.boj.or.jp/en/mopo/mpmdeci/mpr_2024/k240731a.pdf"
   },
   "2024-08": {
     "summary": "S&P Global은 8월 초 하락 이후 미국 대형주가 반등했다고 정리했습니다.",
@@ -420,6 +2508,18 @@
       "sourceName": "S&P Global 2024년 8월 시장 리뷰",
       "sourceUrl": "https://www.spglobal.com/market-intelligence/en/news-insights/articles/2024/9/large-cap-equities-recover-from-sell-off-with-s-p-500-up-in-4th-straight-month-83168790"
     }
+  },
+  "2024-09": {
+    "summary": "미 연준 공개시장운영 표에 기록된 목표 수준은 4.75~5.00%입니다. 변경 폭은 50bp 인하입니다.",
+    "memo": "2023년 7월 이후 유지됐던 목표 범위가 처음 낮아진 달입니다.",
+    "sourceName": "미 연준 공개시장운영 금리 변경표",
+    "sourceUrl": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm#2024"
+  },
+  "2024-10": {
+    "summary": "한국은행 금리 추이에서 이날 기준금리는 연 3.50%에서 3.25%로 바뀌었습니다.",
+    "memo": "한국은행 기준금리 인하 기록입니다. 2023년 1월 3.50% 이후 첫 변경이었습니다.",
+    "sourceName": "한국은행 기준금리 추이",
+    "sourceUrl": "https://www.bok.or.kr/portal/singl/baseRate/list.do?dataSeCd=01&menuNo=200643"
   },
   "2024-11": {
     "summary": "S&P Global 집계에서 S&P 500은 11월에 5.7% 상승했습니다.",

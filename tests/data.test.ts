@@ -852,3 +852,43 @@ test('STO consortium rows are sourced facts tied to Broker Atlas ids', () => {
     assert.ok(!/선두|앞서|우위|1위|최초로 앞/.test(row.status + row.focus), `${row.consortium} ranks consortia`);
   }
 });
+
+test('Market narrative notes cite sources and align with real event months', () => {
+  type Event = { date: string; title: string; summary: string; category: string; sourceName: string; sourceUrl: string; then?: string; now?: string; nowSourceUrl?: string };
+  const events = readJson<Event[]>('market/events.json');
+  const periods = new Set<string>();
+  const keys = new Set<string>();
+  for (const event of events) {
+    assert.match(event.date, /^(199\d|20[012]\d)(-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?)?$/);
+    assert.ok(event.title.trim() && event.summary.trim() && event.category.trim() && event.sourceName.trim(), event.date);
+    assert.equal(new URL(event.sourceUrl).protocol, 'https:');
+    if (event.nowSourceUrl) assert.equal(new URL(event.nowSourceUrl).protocol, 'https:');
+    const key = event.date + '\n' + event.title;
+    assert.ok(!keys.has(key), key);
+    keys.add(key);
+    if (event.date.length >= 7) periods.add(event.date.slice(0, 7));
+  }
+  const monthNotes = readJson<Record<string, { summary: string; memo: string; sourceName: string; sourceUrl: string }>>('market/month-notes.json');
+  for (const [period, note] of Object.entries(monthNotes)) {
+    assert.match(period, /^\d{4}-(0[1-9]|1[0-2])$/);
+    assert.ok(periods.has(period), period);
+    assert.ok(note.summary.trim() && note.memo.trim() && note.sourceName.trim(), period);
+    assert.equal(new URL(note.sourceUrl).protocol, 'https:');
+  }
+  assert.ok(Object.keys(monthNotes).length >= 440);
+  const memoCounts = new Map<string, number>();
+  for (const { memo } of Object.values(monthNotes)) memoCounts.set(memo, (memoCounts.get(memo) ?? 0) + 1);
+  assert.ok([...memoCounts.values()].every((count) => count <= 3), 'a Returner Memo text repeats more than three times');
+  assert.ok(!JSON.stringify(monthNotes).includes('menuNo=200656'));
+  type Highlight = { label: string; title: string; summary: string; sourceUrl: string; sourceName: string; month: string };
+  const yearNotes = readJson<Record<string, { summary: string; memo: string; sourceUrl: string; highlights?: Highlight[] }>>('market/year-notes.json');
+  for (let year = 1990; year <= 2026; year++) {
+    const note = yearNotes[String(year)];
+    assert.ok(note?.highlights?.length, String(year));
+    for (const { label, title, summary, sourceUrl, sourceName, month } of note.highlights) {
+      assert.ok(['Theme', 'Surprise'].includes(label) && title.trim() && summary.trim() && sourceName.trim());
+      assert.ok(periods.has(`${year}-${month}`), `${year}-${month}`);
+      assert.equal(new URL(sourceUrl).protocol, 'https:');
+    }
+  }
+});
