@@ -4,6 +4,8 @@ import monthlyRankings from '../../data/market/months/equity-rankings.json';
 import monthlySpyRankings from '../../data/market/months/spy-equity-rankings.json';
 import annualRankings from '../../data/market/annual-equity-rankings.json';
 import annualSpyRankings from '../../data/market/annual-spy-equity-rankings.json';
+import monthlyKrRankings from '../../data/market/months/kr-equity-rankings.json';
+import annualKrRankings from '../../data/market/kr-annual-equity-rankings.json';
 import { brokers, brokerEvents, brokerMetrics, industry2025, industryRanks, interimProfit } from './brokers';
 import { segmentFilings } from './broker-segments';
 import { signals } from './ceo';
@@ -31,6 +33,7 @@ const markets = Object.entries(marketLabels) as Array<[keyof typeof marketLabels
 const equitySeries = [
   { usFund: 'QQQ', monthly: monthlyRankings, annual: annualRankings },
   { usFund: 'SPY', monthly: monthlySpyRankings, annual: annualSpyRankings },
+  { usFund: '', monthly: monthlyKrRankings, annual: annualKrRankings },
 ] as const;
 
 const analyzedScreens = new Set(screens.map(({ number }) => number));

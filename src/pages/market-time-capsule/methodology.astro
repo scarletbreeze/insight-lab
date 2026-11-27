@@ -2,6 +2,21 @@
 import MarketLayout from '../../components/market/MarketLayout.astro';
 import { sitePath } from '../../utils/paths';
 import { gold, koreaMonthlyCloses, marketEvents, months, usFredMonthCount, usMonthlyCloses, years } from '../../utils/market';
+import krRankings from '../../../data/market/months/kr-equity-rankings.json';
+import krAnnual from '../../../data/market/kr-annual-equity-rankings.json';
+import usRankings from '../../../data/market/months/equity-rankings.json';
+import spyRankings from '../../../data/market/months/spy-equity-rankings.json';
+import usIndexChanges from '../../../data/market/qqq-index-changes.json';
+const usMonths = Object.entries(usRankings as Record<string, { US?: unknown }>).filter(([, markets]) => markets.US).map(([period]) => period).sort();
+const spyMonths = Object.keys(spyRankings).sort();
+const qqqSnapshots = Object.values(import.meta.glob('../../../data/market/qqq-holdings-*.json', { eager: true, import: 'default' }) as Record<string, { asOf: string }>)
+  .map(({ asOf }) => asOf).sort();
+const usChangeDates = usIndexChanges.map(({ date }) => date).filter((date) => date >= '2018-01-01').sort();
+const krMonths = Object.keys(krRankings).sort();
+const krSizeMonths = krMonths.filter((period) => !period.startsWith('2024-'));
+const krYears = Object.keys(krAnnual).sort();
+const krMonthlyMin = Math.min(...Object.values(krRankings).map(({ KR }) => KR.eligibleCount));
+const krMonthlyMax = Math.max(...Object.values(krRankings).map(({ KR }) => KR.eligibleCount));
 const usMonthKeys = Object.keys(usMonthlyCloses).sort();
 const usContinuousKeys = usMonthKeys.filter((key) => key >= '2016-12');
 const usMonthRange = [usContinuousKeys[0], usContinuousKeys[usContinuousKeys.length - 1]];
@@ -51,5 +66,12 @@ const coverage = years.map(year => {
   <section class="lab-block">
     <h2>수익률 데이터 수록 기준</h2>
     <p><a href={sitePath('market-time-capsule/equity-data')}>종목 순위 산정 방식, 원자료 및 수록 범위</a></p>
+    <h3 id="us-equity">미국 월간 Top 10 (QQQ·SPY 보유 주식, 근사 모집단)</h3>
+    <p>미국 종목 수익률은 QQQ 보유 주식 기준 {usMonths.length}개월({usMonths[0]}~{usMonths[usMonths.length - 1]})과 SPY 보유 주식 기준 {spyMonths.length}개월({spyMonths[0]}~{spyMonths[spyMonths.length - 1]})을 수록합니다. 가격은 2018년 3월 27일에 종료된 공개 도메인 WIKI 아카이브의 분할 조정 종가이며 배당은 제외합니다. 모집단은 SEC에 제출된 펀드 보유 명세 {qqqSnapshots.length}개({qqqSnapshots[0]}~{qqqSnapshots[qqqSnapshots.length - 1]})에서 출발해 Nasdaq 편입·제외 발표를 반영한 근사 모집단입니다.</p>
+    <p>2018년 3월 이후의 달은 아직 수록하지 않았습니다. 2018~2019년의 편입·제외·종목코드 변경 {usChangeDates.length}건은 Nasdaq 발표와 회사 공시로 기록해 두었고, 2026년 11월 27일 조사에서 무료 일별 종가 출처 가운데 Stooq는 자동 접근을 막는 확인 절차 뒤에 있어 내려받지 못했으며, nasdaq.com 과거 시세 API는 이용약관(2026년 5월 11일 개정)이 개인·비상업 목적 사용과 자동화된 수집 금지, 배포·2차 저작물 금지를 명시해 사용하지 않기로 결정했습니다. 운영자가 브라우저에서 직접 내려받은 분할 조정 일별 종가 아카이브(Stooq <code>d_us_txt.zip</code> 형식)가 준비되면 <code>scripts/market/rank_archive_portfolio.py</code>로 같은 정의의 월간·연간 순위를 계산하고, 출처와 이용 조건, 결정일을 각 달 화면에 표시합니다.</p>
+    <h3 id="kr-equity">한국 월간 Top 10과 연간 Winner·Loser (근사 모집단)</h3>
+    <p>한국 종목 수익률은 {krMonths[0]}부터 {krMonths[krMonths.length - 1]}까지 {krMonths.length}개월과 {krYears[0]}~{krYears[krYears.length - 1]}년 {krYears.length}개 연도를 수록합니다. 당시의 KOSPI 200·KOSDAQ 150 공식 구성종목을 확보하지 못한 {krSizeMonths.length}개월은 각 달 첫 거래일의 종가×상장주식수로 계산한 시가총액 상위 KOSPI 200개와 KOSDAQ(KOSDAQ GLOBAL 포함) 150개 보통주를 근사 모집단으로 사용합니다. 우선주 등 종목코드 끝자리가 0이 아닌 종목, 스팩, 리츠, 코넥스는 제외하고, 코스닥 시세가 없는 1995년 5월~1996년 6월은 KOSPI 200개만 사용합니다. 2024년 12개월은 KODEX·TIGER 두 ETF의 첫 거래일 보유 명세를 모집단으로 하며, 두 모집단은 모두 근사 모집단으로 표시합니다. 연간 결과는 해당 연도 첫 거래일의 같은 모집단을 마지막 거래일까지 추적합니다.</p>
+    <p>수익률은 첫 거래일과 마지막 거래일의 원종가(수정주가 미반영, 배당 제외)를 비교한 값입니다. 분할 조정 종가를 확보하지 못했으므로, 기간 중 상장주식수가 바뀐 종목, 전일 종가와 당일 기준가격이 다른 날이 있는 종목, 첫날 또는 마지막 날 거래량이 0이거나 관측이 빠진 종목은 가격을 조정하지 않고 계산에서 제외합니다. 이 때문에 분할·무상증자·유상증자 종목이 빠지고 매월 계산 종목 수는 {krMonthlyMin}~{krMonthlyMax}개로 달라지며, 각 월 화면에 모집단·시장별 계산 종목 수·사유별 제외 건수를 표시합니다. 1996~1998년 코스닥은 첫날 또는 마지막 날 거래량이 0인 종목이 많아 코스닥 150개 가운데 대부분이 이 규칙으로 빠지므로, 그 시기의 순위는 사실상 KOSPI 중심입니다. 월초 모집단에는 이후 상장폐지된 종목이 포함되지만, 기간 중 거래가 끊긴 종목은 관측·거래량 규칙으로 제외되어 하락 종목이 과소 반영될 수 있습니다. 계산 종목이 모집단의 절반에 못 미치는 달과 연도에는 비교 주의 문구를 표시합니다. 경계 거래일은 코스피·코스닥 월간 종가의 출처와 같습니다.</p>
+    <p>종가와 상장주식수의 출처는 KRX 전종목 시세를 연도별로 모은 <a href="https://github.com/FinanceData/marcap/tree/master/data">FinanceData marcap</a>입니다. 저장소에 이용 조건이 명시되어 있지 않고 KRX 시세의 재배포 조건도 별도 확인이 필요하므로, 프로젝트 운영자는 2026년 11월 27일 발표용으로 과거 종가에서 계산한 종목명·순위·수익률을 출처 표시와 함께 포함하기로 결정했습니다. 2026년 9월 14일 KRX 애프터마켓 개장 이후 포털 일별 시세의 종가가 정규장 종가와 다를 수 있으며, 이 화면은 정규장 종가를 사용합니다. 2026년 11월 이후와 1995년 1~4월은 거래일 달력 또는 시세가 없어 수록하지 않았습니다.</p>
   </section>
 </MarketLayout>

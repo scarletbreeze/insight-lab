@@ -103,3 +103,77 @@ class ClassifyExclusionsTest(unittest.TestCase):
                                  ("감자(주식소각)", "주식소각"), ("우선주의 보통주전환", "우선주 전환"), ("회사분할(존속)", "회사분할"),
                                  ("유상증자(제3자배정)", "유상증자"), ("국내공모 신주인수권부사채 신주인수권 행사", "신주인수권 행사"), ("상호변경", "기타")]:
             self.assertEqual(categorize(reason), category, reason)
+
+
+from rank_marcap_months import (  # noqa: E402
+    REASON_BREAK, REASON_OBSERVATION, REASON_SHARES, REASON_VOLUME, annual_selection, build_ranking,
+    classify_history, compute_returns, is_common_stock, normalize_code, rank_items, select_universe,
+)
+
+
+class MarcapRankingTest(unittest.TestCase):
+    days = [date(2001, 1, 2), date(2001, 1, 3), date(2001, 1, 4)]
+
+    def history(self, closes, *, changes=None, stocks=None, volumes=None):
+        changes = changes or [None] + [b - a for a, b in zip(closes, closes[1:])]
+        stocks = stocks or [1000] * len(closes)
+        volumes = volumes or [10] * len(closes)
+        return list(zip(self.days[:len(closes)], closes, changes, stocks, volumes))
+
+    def test_codes_are_padded_and_common_shares_identified(self):
+        self.assertEqual(normalize_code("5930"), "005930")
+        self.assertEqual(normalize_code("005930"), "005930")
+        self.assertTrue(is_common_stock("005930", "삼성전자"))
+        for code, name in [("005935", "삼성전자우"), ("00593K", "전환우선주"), ("123450", "키움스팩1호"), ("123450", "케이탑리츠"), ("12345", "짧은코드"), ("123450", "")]:
+            with self.subTest(code=code, name=name):
+                self.assertFalse(is_common_stock(code, name))
+
+    def test_universe_takes_largest_common_stocks_per_market(self):
+        rows = [
+            ("5930", "삼성전자", "KOSPI", 100.0, 1000), ("000660", "SK하이닉스", "KOSPI", 50.0, 1000),
+            ("005935", "삼성전자우", "KOSPI", 500.0, 1000), ("000100", "유한양행", "KOSPI", 10.0, 1000),
+            ("035720", "다음", "KOSDAQ", 1.0, 10), ("036570", "엔씨소프트", "KOSDAQ GLOBAL", 1.0, 100),
+            ("000020", "코넥스종목", "KONEX", 1000.0, 1000), ("000040", "주식수없음", "KOSPI", 1000.0, None),
+        ]
+        universe = select_universe(rows, kospi=2, kosdaq=1)
+        self.assertEqual(sorted(universe), ["000660", "005930", "036570"])
+        self.assertEqual(universe["005930"], {"name": "삼성전자", "market": "KOSPI"})
+        with self.assertRaises(ValueError):
+            select_universe(rows + [("005930", "중복", "KOSPI", 1.0, 1)])
+
+    def test_exclusion_reasons_follow_priority(self):
+        first, last = self.days[0], self.days[-1]
+        self.assertEqual(classify_history(self.history([100, 110, 121]), self.days, first, last), "")
+        self.assertEqual(classify_history(self.history([100, 110]), self.days, first, last), REASON_OBSERVATION)
+        self.assertEqual(classify_history(self.history([100, 110, 121], changes=[None, None, 11]), self.days, first, last), REASON_OBSERVATION)
+        self.assertEqual(classify_history(self.history([100, 110, 121], volumes=[10, 10, 0]), self.days, first, last), REASON_VOLUME)
+        self.assertEqual(classify_history(self.history([100, 55, 60], changes=[None, 5, 5]), self.days, first, last), REASON_BREAK)
+        self.assertEqual(classify_history(self.history([100, 110, 121], stocks=[1000, 1000, 1100]), self.days, first, last), REASON_SHARES)
+        broken = self.history([100, 55, 60], changes=[None, 5, 5], stocks=[1000, 2000, 2000], volumes=[0, 1, 1])
+        self.assertEqual(classify_history(broken, self.days, first, last), REASON_VOLUME)
+
+    def test_returns_rankings_and_annual_selection(self):
+        universe = {"000010": {"name": "A", "market": "KOSPI"}, "000020": {"name": "B", "market": "KOSPI"}, "000030": {"name": "C", "market": "KOSDAQ"}}
+        histories = {
+            "000010": self.history([100, 100, 150]), "000020": self.history([100, 100, 1500]),
+            "000030": self.history([100, 100, 90], stocks=[1, 1, 2]),
+        }
+        items, exclusions, excluded = compute_returns(universe, histories, self.days, self.days[0], self.days[-1])
+        self.assertEqual([item["symbol"] for item in rank_items(items)], ["000020", "000010"])
+        self.assertNotIn("market", rank_items(items)[0])
+        self.assertAlmostEqual(items[0]["returnPct"], 50.0)
+        self.assertEqual(items[0]["firstDate"], "2001-01-02")
+        self.assertEqual(dict(exclusions), {REASON_SHARES: 1})
+        self.assertEqual(excluded, ["000030"])
+        selection = annual_selection(items)
+        self.assertEqual((selection["winner"]["symbol"], selection["loser"]["symbol"]), ("000020", "000010"))
+        self.assertEqual([item["symbol"] for item in selection["tenbaggers"]], ["000020"])
+        self.assertIsNone(build_ranking(universe, items, exclusions, excluded, kosdaq_available=True, trading_day_sources=[]))
+        many = [{**items[0], "symbol": f"{n:06}", "market": "KOSPI"} for n in range(10)]
+        ranking = build_ranking(universe, many, exclusions, excluded, kosdaq_available=False, trading_day_sources=["https://a", "https://a"])
+        self.assertEqual(ranking["membership"], "approximate")
+        self.assertEqual(ranking["universe"], "KOSPI 시가총액 상위 200 (코스닥 시세 없음)")
+        self.assertNotIn("KOSDAQ(KOSDAQ GLOBAL 포함) 150개", ranking["universeRule"])
+        self.assertEqual(ranking["eligibleByMarket"], {"KOSPI": 10, "KOSDAQ": 0})
+        self.assertEqual((ranking["eligibleCount"], ranking["universeCount"], ranking["tradingDaySources"]), (10, 3, ["https://a"]))
+        self.assertEqual(len(ranking["items"]), 10)

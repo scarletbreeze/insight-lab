@@ -3,6 +3,7 @@ import koreanCoverage from '../../../data/market/months/kr-equity-coverage.json'
 import krActions from '../../../data/market/kr-exclusion-actions.json';
 import priceCoverage from '../../../data/market/months/kr-price-coverage-2024.json';
 import raw from '../../../data/market/months/equity-rankings.json';
+import krRaw from '../../../data/market/months/kr-equity-rankings.json';
 import spyRaw from '../../../data/market/months/spy-equity-rankings.json';
 import { sitePath } from '../../utils/paths';
 
@@ -29,6 +30,11 @@ interface Ranking {
   tickerChangeSources?: string[];
   archiveTickers?: { symbol: string; archiveSymbol: string; sourceUrl: string }[];
   priceMethod?: string;
+  universeRule?: string;
+  eligibleByMarket?: Record<string, number>;
+  tradingDaySources?: string[];
+  decisionDate?: string;
+  priceDisclosure?: string;
   items: Equity[];
 }
 
@@ -45,8 +51,11 @@ const describeActions = (groups: ActionGroup[]) => groups.map(({ action, kindRea
   `${kindReason ?? action}${kindName ? ` (KIND 법인명 ${kindName})` : ''} · ${dates.join(', ')} · ${shares.map((count) => shareFormat.format(count)).join(', ')}주`).join(' / ');
 const checked = koreanCoverage[period as keyof typeof koreanCoverage];
 const rankings = (raw as Record<string, Partial<Record<Market, Ranking>>>)[period];
+const krFile = (krRaw as Record<string, { KR: Ranking }>)[period]?.KR;
+const krRanking = rankings?.KR ?? krFile;
+const krDisclosure = !rankings?.KR && krFile ? '수정주가 미반영 · 주식수 변동 종목 제외 · 출처 FinanceData marcap(KRX 종가 집계) · 운영자 2026-11-27 발표용 포함 결정' : '';
 const spy = (spyRaw as Record<string, { US: Ranking }>)[period]?.US;
-const comparisons: Array<[string, Ranking | undefined]> = [['한국', rankings?.KR], ['미국 · QQQ', rankings?.US]];
+const comparisons: Array<[string, Ranking | undefined]> = [['한국', krRanking], ['미국 · QQQ', rankings?.US]];
 if (spy) comparisons.push(['미국 · SPY', spy]);
 const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: 'exceptZero' });
 ---
@@ -58,8 +67,13 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
     return <section class="lab-card">
       <h3>{market} Top 10</h3>
       {ranking?.items.length ? <>
-        <p>{ranking.universe} · {ranking.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'} · {ranking.eligibleCount}개 계산</p>
+        <p>{ranking.universe} · {ranking.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'} · {ranking.eligibleCount}개 계산{ranking.eligibleByMarket && ' (계산 KOSPI ' + ranking.eligibleByMarket.KOSPI + ' · KOSDAQ ' + ranking.eligibleByMarket.KOSDAQ + ')'}</p>
+        {ranking.universeCount && ranking.eligibleCount * 2 < ranking.universeCount && <p class="disclosure">모집단의 절반 이상이 제외되어 다른 달과 단순 비교하기 어렵습니다.</p>}
+        {ranking.universeRule && <p>{ranking.universeRule}</p>}
         {ranking.priceMethod && <p>{ranking.priceMethod}</p>}
+        {ranking.priceDisclosure && <p class="price-disclosure">{ranking.priceDisclosure}</p>}
+        {market === '한국' && krDisclosure && <p class="disclosure">{krDisclosure}</p>}
+        {ranking.tradingDaySources?.length && <p>경계 거래일 출처 · {ranking.tradingDaySources.map((url, index, sources) => <><a href={url}>{sources.length === 1 ? '첫·마지막 거래일' : index === 0 ? '첫 거래일' : '마지막 거래일'}</a>{index < sources.length - 1 && ' · '}</>)}</p>}
         {first && <p>{first.firstDate}–{first.lastDate} · <a href={first.sourceUrl}>가격 출처</a></p>}
         {ranking.tickerChangeSources?.map((url) => <p><a href={url}>종목코드 변경을 연결한 근거</a></p>)}
         {ranking.archiveTickers?.length && <details>
@@ -119,6 +133,8 @@ const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximu
   .signed span { position: absolute; left: 50%; }
   .signed .negative { left: auto; right: 50%; }
   .equity-rank-track .negative { background: #a55443; }
+  .disclosure { color: var(--color-muted); font-size: .9em; }
+  .price-disclosure { color: var(--color-muted); font-size: .9em; }
   .exclusion-actions summary { cursor: pointer; padding-block: .5rem; }
   .exclusion-actions .basis { color: var(--color-muted); font-size: .9em; }
   .exclusion-actions .lab-table th[scope="row"] { font-weight: 600; min-width: 9rem; }

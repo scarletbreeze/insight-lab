@@ -28,6 +28,7 @@ python3 scripts/check_site_links.py
 - 시장 지표는 `python3 scripts/market/collect_prices.py --through YYYY-MM-DD`로 FRED의 일별 관측값을 월별로 집계한다.
 - 미국 월간 지수의 경계 종가는 뉴스·증권사 마감 보도를 우선 출처로 기록하고, `python3 scripts/market/verify_us_index_closes.py --through YYYY-MM-DD`로 FRED 관측과 대조해 날짜·값의 차이와 미수록 월을 확인한다. 보도를 확보하지 못한 2016년 12월 이후의 달은 `python3 scripts/market/collect_us_index_closes.py`로 FRED 관측값을 출처로 채우며, 그 달은 출처 주소의 호스트로 구분한다. FRED 두 계열의 재배포 조건은 [시장 자료 조사](docs/market-equity-source-research.md)에 기록한다.
 - 월간 종목 순위는 검증한 시점별 모집단과 분할 조정 종가를 담은 CSV가 있어야 생성할 수 있다. 필수 열은 `scripts/market/calculate_returns.py`의 `REQUIRED`를 참고한다.
+- 한국 월간 Top 10과 연간 Winner·Loser(1995년 5월~)는 로컬에 내려받은 FinanceData marcap 연도별 Parquet로 `python3 scripts/market/rank_marcap_months.py marcap-*.parquet --verified .local-research/kr-equity-rankings-2024.json --verified-annual .local-research/kr-equity-annual-2024.json`을 실행해 `data/market/months/kr-equity-rankings.json`과 `data/market/kr-annual-equity-rankings.json`을 다시 만든다. 월초 시가총액 상위 KOSPI 200·KOSDAQ 150 근사 모집단과 원종가(수정주가 미반영)를 사용하며 기준은 [시장 자료 조사](docs/market-equity-source-research.md)에 있다.
 - 공개 블로그 메타데이터는 `python3 scripts/archive/import_notes.py /path/to/scarletbreeze.github.io`로 재현한다. 원문과 비공개 자료는 원래 보관 위치에서 관리한다.
 
 ## GitHub Pages

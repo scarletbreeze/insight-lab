@@ -381,5 +381,125 @@
       "TTWO": "Take-Two Interactive Software, Inc.",
       "WDAY": "Workday, Inc."
     }
+  },
+  {
+    "date": "2018-01-02",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+    "remove": [
+      "LILA",
+      "LILAK"
+    ],
+    "add": {}
+  },
+  {
+    "date": "2018-03-12",
+    "sourceUrl": "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+    "remove": [
+      "LVNTA",
+      "QVCA"
+    ],
+    "add": {
+      "QRTEA": "Qurate Retail, Inc."
+    }
+  },
+  {
+    "date": "2018-07-23",
+    "sourceUrl": "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+    "remove": [
+      "DISH"
+    ],
+    "add": {
+      "PEP": "PepsiCo, Inc."
+    }
+  },
+  {
+    "date": "2018-11-05",
+    "sourceUrl": "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+    "remove": [
+      "CA"
+    ],
+    "add": {
+      "NXPI": "NXP Semiconductors N.V."
+    }
+  },
+  {
+    "date": "2018-11-19",
+    "sourceUrl": "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+    "remove": [
+      "XRAY"
+    ],
+    "add": {
+      "XEL": "Xcel Energy Inc."
+    }
+  },
+  {
+    "date": "2018-12-24",
+    "sourceUrl": "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215",
+    "remove": [
+      "ESRX",
+      "HOLX",
+      "QRTEA",
+      "SHPG",
+      "STX",
+      "VOD"
+    ],
+    "add": {
+      "AMD": "Advanced Micro Devices, Inc.",
+      "LULU": "lululemon athletica inc.",
+      "NTAP": "NetApp, Inc.",
+      "UAL": "United Continental Holdings, Inc.",
+      "VRSN": "VeriSign, Inc.",
+      "WLTW": "Willis Towers Watson Public Limited Company"
+    }
+  },
+  {
+    "date": "2019-11-05",
+    "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+    "remove": [
+      "CTRP"
+    ],
+    "add": {
+      "TCOM": "Trip.com Group Limited"
+    }
+  },
+  {
+    "date": "2019-11-05",
+    "sourceUrl": "https://newsroom.gendigital.com/Symantec-Completes-Sale-of-Enterprise-Security-Assets-to-Broadcom",
+    "remove": [
+      "SYMC"
+    ],
+    "add": {
+      "NLOK": "NortonLifeLock Inc."
+    }
+  },
+  {
+    "date": "2019-11-21",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/exelon-corporation-to-join-the-nasdaq-100-index-beginning-november-21-2019-20191119",
+    "remove": [
+      "CELG"
+    ],
+    "add": {
+      "EXC": "Exelon Corporation"
+    }
+  },
+  {
+    "date": "2019-12-23",
+    "sourceUrl": "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-8-20191214/",
+    "remove": [
+      "HAS",
+      "HSIC",
+      "JBHT",
+      "MYL",
+      "NLOK",
+      "WYNN"
+    ],
+    "add": {
+      "ANSS": "ANSYS, Inc.",
+      "CDW": "CDW Corporation",
+      "CPRT": "Copart, Inc.",
+      "CSGP": "CoStar Group, Inc.",
+      "SGEN": "Seattle Genetics, Inc.",
+      "SPLK": "Splunk Inc."
+    }
   }
 ]

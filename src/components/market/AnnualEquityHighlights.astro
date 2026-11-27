@@ -1,5 +1,6 @@
 ---
 import data from '../../../data/market/annual-equity-rankings.json';
+import krData from '../../../data/market/kr-annual-equity-rankings.json';
 import krCoverage from '../../../data/market/kr-annual-price-coverage.json';
 import krActions from '../../../data/market/kr-exclusion-actions.json';
 import spyData from '../../../data/market/annual-spy-equity-rankings.json';
@@ -21,6 +22,10 @@ interface Summary {
   eligibleCount: number;
   universeCount: number;
   priceMethod?: string;
+  universeRule?: string;
+  eligibleByMarket?: Record<string, number>;
+  tradingDaySources?: string[];
+  decisionDate?: string;
   excludedSymbols?: string[];
   exclusions?: Record<string, number>;
   corporateActionSources?: string[];
@@ -53,7 +58,10 @@ const { year } = Astro.props;
 const checked = krCoverage[String(year) as keyof typeof krCoverage];
 const summaries = (data as Record<string, Partial<Record<Market, Summary>>>)[String(year)];
 const spy = (spyData as Record<string, { US: Summary }>)[String(year)]?.US;
-const comparisons: Array<[string, Summary | undefined]> = [['한국', summaries?.KR], ['미국 · QQQ', summaries?.US]];
+const krFile = (krData as Record<string, { KR: Summary }>)[String(year)]?.KR;
+const krSummary = summaries?.KR ?? krFile;
+const krDisclosure = !summaries?.KR && krFile ? '수정주가 미반영 · 주식수 변동 종목 제외 · 출처 FinanceData marcap(KRX 종가 집계) · 운영자 2026-11-27 발표용 포함 결정' : '';
+const comparisons: Array<[string, Summary | undefined]> = [['한국', krSummary], ['미국 · QQQ', summaries?.US]];
 if (spy) comparisons.push(['미국 · SPY', spy]);
 const format = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDisplay: 'exceptZero' });
 const actions = (krActions.periods as Record<string, ActionPeriod | undefined>)[String(year)];
@@ -66,15 +74,19 @@ const describeCheck = ({ exclusionReason, zeroVolumeDays, priceBreakDays }: Excl
 ---
 <section class="lab-block" id="annual-equity">
   <h2>연간 종목 수익률</h2>
-  {summaries || spy || checked ? <div class="lab-grid">
+  {summaries || spy || checked || krSummary ? <div class="lab-grid">
     {comparisons.map(([label, summary]) => {
       return <article class="lab-card">
         <h3>{label}</h3>
         {summary ? <>
-          <p>{summary.winner.firstDate}~{summary.winner.lastDate} · {summary.eligibleCount}/{summary.universeCount}개 계산</p>
+          <p>{summary.winner.firstDate}~{summary.winner.lastDate} · {summary.eligibleCount}/{summary.universeCount}개 계산{summary.eligibleByMarket && ' (계산 KOSPI ' + summary.eligibleByMarket.KOSPI + ' · KOSDAQ ' + summary.eligibleByMarket.KOSDAQ + ')'}</p>
+          {summary.eligibleCount * 2 < summary.universeCount && <p class="disclosure">모집단의 절반 이상이 제외되어 다른 연도와 단순 비교하기 어렵습니다.</p>}
           <p><a href={summary.membershipSourceUrl}>{summary.universe}</a> · {summary.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'}</p>
           {(summary.membershipSourceUrls ?? []).slice(1).map((url, index) => <p><a href={url}>구성종목 출처 {index + 2}</a></p>)}
+          {summary.universeRule && <p>{summary.universeRule}</p>}
           {summary.priceMethod && <p>{summary.priceMethod}</p>}
+          {label === '한국' && krDisclosure && <p class="disclosure">{krDisclosure}</p>}
+          {summary.tradingDaySources?.length && <p>경계 거래일 출처 · {summary.tradingDaySources.map((url, index, sources) => <><a href={url}>{sources.length === 1 ? '첫·마지막 거래일' : index === 0 ? '첫 거래일' : '마지막 거래일'}</a>{index < sources.length - 1 && ' · '}</>)}</p>}
           {summary.excludedSymbols?.length && <details>
             <summary>계산에서 제외한 종목 {summary.excludedSymbols.length}개</summary>
             <ul>{Object.entries(summary.exclusions ?? {}).map(([reason, count]) => <li>{reason} · {count}개</li>)}</ul>
@@ -131,6 +143,7 @@ const describeCheck = ({ exclusionReason, zeroVolumeDays, priceBreakDays }: Excl
 </section>
 
 <style>
+  .disclosure { color: var(--color-muted); font-size: .9em; }
   .coverage-meter label, .coverage-reasons dl div, .coverage-actions dl div { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
   .coverage-meter strong, .coverage-reasons dd, .coverage-actions dd { font-variant-numeric: tabular-nums; white-space: nowrap; }
   .coverage-meter progress { display: block; width: 100%; height: .65rem; accent-color: var(--lab-accent); margin-top: .5rem; }

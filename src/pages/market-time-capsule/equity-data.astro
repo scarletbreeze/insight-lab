@@ -3,6 +3,8 @@ import MarketLayout from '../../components/market/MarketLayout.astro';
 import koreanCoverage from '../../../data/market/months/kr-equity-coverage.json';
 import priceCoverage from '../../../data/market/months/kr-price-coverage-2024.json';
 import raw from '../../../data/market/months/equity-rankings.json';
+import krRaw from '../../../data/market/months/kr-equity-rankings.json';
+import krAnnual from '../../../data/market/kr-annual-equity-rankings.json';
 import spy from '../../../data/market/months/spy-equity-rankings.json';
 import annual from '../../../data/market/annual-equity-rankings.json';
 import spyAnnual from '../../../data/market/annual-spy-equity-rankings.json';
@@ -10,22 +12,24 @@ import { sitePath } from '../../utils/paths';
 
 type Market = 'KR' | 'US';
 type Rankings = Record<string, Partial<Record<Market, { eligibleCount: number; universeCount: number }>>>;
-function coverage(primary: Rankings, sp500: Rankings) {
-  return [...new Set([...Object.keys(primary), ...Object.keys(sp500)])].sort().reverse().map((period) => ({
+function coverage(primary: Rankings, sp500: Rankings, korea: Rankings) {
+  return [...new Set([...Object.keys(primary), ...Object.keys(sp500), ...Object.keys(korea)])].sort().reverse().map((period) => ({
     period,
     counts: [
-      { label: '한국', data: primary[period]?.KR },
+      { label: '한국', data: primary[period]?.KR ?? korea[period]?.KR },
       { label: 'QQQ', data: primary[period]?.US },
       { label: 'SPY', data: sp500[period]?.US },
     ],
   }));
 }
-const months = coverage(raw, spy);
-const years = coverage(annual, spyAnnual);
+const months = coverage(raw, spy, krRaw);
+const years = coverage(annual, spyAnnual, krAnnual);
+const krMonths = Object.keys(krRaw).sort();
 ---
 <MarketLayout title="종목 순위 산정 방식과 수록 범위">
   <section class="lab-block">
     <h2>수록 월</h2>
+    {krMonths.length > 0 && <p>한국은 {krMonths[0]}~{krMonths[krMonths.length - 1]} {krMonths.length}개월을 월초 시가총액 상위 KOSPI 200·KOSDAQ 150 근사 모집단과 원종가로 수록했습니다(2024년은 ETF 보유 명세 모집단). 수정주가는 반영하지 않았으며 상장주식수가 바뀐 종목은 제외했습니다. <a href={sitePath('market-time-capsule/methodology') + '#kr-equity'}>산정 기준과 운영자 결정</a></p>}
     {months.length ? <ul class="lab-list">
       {months.map(({ period, counts }) => <li>
         <a href={sitePath('market-time-capsule/' + period.replace('-', '/')) + '#equity-rankings'}>{period}</a>
@@ -46,7 +50,7 @@ const years = coverage(annual, spyAnnual);
 
   <section class="lab-block" id="kr-coverage">
     <h2>한국 ETF 보유 종목의 월별 검증 범위</h2>
-    <p>2024년 12개월의 첫 거래일에 KOSPI 200·코스닥150을 추종한 두 ETF의 보유 주식을 일별 시세와 대조했습니다. 11월은 미래에셋 TIGER, 다른 달은 삼성 KODEX 명세를 사용했습니다. 첫날과 마지막 날에 거래가 있었고 모든 관측일에 종가가 이어지며 상장주식수가 일정했던 종목 수를 표시합니다. 순위는 가격 자료의 공개 이용 범위를 확인 중입니다.</p>
+    <p>2024년 12개월의 첫 거래일에 KOSPI 200·코스닥150을 추종한 두 ETF의 보유 주식을 일별 시세와 대조했습니다. 11월은 미래에셋 TIGER, 다른 달은 삼성 KODEX 명세를 사용했습니다. 첫날과 마지막 날에 거래가 있었고 모든 관측일에 종가가 이어지며 상장주식수가 일정했던 종목 수를 표시합니다. 종목별 Top 10은 운영자의 2026년 11월 27일 발표용 포함 결정에 따라 각 월 화면에 공개합니다.</p>
     <p>네이버 일별 시세로 검사 통과 종목의 월간 수익률을 다시 계산했습니다. 2024년 12개월 모두 상위 10개의 종목과 순서가 일치했습니다. 월별 검사 통과 종목 수의 합은 3,846건으로, 같은 종목이 여러 달에 포함될 수 있습니다.</p>
     <details id="december-price-check"><summary>2024년 12월 상위 10개 순서 교차 검증</summary>
       <p>두 ETF의 월초 보유 주식 353개 중 검사 통과 종목 321개 전부를 네이버 일별 시세로 다시 계산했습니다. 12월 2일 종가에서 30일 종가까지의 수익률로 정렬하자 상위 10개 종목의 순서가 모두 일치했습니다. 상위 10개의 수익률은 두 출처의 계산값 사이에 최대 0.005%p 미만의 차이가 있었습니다.</p>
@@ -101,7 +105,7 @@ const years = coverage(annual, spyAnnual);
         <h3>한국</h3>
         <p>KOSPI 200과 KOSDAQ 150의 당시 구성종목 및 해당일 가격을 확인합니다.</p>
         <p>2024년 12월 2일과 30일의 국내 원종가 5,482행을 일괄 조회했습니다. 당시 ETF 보유 종목 353개를 대조한 결과, {koreanCoverage['2024-12'].eligible}개가 거래량·종가 연속성·상장주식수 검사를 통과했습니다. 월별 검증 표에서 나머지 종목의 제외 사유를 확인할 수 있습니다.</p>
-        <p>지수 순위 산정에는 당시의 공식 편입 목록과 기업행동을 반영한 가격이 필요합니다.</p>
+        <p>지수 순위 산정에는 당시의 공식 편입 목록과 기업행동을 반영한 가격이 필요합니다. 공식 편입 목록이 없는 달은 월초 시가총액 상위 종목을 근사 모집단으로 사용하고, 기업행동은 가격을 조정하지 않고 해당 종목을 제외하는 방식으로 대신합니다.</p>
         <ul class="lab-list">
           <li><a href="https://data.krx.co.kr/contents/MDC/STAT/standard/MDCSTAT006.jsp">KRX 지수 구성종목</a></li>
           <li><a href="https://www.kif.re.kr/KIF/Publication/OthersDetail.aspx?ControlNo=342019&amp;NodeID=402">2024년 12월 지수 정기 변경 발표</a></li>

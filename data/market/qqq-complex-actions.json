@@ -44,5 +44,20 @@
       "LMCK"
     ],
     "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1560385/000156038516000077/lmca-20160415x8k.htm"
+  },
+  {
+    "date": "2018-03-09",
+    "symbols": [
+      "LVNTA"
+    ],
+    "sourceUrl": "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+  },
+  {
+    "date": "2019-03-19",
+    "symbols": [
+      "FOX",
+      "FOXA"
+    ],
+    "sourceUrl": "https://press.spglobal.com/2019-03-14-Fox-Set-to-Join-S-P-500-Adobe-to-Join-S-P-100"
   }
 ]

@@ -3,6 +3,7 @@ import MarketLayout from '../../../components/market/MarketLayout.astro';
 import yearNotes from '../../../../data/market/year-notes.json';
 import equityRankings from '../../../../data/market/months/equity-rankings.json';
 import spyEquityRankings from '../../../../data/market/months/spy-equity-rankings.json';
+import krEquityRankings from '../../../../data/market/months/kr-equity-rankings.json';
 import PeriodNavigation from '../../../components/market/PeriodNavigation.astro';
 import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
 import IndexCalendar from '../../../components/market/IndexCalendar.astro';
@@ -28,7 +29,7 @@ for (const { date } of items) {
   monthCounts.set(month, (monthCounts.get(month) ?? 0) + 1);
 }
 const sources = [...new Map(items.map(({ sourceUrl, sourceName }) => [sourceUrl, sourceName]))];
-const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spyEquityRankings)]);
+const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spyEquityRankings), ...Object.keys(krEquityRankings)]);
 ---
 <MarketLayout title={year + '년 시장 기록'} {year}>
   {note && <p slot="intro">{note.summary}</p>}

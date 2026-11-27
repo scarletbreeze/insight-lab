@@ -689,3 +689,66 @@ test('The 2021 equity review reconciles the 58 insured securities firms', () => 
   assert.ok(review.companies.every(({ equity }) => equity < threshold('daishin')));
   assert.equal(companies.filter(({ equity }) => equity > companies.find((row) => row.id === 'daishin')!.equity).length, 9);
 });
+
+test('Korean approximate-universe rankings are complete, disclosed and consistent with the verified 2024 coverage', () => {
+  type Equity = { symbol: string; name: string; returnPct: number; firstDate: string; lastDate: string; sourceUrl: string };
+  type Ranking = { universe: string; membership: string; universeCount: number; eligibleCount: number; exclusions: Record<string, number>;
+    excludedSymbols: string[]; membershipSourceUrls: string[]; priceMethod: string; universeRule?: string; decisionDate?: string; eligibleByMarket?: Record<string, number> };
+  const fields = ['symbol', 'name', 'returnPct', 'firstDate', 'lastDate', 'sourceUrl'];
+  const checkEquity = (period: string, item: Equity, ranking: Ranking) => {
+    assert.deepEqual(Object.keys(item).sort(), [...fields].sort());
+    assert.ok(Number.isFinite(item.returnPct) && item.symbol && item.name);
+    assert.ok(item.firstDate.startsWith(period) && item.lastDate.startsWith(period) && item.firstDate < item.lastDate);
+    assert.ok(!ranking.excludedSymbols.includes(item.symbol));
+    assert.equal(new URL(item.sourceUrl).hostname, 'github.com');
+  };
+  const monthly = readJson<Record<string, { KR: Ranking & { items: Equity[] } }>>('market/months/kr-equity-rankings.json');
+  const primary = readJson<Record<string, { KR?: unknown }>>('market/months/equity-rankings.json');
+  const calendar = readJson<{ monthly: Record<string, { firstDate: string; lastDate: string }> }>('market/korea-index-closes.json').monthly;
+  const coverage = readJson<Record<string, { universe: number; eligible: number; excluded: Record<string, number>; holdingsSources: string[] }>>('market/months/kr-equity-coverage.json');
+  const periods = Object.keys(monthly);
+  assert.ok(periods.length >= 370 && periods.includes('1995-05') && periods.includes('2026-10'));
+  assert.equal(periods.filter((period) => period.startsWith('2024-')).length, 12);
+  for (const [period, { KR }] of Object.entries(monthly)) {
+    assert.ok(!primary[period]?.KR, `${period} is published twice`);
+    assert.equal(KR.membership, 'approximate');
+    assert.ok(KR.eligibleCount >= 10 && KR.universeCount >= KR.eligibleCount && KR.priceMethod && KR.universe);
+    assert.equal(KR.eligibleCount + KR.excludedSymbols.length, KR.universeCount);
+    assert.equal(Object.values(KR.exclusions).reduce((a, b) => a + b, 0), KR.excludedSymbols.length);
+    assert.equal(KR.items.length, 10);
+    assert.equal(new Set(KR.items.map(({ symbol }) => symbol)).size, 10);
+    KR.items.forEach((item) => checkEquity(period, item, KR));
+    assert.deepEqual(KR.items.map(({ returnPct }) => returnPct), [...KR.items.map(({ returnPct }) => returnPct)].sort((a, b) => b - a));
+    assert.equal(KR.items[0].firstDate, calendar[period].firstDate);
+    assert.equal(KR.items[0].lastDate, calendar[period].lastDate);
+    assert.ok(KR.membershipSourceUrls.every((url) => new URL(url).protocol === 'https:'));
+    if (period.startsWith('2024-')) {
+      const checked = coverage[period];
+      assert.equal(KR.universeCount, checked.universe);
+      assert.equal(KR.eligibleCount, checked.eligible);
+      assert.deepEqual(KR.exclusions, checked.excluded);
+      assert.deepEqual(KR.membershipSourceUrls, checked.holdingsSources);
+    } else {
+      assert.ok(KR.universeRule && KR.decisionDate === '2026-11-27');
+      assert.ok(KR.universeCount <= 350);
+      assert.deepEqual(Object.keys(KR.eligibleByMarket ?? {}).sort(), ['KOSDAQ', 'KOSPI']);
+      assert.equal(Object.values(KR.eligibleByMarket ?? {}).reduce((a, b) => a + b, 0), KR.eligibleCount);
+      if (KR.universeCount === 200) assert.ok(!KR.universeRule.includes('150개') && KR.eligibleByMarket?.KOSDAQ === 0);
+    }
+  }
+  const annual = readJson<Record<string, { KR: Ranking & { winner: Equity; loser: Equity; tenbaggers: Equity[] } }>>('market/kr-annual-equity-rankings.json');
+  const primaryAnnual = readJson<Record<string, { KR?: unknown }>>('market/annual-equity-rankings.json');
+  const years = Object.keys(annual);
+  assert.ok(years.length >= 29 && years.includes('1996') && years.includes('2025'));
+  for (const [year, { KR }] of Object.entries(annual)) {
+    assert.ok(!primaryAnnual[year]?.KR);
+    assert.equal(KR.eligibleCount + KR.excludedSymbols.length, KR.universeCount);
+    assert.ok(KR.eligibleCount >= 10);
+    for (const item of [KR.winner, KR.loser, ...KR.tenbaggers]) checkEquity(year, item, KR);
+    assert.equal(KR.winner.firstDate, calendar[`${year}-01`].firstDate);
+    assert.equal(KR.winner.lastDate, calendar[`${year}-12`].lastDate);
+    assert.ok(KR.winner.returnPct >= KR.loser.returnPct && KR.tenbaggers.every(({ returnPct }) => returnPct >= 900));
+  }
+  assert.equal(annual['2023'].KR.tenbaggers.length, 1);
+  assert.equal(annual['2024'].KR.universeCount, 350);
+});

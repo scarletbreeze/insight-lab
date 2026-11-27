@@ -3,6 +3,8 @@ import MarketLayout from '../../components/market/MarketLayout.astro';
 import equityRankings from '../../../data/market/months/equity-rankings.json';
 import spyRankings from '../../../data/market/months/spy-equity-rankings.json';
 import annualRankings from '../../../data/market/annual-equity-rankings.json';
+import krRankings from '../../../data/market/months/kr-equity-rankings.json';
+import krAnnualRankings from '../../../data/market/kr-annual-equity-rankings.json';
 import { years, marketEvents } from '../../utils/market';
 import { sitePath } from '../../utils/paths';
 
@@ -10,6 +12,8 @@ const documented = new Set(marketEvents.map(({ date }) => Number(date.slice(0, 4
 const rankedMonths = Object.keys(equityRankings).sort();
 const rankedYears = Object.keys(annualRankings).sort();
 const spyMonths = Object.keys(spyRankings).sort();
+const krMonths = Object.keys(krRankings).sort();
+const krYears = Object.keys(krAnnualRankings).sort();
 const monthLabel = (period: string) => {
   const [year, month] = period.split('-');
   return year + '년 ' + Number(month) + '월';
@@ -47,6 +51,7 @@ function periodRanges(periods: string[]) {
   <section class="lab-block">
     <h2>종목 수익률과 검증 범위</h2>
     <p><a href={sitePath('market-time-capsule/2024') + '#annual-equity'}>2024년 국내 ETF 보유 종목의 연간 검증 결과</a> · <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>국내 월별 시세 점검표</a></p>
+    {krMonths.length > 0 && <p>한국은 월초 시가총액 상위 KOSPI 200·KOSDAQ 150 근사 모집단(2024년은 ETF 보유 명세 기준)으로 {periodRanges(krMonths)}의 월간 Top 10 {krMonths.length}개월과 {krYears[0]}~{krYears[krYears.length - 1]}년 연간 Winner·Loser {krYears.length}개 연도를 수록했습니다. 수정주가 미반영 · <a href={sitePath('market-time-capsule/methodology') + '#kr-equity'}>산정 기준</a></p>}
     <p>QQQ 보유 주식을 기준으로 {periodRanges(rankedMonths)}의 월간 수익률 {rankedMonths.length}개월을 수록했습니다.</p>
     {spyMonths.length > 0 && <p>SPY 기준은 {periodRanges(spyMonths)} {spyMonths.length}개월을 수록했습니다.</p>}
     <ul class="lab-chips">
