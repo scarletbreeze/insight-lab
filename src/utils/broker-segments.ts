@@ -1,7 +1,7 @@
 import filings from '../../data/brokers/disclosed-segments.json';
 import { formatEok } from './krw';
 
-interface Filing {
+export interface SegmentTable {
   basis: string;
   unit: string;
   metric: string;
@@ -11,6 +11,12 @@ interface Filing {
   sourceUrl: string;
   segments: { name: string; amounts: number[] }[];
   total: number[];
+  note?: string;
+}
+
+// `annual` holds the fiscal-year table from the 사업보고서 when the main table is an interim cumulative period.
+interface Filing extends SegmentTable {
+  annual?: SegmentTable;
 }
 
 export const segmentFilings: Partial<Record<string, Filing>> = filings;

@@ -1,38 +1,52 @@
 ---
-import { formatSegmentAmount, segmentFilings, segmentTag } from '../../utils/broker-segments';
+import { formatSegmentAmount, segmentFilings, segmentTag, type SegmentTable } from '../../utils/broker-segments';
 import { brokers } from '../../utils/brokers';
 interface Props { brokerId: string; }
 const { brokerId } = Astro.props;
 const filing = segmentFilings[brokerId];
 const brokerName = brokers.find(({ id }) => id === brokerId)?.name ?? brokerId;
-const latestIndex = filing ? filing.years.length - 1 : 0;
-const segments = [...(filing?.segments ?? [])].sort((a, b) => b.amounts[latestIndex] - a.amounts[latestIndex]);
-const scale = Math.max(1, ...segments.map(({ amounts }) => Math.abs(amounts[latestIndex])));
+const tables: { table: SegmentTable; period: string; key: string }[] = filing
+  ? [{ table: filing, period: filing.period ?? '연간 결산', key: 'main' }, ...(filing.annual ? [{ table: filing.annual, period: filing.annual.period ?? '연간 결산', key: 'annual' }] : [])]
+  : [];
+const sorted = (table: SegmentTable) => {
+  const latestIndex = table.years.length - 1;
+  const segments = [...table.segments].sort((a, b) => b.amounts[latestIndex] - a.amounts[latestIndex]);
+  const scale = Math.max(1, ...segments.map(({ amounts }) => Math.abs(amounts[latestIndex])));
+  return { latestIndex, segments, scale };
+};
 ---
 {filing && <section class="lab-block" id={'disclosed-segments-' + brokerId}>
   <h2>공시 부문별 {filing.metric}</h2>
-  <p>{filing.basis} · {filing.period ?? '연간 결산'} · 1조 원 이상은 조와 억으로 표시. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
-  <figure>
-    <figcaption>{filing.years[latestIndex]}년 {filing.period} 부문별 {filing.metric}</figcaption>
-    <ul class="segments">{segments.map(({ name, amounts }) => <li>
-      <span>{name}</span>
-      <span class="track" aria-hidden="true"><i class:list={[{ negative: amounts[latestIndex] < 0 }]} style={{ width: Math.abs(amounts[latestIndex]) / scale * 50 + '%' }}></i></span>
-      <span class="amount">{formatSegmentAmount(amounts[latestIndex], filing.unit)}</span>
-    </li>)}</ul>
-  </figure>
-  <div class="lab-table-wrap" role="region" aria-label={brokerName + ' ' + (filing.period ?? '연간 결산') + ' 부문별 ' + filing.metric + ' 공시 표'} tabindex="0">
-    <table class="lab-table">
-      <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th>{filing.years.map((year) => <th scope="col">{year}년 {filing.period}</th>)}</tr></thead>
-      <tbody>{filing.segments.map(({ name, amounts }) => <tr>
-        <th scope="row">{name}</th><td>{segmentTag(name)}</td>{amounts.map((value) => <td>{formatSegmentAmount(value, filing.unit)}</td>)}
-      </tr>)}</tbody>
-      <tfoot><tr><th scope="row" colspan="2">연결 합계</th>{filing.total.map((value) => <td>{formatSegmentAmount(value, filing.unit)}</td>)}</tr></tfoot>
-    </table>
-  </div>
-  <p><a href={filing.sourceUrl}>{filing.sourceName}</a></p>
+  <p>{filing.basis} · {filing.period ?? '연간 결산'}{filing.annual && <> 과 {filing.annual.period ?? '연간 결산'} 두 표를 따로 보입니다. 기간과 지표가 다르므로 두 표의 금액을 서로 비교하지 않습니다.</>} · 1조 원 이상은 조와 억으로 표시. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
+  {tables.map(({ table, period, key }) => {
+    const { latestIndex, segments, scale } = sorted(table);
+    return <div class="segment-period" id={'disclosed-segments-' + brokerId + '-' + key}>
+      {filing.annual && <h3>{period} · {table.metric}</h3>}
+      <figure>
+        <figcaption>{table.years[latestIndex]}년 {period} 부문별 {table.metric}</figcaption>
+        <ul class="segments">{segments.map(({ name, amounts }) => <li>
+          <span>{name}</span>
+          <span class="track" aria-hidden="true"><i class:list={[{ negative: amounts[latestIndex] < 0 }]} style={{ width: Math.abs(amounts[latestIndex]) / scale * 50 + '%' }}></i></span>
+          <span class="amount">{formatSegmentAmount(amounts[latestIndex], table.unit)}</span>
+        </li>)}</ul>
+      </figure>
+      <div class="lab-table-wrap" role="region" aria-label={brokerName + ' ' + period + ' 부문별 ' + table.metric + ' 공시 표'} tabindex="0">
+        <table class="lab-table">
+          <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th>{table.years.map((year) => <th scope="col">{year}년 {period}</th>)}</tr></thead>
+          <tbody>{table.segments.map(({ name, amounts }) => <tr>
+            <th scope="row">{name}</th><td>{segmentTag(name)}</td>{amounts.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}
+          </tr>)}</tbody>
+          <tfoot><tr><th scope="row" colspan="2">연결 합계</th>{table.total.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}</tr></tfoot>
+        </table>
+      </div>
+      {table.note && <p>{table.note}</p>}
+      <p><a href={table.sourceUrl}>{table.sourceName}</a></p>
+    </div>;
+  })}
 </section>}
 <style>
   figure { margin: 1rem 0; }
+  .segment-period + .segment-period { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
   .segments { list-style: none; padding: 0; }
   .segments li { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(3rem, 2fr) auto; gap: .5rem; align-items: center; }
   .track { position: relative; height: 1.25rem; }

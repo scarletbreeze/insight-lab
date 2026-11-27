@@ -1,5 +1,17 @@
 [
   {
+    "updatedAt": "2026-11-27T16:30:00+09:00",
+    "service": "market-time-capsule",
+    "title": "마켓 타임캡슐 2차 보강 · FOMC 성명 24건, 미국 고용동향 30건, 소비자물가 35건 추가로 3건 이상 기록된 달 69→109개월 · 2008년 이후 Returner Memo 39개 수기 교체(수기 215개)",
+    "route": "market-time-capsule/2023/06"
+  },
+  {
+    "updatedAt": "2026-11-27T16:30:00+09:00",
+    "service": "broker-atlas",
+    "title": "한국투자·메리츠·KB·하나·대신·신한의 연간 부문별 손익(FY2024~2025, DART 연결 주석)을 분기 누적 표와 분리해 추가 · 10개사 모두 연간 부문 공시 수록",
+    "route": "broker-atlas/brokers/hana"
+  },
+  {
     "updatedAt": "2026-11-27T14:50:00+09:00",
     "service": "broker-atlas",
     "title": "Broker Atlas 전환점 30→64건 · 사업보고서 연혁으로 자본 조달·사업·M&A 유형 보강, 회사별 IR·DART 정기보고서·공시 참고자료 절 추가",

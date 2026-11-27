@@ -75,14 +75,31 @@ test('Independent VOC review reconciles year and topic agreement counts', () => 
 });
 
 test('Broker segment amounts reconcile with disclosed consolidated totals', () => {
-  type Disclosure = { years: number[]; total: number[]; sourceUrl: string; segments: { name: string; amounts: number[] }[] };
+  type Table = { unit: string; metric: string; period?: string; years: number[]; total: number[]; sourceName: string; sourceUrl: string; segments: { name: string; amounts: number[] }[] };
+  type Disclosure = Table & { annual?: Table };
   const filings = readJson<Record<string, Disclosure>>('brokers/disclosed-segments.json');
-  for (const filing of Object.values(filings)) {
-    assert.ok(['kind.krx.co.kr', 'dart.fss.or.kr'].includes(new URL(filing.sourceUrl).hostname));
-    assert.equal(new Set(filing.segments.map(({ name }) => name)).size, filing.segments.length);
-    assert.ok(filing.segments.every(({ amounts }) => amounts.length === filing.years.length));
-    assert.deepEqual(filing.years.map((_, index) =>
-      filing.segments.reduce((sum, segment) => sum + segment.amounts[index], 0)), filing.total);
+  const check = (table: Table, label: string) => {
+    assert.ok(['kind.krx.co.kr', 'dart.fss.or.kr'].includes(new URL(table.sourceUrl).hostname), label);
+    assert.ok(['천원', '백만원'].includes(table.unit), label + ' unit');
+    assert.ok(table.metric.trim() && table.sourceName.trim(), label + ' labels');
+    assert.equal(new Set(table.segments.map(({ name }) => name)).size, table.segments.length, label + ' duplicate segment');
+    assert.ok(table.segments.every(({ amounts }) => amounts.length === table.years.length), label + ' amounts per year');
+    assert.deepEqual(table.years, [...table.years].sort((a, b) => a - b), label + ' year order');
+    assert.deepEqual(table.years.map((_, index) =>
+      table.segments.reduce((sum, segment) => sum + segment.amounts[index], 0)), table.total, label + ' total');
+  };
+  for (const [id, filing] of Object.entries(filings)) {
+    check(filing, id);
+    if (filing.period && filing.period !== '연간 결산') {
+      assert.ok(filing.annual, id + ' interim table needs an annual 사업보고서 table');
+    }
+    if (filing.annual) {
+      check(filing.annual, id + ' annual');
+      assert.equal(filing.annual.period, '연간 결산', id + ' annual period');
+      assert.equal(filing.annual.unit, filing.unit, id + ' annual unit matches the interim table');
+      assert.ok(filing.annual.years.includes(2025), id + ' annual table covers FY2025');
+      assert.equal(new URL(filing.annual.sourceUrl).hostname, 'dart.fss.or.kr', id + ' annual source');
+    }
   }
 });
 
