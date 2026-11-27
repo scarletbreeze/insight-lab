@@ -1,0 +1,334 @@
+{
+  "kiwoom": [
+    {
+      "title": "키움증권 회사소개·IR 사이트",
+      "kind": "IR",
+      "publisher": "키움증권",
+      "url": "https://www.kiwoom.com/h/ir/main",
+      "date": "2026-11-27",
+      "note": "회사개요·주주현황·보도자료 메뉴 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260317000838",
+      "date": "2026-03-17",
+      "note": "제27기 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001559",
+      "date": "2026-11-13",
+      "note": "2026년 1~9월 누적 연결 실적"
+    },
+    {
+      "title": "키움증권 보도자료",
+      "kind": "보도자료",
+      "publisher": "키움증권",
+      "url": "https://www.kiwoom.com/h/ir/promote/VPressReleaseView",
+      "date": "2026-11-27",
+      "note": "회사 보도자료 목록 (확인일 기준)"
+    }
+  ],
+  "mirae-asset": [
+    {
+      "title": "미래에셋증권 정기보고서·실적보고서",
+      "kind": "IR",
+      "publisher": "미래에셋증권",
+      "url": "https://securities.miraeasset.com/newir/view/pc/kr/investor/financialsReports.jsp",
+      "date": "2026-11-27",
+      "note": "2026년 3분기 실적보고서·재무제표 내려받기 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515002972",
+      "date": "2026-05-15",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116002051",
+      "date": "2026-11-16",
+      "note": "2026년 1~9월 누적 연결 실적"
+    },
+    {
+      "title": "미래에셋증권 보도자료",
+      "kind": "보도자료",
+      "publisher": "미래에셋증권",
+      "url": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsList.jsp",
+      "date": "2026-11-27",
+      "note": "회사 보도자료 목록 (확인일 기준)"
+    }
+  ],
+  "nh-investment": [
+    {
+      "title": "NH투자증권 IR 재무정보",
+      "kind": "IR",
+      "publisher": "NH투자증권",
+      "url": "https://ir.nhsec.com/ir/irInfo/fncPrb.action",
+      "date": "2026-11-27",
+      "note": "연도별 재무정보 표 (확인일 기준)"
+    },
+    {
+      "title": "NH투자증권 IR자료실",
+      "kind": "IR",
+      "publisher": "NH투자증권",
+      "url": "https://ir.nhsec.com/ir/wooriwmBoard/boardList.action?sType_Cd=2000000000&sBoard_Id=188&wooriwm=ir",
+      "date": "2026-11-13",
+      "note": "분기 순자본비율(NCR) 자료, 최신 2026년 3분기"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260313000771",
+      "date": "2026-03-13",
+      "note": "연결·별도 재무제표와 회사의 연혁 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113000872",
+      "date": "2026-11-13",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "samsung": [
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260312001379",
+      "date": "2026-03-12",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001244",
+      "date": "2026-11-16",
+      "note": "2026년 1~9월 누적 연결 실적"
+    },
+    {
+      "title": "2026년 정기주주총회 소집공고",
+      "kind": "공시",
+      "publisher": "한국거래소 KIND",
+      "url": "https://kind.krx.co.kr/external/2026/02/23/001222/20260223002971/00591.htm",
+      "date": "2026-02-23",
+      "note": "2025년 재무제표 수록"
+    }
+  ],
+  "korea-investment": [
+    {
+      "title": "한국투자증권 재무정보",
+      "kind": "IR",
+      "publisher": "한국투자증권",
+      "url": "https://securities.koreainvestment.com/main/company/invest/Invest.jsp?cmd=TF08ca000000",
+      "date": "2026-11-27",
+      "note": "FY2026 3분기까지 분기별 재무정보 (확인일 기준)"
+    },
+    {
+      "title": "한국투자증권 사업보고서 목록",
+      "kind": "IR",
+      "publisher": "한국투자증권",
+      "url": "https://securities.koreainvestment.com/main/company/invest/Invest.jsp?cmd=TF08cb000000",
+      "date": "2026-11-27",
+      "note": "FY2025 사업보고서·FY2026 3분기보고서 게시 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260515000880",
+      "date": "2026-05-15",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001340",
+      "date": "2026-11-13",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "meritz": [
+    {
+      "title": "메리츠금융그룹 실적발표 자료",
+      "kind": "IR",
+      "publisher": "메리츠금융지주",
+      "url": "https://www.meritzgroup.com/web/ko/ir/ir1.do",
+      "date": "2026-11-27",
+      "note": "지주 통합 실적발표, 증권 부문 포함 (확인일 기준)"
+    },
+    {
+      "title": "메리츠증권 재무정보(그룹 IR)",
+      "kind": "IR",
+      "publisher": "메리츠금융지주",
+      "url": "https://www.meritzgroup.com/web/ko/ir/ir4_3.do",
+      "date": "2026-11-27",
+      "note": "그룹 IR 사이트의 메리츠증권 재무정보 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260401004248",
+      "date": "2026-04-01",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001503",
+      "date": "2026-11-16",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "kb": [
+    {
+      "title": "KB증권 재무정보",
+      "kind": "IR",
+      "publisher": "KB증권",
+      "url": "https://kr.kbsec.com/go.able?linkcd=m0301001",
+      "date": "2026-11-27",
+      "note": "2025.4Q~2026.3Q 재무상태표·손익계산서 (확인일 기준)"
+    },
+    {
+      "title": "KB증권 정기보고서",
+      "kind": "IR",
+      "publisher": "KB증권",
+      "url": "https://kr.kbsec.com/go.able?linkcd=m0301003",
+      "date": "2026-11-27",
+      "note": "사업·영업·감사보고서 목록 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260324000784",
+      "date": "2026-03-24",
+      "note": "연결·별도 재무제표와 회사의 연혁 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116001123",
+      "date": "2026-11-16",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "hana": [
+    {
+      "title": "하나증권 재무정보",
+      "kind": "IR",
+      "publisher": "하나증권",
+      "url": "https://www.hanaw.com/corebbs5/auditRpt/list/list.cmd",
+      "date": "2026-11-13",
+      "note": "사업보고서·검토보고서 목록, 최신 제52기 3분기"
+    },
+    {
+      "title": "하나증권 공시정보",
+      "kind": "IR",
+      "publisher": "하나증권",
+      "url": "https://www.hanaw.com/corebbs5/post/list/list.cmd",
+      "date": "2026-11-27",
+      "note": "순자본비율·임원 선임 등 경영공시 목록 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260316001131",
+      "date": "2026-03-16",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001337",
+      "date": "2026-11-13",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "daishin": [
+    {
+      "title": "대신증권 재무정보",
+      "kind": "IR",
+      "publisher": "대신증권",
+      "url": "https://company.daishin.com/e5/mboard/ptype_listonly/financia_statement/DW_Basic_List.aspx?boardseq=232",
+      "date": "2026-11-09",
+      "note": "요약재무제표, 최신 3QFY2026"
+    },
+    {
+      "title": "대신증권 공시정보",
+      "kind": "IR",
+      "publisher": "대신증권",
+      "url": "https://company.daishin.com/E5/MBoard/PType_Basic/Basic_024/DW_Basic_List.aspx?boardseq=120",
+      "date": "2026-11-27",
+      "note": "영업·사업보고서, NCR 검토보고서, 감사보고서 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260319000718",
+      "date": "2026-03-19",
+      "note": "기재정정본 · 연혁과 연결 재무제표 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261113001261",
+      "date": "2026-11-13",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ],
+  "shinhan": [
+    {
+      "title": "신한투자증권 재무정보",
+      "kind": "IR",
+      "publisher": "신한투자증권",
+      "url": "https://open.shinhansec.com/new_ir/info/info_01_01.jsp",
+      "date": "2026-11-27",
+      "note": "대차대조표·손익계산서 (확인일 기준)"
+    },
+    {
+      "title": "신한투자증권 경영공시",
+      "kind": "IR",
+      "publisher": "신한투자증권",
+      "url": "https://open.shinhansec.com/new_ir/info/info_02_05.jsp",
+      "date": "2026-11-27",
+      "note": "경영공시 게시판 (확인일 기준)"
+    },
+    {
+      "title": "2025년 사업보고서",
+      "kind": "사업보고서",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260325000632",
+      "date": "2026-03-25",
+      "note": "연결·별도 재무제표와 회사의 연혁 수록"
+    },
+    {
+      "title": "2026년 3분기보고서",
+      "kind": "공시",
+      "publisher": "금융감독원 DART",
+      "url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261116000557",
+      "date": "2026-11-16",
+      "note": "2026년 1~9월 누적 연결 실적"
+    }
+  ]
+}

@@ -10,6 +10,24 @@
   },
   {
     "id": "kiwoom",
+    "year": 2021,
+    "date": "2021-06-30",
+    "type": "capital",
+    "title": "상환전환우선주 제3차·제4차 발행",
+    "summary": "2021년 6월 30일 상환전환우선주 제3차 166,203주와 제4차 2,659,263주를 발행했다고 2025년 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260317000838&dcmNo=11133869&eleId=5&offset=130540&length=39733&dtd=dart4.xsd"
+  },
+  {
+    "id": "kiwoom",
+    "year": 2021,
+    "date": "2021-09-08",
+    "type": "digital",
+    "title": "본인신용정보관리업(마이데이터) 본허가",
+    "summary": "2021년 9월 8일 본인신용정보관리업 본허가를 획득했다고 2025년 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260317000838&dcmNo=11133869&eleId=5&offset=130540&length=39733&dtd=dart4.xsd"
+  },
+  {
+    "id": "kiwoom",
     "year": 2022,
     "date": "2022-04-27",
     "type": "regulation",
@@ -25,6 +43,15 @@
     "title": "아시아 자산운용 법인 설립",
     "summary": "키움증권 공시 연혁에 해외 자산운용 법인 Kiwoom Asset Management Asia Pte. Ltd.의 설립을 기록했다.",
     "sourceUrl": "https://kind.krx.co.kr/external/2024/03/20/002198/20240320010130/11011.htm"
+  },
+  {
+    "id": "kiwoom",
+    "year": 2025,
+    "date": "2025-02-28",
+    "type": "ma",
+    "title": "키움프라이빗에쿼티 지분 60% 인수",
+    "summary": "2025년 2월 28일 키움프라이빗에쿼티 지분 60%를 인수해 지분 100%를 보유하게 됐다고 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260317000838&dcmNo=11133869&eleId=5&offset=130540&length=39733&dtd=dart4.xsd"
   },
   {
     "id": "kiwoom",
@@ -46,12 +73,39 @@
   },
   {
     "id": "mirae-asset",
+    "year": 2021,
+    "date": "2021-03-24",
+    "type": "business",
+    "title": "미래에셋대우에서 미래에셋증권으로 사명 변경",
+    "summary": "2021년 3월 24일 상호를 미래에셋대우 주식회사에서 미래에셋증권 주식회사로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515002972&dcmNo=11388476&eleId=7&offset=122003&length=34331&dtd=dart4.xsd"
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2021,
+    "date": "2021-05-12",
+    "type": "regulation",
+    "title": "단기금융업무 인가",
+    "summary": "2021년 5월 12일 자본시장법 제360조에 따른 단기금융업무 인가를 받았다고 2025년 사업보고서에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515002972&dcmNo=11388476&eleId=7&offset=122003&length=34331&dtd=dart4.xsd"
+  },
+  {
+    "id": "mirae-asset",
     "year": 2024,
     "date": "2024-08-26",
     "type": "digital",
     "title": "해외 공시 번역·요약 서비스 개시",
     "summary": "미국·일본·중국·홍콩 공시의 번역과 요약을 M-STOCK과 카이로스에서 제공하기 시작했다.",
     "sourceUrl": "https://securities.miraeasset.com/newir/view/pc/kr/about/newsView.jsp?seq=596"
+  },
+  {
+    "id": "mirae-asset",
+    "year": 2024,
+    "date": "2024-11",
+    "type": "global",
+    "title": "인도 증권사 Sharekhan 연결 종속회사 편입",
+    "summary": "2024년 11월 인도 Sharekhan Limited 등이 연결 종속회사로 편입되고 미래에셋쉐어칸이 출범했다고 사업보고서에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515002972&dcmNo=11388476&eleId=7&offset=122003&length=34331&dtd=dart4.xsd"
   },
   {
     "id": "mirae-asset",
@@ -70,6 +124,33 @@
     "title": "자기자본 8조원 이상 종합금융투자사업자 지정",
     "summary": "종합투자계좌(IMA) 업무를 할 수 있는 사업자로 지정됐다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85692"
+  },
+  {
+    "id": "nh-investment",
+    "year": 2005,
+    "date": "2005-04-01",
+    "type": "ma",
+    "title": "LG투자증권과 우리증권 합병, 우리투자증권으로 사명 변경",
+    "summary": "2005년 4월 1일 LG투자증권과 우리증권이 합병하면서 상호를 우리투자증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260313000771&dcmNo=11120222&eleId=5&offset=105010&length=63913&dtd=dart4.xsd"
+  },
+  {
+    "id": "nh-investment",
+    "year": 2014,
+    "date": "2014-06-27",
+    "type": "ma",
+    "title": "최대주주가 농협금융지주로 변경",
+    "summary": "2014년 6월 27일 우리금융지주의 보유지분 매각으로 최대주주가 농협금융지주로 바뀌었다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260313000771&dcmNo=11120222&eleId=5&offset=105010&length=63913&dtd=dart4.xsd"
+  },
+  {
+    "id": "nh-investment",
+    "year": 2014,
+    "date": "2014-12-31",
+    "type": "ma",
+    "title": "NH농협증권 합병, NH투자증권으로 사명 변경",
+    "summary": "2014년 12월 30일 NH농협증권을 흡수합병하고 12월 31일 상호를 NH투자증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260313000771&dcmNo=11120222&eleId=5&offset=105010&length=63913&dtd=dart4.xsd"
   },
   {
     "id": "nh-investment",
@@ -100,12 +181,57 @@
   },
   {
     "id": "samsung",
+    "year": 2000,
+    "date": "2000-12-01",
+    "type": "ma",
+    "title": "삼성투자신탁증권 흡수합병",
+    "summary": "2000년 12월 1일 삼성투자신탁증권을 흡수합병했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260312001379&dcmNo=11117265&eleId=7&offset=133342&length=46218&dtd=dart4.xsd"
+  },
+  {
+    "id": "samsung",
+    "year": 2011,
+    "date": "2011-11",
+    "type": "capital",
+    "title": "주주배정 유상증자(960만주)",
+    "summary": "2011년 11월 주주배정 방식으로 960만주의 신주를 발행하는 유상증자를 실시했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260312001379&dcmNo=11117265&eleId=7&offset=133342&length=46218&dtd=dart4.xsd"
+  },
+  {
+    "id": "samsung",
+    "year": 2017,
+    "date": "2017-03",
+    "type": "capital",
+    "title": "주주배정 유상증자(약 1,286만주)",
+    "summary": "2017년 3월 주주배정 방식으로 약 1,286만주의 신주를 발행하는 유상증자를 실시했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260312001379&dcmNo=11117265&eleId=7&offset=133342&length=46218&dtd=dart4.xsd"
+  },
+  {
+    "id": "samsung",
     "year": 2017,
     "date": "2017-11",
     "type": "regulation",
     "title": "자기자본 4조원 이상 종합금융투자사업자 지정",
     "summary": "삼성증권이 자기자본 4조원 요건을 충족해 지정됐다. 발행어음 업무에 필요한 단기금융업은 별도 인가 대상이다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "samsung",
+    "year": 2021,
+    "date": "2021-02",
+    "type": "business",
+    "title": "중개형 ISA 출시",
+    "summary": "2021년 2월 중개형 ISA를 출시했다고 2025년 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260312001379&dcmNo=11117265&eleId=7&offset=133342&length=46218&dtd=dart4.xsd"
+  },
+  {
+    "id": "samsung",
+    "year": 2022,
+    "date": "2022-02",
+    "type": "digital",
+    "title": "미국주식 주간거래 서비스 개시",
+    "summary": "2022년 2월 미국주식 주간거래 서비스를 시작했다고 2025년 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260312001379&dcmNo=11117265&eleId=7&offset=133342&length=46218&dtd=dart4.xsd"
   },
   {
     "id": "samsung",
@@ -118,6 +244,15 @@
   },
   {
     "id": "korea-investment",
+    "year": 2003,
+    "date": "2003-06-03",
+    "type": "business",
+    "title": "한국투자신탁증권에서 한국투자증권으로 사명 변경",
+    "summary": "2003년 6월 3일 상호를 한국투자신탁증권에서 한국투자증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515000880&dcmNo=11382775&eleId=7&offset=85674&length=9448&dtd=dart4.xsd"
+  },
+  {
+    "id": "korea-investment",
     "year": 2005,
     "date": "2005-05-20",
     "type": "ma",
@@ -127,12 +262,30 @@
   },
   {
     "id": "korea-investment",
+    "year": 2016,
+    "date": "2016-11-29",
+    "type": "capital",
+    "title": "유상증자로 자기자본 4조원 이상 요건 충족",
+    "summary": "2016년 11월 29일 유상증자를 실시해 자기자본 4조원 이상의 초대형 투자은행 요건을 충족했다고 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515000880&dcmNo=11382775&eleId=7&offset=85674&length=9448&dtd=dart4.xsd"
+  },
+  {
+    "id": "korea-investment",
     "year": 2017,
     "date": "2017-11",
     "type": "regulation",
     "title": "단기금융업 인가",
     "summary": "금융위 현황표에서 한국투자증권은 4조원 이상 종투사 지정과 발행어음 업무 인가를 같은 달에 받았다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "korea-investment",
+    "year": 2018,
+    "date": "2018-06-26",
+    "type": "global",
+    "title": "인도네시아 증권사 인수",
+    "summary": "2018년 6월 26일(등기일 기준) PT Korea Investment & Sekuritas Indonesia를 인수했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260515000880&dcmNo=11382775&eleId=7&offset=85674&length=9448&dtd=dart4.xsd"
   },
   {
     "id": "korea-investment",
@@ -154,12 +307,39 @@
   },
   {
     "id": "meritz",
+    "year": 2020,
+    "date": "2020-04-06",
+    "type": "business",
+    "title": "메리츠종금증권에서 메리츠증권으로 사명 변경",
+    "summary": "종합금융업이 2020년 4월 5일 종료되면서 4월 6일 상호를 메리츠종금증권에서 메리츠증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260401004248&dcmNo=11228667&eleId=7&offset=112762&length=18522&dtd=dart4.xsd"
+  },
+  {
+    "id": "meritz",
     "year": 2023,
     "date": "2023-04-05",
     "type": "ma",
     "title": "메리츠금융지주의 완전 자회사 편입",
     "summary": "포괄적 주식교환을 통해 메리츠금융지주가 메리츠증권 주식 전부를 보유하게 됐다.",
     "sourceUrl": "https://kind.krx.co.kr/external/2026/03/18/002029/20260318009409/11011.htm"
+  },
+  {
+    "id": "meritz",
+    "year": 2025,
+    "date": "2025-06-09",
+    "type": "capital",
+    "title": "주주배정 유상증자 500억원 결정",
+    "summary": "2025년 6월 9일 보통주 400만주를 1주당 12,500원에 발행하는 500억원 규모의 주주배정 유상증자를 결정했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260401004248&dcmNo=11228667&eleId=7&offset=112762&length=18522&dtd=dart4.xsd"
+  },
+  {
+    "id": "meritz",
+    "year": 2025,
+    "date": "2025-12-12",
+    "type": "capital",
+    "title": "제3자배정 유상증자(전환우선주 5,000억원)",
+    "summary": "2025년 12월 12일 전환우선주 38,750,679주를 1주당 12,903원에 발행하는 5,000억원 규모의 제3자배정 유상증자를 실시했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260401004248&dcmNo=11228667&eleId=7&offset=112762&length=18522&dtd=dart4.xsd"
   },
   {
     "id": "meritz",
@@ -172,6 +352,15 @@
   },
   {
     "id": "kb",
+    "year": 2013,
+    "date": "2013-10-30",
+    "type": "regulation",
+    "title": "종합금융투자사업자 지정",
+    "summary": "KB증권 사업보고서의 사업 변화 연혁에 2013년 10월 30일 자본시장법에 따른 종합금융투자사업자 지정이 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260324000784&dcmNo=11173382&eleId=5&offset=64672&length=29269&dtd=dart4.xsd"
+  },
+  {
+    "id": "kb",
     "year": 2016,
     "date": "2016-12-30",
     "type": "ma",
@@ -181,12 +370,30 @@
   },
   {
     "id": "kb",
+    "year": 2017,
+    "date": "2017-11-09",
+    "type": "global",
+    "title": "베트남 현지법인 자회사 편입",
+    "summary": "2017년 11월 9일 KB Securities Vietnam(옛 Maritime Securities)을 자회사로 편입했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260324000784&dcmNo=11173382&eleId=5&offset=64672&length=29269&dtd=dart4.xsd"
+  },
+  {
+    "id": "kb",
     "year": 2019,
     "date": "2019-05",
     "type": "regulation",
     "title": "단기금융업 인가",
     "summary": "금융위원회가 KB증권의 발행어음 업무에 필요한 단기금융업을 인가했다.",
     "sourceUrl": "https://www.fsc.go.kr/no010101/85876"
+  },
+  {
+    "id": "kb",
+    "year": 2025,
+    "date": "2025-08-22",
+    "type": "business",
+    "title": "일반사모집합투자업 등록",
+    "summary": "2025년 8월 22일 일반사모집합투자업을 등록했다고 2025년 사업보고서에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260324000784&dcmNo=11173382&eleId=5&offset=64672&length=29269&dtd=dart4.xsd"
   },
   {
     "id": "kb",
@@ -208,12 +415,39 @@
   },
   {
     "id": "hana",
+    "year": 2018,
+    "date": "2018-03-27",
+    "type": "capital",
+    "title": "유상증자로 자본금 2,467억원",
+    "summary": "2018년 3월 27일 유상증자로 자본금이 2,467억원으로 증가했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260316001131&dcmNo=11127286&eleId=7&offset=119862&length=15470&dtd=dart4.xsd"
+  },
+  {
+    "id": "hana",
     "year": 2019,
     "date": "2019-07-10",
     "type": "regulation",
     "title": "종합금융투자사업자 지정",
     "summary": "하나금융투자가 기업 신용공여 등의 업무를 할 수 있는 종합금융투자사업자로 지정됐다.",
     "sourceUrl": "https://kind.krx.co.kr/external/2025/06/11/000677/20250611001829/10120.htm"
+  },
+  {
+    "id": "hana",
+    "year": 2022,
+    "date": "2022-07-01",
+    "type": "business",
+    "title": "하나금융투자에서 하나증권으로 사명 변경",
+    "summary": "2022년 7월 1일 상호를 하나금융투자에서 하나증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260316001131&dcmNo=11127286&eleId=7&offset=119862&length=15470&dtd=dart4.xsd"
+  },
+  {
+    "id": "hana",
+    "year": 2023,
+    "date": "2023-10-27",
+    "type": "ma",
+    "title": "하나자산운용 인수 및 자회사 편입",
+    "summary": "2023년 10월 27일 하나자산운용을 인수해 자회사로 편입했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260316001131&dcmNo=11127286&eleId=7&offset=119862&length=15470&dtd=dart4.xsd"
   },
   {
     "id": "hana",
@@ -235,6 +469,33 @@
   },
   {
     "id": "daishin",
+    "year": 2006,
+    "date": "2006-10-16",
+    "type": "capital",
+    "title": "런던증권거래소 GDR 상장",
+    "summary": "2006년 10월 16일 런던증권거래소에 2천만 GDR을 상장했고 자본금이 500억원 증가했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260319000718&dcmNo=11148798&eleId=7&offset=135658&length=55553&dtd=dart4.xsd"
+  },
+  {
+    "id": "daishin",
+    "year": 2011,
+    "date": "2011-08-26",
+    "type": "business",
+    "title": "계열회사 저축은행업 인가, 대신저축은행으로 상호 변경",
+    "summary": "2011년 8월 26일 계열회사 디에스비컴퍼니가 저축은행업 인가를 받고 상호를 대신저축은행으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260319000718&dcmNo=11148798&eleId=7&offset=135658&length=55553&dtd=dart4.xsd"
+  },
+  {
+    "id": "daishin",
+    "year": 2014,
+    "date": "2014-05-07",
+    "type": "ma",
+    "title": "우리에프앤아이 지분 인수(대신에프앤아이)",
+    "summary": "2014년 5월 7일 우리에프앤아이 지분을 인수해 계열회사로 추가하고 상호를 대신에프앤아이로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260319000718&dcmNo=11148798&eleId=7&offset=135658&length=55553&dtd=dart4.xsd"
+  },
+  {
+    "id": "daishin",
     "year": 2017,
     "date": "2017-08-29",
     "type": "global",
@@ -253,12 +514,57 @@
   },
   {
     "id": "shinhan",
+    "year": 2002,
+    "date": "2002-08-05",
+    "type": "ma",
+    "title": "신한증권과 합병, 굿모닝신한증권으로 상호 변경",
+    "summary": "2002년 8월 5일 신한금융지주 계열 편입 후 신한증권과 합병하고 상호를 굿모닝신한증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260325000632&dcmNo=11176278&eleId=5&offset=99802&length=35253&dtd=dart4.xsd"
+  },
+  {
+    "id": "shinhan",
+    "year": 2016,
+    "date": "2016-09-07",
+    "type": "capital",
+    "title": "유상증자 5천억원",
+    "summary": "2016년 9월 7일 5천억원 규모의 유상증자로 자본금이 1조 5,470억원이 됐다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260325000632&dcmNo=11176278&eleId=5&offset=99802&length=35253&dtd=dart4.xsd"
+  },
+  {
+    "id": "shinhan",
+    "year": 2017,
+    "date": "2017-03-08",
+    "type": "regulation",
+    "title": "종합금융투자사업자 지정",
+    "summary": "2017년 3월 8일 종합금융투자사업자로 지정됐다고 2025년 사업보고서 연혁에 기록돼 있다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260325000632&dcmNo=11176278&eleId=5&offset=99802&length=35253&dtd=dart4.xsd"
+  },
+  {
+    "id": "shinhan",
+    "year": 2019,
+    "date": "2019-07-26",
+    "type": "capital",
+    "title": "유상증자 6,600억원",
+    "summary": "2019년 7월 26일 6,600억원 규모의 유상증자로 자본금이 1조 7,870억원이 됐다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260325000632&dcmNo=11176278&eleId=5&offset=99802&length=35253&dtd=dart4.xsd"
+  },
+  {
+    "id": "shinhan",
     "year": 2021,
     "date": "2021-06-14",
     "type": "capital",
     "title": "미화 2억 7천만 달러 외화 신종자본증권 발행",
     "summary": "당시 신한금융투자가 자본 확충을 목적으로 만기가 영구인 외화 신종자본증권을 사모 방식으로 발행했다.",
     "sourceUrl": "https://kind.krx.co.kr/external/2025/11/14/002362/20251114005361/11013.htm"
+  },
+  {
+    "id": "shinhan",
+    "year": 2022,
+    "date": "2022-10-01",
+    "type": "business",
+    "title": "신한금융투자에서 신한투자증권으로 사명 변경",
+    "summary": "2022년 10월 1일 상호를 신한금융투자에서 신한투자증권으로 변경했다.",
+    "sourceUrl": "https://dart.fss.or.kr/report/viewer.do?rcpNo=20260325000632&dcmNo=11176278&eleId=5&offset=99802&length=35253&dtd=dart4.xsd"
   },
   {
     "id": "shinhan",

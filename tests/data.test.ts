@@ -920,3 +920,51 @@ test('Market narrative notes cite sources and align with real event months', () 
     }
   }
 });
+
+test('Broker turning points give every company at least four typed, sourced events without duplicates', () => {
+  type TurningPoint = { id: string; year: number; date: string; type: string; title: string; summary: string; sourceUrl: string };
+  const types = ['capital', 'business', 'regulation', 'ma', 'global', 'digital', 'other'];
+  const events = readJson<TurningPoint[]>('brokers/turning-points.json');
+  const brokerIds = readJson<{ id: string }[]>('brokers/brokers.json').map(({ id }) => id);
+  const keys = new Set<string>();
+  for (const event of events) {
+    assert.ok(brokerIds.includes(event.id), event.id);
+    assert.ok(types.includes(event.type), `${event.id} ${event.title} type ${event.type}`);
+    assert.match(event.date, /^\d{4}-(0[1-9]|1[0-2])(-(0[1-9]|[12]\d|3[01]))?$/, `${event.id} ${event.title} date`);
+    assert.equal(event.year, Number(event.date.slice(0, 4)), `${event.id} ${event.title} year`);
+    assert.ok(event.title.trim() && event.summary.trim(), `${event.id} ${event.date} text`);
+    assert.equal(new URL(event.sourceUrl).protocol, 'https:', `${event.id} ${event.title} source`);
+    const key = event.id + '\n' + event.year + '\n' + event.title;
+    assert.ok(!keys.has(key), key);
+    keys.add(key);
+  }
+  for (const id of brokerIds) {
+    const own = events.filter((event) => event.id === id);
+    assert.ok(own.length >= 4, `${id} has ${own.length} turning points`);
+    const dates = own.map(({ date }) => date);
+    assert.deepEqual(dates, [...dates].sort(), `${id} turning points are not in date order`);
+  }
+  for (const type of ['capital', 'business']) assert.ok(events.some((event) => event.type === type), type + ' type is represented');
+});
+
+test('Broker references list at least two dated official sources per company', () => {
+  type Reference = { title: string; kind: string; publisher: string; url: string; date: string; note: string };
+  const references = readJson<Record<string, Reference[]>>('brokers/references.json');
+  const brokerIds = readJson<{ id: string }[]>('brokers/brokers.json').map(({ id }) => id);
+  assert.deepEqual(Object.keys(references).sort(), [...brokerIds].sort());
+  for (const [id, items] of Object.entries(references)) {
+    assert.ok(items.length >= 2 && items.length <= 4, `${id} has ${items.length} references`);
+    assert.ok(items.filter(({ kind }) => kind === '보도자료').length <= 1, `${id} has more than one press release`);
+    assert.ok(items.some(({ url }) => new URL(url).hostname === 'dart.fss.or.kr'), `${id} lacks a DART filing`);
+    const urls = new Set<string>();
+    for (const item of items) {
+      assert.ok(['IR', '사업보고서', '공시', '보도자료'].includes(item.kind), `${id} ${item.title} kind`);
+      assert.ok(item.title.trim() && item.publisher.trim(), `${id} ${item.url} text`);
+      assert.ok(item.note.trim().length > 0 && item.note.length <= 40, `${id} ${item.title} note length`);
+      assert.match(item.date, /^\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/, `${id} ${item.title} date`);
+      assert.equal(new URL(item.url).protocol, 'https:', `${id} ${item.title} url`);
+      assert.ok(!urls.has(item.url), `${id} duplicate url ${item.url}`);
+      urls.add(item.url);
+    }
+  }
+});

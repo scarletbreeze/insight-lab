@@ -4,6 +4,7 @@ import BrokerTrend from '../../../components/broker/BrokerTrend';
 import BrokerTurningPoints from '../../../components/broker/BrokerTurningPoints';
 import MoneyMap from '../../../components/broker/MoneyMap';
 import DisclosedSegments from '../../../components/broker/DisclosedSegments.astro';
+import BrokerReferences from '../../../components/broker/BrokerReferences.astro';
 import { brokers, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
 import { sitePath } from '../../../utils/paths';
 
@@ -97,5 +98,6 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
     <a href={sitePath('broker-atlas/compare') + '?left=' + company.id + '#compare-turning-points'}>다른 증권사와 전환점 비교</a>
     <BrokerTurningPoints brokerId={company.id} detail />
   </section>
+  <BrokerReferences brokerId={company.id} />
   </> : <section class="lab-block"><h2>연결 결산 추이와 사업 구조</h2><p class="empty-state">자료 확인 중</p></section>}
 </BrokerLayout>
