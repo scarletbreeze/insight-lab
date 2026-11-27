@@ -12,5 +12,119 @@
       "label": "금융위 발표 기준 토큰증권 관련 개정 법률 시행 예정일",
       "sourceUrl": "https://www.fsc.go.kr/no010101/87838"
     }
+  ],
+  "temporary-buyback-limit": [
+    {
+      "date": "2026-11-24",
+      "label": "자기주식 1일 취득 주문 한도 완화 시행",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88190"
+    },
+    {
+      "date": "2027-02-23",
+      "label": "한시 완화 종료일 — 연장 또는 종료 여부 확인",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88190"
+    }
+  ],
+  "retirement-pension-reform-oct-2026": [
+    {
+      "date": "2028",
+      "label": "100인 이상 사업장 퇴직급여 사외적립 의무화 예정(근로자퇴직급여보장법 개정 전제, 월일 미공개)",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88027"
+    },
+    {
+      "date": "2029",
+      "label": "10~99인 사업장 사외적립 의무화 예정(월일 미공개)",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88027"
+    },
+    {
+      "date": "2030",
+      "label": "10인 미만 사업장 사외적립 의무화 예정(월일 미공개)",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/88027"
+    }
+  ],
+  "high-risk-product-sales-rules-jul-2025": [
+    {
+      "date": "2025-08-25",
+      "label": "금융소비자보호법 시행령 입법예고·감독규정 변경예고 마감 — 확정 내용 확인",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/84921"
+    }
+  ],
+  "short-selling-resumption": [
+    {
+      "date": "2025-03-31",
+      "label": "공매도 전면 재개 시행일",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/84216"
+    }
+  ],
+  "robo-advisor-pension-discretionary-mar-2025": [
+    {
+      "date": "2025-03-28",
+      "label": "첫 퇴직연금 로보어드바이저 일임서비스 개시 — 사업자별 순차 출시 확인",
+      "sourceUrl": "https://www.fsc.go.kr/no010101/84247"
+    }
+  ],
+  "treasury-clearing-extension": [
+    {
+      "date": "2025-09-30",
+      "label": "자기 포지션 마진 분리 임시 면제 종료",
+      "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury"
+    },
+    {
+      "date": "2026-12-31",
+      "label": "국채 현물 거래 중앙청산 이행일(1년 연장 후)",
+      "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury"
+    },
+    {
+      "date": "2027-06-30",
+      "label": "국채 레포 거래 중앙청산 이행일(1년 연장 후)",
+      "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2025-43-sec-extends-compliance-dates-provides-temporary-exemption-rule-related-clearing-us-treasury"
+    }
+  ],
+  "treasury-clearing": [
+    {
+      "date": "2025-03-31",
+      "label": "마진 분리·청산 접근성 정책 이행일 — 이후 현물·레포 일정은 2025-02-25 연장 시그널 참조",
+      "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-247"
+    }
+  ],
+  "uk-dss": [
+    {
+      "date": "2024-09-30",
+      "label": "디지털 증권 샌드박스 개설 — 신청 접수 시작",
+      "sourceUrl": "https://www.bankofengland.co.uk/Paper/2024/policy-statement/boe-fca-joint-approach-to-the-digital-securities-sandbox"
+    }
+  ],
+  "virtual-asset-protection": [
+    {
+      "date": "2024-07-19",
+      "label": "가상자산 이용자 보호 제도 시행일",
+      "sourceUrl": "https://www.fsc.go.kr/po010106/82682"
+    }
+  ],
+  "settlement-t1": [
+    {
+      "date": "2024-05-28",
+      "label": "T+1 결제주기 및 거래일 내 배분·확인·승인 이행일",
+      "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-29"
+    }
+  ],
+  "foreign-investor-registration": [
+    {
+      "date": "2023-12-14",
+      "label": "외국인 투자자 등록제 폐지 시행일(자본시장법 시행령 개정)",
+      "sourceUrl": "https://www.fsc.go.kr/po010106/80128"
+    }
+  ],
+  "esma-dlt-pilot": [
+    {
+      "date": "2023-03-23",
+      "label": "DLT Pilot Regime 적용 개시",
+      "sourceUrl": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/dlt-pilot-regime"
+    },
+    {
+      "date": "2026-03-23",
+      "label": "최소 운영 기간 3년 도달 — 유럽위원회의 연장 여부 확인",
+      "sourceUrl": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/dlt-pilot-regime"
+    }
   ]
 }

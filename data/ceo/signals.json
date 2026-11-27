@@ -1225,7 +1225,7 @@
     ],
     "question": "상담 직원이 생성형 AI를 사용할 때 어떤 입력과 결과를 검토 기록에 남길까요?",
     "sourceName": "FINRA Regulatory Notice 24-09",
-    "sourceUrl": "https://www.finra.org/sites/default/files/2024-06/regulatory-notice-24-09.pdf",
+    "sourceUrl": "https://www.finra.org/rules-guidance/notices/24-09",
     "region": "GLOBAL",
     "businessAreas": [
       "AI/Data",
@@ -1235,7 +1235,12 @@
       "리스크·준법"
     ],
     "regulator": "FINRA",
-    "lastUpdated": "2024-06-27"
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "FINRA는 대규모 언어모델 등 생성형 AI가 회원사의 투자자 서비스 개선에 기회를 주는 동시에 정확성, 프라이버시, 편향, 지식재산, 위협 행위자의 악용과 관련한 우려가 있다고 밝혔습니다.",
+      "introduced": "2024년 6월 27일 Regulatory Notice 24-09는 기술 중립적인 FINRA 규칙과 연방 증권법이 생성형 AI 이용에도 적용된다고 상기시켰습니다. Rule 3110(감독)에 따라 사업에 맞게 설계된 감독체계에서 모델 리스크 관리와 데이터 프라이버시 등 기술 거버넌스를 다루고, Rule 2210(대중 커뮤니케이션)의 내용 기준은 사람과 도구 어느 쪽이 작성해도 적용된다고 설명했습니다.",
+      "changed": "통지는 새 법적·규제 요건이나 새 해석을 만들지 않는다고 명시했습니다. FINRA는 회원사와의 논의에 열려 있고 규칙 현대화에 대한 의견을 받으며, 필요하면 추가 지침이나 규칙 개정안을 검토한다고 밝혔습니다."
+    }
   },
   {
     "id": "morgan-debrief",
@@ -1287,8 +1292,8 @@
       "미국 SEC"
     ],
     "question": "외화 조달과 거래 확인의 마감 시간을 어떻게 맞출 수 있을까요?",
-    "sourceName": "미국 SEC 결제주기 안내",
-    "sourceUrl": "https://www.sec.gov/compliance/risk-alerts/shortening-securities-transaction-settlement-cycle",
+    "sourceName": "미국 SEC 결제주기 단축 규칙 채택 발표",
+    "sourceUrl": "https://www.sec.gov/newsroom/press-releases/2023-29",
     "region": "GLOBAL",
     "businessAreas": [
       "Brokerage",
@@ -1296,7 +1301,12 @@
     ],
     "regulator": "미국 SEC",
     "effectiveDate": "2024-05-28",
-    "lastUpdated": "2026-11-27"
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "SEC는 이번 규칙이 2021년 밈주식 사태에 대응해 직원이 위원회에 권고한 네 영역 중 하나를 다루며, 증권 거래의 신용·시장·유동성 위험을 줄이기 위한 것이라고 밝혔습니다.",
+      "introduced": "2023년 2월 15일 채택된 개정안은 대부분의 증권사 거래 표준 결제주기를 T+2에서 T+1로 줄이고, 증권사가 기관 거래의 배분·확인·승인을 늦어도 거래일 종료 전까지 마치도록 서면 계약이나 정책·절차를 두게 했습니다. 투자자문사의 관련 기록 보존과 중앙 매칭 서비스 청산기관의 직통처리(STP) 정책·연간 보고도 포함됐습니다.",
+      "changed": "이행일은 2024년 5월 28일로 정해졌고, 규칙은 연방관보 게재 60일 후 효력이 발생했습니다. 위원장은 개정이 지연과 위험을 줄이고 효율을 높인다고 말했습니다."
+    }
   },
   {
     "id": "dtcc-smart-nav",
