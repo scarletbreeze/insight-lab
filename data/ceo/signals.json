@@ -24,7 +24,9 @@
       "Agent",
       "업무자동화"
     ],
-    "stage": "행사"
+    "stage": "행사",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-11-25"
   },
   {
     "id": "digital-asset-bill-nov-2026",
@@ -49,7 +51,9 @@
       "Digital Asset",
       "Consumer Protection"
     ],
-    "stage": "입법 추진 논의"
+    "stage": "입법 추진 논의",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-11-24"
   },
   {
     "id": "consumer-survey-nov-2026",
@@ -71,7 +75,9 @@
     "businessAreas": [
       "Brokerage",
       "WM"
-    ]
+    ],
+    "regulator": "한국은행",
+    "lastUpdated": "2026-11-24"
   },
   {
     "id": "temporary-buyback-limit",
@@ -95,7 +101,10 @@
       "Trading",
       "Brokerage"
     ],
-    "stage": "한시 시행"
+    "stage": "한시 시행",
+    "regulator": "금융위원회",
+    "effectiveDate": "2026-11-24",
+    "lastUpdated": "2026-11-23"
   },
   {
     "id": "market-stability-nov-2026",
@@ -122,7 +131,9 @@
       "Trading",
       "Consumer Protection"
     ],
-    "stage": "대응방안 발표"
+    "stage": "대응방안 발표",
+    "regulator": "금융위원회(관계기관 합동)",
+    "lastUpdated": "2026-11-23"
   },
   {
     "id": "market-indicators-nov20-2026",
@@ -144,7 +155,9 @@
     "businessAreas": [
       "Brokerage",
       "Trading"
-    ]
+    ],
+    "regulator": "한국은행",
+    "lastUpdated": "2026-11-20"
   },
   {
     "id": "fintalk24-nov-2026",
@@ -170,7 +183,9 @@
     "applications": [
       "업무자동화"
     ],
-    "stage": "출시"
+    "stage": "출시",
+    "regulator": "금융위원회·한국핀테크지원센터",
+    "lastUpdated": "2026-11-19"
   },
   {
     "id": "international-investment-q3-2026",
@@ -194,7 +209,9 @@
       "Brokerage",
       "WM"
     ],
-    "stage": "잠정 통계"
+    "stage": "잠정 통계",
+    "regulator": "한국은행",
+    "lastUpdated": "2026-11-19"
   },
   {
     "id": "electronic-finance-security-draft-nov-2026",
@@ -221,7 +238,9 @@
     "applications": [
       "보안"
     ],
-    "stage": "규정변경예고"
+    "stage": "규정변경예고",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-11-18"
   },
   {
     "id": "household-credit-q3-2026",
@@ -244,7 +263,35 @@
       "WM",
       "Consumer Protection"
     ],
-    "stage": "잠정 통계"
+    "stage": "잠정 통계",
+    "regulator": "한국은행",
+    "lastUpdated": "2026-11-18"
+  },
+  {
+    "id": "retirement-pension-reform-oct-2026",
+    "date": "2026-10-30",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "퇴직연금 기능강화 방안 발표",
+    "summary": "정부는 2026년 10월 29일 당정협의를 거쳐 관계부처 합동으로 퇴직연금 기능강화 방안을 발표했습니다. 근로자퇴직급여보장법 개정 시 2028년 100인 이상 사업장부터 2030년 10인 미만 사업장까지 퇴직급여 사외적립을 단계적으로 의무화하고, 연금 수령 촉진, DC·IRP에 적용되는 기금형 퇴직연금 활성화, 계약형 제도 개선을 담았습니다.",
+    "why": "기금형 수탁법인 유형에 금융회사 단독 또는 컨소시엄 형태의 금융기관 개방형이 명시돼, 증권사의 퇴직연금 사업 구조와 비교해 볼 수 있습니다.",
+    "companies": [
+      "고용노동부",
+      "금융위원회"
+    ],
+    "question": "기금형 퇴직연금이 도입되면 증권사의 IRP·DC 운용관리 수수료 구조와 수탁법인 참여 방식은 어떻게 달라질까요?",
+    "sourceName": "금융위원회 보도자료(관계부처 합동)",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/88027",
+    "region": "KR",
+    "businessAreas": [
+      "WM",
+      "Consumer Protection"
+    ],
+    "stage": "방안 발표",
+    "regulator": "고용노동부·금융위원회 등 관계부처 합동",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "token-rules-consultation",
@@ -267,7 +314,10 @@
     "businessAreas": [
       "Digital Asset"
     ],
-    "stage": "입법예고안"
+    "stage": "입법예고안",
+    "regulator": "금융위원회",
+    "effectiveDate": "2027-02-04",
+    "lastUpdated": "2026-10-01"
   },
   {
     "id": "meritz-paper-approval",
@@ -291,7 +341,9 @@
     "businessAreas": [
       "IB"
     ],
-    "stage": "지정·인가"
+    "stage": "지정·인가",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-09-23"
   },
   {
     "id": "kb-consumer-ai-review",
@@ -315,11 +367,13 @@
       "AI/Data",
       "Consumer Protection"
     ],
-    "stage": "운영 사례 공개",
     "applications": [
       "업무자동화",
       "리스크·준법"
-    ]
+    ],
+    "stage": "운영 사례 공개",
+    "regulator": "KB증권",
+    "lastUpdated": "2026-09-16"
   },
   {
     "id": "samsung-paper-approval",
@@ -343,7 +397,9 @@
     "businessAreas": [
       "IB"
     ],
-    "stage": "인가"
+    "stage": "인가",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-09-09"
   },
   {
     "id": "token-policy-roadmap",
@@ -367,7 +423,9 @@
     "businessAreas": [
       "Digital Asset"
     ],
-    "stage": "정책방향"
+    "stage": "정책방향",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-09-04"
   },
   {
     "id": "kb-personal-open-api",
@@ -389,7 +447,9 @@
     "businessAreas": [
       "Brokerage"
     ],
-    "stage": "공개 베타 발표"
+    "stage": "공개 베타 발표",
+    "regulator": "KB증권",
+    "lastUpdated": "2026-08-04"
   },
   {
     "id": "ibkr-krx-nxt-access",
@@ -412,7 +472,14 @@
     "businessAreas": [
       "Brokerage"
     ],
-    "stage": "시장 지원 확대"
+    "stage": "시장 지원 확대",
+    "regulator": "Interactive Brokers",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "Interactive Brokers는 앞서 한국거래소 거래를 지원해 해외 투자자에게 한국 주식 직접 접근을 제공한 첫 미국 대형 브로커가 됐다고 밝혔고, 넥스트레이드 추가를 거래시간 연장과 추가 유동성 접근으로 소개했습니다.",
+      "introduced": "2026년 6월 30일 넥스트레이드의 KOSPI·KOSDAQ 약 650개 종목 거래를 지원하고, KRX와 넥스트레이드 사이에서 더 좋은 가격의 시장으로 주문을 보내는 SmartRouting을 적용했다고 발표했습니다.",
+      "changed": "회사 고객은 08:00~20:00 KST 세 세션의 12시간 거래창을 이용할 수 있게 됐고, 170개 이상 시장과 같은 플랫폼에서 한국 주식을 거래합니다."
+    }
   },
   {
     "id": "fsc-ai-model-change",
@@ -424,7 +491,7 @@
     ],
     "title": "생성형 AI 모델 변경 절차 간소화",
     "summary": "금융위원회는 버전 업그레이드 등 단순 모델 변경에 적용할 혁신금융서비스 절차 간소화 방안을 발표했습니다.",
-    "why": "버전 업데이트에서도 서비스 범위와 보안 조건을 기준으로 변경 유형을 먼저 판단해야 합니다.",
+    "why": "발표안은 서비스 범위와 보안 조건을 기준으로 단순 변경과 그 외 변경을 구분합니다. 버전 업데이트가 어느 유형에 해당하는지 비교해 볼 수 있습니다.",
     "companies": [
       "금융위원회"
     ],
@@ -436,10 +503,12 @@
       "AI/Data",
       "Operations"
     ],
-    "stage": "개선방안 발표",
     "applications": [
       "리스크·준법"
-    ]
+    ],
+    "stage": "개선방안 발표",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-04-15"
   },
   {
     "id": "nh-ima",
@@ -461,7 +530,9 @@
     "region": "KR",
     "businessAreas": [
       "IB"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-03-19"
   },
   {
     "id": "token-working-group",
@@ -484,7 +555,9 @@
     "region": "KR",
     "businessAreas": [
       "Digital Asset"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-03-04"
   },
   {
     "id": "sec-tokenized-securities-staff",
@@ -508,7 +581,14 @@
     "businessAreas": [
       "Digital Asset"
     ],
-    "stage": "실무진 성명"
+    "stage": "실무진 성명",
+    "regulator": "미국 SEC",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "토큰화 모델은 구조와 보유자에게 주어지는 권리 면에서 서로 다릅니다. 실무진은 성명이 시장참여자의 증권법 준수와 등록·요청 준비를 돕기 위한 것이라고 밝혔습니다.",
+      "introduced": "2026년 1월 28일 SEC 세 부서 실무진이 발행인 주도형과 제3자 주도형(커스터디형·합성형)으로 토큰증권 구조를 분류하는 성명을 냈습니다.",
+      "changed": "실무진은 토큰 형식이 증권법 적용에 영향을 주지 않고, 제3자 모델에서는 보유자 권리가 기초증권과 다를 수 있으며 제3자의 파산 위험에 노출될 수 있다고 공개했습니다. 성명은 위원회 규칙이나 승인이 아닙니다."
+    }
   },
   {
     "id": "hana-shinhan-paper",
@@ -532,7 +612,9 @@
     "businessAreas": [
       "IB",
       "WM"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2025-12-17"
   },
   {
     "id": "capital-licenses",
@@ -557,7 +639,9 @@
     "businessAreas": [
       "IB",
       "WM"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2025-11-19"
   },
   {
     "id": "ibkr-portfolio-assistant",
@@ -582,11 +666,44 @@
       "AI/Data",
       "WM"
     ],
-    "stage": "서비스 출시",
     "applications": [
       "개인화",
       "투자정보"
-    ]
+    ],
+    "stage": "서비스 출시",
+    "regulator": "Interactive Brokers",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "고객이 포트폴리오 성과나 배분을 확인하려면 여러 화면을 옮겨 다녀야 했다고 회사는 설명했습니다.",
+      "introduced": "2025년 10월 15일 성과·배분·보유·활동 데이터를 자연어로 질문하면 시각화된 답을 주는 Ask IBKR을 출시했습니다. 벤치마크, 기간, 계좌는 드롭다운으로 바꿀 수 있습니다.",
+      "changed": "개인 고객의 Client Portal, 자문사의 Advisor Portal, IBKR Desktop에서 제공이 시작됐습니다. 회사는 생성형 AI의 불확실성을 피하는 자체 기법을 쓴다고 밝혔습니다."
+    }
+  },
+  {
+    "id": "high-risk-product-sales-rules-jul-2025",
+    "date": "2025-07-14",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "고난도 금융투자상품 판매 규제 개정안 예고",
+    "summary": "금융위원회는 2025년 2월 27일 발표한 고난도 금융투자상품 불완전판매 예방 종합대책의 후속으로 금융소비자보호법 시행령 개정안 입법예고와 감독규정 개정안 규정변경예고를 7월 15일부터 8월 25일까지 실시했습니다. 투자자 성향 분석 시 6개 필수확인 정보를 모두 고려, 고난도 상품 설명서 최상단에 부적합 소비자 유형과 손실 위험 기재, 특정 답변 유도와 대면 권유 후 비대면 계약 권유를 부당권유행위로 신설, (부)적정성 판단보고서 양식 신설이 담겼습니다.",
+    "why": "적합성·적정성 평가 절차와 설명서 구성은 증권사 WM 판매 채널의 화면 설계와 녹취 범위에 연결되는 항목입니다.",
+    "companies": [
+      "금융위원회",
+      "금융감독원"
+    ],
+    "question": "대면 상담 후 비대면 계약으로 이어지는 흐름을 시스템에서 어떻게 식별하고 기록할까요?",
+    "sourceName": "금융위원회 금융소비자보호법 시행령·감독규정 개정안 예고",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/84921",
+    "region": "KR",
+    "businessAreas": [
+      "WM",
+      "Consumer Protection"
+    ],
+    "stage": "입법예고",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "jpmorgan-llm-suite",
@@ -611,10 +728,17 @@
       "AI/Data",
       "Operations"
     ],
-    "stage": "활용 현황 공개",
     "applications": [
       "업무자동화"
-    ]
+    ],
+    "stage": "활용 현황 공개",
+    "regulator": "JPMorganChase",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "발표문은 LLM Suite를 임직원이 보안 환경에서 대규모 언어모델에 접근하도록 만든 플랫폼으로 소개하고, 확산 배경의 하나로 직원 수요를 들었습니다.",
+      "introduced": "2024년 여름 적격 임직원에게 보안 환경에서 LLM 접근을 제공하는 자체 플랫폼 LLM Suite를 출시해 아이디어 생성과 문서 초안 작업을 지원했습니다.",
+      "changed": "회사 발표 기준 온보딩 사용자는 8개월 만에 0명에서 20만 명이 됐고, 2025년 American Banker Innovation of the Year 대상을 받았습니다. 다음 단계로 내부 데이터 소스 통합과 에이전트 구성을 밝혔습니다."
+    }
   },
   {
     "id": "bnp-advisory-ai",
@@ -642,7 +766,9 @@
     "applications": [
       "AI 상담",
       "투자정보"
-    ]
+    ],
+    "regulator": "BNP Paribas",
+    "lastUpdated": "2025-05-26"
   },
   {
     "id": "mirae-aiops",
@@ -666,11 +792,13 @@
       "AI/Data",
       "Operations"
     ],
-    "stage": "구축 발표",
     "applications": [
       "업무자동화",
       "개발·코딩"
-    ]
+    ],
+    "stage": "구축 발표",
+    "regulator": "미래에셋증권",
+    "lastUpdated": "2025-04-16"
   },
   {
     "id": "short-selling-resumption",
@@ -693,7 +821,10 @@
     "businessAreas": [
       "Brokerage",
       "Trading"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "effectiveDate": "2025-03-31",
+    "lastUpdated": "2025-03-31"
   },
   {
     "id": "robinhood-cortex-announcement",
@@ -718,10 +849,40 @@
       "AI/Data",
       "Brokerage"
     ],
-    "stage": "제품 발표",
     "applications": [
       "투자정보"
-    ]
+    ],
+    "stage": "제품 발표",
+    "regulator": "Robinhood",
+    "lastUpdated": "2026-11-27"
+  },
+  {
+    "id": "robo-advisor-pension-discretionary-mar-2025",
+    "date": "2025-03-27",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "퇴직연금 로보어드바이저 일임서비스 개시",
+    "summary": "금융위원회는 2024년 12월 혁신금융서비스로 지정한 17개 투자일임업자의 퇴직연금 로보어드바이저 일임서비스가 2025년 3월 28일부터 순차 출시된다고 발표했습니다. 코스콤 테스트베드를 통과한 알고리즘이 IRP 적립금 운용을 지시하며, 가입한도는 IRP 계좌당 연간 900만원에서 매년 900만원씩 늘어납니다. 금융위원회·고용노동부·금융감독원은 지정기간(최대 4년) 중 운영성과를 보고 법률 개정 등 제도개선을 검토한다고 밝혔습니다.",
+    "why": "IRP 가입자가 직접 운용지시하던 구조에 일임업자가 지시하는 구조가 추가돼, 증권사의 퇴직연금사업자 역할과 일임업자 제휴 구조를 나눠 볼 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "고용노동부",
+      "금융감독원"
+    ],
+    "question": "같은 IRP 계좌에서 직접 운용과 로보어드바이저 일임이 섞일 때 수익률과 수수료를 고객에게 어떻게 구분해 보여줄까요?",
+    "sourceName": "금융위원회 퇴직연금 로보어드바이저 일임서비스 시행 보도자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/84247",
+    "region": "KR",
+    "businessAreas": [
+      "WM",
+      "AI/Data"
+    ],
+    "stage": "서비스 개시",
+    "regulator": "금융위원회",
+    "effectiveDate": "2025-03-28",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "treasury-clearing-extension",
@@ -743,7 +904,50 @@
     "region": "GLOBAL",
     "businessAreas": [
       "Trading"
-    ]
+    ],
+    "regulator": "미국 SEC",
+    "effectiveDate": "2026-12-31",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "SEC 위원장 직무대행은 새 규칙이 제대로 이행되려면 운영상 문제를 먼저 해결하는 데 시간이 더 걸린다고 설명했습니다.",
+      "introduced": "2025년 2월 25일 현물 거래 청산 이행일을 2026년 12월 31일로, 레포 거래 청산 이행일을 2027년 6월 30일로 1년씩 연장하고, 자기 포지션 마진 분리 관련 임시 면제를 2025년 9월 30일까지 부여했습니다.",
+      "changed": "청산기관은 준비된 참가자에게는 정책을 먼저 적용할 수 있고, SEC는 이행·운영·해석 질의에 대응할 시간을 확보한다고 밝혔습니다."
+    }
+  },
+  {
+    "id": "bond-wrap-trust-sanctions-feb-2025",
+    "date": "2025-02-19",
+    "category": "Regulation",
+    "areas": [
+      "regulation"
+    ],
+    "title": "채권형 랩·신탁 운용 관련 9개 증권사 제재",
+    "summary": "금융위원회는 2025년 2월 19일 정례회의에서 채권·CP의 불법 자전·연계거래로 고객재산 간 손익을 이전하거나 고유재산으로 고객 손실을 보전한 행위에 대해 9개 증권사의 기관제재를 확정했습니다. 8개사 기관경고, 1개사 기관주의와 총 289억 7,200만원의 과태료가 부과됐습니다. 발표문은 실적배당상품인 랩·신탁을 확정금리형처럼 판매·운용하고 환매 시 원금과 수익을 보장하는 관행에서 비롯됐다고 설명했습니다.",
+    "why": "제재 수위에 2022년 하반기 시장 상황과 자체 내부감사, 손실 고객과의 사적화해 등 사후수습 노력이 고려됐다고 명시돼, 사후 대응이 제재에 반영되는 방식을 볼 수 있습니다.",
+    "companies": [
+      "금융위원회",
+      "금융감독원",
+      "하나증권",
+      "KB증권",
+      "한국투자증권",
+      "NH투자증권",
+      "SK증권",
+      "교보증권",
+      "유진투자증권",
+      "미래에셋증권",
+      "유안타증권"
+    ],
+    "question": "랩·신탁 운용에서 고객 간 손익 이전을 사전에 탐지하려면 어느 단계의 거래 기록을 누가 대조할까요?",
+    "sourceName": "금융위원회 채권형 랩·신탁 제재 보도참고자료",
+    "sourceUrl": "https://www.fsc.go.kr/no010101/84033",
+    "region": "KR",
+    "businessAreas": [
+      "WM",
+      "Consumer Protection"
+    ],
+    "stage": "제재 확정",
+    "regulator": "금융위원회",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "next-trade-license",
@@ -767,7 +971,9 @@
     "businessAreas": [
       "Trading",
       "Brokerage"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2025-02-05"
   },
   {
     "id": "kb-cabby-sandbox",
@@ -791,10 +997,12 @@
       "AI/Data",
       "WM"
     ],
-    "stage": "지정 공개",
     "applications": [
       "AI 상담"
-    ]
+    ],
+    "stage": "지정 공개",
+    "regulator": "금융위원회",
+    "lastUpdated": "2024-12-09"
   },
   {
     "id": "nh-market-briefing-sandbox",
@@ -818,11 +1026,13 @@
       "AI/Data",
       "Brokerage"
     ],
-    "stage": "지정 공개",
     "applications": [
       "투자정보",
       "개인화"
-    ]
+    ],
+    "stage": "지정 공개",
+    "regulator": "금융위원회",
+    "lastUpdated": "2024-12-09"
   },
   {
     "id": "kinexys",
@@ -846,7 +1056,9 @@
     "businessAreas": [
       "Digital Asset",
       "Trading"
-    ]
+    ],
+    "regulator": "JPMorganChase",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "guardian-scale",
@@ -858,7 +1070,7 @@
     ],
     "title": "싱가포르 MAS의 토큰화 확장 구상",
     "summary": "MAS가 기관 대상 토큰화 사례와 네트워크 간 연결을 확대하기 위한 접근을 공개했습니다.",
-    "why": "개별 실증의 산출물을 시장 단위로 연결하려면 공통 규격과 운영 절차가 필요합니다.",
+    "why": "연설은 개별 실증이 규모를 얻지 못한 배경으로 네트워크 간 분절을 들고, 유동성·기반 인프라·공통 규격·공통 결제자산을 조건으로 꼽았습니다. 실증 산출물이 시장 단위로 연결되는 조건을 살펴볼 수 있습니다.",
     "companies": [
       "싱가포르 통화청"
     ],
@@ -869,7 +1081,14 @@
     "businessAreas": [
       "Digital Asset",
       "IB"
-    ]
+    ],
+    "regulator": "싱가포르 MAS",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "MAS는 토큰화 실증이 늘었지만 규모를 얻은 사례가 없고, 서로 다른 네트워크의 난립이 시장 분절과 자금·기회비용 증가로 이어졌다고 진단했습니다.",
+      "introduced": "유동성, 기반 인프라, 표준 프레임워크, 공통 결제자산의 네 요소를 제시하고, Citi·HSBC·Schroders·Standard Chartered·UOB의 Guardian Wholesale Network 산업그룹과 공공 허가형 인프라 Global Layer One 구상을 소개했습니다.",
+      "changed": "2024년 11월 연설에서 Euroclear와 HSBC가 GL1에 새로 참여한다고 발표했고, 다음 해 플랫폼 요건 등으로 범위를 확대한다고 밝혔습니다."
+    }
   },
   {
     "id": "uk-dss",
@@ -894,7 +1113,15 @@
     "businessAreas": [
       "Trading",
       "Digital Asset"
-    ]
+    ],
+    "regulator": "영란은행·FCA",
+    "effectiveDate": "2024-09-30",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "2023년 금융서비스·시장법이 재무부에 FMI 샌드박스 권한을 부여했습니다. 정책성명은 FMI 샌드박스를 회사가 금융시장 인프라의 핵심 기능에서 새 관행과 개발 중인 기술을 시험할 수 있게 하는 장치로 설명합니다.",
+      "introduced": "2024년 9월 30일 영란은행과 FCA가 공동 정책성명으로 첫 FMI 샌드박스인 DSS를 열었습니다. 참여사는 한시적으로 수정된 규제 틀에서 CSD의 공증·유지·결제 활동과 거래소 운영을 결합할 수 있습니다.",
+      "changed": "2024년 5월 종료된 협의에 대한 규제당국의 피드백을 담은 정책성명이 가이던스, 신청서와 함께 공개됐습니다. DSS 활동은 실거래로 운영되며 금융안정을 위해 DSS에서 발행되는 증권 가치에 한도가 적용됩니다."
+    }
   },
   {
     "id": "mirae-overseas-disclosure-ai",
@@ -918,11 +1145,13 @@
       "AI/Data",
       "Brokerage"
     ],
-    "stage": "서비스 공개",
     "applications": [
       "투자정보",
       "리서치"
-    ]
+    ],
+    "stage": "서비스 공개",
+    "regulator": "미래에셋증권",
+    "lastUpdated": "2024-08-26"
   },
   {
     "id": "network-separation",
@@ -949,7 +1178,9 @@
     ],
     "applications": [
       "리스크·준법"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2024-08-13"
   },
   {
     "id": "virtual-asset-protection",
@@ -972,7 +1203,10 @@
     "businessAreas": [
       "Digital Asset",
       "Consumer Protection"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "effectiveDate": "2024-07-19",
+    "lastUpdated": "2024-07-19"
   },
   {
     "id": "finra-generative-ai",
@@ -999,7 +1233,9 @@
     ],
     "applications": [
       "리스크·준법"
-    ]
+    ],
+    "regulator": "FINRA",
+    "lastUpdated": "2024-06-27"
   },
   {
     "id": "morgan-debrief",
@@ -1027,7 +1263,14 @@
     "applications": [
       "AI 상담",
       "업무자동화"
-    ]
+    ],
+    "regulator": "Morgan Stanley",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "발표문은 Debrief를 미팅 메모와 후속 조치 정리를 대신해 자문사가 고객과의 대화에 더 많은 시간을 쓰게 하는 도구로 소개합니다. 인용된 자문사는 메모 작업만으로 미팅당 약 30분이 줄었다고 말합니다.",
+      "introduced": "2024년 6월, 고객 동의 하에 미팅 메모를 생성하고 핵심 내용을 요약한 뒤 자문사가 편집·발송하는 이메일 초안을 만들고 Salesforce에 메모를 저장하는 OpenAI 기반 도구 Debrief를 공개했습니다.",
+      "changed": "회사는 2023년 9월 전면 도입한 AI @ Morgan Stanley Assistant를 금융자문 팀의 98%가 채택했다고 밝혔고, Debrief 이용 자문사들은 미팅 기록 시간 절감을 보고했습니다."
+    }
   },
   {
     "id": "settlement-t1",
@@ -1050,7 +1293,10 @@
     "businessAreas": [
       "Brokerage",
       "Trading"
-    ]
+    ],
+    "regulator": "미국 SEC",
+    "effectiveDate": "2024-05-28",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "dtcc-smart-nav",
@@ -1073,7 +1319,14 @@
     "businessAreas": [
       "Digital Asset",
       "WM"
-    ]
+    ],
+    "regulator": "DTCC",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "DTCC는 뮤추얼펀드 토큰화에 대한 업계 관심이 커지는 가운데, 온체인에서 쓸 수 있는 신뢰할 수 있는 가격·기준가 데이터를 새 시도의 기반이 될 기회로 봤다고 설명했습니다.",
+      "introduced": "Mutual Fund Profile Service I의 디지털 확장으로, Chainlink와 10개 시장참여자와 함께 특정 블록체인에 묶이지 않는 방식으로 NAV 데이터를 전달하는 Smart NAV 시범사업을 진행했습니다.",
+      "changed": "2024년 5월 보고서는 구조화 데이터를 온체인으로 전달하고 표준 역할·절차를 정하면 토큰화 펀드나 여러 펀드 데이터를 담는 스마트계약에 기초 데이터를 내장할 수 있음을 확인했다고 밝혔습니다."
+    }
   },
   {
     "id": "spot-bitcoin-etp",
@@ -1095,7 +1348,14 @@
     "region": "GLOBAL",
     "businessAreas": [
       "Digital Asset"
-    ]
+    ],
+    "regulator": "미국 SEC",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "SEC는 2018년부터 2023년 3월까지 20건 이상의 현물 비트코인 ETP 상장 신청을 불승인했고, 2023년 DC 순회항소법원은 Grayscale 신청 불승인 명령을 취소·환송했습니다.",
+      "introduced": "2024년 1월 10일 다수 현물 비트코인 ETP의 상장·거래를 승인했습니다. 발행자는 등록신고서와 정기 공시로 상품을 설명하고, 등록 거래소는 부정거래·시세조종 방지 규칙을 운영합니다.",
+      "changed": "승인 범위는 비트코인 하나만 보유하는 ETP로 한정됐고, 성명은 비트코인이나 거래플랫폼을 승인·보증한 것이 아니라고 밝혔습니다. 증권사의 Regulation Best Interest와 투자자문사의 신인의무는 계속 적용됩니다."
+    }
   },
   {
     "id": "foreign-investor-registration",
@@ -1117,7 +1377,10 @@
     "businessAreas": [
       "Brokerage",
       "Consumer Protection"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "effectiveDate": "2023-12-14",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "treasury-clearing",
@@ -1139,7 +1402,15 @@
     "region": "GLOBAL",
     "businessAreas": [
       "Trading"
-    ]
+    ],
+    "regulator": "미국 SEC",
+    "effectiveDate": "2025-03-31",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "SEC는 26조 달러 규모 국채시장에서 자금시장 거래의 70~80%, 현물시장 거래의 80% 이상이 중앙청산을 거치지 않아 시스템 전체의 위험을 키운다고 설명했습니다.",
+      "introduced": "2023년 12월 13일 채택된 규칙은 커버드 청산기관이 회원에게 국채 레포와 특정 현물 거래를 청산에 제출하도록 요구하고, 하우스 마진과 고객 마진을 분리해 산정·징수하도록 했습니다.",
+      "changed": "이행 일정이 단계별로 공개됐습니다. 마진 분리와 접근성 정책은 2025년 3월 31일, 현물 거래 청산은 2025년 12월 31일, 레포 거래 청산은 2026년 6월 30일입니다. 이후의 일정 변경은 2025년 2월 25일 「미국 국채 중앙청산 이행 기한 연장」 시그널에서 확인할 수 있습니다."
+    }
   },
   {
     "id": "nasdaq-dynamic-melo",
@@ -1164,10 +1435,17 @@
       "AI/Data",
       "Trading"
     ],
-    "stage": "승인 발표",
     "applications": [
       "거래 인프라"
-    ]
+    ],
+    "stage": "승인 발표",
+    "regulator": "Nasdaq(미국 SEC 승인)",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "기존 M-ELO 주문은 일반적인 시장 상황을 가정한 고정 대기시간을 사용했습니다. Nasdaq은 대기시간을 실시간 시장 상황에 맞춰 조정할 때 체결 품질과 역선택 방지가 개선된다는 연구 결과를 소개했습니다.",
+      "introduced": "140개 이상의 요인을 쓰는 AI 모델로 M-ELO 대기시간을 실시간 조정하는 Dynamic M-ELO를 개발해 2023년 9월 SEC 승인을 받았다고 발표했습니다.",
+      "changed": "Nasdaq 시험 결과 기준으로 체결률 20.3% 증가와 마크아웃 11.4% 감소를 공개했습니다. 수치는 회사가 발표한 시험 결과입니다."
+    }
   },
   {
     "id": "mas-stablecoin-framework",
@@ -1191,7 +1469,14 @@
     "businessAreas": [
       "Digital Asset",
       "Consumer Protection"
-    ]
+    ],
+    "regulator": "싱가포르 MAS",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "MAS는 가치 안정성이 확보된 스테이블코인이 디지털자산 온체인 거래의 교환 매개가 될 수 있다고 보고, 2022년 10월 공개 협의를 거쳤습니다.",
+      "introduced": "2023년 8월 싱가포르 달러 또는 G10 통화에 연동돼 싱가포르에서 발행되는 단일통화 스테이블코인 발행자에 준비자산, 자본, 5영업일 내 액면 상환, 공시 요건을 적용하는 규율을 발표했습니다.",
+      "changed": "요건을 모두 충족한 발행자만 \"MAS-regulated stablecoin\" 라벨을 신청할 수 있고, 허위 표시는 제재와 투자자 경고 목록 등재 대상이 됐습니다."
+    }
   },
   {
     "id": "esma-dlt-pilot",
@@ -1216,7 +1501,15 @@
     "businessAreas": [
       "Trading",
       "Digital Asset"
-    ]
+    ],
+    "regulator": "EU(ESMA)",
+    "effectiveDate": "2023-03-23",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "제도는 MiFID II 금융상품에 해당하는 암호자산의 거래·결제에 대한 법적 틀을 제공하며, 투자자 보호·시장 건전성·금융안정·투명성을 유지하고 규제 차익과 공백을 피하는 것을 목표로 제시합니다.",
+      "introduced": "2023년 3월 23일부터 DLT Pilot Regime이 적용됐습니다. DLT 다자간매매체결시설, DLT 결제시스템, 둘을 결합한 DLT 거래·결제시스템의 세 유형을 두고, 시총 5억 유로 미만 주식 등 대상 한도를 정했습니다.",
+      "changed": "인가된 투자회사·시장운영자와 CSD, 그리고 임시 인가를 신청하는 신규 진입자가 운영을 신청할 수 있게 됐습니다. 제도는 최소 3년 운영되며 유럽위원회가 연장할 수 있습니다."
+    }
   },
   {
     "id": "morgan-research-assistant",
@@ -1243,7 +1536,9 @@
     ],
     "applications": [
       "리서치"
-    ]
+    ],
+    "regulator": "Morgan Stanley",
+    "lastUpdated": "2026-11-27"
   },
   {
     "id": "token-framework",
@@ -1265,7 +1560,9 @@
     "region": "KR",
     "businessAreas": [
       "Digital Asset"
-    ]
+    ],
+    "regulator": "금융위원회",
+    "lastUpdated": "2023-02-06"
   },
   {
     "id": "dtcc-project-ion",
@@ -1289,6 +1586,13 @@
     "businessAreas": [
       "Trading",
       "Digital Asset"
-    ]
+    ],
+    "regulator": "DTCC",
+    "lastUpdated": "2026-11-27",
+    "case": {
+      "problem": "DTCC는 Project Ion의 목표를 회복력·보안·확장성을 갖춘 대안 결제 서비스를 제공하고, 원하는 회사가 분산원장을 선택해 쓸 수 있게 하는 것이라고 밝혔습니다.",
+      "introduced": "2022년 8월 R3 Corda 기반의 비공개 허가형 분산원장 플랫폼을 병행 운영 환경에서 가동했습니다. Barclays, Charles Schwab, Fidelity, Goldman Sachs, J.P. Morgan 등 16개사가 개발에 참여했습니다.",
+      "changed": "발표 시점에 하루 평균 10만 건 이상, 피크 약 16만 건의 양자 주식 거래를 병행 처리했고, DTC의 기존 결제 시스템이 공식 기록으로 유지됐습니다."
+    }
   }
 ]

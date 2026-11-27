@@ -4,30 +4,37 @@ import { sitePath } from '../../utils/paths';
 import { brokers } from '../../utils/brokers';
 import { marketEvents } from '../../utils/market';
 import followUpData from '../../../data/ceo/follow-ups.json';
+import GlobalCaseCard from './GlobalCaseCard.astro';
 // The card shows the date, title, confirmed fact, question and source; the remaining lines fold into <details>
 // so a list of signals reads as a report rather than a wall of equal-weight cards.
-interface Props { items: typeof signals; }
-const { items } = Astro.props;
+// With `cases`, signals that carry a sourced case study render the §10.12 case-study body instead of the fact/question pair.
+interface Props { items: typeof signals; cases?: boolean; }
+const { items, cases = false } = Astro.props;
 const brokerIds = new Map(brokers.map(({ name, id }) => [name, id]));
 const marketMonths = new Map(marketEvents.filter(({ date }) => date.length >= 7).map(({ sourceUrl, date }) => [sourceUrl, date.slice(0, 7)]));
 const followUps: Record<string, { date: string; label: string; sourceUrl: string }[]> = followUpData;
 ---
 <ul class="lab-list signal-list">
-  {items.map(({ id, date, category, title, summary, why, companies, question, region, businessAreas, sourceName, sourceUrl, stage, applications, areas }) => (
-    <li class="lab-card signal-card" id={id} data-year={date.slice(0, 4)} data-topic={category} data-region={region} data-area={businessAreas.join("|")} data-application={applications?.join('|')}>
-      <div class="signal-meta"><time datetime={date}>{date}</time><span>{category} · {region === "KR" ? "국내" : "해외"}{stage && ' · ' + stage}</span></div>
+  {items.map(({ id, date, category, title, summary, why, companies, question, region, businessAreas, sourceName, sourceUrl, stage, applications, areas, regulator, effectiveDate, lastUpdated, case: caseStudy }) => (
+    <li class="lab-card signal-card" id={id} data-year={date.slice(0, 4)} data-topic={category} data-region={region} data-area={businessAreas.join("|")} data-application={applications?.join('|')} data-case={cases && caseStudy ? '' : undefined}>
+      <div class="signal-meta"><time datetime={date}>{date}</time><span>{category} · {region === "KR" ? "국내" : "해외"}{stage && ' · ' + stage}{cases && caseStudy && ' · 사례 연구'}</span></div>
       <h2>{title}</h2>
-      <dl>
-        <dt>확인한 사실</dt><dd>{summary}</dd>
-        <dt>생각해 볼 질문</dt><dd>{question}</dd>
-      </dl>
-      <a href={sourceUrl}>{sourceName}</a>
+      {cases && caseStudy ? <GlobalCaseCard {caseStudy} {question} {sourceName} {sourceUrl} /> : <>
+        <dl>
+          <dt>확인한 사실</dt><dd>{summary}</dd>
+          <dt>생각해 볼 질문</dt><dd>{question}</dd>
+        </dl>
+        <a href={sourceUrl}>{sourceName}</a>
+      </>}
       <details class="signal-more">
         <summary>살펴볼 이유와 관련 기관{followUps[id]?.length ? ' · 후속 확인 일정' : ''}</summary>
         <dl>
           <dt>살펴볼 이유</dt><dd>{why}</dd>
           <dt>관련 기관·회사</dt><dd>{companies.map((name, index) => <>{index > 0 && ' · '}{brokerIds.has(name) ? <a href={sitePath('broker-atlas/brokers/' + brokerIds.get(name))}>{name}</a> : name}</>)}</dd>
           {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
+          <dt>발표·관할 기관</dt><dd>{regulator}</dd>
+          {effectiveDate && <><dt>시행일</dt><dd><time datetime={effectiveDate}>{effectiveDate}</time></dd></>}
+          <dt>최근 확인</dt><dd><time datetime={lastUpdated}>{lastUpdated}</time></dd>
         </dl>
         {marketMonths.get(sourceUrl) === date.slice(0, 7) && <p><a href={sitePath('market-time-capsule/' + date.slice(0, 7).replace('-', '/'))}>같은 달의 시장 지표와 사건</a></p>}
         {followUps[id]?.length && <div>

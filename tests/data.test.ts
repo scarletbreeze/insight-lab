@@ -402,6 +402,34 @@ test('CEO Lens maintains sourced competitor and AI case coverage', () => {
   assert.deepEqual(signals.map(({ date }) => date), signals.map(({ date }) => date).sort().reverse());
 });
 
+test('CEO Lens signals record the issuing body, verification dates, WM regulation coverage, sourced global cases and an exploratory tone', () => {
+  type Signal = {
+    id: string; date: string; areas: string[]; businessAreas: string[]; title: string; summary: string; why: string; question: string;
+    regulator?: string; lastUpdated?: string; effectiveDate?: string; case?: Record<'problem' | 'introduced' | 'changed', string | undefined>;
+  };
+  const signals = readJson<Signal[]>('ceo/signals.json');
+  const isDate = (value: unknown): value is string => typeof value === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(value) && !Number.isNaN(Date.parse(value));
+  // §10.17: tone stays exploratory. Observations and questions only; no prescriptions.
+  const prescriptive = /해야 한다|해야 합니다|해야만|해야 할|필요하다|필요합니다|필요한|\bmust\b|\bshould\b/i;
+  for (const signal of signals) {
+    assert.ok(signal.regulator?.trim(), signal.id);
+    assert.ok(isDate(signal.lastUpdated) && signal.lastUpdated >= signal.date, signal.id);
+    if (signal.effectiveDate !== undefined) assert.ok(isDate(signal.effectiveDate) && signal.effectiveDate >= signal.date, signal.id);
+    if (signal.case) {
+      assert.ok(signal.areas.includes('global'), signal.id);
+      for (const key of ['problem', 'introduced', 'changed'] as const) assert.ok(signal.case[key]?.trim(), `${signal.id} case.${key}`);
+    }
+    for (const text of [signal.title, signal.summary, signal.why, signal.question, ...Object.values(signal.case ?? {})]) {
+      assert.ok(text && !prescriptive.test(text), `${signal.id}: ${text}`);
+    }
+  }
+  const regulation = signals.filter(({ areas }) => areas.includes('regulation'));
+  for (const area of ['Brokerage', 'WM', 'IB', 'Trading', 'Digital Asset', 'AI/Data', 'Consumer Protection']) {
+    assert.ok(regulation.filter(({ businessAreas }) => businessAreas.includes(area)).length >= 2, area);
+  }
+  assert.ok(signals.filter(({ case: study }) => study).length >= 6);
+});
+
 test('CEO Lens weekly editions reference five signals released in the stated date range', () => {
   type Edition = { start: string; through: string; questionSignal: string; signals: string[]; relatedSignals: string[] };
   const editions = readJson<Edition[]>('ceo/weekly.json');

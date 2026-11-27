@@ -4,6 +4,10 @@ import briefData from '../../data/ceo/briefs.json';
 import consortiumData from '../../data/ceo/sto-consortiums.json';
 
 export const signals = source;
+export type CeoSignal = (typeof signals)[number];
+/** Most recent `lastUpdated` (re-verification date) among the given signals; drives the page-level Last Updated line. */
+export const latestUpdate = (items: readonly { lastUpdated: string }[]) =>
+  items.reduce((latest, { lastUpdated }) => (lastUpdated > latest ? lastUpdated : latest), '');
 const signalsById = new Map(signals.map((signal) => [signal.id, signal]));
 export const weeklyEditions = [...weekly].sort((a, b) => b.start.localeCompare(a.start))
   .map((edition) => ({
