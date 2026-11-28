@@ -1,18 +1,14 @@
 ---
-// Case-study body for a Global signal (§10.12): problem/context, what was introduced, what changed publicly,
-// the question for the Korean securities industry and the source. SignalList supplies the surrounding card.
+// Case-study body for a Global signal (§10.12): problem/context, what was introduced, what changed publicly.
+// SignalList supplies the surrounding card, the question for the Korean securities industry and the source,
+// which stay visible while this body folds under "사례 내용".
 interface Props {
   caseStudy: { problem: string; introduced: string; changed: string };
-  question: string;
-  sourceName: string;
-  sourceUrl: string;
 }
-const { caseStudy, question, sourceName, sourceUrl } = Astro.props;
+const { caseStudy } = Astro.props;
 ---
 <dl>
   <dt>문제·배경</dt><dd>{caseStudy.problem}</dd>
   <dt>도입한 것</dt><dd>{caseStudy.introduced}</dd>
   <dt>공개된 변화</dt><dd>{caseStudy.changed}</dd>
-  <dt>한국 증권업에 던지는 질문</dt><dd>{question}</dd>
 </dl>
-<a href={sourceUrl}>{sourceName}</a>

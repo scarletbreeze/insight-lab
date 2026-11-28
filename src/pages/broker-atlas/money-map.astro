@@ -2,21 +2,106 @@
 import BrokerLayout from '../../components/broker/BrokerLayout.astro';
 import BrokerageFees from '../../components/broker/BrokerageFees';
 import { sitePath } from '../../utils/paths';
-import MoneyMap from '../../components/broker/MoneyMap';
+import MoneyMap, { moneyMapNote } from '../../components/broker/MoneyMap';
 import DisclosedSegments from '../../components/broker/DisclosedSegments.astro';
 import { brokers } from '../../utils/brokers';
+import { segmentFilings, segmentTag } from '../../utils/broker-segments';
+
+// One company is shown at a time. Every company is rendered so each source link stays in the page;
+// the script below shows the one named by ?broker= and the default (first, Kiwoom) is visible without JS.
+const defaultBroker = brokers[0];
+const brokerBase = sitePath('broker-atlas/brokers');
+const tagOrder = ['위탁매매', '위탁매매·자산관리', '자산관리', '기업금융', '트레이딩', '세일즈·트레이딩', '기타·미분류'];
+const isAdjustment = (name: string) => /조\s*정/.test(name);
+const tagRows = brokers.map(({ id, name }) => {
+  const filing = segmentFilings[id];
+  const names = (filing?.segments ?? []).map((segment) => segment.name).filter((segment) => !isAdjustment(segment));
+  const byTag = new Map<string, string[]>();
+  for (const segment of names) byTag.set(segmentTag(segment), [...(byTag.get(segmentTag(segment)) ?? []), segment]);
+  return { id, name, byTag, period: filing ? (filing.period ?? '연간 결산') + ' ' + filing.metric : null };
+});
+const tagColumns = tagOrder.filter((tag) => tagRows.some(({ byTag }) => byTag.has(tag)));
 ---
 <BrokerLayout title="Money Map">
-  <p slot="intro">고객과 시장에서 어떤 업무와 수익이 생기는지 회사별 공시를 바탕으로 정리했습니다. 각 회사의 공시 부문별 금액도 함께 볼 수 있습니다.</p>
-  <nav aria-label="수익 경로를 볼 증권사" class="lab-chips">
-    {brokers.map(({id, name}) => <a href={'#map-' + id}>{name}</a>)}
-    <a href="#brokerage-fees">위탁매매 수수료 비교</a>
+  <p slot="intro">고객과 시장에서 어떤 업무와 수익이 생기는지 회사별 공시를 바탕으로 정리했습니다. 회사를 고르면 수익 경로와 공시 부문별 금액을 한 회사씩 봅니다.</p>
+  <nav class="lab-toc" aria-label="이 페이지의 절">
+    <a href="#segment-tags">공통 업무 분류</a>
+    <a href="#money-map-company">회사별 수익 경로</a>
+    <a href="#brokerage-fees">위탁매매 수수료</a>
   </nav>
-  {brokers.map((broker) => <section class="lab-block" id={'map-' + broker.id}>
-    <h2>{broker.name} 수익 경로</h2>
-    <MoneyMap {broker} />
-    <p><a href={sitePath('broker-atlas/brokers/' + broker.id) + '#money-map'}>{broker.name} 상세</a> · <a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a></p>
-    <DisclosedSegments brokerId={broker.id} />
-  </section>)}
-  <div id="brokerage-fees"><BrokerageFees client:load brokerBase={sitePath('broker-atlas/brokers')} /></div>
+  <section class="lab-block" id="segment-tags">
+    <h2>10개사의 공시 부문과 공통 업무 분류</h2>
+    <p>공시 부문명은 그대로 두고, 뜻이 분명한 부문만 공통 업무 분류로 묶었습니다. 애매한 부문은 기타·미분류에 두고 연결 조정 항목은 이 표에서 제외했습니다. 회사마다 부문 기준과 지표가 달라 금액은 회사별 표에서만 보입니다.</p>
+    <div class="lab-table-wrap" role="region" aria-label="회사별 공시 부문과 공통 업무 분류 표" tabindex="0">
+      <table class="lab-table lab-table--sticky-first">
+        <caption>행은 회사, 열은 공통 업무 분류 · 칸의 글자는 각사 공시 부문명</caption>
+        <thead><tr><th scope="col">증권사</th>{tagColumns.map((tag) => <th scope="col">{tag}</th>)}</tr></thead>
+        <tbody>{tagRows.map(({ id, name, byTag }) => <tr>
+          <th scope="row"><a href={'?broker=' + id + '#map-' + id} data-broker={id}>{name}</a></th>
+          {tagColumns.map((tag) => <td data-wrap>{byTag.get(tag)?.join(' · ') ?? '–'}</td>)}
+        </tr>)}</tbody>
+      </table>
+    </div>
+  </section>
+  <section class="lab-block" id="money-map-company">
+    <h2>회사별 수익 경로와 공시 부문별 금액</h2>
+    <p>{moneyMapNote} 공시 부문별 금액은 각사 공시 기준(연결·기간·지표)을 그대로 따르며 1조 원 이상은 조와 억으로 표시합니다. 한 회사에 분기 누적 표와 연간 결산 표가 모두 있으면 기간과 지표가 다르므로 두 표의 금액을 서로 비교하지 않습니다. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
+    <form class="lab-controls" method="get" action="" id="money-map-form">
+      <label>증권사
+        <select name="broker" id="money-map-select">
+          {brokers.map(({ id, name }) => <option value={id} selected={id === defaultBroker.id}>{name}</option>)}
+        </select>
+      </label>
+      <noscript><button class="lab-button" type="submit">보기</button></noscript>
+    </form>
+    <nav aria-label="수익 경로를 볼 증권사" class="lab-chips">
+      {brokers.map(({ id, name }) => <a href={'?broker=' + id + '#map-' + id} data-broker={id} aria-current={id === defaultBroker.id ? 'true' : undefined}>{name}</a>)}
+    </nav>
+    <noscript><style is:inline>[data-money-map][hidden] { display: block; }</style><p>스크립트가 꺼져 있어 10개사를 모두 차례로 보입니다.</p></noscript>
+    {brokers.map((broker) => <div data-money-map={broker.id} id={'map-' + broker.id} hidden={broker.id !== defaultBroker.id}>
+      <section class="lab-block">
+        <h3 tabindex="-1">{broker.name} 수익 경로</h3>
+        <MoneyMap {broker} note={false} />
+        <p><a href={brokerBase + broker.id + '/#money-map'}>{broker.name} 상세</a> · <a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a></p>
+      </section>
+      <DisclosedSegments brokerId={broker.id} note={false} heading="h3" />
+    </div>)}
+  </section>
+  <div id="brokerage-fees"><BrokerageFees client:load brokerBase={brokerBase} /></div>
+  <a class="lab-top-link" href="#top">맨 위로 ↑</a>
 </BrokerLayout>
+<script>
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-money-map]'));
+  const ids = panels.map((panel) => panel.dataset.moneyMap ?? '');
+  const select = document.getElementById('money-map-select') as HTMLSelectElement | null;
+  const form = document.getElementById('money-map-form');
+  const chips = Array.from(document.querySelectorAll<HTMLAnchorElement>('a[data-broker]'));
+
+  function show(id: string, push: boolean, focus = false) {
+    for (const panel of panels) panel.hidden = panel.dataset.moneyMap !== id;
+    for (const chip of chips) {
+      if (chip.dataset.broker === id) chip.setAttribute('aria-current', 'true');
+      else chip.removeAttribute('aria-current');
+    }
+    if (select) select.value = id;
+    if (push) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('broker', id);
+      url.hash = '';
+      window.history.pushState(null, '', url);
+    }
+    if (focus) document.querySelector<HTMLElement>('#map-' + id + ' h3')?.focus();
+  }
+  function fromUrl() {
+    const requested = new URLSearchParams(window.location.search).get('broker') ?? '';
+    show(ids.includes(requested) ? requested : ids[0], false);
+  }
+  for (const chip of chips) chip.addEventListener('click', (event) => {
+    event.preventDefault();
+    show(chip.dataset.broker ?? ids[0], true, true);
+  });
+  select?.addEventListener('change', () => show(select.value, true));
+  form?.addEventListener('submit', (event) => { event.preventDefault(); if (select) show(select.value, true, true); });
+  window.addEventListener('popstate', fromUrl);
+  fromUrl();
+</script>

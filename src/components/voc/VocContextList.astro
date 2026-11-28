@@ -1,24 +1,27 @@
 ---
 import { sitePath } from '../../utils/paths';
 import { vocTopics, type vocContext } from '../../utils/voc';
+// Compact rows: date · title (summary as a small note) · source · optional topic links.
 
 interface Props {
   title: string;
   items: typeof vocContext;
   linkTopics?: boolean;
+  visible?: number; // show this many rows and fold the rest under "N건 더 보기"
+  compact?: boolean; // title · source only, no summary note
 }
-const { title, items, linkTopics = false } = Astro.props;
+const { title, items, linkTopics = false, visible, compact = false } = Astro.props;
+const groups = visible && items.length > visible ? [items.slice(0, visible), items.slice(visible)] : [items];
 const labels = new Map(vocTopics.map(({ id, label }) => [id, label]));
 ---
 {items.length > 0 && <section class="lab-block" id="context">
   <h2>{title}</h2>
-  <ul class="lab-list">{items.map(({ date, title, summary, sourceName, sourceUrl, topics }) => <li class="lab-card">
+  {groups.map((group, index) => {
+    const list = <ul class="lab-list lab-list--rows">{group.map(({ date, title, summary, sourceName, sourceUrl, topics }) => <li>
     <time datetime={date}>{date}</time>
-    <h3>{title}</h3>
-    <p>{summary}</p>
-    <a href={sourceUrl}>{sourceName}</a>
-    {linkTopics && <ul class="lab-chips">{topics.map((topic) => (
-      <li><a href={sitePath('voc-studio/topics/' + topic)}>{labels.get(topic)}</a></li>
-    ))}</ul>}
-  </li>)}</ul>
+    <span class="row-title">{title}{(!compact || (linkTopics && topics.length > 0)) && <small>{!compact && <> · {summary}</>}{linkTopics && topics.length > 0 && <> · 관련 주제 {topics.map((topic, index) => <>{index > 0 && ', '}<a href={sitePath('voc-studio/topics/' + topic)}>{labels.get(topic)}</a></>)}</>}</small>}</span>
+    <a class="row-source" href={sourceUrl}>{sourceName}</a>
+  </li>)}</ul>;
+    return index === 0 ? list : <details class="lab-fold"><summary>{group.length}건 더 보기</summary>{list}</details>;
+  })}
 </section>}

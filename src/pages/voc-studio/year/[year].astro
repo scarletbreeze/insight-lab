@@ -8,7 +8,8 @@ import NoticeInquiryObservations from '../../../components/voc/NoticeInquiryObse
 import VocContextList from '../../../components/voc/VocContextList.astro';
 import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
 import VocTopicRanking from '../../../components/voc/VocTopicRanking.astro';
-import { noticeInquiryObservations, publicNoticeObservations, summarizeVocYear, vocContext, vocIntents, vocYears } from '../../../utils/voc';
+import StackedCount from '../../../components/charts/StackedCount.astro';
+import { noticeInquiryObservations, publicNoticeObservations, summarizeVocYear, vocContext, vocIntents, vocTopics, vocYears } from '../../../utils/voc';
 import { sitePath } from '../../../utils/paths';
 import { generalNoticeYear, publicBoardTopics, publicBoardYear } from '../../../utils/voc-public-board';
 
@@ -29,69 +30,95 @@ const review = annualReview.years.find((row) => row.year === year);
 const generalNoticeCount = generalNoticeYear(year);
 const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.isFullYear
   ? publicBoardTopics(year - 1) : undefined;
+const topicLabels = new Map(vocTopics.map(({ id, label }) => [id, label]));
+const examples = [...selectedPosts].sort((a, b) => b.date.localeCompare(a.date));
+const titleBased = examples.filter(({ reviewMethod }) => reviewMethod).length;
+// The first eight examples sit inline; the rest fold under their count so the page stays within its scroll budget.
+const exampleGroups = examples.length > 8 ? [examples.slice(0, 8), examples.slice(8)] : [examples];
+const sourceLabel = (sourceUrl: string) => new URL(sourceUrl).searchParams.has('f_key') ? '공개 게시판 검색 결과' : '공개 게시판';
+const toc: Array<[string, string]> = [
+  ...(boardCount ? [['board', '게시판 원글'] as [string, string]] : []),
+  ...(boardTopics ? [['top10', '주제 Top 10'] as [string, string], ['monthly', '월별 추이'] as [string, string]] : []),
+  ['examples', '문의 예시'], ['keywords', '키워드'], ['notices', '공지 타임라인'], ['notice-windows', '공지 전후 문의 변화'],
+  ...(context.length ? [['context', '시장·제도 변화'] as [string, string]] : []),
+];
 ---
 <VocLayout title={year + '년 고객 문의와 공지'}>
   <p slot="intro">{boardCount ? `공개 고객게시판 원글 ${boardCount.total.toLocaleString('ko-KR')}건과 키움증권 공지를 살펴봅니다. ${coverage?.period ?? boardCount.label}.` : coverage?.period}</p>
+  <nav class="lab-toc" aria-label={year + '년 페이지 구성'} data-static={toc.length > 7 ? '' : undefined}>
+    <ul>{toc.map(([id, label]) => <li><a href={'#' + id}>{label}</a></li>)}</ul>
+  </nav>
   <VocYearNavigation selected={year} />
-  {boardCount && <section class="lab-block">
+  {boardCount && <section class="lab-block" id="board">
     <h2>공개 고객게시판 원글 {boardCount.total.toLocaleString('ko-KR')}건</h2>
-    <p>{coverage?.questionLabel ?? boardCount.label}{coverage?.collectionStart && coverage.collectionEnd && ` · ${coverage.collectionStart}~${coverage.collectionEnd}`} · 게시판의 분류 기준</p>
-    <ul class="lab-list">
-      {Object.entries(boardCount.categories).sort(([, a], [, b]) => b - a).map(([category, count]) => <li>
-        <strong>{category}</strong> · {count.toLocaleString('ko-KR')}건 ({(count / boardCount.total * 100).toFixed(1)}%)
-        <meter min="0" max={boardCount.total} value={count} aria-label={category + ' 원글 비중'}></meter>
-      </li>)}
-    </ul>
-    <a href={sitePath('voc-studio/methodology') + '#public-board-sample'}>수집 범위와 출처</a>
+    <p>{coverage?.questionLabel ?? boardCount.label}{coverage?.collectionStart && coverage.collectionEnd && ` · ${coverage.collectionStart}~${coverage.collectionEnd}`} · 게시판의 분류 기준 · <a href={sitePath('voc-studio/methodology') + '#public-board-sample'}>수집 범위와 출처</a></p>
+    <StackedCount total={boardCount.total}
+      parts={Object.entries(boardCount.categories).sort(([, a], [, b]) => b - a).map(([category, count]) => ({ id: category, label: category, value: count }))}
+      caption={`원글 ${boardCount.total.toLocaleString('ko-KR')}건의 게시판 분류`} />
   </section>}
-  {boardTopics && <section class="lab-block">
+  {boardTopics && <section class="lab-block" id="top10">
     <h2>공개 문의 주제 Top 10</h2>
-    <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
-    {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 {annualReview.focus2025.rulesVersion} 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
-    {review && <p>직전 규칙으로 점검한 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
+    <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다. <a href={sitePath('voc-studio/methodology') + '#board-topics'}>자동 분류 기준</a></p>
     <VocTopicRanking {year} board={boardTopics} prior={priorBoardTopics} />
-    <p>태그는 설계서의 Level 1 분류와 자동 분류 규칙의 대표 용어입니다. 한 줄 관찰은 월별 집계의 수치만 서술하며 원인은 판단하지 않습니다. <a href={sitePath('voc-studio/methodology') + '#taxonomy-map'}>분류 대응표와 관찰 문장 규칙</a></p>
-    <a href={sitePath('voc-studio/methodology') + '#board-topics'}>자동 분류 기준</a>
+    <details class="lab-fold">
+      <summary>분류 검토 결과와 태그·관찰 문장 규칙</summary>
+      {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 {annualReview.focus2025.rulesVersion} 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
+      {review && <p>독립 표본 {review.sample}건 중 제목과 본문으로 판별한 {review.reviewed}건을 {annualReview.rulesVersion} 규칙과 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
+      <p>태그는 설계서의 Level 1 분류와 자동 분류 규칙의 대표 용어입니다. 한 줄 관찰은 월별 집계의 수치만 서술하며 원인은 판단하지 않습니다. <a href={sitePath('voc-studio/methodology') + '#taxonomy-map'}>분류 대응표와 관찰 문장 규칙</a></p>
+    </details>
   </section>}
-  {boardTopics && <section class="lab-block">
+  {boardTopics && <section class="lab-block" id="monthly">
     <h2>월별 문의 추이</h2>
-    <p>제목과 본문 용어가 한 주제로 분류된 원글의 월별 건수입니다.</p>
+    <p>제목과 본문 용어가 한 주제로 분류된 원글의 월별 건수입니다.{vocYears.some((entry) => entry.year === year - 1) && <> <a href={sitePath('voc-studio/compare') + '?left=' + (year - 1) + '&right=' + year + '#monthly'}>전년 같은 달과 비교</a></>}</p>
     <VocMonthlyTrends {year} />
-    {vocYears.some((entry) => entry.year === year - 1) && <p><a href={sitePath('voc-studio/compare') + '?left=' + (year - 1) + '&right=' + year + '#monthly'}>전년 같은 달과 비교</a></p>}
   </section>}
   <section class="lab-block" id="examples">
     <h2>공개 문의 예시</h2>
-    {selectedPosts.length ? <>
-      <p>공개 목록에서 확인해 일반화한 문의 예시 {selectedPosts.length}건입니다. 세부 주제와 문의 목적은 이 예시에만 부여합니다. 건수 순위는 위의 자동 분류 집계를 따릅니다.</p>
-      <ul class="lab-chips">{topicCounts.map(({ id, label, count }) => <li><a href={'#examples-' + id}>{label} · {count}건</a></li>)}</ul>
-      {topicCounts.map(({ id: topic, label, count }) => <section>
-        <h3 id={'examples-' + topic} tabindex="-1">{year}년 {label} 문의 예시 · {count}건</h3>
-        <ul class="lab-list">{selectedPosts.filter((post) => post.topic === topic).map(({ id, date, summary, subtopic, intent, sourceUrl, reviewMethod }) => <li>
-          <time datetime={date}>{date.length === 4 ? date + '년' : date}</time> · <a href={sitePath('voc-studio/topics/' + topic) + '#example-' + id}>{subtopic ?? vocIntents[intent]}</a> · {summary} · {reviewMethod && <small>제목 기반 · </small>}<a href={sourceUrl}>{new URL(sourceUrl).searchParams.has('f_key') ? '공개 게시판 검색 결과' : '공개 게시판'}</a>
-        </li>)}</ul>
-        <p><a href={sitePath('voc-studio/topics/' + topic) + '#examples'}>전체 연도 {label} 문의 예시</a></p>
-      </section>)}
+    {examples.length ? <>
+      <p>공개 목록에서 확인해 일반화한 문의 예시 {examples.length}건입니다. 세부 주제와 문의 목적은 이 예시에만 부여합니다. 건수 순위는 위의 자동 분류 집계를 따릅니다.{titleBased > 0 && ` 제목 기반 ${titleBased}건은 공개 제목에 나타난 내용을 일반화했습니다.`} 주제별 전체 연도 예시는 <a href={sitePath('voc-studio/topics')}>문의 주제별 탐색</a>에 있습니다.</p>
+      {exampleGroups.map((group, index) => {
+        const table = <div class="lab-table-wrap" role="region" aria-label={index === 0 ? "공개 문의 예시 표" : "추가 공개 문의 예시 표"} tabindex="0">
+          <table class="lab-table lab-table--sticky-first voc-examples-table">
+            <caption>{index === 0 ? `${year}년 문의 예시 ${examples.length}건 중 ${group.length}건 · 주제 ${topicCounts.map(({ label, count }) => `${label} ${count}`).join(' · ')}` : `${year}년 문의 예시 나머지 ${group.length}건`}</caption>
+            <thead><tr><th scope="col">날짜</th><th scope="col">주제</th><th scope="col">요약</th><th scope="col">검토 방식</th><th scope="col">출처</th></tr></thead>
+            <tbody>{group.map(({ id, date, topic, summary, subtopic, intent, sourceUrl, reviewMethod }) => <tr>
+              <th scope="row"><time datetime={date}>{date.length === 4 ? date + '년' : date}</time></th>
+              <td><a href={sitePath('voc-studio/topics/' + topic) + '#example-' + id}>{topicLabels.get(topic)}</a><br /><small>{subtopic ?? vocIntents[intent]}</small></td>
+              <td data-wrap>{summary}</td>
+              <td>{reviewMethod ? '제목 기반' : '공개 목록'}</td>
+              <td><a href={sourceUrl}>{sourceLabel(sourceUrl)}</a></td>
+            </tr>)}</tbody>
+          </table>
+        </div>;
+        return index === 0 ? table : <details class="lab-fold"><summary>문의 예시 {group.length}건 더 보기</summary>{table}</details>;
+      })}
     </> : <p class="empty-state">문의 예시 자료 확인 중</p>}
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="keywords">
     <h2>수록 문의 예시의 키워드</h2>
     <VocKeywords {keywords} />
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="notices">
     <h2>키움 공지 타임라인</h2>
-    {generalNoticeCount !== undefined && <p>일반 공지 등록 {generalNoticeCount.toLocaleString('ko-KR')}건 · {boardCount?.label}. 아래는 선별 공지입니다.</p>}
-    {noticeCounts.length > 0 && <>
-      <p>수록한 공지 {selectedNotices.length}건의 분류입니다.</p>
-      <ul class="lab-list">
+    {generalNoticeCount !== undefined && <p>일반 공지 등록 {generalNoticeCount.toLocaleString('ko-KR')}건 · {boardCount?.label}. 아래는 선별 공지 {selectedNotices.length}건입니다. 공지별 문의 비교 가능 여부는 <a href={sitePath('voc-studio/methodology') + '#notice-method'}>표시 기준</a>을 따릅니다.</p>}
+    {noticeCounts.length > 0 && (noticeCounts.length <= 7
+      ? <StackedCount parts={noticeCounts.map(({ category, count }) => ({ id: category, label: category, value: count }))} caption={`수록한 공지 ${selectedNotices.length}건의 분류`} />
+      : <ul class="lab-list">
         {noticeCounts.map(({ category, count }) => <li>
           <strong>{category}</strong> · {count}건
           <meter min="0" max={selectedNotices.length} value={count} aria-label={category + ' 공지 수'}></meter>
         </li>)}
-      </ul>
-    </>}
-    <NoticeList items={selectedNotices} />
+      </ul>)}
+    <NoticeList items={selectedNotices} visible={5} compact />
   </section>
   <NoticeInquiryObservations items={observations} verified={publicWindows.covered || coverage?.questionCoverage === 'full'} automated={publicWindows.covered} />
-  <VocContextList title="같은 해 시장·제도 변화" items={context} linkTopics />
+  <VocContextList title="같은 해 시장·제도 변화" items={context} linkTopics visible={5} compact />
+  <a class="lab-top-link" href="#top">맨 위로 ↑</a>
 </VocLayout>
-
+<style>
+  .voc-examples-table th, .voc-examples-table td { font-size: .92rem; line-height: 1.5; }
+  .voc-examples-table tbody th { white-space: nowrap; font-weight: 500; font-family: var(--font-mono); font-size: .85rem; }
+  .voc-examples-table td:nth-child(3) { min-width: 18rem; }
+  .voc-examples-table td:nth-child(4) { white-space: nowrap; }
+  .voc-examples-table small { color: var(--color-muted); }
+</style>

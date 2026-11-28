@@ -1,0 +1,24 @@
+---
+import type { marketEvents } from '../../utils/market';
+import { sitePath } from '../../utils/paths';
+
+interface Props { items: typeof marketEvents; grouped?: boolean; withSummary?: boolean; }
+const { items, grouped = false, withSummary = false } = Astro.props;
+const monthRoute = (date: string) => sitePath('market-time-capsule/' + date.slice(0, 4) + '/' + date.slice(5, 7)) + '#events';
+---
+<ul class="lab-list lab-list--rows">
+  {items.map(({ date, title, summary, category, sourceName, sourceUrl }) => <li>
+    <time datetime={date}>{grouped ? <a href={monthRoute(date)} title={Number(date.slice(5, 7)) + '월 시장 기록'}>{date.slice(5)}</a> : date.slice(5)}</time>
+    <span class="lab-chip">{category}</span>
+    <span class="row-title">
+      {title}
+      {withSummary && <small class="row-summary">{summary}</small>}
+    </span>
+    <a class="row-source" href={sourceUrl}>{sourceName}</a>
+  </li>)}
+</ul>
+<style>
+  time a { color: inherit; text-decoration: underline; text-underline-offset: .22em; text-decoration-color: var(--color-rule); }
+  time a:hover { color: var(--lab-accent); }
+  .row-summary { display: block; color: var(--color-muted); font-size: .84rem; line-height: 1.45; margin-top: .05rem; }
+</style>

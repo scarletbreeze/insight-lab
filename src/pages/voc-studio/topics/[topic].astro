@@ -1,6 +1,7 @@
 ---
 import VocLayout from '../../../components/voc/VocLayout.astro';
 import NoticeList from '../../../components/voc/NoticeList.astro';
+import HashReveal from '../../../components/common/HashReveal.astro';
 import VocKeywords from '../../../components/voc/VocKeywords';
 import VocContextList from '../../../components/voc/VocContextList.astro';
 import VocMonthlyTrends from '../../../components/voc/VocMonthlyTrends.astro';
@@ -30,6 +31,9 @@ const yearlyCounts = counts.flatMap(({ year, boardTopics, boardYear }) => boardT
   count: boardTopics.ranked.find((topic) => topic.id === id)?.count ?? 0,
 }] : []);
 const latestFull = yearlyCounts.find(({ isFullYear }) => isFullYear);
+// Lists longer than eight items use compact rows and fold each subtopic; the method note prints once above them.
+const foldExamples = items.length > 8;
+const titleBased = items.filter(({ reviewMethod }) => reviewMethod).length;
 const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && year === (latestFull?.year ?? 0) - 1);
 ---
 <VocLayout title={label}>
@@ -53,7 +57,7 @@ const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && y
   {yearlyCounts.length > 0 && <section class="lab-block">
     <h2>{label} 문의 월별 추이</h2>
     <p>이 주제로 자동 분류된 공개 문의의 월별 건수입니다.</p>
-    {yearlyCounts.map(({ year }, index) => <details open={index === 0}>
+    {yearlyCounts.map(({ year }, index) => <details class="lab-fold" open={index === 0}>
       <summary>{year}년</summary>
       <VocMonthlyTrends {year} topic={id} />
       {yearlyCounts.some((row) => row.year === year - 1) && <p>
@@ -64,15 +68,22 @@ const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && y
   <section class="lab-block" id="examples">
     <h2>세부 주제별 문의 예시</h2>
     {items.length ? <>
-      <p>선별한 공개 문의 {items.length}건을 {subtopics.length}개 세부 주제로 묶었습니다. 예시가 많은 주제부터 표시합니다. 전체 게시판의 세부 주제별 빈도는 집계하지 않았습니다.</p>
-      {subtopics.map(([subtopic, examples]) => <section>
-        <h3>{subtopic} · {examples.length}건</h3>
-        <ul class="lab-list">{examples.map(({ id: exampleId, date, summary, intent, sourceUrl, reviewMethod }) => <li id={'example-' + exampleId}>
-          <p>{summary}</p>
-          <a href={sitePath('voc-studio/year/' + date.slice(0, 4)) + '#examples'}><time datetime={date}>{date.length === 4 ? date + '년' : date}</time></a> · {vocIntents[intent]} · {reviewMethod && <small>제목 기반 · </small>}
-          <a href={sourceUrl}>{new URL(sourceUrl).searchParams.has('f_key') ? '공개 게시판 검색 결과' : '공개 게시판'}</a>
-        </li>)}</ul>
-      </section>)}
+      <p>선별한 공개 문의 {items.length}건을 {subtopics.length}개 세부 주제로 묶었습니다. 예시가 많은 주제부터 표시합니다. 전체 게시판의 세부 주제별 빈도는 집계하지 않았습니다.{titleBased > 0 && ` ‘제목 기반’ ${titleBased}건은 공개 제목에 나타난 문의 내용을 일반화한 예시입니다.`}</p>
+      {subtopics.map(([subtopic, examples], index) => {
+        const list = <ul class="lab-list lab-list--rows">{examples.map(({ id: exampleId, date, summary, intent, sourceUrl, reviewMethod }) => <li id={'example-' + exampleId}>
+          <a href={sitePath('voc-studio/year/' + date.slice(0, 4)) + '#examples'}><time datetime={date}>{date.length === 4 ? date + '년' : date}</time></a>
+          <span class="lab-chip">{vocIntents[intent]}{reviewMethod && ' · 제목 기반'}</span>
+          <span class="row-title">{summary}</span>
+          <a class="row-source" href={sourceUrl}>{new URL(sourceUrl).searchParams.has('f_key') ? '공개 게시판 검색 결과' : '공개 게시판'}</a>
+        </li>)}</ul>;
+        return foldExamples ? <details class="lab-fold" open={index === 0} id={'subtopic-' + index}>
+          <summary><h3>{subtopic}</h3> <span class="lab-fold__count">{examples.length}건</span></summary>
+          {list}
+        </details> : <section>
+          <h3>{subtopic} · {examples.length}건</h3>
+          {list}
+        </section>;
+      })}
     </> : <p class="empty-state">문의 자료 확인 중</p>}
   </section>
   {keywords.length > 0 && <section class="lab-block">
@@ -82,7 +93,8 @@ const previousFull = yearlyCounts.find(({ year, isFullYear }) => isFullYear && y
   <section class="lab-block">
     <h2>관련 공지</h2>
     <p><a href={sitePath('voc-studio/timeline') + '?' + new URLSearchParams({ topic: id })}>이 주제로 공지 타임라인 열기</a></p>
-    <NoticeList items={notices} />
+    <NoticeList items={notices} visible={5} />
   </section>
-  <VocContextList title="관련 시장·제도 변화" items={context} />
+  <VocContextList title="관련 시장·제도 변화" items={context} visible={5} />
 </VocLayout>
+<HashReveal />

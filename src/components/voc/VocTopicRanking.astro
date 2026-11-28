@@ -1,8 +1,10 @@
 ---
-import HorizontalBars from '../charts/HorizontalBars.astro';
 import { sitePath } from '../../utils/paths';
 import { topicObservation, vocIntents, vocPosts, vocTopics } from '../../utils/voc';
 import type { publicBoardTopics } from '../../utils/voc-public-board';
+// Top 10 (§7.5) as one table: rank, count, share and YoY, the representative questions, design-category tags and
+// the one-line observation. (The per-topic bar charts live on the topic pages; the year page keeps the monthly chart.) The basis text shared by
+// every observation of the year prints once under the table; each row keeps only the part specific to it.
 
 interface Props {
   year: number;
@@ -24,47 +26,33 @@ const rows = board.ranked.slice(0, 10).map(({ id, label, count }) => {
     examples: vocPosts.filter(({ date, topic }) => date.startsWith(String(year)) && topic === id).slice(0, 3),
   };
 });
+const bases = rows.flatMap(({ observation }) => observation ? [observation.basis.split(' · ')] : []);
+const sharedBasis = bases.length ? bases[0].filter((part) => bases.every((segments) => segments.includes(part))) : [];
+const ownBasis = (basis: string) => basis.split(' · ').filter((part) => !sharedBasis.includes(part)).join(' · ');
 ---
-<HorizontalBars
-  caption={`${year}년 단일 주제로 분류된 공개 문의 ${board.total.toLocaleString('ko-KR')}건 중 주제별 건수`}
-  items={rows.map(({ id, rank, label, count, share, yoy }) => ({
-    id, label: `${rank}위 ${label}`, value: count, href: sitePath('voc-studio/topics/' + id),
-    note: `${share}%${yoy ? ' · 전년 대비 ' + yoy : ''}`,
-  }))}
-  format={(value) => value.toLocaleString('ko-KR') + '건'}
-  labelWidth="11rem"
-  valueWidth="5.5rem"
-/>
-<ol class="voc-ranking" aria-label={year + '년 주제별 태그와 관찰'}>
-  {rows.map(({ id, rank, label, topic, observation, examples }) => <li class="voc-ranking-row" id={'rank-' + id}>
-    <h3><span class="voc-ranking-rank">{rank}위</span> <a href={sitePath('voc-studio/topics/' + id)}>{label}</a></h3>
-    {topic && <ul class="lab-chips voc-ranking-tags" aria-label={label + ' 분류 태그'}>
-      <li class="voc-tag-design">{topic.designCategory}</li>
-      {topic.keywords.slice(0, 4).map((keyword) => <li>{keyword}</li>)}
-    </ul>}
-    {observation
-      ? <p class="voc-ranking-observation">{observation.observation} <small>· {observation.basis}</small></p>
-      : <p class="voc-ranking-observation empty-state">월별 관찰 자료 확인 중</p>}
-    {examples.length > 0 ? <details>
-      <summary>대표 문의 {examples.length}건</summary>
-      <ul>{examples.map(({ summary, subtopic, intent, sourceUrl }) => <li>
-        <strong>{subtopic ?? label} · {vocIntents[intent]}</strong><p>{summary} <a href={sourceUrl}>출처</a></p>
-      </li>)}</ul>
-    </details> : <p class="voc-ranking-empty">이 연도의 공개 문의 예시는 아직 수록하지 않았습니다.</p>}
-  </li>)}
-</ol>
+<div class="lab-table-wrap" role="region" aria-label="공개 문의 주제 순위 표" tabindex="0">
+  <table class="lab-table lab-table--sticky-first voc-ranking-table">
+    <caption>{year}년 주제별 건수와 전체 공개 문의 {board.total.toLocaleString('ko-KR')}건 대비 비중</caption>
+    <thead><tr>
+      <th scope="col">순위 · 주제</th><th scope="col">건수</th><th scope="col">비중</th><th scope="col">전년 대비</th>
+      <th scope="col">대표 질문</th><th scope="col">설계 분류 · 태그</th><th scope="col">한 줄 관찰</th>
+    </tr></thead>
+    <tbody>{rows.map(({ id, rank, label, count, share, yoy, topic, observation, examples }) => <tr id={'rank-' + id}>
+      <th scope="row"><span class="voc-ranking-rank">{rank}위</span> <a href={sitePath('voc-studio/topics/' + id)}>{label}</a></th>
+      <td>{count.toLocaleString('ko-KR')}건</td>
+      <td>{share}%</td>
+      <td>{yoy ?? '—'}</td>
+      <td data-wrap style="min-width: 18rem">{examples.length ? <ul class="lab-table__lines">{examples.map(({ id: exampleId, subtopic, intent, summary }) => <li><small>{subtopic ?? vocIntents[intent]}</small> <a href={sitePath('voc-studio/topics/' + id) + '#example-' + exampleId}>{summary}</a></li>)}</ul> : <span class="empty-state">예시 미수록</span>}</td>
+      <td>{topic ? <>{topic.designCategory} <small>· {topic.keywords.slice(0, 4).join(' · ')}</small></> : '—'}</td>
+      <td data-wrap>{observation ? <>{observation.observation}{ownBasis(observation.basis) && <> <small>· {ownBasis(observation.basis)}</small></>}</> : <span class="empty-state">월별 관찰 자료 확인 중</span>}</td>
+    </tr>)}</tbody>
+  </table>
+</div>
+{sharedBasis.length > 0 && <p class="chart-note">한 줄 관찰의 공통 근거 · {sharedBasis.join(' · ')}. 대표 질문은 이 연도 공개 문의 예시의 세부 주제이며 출처는 아래 문의 예시 표와 주제별 페이지에 있습니다.</p>}
 <style>
-  .voc-ranking { list-style: none; padding: 0; margin-block: 1rem; display: grid; gap: .2rem; }
-  .voc-ranking-row { display: grid; gap: .15rem; padding: .6rem .25rem; border-bottom: 1px solid var(--color-rule); }
-  .voc-ranking-row h3 { margin: 0; font-size: 1rem; display: flex; gap: .5rem; align-items: baseline; }
+  .voc-ranking-table th, .voc-ranking-table td { font-size: .92rem; line-height: 1.5; }
+  .voc-ranking-table td:nth-child(2), .voc-ranking-table td:nth-child(3), .voc-ranking-table td:nth-child(4) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .voc-ranking-table td:nth-child(7) { min-width: 22rem; }
   .voc-ranking-rank { font-family: var(--font-mono); color: var(--color-muted); font-size: .85rem; font-variant-numeric: tabular-nums; }
-  .voc-ranking-tags { margin-block: .25rem .1rem; gap: .3rem; }
-  .voc-ranking-tags li { font-size: .78rem; padding: .15rem .45rem; border: 1px solid var(--color-rule); border-radius: .25rem; color: var(--color-muted); }
-  .voc-ranking-tags .voc-tag-design { border-color: var(--lab-accent, var(--color-accent-blue)); color: inherit; }
-  .voc-ranking-tags .voc-tag-design::before { content: '설계서 '; color: var(--color-muted); }
-  .voc-ranking-observation { margin-block: .2rem; font-size: .92rem; }
-  .voc-ranking-observation small { color: var(--color-muted); }
-  .voc-ranking-empty { font-size: .85rem; margin-block: .15rem; }
-  .voc-ranking details summary { cursor: pointer; padding-block: .3rem; font-size: .9rem; }
-  .voc-ranking details li { border-top: 1px solid var(--color-rule); padding-block: .5rem; }
+  .voc-ranking-table small { color: var(--color-muted); }
 </style>

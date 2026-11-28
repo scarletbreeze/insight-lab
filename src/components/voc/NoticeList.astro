@@ -1,16 +1,28 @@
 ---
-import { noticeWindowStatus, windowLabels, type vocNotices } from '../../utils/voc';
+import { noticeWindowStatus, type vocNotices } from '../../utils/voc';
+import HashReveal from '../common/HashReveal.astro';
 import { sitePath } from '../../utils/paths';
-interface Props { items: typeof vocNotices; }
-const { items } = Astro.props;
+// Compact rows: date · category chip · title (summary as a small note) · source. The 전후 14일 문의 비교 link
+// appears only for notices with a published observation; exclusion reasons stay on the methodology page.
+// `visible`: show this many rows and fold the rest under "N건 더 보기" (links into a folded row open it).
+// `compact`: title only, no summary note (the year page; summaries stay on the topic pages).
+interface Props { items: typeof vocNotices; visible?: number; compact?: boolean; }
+const { items, visible, compact = false } = Astro.props;
+const groups = visible && items.length > visible ? [items.slice(0, visible), items.slice(visible)] : [items];
 ---
-{items.length ? <ul class="lab-list">
-  {items.map(({ id, date, dateType, title, category, summary, sourceUrl, topic, channel }) => {
+{items.length ? groups.map((group, index) => {
+  const list = <ul class="lab-list lab-list--rows">
+  {group.map(({ id, date, dateType, title, category, summary, sourceUrl, topic, channel }) => {
     const status = noticeWindowStatus(id);
-    return <li class="lab-card" id={id} data-notice-year={date.slice(0, 4)} data-notice-category={category} data-notice-topic={topic} data-notice-channel={channel} data-window-status={status}>
-      <div><time datetime={date}>{date}</time><span>{dateType === "effective" ? "적용·안내 대상일" : "게시일"} · {category} · {channel}</span></div>
-      <strong>{title}</strong>{summary && <p>{summary}</p>}<a href={sourceUrl}>키움증권 원문</a>
-      <p>{status === 'observed' ? <a href={sitePath('voc-studio/year/' + date.slice(0, 4)) + '#notice-window-' + id}>게시 전후 14일 문의 비교</a> : '문의 비교 · ' + windowLabels[status]}</p>
+    return <li id={id} data-notice-year={date.slice(0, 4)} data-notice-category={category} data-notice-topic={topic} data-notice-channel={channel} data-window-status={status}>
+      <time datetime={date}>{date}</time>
+      <span class="lab-chip">{category}{channel !== '영웅문4' && ' · ' + channel}{dateType === 'effective' && ' · 적용·안내 대상일'}</span>
+      <span class="row-title">{title}{summary && !compact && <small> · {summary}</small>}</span>
+      <a class="row-source" href={sourceUrl}>키움증권 원문</a>
+      {status === 'observed' && <a href={sitePath('voc-studio/year/' + date.slice(0, 4)) + '#notice-window-' + id}>전후 14일 문의 비교</a>}
     </li>;
   })}
-</ul> : <p class="empty-state">공지 자료 확인 중</p>}
+</ul>;
+  return index === 0 ? list : <details class="lab-fold"><summary>공지 {group.length}건 더 보기</summary>{list}</details>;
+}) : <p class="empty-state">공지 자료 확인 중</p>}
+<HashReveal />

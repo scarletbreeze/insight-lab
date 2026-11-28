@@ -1,8 +1,12 @@
 ---
 import { formatSegmentAmount, segmentFilings, segmentTag, type SegmentTable } from '../../utils/broker-segments';
 import { brokers } from '../../utils/brokers';
-interface Props { brokerId: string; }
-const { brokerId } = Astro.props;
+// `note` prints the generic reading rules (unit, naming, "do not compare the two tables"). A page that shows
+// several companies states them once in its head and passes note={false}; the per-company facts stay.
+interface Props { brokerId: string; note?: boolean; heading?: 'h2' | 'h3'; }
+const { brokerId, note = true, heading = 'h2' } = Astro.props;
+const Heading = heading;
+const Sub = heading === 'h2' ? 'h3' : 'h4';
 const filing = segmentFilings[brokerId];
 const brokerName = brokers.find(({ id }) => id === brokerId)?.name ?? brokerId;
 const tables: { table: SegmentTable; period: string; key: string }[] = filing
@@ -16,12 +20,12 @@ const sorted = (table: SegmentTable) => {
 };
 ---
 {filing && <section class="lab-block" id={'disclosed-segments-' + brokerId}>
-  <h2>공시 부문별 {filing.metric}</h2>
-  <p>{filing.basis} · {filing.period ?? '연간 결산'}{filing.annual && <> 과 {filing.annual.period ?? '연간 결산'} 두 표를 따로 보입니다. 기간과 지표가 다르므로 두 표의 금액을 서로 비교하지 않습니다.</>} · 1조 원 이상은 조와 억으로 표시. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</p>
+  <Heading>공시 부문별 {filing.metric}</Heading>
+  <p>{filing.basis} · {filing.period ?? '연간 결산'}{filing.annual && <> · {filing.annual.period ?? '연간 결산'} 표를 따로 보입니다{note && <>. 기간과 지표가 다르므로 두 표의 금액을 서로 비교하지 않습니다</>}</>}{note && <> · 1조 원 이상은 조와 억으로 표시. 부문명과 연결 조정 항목은 공시 표기를 따릅니다.</>}</p>
   {tables.map(({ table, period, key }) => {
     const { latestIndex, segments, scale } = sorted(table);
     return <div class="segment-period" id={'disclosed-segments-' + brokerId + '-' + key}>
-      {filing.annual && <h3>{period} · {table.metric}</h3>}
+      {filing.annual && <Sub>{period} · {table.metric}</Sub>}
       <figure>
         <figcaption>{table.years[latestIndex]}년 {period} 부문별 {table.metric}</figcaption>
         <ul class="segments">{segments.map(({ name, amounts }) => <li>
@@ -30,28 +34,33 @@ const sorted = (table: SegmentTable) => {
           <span class="amount">{formatSegmentAmount(amounts[latestIndex], table.unit)}</span>
         </li>)}</ul>
       </figure>
-      <div class="lab-table-wrap" role="region" aria-label={brokerName + ' ' + period + ' 부문별 ' + table.metric + ' 공시 표'} tabindex="0">
-        <table class="lab-table">
-          <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th>{table.years.map((year) => <th scope="col">{year}년 {period}</th>)}</tr></thead>
-          <tbody>{table.segments.map(({ name, amounts }) => <tr>
-            <th scope="row">{name}</th><td>{segmentTag(name)}</td>{amounts.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}
-          </tr>)}</tbody>
-          <tfoot><tr><th scope="row" colspan="2">연결 합계</th>{table.total.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}</tr></tfoot>
-        </table>
-      </div>
-      {table.note && <p>{table.note}</p>}
-      <p><a href={table.sourceUrl}>{table.sourceName}</a></p>
+      <details class="lab-fold">
+        <summary>공시 표와 원문 <span class="lab-fold__count">{table.segments.length}개 부문</span></summary>
+        <div class="lab-table-wrap" role="region" aria-label={brokerName + ' ' + period + ' 부문별 ' + table.metric + ' 공시 표'} tabindex="0">
+          <table class="lab-table lab-table--sticky-first">
+            <thead><tr><th scope="col">공시 부문</th><th scope="col">공통 업무 분류</th>{table.years.map((year) => <th scope="col">{year}년 {period}</th>)}</tr></thead>
+            <tbody>{table.segments.map(({ name, amounts }) => <tr>
+              <th scope="row">{name}</th><td>{segmentTag(name)}</td>{amounts.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}
+            </tr>)}</tbody>
+            <tfoot><tr><th scope="row" colspan="2">연결 합계</th>{table.total.map((value) => <td>{formatSegmentAmount(value, table.unit)}</td>)}</tr></tfoot>
+          </table>
+        </div>
+        {table.note && <p>{table.note}</p>}
+        <p><a href={table.sourceUrl}>{table.sourceName}</a></p>
+      </details>
     </div>;
   })}
 </section>}
 <style>
   figure { margin: 1rem 0; }
   .segment-period + .segment-period { margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--color-rule); }
+  /* Raw 공시 부문명 can run to 30+ characters; keep the sticky first column under half of a 360px wrap. */
+  .lab-table th[scope="row"]:not([colspan]) { white-space: normal; min-width: 7rem; max-width: 9rem; overflow-wrap: anywhere; }
   .segments { list-style: none; padding: 0; }
-  .segments li { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(3rem, 2fr) auto; gap: .5rem; align-items: center; }
-  .track { position: relative; height: 1.25rem; }
+  .segments li { display: grid; grid-template-columns: minmax(5rem, 1fr) minmax(3rem, 2fr) auto; gap: .5rem; align-items: center; min-height: 1.8rem; }
+  .track { position: relative; height: .8rem; }
   .track::before { content: ''; position: absolute; left: 50%; height: 100%; border-left: 1px solid var(--color-muted); }
-  .track i { position: absolute; top: 25%; height: 50%; left: 50%; background: var(--color-accent-blue); }
-  .track i.negative { left: auto; right: 50%; background: var(--color-accent-red); }
+  .track i { position: absolute; top: 0; height: 100%; left: 50%; background: var(--color-accent-blue); border-radius: 0 4px 4px 0; }
+  .track i.negative { left: auto; right: 50%; background: var(--color-accent-red); border-radius: 4px 0 0 4px; }
   .amount { font-variant-numeric: tabular-nums; text-align: right; }
 </style>

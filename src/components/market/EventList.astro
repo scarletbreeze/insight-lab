@@ -1,15 +1,47 @@
 ---
 import type { marketEvents } from '../../utils/market';
-interface Props { items: typeof marketEvents; }
-const { items } = Astro.props;
+import EventRows from './EventRows.astro';
+
+interface Props { items: typeof marketEvents; inlineLimit?: number; grouped?: boolean; withSummary?: boolean; }
+const { items, inlineLimit, grouped = false, withSummary = false } = Astro.props;
+type Item = Props['items'][number];
+const sorted = [...items].sort((a, b) => a.date.localeCompare(b.date));
+
+/**
+ * No importance field exists in the data, so the inline set is picked by: (1) events that carry a THEN/NOW record,
+ * then everything else; within each tier the categories are drained round-robin, rarest category first, so the dominant
+ * 거시경제/통화정책 categories cannot fill the whole list. Display order is chronological.
+ */
+const bokCutRecords = new Set([
+  '2020-03-16 한국은행, 기준금리 0.50%p 인하 결정',
+  '2020-03-17 한국은행, 기준금리 0.75%로 인하',
+]);
+const recordsMarchCut = (item: Item) => bokCutRecords.has(item.date + ' ' + item.title);
+function pickInline(list: Item[], limit: number) {
+  const chosen = new Set<Item>();
+  const tiers = [list.filter(({ then, now }) => then || now), list.filter(({ then, now }) => !then && !now)];
+  for (const tier of tiers) {
+    const queues = [...Map.groupBy(tier, ({ category }) => category).values()].sort((a, b) => a.length - b.length);
+    while (chosen.size < limit && queues.some((queue) => queue.length)) {
+      for (const queue of queues) {
+        const next = queue.shift();
+        if (next && chosen.size < limit && !(recordsMarchCut(next) && [...chosen].some(recordsMarchCut))) chosen.add(next);
+      }
+    }
+  }
+  return list.filter((item) => chosen.has(item));
+}
+const inline = inlineLimit && sorted.length > inlineLimit ? pickInline(sorted, inlineLimit) : sorted;
+const rest = sorted.filter((item) => !inline.includes(item));
 ---
-{items.length ? (
-  <ul class="lab-list">
-    {items.map(({ date, title, summary, category, sourceName, sourceUrl }) => (
-      <li class="lab-card">
-        <div><time datetime={date}>{date}</time><span>{category}</span></div>
-        <strong>{title}</strong><p>{summary}</p><a href={sourceUrl}>{sourceName}</a>
-      </li>
-    ))}
-  </ul>
-) : <p class="empty-state">자료 확인 중</p>}
+{sorted.length ? <>
+  {rest.length > 0 && <p class="pick-note">사건 {sorted.length}건 중 {inline.length}건을 먼저 보입니다 · THEN·NOW 기록 우선, 분류별 균등, 같은 결정의 발표일·적용일 기록은 하나만 · 나머지는 아래 접힌 목록에 있습니다.</p>}
+  <EventRows items={inline} {grouped} {withSummary} />
+  {rest.length > 0 && <details class="lab-fold">
+    <summary>사건 <span class="lab-fold__count">{rest.length}건</span> 더 보기</summary>
+    <EventRows items={rest} {grouped} {withSummary} />
+  </details>}
+</> : <p class="empty-state">자료 확인 중</p>}
+<style>
+  .pick-note { margin-block: .2rem; color: var(--color-muted); font-size: .85rem; line-height: 1.45; }
+</style>

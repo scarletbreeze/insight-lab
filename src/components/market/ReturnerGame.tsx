@@ -3,7 +3,7 @@ import questions from '../../../data/market/game.json';
 
 interface Props {
   monthBase: string;
-  stockRounds: { period: string; eligibleCount: number; firstDate: string; lastDate: string;
+  stockRounds: { period: string; totalReturn: boolean; eligibleCount: number; firstDate: string; lastDate: string;
     choices: { name: string; symbol: string; returnPct: number }[] }[];
   assets: { period: string; firstDate: string; lastDate: string; multiples: number[] }[];
 }
@@ -31,12 +31,13 @@ export default function ReturnerGame({ monthBase, assets, stockRounds }: Props) 
   const gameQuestions = questions.map((item) => {
     if (item.date === '2024-11' && stockRound) {
       const best = Math.max(...stockRound.choices.map(({ returnPct }) => returnPct));
+      const basis = stockRound.totalReturn ? '총수익률(배당 재투자 반영)' : '가격 수익률(배당 제외)';
       return { ...item, date: stockPeriod,
-        prompt: stockPeriod + ' QQQ 보유 종목 중 다음 네 종목을 비교하면 가격 수익률이 가장 높았던 곳은 어디일까요?',
+        prompt: stockPeriod + ' QQQ 기준으로 비교한 네 종목 중 ' + basis + '이 가장 높았던 곳은 어디일까요?',
         choices: stockRound.choices.map(({ name, symbol }) => name + ' (' + symbol + ')'),
         answer: stockRound.choices.findIndex(({ returnPct }) => returnPct === best),
         explanation: stockRound.firstDate + '~' + stockRound.lastDate + ' · 계산한 ' + stockRound.eligibleCount
-          + '개 종목 중 네 종목의 가격 수익률입니다. ' + stockRound.choices.map(({ symbol, returnPct }) => symbol + ' '
+          + '개 종목 중 네 종목의 ' + basis + '입니다. ' + stockRound.choices.map(({ symbol, returnPct }) => symbol + ' '
           + returnPct.toFixed(2) + '%').join(' · '),
         sourceUrl: monthBase + stockPeriod.replace('-', '/') + '/#equity-rankings', sourceName: '해당 월 종목 순위와 가격 출처' };
     }

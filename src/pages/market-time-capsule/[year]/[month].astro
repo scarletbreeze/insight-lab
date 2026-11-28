@@ -2,6 +2,8 @@
 import monthNotes from '../../../../data/market/month-notes.json';
 import MarketLayout from '../../../components/market/MarketLayout.astro';
 import PeriodNavigation from '../../../components/market/PeriodNavigation.astro';
+import MarketToc from '../../../components/market/MarketToc.astro';
+import IndexFacts from '../../../components/market/IndexFacts.astro';
 import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
 import IndexSnapshot from '../../../components/market/IndexSnapshot.astro';
 import GoldSnapshot from '../../../components/market/GoldSnapshot.astro';
@@ -25,11 +27,18 @@ const notes = [
   { label: 'THEN · 당시 알 수 있었던 사실', facts: then },
   { label: 'NOW · 이후 확인된 사실', facts: now },
 ];
+const toc: Array<[string, string]> = [['시장 스냅샷', 'snapshot'], ['국내 지수', 'kr-index'], ['미국 지수', 'us-index'], ['Top 10', 'equity-rankings']];
+if (study) toc.push(['시장 리뷰', 'study']);
+toc.push(['주요 사건', 'events'], ['THEN · NOW', 'then-now']);
+if (note) toc.push(['Returner Memo', 'memo']);
+if (sources.length) toc.push(['출처', 'sources']);
 ---
 <MarketLayout title={`${year}년 ${Number(month)}월`} {year}>
   {note && <p slot="intro">{note.summary}</p>}
+  <MarketToc items={toc} />
+  <IndexFacts {period} />
   <PeriodNavigation {year} {month} />
-  <section class="lab-block">
+  <section class="lab-block" id="snapshot">
     <h2>시장 스냅샷</h2>
     <MarketSnapshot {period} />
     <GoldSnapshot {period} />
@@ -37,7 +46,7 @@ const notes = [
   <IndexSnapshot {period} />
   <IndexSnapshot {period} market="US" />
   <section class="lab-block" id="equity-rankings"><h2>한국·미국 수익률 Top 10</h2><EquityRankings {period} /></section>
-  {study && <section class="lab-block">
+  {study && <section class="lab-block" id="study">
     <h2>공개 시장 리뷰</h2>
     <article class="lab-card">
       <h3>{study.title}</h3>
@@ -46,25 +55,37 @@ const notes = [
       <a href={study.sourceUrl}>{study.sourceName}</a>
     </article>
   </section>}
-  <section class="lab-block"><h2>주요 사건</h2><EventList {items} /></section>
-  <div class="lab-grid">
+  <section class="lab-block" id="events"><h2>주요 사건</h2><EventList {items} inlineLimit={7} withSummary /></section>
+  <section class="lab-block" id="then-now">
     {notes.map(({ label, facts }) => (
-      <section class="lab-block lab-card">
+      <>
         <h2>{label}</h2>
-        {facts.length ? <ul class="lab-list">{facts.map(({ fact, sourceUrl }) => <li>
-          <p>{fact}</p>
-          <a href={sourceUrl}>출처</a>
-        </li>)}</ul> : <p>자료 확인 중</p>}
-      </section>
+        {facts.length ? <>
+          <ul class="lab-list lab-list--rows">{facts.slice(0, 5).map(({ fact, sourceUrl }) => <li>
+            <span class="row-title">{fact}</span>
+            <a class="row-source" href={sourceUrl}>출처</a>
+          </li>)}</ul>
+          {facts.length > 5 && <details class="lab-fold">
+            <summary>사실 <span class="lab-fold__count">{facts.length - 5}건</span> 더 보기</summary>
+            <ul class="lab-list lab-list--rows">{facts.slice(5).map(({ fact, sourceUrl }) => <li>
+              <span class="row-title">{fact}</span>
+              <a class="row-source" href={sourceUrl}>출처</a>
+            </li>)}</ul>
+          </details>}
+        </> : <p>자료 확인 중</p>}
+      </>
     ))}
-  </div>
-  {note && <section class="lab-block">
+  </section>
+  {note && <section class="lab-block" id="memo">
     <h2>Returner Memo</h2>
     <p>{note.memo}</p>
     <a href={note.sourceUrl}>{note.sourceName}</a>
   </section>}
-  {sources.length > 0 && <section class="lab-block">
-    <h2>이달의 사건 출처</h2>
-    <ul class="lab-list">{sources.map(([url, name]) => <li><a href={url}>{name}</a></li>)}</ul>
+  {sources.length > 0 && <section class="lab-block" id="sources">
+    <details class="lab-fold">
+      <summary>이달의 사건 출처 <span class="lab-fold__count">{sources.length}건</span></summary>
+      <ul class="lab-list">{sources.map(([url, name]) => <li><a href={url}>{name}</a></li>)}</ul>
+    </details>
   </section>}
+  <a class="lab-top-link" href="#top">맨 위로 ↑</a>
 </MarketLayout>

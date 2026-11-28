@@ -56,8 +56,8 @@ export default function MarketPeriodCompare({ periods, measures, base }: {
         </select>
       </label>
     </div>
-    {first === second ? <p role="status">서로 다른 두 달을 선택하세요.</p> : <div className="lab-table-wrap">
-      <table className="lab-table">
+    {first === second ? <p role="status">서로 다른 두 달을 선택하세요.</p> : <div className="lab-table-wrap" role="region" aria-label="선택한 두 달의 지표 비교" tabIndex={0}>
+      <table className="lab-table lab-table--sticky-first">
         <caption>선택한 두 달의 지표와 차이</caption>
         <thead>
           <tr><th scope="col">지표</th><th scope="col"><a href={link(first)}>{first}</a></th>

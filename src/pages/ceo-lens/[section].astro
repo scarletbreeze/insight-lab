@@ -19,6 +19,13 @@ const categories = [...new Set(items.map(({ category }) => category))];
 const applications = [...new Set(items.flatMap(({ applications }) => applications ?? []))].sort((a, b) => a.localeCompare(b, 'ko'));
 const timelineEvents = items.map(({ date, title, id, region }) => ({ date, label: title, href: '#' + id, kind: region === 'KR' ? 'kr' : 'global' }));
 const timelineKinds = [{ id: 'kr', label: '국내' }, { id: 'global', label: '해외' }];
+// The global page keys its timeline by topic instead of region: every case is 해외.
+const caseTimelineEvents = items.map(({ date, title, id, category }) => ({ date, label: title, href: '#' + id, kind: category }));
+const caseTimelineKinds = categories.map((category) => ({ id: category, label: category }));
+// Archive rows, the all-signals page and any topic page with more than twelve signals are grouped per year;
+// the newest group opens, older ones stay closed. Links into a closed group open it (HashReveal in SignalList).
+const grouped = section === 'archive' || section === 'signals' || items.length > 12;
+const archiveYears = years.map((year) => ({ year, items: items.filter(({ date }) => date.startsWith(year)) }));
 const lastUpdated = latestUpdate(items.length ? items : signals);
 ---
 <CeoLayout {title}>
@@ -46,9 +53,15 @@ const lastUpdated = latestUpdate(items.length ? items : signals);
     {section === 'regulation' && <>
       <h2>규제 시그널 타임라인</h2>
       <Timeline events={timelineEvents} kinds={timelineKinds} title={`규제 시그널 ${items.length}건의 발표 시점`} fallback="narrow"
-        caption={`<strong>규제 시그널 ${items.length}건의 발표 시점</strong> — 넓은 화면에서는 연도 축 위의 제목을, 좁은 화면에서는 연도별 목록의 제목을 누르면 아래 카드로 이동합니다. 아래 필터는 카드에만 적용됩니다.`} />
+        caption={`<strong>규제 시그널 ${items.length}건의 발표 시점</strong> — 넓은 화면에서는 연도 축 위의 제목을, 좁은 화면에서는 연도별 목록의 제목을 누르면 아래 목록의 해당 줄이 펼쳐집니다. 아래 필터는 목록에만 적용됩니다.`} />
     </>}
-    <p>시그널 최근 확인일 <time datetime={lastUpdated}>{lastUpdated}</time> — 이 페이지의 시그널 중 가장 최근에 출처를 다시 열어 확인한 날짜입니다.</p>
+    {section === 'global' && <>
+      <h2>해외 사례 타임라인</h2>
+      <Timeline events={caseTimelineEvents} kinds={caseTimelineKinds} title={`해외 사례 ${items.length}건의 발표 시점`} fallback="narrow"
+        caption={`<strong>해외 사례 ${items.length}건의 발표 시점</strong> — 주제별 표시. 제목을 누르면 아래 목록의 해당 줄이 펼쳐집니다. 각 줄은 날짜·주제·기관·제목이고, 질문·출처·사례 내용·살펴볼 이유는 줄을 펼치면 보입니다.`} />
+    </>}
+    {section === 'archive' && <h2>시그널 아카이브</h2>}
+    {!['archive', 'regulation', 'global', 'digital-assets'].includes(section) && <h2>{title} {items.length}건{grouped ? ' — 연도별' : ''}</h2>}
     <ceo-filters>
       <div class="lab-controls">
         <label>발표 연도 <select data-filter="year"><option value="">전체</option>{years.map((year) => <option>{year}</option>)}</select></label>
@@ -59,8 +72,12 @@ const lastUpdated = latestUpdate(items.length ? items : signals);
         <button type="button" data-reset hidden>필터 초기화</button>
       </div>
       <p role="status">{items.length}건</p>
-      <SignalList {items} cases={section === 'global'} />
+      {grouped ? archiveYears.map(({ year, items }, index) => <details class="lab-fold" data-year-group={year} open={index === 0}>
+        <summary><h3>{year}년</h3> <span class="lab-fold__count">{items.length}건</span></summary>
+        <SignalList {items} cases={section === 'global'} variant={section === 'archive' ? 'index' : 'fold'} heading="h4" />
+      </details>) : <SignalList {items} cases={section === 'global'} variant="fold" />}
     </ceo-filters>
+    <p class="chart-note">시그널 최근 확인일 <time datetime={lastUpdated}>{lastUpdated}</time> — 이 페이지의 시그널 중 가장 최근에 출처를 다시 열어 확인한 날짜입니다. 발표일이나 작성일이 아닙니다.</p>
   </section>}
 </CeoLayout>
 <script>
@@ -71,6 +88,7 @@ const lastUpdated = latestUpdate(items.length ? items : signals);
       const filters = Array.from(this.querySelectorAll<HTMLSelectElement>('select[data-filter]'));
       const status = this.querySelector('[role="status"]');
       const items = Array.from(this.querySelectorAll<HTMLElement>('[data-year]'));
+      const groups = Array.from(this.querySelectorAll<HTMLDetailsElement>('details[data-year-group]'));
       const reset = this.querySelector<HTMLButtonElement>('[data-reset]');
       if (!status) return;
       if (reset) reset.hidden = false;
@@ -82,6 +100,15 @@ const lastUpdated = latestUpdate(items.length ? items : signals);
           return match;
         });
         status.textContent = visible.length ? `${visible.length}건` : '선택한 조건에 맞는 시그널이 없습니다.';
+        // Archive: a year group hides when none of its rows match; an active filter opens the groups that still match.
+        const filtering = filters.some(({ value }) => value);
+        for (const group of groups) {
+          const shown = Array.from(group.querySelectorAll<HTMLElement>('[data-year]')).filter((item) => !item.hidden).length;
+          group.hidden = shown === 0;
+          if (filtering && shown) group.open = true;
+          const count = group.querySelector('.lab-fold__count');
+          if (count) count.textContent = `${shown}건`;
+        }
       };
       const loadUrl = () => {
         const params = new URLSearchParams(location.search);

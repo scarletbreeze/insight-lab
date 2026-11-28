@@ -35,6 +35,7 @@ interface Ranking {
   tradingDaySources?: string[];
   decisionDate?: string;
   priceDisclosure?: string;
+  priceBasis?: string;
   items: Equity[];
 }
 
@@ -57,84 +58,107 @@ const krDisclosure = !rankings?.KR && krFile ? '수정주가 미반영 · 주식
 const spy = (spyRaw as Record<string, { US: Ranking }>)[period]?.US;
 const comparisons: Array<[string, Ranking | undefined]> = [['한국', krRanking], ['미국 · QQQ', rankings?.US]];
 if (spy) comparisons.push(['미국 · SPY', spy]);
+const ranked = comparisons.filter((entry): entry is [string, Ranking] => Boolean(entry[1]?.items.length));
+const missing = comparisons.filter(([, ranking]) => !ranking?.items.length).map(([market]) => market);
+const basisLabel = (market: string, ranking: Ranking) => ranking.priceBasis === 'total-return' ? 'Stooq 총수익(분할·배당 재투자 반영)' : market === '한국' ? '원종가 · 수정주가 미반영 · 배당 제외' : '분할 조정 종가 · 배당 제외';
+const equityData = sitePath('market-time-capsule/equity-data');
 const format = new Intl.NumberFormat('ko-KR', { minimumFractionDigits: 2, maximumFractionDigits: 2, signDisplay: 'exceptZero' });
 ---
-<div class="lab-grid">
-  {comparisons.map(([market, ranking]) => {
-    const first = ranking?.items[0];
-    const range = ranking ? Math.max(1, ...ranking.items.map(({ returnPct }) => Math.abs(returnPct))) : 1;
-    const signed = ranking?.items.some(({ returnPct }) => returnPct < 0);
-    return <section class="lab-card">
+{missing.length > 0 && <ul class="equity-missing">
+  {missing.map((market) => <li>
+    <strong>{market} Top 10</strong> <span class="lab-badge">미수록</span>
+    {market === '한국' && checked ? <span>{checked.provider} 200·{checked.provider} 코스닥150의 첫 거래일 보유 주식 {checked.universe}개 중 {checked.eligible}개가 거래량·종가 연속성·상장주식수 검사를 통과했고, 종목별 순위는 수정 가격과 공개 이용 범위를 확인 중입니다. <a href={equityData + '#coverage-' + period}>이달의 제외 사유와 보유 명세</a></span>
+      : market === '한국' && priceCheck ? <span>월초 상장 종목 {priceCheck.opening.toLocaleString('ko-KR')}개 중 {priceCheck.passed.toLocaleString('ko-KR')}개가 일별 시세 검사를 통과했고, 첫 거래일 ETF 보유 명세를 확인 중입니다. <a href={equityData + '#kr-price-coverage'}>시세 점검 결과</a></span>
+      : <span>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</span>}
+  </li>)}
+</ul>}
+{ranked.length > 0 && <div class="equity-markets">
+  {ranked.map(([market, ranking]) => {
+    const first = ranking.items[0];
+    const range = Math.max(1, ...ranking.items.map(({ returnPct }) => Math.abs(returnPct)));
+    const signed = ranking.items.some(({ returnPct }) => returnPct < 0);
+    const halfExcluded = Boolean(ranking.universeCount && ranking.eligibleCount * 2 < ranking.universeCount);
+    const excludedCount = ranking.excludedSymbols?.length ?? Object.values(ranking.exclusions ?? {}).reduce((sum, count) => sum + count, 0);
+    const itemSources = ranking.items.filter(({ sourceUrl }) => sourceUrl !== first?.sourceUrl);
+    return <section class="equity-market">
       <h3>{market} Top 10</h3>
-      {ranking?.items.length ? <>
-        <p>{ranking.universe} · {ranking.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'} · {ranking.eligibleCount}개 계산{ranking.eligibleByMarket && ' (계산 KOSPI ' + ranking.eligibleByMarket.KOSPI + ' · KOSDAQ ' + ranking.eligibleByMarket.KOSDAQ + ')'}</p>
-        {ranking.universeCount && ranking.eligibleCount * 2 < ranking.universeCount && <p class="disclosure">모집단의 절반 이상이 제외되어 다른 달과 단순 비교하기 어렵습니다.</p>}
+      <p class="chart-note">{ranking.universe} · {ranking.membership === 'approximate' ? '근사 모집단' : '당시 구성종목'} · {ranking.eligibleCount}{ranking.universeCount ? '/' + ranking.universeCount : ''}개 계산 · {basisLabel(market, ranking)} · 이 모집단 안에서 매긴 순위이며 전체 상장 종목의 순위가 아닙니다.{halfExcluded && ' 모집단의 절반 이상이 제외되어 다른 달과 단순 비교하기 어렵습니다.'}</p>
+      <ol class:list={['lab-list', 'equity-ranking', { signed }]}>{ranking.items.map(({ name, symbol, returnPct }, index) => (
+        <li class:list={{ negative: returnPct < 0 }} style={{ '--bar-width': `${Math.abs(returnPct) / range * (signed ? 50 : 100)}%` }}>
+          <span class="equity-rank-name"><b>{index + 1}</b> {name} <small>{symbol}</small></span><span class="equity-rank-value">{format.format(returnPct)}%</span>
+        </li>
+      ))}</ol>
+      <details class="lab-fold">
+        <summary>산정 기준·가격 출처·제외 종목{excludedCount > 0 && <> <span class="lab-fold__count">제외 {excludedCount}개</span></>}</summary>
+        <p>{first.firstDate}–{first.lastDate} · <a href={first.sourceUrl}>가격 출처</a>{itemSources.length > 0 && <> · 종목별 {itemSources.map(({ symbol, sourceUrl }, index) => <>{index > 0 && ' · '}<a href={sourceUrl}>{symbol}</a></>)}</>}</p>
+        {ranking.eligibleByMarket && <p>계산 KOSPI {ranking.eligibleByMarket.KOSPI} · KOSDAQ {ranking.eligibleByMarket.KOSDAQ}</p>}
         {ranking.universeRule && <p>{ranking.universeRule}</p>}
         {ranking.priceMethod && <p>{ranking.priceMethod}</p>}
-        {ranking.priceDisclosure && <p class="price-disclosure">{ranking.priceDisclosure}</p>}
+        {ranking.priceDisclosure && <p class="disclosure">{ranking.priceDisclosure}</p>}
         {market === '한국' && krDisclosure && <p class="disclosure">{krDisclosure}</p>}
         {ranking.tradingDaySources?.length && <p>경계 거래일 출처 · {ranking.tradingDaySources.map((url, index, sources) => <><a href={url}>{sources.length === 1 ? '첫·마지막 거래일' : index === 0 ? '첫 거래일' : '마지막 거래일'}</a>{index < sources.length - 1 && ' · '}</>)}</p>}
-        {first && <p>{first.firstDate}–{first.lastDate} · <a href={first.sourceUrl}>가격 출처</a></p>}
         {ranking.tickerChangeSources?.map((url) => <p><a href={url}>종목코드 변경을 연결한 근거</a></p>)}
-        {ranking.archiveTickers?.length && <details>
-          <summary>당시 종목코드와 가격 파일의 코드 대조</summary>
-          <ul>{ranking.archiveTickers.map(({ symbol, archiveSymbol, sourceUrl }) => <li><a href={sourceUrl}>{symbol} → {archiveSymbol}</a></li>)}</ul>
-        </details>}
+        {ranking.archiveTickers?.length && <p>당시 종목코드와 가격 파일의 코드 대조 · {ranking.archiveTickers.map(({ symbol, archiveSymbol, sourceUrl }, index, list) => <><a href={sourceUrl}>{symbol} → {archiveSymbol}</a>{index < list.length - 1 && ' · '}</>)}</p>}
         {ranking.membershipSourceUrl && <p>
           {(ranking.membershipSourceUrls ?? [ranking.membershipSourceUrl]).map((url, index, sources) => (
             <><a href={url}>구성종목 출처{sources.length > 1 ? ' ' + (index + 1) : ''}</a>{index < sources.length - 1 && ' · '}</>
           ))} · 모집단 {ranking.universeCount}개
         </p>}
-        {ranking.exclusions && Object.keys(ranking.exclusions).length > 0 && <details>
-          <summary>계산에서 제외한 종목</summary>
-          <ul>{Object.entries(ranking.exclusions).map(([reason, count]) => <li>{reason} · {count}개</li>)}</ul>
-          {ranking.excludedSymbols?.length && <p>{ranking.excludedSymbols.join(' · ')}</p>}
+        {ranking.exclusions && Object.keys(ranking.exclusions).length > 0 && <>
+          <p>계산에서 제외한 종목 · {Object.entries(ranking.exclusions).map(([reason, count]) => `${reason} ${count}개`).join(' · ')}</p>
+          {ranking.excludedSymbols?.length && <p class="disclosure">{ranking.excludedSymbols.join(' · ')}</p>}
           {ranking.corporateActionSources?.map((url) => <p><a href={url}>기업행동 공시</a></p>)}
+        </>}
+        {market === '한국' && checked && <p>두 번째 시세 출처로 {checked.priceCrossCheck.covered}개 종목을 재계산해 상위 10개 중 {checked.priceCrossCheck.matchedRanks}개의 순서가 일치했습니다.</p>}
+        {market === '한국' && actions && <details class="exclusion-actions"><summary>제외 종목 {actions.excludedCount}개의 기업행동 · {actions.documentedCount}개 사유 확인</summary>
+          <p>{Object.entries(actions.byReason).map(([reason, { count, documented, statuses }]) => `${reason} ${count}개 중 ${documented}개 확인 (${Object.entries(statuses).map(([status, n]) => `${status} ${n}`).join(', ')})`).join(' · ')}. 상장주식수 변동은 <a href={actionMethod.kindSource}>{actionMethod.kindSourceTitle}</a>, 거래정지는 DART에 게시된 거래소 공시로 확인했습니다. {actionMethod.kindHint}</p>
+          <p class="basis">{actionMethod.localBasis}</p>
+          <div class="lab-table-wrap" role="region" aria-label="제외 종목 검사 결과와 근거" tabindex="0"><table class="lab-table lab-table--sticky-first">
+            <caption>{period} 제외 종목의 검사 결과와 공시 근거</caption>
+            <thead><tr><th scope="col">종목</th><th scope="col">검사 결과 (KRX 일별 시세 기준 로컬 검증)</th><th scope="col">기업행동 · 근거</th><th scope="col">확인 상태</th></tr></thead>
+            <tbody>{actions.stocks.map((stock) => <tr>
+              <th scope="row">{stock.name} <span class="symbol">{stock.symbol}</span></th>
+              <td data-wrap>{[stock.exclusionReason, stock.zeroVolumeDays?.length ? `거래량 0: ${stock.zeroVolumeDays.join(', ')}` : '', stock.priceBreakDays?.length ? `기준가격 차이: ${stock.priceBreakDays.join(', ')}` : ''].filter(Boolean).join(' · ')}</td>
+              <td data-wrap>{stock.actions.length ? describeActions(stock.actions) : '주식수 변동 없음'}{stock.documents?.map(({ title, date, url }) => <> / <a href={url}>{title} ({date})</a></>)}</td>
+              <td class:list={{ unresolved: !stock.documented }}>{stock.status}</td>
+            </tr>)}</tbody>
+          </table></div>
+          <p><a href={actionMethod.kindSource}>KIND 주식발행내역</a> · <a href={actionMethod.dartSource}>DART 공시검색</a> · 조회 {actionMethod.collectedAt}</p>
         </details>}
-        <ol class="lab-list equity-ranking">{ranking.items.map(({ name, symbol, returnPct, sourceUrl }, index) => (
-          <li>
-            <div class="equity-rank-label"><strong>{index + 1}위 · {name} ({symbol})</strong><span>{format.format(returnPct)}%</span></div>
-            <div class:list={['equity-rank-track', { signed }]} aria-hidden="true">
-              <span class:list={{ negative: returnPct < 0 }} style={{ width: `${Math.abs(returnPct) / range * (signed ? 50 : 100)}%` }}></span>
-            </div>
-            {sourceUrl !== first?.sourceUrl && <a href={sourceUrl}>가격 출처</a>}
-          </li>
-        ))}</ol>
-        {market === '미국 · QQQ' && <p><a href={sitePath('market-time-capsule/game') + '?equityPeriod=' + period}>이달의 종목 수익률 퀴즈 풀기</a></p>}
-      </> : market === '한국' && checked ? <p>{checked.provider} 200·{checked.provider} 코스닥150의 첫 거래일 보유 주식 {checked.universe}개 중 {checked.eligible}개가 거래량·종가 연속성·상장주식수 검사를 통과했습니다. 종목별 순위는 수정 가격과 공개 이용 범위를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#coverage-' + period}>이달의 제외 사유와 보유 명세</a></p> : market === '한국' && priceCheck ? <p>월초 상장 종목 {priceCheck.opening.toLocaleString('ko-KR')}개 중 {priceCheck.passed.toLocaleString('ko-KR')}개가 일별 시세 검사를 통과했습니다. 첫 거래일 ETF 보유 명세를 확인 중입니다. <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>시세 점검 결과</a></p> : <p>이달의 구성종목과 조정 종가를 대조한 뒤 순위를 공개합니다.</p>}
-      {market === '한국' && checked && <p>두 번째 시세 출처로 {checked.priceCrossCheck.covered}개 종목을 재계산해 상위 10개 중 {checked.priceCrossCheck.matchedRanks}개의 순서가 일치했습니다.</p>}
-      {market === '한국' && actions && <details class="exclusion-actions"><summary>제외 종목 {actions.excludedCount}개의 기업행동 · {actions.documentedCount}개 사유 확인</summary>
-        <p>{Object.entries(actions.byReason).map(([reason, { count, documented, statuses }]) => `${reason} ${count}개 중 ${documented}개 확인 (${Object.entries(statuses).map(([status, n]) => `${status} ${n}`).join(', ')})`).join(' · ')}. 상장주식수 변동은 <a href={actionMethod.kindSource}>{actionMethod.kindSourceTitle}</a>, 거래정지는 DART에 게시된 거래소 공시로 확인했습니다. {actionMethod.kindHint}</p>
-        <p class="basis">{actionMethod.localBasis}</p>
-        <div class="lab-table-wrap"><table class="lab-table">
-          <caption>{period} 제외 종목의 검사 결과와 공시 근거</caption>
-          <thead><tr><th scope="col">종목</th><th scope="col">검사 결과 (KRX 일별 시세 기준 로컬 검증)</th><th scope="col">기업행동 · 근거</th><th scope="col">확인 상태</th></tr></thead>
-          <tbody>{actions.stocks.map((stock) => <tr>
-            <th scope="row">{stock.name} <span class="symbol">{stock.symbol}</span></th>
-            <td>{[stock.exclusionReason, stock.zeroVolumeDays?.length ? `거래량 0: ${stock.zeroVolumeDays.join(', ')}` : '', stock.priceBreakDays?.length ? `기준가격 차이: ${stock.priceBreakDays.join(', ')}` : ''].filter(Boolean).join(' · ')}</td>
-            <td>{stock.actions.length ? describeActions(stock.actions) : '주식수 변동 없음'}{stock.documents?.map(({ title, date, url }) => <> / <a href={url}>{title} ({date})</a></>)}</td>
-            <td class:list={{ unresolved: !stock.documented }}>{stock.status}</td>
-          </tr>)}</tbody>
-        </table></div>
-        <p><a href={actionMethod.kindSource}>KIND 주식발행내역</a> · <a href={actionMethod.dartSource}>DART 공시검색</a> · 조회 {actionMethod.collectedAt}</p>
-      </details>}
+      </details>
+      {market === '미국 · QQQ' && <p class="equity-quiz"><a href={sitePath('market-time-capsule/game') + '?equityPeriod=' + period}>이달의 종목 수익률 퀴즈 풀기</a></p>}
     </section>;
   })}
-</div>
-<p><a href={sitePath('market-time-capsule/equity-data')}>종목 순위 산정 방식과 수록 범위</a></p>
+</div>}
+<p class="equity-method-link"><a href={equityData}>종목 순위 산정 방식과 수록 범위</a></p>
 <style>
-  .equity-ranking { display: grid; gap: 0.75rem; padding-inline-start: 0; list-style: none; }
-  .equity-rank-label { display: flex; justify-content: space-between; gap: 0.75rem; align-items: baseline; }
-  .equity-rank-label span { white-space: nowrap; font-variant-numeric: tabular-nums; }
-  .equity-rank-track { margin-block-start: 0.25rem; height: 0.35rem; border-radius: 0.25rem; background: var(--border, #dde4ea); }
-  .equity-rank-track span { display: block; height: 100%; border-radius: inherit; background: #397663; }
-  .equity-rank-track.signed { position: relative; }
-  .signed::after { content: ''; position: absolute; left: 50%; top: -2px; bottom: -2px; border-left: 1px solid currentColor; }
-  .signed span { position: absolute; left: 50%; }
-  .signed .negative { left: auto; right: 50%; }
-  .equity-rank-track .negative { background: #a55443; }
+  .equity-missing { display: grid; gap: .4rem; margin-block: .6rem; padding: 0; list-style: none; }
+  .equity-missing li { font-size: .92rem; color: var(--color-muted); line-height: 1.6; }
+  .equity-missing strong { color: var(--color-ink); }
+  .lab-badge { display: inline-block; padding: 0 .4rem; margin-inline: .15rem .35rem; border: 1px solid var(--color-rule); border-radius: .25rem; font-size: .78rem; vertical-align: middle; }
+  .equity-markets { display: grid; gap: .5rem 1.5rem; }
+  @media (min-width: 48rem) { .equity-markets { grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); } }
+  .equity-market { min-width: 0; }
+  .equity-market > h3 { margin-block: .6rem .15rem; }
+  .equity-market .chart-note { margin-block: 0 .35rem; font-size: .78rem; line-height: 1.45; color: var(--color-muted); }
+  .equity-market .lab-fold { margin-block: .2rem .4rem; }
+  .equity-quiz, .equity-method-link { margin-block: .2rem; font-size: .9rem; }
+  /* One line per stock; the return bar is the row background (decorative, the number carries the value). */
+  .equity-ranking { --bar: rgba(57, 118, 99, .2); display: grid; gap: .15rem; margin-block: 0; padding-inline-start: 0; list-style: none; }
+  .equity-ranking > li {
+    display: flex; justify-content: space-between; gap: .6rem; align-items: baseline; padding: .12rem .35rem; border-radius: .2rem;
+    font-size: .9rem; line-height: 1.4; background: linear-gradient(to right, var(--bar) var(--bar-width), transparent var(--bar-width));
+  }
+  .equity-ranking > li.negative { --bar: rgba(165, 84, 67, .22); }
+  .equity-ranking.signed { position: relative; }
+  .equity-ranking.signed::after { content: ''; position: absolute; inset-block: 0; left: 50%; border-left: 1px solid var(--color-rule); }
+  .equity-ranking.signed > li { background: linear-gradient(to right, transparent 50%, var(--bar) 50%, var(--bar) calc(50% + var(--bar-width)), transparent calc(50% + var(--bar-width))); }
+  .equity-ranking.signed > li.negative { background: linear-gradient(to right, transparent calc(50% - var(--bar-width)), var(--bar) calc(50% - var(--bar-width)), var(--bar) 50%, transparent 50%); }
+  .equity-rank-name { min-width: 0; overflow-wrap: anywhere; }
+  .equity-rank-name b { display: inline-block; min-width: 1.3em; font-variant-numeric: tabular-nums; }
+  .equity-rank-name small { color: var(--color-muted); font-size: .8em; }
+  .equity-rank-value { white-space: nowrap; font-variant-numeric: tabular-nums; }
   .disclosure { color: var(--color-muted); font-size: .9em; }
-  .price-disclosure { color: var(--color-muted); font-size: .9em; }
   .exclusion-actions summary { cursor: pointer; padding-block: .5rem; }
   .exclusion-actions .basis { color: var(--color-muted); font-size: .9em; }
   .exclusion-actions .lab-table th[scope="row"] { font-weight: 600; min-width: 9rem; }

@@ -5,6 +5,8 @@ import equityRankings from '../../../../data/market/months/equity-rankings.json'
 import spyEquityRankings from '../../../../data/market/months/spy-equity-rankings.json';
 import krEquityRankings from '../../../../data/market/months/kr-equity-rankings.json';
 import PeriodNavigation from '../../../components/market/PeriodNavigation.astro';
+import MarketToc from '../../../components/market/MarketToc.astro';
+import IndexFacts from '../../../components/market/IndexFacts.astro';
 import MarketSnapshot from '../../../components/market/MarketSnapshot.astro';
 import IndexCalendar from '../../../components/market/IndexCalendar.astro';
 import IndexSnapshot from '../../../components/market/IndexSnapshot.astro';
@@ -30,20 +32,30 @@ for (const { date } of items) {
 }
 const sources = [...new Map(items.map(({ sourceUrl, sourceName }) => [sourceUrl, sourceName]))];
 const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spyEquityRankings), ...Object.keys(krEquityRankings)]);
+const toc: Array<[string, string]> = [['월별 기록', 'months'], ['연간 지수', 'kr-index'], ['연간 종목', 'annual-equity']];
+if (highlights.length) toc.push(['주목할 사건', 'highlights']);
+toc.push(['주요 사건', 'events'], ['시장 지표', 'annual-snapshot']);
+if (note) toc.push(['Returner Memo', 'memo']);
+if (sources.length) toc.push(['출처', 'sources']);
 ---
 <MarketLayout title={year + '년 시장 기록'} {year}>
   {note && <p slot="intro">{note.summary}</p>}
+  <MarketToc items={toc} />
+  <IndexFacts period={String(year)} />
   <PeriodNavigation {year} />
-  <section class="lab-block">
+  <section class="lab-block" id="months">
     <h2>월별 기록</h2>
-    <ul class="lab-chips">{months.map((month) => <li><a href={sitePath(`market-time-capsule/${year}/${month}`)}>
-      {Number(month)}월 {monthCounts.has(month) && <small>· 사건 {monthCounts.get(month)}건</small>}
-      {rankedMonths.has(`${year}-${month}`) && <small>· 종목 순위</small>}
+    <ul class="lab-chips month-grid">{months.map((month) => <li><a href={sitePath(`market-time-capsule/${year}/${month}`)}>
+      <strong>{Number(month)}월</strong>
+      <small>{monthCounts.has(month) ? '사건 ' + monthCounts.get(month) : ' '}</small>
+      <small>{rankedMonths.has(`${year}-${month}`) ? 'Top 10' : ' '}</small>
     </a></li>)}</ul>
   </section>
+  <IndexSnapshot period={String(year)} />
+  <UsIndexPerformance {year} />
   <IndexCalendar {year} />
   <AnnualEquityHighlights {year} />
-  {highlights.length > 0 && <section class="lab-block">
+  {highlights.length > 0 && <section class="lab-block" id="highlights">
     <h2>이 해에 주목할 사건</h2>
     <div class="lab-grid">{highlights.map(({ label, title, summary, sourceUrl, sourceName, month }) => <article class="lab-card">
       <p>{label === 'Theme' ? '주요 주제' : '이례적 사건'}</p>
@@ -52,21 +64,30 @@ const rankedMonths = new Set([...Object.keys(equityRankings), ...Object.keys(spy
       <a href={sitePath('market-time-capsule/' + year + '/' + month)}>{Number(month)}월 시장 기록</a> · <a href={sourceUrl}>{sourceName}</a>
     </article>)}</div>
   </section>}
-  <section class="lab-block"><h2>주요 사건</h2><EventList {items} /></section>
-  <section class="lab-block">
+  <section class="lab-block" id="events"><h2>주요 사건</h2><EventList {items} inlineLimit={12} grouped /></section>
+  <section class="lab-block" id="annual-snapshot">
     <h2>연간 시장 지표</h2>
     <MarketSnapshot period={String(year)} />
     <GoldSnapshot period={String(year)} />
   </section>
-  <IndexSnapshot period={String(year)} />
-  <UsIndexPerformance {year} />
-  {note && <section class="lab-block">
+  {note && <section class="lab-block" id="memo">
     <h2>Returner Memo</h2>
     <p>{note.memo}</p>
     <a href={note.sourceUrl}>{note.sourceName}</a>
   </section>}
-  {sources.length > 0 && <section class="lab-block">
-    <h2>연간 사건 출처</h2>
-    <ul class="lab-list">{sources.map(([url, name]) => <li><a href={url}>{name}</a></li>)}</ul>
+  {sources.length > 0 && <section class="lab-block" id="sources">
+    <details class="lab-fold">
+      <summary>연간 사건 출처 <span class="lab-fold__count">{sources.length}건</span></summary>
+      <ul class="lab-list">{sources.map(([url, name]) => <li><a href={url}>{name}</a></li>)}</ul>
+    </details>
   </section>}
+  <a class="lab-top-link" href="#top">맨 위로 ↑</a>
 </MarketLayout>
+
+<style>
+  .month-grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: .4rem; list-style: none; padding: 0; }
+  .month-grid a { display: grid; justify-items: center; gap: .1rem; padding: .45rem .15rem; text-align: center; text-decoration: none; min-width: 0; }
+  .month-grid strong { font-size: .95rem; }
+  .month-grid small { font-size: .68rem; color: var(--color-muted); white-space: nowrap; }
+  @media (min-width: 48rem) { .month-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); } }
+</style>

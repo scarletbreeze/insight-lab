@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import BrokerSegmentPeriod from './BrokerSegmentPeriod';
 import BrokerTrend from './BrokerTrend';
 import BrokerTurningPoints from './BrokerTurningPoints';
-import MoneyMap from './MoneyMap';
+import MoneyMap, { moneyMapNote } from './MoneyMap';
 import IndustryCompare from './IndustryCompare';
 import { brokerMetrics, brokerYears, brokers, fields, formatBrokerMetric, interimProfit } from '../../utils/brokers';
 
@@ -82,7 +82,7 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
         <span>{formatBrokerMetric(value, field.percent)}</span>
       </li>)}
     </ol></> : <p role="status">해당 지표 자료 확인 중</p>) : left === right ? <p role="status">서로 다른 증권사를 선택하세요.</p> :
-      <div className="lab-table-wrap" role="region" aria-label={label(left) + '·' + label(right) + ' 연결 지표 비교 표'} tabIndex={0}><table className="lab-table compare-table">
+      <div className="lab-table-wrap" role="region" aria-label={label(left) + '·' + label(right) + ' 연결 지표 비교 표'} tabIndex={0}><table className="lab-table lab-table--sticky-first compare-table">
         <caption>{isInterim ? interimProfit.label + ' 연결 실적' : year + '년 연결 결산'} · 차이는 첫 번째 회사에서 두 번째 회사를 뺀 값</caption>
         <thead><tr><th scope="col">연결 지표</th><th scope="col">{label(left)}</th><th scope="col">{label(right)}</th><th scope="col">차이</th></tr></thead>
         <tbody>{comparisonFields.map(({ key, title, percent }) => {
@@ -115,28 +115,30 @@ export default function BrokerTable({ mode, brokerBase }: { mode: 'compare' | 'r
         <div className="lab-controls">
           <label>{label(left)}과 비교할 증권사 {rightBrokerSelect}</label>
         </div>
-        <p>화살표는 공시에 설명된 업무와 수익원의 관계를 보여줍니다. 부문별 실적은 각 회사의 공시 단위로 표시합니다.</p>
+        <p>{moneyMapNote} 부문별 금액은 각사 공시 단위이며 두 회사를 한 축에 놓지 않습니다.</p>
         <div className="lab-grid">
           {[left, right].map((id) => {
             const company = brokers.find((item) => item.id === id);
             return <article className="lab-card content-start" key={id}>
               <h3><a href={brokerBase + id + '/'}>{label(id)}</a></h3>
-              {company && <p>회사 소개 초안 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
-              {company && <MoneyMap broker={company} />}
-              <strong>선택 기간의 공시 부문별 실적</strong>
-              <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
-                interim={isInterim} detailUrl={brokerBase + id + '/'} />
+              {company && <p>회사 소개 · {company.character} <a href={company.characterSourceUrl ?? company.sourceUrl}>회사 소개 근거</a></p>}
+              {company && <MoneyMap broker={company} note={false} />}
+              <details className="lab-fold">
+                <summary><h4>공시 부문별 금액</h4> <span className="lab-fold__count">{isInterim ? interimProfit.label : year + '년 결산'}</span></summary>
+                <BrokerSegmentPeriod id={id} year={isInterim ? Number(interimProfit.end.slice(0, 4)) : year}
+                  interim={isInterim} detailUrl={brokerBase + id + '/'} />
+              </details>
             </article>;
           })}
         </div>
       </section>
       <section className="lab-block" id="compare-turning-points">
         <h2>주요 전환점 비교</h2>
-        <p>두 회사의 주요 사건을 결산 연도와 관계없이 최근순으로 표시합니다. 사건 제목을 누르면 공시나 발표 원문을 볼 수 있습니다.</p>
+        <p>최근순 네 건씩, 나머지는 접어 둡니다. 제목이 공시·발표 원문 링크입니다.</p>
         <div className="lab-grid">
           {[left, right].map((id) => <article className="lab-card content-start" key={id}>
             <h3><a href={brokerBase + id + '/#turning-points'}>{label(id)} 연혁</a></h3>
-            <BrokerTurningPoints brokerId={id} />
+            <BrokerTurningPoints brokerId={id} limit={4} brief />
           </article>)}
         </div>
       </section>

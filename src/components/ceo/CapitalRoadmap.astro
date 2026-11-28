@@ -40,16 +40,16 @@ const thresholds = [
   </HorizontalBars>
   <details>
     <summary>단계별 지정·인가 일자와 원문 출처</summary>
-    <div class="lab-table-wrap">
-      <table class="lab-table">
+    <div class="lab-table-wrap" role="region" aria-label="증권사별 지정 단계와 자본총계 표" tabindex="0">
+      <table class="lab-table lab-table--sticky-first">
         <caption>금융위원회 지정·인가 자료와 각사 별도 자본총계 공시</caption>
-        <thead><tr><th scope="col">단계</th><th scope="col">증권사</th><th scope="col">별도 자본총계</th><th scope="col">종투사 지정</th><th scope="col">단기금융업 인가</th><th scope="col">출처</th></tr></thead>
+        <thead><tr><th scope="col">증권사</th><th scope="col">단계</th><th scope="col">별도 자본총계</th><th scope="col">종투사 지정</th><th scope="col">단기금융업 인가</th><th scope="col">출처</th></tr></thead>
         <tbody>
           {stages.flatMap((stage) => roadmap.filter((entry) => entry.stage === stage).map((entry) => {
             const company = companies.get(entry.broker);
             return <tr>
-              <td>{stage === 8 ? '8조원 · 종합투자계좌(IMA) 업무 가능' : stage + '조원 이상'}</td>
               <th scope="row"><a href={sitePath('broker-atlas/brokers/' + entry.broker)}>{company?.name}</a></th>
+              <td>{stage === 8 ? '8조원 · 종합투자계좌(IMA) 업무 가능' : stage + '조원 이상'}</td>
               <td>{formatBrokerMetric(company?.equity, false)}</td>
               <td>{entry.designation}</td>
               <td>{entry.paperLicense ?? '기준 발표에서 미확인'}</td>

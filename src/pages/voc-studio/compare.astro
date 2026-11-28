@@ -4,6 +4,6 @@ import VocCompare from '../../components/voc/VocCompare';
 import { sitePath } from '../../utils/paths';
 ---
 <VocLayout title="두 연도의 문의와 공지 비교">
-  <p slot="intro">두 연도의 공개 게시판 원글, 문의 키워드, 수록 공지를 비교합니다.</p>
+  <p slot="intro">두 연도의 공개 게시판 원글, 자동 분류 주제, 같은 달 문의 건수, 수록 공지 표본을 표로 비교합니다. 문의 예시와 키워드는 연도 페이지에서 봅니다.</p>
   <VocCompare client:load yearBase={sitePath('voc-studio/year')} topicBase={sitePath('voc-studio/topics')} />
 </VocLayout>

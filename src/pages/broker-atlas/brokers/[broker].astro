@@ -6,6 +6,7 @@ import MoneyMap from '../../../components/broker/MoneyMap';
 import DisclosedSegments from '../../../components/broker/DisclosedSegments.astro';
 import BrokerReferences from '../../../components/broker/BrokerReferences.astro';
 import { brokers, brokerMetrics, fields, formatBrokerMetric, formatIndustryRank, industryPeriods, industryRanks, interimProfit, priorInterimProfit } from '../../../utils/brokers';
+import { segmentFilings } from '../../../utils/broker-segments';
 import { sitePath } from '../../../utils/paths';
 
 export function getStaticPaths() {
@@ -21,17 +22,42 @@ const snapshots = industryPeriods.flatMap((period) => {
   const entry = period.companies.find(({ id }) => id === company.id);
   return entry ? [{ ...period, entry }] : [];
 });
+const latestSnapshot = snapshots[0];
 const currentProfit = interimProfit.companies.find(({ id }) => id === company.id);
 const previousProfit = priorInterimProfit.companies.find(({ id }) => id === company.id);
+// Same rule as the rankings page: 1 + the number of listed companies with a larger value.
+const profitRank = currentProfit ? 1 + interimProfit.companies.filter(({ netIncome }) => netIncome > currentProfit.netIncome).length : null;
+const profitChange = currentProfit && previousProfit && previousProfit.netIncome > 0 ? currentProfit.netIncome / previousProfit.netIncome - 1 : null;
 const profitFields = [
   { key: 'netIncome', label: '당기순이익' },
   { key: 'operatingIncome', label: '영업이익' },
 ] as const;
 const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 'exceptZero', maximumFractionDigits: 1 });
+const rankingsUrl = sitePath('broker-atlas/rankings') + '#broker-profit-title';
+const hasSegments = Boolean(segmentFilings[company.id]);
 ---
 <BrokerLayout title={company.name}>
   <p slot="intro">{broker ? <>회사 소개 · {broker.character} <a href={broker.characterSourceUrl ?? broker.sourceUrl}>회사 소개 근거</a></> : '별도 재무현황과 연결 결산 자료'}</p>
-  {currentProfit && <section class="lab-block">
+  <nav class="lab-toc" aria-label="이 페이지의 절">
+    {currentProfit && <a href="#interim-results">연결 실적</a>}
+    <a href="#separate-snapshots">별도 재무현황</a>
+    {broker && <>
+      <a href="#annual-trend">연결 결산 추이</a>
+      <a href="#money-map">Money Map</a>
+      {hasSegments && <a href={'#disclosed-segments-' + company.id}>공시 부문</a>}
+      <a href="#turning-points">전환점</a>
+      <a href="#references">IR·공식 자료</a>
+    </>}
+  </nav>
+  {(currentProfit || latestSnapshot) && <dl class="lab-facts lab-facts--inline" aria-label={company.name + ' 핵심 수치'}>
+    {currentProfit && <>
+      <div><dt>{interimProfit.label} 연결 당기순이익</dt><dd>{formatBrokerMetric(currentProfit.netIncome, false)}</dd></div>
+      {profitRank && <div><dt>수록 {interimProfit.companies.length}개사 중 당기순이익 순위</dt><dd>{profitRank}위 <span>/ {interimProfit.companies.length}</span> <a href={rankingsUrl}>순위표</a></dd></div>}
+      <div><dt>전년 동기 대비</dt><dd>{profitChange === null ? '자료 확인 중' : changeFormat.format(profitChange)}</dd></div>
+    </>}
+    {latestSnapshot && <div><dt>{latestSnapshot.label} 별도 자본총계 순위</dt><dd>{formatIndustryRank(latestSnapshot.entry.rank, latestSnapshot.confirmedTopCount, latestSnapshot.date)} <a href="#separate-snapshots">기준일별</a></dd></div>}
+  </dl>}
+  {currentProfit && <section class="lab-block" id="interim-results">
     <h2>{interimProfit.label} 연결 실적</h2>
     <dl class="lab-grid">
       {profitFields.map(({ key, label }) => {
@@ -52,33 +78,54 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
       {previousProfit && <li><a href={previousProfit.sourceUrl}>2025년 비교 수치 공시</a></li>}
     </ul>
   </section>}
-  <section class="lab-block">
+  <section class="lab-block" id="separate-snapshots">
     <h2>업계 비교 기준일별 별도 재무현황</h2>
-    <div class="lab-grid">{snapshots.map(({ label, date, entry, scope, confirmedTopCount, rankSourceUrl, rankSourceName }) => (
-      <article class="lab-card">
-        <h3>{label} · 자본총계 {formatIndustryRank(entry.rank, confirmedTopCount, date)}</h3>
-        <p><time datetime={date}>{date}</time> · 별도 재무제표 · {scope}</p>
-        <dl class="lab-facts">
-          <div><dt>자본총계</dt><dd>{formatBrokerMetric(entry.equity, false)}</dd></div>
-          <div><dt>자산총계</dt><dd>{formatBrokerMetric(entry.assets, false)}</dd></div>
-          <div><dt>부채총계</dt><dd>{formatBrokerMetric(entry.liabilities, false)}</dd></div>
-          <div><dt>자본금</dt><dd>{formatBrokerMetric(entry.capital, false)}</dd></div>
-        </dl>
-        <a href={entry.sourceUrl}>{entry.sourceName}</a>
-        {rankSourceUrl && <a href={rankSourceUrl}>{rankSourceName}</a>}
-      </article>
-    ))}</div>
+    {latestSnapshot && <article class="lab-card">
+      <h3>{latestSnapshot.label} · 자본총계 {formatIndustryRank(latestSnapshot.entry.rank, latestSnapshot.confirmedTopCount, latestSnapshot.date)}</h3>
+      <p><time datetime={latestSnapshot.date}>{latestSnapshot.date}</time> · 별도 재무제표 · {latestSnapshot.scope}</p>
+      <dl class="lab-facts">
+        <div><dt>자본총계</dt><dd>{formatBrokerMetric(latestSnapshot.entry.equity, false)}</dd></div>
+        <div><dt>자산총계</dt><dd>{formatBrokerMetric(latestSnapshot.entry.assets, false)}</dd></div>
+        <div><dt>부채총계</dt><dd>{formatBrokerMetric(latestSnapshot.entry.liabilities, false)}</dd></div>
+        <div><dt>자본금</dt><dd>{formatBrokerMetric(latestSnapshot.entry.capital, false)}</dd></div>
+      </dl>
+      <a href={latestSnapshot.entry.sourceUrl}>{latestSnapshot.entry.sourceName}</a>
+      {latestSnapshot.rankSourceUrl && <a href={latestSnapshot.rankSourceUrl}>{latestSnapshot.rankSourceName}</a>}
+    </article>}
+    <details class="lab-fold">
+    <summary><h3>기준일별 별도 재무현황 표와 출처</h3> <span class="lab-fold__count">기준일 {snapshots.length}개 표</span></summary>
+    <div class="lab-table-wrap" role="region" aria-label={company.name + ' 기준일별 별도 재무현황 표'} tabindex="0">
+      <table class="lab-table lab-table--sticky-first">
+        <caption>별도 재무제표 · 기준일 {snapshots.length}개 · 순위는 각 기준일의 비교 범위 안에서 매긴 자본총계 순위 · 1조 원 이상은 조와 억</caption>
+        <thead><tr><th scope="col">기준일</th><th scope="col">날짜</th><th scope="col">자본총계 순위</th><th scope="col">비교 범위</th><th scope="col">자본총계</th><th scope="col">자산총계</th><th scope="col">부채총계</th><th scope="col">자본금</th><th scope="col">출처</th></tr></thead>
+        <tbody>{snapshots.map(({ label, date, entry, scope, confirmedTopCount, rankSourceUrl, rankSourceName }) => <tr>
+          <th scope="row">{label}</th>
+          <td><time datetime={date}>{date}</time></td>
+          <td>{formatIndustryRank(entry.rank, confirmedTopCount, date)}</td>
+          <td>{scope}</td>
+          <td>{formatBrokerMetric(entry.equity, false)}</td>
+          <td>{formatBrokerMetric(entry.assets, false)}</td>
+          <td>{formatBrokerMetric(entry.liabilities, false)}</td>
+          <td>{formatBrokerMetric(entry.capital, false)}</td>
+          <td><a href={entry.sourceUrl}>{entry.sourceName}</a>{rankSourceUrl && <> · <a href={rankSourceUrl}>{rankSourceName}</a></>}</td>
+        </tr>)}</tbody>
+      </table>
+    </div>
+    </details>
   </section>
   {broker ? <>
-  <section class="lab-block">
+  <section class="lab-block" id="annual-trend">
     <h2>연결 결산 추이</h2>
-    {latest && <dl class="lab-grid" aria-label={latest.year + '년 핵심 연결 지표'}>
+    {latest && <dl class="lab-facts lab-facts--inline" aria-label={latest.year + '년 핵심 연결 지표'}>
       {fields.filter(({ key }) => ['equity', 'netIncome', 'operatingIncome', 'assets', 'roe'].includes(key)).map(({ key, title, percent }) => (
-        <div class="lab-card"><dt>{title} · {latest.year}</dt><dd><strong>{formatBrokerMetric(latest[key], percent)}</strong></dd></div>
+        <div><dt>{title} · {latest.year}</dt><dd>{formatBrokerMetric(latest[key], percent)}</dd></div>
       ))}
     </dl>}
     <BrokerTrend client:load companies={[company]} />
-    <div class="lab-table-wrap"><table class="lab-table">
+    <details class="lab-fold">
+    <summary><h3>연도별 연결 결산 표와 공시 원문</h3> <span class="lab-fold__count">{rows.length}개 연도</span></summary>
+    <div class="lab-table-wrap" role="region" aria-label={company.name + ' 연결 결산 표'} tabindex="0"><table class="lab-table lab-table--sticky-first">
+      <caption>연결 결산 · 연도 열의 링크가 그 해 공시 원문 · ROE와 YoY는 공시 수치로 계산</caption>
       <thead><tr><th scope="col">연도</th>{fields.map(({ title }) => <th scope="col">{title}</th>)}</tr></thead>
       <tbody>{rows.map((row) => <tr><th scope="row"><a href={row.sourceUrl}>{row.year}년 공시</a>
         {row.year === 2021 && row.previousSourceUrl && <div><a href={row.previousSourceUrl}>2020년 비교 기준</a></div>}
@@ -87,10 +134,11 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
         {key === 'operatingIncome' && row.operatingIncomeSourceUrl && <a href={row.operatingIncomeSourceUrl} aria-label={row.year + '년 영업이익 공시'}> 공시</a>}
       </td>)}</tr>)}</tbody>
     </table></div>
+    </details>
   </section>
   <section class="lab-block" id="money-map">
     <h2>Money Map</h2><MoneyMap {broker} />
-    <p><a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a> · <a href={'#disclosed-segments-' + broker.id}>공시 부문별 금액</a></p>
+    <p><a href={sitePath('broker-atlas/compare') + '?left=' + broker.id + '#compare-money-map'}>다른 회사와 수익 경로 비교</a>{hasSegments && <> · <a href={'#disclosed-segments-' + broker.id}>공시 부문별 금액</a></>}</p>
   </section>
   <DisclosedSegments brokerId={company.id} />
   <section class="lab-block" id="turning-points">
@@ -100,4 +148,5 @@ const changeFormat = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisp
   </section>
   <BrokerReferences brokerId={company.id} />
   </> : <section class="lab-block"><h2>연결 결산 추이와 사업 구조</h2><p class="empty-state">자료 확인 중</p></section>}
+  <a class="lab-top-link" href="#top">맨 위로 ↑</a>
 </BrokerLayout>

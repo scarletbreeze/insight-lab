@@ -17,23 +17,42 @@ const percent = (count: number, total: number) => (count / total * 100).toLocale
   <h2>공지 전후 문의 변화</h2>
   {items.length ? <>
     <p>공지 게시일을 제외한 앞뒤 14일 동안 같은 주제의 공개 문의를 {automated ? '자동 분류했습니다. 각 기간의 전체 공개 문의를 분모로 비중을 계산했습니다.' : '집계했습니다.'} 공지와 문의 변화의 인과관계는 이 자료로 판단할 수 없습니다. <a href={sitePath('voc-studio/methodology') + '#notice-method'}>집계 범위와 표시 기준</a></p>
-    <ul class="lab-list">{items.map(({ notice, before, after, beforeTotal, afterTotal, beforeStart, beforeEnd, afterStart, afterEnd }) => {
-      const year = notice.date.slice(0, 4);
-      const label = topicNames.get(notice.topic);
-      const exampleCount = vocPosts.filter(({ date, topic }) => date.startsWith(year) && topic === notice.topic).length;
-      return <li class="lab-card" id={'notice-window-' + notice.id} tabindex="-1">
-        <h3>{notice.title}</h3>
-        <p><time datetime={notice.date}>{notice.date}</time> 게시 · {label} 문의 전후 14일 관측 차이 <strong>{difference.format(after - before)}건</strong></p>
-        <dl class="lab-facts">
-          {([[beforeStart, beforeEnd, before, beforeTotal], [afterStart, afterEnd, after, afterTotal]] as const).map(([start, end, count, total], index) =>
-            <div><dt>게시 {index ? '후' : '전'} {start} ~ {end}</dt>
-              <dd>{label} {count}건{total !== undefined &&
-                <> / 전체 문의 {format(total)}건{total > 0 && ' (' + percent(count, total) + '%)'}</>}</dd>
-            </div>)}
-        </dl>
-        <p><a href={sitePath('voc-studio/methodology') + '#notice-method'}>{automated ? '자동 분류·관측 차이 해석' : '관측 차이 해석'}</a> · <a href={notice.sourceUrl}>공지 원문</a> · {exampleCount > 0 && <><a href={automated ? '#examples-' + notice.topic : '#examples'}>{year}년 {label} 문의 예시 {exampleCount}건</a> · </>}
-          <a href={sitePath('voc-studio/topics/' + notice.topic)}>{label} 문의 추이</a></p>
-      </li>;
-    })}</ul>
+    <div class="lab-table-wrap" role="region" aria-label="공지 전후 문의 비교 표" tabindex="0">
+      <table class="lab-table lab-table--sticky-first notice-window-table">
+        <caption>공지 {items.length}건의 게시 전후 14일 같은 주제 공개 문의 수{automated && ' · 비중은 각 기간 전체 공개 문의 대비'}</caption>
+        <thead><tr>
+          <th scope="col">게시일</th><th scope="col">공지</th><th scope="col">주제</th><th scope="col">전 14일</th><th scope="col">후 14일</th><th scope="col">관측 차이</th>
+          {automated && <th scope="col">전체 문의 중 비중 (전 → 후)</th>}<th scope="col">링크</th>
+        </tr></thead>
+        <tbody>{items.map(({ notice, before, after, beforeTotal, afterTotal }) => {
+          const year = notice.date.slice(0, 4);
+          const label = topicNames.get(notice.topic);
+          const exampleCount = vocPosts.filter(({ date, topic }) => date.startsWith(year) && topic === notice.topic).length;
+          const ratio = (count: number, total: number | undefined) => total ? percent(count, total) + '%' : '—';
+          return <tr id={'notice-window-' + notice.id}>
+            <th scope="row"><time datetime={notice.date}>{notice.date}</time></th>
+            <td data-wrap><a href={'#' + notice.id}>{notice.title}</a></td>
+            <td>{label}</td>
+            <td>{format(before)}건</td>
+            <td>{format(after)}건</td>
+            <td><strong>{difference.format(after - before)}건</strong></td>
+            {automated && <td>{ratio(before, beforeTotal)} → {ratio(after, afterTotal)}</td>}
+            <td><a href={notice.sourceUrl}>공지 원문</a> · <a href={sitePath('voc-studio/topics/' + notice.topic)}>{label} 추이</a>{exampleCount > 0 && <> · <a href="#examples">예시 {exampleCount}건</a></>} · <a href={sitePath('voc-studio/methodology') + '#notice-method'}>방법</a></td>
+          </tr>;
+        })}</tbody>
+      </table>
+    </div>
+    <details class="lab-fold">
+      <summary>공지별 집계 기간과 전체 문의 수</summary>
+      <ul class="lab-list">{items.map(({ notice, before, after, beforeTotal, afterTotal, beforeStart, beforeEnd, afterStart, afterEnd }) => <li>
+        <strong>{notice.title}</strong> — 전 {beforeStart}~{beforeEnd} {topicNames.get(notice.topic)} {format(before)}건{beforeTotal !== undefined && ` / 전체 ${format(beforeTotal)}건`} · 후 {afterStart}~{afterEnd} {format(after)}건{afterTotal !== undefined && ` / 전체 ${format(afterTotal)}건`}
+      </li>)}</ul>
+    </details>
   </> : <p>{verified ? '확인한 자료에서 표시 기준을 충족한 관찰이 없습니다.' : '공지 앞뒤의 공개 문의 수집 범위를 확인 중입니다.'}</p>}
 </section>
+<style>
+  .notice-window-table th, .notice-window-table td { font-size: .92rem; line-height: 1.5; }
+  .notice-window-table tbody th { font-family: var(--font-mono); font-size: .85rem; font-weight: 500; }
+  .notice-window-table td[data-wrap] { min-width: 16rem; }
+  .notice-window-table td:nth-child(n + 4) { font-variant-numeric: tabular-nums; }
+</style>

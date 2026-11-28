@@ -16,16 +16,21 @@ const change = first !== undefined && last !== undefined && from !== to ? last -
 const amount = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2 });
 const difference = new Intl.NumberFormat('ko-KR', { maximumFractionDigits: 2, signDisplay: 'exceptZero' });
 ---
-{last !== undefined && <article class="lab-card">
+{last !== undefined && <article class="gold-snapshot">
   <h3>금 가격 · 월평균</h3>
-  {annual && first !== undefined && from !== to ? <p>
+  {annual && first !== undefined && from !== to ? <p class="gold-value">
     {from} {amount.format(first)} → {to} {amount.format(last)} USD/트로이온스
     {change !== undefined && <> · {difference.format(change)} USD/트로이온스</>}
-  </p> : <p>
+    {to !== period + '-12' && <> · {to}까지 수록</>}
+  </p> : <p class="gold-value">
     {amount.format(last)} USD/트로이온스
     {change !== undefined && <> · 전월 대비 {difference.format(change)} USD/트로이온스</>}
   </p>}
-  {annual && to !== period + '-12' && <p>{to}까지 수록</p>}
-  <p>월초·월말 종가 대신 세계은행이 발표한 일별 가격의 월평균을 씁니다. 다른 지표와 정의가 다르므로 변화폭을 직접 비교하지 않습니다.</p>
-  <p><a href={gold.sourceUrl}>{gold.sourceName}</a></p>
+  <p class="gold-note">세계은행 일별 가격의 월평균이며 월초·월말 종가가 아니므로 위 지표의 변화폭과 직접 비교하지 않습니다. · <a href={gold.sourceUrl}>{gold.sourceName}</a></p>
 </article>}
+<style>
+  .gold-snapshot { margin-block: .6rem; padding-block: .5rem; border-top: 1px solid var(--color-rule); }
+  .gold-snapshot h3 { margin-block: 0 .2rem; font-size: 1rem; }
+  .gold-value { margin-block: 0 .2rem; }
+  .gold-note { margin: 0; color: var(--color-muted); font-size: .85rem; line-height: 1.45; }
+</style>

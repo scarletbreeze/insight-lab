@@ -1,0 +1,32 @@
+---
+import { ceoSections, type CeoSignal } from '../../utils/ceo';
+import { sitePath } from '../../utils/paths';
+import { brokers } from '../../utils/brokers';
+import { marketEvents } from '../../utils/market';
+import followUpData from '../../../data/ceo/follow-ups.json';
+// The context lines of one signal (§10.5): why it matters, institutions, application fields, regulator, effective date,
+// last check, same-month market link, follow-up schedule and the topic pages that list it. SignalList places this
+// inside a fold under the fact, question and source.
+interface Props { signal: CeoSignal; isCase?: boolean; }
+const { signal, isCase = false } = Astro.props;
+const { id, date, why, companies, region, sourceUrl, applications, areas, regulator, effectiveDate, lastUpdated } = signal;
+const brokerIds = new Map(brokers.map(({ name, id }) => [name, id]));
+const marketMonths = new Map(marketEvents.filter(({ date }) => date.length >= 7).map(({ sourceUrl, date }) => [sourceUrl, date.slice(0, 7)]));
+const followUps: Record<string, { date: string; label: string; sourceUrl: string }[]> = followUpData;
+const schedule = followUps[id] ?? [];
+---
+<dl>
+  <dt>살펴볼 이유</dt><dd>{why}</dd>
+  <dt>관련 기관·회사</dt><dd>{companies.map((name, index) => <>{index > 0 && ' · '}{brokerIds.has(name) ? <a href={sitePath('broker-atlas/brokers/' + brokerIds.get(name))}>{name}</a> : name}</>)}</dd>
+  {applications?.length && <><dt>적용 분야</dt><dd>{applications.join(' · ')}</dd></>}
+  <dt>발표·관할 기관</dt><dd>{regulator}{isCase && (region === 'KR' ? ' · 국내' : ' · 해외')}</dd>
+  {effectiveDate && <><dt>시행일</dt><dd><time datetime={effectiveDate}>{effectiveDate}</time></dd></>}
+  <dt>최근 확인</dt><dd><time datetime={lastUpdated}>{lastUpdated}</time></dd>
+  {schedule.length > 0 && <><dt>후속 확인 일정</dt><dd><ul class="lab-list">{schedule.map(({ date, label, sourceUrl }) => <li>
+    <time datetime={date}>{date}</time> · <a href={sourceUrl}>{label}</a>
+  </li>)}</ul></dd></>}
+</dl>
+{marketMonths.get(sourceUrl) === date.slice(0, 7) && <p><a href={sitePath('market-time-capsule/' + date.slice(0, 7).replace('-', '/'))}>같은 달의 시장 지표와 사건</a></p>}
+<p>관련 주제 {ceoSections.filter(([, slug]) => areas.includes(slug)).map(([label, slug]) => (
+  <> · <a href={sitePath('ceo-lens/' + slug) + '#' + id}>{label}</a></>
+))}</p>

@@ -1,0 +1,25 @@
+---
+// Opens every folded <details> above the element the URL hash points at, so a link into a fold lands on visible content.
+// Drop it next to any list whose rows carry ids and may sit inside a .lab-fold; Astro bundles the script once per page.
+---
+<script>
+  const reveal = () => {
+    if (!location.hash) return;
+    let id = location.hash.slice(1);
+    try {
+      id = decodeURIComponent(id);
+    } catch {
+      // A fragment can contain a literal percent sign.
+    }
+    const target = document.getElementById(id);
+    if (!target) return;
+    // The target may be the fold itself (equity-data #kr-coverage) or a row whose own fold is a child (SignalList fold rows).
+    if (target instanceof HTMLDetailsElement) target.open = true;
+    const own = target.querySelector(':scope > details');
+    if (own instanceof HTMLDetailsElement) own.open = true;
+    for (let node = target.parentElement; node; node = node.parentElement) if (node instanceof HTMLDetailsElement) node.open = true;
+    target.scrollIntoView();
+  };
+  window.addEventListener('hashchange', reveal);
+  reveal();
+</script>

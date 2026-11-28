@@ -1,0 +1,38 @@
+---
+import benchmarkData from '../../../data/market/us-annual-benchmarks.json';
+import { koreaAnnualCloses, koreaMonthlyCloses, usMonthlyCloses } from '../../utils/market';
+
+/** Answer-first index changes for a month (YYYY-MM) or a year (YYYY); the numbers link to the tables that carry their sources. */
+interface Props { period: string; }
+const { period } = Astro.props;
+const annual = period.length === 4;
+const scope = annual ? '연간' : '월간';
+const percent = new Intl.NumberFormat('ko-KR', { style: 'percent', signDisplay: 'exceptZero', maximumFractionDigits: 2 });
+const change = (first: number | null | undefined, last: number | null | undefined) => first && last != null ? percent.format(last / first - 1) : undefined;
+
+const korea = annual
+  ? [0, 1].map((index) => change(koreaAnnualCloses[String(Number(period) - 1)]?.[index], koreaAnnualCloses[period]?.[index]))
+  : [0, 1].map((index) => change(koreaMonthlyCloses[period]?.first[index], koreaMonthlyCloses[period]?.last[index]));
+const facts: Array<{ label: string; value?: string; href: string }> = [
+  { label: 'KOSPI ' + scope, value: korea[0], href: '#kr-index' },
+  { label: 'KOSDAQ ' + scope, value: korea[1], href: '#kr-index' },
+];
+if (annual) {
+  for (const { label, years } of Object.values(benchmarkData)) {
+    const value = (years as Record<string, number | undefined>)[period];
+    if (value != null) facts.push({ label: label + ' 연간', value: percent.format(value / 100), href: '#us-annual-index' });
+  }
+} else {
+  const us = usMonthlyCloses[period];
+  ['S&P 500', 'Nasdaq Composite'].forEach((label, index) => {
+    const value = change(us?.first[index], us?.last[index]);
+    if (value) facts.push({ label: label + ' 월간', value, href: '#us-index' });
+  });
+}
+---
+<dl class="lab-facts lab-facts--inline">
+  {facts.map(({ label, value, href }) => <div>
+    <dt>{label}</dt>
+    <dd>{value ? <a href={href}>{value}</a> : '자료 확인 중'}</dd>
+  </div>)}
+</dl>

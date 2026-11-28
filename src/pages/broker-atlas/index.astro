@@ -1,30 +1,112 @@
 ---
-import BrokerYearOverview from '../../components/broker/BrokerYearOverview';
 import BrokerProfitRanking from '../../components/broker/BrokerProfitRanking';
 import BrokerLayout from '../../components/broker/BrokerLayout.astro';
 import IndustrySnapshot from '../../components/broker/IndustrySnapshot';
+import { brokerMetrics, brokerYears, brokers, formatBrokerMetric } from '../../utils/brokers';
 import { sitePath } from '../../utils/paths';
+
+// §8.5: every fiscal year's section is rendered server-side; the chip row (or ?year=) shows one, <noscript> shows all.
+const defaultYear = brokerYears[0];
+const brokerBase = sitePath('broker-atlas/brokers');
+const years = brokerYears.map((year) => {
+  const rows = brokerMetrics.filter((entry) => entry.year === year)
+    .sort((a, b) => b.equity - a.equity)
+    .map((entry, index) => ({ ...entry, rank: index + 1, name: brokers.find(({ id }) => id === entry.id)?.name ?? entry.id }));
+  // §8.5 item 5: industry line for the year — total net income of the listed companies, change against the same
+  // companies' prior-year total, and the leader's share (only when every company is in the black).
+  const profitLeader = [...rows].sort((a, b) => b.netIncome - a.netIncome)[0];
+  const totalProfit = rows.reduce((sum, { netIncome }) => sum + netIncome, 0);
+  const currentIds = new Set(rows.map(({ id }) => id));
+  const priorRows = brokerMetrics.filter((entry) => entry.year === year - 1 && currentIds.has(entry.id));
+  const priorProfit = priorRows.reduce((sum, { netIncome }) => sum + netIncome, 0);
+  const totalGrowth = priorRows.length === rows.length && priorProfit > 0 ? (totalProfit / priorProfit - 1) * 100 : null;
+  const leaderShare = profitLeader && profitLeader.netIncome > 0 && rows.every(({ netIncome }) => netIncome >= 0)
+    ? { name: profitLeader.name, id: profitLeader.id, share: profitLeader.netIncome / totalProfit * 100 } : null;
+  // §8.2: Kiwoom is pinned first visually; the rank value stays the actual one.
+  return { year, rows, totalProfit, totalGrowth, leaderShare, pinned: [...rows].sort((a, b) => Number(b.id === 'kiwoom') - Number(a.id === 'kiwoom')) };
+});
 ---
 <BrokerLayout title="Broker Atlas">
   <p slot="intro">공시로 증권사의 규모, 수익성, 사업 구조를 살펴봅니다.</p>
-  <nav class="lab-chips" aria-label="실적 바로가기">
+  <nav class="lab-toc" aria-label="이 페이지의 절">
     <a href="#broker-profit-title">이익 순위</a>
     <a href="#annual-results">연도별 결산</a>
+    <a href="#separate-equity">기준일별 자본총계</a>
   </nav>
-  <BrokerProfitRanking client:load brokerBase={sitePath('broker-atlas/brokers')} />
+  <BrokerProfitRanking client:load brokerBase={brokerBase} />
   <section class="lab-block" id="annual-results">
-    <h2>연도별 연결 결산</h2>
-    <BrokerYearOverview client:load brokerBase={sitePath('broker-atlas/brokers')} />
-    <p><a href={sitePath('broker-atlas/rankings')}>자본총계·이익·ROE·성장률 순위</a></p>
+    <h2 tabindex="-1"><span data-annual-year-label>{defaultYear}</span>년 연결 결산</h2>
+    <form class="lab-controls annual-years" method="get" action="" id="annual-year-form">
+      <label>결산 연도
+        <select name="year" id="annual-year-select">
+          {brokerYears.map((year) => <option value={year} selected={year === defaultYear}>{year}년</option>)}
+        </select>
+      </label>
+      <noscript><button class="lab-button" type="submit">보기</button></noscript>
+    </form>
+    <noscript><style is:inline>[data-annual-year][hidden] { display: block; }</style><p>스크립트가 꺼져 있어 {brokerYears.length}개 연도를 모두 차례로 보입니다.</p></noscript>
+    {years.map(({ year, rows, pinned, totalProfit, totalGrowth, leaderShare }) => <div data-annual-year={year} id={'annual-' + year} hidden={year !== defaultYear}>
+      <dl class="lab-facts lab-facts--inline" aria-label={year + '년 수록 ' + rows.length + '개사 합계 기준 연결 순이익 요약'}>
+        <div><dt>수록 {rows.length}개사 합계 기준 순이익</dt><dd>{formatBrokerMetric(totalProfit, false)}</dd></div>
+        <div><dt>같은 회사 전년 합계 대비</dt><dd>{totalGrowth === null ? <span>전년 자료 없음</span> : formatBrokerMetric(totalGrowth, true)}</dd></div>
+        {leaderShare && <div><dt>합계 중 1위 비중</dt><dd><a href={brokerBase + leaderShare.id + '/'}>{leaderShare.name}</a> <span>{formatBrokerMetric(leaderShare.share, true)}</span></dd></div>}
+      </dl>
+      <ol class="broker-compact" aria-label={year + '년 수록 ' + rows.length + '개사 자본총계 순위와 당기순이익'}>
+        {pinned.map(({ id, name, rank, equity, netIncome }) => <li>
+          <a class="lab-card" href={brokerBase + id + '/'}>
+            <strong>{name} <small>자본총계 {rank}위</small></strong>
+            <span>자본총계 {formatBrokerMetric(equity, false)}</span>
+            <span>당기순이익 {formatBrokerMetric(netIncome, false)}</span>
+          </a>
+        </li>)}
+      </ol>
+    </div>)}
+    <p class="chart-note">순위는 수록 {years[0].rows.length}개사 중 자본총계 순위 · 출처: 각사 연결 결산 공시(DART·KIND) · <a href={sitePath('broker-atlas/rankings')}>지표별 순위</a></p>
   </section>
-  <section class="lab-block">
+  <section class="lab-block" id="separate-equity">
     <h2>기준일별 별도 자본총계</h2>
-    <IndustrySnapshot client:load view="cards" brokerBase={sitePath('broker-atlas/brokers')} />
+    <IndustrySnapshot client:load view="summary" brokerBase={brokerBase} />
   </section>
-  <section class="lab-block">
-    <h2>수익이 만들어지는 경로</h2>
-    <p>위탁매매, 자산관리, 기업금융의 고객·사업·수익원을 확인합니다.</p>
-    <a href={sitePath('broker-atlas/money-map')}>Money Map 보기</a>
+  <section class="lab-block" id="more">
+    <h2>수익 경로와 증권사 비교</h2>
+    <p><a href={sitePath('broker-atlas/money-map')}>Money Map</a> — 위탁매매·자산관리·기업금융의 고객·사업·수익원을 회사별 공시로 확인 · <a href={sitePath('broker-atlas/compare')}>두 회사의 결산 지표 비교</a></p>
   </section>
-  <section class="lab-block"><h2>증권사 비교</h2><a href={sitePath('broker-atlas/compare')}>두 회사의 결산 지표 비교</a></section>
 </BrokerLayout>
+<style>
+  .annual-years { margin-block: .4rem .6rem; }
+  .annual-years label { grid-template-columns: max-content minmax(0, 1fr); align-items: center; gap: .6rem; }
+  .broker-compact { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .6rem; margin: .8rem 0 0; padding: 0; list-style: none; }
+  .broker-compact .lab-card { height: 100%; padding: .55rem .7rem; gap: .05rem; font-size: .86rem; line-height: 1.3; }
+  .broker-compact .lab-card strong { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0 .5rem; font-size: 1rem; }
+  .broker-compact .lab-card strong small { color: var(--color-muted); font-size: .8rem; font-weight: 500; }
+  .broker-compact .lab-card span { font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+  @media (min-width: 64rem) { .broker-compact { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+</style>
+<script>
+  const panels = Array.from(document.querySelectorAll<HTMLElement>('[data-annual-year]'));
+  const years = panels.map((panel) => panel.dataset.annualYear ?? '');
+  const select = document.getElementById('annual-year-select') as HTMLSelectElement | null;
+  const form = document.getElementById('annual-year-form');
+  const label = document.querySelector<HTMLElement>('[data-annual-year-label]');
+
+  function show(year: string, push: boolean, focus = false) {
+    for (const panel of panels) panel.hidden = panel.dataset.annualYear !== year;
+    if (select) select.value = year;
+    if (label) label.textContent = year;
+    if (push) {
+      const url = new URL(window.location.href);
+      url.searchParams.set('year', year);
+      url.hash = '';
+      window.history.pushState(null, '', url);
+    }
+    if (focus) document.querySelector<HTMLElement>('#annual-results h2')?.focus();
+  }
+  function fromUrl() {
+    const requested = new URLSearchParams(window.location.search).get('year') ?? '';
+    show(years.includes(requested) ? requested : years[0], false);
+  }
+  select?.addEventListener('change', () => show(select.value, true));
+  form?.addEventListener('submit', (event) => { event.preventDefault(); if (select) show(select.value, true, true); });
+  window.addEventListener('popstate', fromUrl);
+  fromUrl();
+</script>

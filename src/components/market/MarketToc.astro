@@ -1,0 +1,8 @@
+---
+/** In-page anchor chips for the page's H2 sections; render it directly under the intro. */
+interface Props { items: Array<[label: string, id: string]>; }
+const { items } = Astro.props;
+---
+<nav class="lab-toc" aria-label="이 페이지의 항목" data-static={items.length > 7 || undefined}>
+  {items.map(([label, id]) => <a href={'#' + id}>{label}</a>)}
+</nav>

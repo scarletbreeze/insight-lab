@@ -21,7 +21,7 @@ const stockRounds = Object.entries(monthlyRankings).flatMap(([period, markets]) 
   if (candidates.some((item) => !item) || candidates[0].returnPct === candidates[1].returnPct) return [];
   const choices = candidates.map(({ name, symbol, returnPct }) => ({ name, symbol, returnPct }))
     .sort((a, b) => a.symbol.localeCompare(b.symbol, 'en'));
-  return [{ period, choices, eligibleCount: ranking.eligibleCount,
+  return [{ period, choices, totalReturn: 'priceBasis' in ranking && ranking.priceBasis === 'total-return', eligibleCount: ranking.eligibleCount,
     firstDate: candidates[0].firstDate, lastDate: candidates[0].lastDate }];
 }).sort((a, b) => a.period.localeCompare(b.period));
 ---

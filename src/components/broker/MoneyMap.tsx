@@ -1,11 +1,15 @@
 import type { brokers } from '../../utils/brokers';
 import { segmentFilings } from '../../utils/broker-segments';
 
-export default function MoneyMap({ broker }: { broker: (typeof brokers)[number] }) {
+// One sentence explains which columns are disclosure and which are interpretation. Pages that show several
+// maps print it once in their section head and pass note={false}.
+export const moneyMapNote = '사업 열은 공시 부문명과 그 설명을 요약한 것이고, 고객·시장과 수익원 열은 그 설명을 바탕으로 한 해석(안)입니다.';
+
+export default function MoneyMap({ broker, note = true }: { broker: (typeof brokers)[number]; note?: boolean }) {
   const filing = segmentFilings[broker.id];
   if (!broker.map.length) return <p className="empty-state">사업 구조 자료 확인 중</p>;
   return <>
-    <p>사업 열은 공시 부문명과 그 설명을 요약한 것이고, 고객·시장과 수익원 열은 그 설명을 바탕으로 한 해석(안)입니다.</p>
+    {note && <p>{moneyMapNote}</p>}
     <ol className="money-flows" aria-label={broker.name + ' 수익 경로'}>
       {broker.map.map(({ customer, business, revenue }) => <li className="money-flow" key={business}>
         <div><span>고객·시장 (해석)</span><strong>{customer}</strong></div>

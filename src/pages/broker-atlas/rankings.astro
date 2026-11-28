@@ -8,7 +8,7 @@ import { sitePath } from '../../utils/paths';
 ---
 <BrokerLayout title="수록 증권사 순위">
   <BrokerProfitRanking client:load brokerBase={sitePath('broker-atlas/brokers')} />
-  <section class="lab-block">
+  <section class="lab-block" id="separate-equity">
     <h2>기준일별 별도 자본총계</h2>
     <IndustrySnapshot client:load view="table" brokerBase={sitePath('broker-atlas/brokers')} />
   </section>

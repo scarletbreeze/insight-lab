@@ -1,5 +1,41 @@
 [
   {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "market-time-capsule",
+    "title": "QQQ 월간 Top 10에 2020년 1월~2026년 10월 82개월 추가 · 배당 반영 수익률과 계산에서 빠진 종목 표시",
+    "route": "market-time-capsule/2026/10"
+  },
+  {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "market-time-capsule",
+    "title": "시장 연도와 월별 기록에서 지수 등락률을 먼저 보고 국내·미국 종목 순위와 산출 근거를 펼쳐 볼 수 있습니다",
+    "route": "market-time-capsule/2020/03"
+  },
+  {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "broker-atlas",
+    "title": "연도를 골라 10개 증권사의 결산을 비교하고 자금 지도에서 한 회사의 공시 부문을 펼쳐 볼 수 있습니다",
+    "route": "broker-atlas"
+  },
+  {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "voc-studio",
+    "title": "연도별 문의 Top 10에 전체 문의 대비 비중과 대표 질문을 함께 표시하고 공지별 관찰에서 방법론으로 연결했습니다",
+    "route": "voc-studio/year/2025"
+  },
+  {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "ceo-lens",
+    "title": "아카이브에서 연도와 주제로 시그널을 찾고 사례별 자료와 출처를 펼쳐 볼 수 있습니다",
+    "route": "ceo-lens/archive"
+  },
+  {
+    "updatedAt": "2026-11-28T21:53:29+09:00",
+    "service": "hero-lab",
+    "title": "화면 상세에서 영웅문 화면번호와 공식 도움말을 함께 확인할 수 있습니다",
+    "route": "hero-lab/screens/0101"
+  },
+  {
     "updatedAt": "2026-11-27T16:30:00+09:00",
     "service": "market-time-capsule",
     "title": "마켓 타임캡슐 2차 보강 · FOMC 성명 24건, 미국 고용동향 30건, 소비자물가 35건 추가로 3건 이상 기록된 달 69→109개월 · 2008년 이후 Returner Memo 39개 수기 교체(수기 215개)",

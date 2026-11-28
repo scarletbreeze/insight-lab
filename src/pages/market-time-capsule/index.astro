@@ -9,7 +9,7 @@ import { years, marketEvents } from '../../utils/market';
 import { sitePath } from '../../utils/paths';
 
 const documented = new Set(marketEvents.map(({ date }) => Number(date.slice(0, 4))));
-const rankedMonths = Object.keys(equityRankings).sort();
+const rankedMonths = Object.entries(equityRankings).filter(([, markets]) => 'US' in markets).map(([period]) => period).sort();
 const rankedYears = Object.keys(annualRankings).sort();
 const spyMonths = Object.keys(spyRankings).sort();
 const krMonths = Object.keys(krRankings).sort();
@@ -52,7 +52,7 @@ function periodRanges(periods: string[]) {
     <h2>종목 수익률과 검증 범위</h2>
     <p><a href={sitePath('market-time-capsule/2024') + '#annual-equity'}>2024년 국내 ETF 보유 종목의 연간 검증 결과</a> · <a href={sitePath('market-time-capsule/equity-data') + '#kr-price-coverage'}>국내 월별 시세 점검표</a></p>
     {krMonths.length > 0 && <p>한국은 월초 시가총액 상위 KOSPI 200·KOSDAQ 150 근사 모집단(2024년은 ETF 보유 명세 기준)으로 {periodRanges(krMonths)}의 월간 Top 10 {krMonths.length}개월과 {krYears[0]}~{krYears[krYears.length - 1]}년 연간 Winner·Loser {krYears.length}개 연도를 수록했습니다. 수정주가 미반영 · <a href={sitePath('market-time-capsule/methodology') + '#kr-equity'}>산정 기준</a></p>}
-    <p>QQQ 보유 주식을 기준으로 {periodRanges(rankedMonths)}의 월간 수익률 {rankedMonths.length}개월을 수록했습니다.</p>
+    <p>QQQ 보유 명세와 Nasdaq-100 구성 변경을 반영한 근사 모집단으로 {periodRanges(rankedMonths)}의 월간 순위 {rankedMonths.length}개월을 수록했습니다. 2018년 3월부터는 배당 재투자를 반영한 총수익률을 사용합니다. <a href={sitePath('market-time-capsule/methodology') + '#us-equity'}>미국 순위 산정 기준</a></p>
     {spyMonths.length > 0 && <p>SPY 기준은 {periodRanges(spyMonths)} {spyMonths.length}개월을 수록했습니다.</p>}
     <ul class="lab-chips">
       {rankedYears.map((year) => <li><a href={sitePath('market-time-capsule/' + year)}>{year}년 연간 수익률과 월별 순위</a></li>)}

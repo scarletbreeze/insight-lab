@@ -10,15 +10,16 @@ const hostname = (url: string) => new URL(url).hostname.replace(/^www\./, '');
 <section class="lab-block" id="references">
   <h2>전략·IR·공식 자료</h2>
   <p>회사 IR 사이트와 DART 정기보고서, 공시 원문만 모았습니다. 날짜는 공시·게시일이며, 상시 갱신되는 IR 페이지는 확인일을 적었습니다. 뉴스 기사는 싣지 않습니다.</p>
-  {items.length ? <ul class="lab-list" aria-label="전략·IR·공식 자료 목록">
+  {items.length ? <ul class="lab-list lab-list--rows" aria-label="전략·IR·공식 자료 목록">
     {items.map(({ title, kind, publisher, url, date, note }) => <li>
-      <time datetime={date}>{date}</time><a href={url} rel="external noopener" target="_blank">{title}<span class="visually-hidden"> (새 창)</span></a>
-      <br /><small>{kind} · {publisher} · {note} · {hostname(url)}</small>
+      <time datetime={date}>{date}</time>
+      <span class="lab-chip">{kind}</span>
+      <span class="row-title"><a href={url} rel="external noopener" target="_blank">{title}<span class="visually-hidden"> (새 창)</span></a><br /><small>{publisher} · {note}</small></span>
+      <span class="row-source">{hostname(url)}</span>
     </li>)}
   </ul> : <p class="empty-state">자료 확인 중</p>}
 </section>
 <style>
-  .lab-list li small { color: var(--color-muted); }
-  .lab-list a[rel~="external"]::after { content: ' \2197'; font-size: .85em; }
+  .row-title a[rel~="external"]::after { content: ' \2197'; font-size: .85em; }
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 </style>
