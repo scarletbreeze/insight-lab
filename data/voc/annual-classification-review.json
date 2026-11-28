@@ -1,55 +1,101 @@
 {
   "samplePerYear": 14,
+  "rulesChange": {
+    "date": "2026-11-28",
+    "adoptedCandidates": 7,
+    "droppedCandidate": "4자리 화면번호 단독",
+    "droppedCandidateLoss": 1,
+    "excludedPriorRows": 296,
+    "holdoutPreviousAgreement": 47,
+    "added": {
+      "hts": [
+        "시세감시",
+        "공유그룹",
+        "순간체결량"
+      ],
+      "products": [
+        "국공채",
+        "국채"
+      ],
+      "account": [
+        "상속",
+        "계좌관리",
+        "계좌삭제"
+      ],
+      "auth": [
+        "고객확인 재수행"
+      ]
+    },
+    "changed": {
+      "orders": "체결(?!량)"
+    }
+  },
   "start": "2022-01-01",
   "end": "2026-11-25",
   "sourceUrl": "https://bbn.kiwoom.com/bbs/VBbsBoardBWCSZView",
+  "rulesVersion": "2026-11-28",
   "development": {
-    "reviewed": 53,
-    "before": 38,
-    "after": 50
+    "reviewed": 57,
+    "before": 46,
+    "after": 49
   },
   "years": [
     {
       "year": 2022,
       "sample": 14,
-      "reviewed": 12,
-      "agreement": 9
+      "reviewed": 14,
+      "agreement": 10
     },
     {
       "year": 2023,
       "sample": 14,
       "reviewed": 13,
-      "agreement": 10
+      "agreement": 11
     },
     {
       "year": 2024,
       "sample": 14,
-      "reviewed": 13,
-      "agreement": 11
+      "reviewed": 14,
+      "agreement": 10
     },
     {
       "year": 2025,
       "sample": 14,
-      "reviewed": 10,
-      "agreement": 5
+      "reviewed": 12,
+      "agreement": 6
     },
     {
       "year": 2026,
       "sample": 14,
-      "reviewed": 9,
-      "agreement": 8
+      "reviewed": 13,
+      "agreement": 10
     }
   ],
   "topics": [
     {
       "topic": "hts",
-      "reviewed": 34,
+      "reviewed": 35,
       "agreement": 31
     },
     {
+      "topic": "auth",
+      "reviewed": 6,
+      "agreement": 5
+    },
+    {
+      "topic": "other",
+      "reviewed": 5,
+      "agreement": 0
+    },
+    {
       "topic": "orders",
-      "reviewed": 7,
-      "agreement": 7
+      "reviewed": 5,
+      "agreement": 4
+    },
+    {
+      "topic": "account",
+      "reviewed": 3,
+      "agreement": 0
     },
     {
       "topic": "products",
@@ -57,14 +103,14 @@
       "agreement": 1
     },
     {
-      "topic": "account",
-      "reviewed": 2,
-      "agreement": 0
+      "topic": "credit",
+      "reviewed": 3,
+      "agreement": 3
     },
     {
-      "topic": "other",
+      "topic": "transfer",
       "reviewed": 2,
-      "agreement": 0
+      "agreement": 2
     },
     {
       "topic": "hours",
@@ -72,35 +118,122 @@
       "agreement": 0
     },
     {
-      "topic": "auth",
-      "reviewed": 2,
-      "agreement": 1
-    },
-    {
       "topic": "overseas",
-      "reviewed": 2,
-      "agreement": 1
-    },
-    {
-      "topic": "transfer",
       "reviewed": 1,
       "agreement": 1
     },
     {
       "topic": "fees",
       "reviewed": 1,
-      "agreement": 1
-    },
-    {
-      "topic": "credit",
-      "reviewed": 1,
       "agreement": 0
     }
   ],
   "differences": {
-    "unclassified": 7,
-    "ambiguous": 5,
-    "differentTopic": 2
+    "unclassified": 10,
+    "ambiguous": 4,
+    "differentTopic": 5
+  },
+  "previousHoldout": {
+    "rulesVersion": "2026-11-27",
+    "development": {
+      "reviewed": 53,
+      "before": 38,
+      "after": 50
+    },
+    "years": [
+      {
+        "year": 2022,
+        "sample": 14,
+        "reviewed": 12,
+        "agreement": 9
+      },
+      {
+        "year": 2023,
+        "sample": 14,
+        "reviewed": 13,
+        "agreement": 10
+      },
+      {
+        "year": 2024,
+        "sample": 14,
+        "reviewed": 13,
+        "agreement": 11
+      },
+      {
+        "year": 2025,
+        "sample": 14,
+        "reviewed": 10,
+        "agreement": 5
+      },
+      {
+        "year": 2026,
+        "sample": 14,
+        "reviewed": 9,
+        "agreement": 8
+      }
+    ],
+    "topics": [
+      {
+        "topic": "hts",
+        "reviewed": 34,
+        "agreement": 31
+      },
+      {
+        "topic": "orders",
+        "reviewed": 7,
+        "agreement": 7
+      },
+      {
+        "topic": "products",
+        "reviewed": 3,
+        "agreement": 1
+      },
+      {
+        "topic": "account",
+        "reviewed": 2,
+        "agreement": 0
+      },
+      {
+        "topic": "other",
+        "reviewed": 2,
+        "agreement": 0
+      },
+      {
+        "topic": "hours",
+        "reviewed": 2,
+        "agreement": 0
+      },
+      {
+        "topic": "auth",
+        "reviewed": 2,
+        "agreement": 1
+      },
+      {
+        "topic": "overseas",
+        "reviewed": 2,
+        "agreement": 1
+      },
+      {
+        "topic": "transfer",
+        "reviewed": 1,
+        "agreement": 1
+      },
+      {
+        "topic": "fees",
+        "reviewed": 1,
+        "agreement": 1
+      },
+      {
+        "topic": "credit",
+        "reviewed": 1,
+        "agreement": 0
+      }
+    ],
+    "differences": {
+      "unclassified": 7,
+      "ambiguous": 5,
+      "differentTopic": 2
+    }
   },
   "focus2025": {
     "year": 2025,
@@ -113,7 +246,8 @@
       "unclassified": 3,
       "ambiguous": 2,
       "differentTopic": 3
-    }
+    },
+    "rulesVersion": "2026-11-27"
   },
   "contextReview": {
     "date": "2026-11-27",
@@ -171,6 +305,7 @@
       "ruleCandidates": 8,
       "ruleCandidatesApplied": false,
       "titleVerdictsReversed": 3
-    }
+    },
+    "sample": "previousHoldout"
   }
 }

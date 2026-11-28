@@ -6,8 +6,8 @@
       "noticeId": "general-8244",
       "date": "2025-02-26",
       "topic": "orders",
-      "before": 23,
-      "after": 61,
+      "before": 22,
+      "after": 58,
       "beforeTotal": 333,
       "afterTotal": 544
     },
@@ -21,6 +21,24 @@
       "afterTotal": 315
     },
     {
+      "noticeId": "general-7971",
+      "date": "2024-10-31",
+      "topic": "hts",
+      "before": 190,
+      "after": 215,
+      "beforeTotal": 312,
+      "afterTotal": 361
+    },
+    {
+      "noticeId": "general-6684",
+      "date": "2023-01-12",
+      "topic": "hts",
+      "before": 136,
+      "after": 154,
+      "beforeTotal": 275,
+      "afterTotal": 274
+    },
+    {
       "noticeId": "00002469",
       "date": "2026-05-21",
       "topic": "products",
@@ -30,20 +48,11 @@
       "afterTotal": 427
     },
     {
-      "noticeId": "general-9183",
-      "date": "2026-05-15",
-      "topic": "hts",
-      "before": 159,
-      "after": 147,
-      "beforeTotal": 499,
-      "afterTotal": 467
-    },
-    {
       "noticeId": "00002466",
       "date": "2026-05-11",
       "topic": "auth",
-      "before": 12,
-      "after": 23,
+      "before": 13,
+      "after": 24,
       "beforeTotal": 418,
       "afterTotal": 505
     },
@@ -75,6 +84,24 @@
       "afterTotal": 230
     },
     {
+      "noticeId": "general-9183",
+      "date": "2026-05-15",
+      "topic": "hts",
+      "before": 157,
+      "after": 148,
+      "beforeTotal": 499,
+      "afterTotal": 467
+    },
+    {
+      "noticeId": "00002072",
+      "date": "2022-09-26",
+      "topic": "orders",
+      "before": 10,
+      "after": 18,
+      "beforeTotal": 268,
+      "afterTotal": 259
+    },
+    {
       "noticeId": "general-6775",
       "date": "2023-03-17",
       "topic": "auth",
@@ -102,13 +129,22 @@
       "afterTotal": 211
     },
     {
-      "noticeId": "00002072",
-      "date": "2022-09-26",
-      "topic": "orders",
-      "before": 11,
-      "after": 18,
-      "beforeTotal": 268,
-      "afterTotal": 259
+      "noticeId": "general-7718",
+      "date": "2024-07-08",
+      "topic": "hts",
+      "before": 192,
+      "after": 185,
+      "beforeTotal": 349,
+      "afterTotal": 346
+    },
+    {
+      "noticeId": "00002457",
+      "date": "2026-03-24",
+      "topic": "account",
+      "before": 18,
+      "after": 11,
+      "beforeTotal": 390,
+      "afterTotal": 347
     },
     {
       "noticeId": "00002470",
@@ -118,6 +154,15 @@
       "after": 17,
       "beforeTotal": 494,
       "afterTotal": 392
+    },
+    {
+      "noticeId": "00002447",
+      "date": "2026-01-14",
+      "topic": "auth",
+      "before": 16,
+      "after": 22,
+      "beforeTotal": 418,
+      "afterTotal": 651
     },
     {
       "noticeId": "00002476",
@@ -172,24 +217,6 @@
       "after": 6,
       "beforeTotal": 331,
       "afterTotal": 503
-    },
-    {
-      "noticeId": "00002447",
-      "date": "2026-01-14",
-      "topic": "auth",
-      "before": 16,
-      "after": 21,
-      "beforeTotal": 418,
-      "afterTotal": 651
-    },
-    {
-      "noticeId": "00002457",
-      "date": "2026-03-24",
-      "topic": "account",
-      "before": 15,
-      "after": 10,
-      "beforeTotal": 390,
-      "afterTotal": 347
     },
     {
       "noticeId": "00002471",
@@ -273,6 +300,24 @@
       "afterTotal": 382
     },
     {
+      "noticeId": "00002461",
+      "date": "2026-04-22",
+      "topic": "hours",
+      "before": 2,
+      "after": 5,
+      "beforeTotal": 363,
+      "afterTotal": 374
+    },
+    {
+      "noticeId": "00002462",
+      "date": "2026-04-22",
+      "topic": "hours",
+      "before": 2,
+      "after": 5,
+      "beforeTotal": 363,
+      "afterTotal": 374
+    },
+    {
       "noticeId": "00002474",
       "date": "2026-07-02",
       "topic": "hours",
@@ -291,15 +336,6 @@
       "afterTotal": 207
     },
     {
-      "noticeId": "00002441",
-      "date": "2025-11-28",
-      "topic": "hours",
-      "before": 3,
-      "after": 5,
-      "beforeTotal": 328,
-      "afterTotal": 366
-    },
-    {
       "noticeId": "00002453",
       "date": "2026-02-26",
       "topic": "hours",
@@ -309,22 +345,22 @@
       "afterTotal": 501
     },
     {
-      "noticeId": "00002461",
-      "date": "2026-04-22",
+      "noticeId": "00002463",
+      "date": "2026-04-23",
       "topic": "hours",
       "before": 2,
       "after": 4,
-      "beforeTotal": 363,
-      "afterTotal": 374
+      "beforeTotal": 373,
+      "afterTotal": 392
     },
     {
-      "noticeId": "00002462",
-      "date": "2026-04-22",
+      "noticeId": "00002464",
+      "date": "2026-04-29",
       "topic": "hours",
-      "before": 2,
+      "before": 6,
       "after": 4,
-      "beforeTotal": 363,
-      "afterTotal": 374
+      "beforeTotal": 413,
+      "afterTotal": 483
     },
     {
       "noticeId": "general-9274",
@@ -338,8 +374,14 @@
   ],
   "exclusions": {
     "general-7691": "below-threshold",
+    "general-7550": "unclassified-topic",
     "general-7239": "below-threshold",
+    "general-7237": "unclassified-topic",
+    "general-6695": "unclassified-topic",
     "general-6664": "below-threshold",
+    "general-6478": "below-threshold",
+    "general-6409": "unclassified-topic",
+    "general-6269": "unclassified-topic",
     "00002506": "incomplete-window",
     "00002505": "incomplete-window",
     "00002500": "no-change",
@@ -347,14 +389,13 @@
     "00002499": "below-threshold",
     "00002495": "below-threshold",
     "00002486": "below-threshold",
-    "00002464": "below-threshold",
-    "00002463": "below-threshold",
     "00002458": "below-threshold",
     "00002452": "below-threshold",
     "00002451": "below-threshold",
     "00002446": "below-threshold",
     "00002445": "below-threshold",
     "00002444": "below-threshold",
+    "00002441": "below-threshold",
     "00002436": "no-change",
     "00002100": "unverified-date",
     "00002181": "unverified-date",

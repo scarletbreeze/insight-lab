@@ -31,6 +31,15 @@ class TopicClassificationTest(unittest.TestCase):
             ("양도세 조회", "", "fees"),
             ("주식선물", "", "hours"),
             ("문의", "", "unclassified"),
+            ("시세감시 팝업 오류", "", "hts"),
+            ("순간체결량(0148) 화면이 안떠요", "", "hts"),
+            ("공유 그룹이 먹히지 않습니다", "", "hts"),
+            ("국공채를 사려고 하는데요", "", "products"),
+            ("상속서류 안내 부탁드립니다", "", "account"),
+            ("계좌관리", "", "account"),
+            ("고객확인(CDD/EDD) 재수행 시 스마트폰이 없는 경우", "", "auth"),
+            ("체결량 문의", "", "unclassified"),
+            ("0624 해결 좀 해주세요", "", "unclassified"),
         ]
         for title, body, expected in cases:
             with self.subTest(title=title, body=body):

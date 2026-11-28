@@ -47,7 +47,7 @@ const priorBoardTopics = boardCount?.isFullYear && publicBoardYear(year - 1)?.is
   {boardTopics && <section class="lab-block">
     <h2>공개 문의 주제 Top 10</h2>
     <p>{boardCount?.label} · 문의 {boardTopics.total.toLocaleString('ko-KR')}건을 제목과 본문의 용어로 분류했습니다. 여러 주제에 걸친 {boardTopics.ambiguous.toLocaleString('ko-KR')}건과 분류 미확인 {boardTopics.unclassified.toLocaleString('ko-KR')}건은 순위 집계에서 제외했습니다.</p>
-    {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 현재 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
+    {year === annualReview.focus2025.year && <p>월별로 새로 뽑은 문의 {annualReview.focus2025.sample}건 중 제목으로 판별한 {annualReview.focus2025.reviewed}건에서 {annualReview.focus2025.rulesVersion} 규칙과 {annualReview.focus2025.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#focus-2025'}>2025년 월별 독립 표본</a></p>}
     {review && <p>직전 규칙으로 점검한 표본 {review.sample}건 중 제목으로 판별한 {review.reviewed}건을 대조해 {review.agreement}건이 일치했습니다. <a href={sitePath('voc-studio/methodology') + '#classification-review'}>표본 선정과 검토 결과</a></p>}
     <VocTopicRanking {year} board={boardTopics} prior={priorBoardTopics} />
     <p>태그는 설계서의 Level 1 분류와 자동 분류 규칙의 대표 용어입니다. 한 줄 관찰은 월별 집계의 수치만 서술하며 원인은 판단하지 않습니다. <a href={sitePath('voc-studio/methodology') + '#taxonomy-map'}>분류 대응표와 관찰 문장 규칙</a></p>
