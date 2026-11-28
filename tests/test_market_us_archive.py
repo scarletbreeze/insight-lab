@@ -124,6 +124,29 @@ class RecordedIndexChangesTest(unittest.TestCase):
         self.assertTrue({"EXC", "ANSS", "SPLK"} <= set(year_end))
         self.assertFalse({"CELG", "HAS", "NLOK", "SYMC"} & set(year_end))
 
+    def test_2020_to_2026_changes_follow_nasdaq_announcements(self):
+        portfolio = json.loads((ROOT / "data/market/qqq-holdings-2017-09.json").read_text(encoding="utf-8"))
+        changes = json.loads((ROOT / "data/market/qqq-index-changes.json").read_text(encoding="utf-8"))
+        january_2021, _, label = portfolio_at_start(portfolio, changes, date(2021, 1, 4))
+        self.assertEqual(len(january_2021), 102)
+        self.assertTrue({"AEP", "MRVL", "MTCH", "OKTA", "PTON", "TEAM", "DXCM", "ZM", "DOCU", "MRNA", "PDD", "KDP"} <= set(january_2021))
+        self.assertFalse({"BMRN", "CTXS", "EXPE", "LBTYA", "LBTYK", "TTWO", "ULTA", "AAL", "WLTW", "UAL", "CSGP", "NTAP", "WDC"} & set(january_2021))
+        self.assertIn("편입·종목코드 변경 반영", label)
+        # FB → META is a same-share ticker change recorded as a remove/add pair on the effective date.
+        june_2022, _, _ = portfolio_at_start(portfolio, changes, date(2022, 6, 1))
+        self.assertIn("FB", june_2022)
+        july_2022, _, _ = portfolio_at_start(portfolio, changes, date(2022, 7, 1))
+        self.assertIn("META", july_2022)
+        self.assertNotIn("FB", july_2022)
+        # Spin-off additions (SOLS, HONA) and Fast Entry (SPCX) enter without a replacement; delistings leave without one.
+        november_2025, _, _ = portfolio_at_start(portfolio, changes, date(2025, 11, 3))
+        self.assertIn("SOLS", november_2025)
+        self.assertEqual(len(november_2025), 102)
+        november_2026, _, _ = portfolio_at_start(portfolio, changes, date(2026, 11, 2))
+        self.assertEqual(len(november_2026), 101)
+        self.assertTrue({"HONA", "SPCX", "MRNA", "WMT", "SNDK", "LITE", "ALAB", "CRWV", "NBIS", "RKLB", "TER"} <= set(november_2026))
+        self.assertFalse({"EA", "KHC", "WBD", "SOLS", "ANSS", "AZN", "TEAM", "CSGP", "CHTR", "CTSH", "INSM", "VRSK", "ZS"} & set(november_2026))
+
 
 if __name__ == "__main__":
     unittest.main()

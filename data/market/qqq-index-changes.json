@@ -509,5 +509,471 @@
       "SGEN": "Seattle Genetics, Inc.",
       "SPLK": "Splunk Inc."
     }
+  },
+  {
+    "date": "2020-04-20",
+    "sourceUrl": "https://www.nasdaq.com/press-release/dexcom-inc.-to-join-the-nasdaq-100-index-beginning-april-20-2020-2020-04-10",
+    "remove": [
+      "AAL"
+    ],
+    "add": {
+      "DXCM": "DexCom, Inc."
+    }
+  },
+  {
+    "date": "2020-04-30",
+    "sourceUrl": "https://www.nasdaq.com/press-release/zoom-video-communications-inc.-to-join-the-nasdaq-100-index-beginning-april-30-2020",
+    "remove": [
+      "WLTW"
+    ],
+    "add": {
+      "ZM": "Zoom Video Communications, Inc."
+    }
+  },
+  {
+    "date": "2020-06-22",
+    "sourceUrl": "https://www.nasdaq.com/press-release/docusign-inc.-to-join-the-nasdaq-100-index-beginning-june-22-2020-2020-06-12",
+    "remove": [
+      "UAL"
+    ],
+    "add": {
+      "DOCU": "DocuSign, Inc."
+    }
+  },
+  {
+    "date": "2020-07-20",
+    "sourceUrl": "https://www.nasdaq.com/press-release/moderna-inc.-to-join-the-nasdaq-100-index-beginning-july-20-2020-2020-07-13",
+    "remove": [
+      "CSGP"
+    ],
+    "add": {
+      "MRNA": "Moderna, Inc."
+    }
+  },
+  {
+    "date": "2020-08-24",
+    "sourceUrl": "https://www.nasdaq.com/press-release/pinduoduo-inc.-to-join-the-nasdaq-100-index-beginning-august-24-2020-2020-08-14",
+    "remove": [
+      "NTAP"
+    ],
+    "add": {
+      "PDD": "Pinduoduo Inc."
+    }
+  },
+  {
+    "date": "2020-10-19",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/keurig-dr-pepper-inc-to-join-the-nasdaq-100-index-beginning-october-19-2020-20201010/",
+    "remove": [
+      "WDC"
+    ],
+    "add": {
+      "KDP": "Keurig Dr Pepper Inc."
+    }
+  },
+  {
+    "date": "2020-12-21",
+    "sourceUrl": "https://www.nasdaq.com/press-release/annual-changes-to-the-nasdaq-100-index-2020-12-11",
+    "remove": [
+      "BMRN",
+      "CTXS",
+      "EXPE",
+      "LBTYA",
+      "LBTYK",
+      "TTWO",
+      "ULTA"
+    ],
+    "add": {
+      "AEP": "American Electric Power Company, Inc.",
+      "MRVL": "Marvell Technology Group Ltd.",
+      "MTCH": "Match Group, Inc.",
+      "OKTA": "Okta, Inc.",
+      "PTON": "Peloton Interactive, Inc.",
+      "TEAM": "Atlassian Corporation Plc"
+    }
+  },
+  {
+    "date": "2021-07-21",
+    "sourceUrl": "https://mondovisione.com/news/honeywell-international-inc-to-join-the-nasdaq-100-index-beginning-july-21-202-2021715",
+    "remove": [
+      "ALXN"
+    ],
+    "add": {
+      "HON": "Honeywell International Inc."
+    }
+  },
+  {
+    "date": "2021-08-26",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/crowdstrike-holdings-inc-to-join-the-nasdaq-100-index-beginning-august-26-202-2021824",
+    "remove": [
+      "MXIM"
+    ],
+    "add": {
+      "CRWD": "CrowdStrike Holdings, Inc."
+    }
+  },
+  {
+    "date": "2021-12-20",
+    "sourceUrl": "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-10-20211211/",
+    "remove": [
+      "CDW",
+      "CERN",
+      "CHKP",
+      "FOX",
+      "FOXA",
+      "INCY",
+      "TCOM"
+    ],
+    "add": {
+      "ABNB": "Airbnb, Inc.",
+      "DDOG": "Datadog, Inc.",
+      "FTNT": "Fortinet, Inc.",
+      "LCID": "Lucid Group, Inc.",
+      "PANW": "Palo Alto Networks, Inc.",
+      "ZS": "Zscaler, Inc."
+    }
+  },
+  {
+    "date": "2022-01-24",
+    "sourceUrl": "https://www.nasdaq.com/press-release/old-dominion-freight-line-inc.-to-join-the-nasdaq-100-index-beginning-january-24-2022",
+    "remove": [
+      "PTON"
+    ],
+    "add": {
+      "ODFL": "Old Dominion Freight Line, Inc."
+    }
+  },
+  {
+    "date": "2022-02-02",
+    "sourceUrl": "https://finance.yahoo.com/news/constellation-energy-corp-joined-nasdaq-010000704.html",
+    "remove": [],
+    "add": {
+      "CEG": "Constellation Energy Corp."
+    },
+    "note": "Exelon(EXC)의 분사로 편입(대체 종목 없음) · Nasdaq 보도자료(GlobeNewswire)의 Yahoo Finance 전재본 · 원문 globenewswire.com과 ir.nasdaq.com은 이 환경에서 403"
+  },
+  {
+    "date": "2022-02-22",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/astrazeneca-plc-adr-to-join-the-nasdaq-100-index-beginning-february-22-2022-2022211",
+    "remove": [
+      "XLNX"
+    ],
+    "add": {
+      "AZN": "AstraZeneca PLC - ADR"
+    }
+  },
+  {
+    "date": "2022-06-09",
+    "sourceUrl": "https://www.prnewswire.com/news-releases/meta-platforms-inc-to-change-ticker-symbol-to-meta-on-june-9-301558287.html",
+    "remove": [
+      "FB"
+    ],
+    "add": {
+      "META": "Meta Platforms, Inc."
+    },
+    "note": "동일 주식의 종목코드 변경(FB→META) · 2014년 LINTA→QVCA와 같은 방식으로 제외·편입 한 쌍으로 기록 · qqq-ticker-changes.json 참조"
+  },
+  {
+    "date": "2022-11-21",
+    "sourceUrl": "https://mondovisione.com/news/enphase-energy-inc-to-join-the-nasdaq-100-index-beginning-november-21-2022-20221112",
+    "remove": [
+      "OKTA"
+    ],
+    "add": {
+      "ENPH": "Enphase Energy, Inc."
+    }
+  },
+  {
+    "date": "2022-12-19",
+    "sourceUrl": "https://www.nasdaq.com/press-release/annual-changes-to-the-nasdaq-100-index-2022-12-09",
+    "remove": [
+      "BIDU",
+      "DOCU",
+      "MTCH",
+      "NTES",
+      "SPLK",
+      "SWKS",
+      "VRSN"
+    ],
+    "add": {
+      "BKR": "Baker Hughes Company",
+      "CSGP": "CoStar Group, Inc.",
+      "FANG": "Diamondback Energy, Inc.",
+      "GFS": "GlobalFoundries Inc.",
+      "RIVN": "Rivian Automotive, Inc.",
+      "WBD": "Warner Bros. Discovery, Inc."
+    }
+  },
+  {
+    "date": "2023-06-07",
+    "sourceUrl": "https://finance.yahoo.com/news/ge-healthcare-technologies-inc-join-000000473.html",
+    "remove": [
+      "FISV"
+    ],
+    "add": {
+      "GEHC": "GE HealthCare Technologies Inc."
+    },
+    "note": "Fiserv는 상장을 NYSE로 옮기며 제외(종목코드 FI로 변경) · Nasdaq 보도자료(GlobeNewswire)의 Yahoo Finance 전재본 · 원문 globenewswire.com과 ir.nasdaq.com은 이 환경에서 403"
+  },
+  {
+    "date": "2023-06-20",
+    "sourceUrl": "https://mondovisione.com/news/onsemi-to-join-the-nasdaq-100-index-beginning-june-20-2023-2023610",
+    "remove": [
+      "RIVN"
+    ],
+    "add": {
+      "ON": "onsemi (ON Semiconductor Corporation)"
+    }
+  },
+  {
+    "date": "2023-07-17",
+    "sourceUrl": "https://mondovisione.com/news/the-trade-desk-inc-to-join-the-nasdaq-100-index-beginning-july-17th-2023-2023713",
+    "remove": [
+      "ATVI"
+    ],
+    "add": {
+      "TTD": "The Trade Desk, Inc."
+    }
+  },
+  {
+    "date": "2023-12-18",
+    "sourceUrl": "https://www.nasdaq.com/press-release/update:-annual-changes-to-the-nasdaq-100r-index-2023-12-12",
+    "remove": [
+      "SGEN"
+    ],
+    "add": {
+      "TTWO": "Take-Two Interactive Software, Inc."
+    },
+    "note": "Pfizer의 Seagen 인수 완료(2023-12-14)에 따른 연간 변경 업데이트 · 발효일은 Nasdaq 발표의 2023-12-18(Wikipedia 기록의 12-14와 다름)"
+  },
+  {
+    "date": "2023-12-18",
+    "sourceUrl": "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-12-2023129/",
+    "remove": [
+      "ALGN",
+      "EBAY",
+      "ENPH",
+      "JD",
+      "LCID",
+      "ZM"
+    ],
+    "add": {
+      "CCEP": "Coca-Cola Europacific Partners plc",
+      "CDW": "CDW Corporation",
+      "DASH": "DoorDash, Inc.",
+      "MDB": "MongoDB, Inc.",
+      "ROP": "Roper Technologies, Inc.",
+      "SPLK": "Splunk Inc."
+    }
+  },
+  {
+    "date": "2024-03-18",
+    "sourceUrl": "https://mondovisione.com/news/linde-plc-to-join-the-nasdaq-100-index-beginning-march-18-2024-202439",
+    "remove": [
+      "SPLK"
+    ],
+    "add": {
+      "LIN": "Linde plc"
+    }
+  },
+  {
+    "date": "2024-06-24",
+    "sourceUrl": "https://mondovisione.com/news/arm-holdings-plc-to-join-the-nasdaq-100-index-beginning-june-24-2024-2024614",
+    "remove": [
+      "SIRI"
+    ],
+    "add": {
+      "ARM": "Arm Holdings plc"
+    }
+  },
+  {
+    "date": "2024-07-22",
+    "sourceUrl": "https://mondovisione.com/news/super-micro-computer-inc-to-join-the-nasdaq-100-index-beginning-july-22-2024-2024713",
+    "remove": [
+      "WBA"
+    ],
+    "add": {
+      "SMCI": "Super Micro Computer, Inc."
+    }
+  },
+  {
+    "date": "2024-11-18",
+    "sourceUrl": "https://mondovisione.com/news/applovin-corporation-to-join-the-nasdaq-100-index-beginning-november-18-2024-2024119",
+    "remove": [
+      "DLTR"
+    ],
+    "add": {
+      "APP": "AppLovin Corporation"
+    }
+  },
+  {
+    "date": "2024-12-23",
+    "sourceUrl": "https://www.nasdaq.com/press-release/annual-changes-nasdaq-100-indexr-2024-12-13",
+    "remove": [
+      "ILMN",
+      "MRNA",
+      "SMCI"
+    ],
+    "add": {
+      "AXON": "Axon Enterprise, Inc.",
+      "MSTR": "MicroStrategy Incorporated",
+      "PLTR": "Palantir Technologies Inc."
+    }
+  },
+  {
+    "date": "2025-05-19",
+    "sourceUrl": "https://mondovisione.com/news/shopify-inc-to-join-the-nasdaq-100-index-beginning-may-19-2025-2025510",
+    "remove": [
+      "MDB"
+    ],
+    "add": {
+      "SHOP": "Shopify Inc."
+    }
+  },
+  {
+    "date": "2025-07-28",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/thomson-reuters-corp-to-join-the-nasdaq-100-index-beginning-july-28-2025-2025721/",
+    "remove": [
+      "ANSS"
+    ],
+    "add": {
+      "TRI": "Thomson Reuters Corp"
+    },
+    "note": "ANSYS는 Synopsys 인수 완료로 2025-07-17 거래 종료 · Nasdaq 발표는 TRI가 ANSS를 대체하는 발효일을 7월 28일로 명시"
+  },
+  {
+    "date": "2025-10-20",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/202601%20NDX%20Reconstitution%20and%20Performance%20Highlights.pdf",
+    "remove": [],
+    "add": {
+      "SOLS": "Solstice Advanced Materials Inc."
+    },
+    "note": "Honeywell(HON) 분사 종목의 편입 · Nasdaq Global Indexes 자료의 'Added: October 20, 2025' 기준(Wikipedia 기록은 10-30)"
+  },
+  {
+    "date": "2025-11-10",
+    "sourceUrl": "https://indexes.nasdaqomx.com/docs/202601%20NDX%20Reconstitution%20and%20Performance%20Highlights.pdf",
+    "remove": [
+      "SOLS"
+    ],
+    "add": {},
+    "note": "최소 비중 0.10% 미달로 제외 · Nasdaq Global Indexes 자료의 'Removed: November 10, 2025' 기준(Wikipedia 기록은 11-06)"
+  },
+  {
+    "date": "2025-12-22",
+    "sourceUrl": "https://www.nasdaq.com/press-release/annual-changes-nasdaq-100-indexr-2025-12-13",
+    "remove": [
+      "BIIB",
+      "CDW",
+      "GFS",
+      "LULU",
+      "ON",
+      "TTD"
+    ],
+    "add": {
+      "ALNY": "Alnylam Pharmaceuticals, Inc.",
+      "FER": "Ferrovial SE",
+      "INSM": "Insmed Incorporated",
+      "MPWR": "Monolithic Power Systems, Inc.",
+      "STX": "Seagate Technology Holdings plc",
+      "WDC": "Western Digital Corporation"
+    }
+  },
+  {
+    "date": "2026-01-20",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/walmart-inc-to-join-the-nasdaq-100-index-beginning-january-20th-2026-2026110/",
+    "remove": [
+      "AZN"
+    ],
+    "add": {
+      "WMT": "Walmart Inc."
+    }
+  },
+  {
+    "date": "2026-04-20",
+    "sourceUrl": "https://mondovisione.com/media-and-resources/news/sandisk-corporation-to-join-the-nasdaq-100-index-beginning-april-20-2026-2026411",
+    "remove": [
+      "TEAM"
+    ],
+    "add": {
+      "SNDK": "Sandisk Corporation"
+    }
+  },
+  {
+    "date": "2026-05-18",
+    "sourceUrl": "https://mondovisione.com/news/lumentum-holdings-inc-to-join-the-nasdaq-100-index-beginning-may-18-2026-2026511/",
+    "remove": [
+      "CSGP"
+    ],
+    "add": {
+      "LITE": "Lumentum Holdings Inc."
+    }
+  },
+  {
+    "date": "2026-06-22",
+    "sourceUrl": "https://mondovisione.com/news/nasdaq-100-index-june-2026-quarterly-changes-2026612/",
+    "remove": [
+      "CHTR",
+      "CTSH",
+      "INSM",
+      "VRSK",
+      "ZS"
+    ],
+    "add": {
+      "ALAB": "Astera Labs, Inc.",
+      "CRWV": "CoreWeave, Inc.",
+      "NBIS": "Nebius Group N.V.",
+      "RKLB": "Rocket Lab Corporation",
+      "TER": "Teradyne, Inc."
+    }
+  },
+  {
+    "date": "2026-06-29",
+    "sourceUrl": "https://www.nasdaqtrader.com/TraderNews.aspx?id=ECA2026-399",
+    "remove": [],
+    "add": {
+      "HONA": "Honeywell Aerospace Inc."
+    },
+    "note": "Honeywell(HON) 분사 종목의 편입 · 출처는 Nasdaq Trader의 분사 공지(배분·거래 개시일 2026-06-29)이며 Nasdaq-100 편입 공지 자체는 찾지 못함 · 분사 종목 편입은 Nasdaq-100 방법론(https://indexes.nasdaqomx.com/docs/Methodology_NDX_Effective_May_1_2026.pdf)과 Wikipedia 기록(2026-06-29)에 따름",
+    "sourceType": "inferred"
+  },
+  {
+    "date": "2026-07-07",
+    "sourceUrl": "https://finviz.com/news/364436/space-exploration-technologies-corporation-to-join-the-nasdaq-100-index-beginning-july-7-2026",
+    "remove": [],
+    "add": {
+      "SPCX": "Space Exploration Technologies Corporation"
+    },
+    "note": "신규 상장 종목의 Fast Entry 편입(대체 종목 없음) · Nasdaq 보도자료(GlobeNewswire)의 Finviz 전재본 · 원문 globenewswire.com과 ir.nasdaq.com은 이 환경에서 403"
+  },
+  {
+    "date": "2026-08-04",
+    "sourceUrl": "https://www.ea.com/news/ea-announces-completion-of-acquisition",
+    "remove": [
+      "EA"
+    ],
+    "add": {},
+    "note": "컨소시엄의 인수 완료로 2026-08-04 거래 종료·Nasdaq 상장폐지(회사 발표) · Nasdaq-100 제외 공지는 찾지 못했고 대체 편입 종목 없음(Wikipedia 기록 2026-08-04)",
+    "sourceType": "inferred"
+  },
+  {
+    "date": "2026-09-14",
+    "sourceUrl": "https://www.thegrocer.co.uk/news/kraft-heinz-to-swap-nasdaq-listing-in-favour-of-nyse/722923.article",
+    "sourceType": "secondary",
+    "remove": [
+      "KHC"
+    ],
+    "add": {},
+    "note": "상장을 NYSE로 이전(2026-09-14 NYSE 거래 개시)하여 Nasdaq 상장 요건을 잃음 · 회사 발표(https://news.kraftheinzcompany.com/press-releases-details/2026/Kraft-Heinz-to-Transfer-Stock-Exchange-Listing-to-NYSE/default.aspx)와 SEC 8-K는 이 환경에서 403이라 보도로 확인 · Nasdaq-100 제외 공지는 찾지 못했고 대체 편입 종목 없음"
+  },
+  {
+    "date": "2026-10-09",
+    "sourceUrl": "https://mondovisione.com/news/moderna-inc-to-join-the-nasdaq-100-index-beginning-october-9-2026-2026102",
+    "remove": [
+      "WBD"
+    ],
+    "add": {
+      "MRNA": "Moderna, Inc."
+    },
+    "note": "Warner Bros. Discovery는 Paramount Skydance 인수 완료로 2026-10-06 거래 종료 · Nasdaq 발표는 MRNA가 WBD를 대체하는 발효일을 10월 9일로 명시"
   }
 ]
