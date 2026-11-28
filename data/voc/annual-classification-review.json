@@ -134,6 +134,43 @@
       "differences": 7,
       "undeterminable": 5
     },
-    "ruleCandidates": 7
+    "ruleCandidates": 7,
+    "ownerDecision": {
+      "date": "2026-11-28",
+      "delegatedTo": "lead-ai",
+      "note": "운영자가 최종 확인을 리드 AI의 본문 대조 검토로 갈음하기로 결정"
+    },
+    "bodyReview": {
+      "date": "2026-11-28",
+      "reviewer": "lead-ai",
+      "rows": 39,
+      "pagesCrawled": 1058,
+      "holdoutDifferences": {
+        "rows": 14,
+        "contextVerdictConfirmed": 12,
+        "autoResultUpheld": 2,
+        "resolvedByCurrentRules": 3
+      },
+      "holdoutHeld": {
+        "rows": 13,
+        "autoConfirmed": 9,
+        "autoWrong": 4
+      },
+      "focus2025Differences": {
+        "rows": 7,
+        "autoWrong": 5,
+        "autoResultUpheld": 2
+      },
+      "focus2025Undeterminable": {
+        "rows": 5,
+        "autoConfirmed": 4,
+        "autoWrong": 1
+      },
+      "autoCorrect": 17,
+      "autoWrong": 22,
+      "ruleCandidates": 8,
+      "ruleCandidatesApplied": false,
+      "titleVerdictsReversed": 3
+    }
   }
 }
