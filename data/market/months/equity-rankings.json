@@ -6720,5 +6720,3248 @@
       "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · Nasdaq 편입 변경 반영",
       "universeCount": 106
     }
+  },
+  "2018-03": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "corporateActionSources": [
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "DISH",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "LVNTA",
+        "MXIM",
+        "MYL",
+        "QVCA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 18,
+        "분할 비율만으로 조정할 수 없는 기업행동": 1
+      },
+      "items": [
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 11.594632264319909,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Seagate Technology PLC",
+          "returnPct": 9.51390395487436,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "STX"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 9.49309152783312,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Autodesk, Inc.",
+          "returnPct": 9.447446400557784,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Intel Corp.",
+          "returnPct": 8.867999193614622,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INTC"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Lam Research Corp.",
+          "returnPct": 7.165158772396665,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Regeneron Pharmaceuticals, Inc.",
+          "returnPct": 7.017808300910356,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "REGN"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Expedia, Inc.",
+          "returnPct": 6.503880834033441,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "EXPE"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Western Digital Corp.",
+          "returnPct": 6.305746557398292,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WDC"
+        },
+        {
+          "firstDate": "2018-03-01",
+          "lastDate": "2018-03-29",
+          "name": "Henry Schein, Inc.",
+          "returnPct": 5.942492398039267,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HSIC"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "tickerChangeSources": [
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 104
+    }
+  },
+  "2018-04": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "DISH",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 18
+      },
+      "items": [
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Ulta Beauty, Inc.",
+          "returnPct": 23.52188253827598,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ULTA"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Tesla, Inc.",
+          "returnPct": 16.405061787072242,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Henry Schein, Inc.",
+          "returnPct": 15.448738558319162,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HSIC"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Amazon.Com, Inc.",
+          "returnPct": 14.15024890851974,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Baidu, Inc. ADR",
+          "returnPct": 14.014359720076342,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Cadence Design Systems, Inc.",
+          "returnPct": 11.743375174337517,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CDNS"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "NetFlix, Inc.",
+          "returnPct": 11.477398408790895,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Facebook, Inc., Class A",
+          "returnPct": 10.690965792807718,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FB"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Symantec Corp.",
+          "returnPct": 10.272073335834406,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2018-04-02",
+          "lastDate": "2018-04-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 9.952854897852278,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ISRG"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-05": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "DISH",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 18
+      },
+      "items": [
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Align Technology, Inc.",
+          "returnPct": 32.07209357841967,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ALGN"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 23.084747025929815,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": 15.550703246032423,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Microchip Technology, Inc.",
+          "returnPct": 14.982990970308725,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MCHP"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Sirius XM Holdings, Inc.",
+          "returnPct": 12.507848974829798,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SIRI"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "NetFlix, Inc.",
+          "returnPct": 12.224704755825087,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Incyte Corp.",
+          "returnPct": 12.193919474116681,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INCY"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Illumina, Inc.",
+          "returnPct": 12.119840322647022,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "KLA-Tencor Corp.",
+          "returnPct": 11.420215815971973,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2018-05-01",
+          "lastDate": "2018-05-31",
+          "name": "Adobe Systems, Inc.",
+          "returnPct": 11.245983577293824,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADBE"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-06": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "DISH",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 18
+      },
+      "items": [
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Tesla, Inc.",
+          "returnPct": 17.520701938349088,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Regeneron Pharmaceuticals, Inc.",
+          "returnPct": 12.41879348438102,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "REGN"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Charter Communications, Inc., Class A",
+          "returnPct": 11.967770267690074,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CHTR"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 11.779020059191055,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 11.262135922330097,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MNST"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Kraft Heinz Co. (The)",
+          "returnPct": 8.968361910602022,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KHC"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "NetFlix, Inc.",
+          "returnPct": 8.751701719778845,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 8.679169642074141,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "JD.com, Inc. ADR",
+          "returnPct": 7.924801476910627,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "JD"
+        },
+        {
+          "firstDate": "2018-06-01",
+          "lastDate": "2018-06-29",
+          "name": "Costco Wholesale Corp.",
+          "returnPct": 6.020286952065962,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "COST"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-07": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 85,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "DISH",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 18
+      },
+      "items": [
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "Fastenal Co.",
+          "returnPct": 19.426504433920858,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FAST"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "Illumina, Inc.",
+          "returnPct": 16.241399082568808,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 15.965505579979709,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": 14.081329084201398,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "Check Point Software Technologies Ltd.",
+          "returnPct": 13.418562512583048,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CHKP"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "KLA-Tencor Corp.",
+          "returnPct": 13.120962882589726,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "Biogen, Inc.",
+          "returnPct": 13.050681272610474,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "BIIB"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "O’reilly Automotive, Inc.",
+          "returnPct": 11.467491380393742,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ORLY"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "IDEXX Laboratories, Inc.",
+          "returnPct": 10.687816341287057,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "IDXX"
+        },
+        {
+          "firstDate": "2018-07-02",
+          "lastDate": "2018-07-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 10.173073701302885,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-08": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 86,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 17
+      },
+      "items": [
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Workday, Inc.",
+          "returnPct": 22.2820066466213,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WDAY"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Autodesk, Inc.",
+          "returnPct": 21.3634219216858,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Take-Two Interactive Software, Inc.",
+          "returnPct": 18.995010691375622,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TTWO"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Cisco Systems, Inc.",
+          "returnPct": 14.11697213080105,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CSCO"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 13.927544112404698,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Synopsys, Inc.",
+          "returnPct": 13.805013927576601,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SNPS"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Apple, Inc.",
+          "returnPct": 13.354246259195113,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AAPL"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Incyte Corp.",
+          "returnPct": 12.684860497026985,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INCY"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "Amazon.Com, Inc.",
+          "returnPct": 11.99385700851895,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMZN"
+        },
+        {
+          "firstDate": "2018-08-01",
+          "lastDate": "2018-08-31",
+          "name": "T-Mobile US, Inc.",
+          "returnPct": 11.252861524516774,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TMUS"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-09": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 86,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 17
+      },
+      "items": [
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 15.705002694052768,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Broadcom Ltd.",
+          "returnPct": 13.27713679184193,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AVGO"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Liberty Global PLC, Class C",
+          "returnPct": 9.999701479170708,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LBTYK"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Liberty Global PLC, Class A",
+          "returnPct": 9.542220392802541,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LBTYA"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Henry Schein, Inc.",
+          "returnPct": 9.16677306671119,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HSIC"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "T-Mobile US, Inc.",
+          "returnPct": 6.70547691514888,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TMUS"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Symantec Corp.",
+          "returnPct": 6.194158399401844,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Starbucks Corp.",
+          "returnPct": 6.176567364964533,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SBUX"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Hasbro, Inc.",
+          "returnPct": 5.892373795688138,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HAS"
+        },
+        {
+          "firstDate": "2018-09-04",
+          "lastDate": "2018-09-28",
+          "name": "Amgen, Inc.",
+          "returnPct": 5.364141828456841,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMGN"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-10": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 86,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 17
+      },
+      "items": [
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Tesla, Inc.",
+          "returnPct": 8.56792495642896,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Comcast Corp., Class A",
+          "returnPct": 7.9515781758211554,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CMCSA"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Starbucks Corp.",
+          "returnPct": 4.844294387526303,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SBUX"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Dollar Tree, Inc.",
+          "returnPct": 2.529798102651423,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "DLTR"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "PepsiCo, Inc.",
+          "returnPct": 1.5100052201148426,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PEP"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Intel Corp.",
+          "returnPct": 0.9271150762590147,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INTC"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Ross Stores, Inc.",
+          "returnPct": 0.42532369354262306,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ROST"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Charter Communications, Inc., Class A",
+          "returnPct": -0.37936503000715194,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CHTR"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Verisk Analytics, Inc.",
+          "returnPct": -0.4502728793811814,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "VRSK"
+        },
+        {
+          "firstDate": "2018-10-01",
+          "lastDate": "2018-10-31",
+          "name": "Kraft Heinz Co. (The)",
+          "returnPct": -1.0233359351869298,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KHC"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-11": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 86,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CA",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 17
+      },
+      "items": [
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Workday, Inc.",
+          "returnPct": 18.935383276524767,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WDAY"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Symantec Corp.",
+          "returnPct": 18.38497484764736,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Starbucks Corp.",
+          "returnPct": 14.412455369824995,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SBUX"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Fastenal Co.",
+          "returnPct": 14.379422308139862,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FAST"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Vodafone Group PLC ADR",
+          "returnPct": 11.574143723985758,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "VOD"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "American Airlines Group, Inc.",
+          "returnPct": 10.724791976017707,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AAL"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 9.60514233241506,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MNST"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "PepsiCo, Inc.",
+          "returnPct": 9.34572229610312,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PEP"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Ulta Beauty, Inc.",
+          "returnPct": 9.100567869573181,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ULTA"
+        },
+        {
+          "firstDate": "2018-11-01",
+          "lastDate": "2018-11-30",
+          "name": "Paychex, Inc.",
+          "returnPct": 8.878851090509746,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PAYX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2018-12": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        }
+      ],
+      "eligibleCount": 87,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "ESRX",
+        "FOX",
+        "FOXA",
+        "HOLX",
+        "MXIM",
+        "MYL",
+        "QRTEA",
+        "SHPG",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 16
+      },
+      "items": [
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Broadcom Ltd.",
+          "returnPct": 6.145350457228259,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AVGO"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Dollar Tree, Inc.",
+          "returnPct": 4.2113764855197875,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "DLTR"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 0.004679583960356535,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Take-Two Interactive Software, Inc.",
+          "returnPct": -0.5026097042335202,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TTWO"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "O’reilly Automotive, Inc.",
+          "returnPct": -0.5803554027190083,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ORLY"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Ross Stores, Inc.",
+          "returnPct": -1.552131670904598,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ROST"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Regeneron Pharmaceuticals, Inc.",
+          "returnPct": -2.3805876729187685,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "REGN"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": -2.7311157624630416,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "PACCAR, Inc.",
+          "returnPct": -3.1900921422561512,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PCAR"
+        },
+        {
+          "firstDate": "2018-12-03",
+          "lastDate": "2018-12-31",
+          "name": "Amgen, Inc.",
+          "returnPct": -4.080135900055789,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMGN"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-01": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 91,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "FOX",
+        "FOXA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 12
+      },
+      "items": [
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 29.633563462559746,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "NetFlix, Inc.",
+          "returnPct": 26.840020922065307,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NFLX"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Incyte Corp.",
+          "returnPct": 26.793580868470737,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INCY"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Align Technology, Inc.",
+          "returnPct": 23.16940431426875,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ALGN"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Facebook, Inc., Class A",
+          "returnPct": 22.853868877099252,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FB"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 22.583030524700437,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 22.143552229790945,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Ctrip.com International Ltd. ADR",
+          "returnPct": 20.69557046393217,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CTRP"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "lululemon athletica inc.",
+          "returnPct": 19.829752736116742,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LULU"
+        },
+        {
+          "firstDate": "2019-01-02",
+          "lastDate": "2019-01-31",
+          "name": "Fastenal Co.",
+          "returnPct": 18.452386581802017,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FAST"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-02": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 91,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "FOX",
+        "FOXA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 12
+      },
+      "items": [
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 25.813086162452695,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Cadence Design Systems, Inc.",
+          "returnPct": 17.604765817584223,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CDNS"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Intuit, Inc.",
+          "returnPct": 15.230481727574752,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INTU"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "JD.com, Inc. ADR",
+          "returnPct": 12.50468995354051,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "JD"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Skyworks Solutions, Inc.",
+          "returnPct": 10.923270423878149,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SWKS"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Illumina, Inc.",
+          "returnPct": 10.57413561479177,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 10.146678170836928,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MNST"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "CSX Corp.",
+          "returnPct": 10.136489453087716,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CSX"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Marriott International, Inc., Class A",
+          "returnPct": 9.69935077600379,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MAR"
+        },
+        {
+          "firstDate": "2019-02-01",
+          "lastDate": "2019-02-28",
+          "name": "Cintas Corp.",
+          "returnPct": 9.551534403539621,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CTAS"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-03": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "corporateActionSources": [
+        "https://press.spglobal.com/2019-03-14-Fox-Set-to-Join-S-P-500-Adobe-to-Join-S-P-100"
+      ],
+      "eligibleCount": 91,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "FOX",
+        "FOXA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10,
+        "분할 비율만으로 조정할 수 없는 기업행동": 2
+      },
+      "items": [
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Ctrip.com International Ltd. ADR",
+          "returnPct": 27.153753019553253,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CTRP"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "NVIDIA Corp.",
+          "returnPct": 14.783347274285655,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 12.419183420423346,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Synopsys, Inc.",
+          "returnPct": 11.59027037503634,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SNPS"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 11.304598268215868,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Broadcom Ltd.",
+          "returnPct": 11.233575245731677,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AVGO"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Ulta Beauty, Inc.",
+          "returnPct": 10.602600697748176,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ULTA"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Costco Wholesale Corp.",
+          "returnPct": 10.34532882031688,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "COST"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Cadence Design Systems, Inc.",
+          "returnPct": 9.236326109391126,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CDNS"
+        },
+        {
+          "firstDate": "2019-03-01",
+          "lastDate": "2019-03-29",
+          "name": "Dollar Tree, Inc.",
+          "returnPct": 9.00788709007887,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "DLTR"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-04": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": 48.984897913846936,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Hasbro, Inc.",
+          "returnPct": 19.682537720279633,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HAS"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Facebook, Inc., Class A",
+          "returnPct": 14.640933572710951,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FB"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Microchip Technology, Inc.",
+          "returnPct": 14.212570856508416,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MCHP"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Align Technology, Inc.",
+          "returnPct": 13.862879186393126,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ALGN"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Lam Research Corp.",
+          "returnPct": 12.303003402870248,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "NXP Semiconductors N.V.",
+          "returnPct": 11.89774692555704,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NXPI"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 11.861861861861861,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MNST"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 11.687188019966722,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2019-04-01",
+          "lastDate": "2019-04-30",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 11.141742781345615,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-05": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 17.698512574010273,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Take-Two Interactive Software, Inc.",
+          "returnPct": 9.187279151943462,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TTWO"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Monster Beverage Corp.",
+          "returnPct": 6.765619606489472,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MNST"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "IDEXX Laboratories, Inc.",
+          "returnPct": 6.711954199777835,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "IDXX"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Paychex, Inc.",
+          "returnPct": 5.440333749486271,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PAYX"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Henry Schein, Inc.",
+          "returnPct": 3.2351057014734144,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HSIC"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Cintas Corp.",
+          "returnPct": 2.6679579654518157,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "CTAS"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Xcel Energy Inc.",
+          "returnPct": 2.5732520120724347,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "XEL"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 2.237970906378217,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2019-05-01",
+          "lastDate": "2019-05-31",
+          "name": "Automatic Data Processing, Inc.",
+          "returnPct": 1.67704049914238,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADP"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-06": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Western Digital Corp.",
+          "returnPct": 29.706104388253145,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WDC"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Tesla, Inc.",
+          "returnPct": 24.858984352082338,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "NVIDIA Corp.",
+          "returnPct": 22.768601645973877,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Symantec Corp.",
+          "returnPct": 21.473749541569102,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Illumina, Inc.",
+          "returnPct": 21.21361780587383,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "American Airlines Group, Inc.",
+          "returnPct": 19.890036406865296,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AAL"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 19.71679344404847,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 18.04750251004016,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "JD.com, Inc. ADR",
+          "returnPct": 17.58573193794261,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "JD"
+        },
+        {
+          "firstDate": "2019-06-03",
+          "lastDate": "2019-06-28",
+          "name": "Facebook, Inc., Class A",
+          "returnPct": 17.575172362893852,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FB"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-07": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Hasbro, Inc.",
+          "returnPct": 14.480835151907588,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "HAS"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Fiserv, Inc.",
+          "returnPct": 13.966057723489353,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FISV"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "JB Hunt Transport Services, Inc.",
+          "returnPct": 12.21213532058717,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "JBHT"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "KLA-Tencor Corp.",
+          "returnPct": 12.022274431033555,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Starbucks Corp.",
+          "returnPct": 11.992451239445623,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SBUX"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 11.918722846030118,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Alphabet, Inc., Class C",
+          "returnPct": 10.81379269763747,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "GOOG"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Alphabet, Inc., Class A",
+          "returnPct": 10.745665960004771,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "GOOGL"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Sirius XM Holdings, Inc.",
+          "returnPct": 9.634767553647322,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SIRI"
+        },
+        {
+          "firstDate": "2019-07-01",
+          "lastDate": "2019-07-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 9.027245310024025,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-08": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "NetEase, Inc. ADR",
+          "returnPct": 13.829511677826876,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTES"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "Amgen, Inc.",
+          "returnPct": 12.948783507374314,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMGN"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "QUALCOMM, Inc.",
+          "returnPct": 9.227795265947059,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "QCOM"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "KLA-Tencor Corp.",
+          "returnPct": 8.743696942618243,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KLAC"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "Symantec Corp.",
+          "returnPct": 8.263966441126511,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SYMC"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "Take-Two Interactive Software, Inc.",
+          "returnPct": 8.083538083538084,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TTWO"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "IDEXX Laboratories, Inc.",
+          "returnPct": 7.991054789414834,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "IDXX"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "Costco Wholesale Corp.",
+          "returnPct": 7.583550217021611,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "COST"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "PepsiCo, Inc.",
+          "returnPct": 7.5659193179126865,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "PEP"
+        },
+        {
+          "firstDate": "2019-08-01",
+          "lastDate": "2019-08-30",
+          "name": "Synopsys, Inc.",
+          "returnPct": 7.010262601871416,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SNPS"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-09": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "ASML Holding N.V.",
+          "returnPct": 12.9055153466948,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ASML"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Dollar Tree, Inc.",
+          "returnPct": 11.932542406118246,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "DLTR"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Illumina, Inc.",
+          "returnPct": 11.77162172091998,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ILMN"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "NetApp, Inc.",
+          "returnPct": 10.76057212032431,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NTAP"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "NXP Semiconductors N.V.",
+          "returnPct": 10.41807829958299,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NXPI"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Fastenal Co.",
+          "returnPct": 9.926741688307525,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FAST"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Intel Corp.",
+          "returnPct": 9.687167420107597,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INTC"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Microchip Technology, Inc.",
+          "returnPct": 9.449003070613225,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MCHP"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Intuitive Surgical, Inc.",
+          "returnPct": 9.310658973580322,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ISRG"
+        },
+        {
+          "firstDate": "2019-09-03",
+          "lastDate": "2019-09-30",
+          "name": "Lam Research Corp.",
+          "returnPct": 9.0819544958099,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-10": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Align Technology, Inc.",
+          "returnPct": 38.3927591881514,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ALGN"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Biogen, Inc.",
+          "returnPct": 31.474471830985916,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "BIIB"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Tesla, Inc.",
+          "returnPct": 28.701563812244448,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Kraft Heinz Co. (The)",
+          "returnPct": 18.24657931684774,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "KHC"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 17.97635605006954,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 17.65409962261317,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Skyworks Solutions, Inc.",
+          "returnPct": 17.63341599722176,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SWKS"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 16.648764769065522,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "VRTX"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "Fastenal Co.",
+          "returnPct": 15.97465819902026,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FAST"
+        },
+        {
+          "firstDate": "2019-10-01",
+          "lastDate": "2019-10-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 15.526793655499555,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NVDA"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-11": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "TCOM",
+          "sourceUrl": "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+          "symbol": "CTRP"
+        },
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "SYMC"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 93,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CELG",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 10
+      },
+      "items": [
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Autodesk, Inc.",
+          "returnPct": 20.399334442595674,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADSK"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Regeneron Pharmaceuticals, Inc.",
+          "returnPct": 18.847187778667344,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "REGN"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "MercadoLibre, Inc.",
+          "returnPct": 18.485714285714284,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MELI"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Baidu, Inc. ADR",
+          "returnPct": 13.274082568807339,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "BIDU"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Incyte Corp.",
+          "returnPct": 12.65853074898301,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "INCY"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "lululemon athletica inc.",
+          "returnPct": 12.457023269719468,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LULU"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 12.209802235597593,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Adobe Systems, Inc.",
+          "returnPct": 11.413865092505938,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ADBE"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Twenty-First Century Fox, Inc., Class A",
+          "returnPct": 10.400448507732367,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "FOXA"
+        },
+        {
+          "firstDate": "2019-11-01",
+          "lastDate": "2019-11-29",
+          "name": "Vertex Pharmaceuticals, Inc.",
+          "returnPct": 10.356325271225241,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "VRTX"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "tickerChangeSources": [
+        "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+        "https://newsroom.gendigital.com/Symantec-Completes-Sale-of-Enterprise-Security-Assets-to-Broadcom"
+      ],
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
+  },
+  "2019-12": {
+    "US": {
+      "archiveTickers": [
+        {
+          "archiveSymbol": "META",
+          "sourceUrl": "https://investor.atmeta.com/investor-news/press-release-details/2022/Meta-Platforms-Inc.-to-Change-Ticker-Symbol-to-META-on-June-9/default.aspx",
+          "symbol": "FB"
+        },
+        {
+          "archiveSymbol": "GEN",
+          "sourceUrl": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom",
+          "symbol": "NLOK"
+        },
+        {
+          "archiveSymbol": "BKNG",
+          "sourceUrl": "https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx",
+          "symbol": "PCLN"
+        },
+        {
+          "archiveSymbol": "WTW",
+          "sourceUrl": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm",
+          "symbol": "WLTW"
+        }
+      ],
+      "eligibleCount": 94,
+      "excludedSymbols": [
+        "ALXN",
+        "ATVI",
+        "CERN",
+        "CTXS",
+        "EA",
+        "MXIM",
+        "MYL",
+        "WBA",
+        "XLNX"
+      ],
+      "exclusions": {
+        "가격 아카이브의 거래일 범위 미충족": 9
+      },
+      "items": [
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Western Digital Corp.",
+          "returnPct": 30.865960502994614,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WDC"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Tesla, Inc.",
+          "returnPct": 24.923067275260138,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "TSLA"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Skyworks Solutions, Inc.",
+          "returnPct": 22.890878863900333,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "SWKS"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Advanced Micro Devices, Inc.",
+          "returnPct": 18.409501678285565,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "AMD"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Wynn Resorts Ltd.",
+          "returnPct": 16.3092426942423,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "WYNN"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Micron Technology, Inc.",
+          "returnPct": 15.93024052779479,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "MU"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "NVIDIA Corp.",
+          "returnPct": 12.45070585178556,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NVDA"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "Lam Research Corp.",
+          "returnPct": 11.682020069090312,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "LRCX"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "ASML Holding N.V.",
+          "returnPct": 11.425565240264476,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "ASML"
+        },
+        {
+          "firstDate": "2019-12-02",
+          "lastDate": "2019-12-31",
+          "name": "NXP Semiconductors N.V.",
+          "returnPct": 11.22555883015284,
+          "sourceUrl": "https://stooq.com/db/h/",
+          "symbol": "NXPI"
+        }
+      ],
+      "membership": "approximate",
+      "membershipSourceUrl": "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+      "membershipSourceUrls": [
+        "https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm",
+        "https://ir.nasdaq.com/news-releases/news-release-details/align-technology-inc-join-nasdaq-100-index-beginning-october-23",
+        "https://ir.nasdaq.com/news-releases/news-release-details/annual-changes-nasdaq-100-index-6",
+        "https://indexes.nasdaqomx.com/docs/Whats%20New%20with%20the%20Nasdaq-100.pdf",
+        "https://investors.qvcgrp.com/news-media/press-releases/detail/14/liberty-interactive-and-gci-liberty-announce-completion-of",
+        "https://mondovisione.com/news/pepsico-inc-to-join-the-nasdaq-100-index-beginning-july-23-2018-2018717",
+        "https://mondovisione.com/news/nxp-semiconductors-nv-to-join-the-nasdaq-100-index-beginning-november-5-2018-20181027",
+        "https://mondovisione.com/news/xcel-energy-inc-to-join-the-nasdaq-100-index-beginning-november-19-2018-20181110",
+        "https://mondovisione.com/news/annual-changes-to-the-nasdaq-100-index-7-20181215",
+        "https://www.miaxglobal.com/sites/default/files/alert-files/CTRP_Symbol_Name___45919.pdf",
+        "https://newsroom.gendigital.com/Symantec-Completes-Sale-of-Enterprise-Security-Assets-to-Broadcom",
+        "https://mondovisione.com/media-and-resources/news/exelon-corporation-to-join-the-nasdaq-100-index-beginning-november-21-2019-20191119"
+      ],
+      "priceBasis": "total-return",
+      "priceDisclosure": "Stooq 아카이브는 분할과 배당 재투자를 함께 반영한 조정 종가이며 현재 상장 종목만 담고 있습니다. 이 달의 수익률은 총수익 기준이라 배당을 제외한 다른 달의 가격 수익률과 기준이 다르고, 이후 상장폐지·합병된 종목은 '가격 아카이브의 거래일 범위 미충족'으로 제외되어 생존 종목 쪽으로 치우칠 수 있습니다. 운영자가 2026년 11월 28일 이 조건으로 수록하기로 결정했습니다.",
+      "priceMethod": "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름",
+      "universe": "PowerShares QQQ Trust 보유 주식 (2017-09-30) · 편입·종목코드 변경 반영",
+      "universeCount": 103
+    }
   }
 }

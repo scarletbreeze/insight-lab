@@ -449,7 +449,11 @@
       "NTAP": "NetApp, Inc.",
       "UAL": "United Continental Holdings, Inc.",
       "VRSN": "VeriSign, Inc.",
-      "WLTW": "Willis Towers Watson Public Limited Company"
+      "WLTW": {
+        "name": "Willis Towers Watson Public Limited Company",
+        "archiveSymbol": "WTW",
+        "archiveSymbolSource": "https://www.sec.gov/Archives/edgar/data/1140536/000119312522004045/d267396d8k.htm"
+      }
     }
   },
   {
@@ -469,7 +473,11 @@
       "SYMC"
     ],
     "add": {
-      "NLOK": "NortonLifeLock Inc."
+      "NLOK": {
+        "name": "NortonLifeLock Inc.",
+        "archiveSymbol": "GEN",
+        "archiveSymbolSource": "https://newsroom.gendigital.com/2022-11-07-Introducing-Gen-The-Company-to-Power-Digital-Freedom"
+      }
     }
   },
   {

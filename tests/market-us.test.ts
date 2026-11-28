@@ -9,7 +9,7 @@ function readJson<T>(path: string): T {
 const isHttps = (url: string) => new URL(url).protocol === 'https:';
 
 test('Recorded Nasdaq-100 changes through 2019 are dated, sourced and consistent', () => {
-  type Change = { date: string; sourceUrl: string; remove: string[]; add: Record<string, string> };
+  type Change = { date: string; sourceUrl: string; remove: string[]; add: Record<string, string | { name: string; archiveSymbol?: string; archiveSymbolSource?: string }> };
   const changes = readJson<Change[]>('market/qqq-index-changes.json');
   assert.deepEqual(changes.map(({ date }) => date), [...changes.map(({ date }) => date)].sort());
   for (const { date, sourceUrl, remove, add } of changes) {
@@ -65,4 +65,45 @@ test('Every QQQ holdings snapshot is a dated SEC filing with unique tickers', ()
     const { members } = readJson<Snapshot>('market/qqq-holdings-2024-12.json');
     assert.ok(members.some(({ symbol }) => symbol === 'NVDA') && members.some(({ symbol }) => symbol === 'AAPL'));
   }
+});
+
+test('Stooq-based QQQ months from 2018-03 declare the total-return basis and map renamed tickers to sourced archive symbols', () => {
+  type Member = { symbol: string; archiveSymbol?: string; archiveSymbolSource?: string };
+  type Added = string | { name: string; archiveSymbol?: string; archiveSymbolSource?: string };
+  type Ranking = { eligibleCount: number; universeCount: number; exclusions: Record<string, number>; priceBasis?: string; priceMethod: string;
+    priceDisclosure?: string; archiveTickers?: { symbol: string; archiveSymbol: string; sourceUrl: string }[]; items: { sourceUrl: string }[] };
+  const holdings = readJson<{ members: Member[] }>('market/qqq-holdings-2017-09.json').members;
+  const changes = readJson<{ add: Record<string, Added> }[]>('market/qqq-index-changes.json');
+  const archived = new Map<string, string>();
+  const sources = new Map<string, string>();
+  for (const { symbol, archiveSymbol, archiveSymbolSource } of holdings) {
+    if (archiveSymbol) { archived.set(symbol, archiveSymbol); sources.set(symbol, archiveSymbolSource ?? ''); }
+  }
+  for (const { add } of changes) {
+    for (const [symbol, added] of Object.entries(add)) {
+      if (typeof added !== 'string' && added.archiveSymbol) { archived.set(symbol, added.archiveSymbol); sources.set(symbol, added.archiveSymbolSource ?? ''); }
+    }
+  }
+  assert.deepEqual([...archived.entries()].sort(), [['CTRP', 'TCOM'], ['FB', 'META'], ['NLOK', 'GEN'], ['PCLN', 'BKNG'], ['SYMC', 'GEN'], ['WLTW', 'WTW']]);
+  assert.ok([...sources.values()].every(isHttps));
+  const monthly = readJson<Record<string, { US?: Ranking }>>('market/months/equity-rankings.json');
+  const stooqMonths = Object.keys(monthly).filter((period) => period >= '2018-03' && period <= '2019-12').sort();
+  assert.equal(stooqMonths.length, 22);
+  for (const period of stooqMonths) {
+    const ranking = monthly[period].US;
+    assert.ok(ranking, period);
+    assert.equal(ranking.priceBasis, 'total-return', period);
+    assert.match(ranking.priceMethod, /배당 재투자/);
+    assert.match(ranking.priceDisclosure ?? '', /총수익 기준.*2026년 11월 28일/s, period);
+    const excluded = Object.values(ranking.exclusions).reduce((sum, count) => sum + count, 0);
+    assert.equal(ranking.eligibleCount + excluded, ranking.universeCount, period);
+    assert.ok(ranking.eligibleCount >= 80 && ranking.eligibleCount * 2 > ranking.universeCount, period);
+    assert.ok(ranking.items.every(({ sourceUrl }) => isHttps(sourceUrl)), period);
+    for (const { symbol, archiveSymbol, sourceUrl } of ranking.archiveTickers ?? []) {
+      assert.equal(archived.get(symbol), archiveSymbol, `${period} ${symbol}`);
+      assert.equal(sources.get(symbol), sourceUrl, `${period} ${symbol}`);
+    }
+  }
+  // Months before 2018-03 keep the dividend-excluded WIKI basis.
+  assert.equal(monthly['2018-02'].US?.priceBasis, undefined);
 });

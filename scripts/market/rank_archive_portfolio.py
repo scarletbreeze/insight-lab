@@ -24,6 +24,10 @@ from rank_wiki_portfolio import portfolio_at_start
 CALENDAR_SYMBOLS = {"AAPL", "MSFT", "GOOG"}
 DEFAULT_SOURCE = "https://stooq.com/db/h/"
 DEFAULT_METHOD = "Stooq 일별 종가(분할 조정)로 계산 · 배당 제외"
+TOTAL_RETURN_METHOD = "Stooq 일별 조정 종가(분할·배당 재투자 반영, 총수익 기준)로 계산 · 다른 달의 배당 제외 가격 수익률과 기준이 다름"
+# A dividend-adjusted series sits below the split-only close by the reinvested dividends since that day; TSLA (no dividend) must still match.
+DIVIDEND_ADJUSTED_FLOOR = Decimal("0.85")
+NO_DIVIDEND_SYMBOLS = {"TSLA"}
 EXCLUSION = "가격 아카이브의 거래일 범위 미충족"
 ACTION_EXCLUSION = "분할 비율만으로 조정할 수 없는 기업행동"
 # Closes on the last trading day before a split, divided by every later split ratio (AAPL 499.23/4,
@@ -107,18 +111,27 @@ def load_closes(path, symbols, days):
     return closes
 
 
-def verify_split_adjustment(closes, checks=SPLIT_CHECKS):
-    """Raise unless every reference close in the archive matches the known split-adjusted value."""
+def verify_split_adjustment(closes, checks=SPLIT_CHECKS, dividend_adjusted=False):
+    """Raise unless every reference close matches the known split-adjusted value.
+
+    With ``dividend_adjusted`` the archive is accepted when each reference close is at or below the split-only value
+    by no more than the plausible reinvested dividends, while a symbol that paid no dividend still matches exactly.
+    """
     failures = []
     for symbol, day, expected in checks:
         observed = closes.get(symbol, {}).get(day)
         target = Decimal(expected)
         if observed is None:
             failures.append(f"{symbol} {day} missing")
-        elif abs(observed - target) / target > CHECK_TOLERANCE:
+        elif abs(observed - target) / target <= CHECK_TOLERANCE:
+            continue
+        elif dividend_adjusted and symbol not in NO_DIVIDEND_SYMBOLS and target * DIVIDEND_ADJUSTED_FLOOR <= observed < target:
+            continue
+        else:
             failures.append(f"{symbol} {day} {observed} != {target}")
     if failures:
-        raise ValueError("Archive is not split-adjusted (dividend-excluded) as required: " + "; ".join(failures))
+        kind = "split- and dividend-adjusted" if dividend_adjusted else "split-adjusted (dividend-excluded)"
+        raise ValueError(f"Archive is not {kind} as required: " + "; ".join(failures))
 
 
 def boundary_prices(closes, members, first, last, renames=()):
@@ -155,11 +168,17 @@ def main():
     parser.add_argument("--actions", type=Path, help="Sourced complex corporate actions not handled by split ratios")
     parser.add_argument("--accept-missing", nargs="*", default=[], help="Reviewed symbols absent from the archive on a boundary day")
     parser.add_argument("--source-url", default=DEFAULT_SOURCE, help="HTTPS page that documents the archive")
-    parser.add_argument("--price-method", default=DEFAULT_METHOD)
+    parser.add_argument("--price-method")
+    parser.add_argument("--dividend-adjusted", action="store_true",
+                        help="Accept a split- and dividend-adjusted archive (total-return basis); requires --disclosure")
     parser.add_argument("--disclosure", help="Sentence shown with the ranking about the archive's terms and the owner's decision")
     parser.add_argument("--annual", action="store_true")
     parser.add_argument("--out", type=Path)
     args = parser.parse_args()
+    if args.dividend_adjusted and not args.disclosure:
+        parser.error("--dividend-adjusted requires --disclosure stating the basis difference and the owner's decision.")
+    if args.price_method is None:
+        args.price_method = TOTAL_RETURN_METHOD if args.dividend_adjusted else DEFAULT_METHOD
 
     portfolio = json.loads(args.portfolio.read_text(encoding="utf-8"))
     as_of = date.fromisoformat(portfolio["asOf"])
@@ -199,7 +218,7 @@ def main():
     requested = set(original_by_archive) | CALENDAR_SYMBOLS | {new for _, new, _ in price_aliases} | {symbol for symbol, _, _ in SPLIT_CHECKS}
     days = {first, last} | {day for _, day, _ in SPLIT_CHECKS}
     closes = load_closes(args.archive, requested, days)
-    verify_split_adjustment(closes)
+    verify_split_adjustment(closes, dividend_adjusted=args.dividend_adjusted)
     calendar = trading_days(closes, first, last)
     if first not in calendar or last not in calendar:
         parser.error(f"{first} and {last} must both be trading days observed for {', '.join(sorted(CALENDAR_SYMBOLS))}.")
@@ -244,6 +263,8 @@ def main():
                 for symbol, url in sorted(archive_sources.items())
             ]
         result["priceMethod"] = args.price_method
+        if args.dividend_adjusted:
+            result["priceBasis"] = "total-return"
         if args.disclosure:
             result["priceDisclosure"] = args.disclosure
     default = "data/market/annual-equity-rankings.json" if args.annual else "data/market/months/equity-rankings.json"

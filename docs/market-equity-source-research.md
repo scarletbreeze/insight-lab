@@ -20,7 +20,7 @@ python3 scripts/market/join_krx_prices.py members.csv adjusted-closes.csv \
 
 - [2008년 9월 말 QQQ 명세](https://www.sec.gov/Archives/edgar/data/1067839/000110465909005352/a08-28674_2n30b2.htm)의 주식 100개 평가액 합계는 $18,091,801,491이다. 2008년 HANS(Hansen Natural)와 MNST(Monster Worldwide)는 가격 파일에서 각각 MNST와 MWW로 기록된다. 당시 명칭, 코드 변경 근거, 기준일 주당 평가액을 대조했다. 4분기 각 월의 100개 중 84개 종목에서 수익률을 계산했다.
 - [2014년 9월 말 QQQ 명세](https://www.sec.gov/Archives/edgar/data/1067839/000110465915002429/a14-24967_1n30b2.htm)의 주식 103개 평가액 합계는 $42,033,212,910이다. 이후 편입·제외·코드 변경을 적용한 2015년 9월 말 109개 코드는 다음 공시와 일치했다. 2015년 연초 107개 중 기간 전체를 계산한 93개를 연간 순위에 사용했다.
-- 2008년 10~12월과 2014년 10월~2018년 2월의 44개월 및 2015~2017년 연간 순위를 수록했다. 모집단은 QQQ의 [2015년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm), [2016년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm), [2017년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm) 보유 명세를 기준으로 한다. 중간 시점은 `data/market/qqq-index-changes.json`의 기준일별 변경을 반영한다. 2015년 9월 명세에서 출발해 변경을 반영한 2016년 9월의 105종목은 해당 시점 QQQ 보유 명세와 일치한다. 2016년 12월에는 [Nasdaq 연간 평가](https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf)에 기록된 LiLAC 두 종류를 포함한다. 결과에는 사용한 보유 명세와 근사 모집단이라는 기준을 표시한다.
+- 2008년 10~12월과 2014년 10월~2018년 2월의 44개월 및 2015~2017년 연간 순위를 수록했다. 2018년 3월~2019년 12월의 22개월은 운영자가 직접 내려받은 Stooq `d_us_txt.zip`(2026-11-27자)으로 `rank_archive_portfolio.py --dividend-adjusted`를 실행해 추가했다(아래 "Stooq 아카이브" 참조). 모집단은 QQQ의 [2015년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516441831/d106822d485bpos.htm), [2016년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312516806695/d272217dn30b2.htm), [2017년 9월 말](https://www.sec.gov/Archives/edgar/data/1067839/000119312518001208/d432220dn30b2.htm) 보유 명세를 기준으로 한다. 중간 시점은 `data/market/qqq-index-changes.json`의 기준일별 변경을 반영한다. 2015년 9월 명세에서 출발해 변경을 반영한 2016년 9월의 105종목은 해당 시점 QQQ 보유 명세와 일치한다. 2016년 12월에는 [Nasdaq 연간 평가](https://indexes.nasdaqomx.com/docs/NDX100_AnnualEvaluation.pdf)에 기록된 LiLAC 두 종류를 포함한다. 결과에는 사용한 보유 명세와 근사 모집단이라는 기준을 표시한다.
 - 2016년 4월 Liberty Media의 추적주 재편은 단순 분할로 처리할 수 없어 해당 월과 연간 순위에서 이전 주식 두 종류를 제외했다. 출처와 종목은 `data/market/qqq-complex-actions.json`에 기록한다.
 - [Nasdaq Data Link WIKI](https://data.nasdaq.com/databases/WIKIP)는 2018년 3월 27일에 자료가 종료된 공개 도메인 아카이브다. 가격 파일은 [공개 미러](https://www.kaggle.com/datasets/marketneutral/quandl-wiki-prices-us-equites)에서 확보했다. 첫 종가를 이후 기간의 분할 비율로 조정한다. 배당은 제외한다.
 - 거래일은 AAPL·MSFT·GOOG 시세의 관측일을 합쳐 대조한다. 관측일과 분할 자료를 모두 갖춘 종목만 계산한다. 2018년 2월 PCLN은 [BKNG로 변경](https://ir.bookingholdings.com/news/news-details/2018/The-Priceline-Group-Inc--NASDAQ-PCLN-Announces-Name-Change-to-Booking-Holdings-Inc--02-21-2018/default.aspx)됐으며 해당 아카이브에서 변경 후 종가를 찾지 못해 제외했다.
@@ -33,6 +33,13 @@ python3 scripts/market/rank_wiki_portfolio.py WIKI_PRICES.zip data/market/qqq-ho
 
 아카이브는 ZIP, gzip 또는 CSV로 입력할 수 있다. 스크립트가 보고한 누락 종목을 원자료에서 확인한 뒤 `--accept-missing`으로 명시한다. 연간 집계에는 `--annual`을 추가한다.
 중간 편입과 제외를 반영하려면 `--changes data/market/qqq-index-changes.json`을 전달한다. 가격 기간 안의 복합 기업행동을 반영하려면 `--actions data/market/qqq-complex-actions.json`을 추가한다.
+
+### Stooq 아카이브 (2018년 3월~2019년 12월, QQQ)
+
+- Stooq의 미국 일별 아카이브는 분할과 **배당 재투자를 함께 반영한 조정 종가**다. 스크립트의 분할 검증(AAPL 2020-08-28 분할 전 종가 124.81)에서 120.86이 나와 배당 제외 기준으로는 거절되므로, 운영자가 2026년 11월 28일 **총수익 기준으로 라벨을 붙여 수록**하기로 결정했다. `--dividend-adjusted`는 무배당 종목(TSLA)의 분할 검증은 그대로 요구하고 배당 종목은 분할 기준값 아래 15% 안에 있을 때만 통과시키며, `--disclosure`를 반드시 받아 월 화면에 기준 차이와 결정일을 표시한다(`priceBasis: total-return`).
+- 아카이브는 **현재 상장 종목만** 담고 있어 이후 인수·합병·상장폐지된 종목(ALXN·ATVI·CA·CELG·CERN·CTXS·DISH·EA·ESRX·HOLX·MXIM·MYL·SHPG·WBA·XLNX, 2019년 3월 전 FOX·FOXA, QVCA)은 '가격 아카이브의 거래일 범위 미충족'으로 제외된다. 월별 계산 종목은 2018년 3월 85/104에서 2019년 12월 94/103이며, 제외 수와 생존 종목 편향 가능성을 월 화면의 공개 문구에 적었다.
+- 동일 주식의 종목코드 변경은 보유 명세의 `archiveSymbol`(PCLN→BKNG, FB→META, CTRP→TCOM, SYMC→NLOK→GEN)과 편입 기록의 객체형 `add`(WLTW→WTW, NLOK→GEN)로 현재 코드의 시계열에 연결했다. 출처는 각 회사 IR 공지 또는 SEC 8-K다. 2019년 3월 Fox의 분사·합병은 복합 기업행동으로 제외한다.
+- 같은 방법으로 2018년 2월을 계산해 WIKI 가격 수익률과 대조한 결과는 `docs/v1-implementation-check.md`의 2026년 11월 28일 절에 있다. 2020년 이후는 QQQ 편입·제외 기록(2019-12-23까지)과 N-PORT 보유 명세가 없어 수록하지 않는다.
 
 ### S&P 500 추종 펀드 (SPY)
 

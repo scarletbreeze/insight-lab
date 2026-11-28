@@ -54,6 +54,18 @@ class ArchiveParsingTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             verify_split_adjustment({})
 
+    def test_dividend_adjusted_archive_is_accepted_only_when_declared(self):
+        dividend_adjusted = {symbol: {day: Decimal(value) * (Decimal("0.97") if symbol != "TSLA" else 1)} for symbol, day, value in SPLIT_CHECKS}
+        with self.assertRaises(ValueError):
+            verify_split_adjustment(dividend_adjusted)
+        verify_split_adjustment(dividend_adjusted, dividend_adjusted=True)
+        too_low = {symbol: {day: Decimal(value) * Decimal("0.5")} for symbol, day, value in SPLIT_CHECKS}
+        with self.assertRaises(ValueError):
+            verify_split_adjustment(too_low, dividend_adjusted=True)
+        tsla_off = dict(dividend_adjusted, TSLA={"2020-08-28": Decimal("140")})
+        with self.assertRaises(ValueError):
+            verify_split_adjustment(tsla_off, dividend_adjusted=True)
+
     def test_boundary_prices_follow_same_share_ticker_changes_and_report_gaps(self):
         closes = {"CTRP": {"2019-11-01": Decimal("33.11")}, "TCOM": {"2019-11-29": Decimal("32.00")},
                   "AAPL": {"2019-11-01": Decimal("1"), "2019-11-29": Decimal("2")}, "CELG": {"2019-11-01": Decimal("1")}}

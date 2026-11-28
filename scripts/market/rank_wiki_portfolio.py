@@ -27,10 +27,14 @@ def portfolio_at_start(portfolio, changes, start):
             if symbol not in members:
                 raise ValueError(f"Cannot remove {symbol}: absent from portfolio on {effective}.")
             del members[symbol]
-        for symbol, name in change["add"].items():
+        for symbol, added in change["add"].items():
             if symbol in members:
                 raise ValueError(f"Cannot add {symbol}: already present on {effective}.")
-            members[symbol] = {"symbol": symbol, "name": name}
+            # A plain name, or an object that may also carry archiveSymbol/archiveSymbolSource for later ticker changes.
+            member = {"name": added} if isinstance(added, str) else dict(added)
+            if not member.get("name"):
+                raise ValueError(f"Cannot add {symbol}: a name is required on {effective}.")
+            members[symbol] = {"symbol": symbol, **member}
         sources.append(change["sourceUrl"])
     label = f"{portfolio['fund']} 보유 주식 ({as_of})"
     if sources:
